@@ -45,17 +45,20 @@ var app = {
         receivedElement.setAttribute('style', 'display:block;');
 
         alert('Received Event: ' + id);
-       login();
+       
     }
 };
 
+var fbLoginSuccess = function (userData) 
+{
+    alert("UserInfo: " + JSON.stringify(userData));
+}
+
 function login(){
 
-     facebookConnectPlugin.login(['email'], function(response) {
-                alert('Logged in');
-                alert(JSON.stringify(response.authResponse));
-            }, function(error){
-                alert(error);
-            });   
+      facebookConnectPlugin.login(["email"],
+        fbLoginSuccess,
+        function (error) { alert("" + error) }
+    );
     
 }
