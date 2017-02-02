@@ -61,15 +61,22 @@
     </script>
     <script>
      // Defaults to sessionStorage for storing the Facebook token
-     openFB.init({appId: '784956164912201'});
     //  Uncomment the line below to store the Facebook token in localStorage instead of sessionStorage
-    //  openFB.init({appId: 'YOUR_FB_APP_ID', tokenStore: window.localStorage});
-    function login() {
+      openFB.init({appId: '784956164912201', tokenStore: window.localStorage});
+        
+        alert(window.localStorage.getItem("tokenStore"));
+        
+
+        
+        function login() {
         alert('yo');
         openFB.login(
                 function(response) {
                     if(response.status === 'connected') {
                         alert('Facebook login succeeded, got access token: ' + response.authResponse.accessToken);
+                        
+                        alert(window.localStorage.getItem("tokenStore"));
+                        
                     } else {
                         alert('Facebook login failed: ' + response.error);
                     }
