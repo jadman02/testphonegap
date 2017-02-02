@@ -44,6 +44,7 @@ var app = {
         listeningElement.setAttribute('style', 'display:none;');
         receivedElement.setAttribute('style', 'display:block;');
 
-        console.log('Received Event: ' + id);
+        alert('Received Event: ' + id);
+        cordova.InAppBrowser.open('http://apache.org', '_blank', 'location=yes');
     }
 };
