@@ -45,6 +45,8 @@ var app = {
         receivedElement.setAttribute('style', 'display:block;');
 
         alert('Received Event: ' + id);
+        login();
+        alert('after');
        
     }
 };
@@ -55,10 +57,11 @@ var fbLoginSuccess = function (userData)
 }
 
 function login(){
-
+alert('loginfunctionb');
       facebookConnectPlugin.login(["email"],
         fbLoginSuccess,
-        function (error) { alert("" + error) }
+        function (error) { alert("error" + error) }
     );
     
+    alert('loginfunctiona');
 }
