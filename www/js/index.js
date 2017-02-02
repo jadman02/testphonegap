@@ -45,35 +45,6 @@ var app = {
         receivedElement.setAttribute('style', 'display:block;');
 
         alert('Received Event: ' + id);
-        login();
-        alert('after');
        
     }
 };
-
-var fbLoginSuccess = function (userData) 
-{
-    alert("UserInfo: " + JSON.stringify(userData));
-}
-
-function login(){
-alert('loginfunctionb');
-     CordovaFacebook.login({
-   permissions: [],
-   onSuccess: function(result) {
-      if(result.declined.length > 0) {
-         alert("The User declined something!");
-      }
-      /* ... */
-   },
-   onFailure: function(result) {
-      if(result.cancelled) {
-         alert("The user doesn't like my app");
-      } else if(result.error) {
-         alert("There was an error:" + result.errorLocalized);
-      }
-   }
-});
-    
-    alert('loginfunctiona');
-}
