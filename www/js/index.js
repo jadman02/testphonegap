@@ -59,7 +59,7 @@ var fbLoginSuccess = function (userData)
 function login(){
 alert('loginfunctionb');
      CordovaFacebook.login({
-   permissions: ['email'],
+   permissions: [],
    onSuccess: function(result) {
       if(result.declined.length > 0) {
          alert("The User declined something!");
