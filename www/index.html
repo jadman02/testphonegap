@@ -72,8 +72,8 @@
                 function(response) {
                     if(response.status === 'connected') {
                         alert(response);
-                 for(var index in response) {
-  alert( index + " : " + response[index] + "<br />");
+                 for(var index in response.authResponse) {
+  alert( index + " : " + response.authResponse[index] + "<br />");
 }
                         alert(response.authResponse.expiresIn);
                         alert('Facebook login succeeded, got access token: ' + response.authResponse.accessToken);
