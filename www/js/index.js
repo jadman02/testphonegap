@@ -58,10 +58,22 @@ var fbLoginSuccess = function (userData)
 
 function login(){
 alert('loginfunctionb');
-      facebookConnectPlugin.login(["email"],
-        fbLoginSuccess,
-        function (error) { alert("error" + error) }
-    );
+     CordovaFacebook.login({
+   permissions: ['email'],
+   onSuccess: function(result) {
+      if(result.declined.length > 0) {
+         alert("The User declined something!");
+      }
+      /* ... */
+   },
+   onFailure: function(result) {
+      if(result.cancelled) {
+         alert("The user doesn't like my app");
+      } else if(result.error) {
+         alert("There was an error:" + result.errorLocalized);
+      }
+   }
+});
     
     alert('loginfunctiona');
 }
