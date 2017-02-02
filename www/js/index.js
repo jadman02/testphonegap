@@ -48,3 +48,14 @@ var app = {
         cordova.InAppBrowser.open('http://apache.org', '_blank', 'location=yes');
     }
 };
+
+function login(){
+
+     facebookConnectPlugin.login(['email'], function(response) {
+                alert('Logged in');
+                alert(JSON.stringify(response.authResponse));
+            }, function(error){
+                alert(error);
+            });   
+    
+}
