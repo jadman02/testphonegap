@@ -51,9 +51,11 @@
     <plugin name="cordova-plugin-whitelist"           source="npm" spec="~1.2.1" />
 
         <gap:plugin name="cordova-plugin-facebook4" source="npm" spec="1.7.3">
+             <params>
                 <param name="APP_ID" value="784956164912201" />
         <param name="APP_NAME" value="Single Duck" />
-                </gap:plugin>
+               </params>
+                     </gap:plugin>
         
     <!-- Define app icon and splashscreen for each platform. -->
     <platform name="android">
