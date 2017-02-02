@@ -71,6 +71,7 @@
         openFB.login(
                 function(response) {
                     if(response.status === 'connected') {
+                        alert(response);
                         alert(response.authResponse.expiresIn);
                         alert('Facebook login succeeded, got access token: ' + response.authResponse.accessToken);
                         
