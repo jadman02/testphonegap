@@ -50,11 +50,11 @@
     <plugin name="cordova-plugin-vibration"           source="npm" spec="~2.1.0" />
     <plugin name="cordova-plugin-whitelist"           source="npm" spec="~1.2.1" />
 
-        <gap:plugin name="cordova-plugin-facebook4" source="npm">
-             <params>
-                <param name="APP_ID" value="784956164912201" />
-        <param name="APP_NAME" value="Single Duck" />
-               </params>
+        <gap:plugin name="cordova-plugin-facebook" source="npm">
+
+                <param name="FACEBOOK_APP_ID" value="784956164912201" />
+        <param name="FACEBOOK_DISPLAY_NAME" value="Single Duck" />
+
                      </gap:plugin>
         
     <!-- Define app icon and splashscreen for each platform. -->
