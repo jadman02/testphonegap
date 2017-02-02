@@ -45,6 +45,6 @@ var app = {
         receivedElement.setAttribute('style', 'display:block;');
 
         alert('Received Event: ' + id);
-       
+       login();
     }
 };
