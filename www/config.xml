@@ -50,6 +50,11 @@
     <plugin name="cordova-plugin-vibration"           source="npm" spec="~2.1.0" />
     <plugin name="cordova-plugin-whitelist"           source="npm" spec="~1.2.1" />
 
+        <gap:plugin name="cordova-plugin-facebook4" source="npm" spec="1.7.3">
+        <param name="APP_ID" value="1505618116376825" />
+        <param name="APP_NAME" value="Tic Tac Toe" />
+    </gap:plugin>
+        
     <!-- Define app icon and splashscreen for each platform. -->
     <platform name="android">
         <icon   src="www/res/icon/android/drawable-ldpi-icon.png"               density="ldpi" />
