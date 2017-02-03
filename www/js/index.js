@@ -39,6 +39,13 @@ var app = {
     receivedEvent: function(id) {
 
         alert('Received Event: ' + id);
-       
+       startApp();
     }
 };
+
+function startApp(){
+
+    alert(tokenStore);
+    
+    
+}
