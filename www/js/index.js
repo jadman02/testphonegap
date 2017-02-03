@@ -53,8 +53,32 @@ function startApp(){
     firebaseinit = localStorage.getItem('tokenStore');
     
     if (firebaseinit){
-    alert('yes tokenStore');
-        getInfo();
+    alert(tokenStore);
+        
+        
+        
+        firebase.auth().onAuthStateChanged(function(user) {
+            
+            
+      var credential = firebase.auth.FacebookAuthProvider.credential(tokenStore);
+            firebase.auth().signInWithCredential(credential).catch(function(error) {
+          // Handle Errors here.
+          var errorCode = error.code;
+          var errorMessage = error.message;
+          // The email of the user's account used.
+          var email = error.email;
+          // The firebase.auth.AuthCredential type that was used.
+          var credential = error.credential;
+          
+                alert(user); 
+        });
+         
+            
+            
+    });
+        
+        
+        
     }
     else {
      $( ".ploader" ).show();
