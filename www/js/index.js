@@ -624,7 +624,7 @@ getPreferences();
       $( ".loginbutton" ).show();
       $( ".login-loader" ).hide();
 
-    console.log('no user');
+    alert('no user');
     // No user is signed in.
   }
      });
