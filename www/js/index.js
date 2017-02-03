@@ -1,3 +1,37 @@
+// Initialize your app
+var myApp = new Framework7({init: false});
+
+// Export selectors engine
+var $$ = Dom7;
+
+// Add views
+var view1 = myApp.addView('#view-1');
+var view2 = myApp.addView('#view-2', {
+    // Because we use fixed-through navbar we can enable dynamic navbar
+    dynamicNavbar: true
+});
+var view3 = myApp.addView('#view-3');
+var view4 = myApp.addView('#view-4');
+var myMessages, myMessagebar, message_history = false, message_historyon, datealertvar = false, datealert = false, latitudep, longitudep, incommondate, incommonduck,f_uid,f_name,f_first,f_gender,f_age,f_email,f_image,f_token, f_upper, f_lower, f_interested,sexuality;
+var f_to_date,f_to_duck,f_date_me,f_duck_me;
+var blocklist;
+var lastkey;
+var pickerDescribe,pickerDescribe2, pickerCustomToolbar;
+var existingmessages;
+var additions = 0;
+var myPhotoBrowser;
+var singlePhotoBrowser;
+var calendarInline;
+var keepopen;
+var userpref;
+var loadpref= false;
+var loadpref2= false;
+var loaded = false;
+var myList;
+
+
+
+
 /*
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
@@ -42,7 +76,7 @@ var app = {
     receivedEvent: function(id) {
 
         alert('Received Event: ' + id);
-       
+       myApp.init();
         
         //firebaseauthchange
         
@@ -54,10 +88,18 @@ var app = {
       alert('user yes');
     
       alert(user.providerData[0].displayName);
-    
+     f_uid = user.providerData[0].uid;
+        f_name = user.providerData[0].displayName;
+         f_first = f_name.substr(0,f_name.indexOf(' '));
+         f_email = user.providerData[0].email;
+          f_image = user.providerData[0].photoURL;
+                 console.log('change in auth state' + f_name);
     
   } else {
-     
+      $( ".ploader" ).show();
+      $( ".loginbutton" ).show();
+      $( ".login-loader" ).hide();
+
       alert('no user');
       
 //startApp();
