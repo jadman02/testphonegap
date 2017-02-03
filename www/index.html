@@ -23,10 +23,12 @@
 
    
 <head>
-    <meta charset="utf-8" />
+   <meta charset="utf-8" />
     <meta name="format-detection" content="telephone=no" />
     <meta name="msapplication-tap-highlight" content="no" />
-    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, minimal-ui" />
     <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
     <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
     <!-- Good default declaration:
@@ -40,7 +42,7 @@
     <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
 
 
-    <title>Hello World</title>
+    <title>Date or Duck</title>
 
      <link rel="stylesheet" href="css/framework7.css">
       <link rel="stylesheet" href="css/style.css">
@@ -55,8 +57,225 @@
 
 <body>
 
-            <a href="#" onclick="login();">Login</a>
             
+            
+<div class="statusbar-overlay"></div>
+ 
+<div class="panel-overlay"></div>
+ 
+<div class="panel panel-left panel-reveal">
+
+<div id="view-2" class="view tab">
+ 
+<div class="navbar" style="background-color:#2196f3;">
+    <div class="navbar-inner">
+        <div class="left"></div>
+        <div class="center">Notifications </div>
+        
+        <div class="right close-panel" ></div>
+    </div>
+</div>
+<div class="pages navbar-through">
+<div data-page="index-2" class="page">
+<div class="page-content pull-to-refresh-content pull-to-refresh-content-2">
+
+<div class="pull-to-refresh-layer">
+      <div class="preloader"></div>
+      <div class="pull-to-refresh-arrow"></div>
+    </div>
+
+<div class="list-block" style="margin-top:0px;">
+  <ul>
+  
+  
+
+  
+    
+        <li class="upgradeli" style="display:none;padding:20px;font-size:14px;background-color:black;color:white;text-align:center;"> <i class="twa twa-3x twa-eyes" style="margin:0 auto;"></i><p> Get notified when someone is interested in you. <br/><a href="#" class="button" style="margin-top:10px;color:white;background-color:#2196f3;">Sign up for Premium </a></p></li>
+
+
+
+    
+    </ul>
+    </div>
+
+<div class="list-block virtual-list media-list virtual-notifications" style="margin-top:-44px;">
+  <!-- keep it empty -->
+</div>
+
+
+</div>
+</div>
+</div>
+
+<div class="toolbar" style="background-color:#2196f3;">
+          <div class="toolbar-inner">
+            <!-- Toolbar links -->
+            
+            <a href="#" class="link" onclick="preferencesPopup();" style="color:white;">Profile</a>
+            <a href="#" class="link close-panel" onclick="logout()" style="color:white;">Logout</a>
+          </div>
+        </div>
+
+</div>
+
+
+
+</div>
+ 
+<div class="panel panel-right panel-reveal" style="background-color:#efeff4;">
+
+<div class="navbar" style="background-color:#2196f3;">
+    <div class="navbar-inner">
+        <div class="left"></div>
+        <div class="center">Dates </div>
+        
+        <div class="right close-panel" ></div>
+    </div>
+</div>
+
+
+
+<div class="timeline-upcoming timeline">
+
+
+    
+</div>
+
+</div>
+ 
+
+ 
+<div class="views tabs toolbar-through">
+ 
+
+ 
+<div id="view-1" class="view view-main tab active">
+ 
+ <div class="itim ploader" style="z-index:9999999;width: 100%;height: 100%;position: absolute;top: 0;left: 0;background-color:#2196f3;">
+         
+         <div style="width:150px;height:140px;position:absolute;top:50%;left:50%;margin-left:-75px;margin-top:-70px;text-align:center;color:white;">
+  <span style="font-family: 'Pacifico', cursive;font-size:24px;font-weight:100;color:#ccc;margin-left:10px;">Date or Duck</span>
+
+
+<a href="#" class="button loginbutton" onclick="login()" style="border-color:white;display:none;color:white;margin-top:10px;margin-left:10px;">Login</a>
+<p class="loginbutton" style="font-size:12px;display:none;padding-left:10px;padding-right:10px;">We do not post anything to Facebook.</p>
+
+ </br></br>
+             <span class="preloader preloader-white login-loader"></span>
+
+     
+ </div>
+
+
+        
+      </div>
+ 
+ 
+ 
+ <div class="navbar" style="background-color:#2196f3;">
+    <div class="navbar-inner">
+        <div class="left open-panel" data-panel="left" >
+                    <a href="#" class="link open-panel" data-panel="left" style="color:white"><i class="pe-7s-menu pe-lg"></i></a>
+            <span class="badge notifspan" style="z-index:9999;margin-left:-5px;margin-top:-10px;">0</span>
+        </div>
+
+        <div class="center">
+              <span style="font-family: 'Pacifico', cursive;font-size:22px;font-weight:100;color:#ccc;margin-left:10px;">Date or Duck</span>
+
+            
+        </div>
+        <div class="right open-panel" data-panel="right">
+        
+        <a href="#" class="link open-panel"  data-panel="right" style="color:white"><i class="pe-7s-date pe-lg"></i></a>
+        
+ 
+ 
+
+            
+        </div>
+    </div>
+</div>
+
+<div class="pages">
+ 
+<div data-page="index-1" class="page">
+
+
+
+<div class="page-content pull-to-refresh-content pull-to-refresh-content-1" data-ptr-distance="55" style="padding-top:44px;background-color:white;">
+<div class="pull-to-refresh-layer">
+      <div class="preloader"></div>
+      <div class="pull-to-refresh-arrow"></div>
+    </div>
+
+
+
+
+
+<div class="content-here"></div>
+
+<audio controls id="buzzer" style="display:none;">
+  <source src="media/quack.mp3" type="audio/mpeg">
+</audio>
+
+<!--<a href="#" class="button" onclick="addFakey()">Add Fake User</a>
+<a href="#" class="button" onclick="markMe()">Mark Me</a>
+
+<a href="#" class="button" onclick="checkArray()">Check Array</a>
+-->
+
+
+
+
+
+
+</div>
+</div>
+</div>
+</div>
+ 
+
+<div id="view-3" class="view tab">
+<div class="pages">
+<div data-page="index-3" class="page">
+<div class="page-content">
+<div class="content-block-title">3</div>
+<div class="content-block">
+View 3
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="view-4" class="view tab">
+<div class="pages navbar-fixed">
+<div data-page="index-4" class="page">
+<div class="navbar">
+<div class="navbar-inner">
+<div class="center">Settings</div>
+</div>
+</div>
+<div class="page-content">
+<div class="content-block-title">4</div>
+<div class="content-block">
+View 4
+</div>
+<div class="content-block">
+<p>Mauris commodo lacus at nisl lacinia, nec facilisis erat rhoncus. Sed eget pharetra nunc. Aenean vitae vehicula massa, sed sagittis ante. Quisque luctus nec velit dictum convallis. Nulla facilisi. Ut sed erat nisi. Donec non dolor massa. Mauris malesuada dolor velit, in suscipit leo consectetur vitae. Duis tempus ligula non eros pretium condimentum. Cras sed dolor odio.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+ <!--This is a comment. Comments are not displayed in the browser
+<div class="toolbar tabbar tabbar-labels" style="background-color:#2196f3;">
+<div class="toolbar-inner"><a href="#view-1" class="tab-link active"> <i class="icon tabbar-demo-icon-1"></i><span class="tabbar-label">Events</span></a><a href="#view-2" class="tab-link"><i class="icon tabbar-demo-icon-2"></i><span class="tabbar-label">Matches</span></a><a href="#view-3" class="tab-link"> <i class="icon tabbar-demo-icon-3"><span class="badge bg-red">4</span></i><span class="tabbar-label">Dates</span></a><a href="#view-4" class="tab-link"> <i class="icon tabbar-demo-icon-4"></i><span class="tabbar-label">Add Event</span></a></div>
+</div>
+-->
+
+</div>
+ 
 
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
