@@ -60,7 +60,7 @@ var app = {
      
       alert('no user');
       
-startApp();
+//startApp();
       
 
 
