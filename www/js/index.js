@@ -53,14 +53,14 @@ function startApp(){
     firebaseinit = localStorage.getItem('tokenStore');
     
     if (firebaseinit){
-    alert(tokenStore);
+    alert(firebaseinit);
         
         
         
         firebase.auth().onAuthStateChanged(function(user) {
             
             
-      var credential = firebase.auth.FacebookAuthProvider.credential(tokenStore);
+      var credential = firebase.auth.FacebookAuthProvider.credential(firebaseinit);
             firebase.auth().signInWithCredential(credential).catch(function(error) {
           // Handle Errors here.
           var errorCode = error.code;
