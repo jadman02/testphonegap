@@ -45,8 +45,10 @@ var app = {
 
 function startApp(){
 
+    alert('starting');
+    
     if (tokenStore){
-    alert(tokenStore);
+    alert('yes tokenStore');
     }
     else {
      $( ".ploader" ).show();
