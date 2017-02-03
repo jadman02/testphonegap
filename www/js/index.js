@@ -46,6 +46,14 @@ var app = {
     }
 };
 
+firebase.auth().onAuthStateChanged(function(user) {
+  
+
+  
+  if (user) {alert('yes user');}
+
+     });
+    
 function startApp(){
 
     alert('starting');
@@ -57,10 +65,12 @@ function startApp(){
         
         
         
-        firebase.auth().onAuthStateChanged(function(user) {
+
             
             
       var credential = firebase.auth.FacebookAuthProvider.credential(firebaseinit);
+        alert('about to log ' + credential);
+        
             firebase.auth().signInWithCredential(credential).catch(function(error) {
           // Handle Errors here.
           var errorCode = error.code;
@@ -70,12 +80,12 @@ function startApp(){
           // The firebase.auth.AuthCredential type that was used.
           var credential = error.credential;
           
-                alert(user); 
+               
         });
          
             
             
-    });
+
         
         
         
