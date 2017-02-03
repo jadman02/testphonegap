@@ -51,7 +51,7 @@ var app = {
         //firebaseauthchange
         
         firebase.auth().onAuthStateChanged(function(user) {
- 
+ alert('checking');
   
   if (user) {
       
@@ -66,11 +66,12 @@ var app = {
                  console.log('change in auth state' + f_name);
     
   } else {
+      alert('no user1');
       $( ".ploader" ).show();
       $( ".loginbutton" ).show();
       $( ".login-loader" ).hide();
 
-      alert('no user');
+      alert('no user2');
       
 //startApp();
       
