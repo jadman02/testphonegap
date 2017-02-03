@@ -135,7 +135,7 @@ function startApp(){
     function logout(){
 
 firebase.auth().signOut().then(function() {
-alert('Sign-out successful');
+alert('Sign-out successful');tokenStore = false;storage.removeItem(tokenStore);
 }, function(error) {
   // An error happened.
 });
