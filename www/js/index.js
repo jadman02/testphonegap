@@ -1,33 +1,3 @@
-// Initialize your app
-var myApp = new Framework7({init: false});
-
-// Export selectors engine
-var $$ = Dom7;
-
-// Add views
-var view1 = myApp.addView('#view-1');
-var view2 = myApp.addView('#view-2', {
-    // Because we use fixed-through navbar we can enable dynamic navbar
-    dynamicNavbar: true
-});
-var view3 = myApp.addView('#view-3');
-var view4 = myApp.addView('#view-4');
-var myMessages, myMessagebar, message_history = false, message_historyon, datealertvar = false, datealert = false, latitudep, longitudep, incommondate, incommonduck,f_uid,f_name,f_first,f_gender,f_age,f_email,f_image,f_token, f_upper, f_lower, f_interested,sexuality;
-var f_to_date,f_to_duck,f_date_me,f_duck_me;
-var blocklist;
-var lastkey;
-var pickerDescribe,pickerDescribe2, pickerCustomToolbar;
-var existingmessages;
-var additions = 0;
-var myPhotoBrowser;
-var singlePhotoBrowser;
-var calendarInline;
-var keepopen;
-var userpref;
-var loadpref= false;
-var loadpref2= false;
-var loaded = false;
-var myList;
 
 
 
@@ -76,7 +46,7 @@ var app = {
     receivedEvent: function(id) {
 
         alert('Received Event: ' + id);
-       myApp.init();
+     //  myApp.init();
         
         //firebaseauthchange
         
