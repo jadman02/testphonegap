@@ -325,8 +325,6 @@ View 4
             success: function(data) {
                 console.log(JSON.stringify(data));
                 alert(data.name);
-                document.getElementById("userName").innerHTML = data.name;
-                document.getElementById("userPic").src = 'http://graph.facebook.com/' + data.id + '/picture?type=small';
             },
             error: errorHandler});
     }
