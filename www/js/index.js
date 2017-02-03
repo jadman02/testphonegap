@@ -45,7 +45,17 @@ var app = {
 
 function startApp(){
 
+    if (tokenStore){
     alert(tokenStore);
+    }
+    else {
+     $( ".ploader" ).show();
+      $( ".loginbutton" ).show();
+      $( ".login-loader" ).hide();
+
+    alert('no tokenStore');
+    }
+    
     
     
 }
