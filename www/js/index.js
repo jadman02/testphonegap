@@ -53,6 +53,7 @@ var app = {
       
       alert('user yes');
     
+      alert(user.providerData[0].displayName);
     
     
   } else {
