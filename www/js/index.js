@@ -42,18 +42,45 @@ var app = {
     receivedEvent: function(id) {
 
         alert('Received Event: ' + id);
-       startApp();
-    }
-};
-
-firebase.auth().onAuthStateChanged(function(user) {
+       
+        
+        //firebaseauthchange
+        
+        firebase.auth().onAuthStateChanged(function(user) {
+ 
   
+  if (user) {
+      
+      alert('user yes');
+    
+    
+    
+  } else {
+     
+      alert('no user');
+      
+startApp();
+      
 
-  
-  if (user) {alert('yes user');}
+
+    
+    // No user is signed in.
+  }
 
      });
     
+        
+        
+        
+        
+        
+        
+        
+        
+    }
+};
+
+
 function startApp(){
 
     alert('starting');
