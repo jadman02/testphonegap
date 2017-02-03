@@ -1,0 +1,30 @@
+/* Rules for all screen sizes */
+
+.photo-browser-slide img {margin-top:-55px;}
+.popup {z-index:20000;}
+.picker-columns {z-index:30000;}
+.datebutton {border-color:#ccc;}
+.duckbutton {border-color:#ccc;}
+.likesme {border-color:rgb(0, 122, 255);color:rgb(0, 122, 255);}
+.picker-item.picker-selected {color:#2196f3;}
+.picker-modal{z-index:500000;}
+.image-clear {background-color:transparent !important;}
+.interestbutton {-webkit-filter:grayscale(100%);padding:5px;}
+.interestchosen {-webkit-filter:none;background-color:#2196f3;}
+.icon-forward:before{display:none;}
+.picker-calendar-day {color:white;background-color:black;}
+.toolbar ~ .photo-browser-captions {bottom:110px;background-color:white;}
+
+.tabbar a.active {color:white;}
+
+/* Browser is mobile or tablet size */
+@media (max-width: 769px) {
+
+    
+    }
+/* Browser is desktop size */
+@media (min-width: 769px) {
+
+    
+    
+    }
