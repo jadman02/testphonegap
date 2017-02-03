@@ -128,3 +128,16 @@ function startApp(){
     
     
 }
+
+
+
+    function logout(){
+
+firebase.auth().signOut().then(function() {
+alert('Sign-out successful');
+}, function(error) {
+  // An error happened.
+});
+
+}
+    
