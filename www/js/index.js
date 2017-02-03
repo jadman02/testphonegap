@@ -54,6 +54,7 @@ function startApp(){
     
     if (firebaseinit){
     alert('yes tokenStore');
+        getInfo();
     }
     else {
      $( ".ploader" ).show();
