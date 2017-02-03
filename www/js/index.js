@@ -49,7 +49,7 @@ var app = {
      //  myApp.init();
         
         //firebaseauthchange
-        
+        $( document ).ready(function() {
         firebase.auth().onAuthStateChanged(function(user) {
  alert('checking');
   
@@ -83,7 +83,7 @@ var app = {
 
      });
     
-        
+       }); 
         
         
         
