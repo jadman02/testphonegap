@@ -47,7 +47,7 @@ function startApp(){
 
     alert('starting');
     
-    if (tokenStore){
+    if (typeof tokenStore !== 'undefined'){
     alert('yes tokenStore');
     }
     else {
