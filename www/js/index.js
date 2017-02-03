@@ -16,6 +16,9 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
+var firebaseinit;
+
 var app = {
     // Application Constructor
     initialize: function() {
@@ -47,7 +50,9 @@ function startApp(){
 
     alert('starting');
     
-    if (typeof tokenStore !== 'undefined'){
+    firebaseinit = localStorage.getItem('tokenStore');
+    
+    if (firebaseinit){
     alert('yes tokenStore');
     }
     else {
