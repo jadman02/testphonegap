@@ -872,8 +872,9 @@ function getMatches(){
         all_matches_photos[i] = [];
     $( ".content-here" ).append(
    
-    '<span class="badge age-header header_'+i+'" style="display:none;text-align:left;float:left;width:100%;border-radius:0px;">'+i+'</span>'+
-      '  <div class="swiper-container swiper-'+i+'" style="display:none;padding-top:10px;height:180px;clear:both;">'+
+        
+    '<span class="badge age-header header_'+i+'" style="text-align:left;float:left;width:100%;border-radius:0px;">'+i+'</span>'+
+      '  <div class="swiper-container swiper-'+i+'" style="padding-top:10px;height:180px;clear:both;">'+
    
     '<div class="swiper-wrapper">'+
    // '<div class="swiper-slide"><div style="background-color:white;height:50%;width:50%;margin-top:50%;margin-left:25%;"></div></div>'+
@@ -881,7 +882,7 @@ function getMatches(){
 '</div>'
         
         );
-        
+        alert('getting matches 3.5');
     
     alert(i);
     alert('sexuality' + sexuality);
@@ -1110,7 +1111,7 @@ if (f_gender == 'Female' && f_interested == 'Women') {sexuality = 'lesbian';}
 if (f_gender == 'Female' && f_interested == 'Men') {sexuality = 'female';}
         
         
-        if (loaded === false){console.log('here2');getWifilocation();}
+        if (loaded === false){alert('here2');getWifilocation();}
         else {
             
             updatePhotos();}
