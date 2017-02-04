@@ -858,7 +858,7 @@ function getMatches(){
     
 
      $( ".ploader" ).hide();
-    myApp.closeModal();
+    //myApp.closeModal();
     //on success 
      alert('getting matches 1');
     
