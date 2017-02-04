@@ -1,4 +1,16 @@
+var myApp = new Framework7({init: false});
 
+// Export selectors engine
+var $$ = Dom7;
+
+// Add views
+var view1 = myApp.addView('#view-1');
+var view2 = myApp.addView('#view-2', {
+    // Because we use fixed-through navbar we can enable dynamic navbar
+    dynamicNavbar: true
+});
+var view3 = myApp.addView('#view-3');
+var view4 = myApp.addView('#view-4');
 var myMessages, myMessagebar, message_history = false, message_historyon, datealertvar = false, datealert = false, latitudep, longitudep, incommondate, incommonduck,f_uid,f_name,f_first,f_gender,f_age,f_email,f_image,f_token, f_upper, f_lower, f_interested,sexuality;
 var f_to_date,f_to_duck,f_date_me,f_duck_me;
 var blocklist;
@@ -64,22 +76,151 @@ var app = {
      //  myApp.init();
         
         // Initialize your app
-var myApp = new Framework7({init: false});
 
-// Export selectors engine
-var $$ = Dom7;
-
-// Add views
-var view1 = myApp.addView('#view-1');
-var view2 = myApp.addView('#view-2', {
-    // Because we use fixed-through navbar we can enable dynamic navbar
-    dynamicNavbar: true
-});
-var view3 = myApp.addView('#view-3');
-var view4 = myApp.addView('#view-4');
         
         myApp.init();
 
+
+
+        
+        //firebaseauthchange
+        $( document ).ready(function() {
+        firebase.auth().onAuthStateChanged(function(user) {
+  
+
+  
+  if (user) {
+      
+      
+      
+       alert(user);
+       alert('yes user');// User is signed in.
+
+       f_uid = user.providerData[0].uid;
+        f_name = user.providerData[0].displayName;
+         f_first = f_name.substr(0,f_name.indexOf(' '));
+         f_email = user.providerData[0].email;
+          f_image = user.providerData[0].photoURL;
+                 alert('change in auth state' + f_name);
+   alert(f_uid);
+   
+  // $( "#profilepic" ).empty();
+  // $( "#profilepic" ).append('<div style="float:left;height:30px;width:30px;border-radius:5px;margin-right:5px;background-size:cover;background-position:50% 50%;background-image:url(\'http://graph.facebook.com/'+f_uid+'/picture?type=normal\');"></div>');
+
+
+
+
+  var notifcount = firebase.database().ref('notifications/' +f_uid).on('value', function(snapshot) {
+
+var notificationscount = 0;
+
+var objs = snapshot.val();
+
+//If existing notifications, get number of unseen messages, delete old notifications
+if (snapshot.val()){
+
+$.each(objs, function(i, obj) {
+
+if (obj.to_uid == f_uid) {
+    
+    if (obj.received =='N') {notificationscount = notificationscount + obj.new_message_count;$('#buzzer')[0].play();}
+    
+    
+    
+}
+    
+});
+
+$( ".notifspan" ).empty();
+$( ".notifspan" ).append(notificationscount);
+
+}
+
+
+});
+
+getPreferences();
+
+
+    //console.log(user.emailVerified);
+    
+    
+  //  if (user.emailVerified === false) {console.log('not verified');user.sendEmailVerification(); }
+    
+    
+    
+    
+  } else {
+      
+
+      
+      $( ".ploader" ).show();
+      $( ".loginbutton" ).show();
+      $( ".login-loader" ).hide();
+
+    console.log('no user');
+    // No user is signed in.
+  }
+});
+
+    
+       }); 
+        
+        
+        
+        
+        
+        
+        
+    }
+};
+
+
+function startApp(){
+
+    alert('starting');
+    
+    firebaseinit = localStorage.getItem('tokenStore');
+    
+    if (firebaseinit){
+    alert(firebaseinit);
+        
+        
+        
+
+            
+            
+      var credential = firebase.auth.FacebookAuthProvider.credential(firebaseinit);
+        alert('about to log ' + credential);
+        
+            firebase.auth().signInWithCredential(credential).catch(function(error) {
+          // Handle Errors here.
+          var errorCode = error.code;
+          var errorMessage = error.message;
+          // The email of the user's account used.
+          var email = error.email;
+          // The firebase.auth.AuthCredential type that was used.
+          var credential = error.credential;
+          
+               
+        });
+         
+            
+            
+
+        
+        
+        
+    }
+    else {
+     
+
+    alert('no tokenStore');
+    }
+    
+    
+    
+}
 
 
 
@@ -541,146 +682,6 @@ myList.clearCache();
         myApp.pullToRefreshDone();
     }, 1000);
 });
-        
-        //firebaseauthchange
-        $( document ).ready(function() {
-        firebase.auth().onAuthStateChanged(function(user) {
-  
-
-  
-  if (user) {
-      
-      
-      
-       alert(user);
-       alert('yes user');// User is signed in.
-
-       f_uid = user.providerData[0].uid;
-        f_name = user.providerData[0].displayName;
-         f_first = f_name.substr(0,f_name.indexOf(' '));
-         f_email = user.providerData[0].email;
-          f_image = user.providerData[0].photoURL;
-                 alert('change in auth state' + f_name);
-   alert(f_uid);
-   
-  // $( "#profilepic" ).empty();
-  // $( "#profilepic" ).append('<div style="float:left;height:30px;width:30px;border-radius:5px;margin-right:5px;background-size:cover;background-position:50% 50%;background-image:url(\'http://graph.facebook.com/'+f_uid+'/picture?type=normal\');"></div>');
-
-
-
-
-  var notifcount = firebase.database().ref('notifications/' +f_uid).on('value', function(snapshot) {
-
-var notificationscount = 0;
-
-var objs = snapshot.val();
-
-//If existing notifications, get number of unseen messages, delete old notifications
-if (snapshot.val()){
-
-$.each(objs, function(i, obj) {
-
-if (obj.to_uid == f_uid) {
-    
-    if (obj.received =='N') {notificationscount = notificationscount + obj.new_message_count;$('#buzzer')[0].play();}
-    
-    
-    
-}
-    
-});
-
-$( ".notifspan" ).empty();
-$( ".notifspan" ).append(notificationscount);
-
-}
-
-
-});
-
-getPreferences();
-
-
-    //console.log(user.emailVerified);
-    
-    
-  //  if (user.emailVerified === false) {console.log('not verified');user.sendEmailVerification(); }
-    
-    
-    
-    
-  } else {
-      
-
-      
-      $( ".ploader" ).show();
-      $( ".loginbutton" ).show();
-      $( ".login-loader" ).hide();
-
-    console.log('no user');
-    // No user is signed in.
-  }
-});
-
-    
-       }); 
-        
-        
-        
-        
-        
-        
-        
-    }
-};
-
-
-function startApp(){
-
-    alert('starting');
-    
-    firebaseinit = localStorage.getItem('tokenStore');
-    
-    if (firebaseinit){
-    alert(firebaseinit);
-        
-        
-        
-
-            
-            
-      var credential = firebase.auth.FacebookAuthProvider.credential(firebaseinit);
-        alert('about to log ' + credential);
-        
-            firebase.auth().signInWithCredential(credential).catch(function(error) {
-          // Handle Errors here.
-          var errorCode = error.code;
-          var errorMessage = error.message;
-          // The email of the user's account used.
-          var email = error.email;
-          // The firebase.auth.AuthCredential type that was used.
-          var credential = error.credential;
-          
-               
-        });
-         
-            
-            
-
-        
-        
-        
-    }
-    else {
-     
-
-    alert('no tokenStore');
-    }
-    
-    
-    
-}
-
 
 function createPassword(){
 
@@ -870,7 +871,7 @@ function getMatches(){
         );
         
     
-    console.log(i);
+   // alert(i);
     
 myApp.swiper('.swiper-' + i, {
     slidesPerView:3,
@@ -880,7 +881,7 @@ myApp.swiper('.swiper-' + i, {
     lazyLoading: true,
     watchSlidesVisibility:true,
    
-    onClick:function(swiper, event) {console.log();
+    onClick:function(swiper, event) {
 
 var ageswiper = swiper.clickedSlide.classList[0].replace("age_", "");
 
@@ -905,7 +906,7 @@ var foundFire = new GeoFire(findingRef);
     var onKeyEnteredRegistration = geoQuery.on("key_entered", function(key, location, distance) {
 
 
-
+alert(key);
 var blocked = 0;
 var subtract1 = key.substr(key.indexOf("*") + 1);
 var subtract = subtract1.split('*')[0];
