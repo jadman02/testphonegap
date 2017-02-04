@@ -874,7 +874,6 @@ function getMatches(){
     
     alert(i);
     alert('sexuality' + sexuality);
-        alert('agewsiper' + agewsiper);
 myApp.swiper('.swiper-' + i, {
     slidesPerView:3,
     freeMode:true,
@@ -896,8 +895,6 @@ var ageswiper = swiper.clickedSlide.classList[0].replace("age_", "");
 var findingRef = firebase.database().ref(sexuality+ '_'+ i);
 
 var foundFire = new GeoFire(findingRef);
-    alert(latitudep)
-        alert(longitudep);
     var geoQuery = foundFire.query({
     center: [latitudep,longitudep],
     radius: 45000
