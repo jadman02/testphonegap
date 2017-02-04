@@ -890,13 +890,13 @@ myApp.swiper('.swiper-' + i, {
     preloadImages: false,
     // Enable lazy loading
     lazyLoading: true,
-    watchSlidesVisibility:true,
+    watchSlidesVisibility:true
    
-    onClick:function(swiper, event) {
+  //  onClick:function(swiper, event) {
 
-var ageswiper = swiper.clickedSlide.classList[0].replace("age_", "");
+//var ageswiper = swiper.clickedSlide.classList[0].replace("age_", "");
 
-    photoBrowser(swiper.clickedIndex,ageswiper);}
+  //  photoBrowser(swiper.clickedIndex,ageswiper);}
     //pagination:'.swiper-pagination'
   });
     
