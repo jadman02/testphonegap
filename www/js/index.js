@@ -592,7 +592,7 @@ $.each(objs, function(i, obj) {
 
 if (obj.to_uid == f_uid) {
     
-    if (obj.received =='N') {notificationscount = notificationscount + obj.new_message_count;$('#buzzer')[0].play();}
+    if (obj.received =='N') {notificationscount = notificationscount + obj.new_message_count;}
     
     
     
