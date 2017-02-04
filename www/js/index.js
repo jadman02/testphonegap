@@ -111,7 +111,9 @@ var view4 = myApp.addView('#view-4');
 
 
   var notifcount = firebase.database().ref('notifications/' +f_uid).on('value', function(snapshot) {
-
+alert('snapshot');
+      alert(snapshot);
+      
 var notificationscount = 0;
 
 var objs = snapshot.val();
@@ -123,7 +125,7 @@ $.each(objs, function(i, obj) {
 
 if (obj.to_uid == f_uid) {
     
-    if (obj.received =='N') {notificationscount = notificationscount + obj.new_message_count;$('#buzzer')[0].play();}
+    if (obj.received =='N') {notificationscount = notificationscount + obj.new_message_count;}
     
     
     
