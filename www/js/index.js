@@ -84,7 +84,13 @@ view3 = myApp.addView('#view-3');
 view4 = myApp.addView('#view-4');
         myApp.init();
 
-
+ var popupHTML = '<div class="popup">'+
+                    '<div class="content-block">'+
+                      '<p>Popup created dynamically.</p>'+
+                      '<p><a href="#" class="close-popup">Close me</a></p>'+
+                    '</div>'+
+                  '</div>'
+  myApp.popup(popupHTML);
 
 
 $$('.panel-left').on('panel:opened', function () {
