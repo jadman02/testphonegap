@@ -865,7 +865,7 @@ function getMatches(){
     alert('f_lower'+f_lower);
     for (var i = f_lower; i <= f_upper; i++) {
         
-        alert('getting matches 2');
+      //  alert('getting matches 2');
         
       match_number = 0;
 
@@ -882,26 +882,26 @@ function getMatches(){
 '</div>'
         
         );
-        alert('getting matches 3.5');
+       // alert('getting matches 3.5');
     
     alert(i);
     alert('sexuality' + sexuality);
 
-        //myApp.swiper('.swiper-' + i, {
-    //slidesPerView:3,
-    //freeMode:true,
-    //preloadImages: false,
+    myApp.swiper('.swiper-' + i, {
+    slidesPerView:3,
+    freeMode:true,
+    preloadImages: false,
     // Enable lazy loading
-   // lazyLoading: true,
-   // watchSlidesVisibility:true
+    lazyLoading: true,
+    watchSlidesVisibility:true,
    
-  //  onClick:function(swiper, event) {
+    onClick:function(swiper, event) {
 
-//var ageswiper = swiper.clickedSlide.classList[0].replace("age_", "");
+var ageswiper = swiper.clickedSlide.classList[0].replace("age_", "");
 
-  //  photoBrowser(swiper.clickedIndex,ageswiper);}
+    photoBrowser(swiper.clickedIndex,ageswiper);}
     //pagination:'.swiper-pagination'
- // });
+  });
     
     
     alert(sexuality);
@@ -934,7 +934,7 @@ var matchname = subtract1.substr(subtract1.indexOf("*") + 1);
   
 if ($('.slide_' + graphid).length){
   
-  console.log('yass1 - pre delete');
+  alert('yass1 - pre delete');
   alert(all_matches_photos); 
   
    var classremove = $('.slide_' + graphid).attr("class").split(' ');
