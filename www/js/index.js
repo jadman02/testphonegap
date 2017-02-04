@@ -17,18 +17,15 @@ var loaded = false;
 var myList;
         // Initialize your app
 var myApp = new Framework7({init: false});
+var $$ = Dom7;
+var view1, view2, view3, view4;
+
+
 
 // Export selectors engine
-var $$ = Dom7;
 
-// Add views
-var view1 = myApp.addView('#view-1');
-var view2 = myApp.addView('#view-2', {
-    // Because we use fixed-through navbar we can enable dynamic navbar
-    dynamicNavbar: true
-});
-var view3 = myApp.addView('#view-3');
-var view4 = myApp.addView('#view-4');
+
+
 
 /*
  * Licensed to the Apache Software Foundation (ASF) under one
@@ -77,7 +74,14 @@ var app = {
      //  myApp.init();
         
 
-        
+        // Add views
+view1 = myApp.addView('#view-1');
+view2 = myApp.addView('#view-2', {
+    // Because we use fixed-through navbar we can enable dynamic navbar
+    dynamicNavbar: true
+});
+view3 = myApp.addView('#view-3');
+view4 = myApp.addView('#view-4');
         myApp.init();
 
 
