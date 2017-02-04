@@ -545,37 +545,83 @@ myList.clearCache();
         //firebaseauthchange
         $( document ).ready(function() {
         firebase.auth().onAuthStateChanged(function(user) {
- alert('checking');
+  
+
   
   if (user) {
       
-      alert('user yes');
-    
-      alert(user.providerData[0].displayName);
-     f_uid = user.providerData[0].uid;
+      
+      
+       alert(user);
+       alert('yes user');// User is signed in.
+
+       f_uid = user.providerData[0].uid;
         f_name = user.providerData[0].displayName;
          f_first = f_name.substr(0,f_name.indexOf(' '));
          f_email = user.providerData[0].email;
           f_image = user.providerData[0].photoURL;
-                 console.log('change in auth state' + f_name);
+                 alert('change in auth state' + f_name);
+   alert(f_uid);
+   
+  // $( "#profilepic" ).empty();
+  // $( "#profilepic" ).append('<div style="float:left;height:30px;width:30px;border-radius:5px;margin-right:5px;background-size:cover;background-position:50% 50%;background-image:url(\'http://graph.facebook.com/'+f_uid+'/picture?type=normal\');"></div>');
+
+
+
+
+  var notifcount = firebase.database().ref('notifications/' +f_uid).on('value', function(snapshot) {
+
+var notificationscount = 0;
+
+var objs = snapshot.val();
+
+//If existing notifications, get number of unseen messages, delete old notifications
+if (snapshot.val()){
+
+$.each(objs, function(i, obj) {
+
+if (obj.to_uid == f_uid) {
+    
+    if (obj.received =='N') {notificationscount = notificationscount + obj.new_message_count;$('#buzzer')[0].play();}
+    
+    
+    
+}
+    
+});
+
+$( ".notifspan" ).empty();
+$( ".notifspan" ).append(notificationscount);
+
+}
+
+
+});
+
+getPreferences();
+
+
+    //console.log(user.emailVerified);
+    
+    
+  //  if (user.emailVerified === false) {console.log('not verified');user.sendEmailVerification(); }
+    
+    
+    
     
   } else {
-      alert('no user1');
+      
+
+      
       $( ".ploader" ).show();
       $( ".loginbutton" ).show();
       $( ".login-loader" ).hide();
 
-      alert('no user2');
-      
-//startApp();
-      
-
-
-    
+    console.log('no user');
     // No user is signed in.
   }
+});
 
-     });
     
        }); 
         
