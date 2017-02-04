@@ -857,7 +857,8 @@ var all_matches_photos=[];
 function getMatches(){
     
 
-    
+     $( ".ploader" ).hide();
+    myApp.closeModal();
     //on success 
      alert('getting matches 1');
     
@@ -1033,8 +1034,7 @@ else {curswiper.prependSlide('<div class="age_'+subtract+' swiper-slide slide_'+
     }
     
     
-    $( ".ploader" ).hide();
-    myApp.closeModal();
+   
 
 deletePhotos();
 
