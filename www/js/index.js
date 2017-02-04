@@ -873,7 +873,8 @@ function getMatches(){
         
     
     alert(i);
-    
+    alert('sexuality' + sexuality);
+        alert('agewsiper' + agewsiper);
 myApp.swiper('.swiper-' + i, {
     slidesPerView:3,
     freeMode:true,
@@ -882,7 +883,7 @@ myApp.swiper('.swiper-' + i, {
     lazyLoading: true,
     watchSlidesVisibility:true,
    
-    onClick:function(swiper, event) {console.log();
+    onClick:function(swiper, event) {
 
 var ageswiper = swiper.clickedSlide.classList[0].replace("age_", "");
 
@@ -891,7 +892,7 @@ var ageswiper = swiper.clickedSlide.classList[0].replace("age_", "");
   });
     
     
-    
+    alert(sexuality);
 var findingRef = firebase.database().ref(sexuality+ '_'+ i);
 
 var foundFire = new GeoFire(findingRef);
