@@ -111,8 +111,7 @@ var view4 = myApp.addView('#view-4');
 
 
   var notifcount = firebase.database().ref('notifications/' +f_uid).on('value', function(snapshot) {
-alert('snapshot');
-      alert(snapshot);
+
       
 var notificationscount = 0;
 
@@ -134,6 +133,7 @@ if (obj.to_uid == f_uid) {
 });
 
 $( ".notifspan" ).empty();
+    alert('notification' + notificationscount);
 $( ".notifspan" ).append(notificationscount);
 
 }
@@ -810,10 +810,13 @@ function fbLogoutUser() {
 
     
 var onSuccess = function(position) {
+    
+    alert('success');
+    
     latitudep = position.coords.latitude;
 longitudep = position.coords.longitude;
 
-//alert(latitudep);
+alert(latitudep);
 //alert(longitudep);
 
 updateGeo();
