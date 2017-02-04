@@ -904,7 +904,7 @@ var foundFire = new GeoFire(findingRef);
    
     var onKeyEnteredRegistration = geoQuery.on("key_entered", function(key, location, distance) {
 
-
+alert(key);
 
 var blocked = 0;
 var subtract1 = key.substr(key.indexOf("*") + 1);
@@ -1040,9 +1040,9 @@ var geoFire = new GeoFire(matchesRef);
 
 
 geoFire.set(f_uid + '*' + f_age + '*' + f_first, [latitudep, longitudep]).then(function() {
-  console.log("Provided key has been added to GeoFire");
+  alert("Provided key has been added to GeoFire");
 }, function(error) {
-  console.log("Error: " + error);
+  alert("Error: " + error);
 });
 
     
