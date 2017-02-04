@@ -15,10 +15,7 @@ var loadpref= false;
 var loadpref2= false;
 var loaded = false;
 var myList;
-        // Initialize your app
-var myApp = new Framework7({init: false});
-var $$ = Dom7;
-var view1, view2, view3, view4;
+
 
 
 
@@ -73,7 +70,10 @@ var app = {
         alert('Received Event: ' + id);
      //  myApp.init();
         
-
+        // Initialize your app
+var myApp = new Framework7({init: false});
+var $$ = Dom7;
+var view1, view2, view3, view4;
         // Add views
 view1 = myApp.addView('#view-1');
 view2 = myApp.addView('#view-2', {
