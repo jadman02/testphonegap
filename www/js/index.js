@@ -872,7 +872,7 @@ function getMatches(){
         );
         
     
-    console.log(i);
+    alert(i);
     
 myApp.swiper('.swiper-' + i, {
     slidesPerView:3,
@@ -895,7 +895,8 @@ var ageswiper = swiper.clickedSlide.classList[0].replace("age_", "");
 var findingRef = firebase.database().ref(sexuality+ '_'+ i);
 
 var foundFire = new GeoFire(findingRef);
-    
+    alert(latitudep)
+        alert(longitudep);
     var geoQuery = foundFire.query({
     center: [latitudep,longitudep],
     radius: 45000
@@ -923,7 +924,7 @@ var matchname = subtract1.substr(subtract1.indexOf("*") + 1);
 if ($('.slide_' + graphid).length){
   
   console.log('yass1 - pre delete');
-  console.log(all_matches_photos); 
+  alert(all_matches_photos); 
   
    var classremove = $('.slide_' + graphid).attr("class").split(' ');
   
