@@ -15,7 +15,20 @@ var loadpref= false;
 var loadpref2= false;
 var loaded = false;
 var myList;
+        // Initialize your app
+var myApp = new Framework7({init: false});
 
+// Export selectors engine
+var $$ = Dom7;
+
+// Add views
+var view1 = myApp.addView('#view-1');
+var view2 = myApp.addView('#view-2', {
+    // Because we use fixed-through navbar we can enable dynamic navbar
+    dynamicNavbar: true
+});
+var view3 = myApp.addView('#view-3');
+var view4 = myApp.addView('#view-4');
 
 /*
  * Licensed to the Apache Software Foundation (ASF) under one
@@ -63,20 +76,7 @@ var app = {
         alert('Received Event: ' + id);
      //  myApp.init();
         
-        // Initialize your app
-var myApp = new Framework7({init: false});
 
-// Export selectors engine
-var $$ = Dom7;
-
-// Add views
-var view1 = myApp.addView('#view-1');
-var view2 = myApp.addView('#view-2', {
-    // Because we use fixed-through navbar we can enable dynamic navbar
-    dynamicNavbar: true
-});
-var view3 = myApp.addView('#view-3');
-var view4 = myApp.addView('#view-4');
         
         myApp.init();
 
