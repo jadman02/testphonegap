@@ -849,10 +849,12 @@ function getMatches(){
 
     
     //on success 
-     alert('getting matches');
+     alert('getting matches 1');
     
-    
+    alert('f_lower'+f_lower);
     for (var i = f_lower; i <= f_upper; i++) {
+        
+        alert('getting matches 2');
         
       match_number = 0;
 
@@ -899,7 +901,7 @@ var foundFire = new GeoFire(findingRef);
     radius: 45000
   });
    
-
+alert('getting matches 3');
  
    
     var onKeyEnteredRegistration = geoQuery.on("key_entered", function(key, location, distance) {
