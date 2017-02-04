@@ -849,7 +849,7 @@ function getMatches(){
 
     
     //on success 
-     
+     alert('getting matches');
     
     
     for (var i = f_lower; i <= f_upper; i++) {
