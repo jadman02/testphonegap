@@ -886,13 +886,14 @@ function getMatches(){
     
     alert(i);
     alert('sexuality' + sexuality);
-myApp.swiper('.swiper-' + i, {
-    slidesPerView:3,
-    freeMode:true,
-    preloadImages: false,
+
+        //myApp.swiper('.swiper-' + i, {
+    //slidesPerView:3,
+    //freeMode:true,
+    //preloadImages: false,
     // Enable lazy loading
-    lazyLoading: true,
-    watchSlidesVisibility:true
+   // lazyLoading: true,
+   // watchSlidesVisibility:true
    
   //  onClick:function(swiper, event) {
 
@@ -900,7 +901,7 @@ myApp.swiper('.swiper-' + i, {
 
   //  photoBrowser(swiper.clickedIndex,ageswiper);}
     //pagination:'.swiper-pagination'
-  });
+ // });
     
     
     alert(sexuality);
