@@ -314,7 +314,11 @@ alert(defaultApp.name);  // "[DEFAULT]"
     <script type="text/javascript" src="js/geofire.js"></script>
     <script type="text/javascript" src="js/openfb.js"></script>
     <script type="text/javascript">
-        app.initialize();
+        $( document ).ready(function() {
+app.initialize();
+        }); 
+
+        
     </script>
     <script>
      // Defaults to sessionStorage for storing the Facebook token
