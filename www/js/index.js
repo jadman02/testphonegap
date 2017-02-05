@@ -1582,7 +1582,8 @@ function photoBrowser(openprofile,arraynumber){
 
 //firebase.database().ref("users/" + f_uid).off('value', userpref);
 
-
+console.log(myApp);
+    console.log(myPhotoBrowser);
 myPhotoBrowser = myApp.photoBrowser({
     zoom: 400,
     lazyLoading:true,
