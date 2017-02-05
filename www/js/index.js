@@ -15,8 +15,8 @@ var loadpref= false;
 var loadpref2= false;
 var loaded = false;
 var myList;
-
-
+var myApp;
+var $$;
 
 
 // Export selectors engine
@@ -71,8 +71,8 @@ var app = {
      //  myApp.init();
         
         // Initialize your app
-var myApp = new Framework7({init: false});
-var $$ = Dom7;
+myApp = new Framework7({init: false});
+$$ = Dom7;
 var view1, view2, view3, view4;
         // Add views
 view1 = myApp.addView('#view-1');
