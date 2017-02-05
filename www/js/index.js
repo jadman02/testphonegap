@@ -65,7 +65,7 @@ var app = {
         app.receivedEvent('deviceready');
         
         
-$( document ).ready(function() {
+
         
                
     
@@ -4991,9 +4991,8 @@ getPreferences();
     // No user is signed in.
   }
 });
-    
-}); 
-
+ 
+        
 
         
     },
