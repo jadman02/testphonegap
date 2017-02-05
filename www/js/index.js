@@ -642,8 +642,8 @@ getPreferences();
         
         
     }
-};
 
+    
 
 function startApp(){
 
@@ -5000,4 +5000,7 @@ if ((obj.to_uid == targetid) || (obj.from_uid == targetid)) {
 
 String.prototype.capitalize = function() {
     return this.charAt(0).toUpperCase() + this.slice(1);
+};
+
+
 };
