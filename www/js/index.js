@@ -896,6 +896,8 @@ function getMatches(){
 
 var ageswiper = swiper.clickedSlide.classList[0].replace("age_", "");
 
+        
+        
     photoBrowser(swiper.clickedIndex,ageswiper);}
     //pagination:'.swiper-pagination'
   });
@@ -1581,9 +1583,10 @@ var targetdatelikes, targetducklikes;
 function photoBrowser(openprofile,arraynumber){
 
 //firebase.database().ref("users/" + f_uid).off('value', userpref);
-
-console.log(myApp);
-    console.log(myPhotoBrowser);
+alert(openprofile);
+    alert(arraynumber);
+alert(myApp);
+    alert(myPhotoBrowser);
 myPhotoBrowser = myApp.photoBrowser({
     zoom: 400,
     lazyLoading:true,
