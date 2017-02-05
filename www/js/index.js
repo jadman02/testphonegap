@@ -73,7 +73,15 @@ var app = {
         // Initialize your app
 
 
-    $( document ).ready(function() {
+    
+
+ 
+
+        }
+
+};
+
+$( document ).ready(function() {
         
                
     
@@ -5001,12 +5009,4 @@ String.prototype.capitalize = function() {
 };
 
 }); 
-
-
- 
-
-        }
-
-};
-
 
