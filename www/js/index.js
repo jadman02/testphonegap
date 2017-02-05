@@ -72,7 +72,10 @@ var app = {
         
         // Initialize your app
 
+
+    $( document ).ready(function() {
         
+               
     
 
         // Add views
@@ -546,7 +549,7 @@ myList.clearCache();
 });
         
         //firebaseauthchange
-        $( document ).ready(function() {
+        
         firebase.auth().onAuthStateChanged(function(user) {
   
 
@@ -625,8 +628,6 @@ getPreferences();
   }
 });
 
-    
-       }); 
         
         
         
@@ -4999,7 +5000,7 @@ String.prototype.capitalize = function() {
     return this.charAt(0).toUpperCase() + this.slice(1);
 };
 
-
+}); 
 
 
  
