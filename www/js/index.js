@@ -562,8 +562,8 @@ myList.clearCache();
       
       
       
-       alert(user);
-       alert('yes user');// User is signed in.
+       
+//       alert('yes user');// User is signed in.
 
        f_uid = user.providerData[0].uid;
         f_name = user.providerData[0].displayName;
@@ -857,9 +857,9 @@ var all_matches_photos=[];
 function getMatches(){
     
     //on success 
-     alert('getting matches 1');
+     
     
-    alert('f_lower'+f_lower);
+    
     for (var i = f_lower; i <= f_upper; i++) {
         
       //  alert('getting matches 2');
@@ -881,8 +881,8 @@ function getMatches(){
         );
        // alert('getting matches 3.5');
     
-    alert(i);
-    alert('sexuality' + sexuality);
+    //alert(i);
+    //alert('sexuality' + sexuality);
 
     myApp.swiper('.swiper-' + i, {
     slidesPerView:3,
@@ -901,7 +901,7 @@ var ageswiper = swiper.clickedSlide.classList[0].replace("age_", "");
   });
     
     
-    alert(sexuality);
+   // alert(sexuality);
 var findingRef = firebase.database().ref(sexuality+ '_'+ i);
 
 var foundFire = new GeoFire(findingRef);
@@ -910,12 +910,12 @@ var foundFire = new GeoFire(findingRef);
     radius: 45000
   });
    
-alert('getting matches 3');
+//alert('getting matches 3');
  
    
     var onKeyEnteredRegistration = geoQuery.on("key_entered", function(key, location, distance) {
 
-alert(key);
+//alert(key);
 
 var blocked = 0;
 var subtract1 = key.substr(key.indexOf("*") + 1);
