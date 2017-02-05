@@ -63,24 +63,8 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
-    },
-    // Update DOM on a Received Event
-    receivedEvent: function(id) {
-
-        alert('Received Event: ' + id);
-     //  myApp.init();
         
-        // Initialize your app
-
-
-    
-
- 
-
-        }
-
-};
-
+        
 $( document ).ready(function() {
         
                
@@ -5010,3 +4994,22 @@ String.prototype.capitalize = function() {
 
 }); 
 
+
+        
+    },
+    // Update DOM on a Received Event
+    receivedEvent: function(id) {
+
+        alert('Received Event: ' + id);
+     //  myApp.init();
+        
+        // Initialize your app
+
+
+    
+
+ 
+
+        }
+
+};
