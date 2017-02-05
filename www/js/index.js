@@ -71,7 +71,17 @@ var app = {
      //  myApp.init();
         
         // Initialize your app
-myApp = new Framework7({init: false});
+
+
+ myApp.init();
+
+        }
+
+};
+
+
+
+    myApp = new Framework7({init: false});
 $$ = Dom7;
 
         // Add views
@@ -82,16 +92,8 @@ view2 = myApp.addView('#view-2', {
 });
 view3 = myApp.addView('#view-3');
 view4 = myApp.addView('#view-4');
-        myApp.init();
-
- initCode();
-
-        }
-
-};
-
-function initCode(){
-
+       
+    
 $$('.panel-left').on('panel:opened', function () {
 
 leftPanel();
@@ -5005,4 +5007,4 @@ String.prototype.capitalize = function() {
     return this.charAt(0).toUpperCase() + this.slice(1);
 };
 
-}
+
