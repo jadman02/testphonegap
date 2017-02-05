@@ -73,7 +73,7 @@ var app = {
         // Initialize your app
 
 
- myApp.init();
+ 
 
         }
 
@@ -93,7 +93,8 @@ view2 = myApp.addView('#view-2', {
 view3 = myApp.addView('#view-3');
 view4 = myApp.addView('#view-4');
        
-    
+myApp.init(); 
+
 $$('.panel-left').on('panel:opened', function () {
 
 leftPanel();
