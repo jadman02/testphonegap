@@ -30,7 +30,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, minimal-ui" />
     <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
-    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *" />
     <!-- Good default declaration:
     * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
     * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
@@ -39,7 +39,8 @@
         * Enable eval(): add 'unsafe-eval' to default-src
     * Create your own at http://cspisawesome.com
     -->
-    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
+<!--<meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" />
+-->
 
 
     <title>Date or Duck</title>
