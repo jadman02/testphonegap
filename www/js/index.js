@@ -84,11 +84,13 @@ view3 = myApp.addView('#view-3');
 view4 = myApp.addView('#view-4');
         myApp.init();
 
- 
+ initCode();
 
         }
 
 };
+
+function initCode(){
 
 $$('.panel-left').on('panel:opened', function () {
 
@@ -5002,3 +5004,5 @@ if ((obj.to_uid == targetid) || (obj.from_uid == targetid)) {
 String.prototype.capitalize = function() {
     return this.charAt(0).toUpperCase() + this.slice(1);
 };
+
+}
