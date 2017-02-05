@@ -17,7 +17,7 @@ var loaded = false;
 var myList;
 var myApp;
 var $$;
-
+var view1, view2, view3, view4;
 
 // Export selectors engine
 
@@ -73,7 +73,7 @@ var app = {
         // Initialize your app
 myApp = new Framework7({init: false});
 $$ = Dom7;
-var view1, view2, view3, view4;
+
         // Add views
 view1 = myApp.addView('#view-1');
 view2 = myApp.addView('#view-2', {
@@ -856,9 +856,6 @@ var all_matches_photos=[];
 
 function getMatches(){
     
-
-     $( ".ploader" ).hide();
-    //myApp.closeModal();
     //on success 
      alert('getting matches 1');
     
@@ -873,8 +870,8 @@ function getMatches(){
     $( ".content-here" ).append(
    
         
-    '<span class="badge age-header header_'+i+'" style="text-align:left;float:left;width:100%;border-radius:0px;">'+i+'</span>'+
-      '  <div class="swiper-container swiper-'+i+'" style="padding-top:10px;height:180px;clear:both;">'+
+    '<span class="badge age-header header_'+i+'" style="display:none;text-align:left;float:left;width:100%;border-radius:0px;">'+i+'</span>'+
+      '  <div class="swiper-container swiper-'+i+'" style="display:none;padding-top:10px;height:180px;clear:both;">'+
    
     '<div class="swiper-wrapper">'+
    // '<div class="swiper-slide"><div style="background-color:white;height:50%;width:50%;margin-top:50%;margin-left:25%;"></div></div>'+
@@ -1037,6 +1034,9 @@ else {curswiper.prependSlide('<div class="age_'+subtract+' swiper-slide slide_'+
     
     
    
+
+     $( ".ploader" ).hide();
+    myApp.closeModal();
 
 deletePhotos();
 
