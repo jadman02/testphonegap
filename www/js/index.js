@@ -15,7 +15,7 @@ var loadpref= false;
 var loadpref2= false;
 var loaded = false;
 var myList;
-var myApp = new Framework7({init: false});
+var myApp = new Framework7();
 var $$ = Dom7;
 var view1, view2, view3, view4;
 
@@ -79,7 +79,7 @@ view2 = myApp.addView('#view-2', {
 view3 = myApp.addView('#view-3');
 view4 = myApp.addView('#view-4');
        
-myApp.init(); 
+//myApp.init(); 
 
 
     
