@@ -1592,10 +1592,6 @@ var targetdatelikes, targetducklikes;
 function photoBrowser(openprofile,arraynumber){
 
 //firebase.database().ref("users/" + f_uid).off('value', userpref);
-alert(openprofile);
-    alert(arraynumber);
-alert(myApp);
-    alert(myPhotoBrowser);
 myPhotoBrowser = myApp.photoBrowser({
     zoom: 400,
     lazyLoading:true,
