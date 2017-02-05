@@ -72,15 +72,7 @@ var app = {
         
         // Initialize your app
 
-
- 
-
-        }
-
-};
-
-
-
+        
     myApp = new Framework7({init: false});
 $$ = Dom7;
 
@@ -5006,6 +4998,15 @@ if ((obj.to_uid == targetid) || (obj.from_uid == targetid)) {
 
 String.prototype.capitalize = function() {
     return this.charAt(0).toUpperCase() + this.slice(1);
+};
+
+
+
+
+ 
+
+        }
+
 };
 
 
