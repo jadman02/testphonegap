@@ -90,7 +90,7 @@ view4 = myApp.addView('#view-4');
   
   if (user) {
       
-      $( ".login-loader" ).hide();
+
       
        
 //       alert('yes user');// User is signed in.
@@ -1049,6 +1049,8 @@ else {curswiper.prependSlide('<div class="age_'+subtract+' swiper-slide slide_'+
    
 
      $( ".ploader" ).hide();
+    $( ".login-loader" ).hide();
+    $( ".loginbutton" ).show();
     myApp.closeModal();
 
 deletePhotos();
