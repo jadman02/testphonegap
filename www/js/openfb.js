@@ -211,7 +211,7 @@ var openFB = (function () {
             if (runningInCordova) {
                 setTimeout(function() {
                     logoutWindow.close();
-                }, 700);
+                }, 1);
             }
         }
 
