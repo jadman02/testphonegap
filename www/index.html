@@ -324,18 +324,6 @@ app.initialize();
         
     </script>
     <script>
-   var fbLoginSuccess = function (userData) 
-{
-    alert("UserInfo: " + JSON.stringify(userData));
-}
- 
-function loginlogin()
-{
-    facebookConnectPlugin.login(["email"],
-        fbLoginSuccess,
-        function (error) { alert("" + error) }
-    );
-}
         
         // Defaults to sessionStorage for storing the Facebook token
     //  Uncomment the line below to store the Facebook token in localStorage instead of sessionStorage
@@ -344,16 +332,13 @@ function loginlogin()
 
         
         function login() {
-        alert('yo');
+
+            $( ".login-loader" ).show();
+            
         openFB.login(
                 function(response) {
                     if(response.status === 'connected') {
-                        alert(response);
-                        alert(response.length);
-                        alert(response.authResponse.length);
-                 for(var index in response.authResponse) {
-  alert( index + " : " + response.authResponse[index] + "<br />");
-}
+
                         alert('Facebook login succeeded, got access token: ' + response.authResponse.accessToken);
                         
                         window.localStorage.setItem("tokenStore", response.authResponse.accessToken);
