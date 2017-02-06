@@ -656,12 +656,11 @@ myList.clearCache();
 
 function startApp(){
 
-    alert('starting');
+
     
     firebaseinit = localStorage.getItem('tokenStore');
     
     if (firebaseinit){
-    alert(firebaseinit);
         
         
         
@@ -669,24 +668,26 @@ function startApp(){
             
             
       var credential = firebase.auth.FacebookAuthProvider.credential(firebaseinit);
-        alert('about to log ' + credential);
         
             firebase.auth().signInWithCredential(credential).catch(function(error) {
           // Handle Errors here.
-          var errorCode = error.code;
+         
+                if (error) {
+                    
+                   
+                
+                var errorCode = error.code;
           var errorMessage = error.message;
           // The email of the user's account used.
           var email = error.email;
           // The firebase.auth.AuthCredential type that was used.
           var credential = error.credential;
           
-               
+                 myApp.alert('Error', 'Error message: ' + errorMessage + '(code:' + errorCode + ')');
         });
          
             
-            
-
-        
+        $( ".login-loader" ).hide();      
         
         
     }
