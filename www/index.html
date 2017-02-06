@@ -352,7 +352,7 @@ app.initialize();
                         
                     } else {
                       
-                         myApp.alert('Facebook login failed', 'Error: ' + response.error);
+                         myApp.alert('Oops', 'Facebook login failed: ' + response.error);
                         $( ".login-loader" ).hide();$( ".loginbutton" ).show();
                     }
                 }, {scope: 'email'});
