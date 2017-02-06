@@ -90,7 +90,7 @@ view4 = myApp.addView('#view-4');
   
   if (user) {
       
-      
+      $( ".login-loader" ).hide();
       
        
 //       alert('yes user');// User is signed in.
@@ -669,7 +669,7 @@ function startApp(){
             
             
       var credential = firebase.auth.FacebookAuthProvider.credential(firebaseinit);
-        alert('about to log ' + credential);
+
         
             firebase.auth().signInWithCredential(credential).catch(function(error) {
           // Handle Errors here.
