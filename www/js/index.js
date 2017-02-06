@@ -772,17 +772,7 @@ console.log(errorCode);
     
 }
 
-function logout(){
 
-firebase.auth().signOut().then(function() {
-   loaded = false; f_token = false;loadpref = false;console.log('Sign-out successful');fbLogoutUser();
-}, function(error) {
-  // An error happened.
-});
-
-
-
-}
 
 function specificusercheck(){
 
