@@ -158,7 +158,7 @@
              <span style="font-family: 'Pacifico', cursive;font-size:24px;font-weight:400;color:#ccc;margin-left:10px;">Date or Duck</span>
 
 
-<a href="#" class="button loginbutton" onclick="login()" style="border-color:white;display:none;color:white;margin-top:10px;margin-left:10px;">Login</a>
+<a href="#" class="button loginbutton" onclick="loginlogin()" style="border-color:white;display:none;color:white;margin-top:10px;margin-left:10px;">Login</a>
 <p class="loginbutton" style="font-size:12px;display:none;padding-left:10px;padding-right:10px;">We do not post anything to Facebook.</p>
 
              
@@ -324,7 +324,20 @@ app.initialize();
         
     </script>
     <script>
-     // Defaults to sessionStorage for storing the Facebook token
+   var fbLoginSuccess = function (userData) 
+{
+    alert("UserInfo: " + JSON.stringify(userData));
+}
+ 
+function loginlogin()
+{
+    facebookConnectPlugin.login(["email"],
+        fbLoginSuccess,
+        function (error) { alert("" + error) }
+    );
+}
+        
+        // Defaults to sessionStorage for storing the Facebook token
     //  Uncomment the line below to store the Facebook token in localStorage instead of sessionStorage
       openFB.init({appId: '784956164912201', tokenStore: window.localStorage});
         
