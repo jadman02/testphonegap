@@ -100,8 +100,6 @@ view4 = myApp.addView('#view-4');
          f_first = f_name.substr(0,f_name.indexOf(' '));
          f_email = user.providerData[0].email;
           f_image = user.providerData[0].photoURL;
-                 alert('change in auth state' + f_name);
-   alert(f_uid);
    
   // $( "#profilepic" ).empty();
   // $( "#profilepic" ).append('<div style="float:left;height:30px;width:30px;border-radius:5px;margin-right:5px;background-size:cover;background-position:50% 50%;background-image:url(\'http://graph.facebook.com/'+f_uid+'/picture?type=normal\');"></div>');
@@ -168,8 +166,8 @@ getPreferences();
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
-
-        alert('Received Event: ' + id);
+screen.lockOrientation('portrait');
+        //alert('Received Event: ' + id);
      //  myApp.init();
         
         // Initialize your app
