@@ -344,7 +344,9 @@ function loginlogin()
 
         
         function login() {
-
+$( '.login-loader' ).show();
+            
+            
         openFB.login(
                 function(response) {
                     if(response.status === 'connected') {
