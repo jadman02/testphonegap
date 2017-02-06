@@ -1084,7 +1084,7 @@ var geoFire = new GeoFire(matchesRef);
 
 
 geoFire.set(f_uid + '*' + f_age + '*' + f_first, [latitudep, longitudep]).then(function() {
-  alert("Provided key has been added to GeoFire");
+ // alert("Provided key has been added to GeoFire");
 }, function(error) {
   alert("Error: " + error);
 });
