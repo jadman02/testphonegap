@@ -418,16 +418,19 @@ app.initialize();
                 },
                 errorHandler);
     }
-    function logout() {
+  
+
+        
+        function logout() {
         openFB.logout(
                 function() {
                     firebase.auth().signOut().then(function() {
                         loaded = false; f_token = false;loadpref = false;
-alert('Sign-out successful');tokenStore = false;storage.removeItem(tokenStore);
+tokenStore = false;storage.removeItem(tokenStore);
 }, function(error) {
   // An error happened.
 });
-                    alert('Logout successful');
+                   // alert('Logout successful');
                 },
                 errorHandler);
     }
