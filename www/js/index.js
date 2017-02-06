@@ -661,6 +661,7 @@ function startApp(){
     firebaseinit = localStorage.getItem('tokenStore');
     
     if (firebaseinit){
+
         
         
         
@@ -668,26 +669,26 @@ function startApp(){
             
             
       var credential = firebase.auth.FacebookAuthProvider.credential(firebaseinit);
+        alert('about to log ' + credential);
         
             firebase.auth().signInWithCredential(credential).catch(function(error) {
           // Handle Errors here.
-         
-                if (error) {
-                    
-                   
-                
-                var errorCode = error.code;
+          var errorCode = error.code;
           var errorMessage = error.message;
           // The email of the user's account used.
           var email = error.email;
           // The firebase.auth.AuthCredential type that was used.
           var credential = error.credential;
-          
-                 myApp.alert('Error', 'Error message: ' + errorMessage + '(code:' + errorCode + ')');
+         
+                if (error){
+                myApp.alert('Error', 'Error message: ' + errorMessage + '(code:' + errorCode + ')');
+                }
         });
          
             
-        $( ".login-loader" ).hide();      
+            
+
+        
         
         
     }
@@ -5011,5 +5012,4 @@ if ((obj.to_uid == targetid) || (obj.from_uid == targetid)) {
 String.prototype.capitalize = function() {
     return this.charAt(0).toUpperCase() + this.slice(1);
 };
-
 
