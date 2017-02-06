@@ -846,12 +846,26 @@ getMatches();
 
 
   function onError(error) {
-        alert('code: '    + error.code    + '\n' +
-              'message: ' + error.message + '\n');
+       
+      if (error.code == '1'){
+     $( ".permissiondenied" ).show();
+          $( ".unknownerror" ).hide();
+      
+      }
+       if ((error.code == '2') || (error.code == '3')){
+       
+            $( ".unknownerror" ).show();
+           $( ".permissiondenied" ).hide();
+           $( ".errorarea" ).empty();
+           $( ".errorarea" ).append(error.message);
+            
+       
+       }
+
     }
 
 function getWifilocation(){
-alert('get wifi location');
+
     navigator.geolocation.getCurrentPosition(onSuccess, onError);
    
 
@@ -1051,6 +1065,8 @@ else {curswiper.prependSlide('<div class="age_'+subtract+' swiper-slide slide_'+
      $( ".ploader" ).hide();
     $( ".login-loader" ).hide();
     $( ".loginbutton" ).show();
+    $( ".permissiondenied" ).hide();
+          $( ".unknownerror" ).hide();
     myApp.closeModal();
 
 deletePhotos();
