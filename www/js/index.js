@@ -66,10 +66,6 @@ var app = {
         app.receivedEvent('deviceready');
         
         
-window.addEventListener("orientationchange", function(){
-    screen.lockOrientation('portrait');
-});
-        
                
     
 
