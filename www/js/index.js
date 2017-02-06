@@ -166,7 +166,8 @@ getPreferences();
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
-screen.lockOrientation('portrait');
+alert(screen.orientation);
+        //screen.lockOrientation('portrait');
         //alert('Received Event: ' + id);
      //  myApp.init();
         
