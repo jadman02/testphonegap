@@ -55,6 +55,7 @@ var app = {
     // Bind any events that are required on startup. Common events are:
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
+        
         document.addEventListener('deviceready', this.onDeviceReady, false);
     },
     // deviceready Event Handler
@@ -65,7 +66,9 @@ var app = {
         app.receivedEvent('deviceready');
         
         
-
+window.addEventListener("orientationchange", function(){
+    screen.lockOrientation('portrait');
+});
         
                
     
@@ -166,8 +169,10 @@ getPreferences();
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
-alert(screen.orientation);
-        //screen.lockOrientation('portrait');
+
+        
+        
+        //
         //alert('Received Event: ' + id);
      //  myApp.init();
         
