@@ -1143,7 +1143,7 @@ if (f_gender == 'Female' && f_interested == 'Women') {sexuality = 'lesbian';}
 if (f_gender == 'Female' && f_interested == 'Men') {sexuality = 'female';}
         
         
-        if (loaded === false){alert('here2');getWifilocation();}
+        if (loaded === false){getWifilocation();}
         else {
             
             updatePhotos();}
