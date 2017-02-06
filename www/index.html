@@ -335,6 +335,10 @@ app.initialize();
 
             $( ".login-loader" ).show();
             
+            $( ".loginbutton" ).hide();
+            
+            
+            
         openFB.login(
                 function(response) {
                     if(response.status === 'connected') {
@@ -347,7 +351,9 @@ app.initialize();
                         startApp();
                         
                     } else {
-                        alert('Facebook login failed: ' + response.error);
+                      
+                         myApp.alert('Facebook login failed', 'Error: ' + response.error);
+                        $( ".login-loader" ).hide();$( ".loginbutton" ).show();
                     }
                 }, {scope: 'email'});
     }
