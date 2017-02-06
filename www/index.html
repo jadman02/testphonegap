@@ -352,7 +352,7 @@ app.initialize();
                         
                     } else {
                       
-                        if response.error =='undefined' {myApp.alert('Please login to start', 'Login required');}
+                        if (response.error =='undefined') {myApp.alert('Please login to start', 'Login required');}
                        else {myApp.alert('Facebook login failed: ' + response.error, 'Oops');}
                         
                          
