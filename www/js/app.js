@@ -492,7 +492,7 @@ firebase.auth().currentUser.getToken().then(function(idToken) {
 
 
 
-$.post( "locations.php", { projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,upper:f_upper,lower:f_lower,radius:radiussize,sexuality:sexuality,sortby:sortby,latitudep:latitudep,longitudep:longitudep} )
+$.post( "http://www.dateorduck.com/locations.php", { projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,upper:f_upper,lower:f_lower,radius:radiussize,sexuality:sexuality,sortby:sortby,latitudep:latitudep,longitudep:longitudep} )
   .done(function( data ) {
 
 var result = JSON.parse(data); 
@@ -1074,7 +1074,7 @@ deletePhotos();
 function justGeo(){
 
 firebase.auth().currentUser.getToken().then(function(idToken) {   
-$.post( "updatelocation.php", { projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,uid:f_uid,latitude:latitudep,longitude:longitudep} )
+$.post( "http://www.dateorduck.com/updatelocation.php", { projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,uid:f_uid,latitude:latitudep,longitude:longitudep} )
 
   .done(function( data ) {
   
@@ -1093,7 +1093,7 @@ console.log('updatedtimestamp');
 
 function updateGeo(){
 firebase.auth().currentUser.getToken().then(function(idToken) {  
-$.post( "updatelocation.php", { projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,uid:f_uid,latitude:latitudep,longitude:longitudep} )
+$.post( "http://www.dateorduck.com/updatelocation.php", { projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,uid:f_uid,latitude:latitudep,longitude:longitudep} )
 //$.post( "updatelocation.php", { uid:f_uid,latitude:latitudep,longitude:longitudep} )
   .done(function( data ) {
   console.log('update lcoation'+data);
@@ -2020,7 +2020,7 @@ deletedphoto = false;
 
 if(!myswiperphotos){
 firebase.auth().currentUser.getToken().then(function(idToken) { 
-$.post( "userdata.php", {projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,uid:f_uid} )
+$.post( "http://www.dateorduck.com/userdata.php", {projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,uid:f_uid} )
   .done(function( data ) {
   var result = JSON.parse(data); 
  console.log(result);
@@ -5045,7 +5045,7 @@ else{
 targetid = String(idw);
 targetname = idname;
 firebase.auth().currentUser.getToken().then(function(idToken) { 
-$.post( "singleuser.php", {projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,uid:targetid,latitudep:latitudep,longitudep:longitudep} )
+$.post( "http://www.dateorduck.com/singleuser.php", {projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,uid:targetid,latitudep:latitudep,longitudep:longitudep} )
   .done(function( data ) {
   console.log(data);
   var result = JSON.parse(data); 
@@ -9873,7 +9873,7 @@ $( ".datebutton" ).removeClass( "likesme" );
 $( ".duckbutton" ).removeClass( "likesme" );
 
 firebase.auth().currentUser.getToken().then(function(idToken) { 
-$.post( "userdata.php", { projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,uid:targetid,sexuality:sexuality} )
+$.post( "http://www.dateorduck.com/userdata.php", { projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,uid:targetid,sexuality:sexuality} )
   .done(function( data ) {
 
 var result = JSON.parse(data); 
@@ -10541,7 +10541,7 @@ firebase.database().ref('users/' + f_uid).set({
 
 
 firebase.auth().currentUser.getToken().then(function(idToken) { 
-$.post( "deleteuser.php", { projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,uid:f_uid} )
+$.post( "http://www.dateorduck.com/deleteuser.php", { projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,uid:f_uid} )
   .done(function( data ) {
   console.log(data);
 
@@ -11173,7 +11173,7 @@ var newlarge = addedlargearray.toString();
 var newwidth = addedwidth.toString();
 var newheight = addedheight.toString();
 firebase.auth().currentUser.getToken().then(function(idToken) { 
-$.post( "updatephotos.php", { projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,uid:f_uid,largeurls:newlarge,smallurls:newsmall,height:newheight,width:newwidth} )
+$.post( "http://www.dateorduck.com/updatephotos.php", { projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,uid:f_uid,largeurls:newlarge,smallurls:newsmall,height:newheight,width:newwidth} )
   .done(function( data ) {
 
 if (addedlargearray.length ===0){if ($( ".reorderbutton" ).hasClass( "disabled" )){}else {$( ".reorderbutton" ).addClass('disabled');}
@@ -11383,7 +11383,7 @@ var newsmall = newurl.toString();
 var newlarge = newurl.toString();
 
 firebase.auth().currentUser.getToken().then(function(idToken) { 
-$.post( "updatephotos.php", { projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,uid:f_uid,largeurls:newlarge,smallurls:newsmall} )
+$.post( "http://www.dateorduck.com/updatephotos.php", { projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,uid:f_uid,largeurls:newlarge,smallurls:newsmall} )
   .done(function( data ) {
 
 
@@ -11421,7 +11421,7 @@ var newwidth = "";
 var newheight = "";
 
 firebase.auth().currentUser.getToken().then(function(idToken) { 
-$.post( "updatephotos.php", { projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,uid:f_uid,largeurls:newlarge,smallurls:newsmall,height:newheight,width:newwidth} )
+$.post( "http://www.dateorduck.com/updatephotos.php", { projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,uid:f_uid,largeurls:newlarge,smallurls:newsmall,height:newheight,width:newwidth} )
   .done(function( data ) {
 console.log('deleted all');
 
