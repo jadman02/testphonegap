@@ -542,7 +542,8 @@ app.initialize();
         openFB.logout(
                 function() {
                     firebase.auth().signOut().then(function() {
-                        loaded = false; f_token = false;loadpref = false;
+                          myApp.closeModal();loaded = false; f_token = false;loadpref = false;fbLogoutUser();myFunction();$( ".toolbar" ).hide();
+                        
 tokenStore = false;storage.removeItem(tokenStore);
 }, function(error) {
   // An error happened.
