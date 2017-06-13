@@ -5073,7 +5073,7 @@ if(swiperQuestions){comingback = 0; swiperQuestions.slideNext();comingback=1;}}}
 
 var singleuserarray = [];
 function singleUser(idw,idname,origin){
-
+alert('yo99');
 
 if (singleuserarray[0] != null){
 
