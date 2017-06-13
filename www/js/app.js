@@ -235,6 +235,54 @@ firebase.database().ref('users/' + f_uid).update({
 
 };
 
+function startApp(){
+
+
+    
+    firebaseinit = localStorage.getItem('tokenStore');
+    
+    if (firebaseinit){
+
+        
+        
+        
+
+            
+            
+      var credential = firebase.auth.FacebookAuthProvider.credential(firebaseinit);
+
+        
+            firebase.auth().signInWithCredential(credential).catch(function(error) {
+          // Handle Errors here.
+          var errorCode = error.code;
+          var errorMessage = error.message;
+          // The email of the user's account used.
+          var email = error.email;
+          // The firebase.auth.AuthCredential type that was used.
+          var credential = error.credential;
+         
+                if (error){
+                myApp.alert('Error', 'Error message: ' + errorMessage + '(code:' + errorCode + ')');
+                }
+        });
+         
+            
+            
+
+        
+        
+        
+    }
+    else {
+     
+
+    alert('no tokenStore');
+    }
+    
+    
+    
+}
+
 $$('.panel-right').on('panel:opened', function () {
 
 leftPanel();
