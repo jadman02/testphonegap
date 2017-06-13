@@ -168,12 +168,11 @@ view4 = myApp.addView('#view-4');
  
  firebase.auth().onAuthStateChanged(function(user) {
   
-
+alert('yo2');
   
   if (user) {
       
-      
-f_projectid = firebase.auth().currentUser.toJSON().authDomain.substr(0, firebase.auth().currentUser.toJSON().authDomain.indexOf('.'));
+      alert('yo1');
 
 
 
@@ -188,7 +187,7 @@ f_projectid = firebase.auth().currentUser.toJSON().authDomain.substr(0, firebase
           f_image = user.providerData[0].photoURL;
                  
    
-   $( ".userimagetoolbar" ).css("background-image","url(\'https://graph.facebook.com/"+f_uid+"/picture?type=normal\')");
+  // $( ".userimagetoolbar" ).css("background-image","url(\'https://graph.facebook.com/"+f_uid+"/picture?type=normal\')");
    
 
    
@@ -196,8 +195,8 @@ f_projectid = firebase.auth().currentUser.toJSON().authDomain.substr(0, firebase
    
   
    
-   $( "#profilepic" ).empty();
-   $( "#profilepic" ).append('<div style="float:left;height:70px;width:70px;border-radius:50%;margin:0 auto;background-size:cover;background-position:50% 50%;background-image:url(\'https://graph.facebook.com/'+f_uid+'/picture?type=normal\');"></div>');
+ //  $( "#profilepic" ).empty();
+  // $( "#profilepic" ).append('<div style="float:left;height:70px;width:70px;border-radius:50%;margin:0 auto;background-size:cover;background-position:50% 50%;background-image:url(\'https://graph.facebook.com/'+f_uid+'/picture?type=normal\');"></div>');
 
 firebase.database().ref('users/' + f_uid).update({
     auth_id : f_auth_id
