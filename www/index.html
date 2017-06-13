@@ -542,9 +542,9 @@ app.initialize();
         openFB.logout(
                 function() {
                     firebase.auth().signOut().then(function() {
-                          myApp.closeModal();loaded = false; f_token = false;loadpref = false;fbLogoutUser();myFunction();$( ".toolbar" ).hide();
+                          myApp.closeModal();loaded = false; f_token = false;loadpref = false;fbLogoutUser();myFunction();
                         
-tokenStore = false;storage.removeItem(tokenStore);
+tokenStore = false;storage.removeItem(tokenStore);$( ".toolbar" ).hide();
 }, function(error) {
   // An error happened.
 });
