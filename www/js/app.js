@@ -541,7 +541,7 @@ firebase.auth().currentUser.getToken().then(function(idToken) {
 
 $.post( "http://www.dateorduck.com/locations.php", { projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,upper:f_upper,lower:f_lower,radius:radiussize,sexuality:sexuality,sortby:sortby,latitudep:latitudep,longitudep:longitudep} )
   .done(function( data ) {
-
+alert(data);
 var result = JSON.parse(data); 
 
 console.log(data);
