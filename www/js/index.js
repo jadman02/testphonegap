@@ -92,7 +92,7 @@ view4 = myApp.addView('#view-4');
 
       
        
-//       alert('yes user');// User is signed in.
+       alert('yes user');// User is signed in.
 
        f_uid = user.providerData[0].uid;
         f_name = user.providerData[0].displayName;
