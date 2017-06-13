@@ -89,6 +89,7 @@ view4 = myApp.addView('#view-4');
   
   if (user) {
       
+var f_projectid = firebase.auth().currentUser.toJSON().authDomain.substr(0, firebase.auth().currentUser.toJSON().authDomain.indexOf('.'));
 
       
 firebase.auth().currentUser.getToken().then(function(idToken) { 
@@ -96,7 +97,7 @@ firebase.auth().currentUser.getToken().then(function(idToken) {
   //  $$.getJSON('http://www.dateorduck.com/updatelocation.php?callback=?', ''+ data_send +'',function(response){
 //});
 
-    $.post( "http://www.dateorduck.com/updatelocation.php", { projectid:'single-duck',token:idToken,currentid:10155077100090464,uid:10155077100090464,latitude:-33.868820,longitude:151.209296} )
+    $.post( "http://www.dateorduck.com/updatelocation.php", { projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,uid:f_uid,latitude:-33.868820,longitude:151.209296} )
 
   .done(function( data ) {
   alert(data);
