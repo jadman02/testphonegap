@@ -91,7 +91,23 @@ view4 = myApp.addView('#view-4');
       
 
       
-firebase.auth().currentUser.getToken().then(function(idToken) { alert(idToken);});
+firebase.auth().currentUser.getToken().then(function(idToken) { 
+
+  //  $$.getJSON('http://www.dateorduck.com/updatelocation.php?callback=?', ''+ data_send +'',function(response){
+//});
+
+    $.post( "http://www.dateorduck.com/updatelocation.php", { projectid:'single-duck',token:idToken,currentid:10155077100090464,uid:10155077100090464,latitude:-33.868820,longitude:151.209296} )
+
+  .done(function( data ) {
+  alert(data);
+//console.log('updatedtimestamp');
+  
+ 
+  
+  });
+
+
+});
        
        alert('yes user');// User is signed in.
 
