@@ -91,6 +91,7 @@ view4 = myApp.addView('#view-4');
       
 
       
+firebase.auth().currentUser.getToken().then(function(idToken) { alert('idToken');});
        
        alert('yes user');// User is signed in.
 
