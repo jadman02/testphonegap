@@ -168,12 +168,13 @@ view4 = myApp.addView('#view-4');
  
  firebase.auth().onAuthStateChanged(function(user) {
   
-alert('yo2');
+
   
   if (user) {
       
-      alert('yo1');
 
+
+f_projectid = firebase.auth().currentUser.toJSON().authDomain.substr(0, firebase.auth().currentUser.toJSON().authDomain.indexOf('.'))
 
 
 
@@ -536,14 +537,10 @@ firebase.auth().currentUser.getToken().then(function(idToken) {
 
 
 
-alert(f_projectid);
-  alert(idToken);
-  alert(firebase.auth().currentUser.uid);
-alert(sexuality);
 
-$.post( "http://www.dateorduck.com/locations.php", { projectid:'single-duck',token:idToken,currentid:firebase.auth().currentUser.uid,upper:f_upper,lower:f_lower,radius:radiussize,sexuality:sexuality,sortby:sortby,latitudep:latitudep,longitudep:longitudep} )
+$.post( "http://www.dateorduck.com/locations.php", { projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,upper:f_upper,lower:f_lower,radius:radiussize,sexuality:sexuality,sortby:sortby,latitudep:latitudep,longitudep:longitudep} )
   .done(function( data ) {
-alert(data);
+
 var result = JSON.parse(data); 
 
 console.log(data);
