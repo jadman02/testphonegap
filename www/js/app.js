@@ -236,7 +236,11 @@ firebase.database().ref('users/' + f_uid).update({
 
 };
 
-alert('Orientation is ' + screen.orientation.type);
+
+window.addEventListener("orientationchange", function(){
+    alert(screen.orientation.type); // e.g. portrait 
+});
+
 
 function startApp(){
 
