@@ -146,7 +146,11 @@ var app = {
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
         
-        
+      alert(screen.orientation.type); 
+      
+        window.addEventListener("orientationchange", function(){
+    alert(screen.orientation.type); // e.g. portrait 
+});
                
     
 
@@ -237,9 +241,7 @@ firebase.database().ref('users/' + f_uid).update({
 };
 
 
-window.addEventListener("orientationchange", function(){
-    alert(screen.orientation.type); // e.g. portrait 
-});
+
 
 
 function startApp(){
