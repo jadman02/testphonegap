@@ -146,8 +146,9 @@ var app = {
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
         
+       alert('ready'); 
       alert(screen.orientation.type); 
-      
+      alert('ready2'); 
         window.addEventListener("orientationchange", function(){
     alert(screen.orientation.type); // e.g. portrait 
 });
