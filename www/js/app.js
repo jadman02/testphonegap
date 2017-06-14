@@ -145,11 +145,9 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
-      screen.lockOrientation('portrait');
-        window.addEventListener("orientationchange", function(){
-    screen.lockOrientation('portrait');
+    
+      screen.orientation.lock('portrait');
 
-});
                
     
 
