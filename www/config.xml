@@ -57,7 +57,7 @@
 
  
       
-
+<gap:plugin name="cordova-plugin-screen-orientation" source="npm" spec="2.0.0" />
         
       <!--  <gap:plugin name="cordova-plugin-facebook4" source="npm" spec="1.7.3">
         <param name="APP_ID" value="784956164912201" />
