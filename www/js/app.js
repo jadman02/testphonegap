@@ -148,7 +148,11 @@ var app = {
     
       screen.orientation.lock('portrait');
 
-               
+                       window.addEventListener("orientationchange", function(){
+ alert('changing');
+                         screen.orientation.lock('portrait');
+
+});
     
 
         // Add views
