@@ -147,10 +147,11 @@ var app = {
         app.receivedEvent('deviceready');
     
       screen.orientation.lock('portrait');
-
+alert(screen.orientation.type);
                        window.addEventListener("orientationchange", function(){
  alert('changing');
                          screen.orientation.lock('portrait');
+                         alert(screen.orientation.type);
 
 });
     
