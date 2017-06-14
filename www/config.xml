@@ -27,9 +27,9 @@
         
     <!-- Define a specific version of PhoneGap to build into your app. -->
     <!-- <preference name="phonegap-version"       value="cli-6.0.0" /> -->
-<preference name="phonegap-version" value="cli-6.0.0" />
+
         <preference name="orientation" value="portrait" />
-  <preference name="fullscreen" value="true" />
+
         
     <!-- Plugins -->
     <!-- Core plugins -->
@@ -55,8 +55,10 @@
     <plugin name="cordova-plugin-whitelist"           source="npm" spec="~1.2.1" />
 
 
-        
-        
+ 
+      
+<gap:plugin name="cordova-plugin-screen-orientation" source="npm" />
+
         
       <!--  <gap:plugin name="cordova-plugin-facebook4" source="npm" spec="1.7.3">
         <param name="APP_ID" value="784956164912201" />
