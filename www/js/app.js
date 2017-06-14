@@ -148,6 +148,14 @@ var app = {
     
       screen.orientation.lock('portrait');
 alert(screen.orientation.type);
+      
+      
+      screen.orientation.lock('portrait').then(function(obj) {
+                console.log(obj);
+            }, function(obj) {
+                console.log(obj);
+            });
+      
                        window.addEventListener("orientationchange", function(){
  alert('changing');
                          screen.orientation.lock('portrait');
