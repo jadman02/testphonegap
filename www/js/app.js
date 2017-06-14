@@ -146,14 +146,14 @@ var app = {
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
     
-      screen.orientation.lock('portrait');
+      screen.orientation.lock('portrait-primary');
 alert(screen.orientation.type);
       
       
       screen.orientation.lock('portrait').then(function(obj) {
-                console.log(obj);
+                alert(obj);
             }, function(obj) {
-                console.log(obj);
+                alert(obj);
             });
       
                        window.addEventListener("orientationchange", function(){
