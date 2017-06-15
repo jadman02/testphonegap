@@ -5075,9 +5075,9 @@ if(swiperQuestions){comingback = 0; swiperQuestions.slideNext();comingback=1;}}}
 var singleuserarray = [];
 function singleUser(idw,idname,origin){
 
-alert(singleuserarray);
+
 if (singleuserarray[0] != null){
-alert('if statement');
+
 
 
 if (origin){photoBrowser(0,singleuserarray[0].age,1,1);}
@@ -5088,7 +5088,7 @@ else{photoBrowser(0,singleuserarray[0].age);}
 }
 
 else{
-alert('else statment');
+
 targetid = String(idw);
 targetname = idname;
 firebase.auth().currentUser.getToken().then(function(idToken) { 
@@ -5096,7 +5096,7 @@ $.post( "http://www.dateorduck.com/singleuser.php", {projectid:f_projectid,token
   .done(function( data ) {
   console.log(data);
   var result = JSON.parse(data); 
-  alert('else data returned');
+ 
 var availarraystring='';
 
 
