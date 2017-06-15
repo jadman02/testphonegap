@@ -30,7 +30,11 @@
 
         <preference name="orientation" value="portrait" />
 
-<plugin name="cordova-plugin-keyboard" source="npm" spec="~1.1.5" />
+        <gap:config-file platform="ios" parent="NSPhotoLibraryUsageDescription">
+    <string>For sending images</string>
+</gap:config-file>
+        
+<gap:plugin name="cordova-plugin-keyboard" source="npm" spec="~1.1.5" />
         
     <!-- Plugins -->
     <!-- Core plugins -->
