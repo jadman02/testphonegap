@@ -152,8 +152,15 @@ var app = {
 
 //  alert(Keyboard); 
 //soNow();
-navigator.camera.getPicture(cameraSuccess, cameraError, cameraOptions);
+navigator.camera.getPicture(cameraSuccess, cameraError);
 
+      function cameraSuccess() {
+    alert("Camera cleanup success.")
+}
+ 
+function cameraError(message) {
+    alert('Failed because: ' + message);
+}
       
 
         // Add views
