@@ -146,7 +146,7 @@ var app = {
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
 
-alert('device ready');
+
         // Add views
 view1 = myApp.addView('#view-1');
 view2 = myApp.addView('#view-2', {
@@ -1264,7 +1264,7 @@ if (f_gender == 'Female' && f_interested == 'Men') {sexuality = 'female';}
     
     firebase.database().ref('users/' + f_uid).once("value",function(snapshot) {
     f_token = snapshot.child("token").val();
-   console.log('got here');
+
     swipePopup(2);
     });
     
@@ -7984,7 +7984,7 @@ $.each(objs, function(i, obj) {
 });  
 }
 
-//alert('got here');
+
 
 newNotification(messageq);
 
