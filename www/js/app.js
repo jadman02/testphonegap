@@ -4067,7 +4067,7 @@ objDiv.scrollTop = objDiv.scrollHeight;setTimeout(function(){ getmoreNotifs();},
 
 
 function scrollMessages(){
-//console.log($( ".scrolldetect" ).offset().top);
+alert($( ".scrolldetect" ).offset().top);
 
 if ((($( ".scrolldetect" ).offset().top) == 100) && (canloadchat)) {if (letsload < 20){}else{$( ".scrolldetect" ).prepend('<div class="preloader loadmessagesloader" style="width:20px;margin:0 auto;margin-top:10px;"></div>');canloadchat = false;setTimeout(function(){ getPrevious(); }, 500);}}
 }
