@@ -4,6 +4,7 @@ var desktoparray = ['media/dateicon.png','media/duckicon.png','media/datetongue.
 
 
 function soNow(){
+  alert('yo');
 NativeKeyboard.showMessenger({
   onSubmit: function(text) {
     alert("The user typed: " + text);
