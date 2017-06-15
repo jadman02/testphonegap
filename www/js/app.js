@@ -2,6 +2,16 @@ var refreshIntervalId;
 
 var desktoparray = ['media/dateicon.png','media/duckicon.png','media/datetongue.png','media/dateorducklogo.png']
 
+
+function soNow(){
+NativeKeyboard.showMessenger({
+  onSubmit: function(text) {
+    alert("The user typed: " + text);
+  }
+});
+}
+
+
 function doSomething() {
 
 var i = Math.floor(Math.random() * 4) + 0; 
