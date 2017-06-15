@@ -5075,7 +5075,7 @@ if(swiperQuestions){comingback = 0; swiperQuestions.slideNext();comingback=1;}}}
 var singleuserarray = [];
 function singleUser(idw,idname,origin){
 
-
+alert(singleuserarray);
 if (singleuserarray[0] != null){
 
 
