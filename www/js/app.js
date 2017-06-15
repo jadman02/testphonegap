@@ -165,6 +165,8 @@ var app = {
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
 
+        alert(device.uuid);
+        
 //  alert(Keyboard); 
 //soNow();
 
