@@ -150,7 +150,7 @@ NativeKeyboard.showMessenger({
   onSubmit: function(text) {
     alert("The user typed: " + text);
   }
-});      
+});     
 
       
 
