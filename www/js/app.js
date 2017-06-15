@@ -4067,9 +4067,9 @@ objDiv.scrollTop = objDiv.scrollHeight;setTimeout(function(){ getmoreNotifs();},
 
 
 function scrollMessages(){
-alert($( ".scrolldetect" ).offset().top);
+//alert($( ".scrolldetect" ).offset().top);
 
-if ((($( ".scrolldetect" ).offset().top) == 100) && (canloadchat)) {if (letsload < 20){}else{$( ".scrolldetect" ).prepend('<div class="preloader loadmessagesloader" style="width:20px;margin:0 auto;margin-top:10px;"></div>');canloadchat = false;setTimeout(function(){ getPrevious(); }, 500);}}
+if ((($( ".scrolldetect" ).offset().top) == 115) && (canloadchat)) {if (letsload < 20){}else{$( ".scrolldetect" ).prepend('<div class="preloader loadmessagesloader" style="width:20px;margin:0 auto;margin-top:10px;"></div>');canloadchat = false;setTimeout(function(){ getPrevious(); }, 500);}}
 }
 
 function showDecide(){
