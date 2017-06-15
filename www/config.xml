@@ -57,7 +57,6 @@
 
  
 
-<plugin name="cordova-plugin-native-keyboard" source="npm"/>
         
       <!--  <gap:plugin name="cordova-plugin-facebook4" source="npm" spec="1.7.3">
         <param name="APP_ID" value="784956164912201" />
