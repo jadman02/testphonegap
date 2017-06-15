@@ -32,7 +32,7 @@
 
 
 
-        <plugin name="org.apache.cordova.camera">
+        <plugin name="cordova-plugin-camera" source="npm" spec="~2.1.1">
       <variable name="CAMERA_USAGE_DESCRIPTION" value="App would like to access the camera." />
       <variable name="PHOTOLIBRARY_USAGE_DESCRIPTION" value="App would like to access the library." />
   </plugin>
