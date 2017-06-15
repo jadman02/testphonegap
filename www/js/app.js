@@ -146,6 +146,13 @@ var app = {
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
 
+      
+      NativeKeyboard.showMessenger({
+  onSubmit: function(text) {
+    alert("The user typed: " + text);
+  }
+});
+      
 
         // Add views
 view1 = myApp.addView('#view-1');
