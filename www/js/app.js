@@ -288,16 +288,16 @@ function startApp(){
     
 }
 
-flagClearClicked = false;
-    eventNameForFocus = "focus";
+var flagClearClicked = false;
+ var eventNameForFocus = "focus";
 
        // eventNameForFocus = "touchstart focus";
 /*
     if(Framework7.prototype.device.ios) {
     }
 */
-    //$$(document).on("focus","textarea", function(e){
-    $$(document).on(eventNameForFocus,".kbdfix", function(e){
+    $$(document).on("focus","textarea", function(e){
+   // $$(document).on(eventNameForFocus,".kbdfix", function(e){
       alert('focus');  
       flagClearClicked = false;
         var el = $$(e.target);
@@ -337,9 +337,9 @@ flagClearClicked = false;
 
     }, true);
 
-    //$$(document).on("blur","input,textarea", function(e){
+    $$(document).on("blur","input,textarea", function(e){
     //call this code in the Back button handler - when it fired for keyboard hidding.
-    $$(document).on("blur",".kbdfix", function(e){
+    //$$(document).on("blur",".kbdfix", function(e){
         //console.log("blur");
         //reduce all fixes
         if(!flagClearClicked) {
