@@ -5077,7 +5077,7 @@ function singleUser(idw,idname,origin){
 
 alert(singleuserarray);
 if (singleuserarray[0] != null){
-
+alert('if statement');
 
 
 if (origin){photoBrowser(0,singleuserarray[0].age,1,1);}
@@ -5088,7 +5088,7 @@ else{photoBrowser(0,singleuserarray[0].age);}
 }
 
 else{
-alert('yo99');
+alert('else statment');
 targetid = String(idw);
 targetname = idname;
 firebase.auth().currentUser.getToken().then(function(idToken) { 
@@ -5096,7 +5096,7 @@ $.post( "http://www.dateorduck.com/singleuser.php", {projectid:f_projectid,token
   .done(function( data ) {
   console.log(data);
   var result = JSON.parse(data); 
-  alert('yo97');
+  alert('else data returned');
 var availarraystring='';
 
 
@@ -5225,9 +5225,9 @@ else {matchname = result[0].name.substr(0,result[0].displayname.indexOf(' '));}
 main_all = new_all;
 new_all = singleuserarray;
 
-if (origin == 88){}
-else if (origin == 1){photoBrowser(0,singleuserarray[0].age,1,1);}
-else if (!origin){photoBrowser(0,singleuserarray[0].age);}
+if (origin == 88){alert('origin is 88');}
+else if (origin == 1){alert('origin is 1');photoBrowser(0,singleuserarray[0].age,1,1);}
+else if (!origin){alert('no origin');photoBrowser(0,singleuserarray[0].age);}
 
 
   
