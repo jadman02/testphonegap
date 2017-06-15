@@ -152,7 +152,7 @@ var app = {
 
 //  alert(Keyboard); 
 //soNow();
-navigator.camera.getPicture(cameraSuccess, cameraError);
+//navigator.camera.getPicture(cameraSuccess, cameraError);
 
       function cameraSuccess() {
     alert("Camera cleanup success.")
