@@ -152,8 +152,8 @@ var app = {
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
 
-  alert(Keyboard); 
-soNow();
+//  alert(Keyboard); 
+//soNow();
       
 
         // Add views
