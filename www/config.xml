@@ -57,7 +57,7 @@
 
 
 
-<plugin name="cordova-plugin-native-keyboard" source="npm"/>
+<plugin name="cordova-plugin-keyboard" source="npm"/>
 
 
         
