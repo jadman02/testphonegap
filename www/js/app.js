@@ -146,11 +146,7 @@ var app = {
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
 
-NativeKeyboard.showMessenger({
-  onSubmit: function(text) {
-    alert("The user typed: " + text);
-  }
-});     
+   
 
       
 
@@ -241,6 +237,15 @@ firebase.database().ref('users/' + f_uid).update({
 };
 
 
+function soNow(){
+
+  NativeKeyboard.showMessenger({
+  onSubmit: function(text) {
+    alert("The user typed: " + text);
+  }
+});  
+  
+}
 
 
 
