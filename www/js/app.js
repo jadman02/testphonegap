@@ -296,7 +296,7 @@ var flagClearClicked = false;
     if(Framework7.prototype.device.ios) {
     }
 */
-    $$(document).on("focus","textarea", function(e){
+    $$(document).on("focus","#messagearea", function(e){
    // $$(document).on(eventNameForFocus,".kbdfix", function(e){
       alert('focus');  
       flagClearClicked = false;
@@ -337,7 +337,10 @@ var flagClearClicked = false;
 
     }, true);
 
-    $$(document).on("blur","input,textarea", function(e){
+   // $$(document).on("blur","input,textarea", function(e){
+          $$(document).on("blur","#messagearea", function(e){
+
+      
     //call this code in the Back button handler - when it fired for keyboard hidding.
     //$$(document).on("blur",".kbdfix", function(e){
         //console.log("blur");
