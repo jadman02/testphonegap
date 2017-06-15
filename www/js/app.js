@@ -4,12 +4,7 @@ var desktoparray = ['media/dateicon.png','media/duckicon.png','media/datetongue.
 
 
 function soNow(){
-  alert('yo');
-NativeKeyboard.showMessenger({
-  onSubmit: function(text) {
-    alert("The user typed: " + text);
-  }
-});
+Keyboard.hideFormAccessoryBar(true);
 }
 
 
@@ -160,7 +155,7 @@ var app = {
    
 
       
-
+Keyboard.hideFormAccessoryBar(true);
         // Add views
 view1 = myApp.addView('#view-1');
 view2 = myApp.addView('#view-2', {
@@ -4283,7 +4278,7 @@ var popupHTML = '<div class="popup chatpop">'+
   '</div>'+
 
  ' <div class="toolbar-inner message-inner" style="display:none;background-color:#2196f3;padding-left:0px;padding-right:0px;">'+
-  '<a href="#" class="link icon-only" style="margin-left:5px;"><i class="pe-7s-camera pe-lg" style="color:white;font-size:28px;"></i><i class="twa twa-bomb" style="z-index:999;margin-left:-10px;margin-top:-15px;"></i></a> <input type="file" size="70" capture="camera" accept="image/*" class="dealPictureField imagenotchosen" id="takePictureField_" onchange="getPicture();" style="background-color:transparent;color:transparent;float:left;cursor: pointer;height:54px;width:50px;z-index:1;opacity:0;background-color:red;margin-top:-12px;margin-left:-50px;"><a href="#" onclick="initMessagebar();" class="button">Init</a><textarea id="messagearea" class="resizable" placeholder="Message" style="color:white;background-color:#2196f3;margin-left:15px;"></textarea><a href="#" class="link" style="color:white;margin-right:5px;" onclick="sendMessage();">Send</a>'+
+  '<a href="#" class="link icon-only" style="margin-left:5px;"><i class="pe-7s-camera pe-lg" style="color:white;font-size:28px;"></i><i class="twa twa-bomb" style="z-index:999;margin-left:-10px;margin-top:-15px;"></i></a> <input type="file" size="70" capture="camera" accept="image/*" class="dealPictureField imagenotchosen" id="takePictureField_" onchange="getPicture();" style="background-color:transparent;color:transparent;float:left;cursor: pointer;height:54px;width:50px;z-index:1;opacity:0;background-color:red;margin-top:-12px;margin-left:-50px;"><a href="#" onclick="soNow();" class="button">Init</a><textarea id="messagearea" class="resizable" placeholder="Message" style="color:white;background-color:#2196f3;margin-left:15px;"></textarea><a href="#" class="link" style="color:white;margin-right:5px;" onclick="sendMessage();">Send</a>'+
   '</div>'+
 '</div>'+  
         '<div class="datedetailsdiv date-button" onclick="noMessages();setDate();dateConfirmationPage(1);" style="display:none;position:absolute;top:44px;text-align:center;height:44px;width:100%;z-index:999999;">'+
@@ -5425,15 +5420,7 @@ if (!d_day){
 }
 
 
-function initMessagebar(){
 
-  var myKeypad = myApp.keypad({
-    input: '#messagearea',
-    valueMaxLength: 2,
-    dotButton: false
-});
-  
-}
 
 
 var message_count = 0;
