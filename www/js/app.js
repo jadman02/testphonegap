@@ -294,72 +294,7 @@ function startApp(){
     
 }
 
-var flagClearClicked = false;
- var eventNameForFocus = "focus";
 
-       // eventNameForFocus = "touchstart focus";
-/*
-    if(Framework7.prototype.device.ios) {
-    }
-*/
-    $$(document).on("focus","#messagearea", function(e){
-   // $$(document).on(eventNameForFocus,".kbdfix", function(e){
-      alert('focus');  
-      flagClearClicked = false;
-        var el = $$(e.target);
-        var page = el.closest(".page-content");
-        var elTop = el.offset().top;
-        //do correction if input at near or below middle of screen
-        if(elTop > page.height() / 2 - 20 ){
-            var delta = page.offset().top +  elTop - $$(".statusbar-overlay").height() * (Framework7.prototype.device.ios?2:1) - $$(".navbar").height(); //minus navbar height?&quest;? 56 fot MD 
-            var kbdfix = page.find("#keyboard-fix");
-            if(kbdfix.length == 0) { //create kbdfix element
-                page.append("<div id='keyboard-fix'></div>");
-            }
-
-            $$("#keyboard-fix").css("height", delta * 2 + "px");
-            page.scrollTop( delta, 300);
-            //try to return caret to input field
-            //dirty hack ios flying caret
-            if(Framework7.prototype.device.ios) {
-                setTimeout(function () {
-
-                    var temp = $$(el).val();
-                    if(temp !=="") {
-                        $$(el).val("");
-                        $$(el).val(temp);
-                    } else {
-                        $$(el).val(" ");
-                        $$(el).val("");
-                    }
-                    el.focus();
-                    //el[0].select(); // apply focus or select to return caret to input field
-                }, 700); //set by experemtal on iPod
-            }
-
-            e.preventDefault();
-            e.stopImmediatePropagation();
-        }
-
-    }, true);
-
-   // $$(document).on("blur","input,textarea", function(e){
-          $$(document).on("blur","#messagearea", function(e){
-
-      
-    //call this code in the Back button handler - when it fired for keyboard hidding.
-    //$$(document).on("blur",".kbdfix", function(e){
-        //console.log("blur");
-        //reduce all fixes
-        if(!flagClearClicked) {
-            setTimeout(function() {
-                $$("#keyboard-fix").css("height", "0px");
-                flagClearClicked = false;
-            },400);
-
-        }
-
-    }, true);
 
 $$('.panel-right').on('panel:opened', function () {
 
