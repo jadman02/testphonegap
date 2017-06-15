@@ -155,7 +155,7 @@ var app = {
    
 
       
-Keyboard.hideFormAccessoryBar(true);
+
         // Add views
 view1 = myApp.addView('#view-1');
 view2 = myApp.addView('#view-2', {
