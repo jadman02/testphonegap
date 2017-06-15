@@ -153,7 +153,7 @@ var app = {
         app.receivedEvent('deviceready');
 
    
-
+soNow();
       
 
         // Add views
