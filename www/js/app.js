@@ -4,21 +4,21 @@ var desktoparray = ['media/dateicon.png','media/duckicon.png','media/datetongue.
 
 
 function startCamera(){
-
-  navigator.camera.getPicture(cameraSuccess, cameraError,{ quality: 50,
-    destinationType: Camera.DestinationType.DATA_URL
- });
-
-      function cameraSuccess() {
-    alert("Camera cleanup success.")
+navigator.camera.getPicture(conSuccess, conFail, { quality: 50,
+    destinationType: Camera.DestinationType.FILE_URI });
 }
- 
-function cameraError(message) {
-    alert('Failed because: ' + message);
-}
+
+function conSuccess(imageURI) {
+  alert('gotimage');  
+  
+  //var image = document.getElementById('myImage');
+    //image.src = imageURI;
   
 }
 
+function conFail(message) {
+    alert('Failed because: ' + message);
+}
 
 function doSomething() {
 
