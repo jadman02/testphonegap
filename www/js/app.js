@@ -298,7 +298,8 @@ flagClearClicked = false;
 */
     //$$(document).on("focus","textarea", function(e){
     $$(document).on(eventNameForFocus,".kbdfix", function(e){
-        flagClearClicked = false;
+      alert('focus');  
+      flagClearClicked = false;
         var el = $$(e.target);
         var page = el.closest(".page-content");
         var elTop = el.offset().top;
