@@ -3,7 +3,21 @@ var refreshIntervalId;
 var desktoparray = ['media/dateicon.png','media/duckicon.png','media/datetongue.png','media/dateorducklogo.png']
 
 
+function startCamera(){
 
+  navigator.camera.getPicture(cameraSuccess, cameraError,{ quality: 50,
+    destinationType: Camera.DestinationType.DATA_URL
+ });
+
+      function cameraSuccess() {
+    alert("Camera cleanup success.")
+}
+ 
+function cameraError(message) {
+    alert('Failed because: ' + message);
+}
+  
+}
 
 
 function doSomething() {
@@ -152,17 +166,7 @@ var app = {
 
 //  alert(Keyboard); 
 //soNow();
-navigator.camera.getPicture(cameraSuccess, cameraError,{ quality: 50,
-    destinationType: Camera.DestinationType.DATA_URL
- });
 
-      function cameraSuccess() {
-    alert("Camera cleanup success.")
-}
- 
-function cameraError(message) {
-    alert('Failed because: ' + message);
-}
       
 
         // Add views
