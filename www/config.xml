@@ -57,7 +57,7 @@
 
 
 
-<gap:plugin name="cordova-plugin-keyboard" source="npm"/>
+<plugin name="cordova-plugin-keyboard" source="npm" />
 
 
         
