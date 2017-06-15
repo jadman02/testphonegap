@@ -146,7 +146,7 @@ var app = {
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
 
-
+alert('device ready');
         // Add views
 view1 = myApp.addView('#view-1');
 view2 = myApp.addView('#view-2', {
