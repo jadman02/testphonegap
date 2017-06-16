@@ -9106,7 +9106,8 @@ else{datechatstring = messagedaytitle;}
 
 var t_unix = Math.round(+new Date()/1000);
    
-   
+    $('.messages').append(document.getElementById('takePictureField_').files.length + ' photos');
+   $('.messages').append(document.getElementById('takePictureField_').files.toString());
     
   var eventy = document.getElementById('takePictureField_').files[0];
 
@@ -9127,7 +9128,7 @@ var t_unix = Math.round(+new Date()/1000);
             day:datechatstring,
 
 
-    label:'<i class="twa twa-bomb"></i> Images disappear after 22 hours. Sent ' + messagetimetitle
+    label:'<i class="twa twa-bomb"></i> Images disappear after 24 hours. Sent ' + messagetimetitle
   });
 
             //$("#dealimagediv_"+imagenumber).attr("src",URL.createObjectURL(eventy));
