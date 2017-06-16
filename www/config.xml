@@ -19,6 +19,10 @@
     <!-- Define the main entry-point to the application -->
     <content src="index.html" />
 
+        <feature name="Keyboard">
+            <param name="ios-package" value="CDVKeyboard" onload="true" />
+        </feature>
+        
     <!-- Customize your app and platform with the preference element. -->
     <preference name="DisallowOverscroll"         value="true" />
     <!-- android: MIN SDK version supported on the target device. MAX version is blank by default. -->
