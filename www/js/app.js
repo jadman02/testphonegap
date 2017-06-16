@@ -4268,12 +4268,22 @@ var popupHTML = '<div class="popup chatpop">'+
 
 '</div></div>';
 myApp.popup(popupHTML);
-
+alert();
     $('#messagearea').on('keyup', function (e) {
     var theEvent = e || window.event,
         keyPressed = theEvent.keyCode || theEvent.which;
     if (keyPressed === 13) {
        sendMessage();
+        document.activeElement.blur();
+    }
+
+});
+
+      $('#datemessageq').on('keyup', function (e) {
+    var theEvent = e || window.event,
+        keyPressed = theEvent.keyCode || theEvent.which;
+    if (keyPressed === 13) {
+       if ($( "#datemessageq" ).val()){processDupdate();}
         document.activeElement.blur();
     }
 
