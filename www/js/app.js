@@ -9184,7 +9184,7 @@ var chatvar = {
     to_name:targetname,
     message:'<img src="'+url+'" onload="$(this).fadeIn(700);" style="display:none" >',
     seen:'N',
-    timestamp: t_unix + i,
+    timestamp: t_unix + i + 1,
     type:d_type,
     param:'image',
     downloadurl:url,
