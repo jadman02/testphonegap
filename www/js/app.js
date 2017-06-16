@@ -9045,6 +9045,7 @@ console.log('delete notification sent');
 
 function getPicture(key){
  alert(key);
+    alert('did it alert key?');
    var weekday = [];
 weekday[0] =  "Sunday";
 weekday[1] = "Monday";
