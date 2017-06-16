@@ -8075,6 +8075,8 @@ if (!messagenum) {messagenum = 1;}
 $( "#messagearea" ).val('');
     $( ".sendbutton" ).removeClass('disabled');
 
+        $( ".sendbutton" ).css('color','white');
+
 }
 
 function clearchatHistory(){
