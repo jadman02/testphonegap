@@ -4279,15 +4279,7 @@ alert();
 
 });
 
-      $('#datemessageq').on('keyup', function (e) {
-    var theEvent = e || window.event,
-        keyPressed = theEvent.keyCode || theEvent.which;
-    if (keyPressed === 13) {
-       if ($( "#datemessageq" ).val()){processDupdate();}
-        document.activeElement.blur();
-    }
-
-});
+  
     
 var closedvar = $$('.chatpop').on('popup:close', function () {
 clearchatHistory();
