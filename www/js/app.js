@@ -3216,7 +3216,8 @@ else {}
 }
 
 function photoBrowser(openprofile,arraynumber,mainchange,chatorigin){
-allowedchange = true;
+alert('photo');
+    allowedchange = true;
 photoresize = false;
 if ($('.photo-browser').length > 0){return false;}
 
