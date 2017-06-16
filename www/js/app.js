@@ -9150,11 +9150,11 @@ image_count ++;
 
 
 
-$('.image_' + t_unix).onclick = function(){ 
-   openPhoto(url);};
+//$('.image_' + t_unix).onclick = function(){ 
+//   openPhoto(url);};
 
 //var randomstring = (Math.random() +1).toString(36).substr(2, 30);
-var photoname = t_unix;
+var photoname = t_unix + i;
 
 
 
@@ -9184,7 +9184,7 @@ var chatvar = {
     to_name:targetname,
     message:'<img src="'+url+'" onload="$(this).fadeIn(700);" style="display:none" >',
     seen:'N',
-    timestamp: t_unix,
+    timestamp: t_unix + i,
     type:d_type,
     param:'image',
     downloadurl:url,
