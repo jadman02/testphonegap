@@ -6,7 +6,7 @@ var desktoparray = ['media/dateicon.png','media/duckicon.png','media/datetongue.
 function startCamera(){
     alert('hope this does not crash');
 navigator.camera.getPicture(conSuccess, conFail, { quality: 50,
-    destinationType: Camera.DestinationType.FILE_URI });
+    destinationType: Camera.DestinationType.FILE_URI,source:Camera.PictureSourceType.PHOTOLIBRARY });
 }
 
 function conSuccess(imageURI) {
