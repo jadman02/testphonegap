@@ -9106,8 +9106,14 @@ else{datechatstring = messagedaytitle;}
 
 var t_unix = Math.round(+new Date()/1000);
    
-    $('.messages').append(document.getElementById('takePictureField_').files.length + ' photos');
-   $('.messages').append(document.getElementById('takePictureField_').files.toString());
+
+    
+    var first_number,second_number;
+
+if (Number(f_uid) > Number(targetid) ) {second_number = f_uid;first_number = targetid;}
+else {first_number = f_uid;second_number = targetid;} 
+
+    
     
   var eventy = document.getElementById('takePictureField_').files[0];
 
@@ -9115,7 +9121,7 @@ var t_unix = Math.round(+new Date()/1000);
   if (eventy == 'undefined') {console.log('undefined');}
   if (eventy !== 'undefined') {
 
-
+for (i = 0; i < document.getElementById('takePictureField_').files.length; i++) { 
 
   myMessages.addMessage({
     // Message text
@@ -9128,23 +9134,20 @@ var t_unix = Math.round(+new Date()/1000);
             day:datechatstring,
 
 
-    label:'<i class="twa twa-bomb"></i> Images disappear after 24 hours. Sent ' + messagetimetitle
+    label:'<i class="twa twa-bomb"></i> Images disappear after 24 hours '+image_count+'. Sent ' + messagetimetitle
   });
 
             //$("#dealimagediv_"+imagenumber).attr("src",URL.createObjectURL(eventy));
          
 image_count ++;
 
-var first_number,second_number;
-
-if (Number(f_uid) > Number(targetid) ) {second_number = f_uid;first_number = targetid;}
-else {first_number = f_uid;second_number = targetid;}         
+        
 
 
 
 
 
-var file_data = $('#takePictureField_').prop('files')[0]; 
+
 
 
 $('.image_' + t_unix).onclick = function(){ 
@@ -9160,7 +9163,7 @@ var photostorage = 'images/' + f_auth_id + '/' + photoname;
 
 var photochatsRef = storageRef.child(photostorage);
 
-photochatsRef.put(file_data).then(function(snapshot) {
+photochatsRef.put($('#takePictureField_').prop('files')[i]).then(function(snapshot) {
   photochatsRef.getDownloadURL().then(function(url) {
 
        
@@ -9227,7 +9230,8 @@ firebase.database().ref("photochats/" + first_number+ '/' + second_number + '/' 
   
   
 });
-
+}
+    
 var existingnotifications = firebase.database().ref("notifications/" + f_uid).once('value').then(function(snapshot) {
 var objs = snapshot.val();
 
