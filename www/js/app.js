@@ -9044,7 +9044,7 @@ console.log('delete notification sent');
 
 
 function getPicture(key){
-alert('got here1');
+
    var weekday = [];
 weekday[0] =  "Sunday";
 weekday[1] = "Monday";
@@ -9114,7 +9114,7 @@ var t_unix = Math.round(+new Date()/1000);
   if (eventy == 'undefined') {console.log('undefined');}
   if (eventy !== 'undefined') {
 
-alert(eventy);
+
 
   myMessages.addMessage({
     // Message text
@@ -9127,7 +9127,7 @@ alert(eventy);
             day:datechatstring,
 
 
-    label:'<i class="twa twa-bomb"></i> Images disappear after 24 hours. Sent ' + messagetimetitle
+    label:'<i class="twa twa-bomb"></i> Images disappear after 22 hours. Sent ' + messagetimetitle
   });
 
             //$("#dealimagediv_"+imagenumber).attr("src",URL.createObjectURL(eventy));
@@ -9312,7 +9312,7 @@ if (!messagenum) {messagenum = 1;}
 
   return firebase.database().ref().update(updates);
 }
-alert('got here2');
+
 }
 
 function toTimestamp(year,month,day,hour,minute,second){
