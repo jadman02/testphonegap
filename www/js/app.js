@@ -3576,7 +3576,7 @@ setTimeout(function(){ backtoProfile();viewphotos = false; }, 100);
 }
 
 if (viewscroll){
-setTimeout(function(){ alert('scrollingtotop');scrolltoTop();viewscroll = false; }, 100);
+setTimeout(function(){ scrolltoTop();viewscroll = false; }, 100);
 }
 
 },
@@ -5942,7 +5942,7 @@ canscrollnotif = true;
 
 var letsload = 20;
 function getPrevious(){
-alert(existingmessages);
+
 if (existingmessages === false){
 var first_number,second_number;
 
@@ -7239,7 +7239,7 @@ swiperQuestions.destroy();swiperQuestions = false;}
        }
        else{myApp.closeModal();   }
    
-if (mainchange){alert(main_all);new_all = main_all;singleuserarray = [];}
+if (mainchange){new_all = main_all;singleuserarray = [];}
    
    //getPreferences();
    
@@ -7436,7 +7436,7 @@ setTimeout(function(){ backtoProfile();viewphotos = false; }, 100);
 }
 
 if (viewscroll){
-setTimeout(function(){ alert('scrollingtotop');scrolltoTop();viewscroll = false; }, 100);
+setTimeout(function(){ scrolltoTop();viewscroll = false; }, 100);
 }
 
 },
@@ -8015,7 +8015,7 @@ $.each(objs, function(i, obj) {
    // alert('param'+obj.param);
    // alert('new_message_count'+obj.new_message_count);
     
-    if (obj.param =='message'){alert('yo');
+    if (obj.param =='message'){
        messageq = obj.new_message_count;
        messageq ++;}
     else{
