@@ -5286,7 +5286,7 @@ else if (!origin){photoBrowser(0,singleuserarray[0].age);}
 
 function request(){
     
-    $( ".nomessages" ).animate({ scrollTop: 0 });
+    $( ".page-content" ).animate({ scrollTop: 0 });
     
 canloadchat = false;
 $( '.picker-items-col-wrapper' ).css("width", "auto");
