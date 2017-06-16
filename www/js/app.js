@@ -260,10 +260,7 @@ firebase.database().ref('users/' + f_uid).update({
 
 
 
-window.addEventListener('keyboardDidShow', function () {
-    alert('keyboard');
-    // Describe your logic which will be run each time keyboard is shown.
-});
+
 
 function startApp(){
 
