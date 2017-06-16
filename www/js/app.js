@@ -9125,7 +9125,7 @@ for (i = 0; i < document.getElementById('takePictureField_').files.length; i++) 
 
   myMessages.addMessage({
     // Message text
-    text: '<img src="'+URL.createObjectURL(eventy)+'" onload="$(this).fadeIn(700);scrollBottom();" onclick="imagesPopup('+image_count+');" style="display:none">',
+    text: '<img src="'+URL.createObjectURL($('#takePictureField_').prop('files')[i])+'" onload="$(this).fadeIn(700);scrollBottom();" onclick="imagesPopup('+image_count+');" style="display:none">',
     // Random message type
     type: 'sent',
     // Avatar and name:
@@ -9134,7 +9134,7 @@ for (i = 0; i < document.getElementById('takePictureField_').files.length; i++) 
             day:datechatstring,
 
 
-    label:'<i class="twa twa-bomb"></i> Images disappear after 24 hours '+image_count+'. Sent ' + messagetimetitle
+    label:'<i class="twa twa-bomb"></i> Images disappear after 24 hours '+i+'. Sent ' + messagetimetitle
   });
 
             //$("#dealimagediv_"+imagenumber).attr("src",URL.createObjectURL(eventy));
