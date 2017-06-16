@@ -77,7 +77,7 @@ try {
 
 
 // Initialize your app
-var myApp = new Framework7({dynamicNavbar: true,init: false,showBarsOnPageScrollEnd:false});
+var myApp = new Framework7({dynamicNavbar: true,init: false});
 
 // Export selectors engine
 var $$ = Dom7;
