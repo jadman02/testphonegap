@@ -164,13 +164,9 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
-
+Keyboard.hideFormAccessoryBar(true);
         alert(device.uuid);
-        NativeKeyboard.showMessenger({
-  onSubmit: function(text) {
-    alert("The user typed: " + text);
-  }
-});
+
 //  alert(Keyboard); 
 //soNow();
 
