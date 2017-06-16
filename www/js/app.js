@@ -313,15 +313,8 @@ function startApp(){
     
 }
 
-$('#messagearea').on('keyup', function (e) {
-    var theEvent = e || window.event,
-        keyPressed = theEvent.keyCode || theEvent.which;
-    if (keyPressed === 13) {
-       alert('enter was pressed');
-        document.activeElement.blur();
-    }
 
-});
+
 
 
 
@@ -4273,6 +4266,16 @@ var popupHTML = '<div class="popup chatpop">'+
 '</div></div>';
 myApp.popup(popupHTML);
 
+    $('#messagearea').on('keyup', function (e) {
+    var theEvent = e || window.event,
+        keyPressed = theEvent.keyCode || theEvent.which;
+    if (keyPressed === 13) {
+       alert('enter was pressed');
+        document.activeElement.blur();
+    }
+
+});
+    
 var closedvar = $$('.chatpop').on('popup:close', function () {
 clearchatHistory();
 });
