@@ -4,28 +4,14 @@ var desktoparray = ['media/dateicon.png','media/duckicon.png','media/datetongue.
 
 
 function startCamera(){
-    alert('hope this does not crash');
-navigator.device.capture.captureVideo(captureSuccess, captureError, {limit:2});
+
+
     
-    //navigator.camera.getPicture(conSuccess, conFail, { quality: 50,
- //   destinationType: Camera.DestinationType.FILE_URI,sourceType:Camera.PictureSourceType.PHOTOLIBRARY});
+    navigator.camera.getPicture(conSuccess, conFail, { quality: 50,
+    destinationType: Camera.DestinationType.FILE_URI,sourceType:Camera.PictureSourceType.PHOTOLIBRARY});
 }
 
-// capture callback
-var captureSuccess = function(mediaFiles) {
-    var i, path, len;
-    for (i = 0, len = mediaFiles.length; i < len; i += 1) {
-        path = mediaFiles[i].fullPath;
-        // do something interesting with the file
-    }
-};
 
-// capture error callback
-var captureError = function(error) {
-    navigator.notification.alert('Error code: ' + error.code, null, 'Capture Error');
-};
-
-// start video capture
 
 
 function conSuccess(imageURI) {
@@ -4253,7 +4239,7 @@ var popupHTML = '<div class="popup chatpop">'+
   '</div>'+
 
  ' <div class="toolbar-inner message-inner" style="display:none;background-color:#2196f3;padding-left:0px;padding-right:0px;">'+
-  '<a href="#" class="link icon-only" style="margin-left:5px;"><i class="pe-7s-camera pe-lg" style="color:white;font-size:28px;"></i><i class="twa twa-bomb" style="z-index:999;margin-left:-10px;margin-top:-15px;"></i></a> <input type="file" size="70" accept="image/*;capture=camera" class="dealPictureField imagenotchosen" id="takePictureField_" onchange="getPicture();" style="background-color:transparent;color:transparent;float:left;cursor: pointer;height:54px;width:50px;z-index:1;opacity:0;background-color:red;margin-top:-12px;margin-left:-50px;"><form><input id="messagearea" type="text" placeholder="Enter Message"></form><a href="#" class="link sendbutton" style="color:white;margin-right:10px;margin-left:10px;" onclick="sendMessage();">Send</a>'+
+  '<a href="#" class="link icon-only" style="margin-left:5px;"><i class="pe-7s-camera pe-lg" style="color:white;font-size:28px;"></i><i class="twa twa-bomb" style="z-index:999;margin-left:-10px;margin-top:-15px;"></i></a> <input type="file" size="70" accept="image/*" class="dealPictureField imagenotchosen" id="takePictureField_" onchange="getPicture();" style="background-color:transparent;color:transparent;float:left;cursor: pointer;height:54px;width:50px;z-index:1;opacity:0;background-color:red;margin-top:-12px;margin-left:-50px;"><form><input id="messagearea" type="text" placeholder="Enter Message"></form><a href="#" class="link sendbutton" style="color:white;margin-right:10px;margin-left:10px;" onclick="sendMessage();">Send</a>'+
   '</div>'+
 '</div>'+  
         '<div class="datedetailsdiv date-button" onclick="noMessages();setDate();dateConfirmationPage(1);" style="display:none;position:absolute;top:44px;text-align:center;height:44px;width:100%;z-index:999999;">'+
