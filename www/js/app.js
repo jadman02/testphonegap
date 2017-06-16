@@ -4101,7 +4101,7 @@ objDiv.scrollTop = objDiv.scrollHeight;setTimeout(function(){ getmoreNotifs();},
 function scrollMessages(){
 
 
-if ((($( ".scrolldetect" ).offset().top) == 120) && (canloadchat)) {if (letsload <= 20){$( ".scrolldetect" ).prepend('<div class="preloader loadmessagesloader" style="width:20px;margin:0 auto;margin-top:10px;"></div>');canloadchat = false;setTimeout(function(){ $( ".loadmessagesloader" ).hide(); }, 500);}else{$( ".scrolldetect" ).prepend('<div class="preloader loadmessagesloader" style="width:20px;margin:0 auto;margin-top:10px;"></div>');canloadchat = false;setTimeout(function(){ getPrevious(); }, 500);}}
+if ((($( ".scrolldetect" ).offset().top) == 120) && (canloadchat)) {if (letsload <= 20){}else{$( ".scrolldetect" ).prepend('<div class="preloader loadmessagesloader" style="width:20px;margin:0 auto;margin-top:10px;"></div>');canloadchat = false;setTimeout(function(){ getPrevious(); }, 500);}}
 }
 
 function showDecide(){
