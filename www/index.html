@@ -455,7 +455,7 @@ var storageRef = storage.ref();
 
 
 var database = firebase.database();
-//alert(defaultApp.name);  // "[DEFAULT]"
+alert(defaultApp.name);  // "[DEFAULT]"
 
 
     
@@ -474,13 +474,13 @@ var database = firebase.database();
     <script type="text/javascript">
         $( document ).ready(function() {
 app.initialize();
-
+alert('got here 3');
         }); 
 
         
     </script>
     <script>
-        
+        alert('got here 2');
         // Defaults to sessionStorage for storing the Facebook token
     //  Uncomment the line below to store the Facebook token in localStorage instead of sessionStorage
       openFB.init({appId: '784956164912201', tokenStore: window.localStorage});
