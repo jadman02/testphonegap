@@ -5,9 +5,28 @@ var desktoparray = ['media/dateicon.png','media/duckicon.png','media/datetongue.
 
 function startCamera(){
     alert('hope this does not crash');
-navigator.camera.getPicture(conSuccess, conFail, { quality: 50,
-    destinationType: Camera.DestinationType.FILE_URI,sourceType:Camera.PictureSourceType.PHOTOLIBRARY});
+navigator.device.capture.captureVideo(captureSuccess, captureError, {limit:2});
+    
+    //navigator.camera.getPicture(conSuccess, conFail, { quality: 50,
+ //   destinationType: Camera.DestinationType.FILE_URI,sourceType:Camera.PictureSourceType.PHOTOLIBRARY});
 }
+
+// capture callback
+var captureSuccess = function(mediaFiles) {
+    var i, path, len;
+    for (i = 0, len = mediaFiles.length; i < len; i += 1) {
+        path = mediaFiles[i].fullPath;
+        // do something interesting with the file
+    }
+};
+
+// capture error callback
+var captureError = function(error) {
+    navigator.notification.alert('Error code: ' + error.code, null, 'Capture Error');
+};
+
+// start video capture
+
 
 function conSuccess(imageURI) {
   alert('gotimage');  
