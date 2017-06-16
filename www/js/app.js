@@ -166,7 +166,11 @@ var app = {
         app.receivedEvent('deviceready');
 
         alert(device.uuid);
-        
+        NativeKeyboard.showMessenger({
+  onSubmit: function(text) {
+    alert("The user typed: " + text);
+  }
+});
 //  alert(Keyboard); 
 //soNow();
 
