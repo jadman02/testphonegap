@@ -9044,7 +9044,7 @@ console.log('delete notification sent');
 
 
 function getPicture(key){
-alert(key);
+alert('got here1');
    var weekday = [];
 weekday[0] =  "Sunday";
 weekday[1] = "Monday";
@@ -9312,7 +9312,7 @@ if (!messagenum) {messagenum = 1;}
 
   return firebase.database().ref().update(updates);
 }
-
+alert('got here2');
 }
 
 function toTimestamp(year,month,day,hour,minute,second){
