@@ -9044,8 +9044,7 @@ console.log('delete notification sent');
 
 
 function getPicture(key){
- alert(key);
-    alert('did it alert key?');
+
    var weekday = [];
 weekday[0] =  "Sunday";
 weekday[1] = "Monday";
@@ -9113,7 +9112,7 @@ var t_unix = Math.round(+new Date()/1000);
   if (eventy == 'undefined') {console.log('undefined');}
   if (eventy !== 'undefined') {
 
-
+alert(eventy);
 
   myMessages.addMessage({
     // Message text
