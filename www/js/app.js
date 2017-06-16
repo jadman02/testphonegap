@@ -170,15 +170,7 @@ var app = {
 //  alert(Keyboard); 
 //soNow();
 
-$('#messagearea').on('keyup', function (e) {
-    var theEvent = e || window.event,
-        keyPressed = theEvent.keyCode || theEvent.which;
-    if (keyPressed === 13) {
-     alert('enter pressed');
-        document.activeElement.blur();
-    }
-    return true;
-});
+
       
 
         // Add views
@@ -269,7 +261,9 @@ firebase.database().ref('users/' + f_uid).update({
 
 
 
-
+function alertSubmit(){
+alert('yo');
+}
 
 function startApp(){
 
@@ -4239,7 +4233,7 @@ var popupHTML = '<div class="popup chatpop">'+
   '</div>'+
 
  ' <div class="toolbar-inner message-inner" style="display:none;background-color:#2196f3;padding-left:0px;padding-right:0px;">'+
-  '<a href="#" class="link icon-only" style="margin-left:5px;"><i class="pe-7s-camera pe-lg" style="color:white;font-size:28px;"></i><i class="twa twa-bomb" style="z-index:999;margin-left:-10px;margin-top:-15px;"></i></a> <input type="file" size="70" capture="camera" accept="image/*" class="dealPictureField imagenotchosen" id="takePictureField_" onchange="getPicture();" style="background-color:transparent;color:transparent;float:left;cursor: pointer;height:54px;width:50px;z-index:1;opacity:0;background-color:red;margin-top:-12px;margin-left:-50px;"><form action="..." method="..."><textarea id="messagearea" class="resizable" placeholder="Message" style="color:white;background-color:#2196f3;margin-left:15px;"></textarea><a href="#" class="link" style="color:white;margin-right:5px;" type="submit" onclick="sendMessage();">Send</a></form>'+
+  '<a href="#" class="link icon-only" style="margin-left:5px;"><i class="pe-7s-camera pe-lg" style="color:white;font-size:28px;"></i><i class="twa twa-bomb" style="z-index:999;margin-left:-10px;margin-top:-15px;"></i></a> <input type="file" size="70" capture="camera" accept="image/*" class="dealPictureField imagenotchosen" id="takePictureField_" onchange="getPicture();" style="background-color:transparent;color:transparent;float:left;cursor: pointer;height:54px;width:50px;z-index:1;opacity:0;background-color:red;margin-top:-12px;margin-left:-50px;"><form action="..." method="..." onsubmit="alertSubmit()"><textarea id="messagearea" class="resizable" placeholder="Message" style="color:white;background-color:#2196f3;margin-left:15px;"></textarea><a href="#" class="link" style="color:white;margin-right:5px;" type="submit" onclick="sendMessage();">Send</a></form>'+
   '</div>'+
 '</div>'+  
         '<div class="datedetailsdiv date-button" onclick="noMessages();setDate();dateConfirmationPage(1);" style="display:none;position:absolute;top:44px;text-align:center;height:44px;width:100%;z-index:999999;">'+
