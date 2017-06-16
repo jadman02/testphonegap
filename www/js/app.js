@@ -9347,7 +9347,7 @@ myApp.pickerModal(
     '<div class="swiper-wrapper wrapper-photos">'+
        ' <div class="swiper-slide" style="text-align:center;margin:-5px;height:88px;">'+
                '<i class="pe-7s-plus pe-3x" style="color:white;margin-top:10px;"></i>'+
-               ' <input type="file" size="70" accept="image/*" class="dealPictureField imagenotchosen" id="takePictureField_" onchange="getPicture();" style="background-color:transparent;color:transparent;float:left;cursor: pointer;height:60px;width:100%;z-index:1;opacity:0;background-color:red;height:88px;margin-top:-44px;"> '+
+               ' <input type="file" size="70" accept="image/*" class="dealPictureField imagenotchosen" id="takePictureField_" onchange="getPicture();" style="background-color:transparent;color:transparent;float:left;cursor: pointer;height:60px;width:100%;z-index:1;opacity:0;background-color:red;height:88px;margin-top:-44px;" multiple="multiple"> '+
 
        '</div>'+
 
