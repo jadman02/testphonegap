@@ -170,10 +170,7 @@ var app = {
 //  alert(Keyboard); 
 //soNow();
 
-        Keyboard.onshow = function () {
-            alert('keyboard shown');
-    // Describe your logic which will be run each time keyboard is shown.
-}
+
       
 
         // Add views
