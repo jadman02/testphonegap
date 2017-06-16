@@ -9044,7 +9044,7 @@ console.log('delete notification sent');
 
 
 function getPicture(key){
-
+ alert(key);
    var weekday = [];
 weekday[0] =  "Sunday";
 weekday[1] = "Monday";
@@ -9105,7 +9105,7 @@ else{datechatstring = messagedaytitle;}
 
 
 var t_unix = Math.round(+new Date()/1000);
-    
+   
   var eventy = document.getElementById('takePictureField_').files[0];
 
 //  var number_of_pictures = $(".imageli").length + 1;
