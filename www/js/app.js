@@ -9138,7 +9138,7 @@ for (i = 0; i < document.getElementById('takePictureField_').files.length; i++) 
             day:datechatstring,
 
 
-    label:'<i class="twa twa-bomb"></i> Images disappear after 24 hours '+photoname+'. Sent ' + messagetimetitle
+    label:'<i class="twa twa-bomb"></i> Images disappear after 24 hours. Sent ' + messagetimetitle
   });
 
             //$("#dealimagediv_"+imagenumber).attr("src",URL.createObjectURL(eventy));
@@ -9169,10 +9169,8 @@ var photochatsRef = storageRef.child(photostorage);
 
 photochatsRef.put($('#takePictureField_').prop('files')[i]).then(function(snapshot) {
   photochatsRef.getDownloadURL().then(function(url) {
-alert('yo7');
-    $('.messages').append( snapshot.metadata.name + ',');
-     $('.messages').append( photoname + ','); 
-      $('.messages').append(url); 
+
+
 
 conversation_started = true;
 var first_number,second_number;
@@ -9190,7 +9188,7 @@ var chatvar = {
     to_name:targetname,
     message:'<img src="'+url+'" onload="$(this).fadeIn(700);" style="display:none" >',
     seen:'N',
-    timestamp:  photoname,
+    timestamp:  snapshot.metadata.name,
     type:d_type,
     param:'image',
     downloadurl:url,
