@@ -9181,15 +9181,13 @@ photochatsRef.put($('#takePictureField_').prop('files')[i]).then(function(snapsh
   
     returned ++;
 
-    
-    
- photochatsRef.getDownloadURL().then(function(url) {
+  photochatsRef.getDownloadURL().then(function(url) {
 
 
 
 
 
-alert(returned + ',' + postkeyarray[(returned]);      
+alert(returned + ',' + postkeyarray[returned]);      
       
 var newPostKey = postkeyarray[(returned-1)];
     
