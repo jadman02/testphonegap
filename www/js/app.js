@@ -9177,6 +9177,7 @@ var photochatsRef = storageRef.child(photostorage);
 
 photochatsRef.put($('#takePictureField_').prop('files')[i]).then(function(snapshot) {
   alert('triggered' + i);
+  photochatsRef.getDownloadURL().then(function(url) {
 
 
 
@@ -9207,7 +9208,7 @@ var chatvar = {
     timestamp:  snapshot.metadata.name,
     type:d_type,
     param:'image',
-    downloadurl:snapshot.metadata.downloadURLs[0],
+    downloadurl:url,
     first_number:first_number,
     second_number:second_number
    };
@@ -9217,7 +9218,7 @@ var photovar1 = {
       uid: f_uid,
     user_name: f_first,
     photo_name:photostorage,
- downloadurl:snapshot.metadata.downloadURLs[0],
+ downloadurl:url,
  to_uid:targetid,
  from_uid: f_uid,
     first_number:first_number,
@@ -9229,7 +9230,7 @@ var photovar2 = {
     id:newPostKey,
       uid: f_uid,
     user_name: f_first,
- downloadurl:snapshot.metadata.downloadURLs[0],
+ downloadurl:url,
  to_uid:targetid,
  from_uid: f_uid,
     first_number:first_number,
@@ -9246,7 +9247,7 @@ firebase.database().ref("photochats/" + first_number+ '/' + second_number + '/' 
 
 
   
-  
+  });
   
   
 });
