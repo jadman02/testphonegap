@@ -9192,7 +9192,7 @@ var photodownloadRef = storageRef.child(photodownloadstorage);
 
 
 
-alert(returned + ',' + postkeyarray[returned]);      
+alert(returned + ',' + postkeyarray[(returned-1)]);      
       
 var newPostKey = postkeyarray[(returned-1)];
     
