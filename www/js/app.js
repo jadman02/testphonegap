@@ -2,6 +2,15 @@ var refreshIntervalId;
 
 var desktoparray = ['media/dateicon.png','media/duckicon.png','media/datetongue.png','media/dateorducklogo.png']
 
+function showKeyboard(){
+
+    NativeKeyboard.showMessenger({
+  onSubmit: function(text) {
+    alert("The user typed: " + text);
+  }
+});
+    
+}
 
 function startCamera(){
 
