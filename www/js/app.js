@@ -9106,8 +9106,9 @@ else{datechatstring = messagedaytitle;}
 
 var t_unix = Math.round(+new Date()/1000);
 var returned = 0;  
+
 var postkeyarray = [];
-    alert('new');
+
     var first_number,second_number;
 
 if (Number(f_uid) > Number(targetid) ) {second_number = f_uid;first_number = targetid;}
@@ -9125,7 +9126,8 @@ for (i = 0; i < document.getElementById('takePictureField_').files.length; i++) 
 
     var photoname = t_unix + i;
     
-    postkeyarray.push(firebase.database().ref().push().key);
+var newValue = firebase.database().ref().push().key;
+    postkeyarray.push(newValue);
 
     
   myMessages.addMessage({
