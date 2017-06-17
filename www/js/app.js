@@ -9181,13 +9181,17 @@ photochatsRef.put($('#takePictureField_').prop('files')[i]).then(function(snapsh
   
     returned ++;
 
-  photochatsRef.getDownloadURL().then(function(url) {
+    var photodownloadstorage = 'images/' + f_auth_id + '/' +  snapshot.metadata.name;
+
+var photodownloadRef = storageRef.child(photodownloadstorage);
+    
+  photodownloadRef.getDownloadURL().then(function(url) {
 
 
 
 
 
-alert(returned + ',' + postkeyarray[returned]);      
+alert(returned + ',' + postkeyarray[(returned]);      
       
 var newPostKey = postkeyarray[(returned-1)];
     
