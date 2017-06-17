@@ -9105,8 +9105,8 @@ else{datechatstring = messagedaytitle;}
 
 
 var t_unix = Math.round(+new Date()/1000);
-  
-
+var returned = 0;  
+var postkeyarray = [];
     
     var first_number,second_number;
 
@@ -9125,6 +9125,7 @@ for (i = 0; i < document.getElementById('takePictureField_').files.length; i++) 
 
     var photoname = t_unix + i;
     
+    postkeyarray.push(firebase.database().ref().push().key);
 
     
   myMessages.addMessage({
@@ -9140,6 +9141,11 @@ for (i = 0; i < document.getElementById('takePictureField_').files.length; i++) 
 
     label:'<i class="twa twa-bomb"></i> Images disappear after 24 hours. Sent ' + messagetimetitle
   });
+    
+    
+
+    
+    
 
             //$("#dealimagediv_"+imagenumber).attr("src",URL.createObjectURL(eventy));
          
@@ -9172,13 +9178,19 @@ photochatsRef.put($('#takePictureField_').prop('files')[i]).then(function(snapsh
 
 
 
+alert(returned + ',' + postkeyarray[returned]);      
+      
+var newPostKey = postkeyarray[returned];
+    
+       returned ++; 
+      
 conversation_started = true;
 var first_number,second_number;
 
 if (Number(f_uid) > Number(targetid) ) {second_number = f_uid;first_number = targetid;}
 else {first_number = f_uid;second_number = targetid;}
 
-var newPostKey = firebase.database().ref().push().key;
+
 
 var chatvar = {
        id:newPostKey,
