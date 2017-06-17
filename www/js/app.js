@@ -9181,11 +9181,9 @@ photochatsRef.put($('#takePictureField_').prop('files')[i]).then(function(snapsh
   
     returned ++;
 
-    var photodownloadstorage = 'images/' + f_auth_id + '/' +  snapshot.metadata.name;
-
-var photodownloadRef = storageRef.child(photodownloadstorage);
     
-  photodownloadRef.getDownloadURL().then(function(url) {
+    
+ photochatsRef.getDownloadURL().then(function(url) {
 
 
 
