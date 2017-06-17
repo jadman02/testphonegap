@@ -9169,7 +9169,7 @@ var photochatsRef = storageRef.child(photostorage);
 
 photochatsRef.put($('#takePictureField_').prop('files')[i]).then(function(snapshot) {
   photochatsRef.getDownloadURL().then(function(url) {
-alert('yo');
+alert('yo7');
     $('.messages').append( snapshot.metadata.name + ',');
      $('.messages').append( photoname + ','); 
       $('.messages').append(url); 
