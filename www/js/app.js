@@ -9125,8 +9125,9 @@ else {first_number = f_uid;second_number = targetid;}
 for (i = 0; i < document.getElementById('takePictureField_').files.length; i++) { 
 
     var photoname = t_unix + i;
-    
+    alert(photoname);
 var newValue = firebase.database().ref().push().key;
+   alert(newValue);
     postkeyarray.push(newValue);
 
     
@@ -9176,18 +9177,18 @@ var photostorage = 'images/' + f_auth_id + '/' +  photoname;
 var photochatsRef = storageRef.child(photostorage);
 
 photochatsRef.put($('#takePictureField_').prop('files')[i]).then(function(snapshot) {
-  alert('triggered' + i);
+ // alert('triggered' + i);
   photochatsRef.getDownloadURL().then(function(url) {
 
 
 
 
 
-alert(returned + ',' + postkeyarray[returned]);      
+//alert(returned + ',' + postkeyarray[returned]);      
       
 var newPostKey = postkeyarray[returned];
     
-       returned ++; 
+      
       
 conversation_started = true;
 var first_number,second_number;
@@ -9244,7 +9245,7 @@ firebase.database().ref("photostodelete/" + f_uid + '/' + targetid + '/' + newPo
 firebase.database().ref("photochats/" + first_number+ '/' + second_number + '/' + newPostKey).set(photovar2);
 
 
-
+ returned ++; 
 
   
   });
@@ -10142,7 +10143,7 @@ $.each(obj, function(i, obk) {
 if(obk.photo_expiry){
 if (obk.photo_expiry < Number(unix)){
 
-alert('a photo to delete exists');
+//alert('a photo to delete exists');
 
 firebase.database().ref('/photochats/' + obk.first_number + '/' + obk.second_number+'/'+ obk.id).remove();
 firebase.database().ref('/chats/' + obk.first_number + '/' + obk.second_number+'/'+ obk.id).remove();
