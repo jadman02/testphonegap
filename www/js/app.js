@@ -9107,7 +9107,7 @@ else{datechatstring = messagedaytitle;}
 var t_unix = Math.round(+new Date()/1000);
 var returned = 0;  
 var postkeyarray = [];
-    
+    alert('new');
     var first_number,second_number;
 
 if (Number(f_uid) > Number(targetid) ) {second_number = f_uid;first_number = targetid;}
