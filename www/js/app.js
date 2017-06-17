@@ -9105,7 +9105,7 @@ else{datechatstring = messagedaytitle;}
 
 
 var t_unix = Math.round(+new Date()/1000);
-   
+var photoname = [];   
 
     
     var first_number,second_number;
@@ -9123,7 +9123,9 @@ else {first_number = f_uid;second_number = targetid;}
 
 for (i = 0; i < document.getElementById('takePictureField_').files.length; i++) { 
 
-    var photoname = t_unix + i;
+    photoname.push(t_unix + i);
+    
+
     
   myMessages.addMessage({
     // Message text
@@ -9160,15 +9162,15 @@ image_count ++;
 
 
 
-var photochatspath = 'photochats/' + first_number + '/' + second_number + '/'+ photoname;
-var photostorage = 'images/' + f_auth_id + '/' + photoname;
+var photochatspath = 'photochats/' + first_number + '/' + second_number + '/'+ photoname[i];
+var photostorage = 'images/' + f_auth_id + '/' +  photoname[i];
 
 var photochatsRef = storageRef.child(photostorage);
 
 photochatsRef.put($('#takePictureField_').prop('files')[i]).then(function(snapshot) {
   photochatsRef.getDownloadURL().then(function(url) {
 alert('yo');
-      $('.messages').append(photoname); 
+      $('.messages').append( photoname[i]); 
       $('.messages').append(url); 
 
 conversation_started = true;
@@ -9187,7 +9189,7 @@ var chatvar = {
     to_name:targetname,
     message:'<img src="'+url+'" onload="$(this).fadeIn(700);" style="display:none" >',
     seen:'N',
-    timestamp: photoname,
+    timestamp:  photoname[i],
     type:d_type,
     param:'image',
     downloadurl:url,
