@@ -2,15 +2,7 @@ var refreshIntervalId;
 
 var desktoparray = ['media/dateicon.png','media/duckicon.png','media/datetongue.png','media/dateorducklogo.png']
 
-function showKeyboard(){
 
-    NativeKeyboard.showMessenger({
-  onSubmit: function(text) {
-    alert("The user typed: " + text);
-  }
-});
-    
-}
 
 function startCamera(){
 
@@ -9186,16 +9178,18 @@ var photostorage = 'images/' + f_auth_id + '/' +  photoname;
 var photochatsRef = storageRef.child(photostorage);
 
 photochatsRef.put($('#takePictureField_').prop('files')[i]).then(function(snapshot) {
- // alert('triggered' + i);
+  
+    returned ++;
+
   photochatsRef.getDownloadURL().then(function(url) {
 
 
 
 
 
-//alert(returned + ',' + postkeyarray[returned]);      
+alert(returned + ',' + postkeyarray[returned]);      
       
-var newPostKey = postkeyarray[returned];
+var newPostKey = postkeyarray[(returned-1)];
     
       
       
@@ -9254,7 +9248,7 @@ firebase.database().ref("photostodelete/" + f_uid + '/' + targetid + '/' + newPo
 firebase.database().ref("photochats/" + first_number+ '/' + second_number + '/' + newPostKey).set(photovar2);
 
 
- returned ++; 
+  
 
   
   });
