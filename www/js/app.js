@@ -9125,9 +9125,9 @@ else {first_number = f_uid;second_number = targetid;}
 for (i = 0; i < document.getElementById('takePictureField_').files.length; i++) { 
 
     var photoname = t_unix + i;
-    alert(photoname);
+
 var newValue = firebase.database().ref().push().key;
-   alert(newValue);
+
     postkeyarray.push(newValue);
 
     
