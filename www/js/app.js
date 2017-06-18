@@ -5011,7 +5011,7 @@ $( ".onlineblock" ).show();
 
 
      
-'<div class="swiper-container swiper-questions" style="height:100%;overflow-y:scroll;will-change: opacity;" onscroll="scrollQuestions();" ontouchmove="scrollQuestions();">'+
+'<div class="swiper-container swiper-questions" style="height:100%;overflow-y:scroll;will-change: opacity;">'+
  
 
  '<div style="height:100%;width:100%;overflow-x:hidden;" onclick="backtoProfile();">'+
