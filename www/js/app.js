@@ -5066,7 +5066,7 @@ console.log(new_all);
 
 
 
-'<h3 onclick="scrolltoTop()" class="adown arrowdown_'+new_all[i].id+' availyope availyo_'+ new_all[i].id+'" style="display:none;margin-top:-40px;right:0px;'+boxcolor+';font-size:14px;padding:0px;margin-left:10px;"><i class="pe-7f-angle-down pe-3x" style="float:left;"></i>'+
+'<h3 onclick="scrolltoTop()" class="adown arrowdown_'+new_all[i].id+' availyope availyo_'+ new_all[i].id+'" style="display:none;margin-top:-50px;right:0px;'+boxcolor+';font-size:14px;padding:0px;margin-left:10px;"><i class="pe-7f-angle-down pe-3x" style="float:left;"></i>'+
           
 '</h3>'+
 
@@ -5075,7 +5075,7 @@ console.log(new_all);
 
 
 
-'<div style="z-index:99999999;margin-top:25px;display:none;background-color:white;margin-left:20px;margin-right:20px;border-radius:20px;margin-bottom:20px;" class="prof_'+i+' infoprofile availyo_'+ new_all[i].id+' profileyo_'+ new_all[i].id+'">'+
+'<div style="z-index:99999999;margin-top:10px;display:none;background-color:white;margin-left:20px;margin-right:20px;border-radius:20px;margin-bottom:20px;" class="prof_'+i+' infoprofile availyo_'+ new_all[i].id+' profileyo_'+ new_all[i].id+'">'+
 
 
    
