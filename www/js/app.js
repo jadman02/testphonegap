@@ -5066,7 +5066,7 @@ console.log(new_all);
 
 
 
-'<h3 onclick="scrolltoTop()" class="adown arrowdown_'+new_all[i].id+' availyope availyo_'+ new_all[i].id+'" style="display:none;margin-top:-50px;right:0px;'+boxcolor+';font-size:14px;padding:0px;margin-left:10px;"><i class="pe-7f-angle-down pe-3x" style="float:left;"></i>'+
+'<h3 onclick="scrolltoTop()" class="adown arrowdown_'+new_all[i].id+' availyope availyo_'+ new_all[i].id+'" style="display:none;margin-top:-60px;right:0px;'+boxcolor+';font-size:14px;padding:0px;margin-left:10px;"><i class="pe-7f-angle-down pe-3x" style="float:left;"></i>'+
           
 '</h3>'+
 
