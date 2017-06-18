@@ -5,6 +5,7 @@ var desktoparray = ['media/dateicon.png','media/duckicon.png','media/datetongue.
 
 
 
+
 function startCamera(){
 
 
