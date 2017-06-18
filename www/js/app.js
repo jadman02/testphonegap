@@ -4886,7 +4886,7 @@ var comingback;
 function scrollQuestions(){
 //console.log($( ".wrapper-questions" ).offset().top);
 //console.log($( window ).height());
-$( '.nametag' ).append('1')
+
 
 var offsetline = $( window ).height() - 88;
 var offsetdiv = $( ".wrapper-questions" ).offset().top;
@@ -4894,6 +4894,8 @@ var offsetdiv = $( ".wrapper-questions" ).offset().top;
 //if (offsetdiv > offsetline){$( ".photo-browser-slide" ).css("opacity",1);}
 var setopacity = (($( ".wrapper-questions" ).offset().top +88) / $( window ).height());$( ".photo-browser-slide" ).css("opacity",setopacity);$( ".adown" ).css("opacity",setopacity);
 
+    //if 
+    if (offsetdiv > offsetline) {$( '.nametag' ).append('1');}
 
     
     
