@@ -5806,7 +5806,7 @@ myPhotoBrowser = myApp.photoBrowser({
     '<a href="#" onclick="'+duckfunction+'" class="button link active lets '+photobrowserclass+'" style="border:1px solid white;margin-right:15px;margin-left:-15px;font-family: \'Pacifico\', cursive;font-size:26px;height:40px;">Let\'s Duck</a></div>'+
  
    
-   ' <div class="toolbar-inner toolbardecide" style="padding:5px;">'+
+   ' <div class="toolbar-inner toolbardecide" style="padding-bottom:10px;">'+
     // ' <a href="#" class="link prevphoto" style="color:black">'+
 
     //  '<i class="pe-7s-angle-left pe-3x" ></i>'+
@@ -5819,13 +5819,13 @@ myPhotoBrowser = myApp.photoBrowser({
            
    //    ' </a>'+
 
-'<a href="#tab3" onclick="dateUser();" class="datebutton disabled button link" style="border:1px solid white;border-right:0;border-radius:20px;border-top-right-radius:0px;border-bottom-right-radius:0px;font-family: \'Pacifico\', cursive;font-size:24px;">'+
+'<a href="#tab3" onclick="dateUser();" class="datebutton disabled button link" style="border:1px solid white;border-right:0;border-radius:20px;border-top-right-radius:0px;border-top-left-radius:0px;border-bottom-right-radius:0px;font-family: \'Pacifico\', cursive;font-size:24px;">'+
 '<span class="datefloat" style="padding:10px;border-radius:5px;margin-right:20px;">Date</span>'+
    '         <div style="width:50px;overflow-x:hidden;position:absolute;right:-1px;bottom:-8px;"><img src="media/datefaceonly.png" style="width:100px;">'+
    '</div>'+
 
        ' </a>'+
-        ' <a href="#tab3" onclick="duckUser();" class="duckbutton disabled button link" style="border:1px solid white;border-left:0;border-radius:20px;border-top-left-radius:0px;border-bottom-left-radius:0px;font-family: \'Pacifico\', cursive;font-size:24px;">'+
+        ' <a href="#tab3" onclick="duckUser();" class="duckbutton disabled button link" style="border:1px solid white;border-left:0;border-radius:20px;border-top-left-radius:0px;border-top-right-radius:0px;border-bottom-left-radius:0px;font-family: \'Pacifico\', cursive;font-size:24px;">'+
         '<span class="duckfloat" style="padding:10px;border-radius:5px;margin-left:20px;">Duck</span>'+
          '   <div style="width:54px;overflow-x:hidden;position:absolute;left:-1px;bottom:-8px;"> <img src="media/duckfaceonly.png" style="width:100px;margin-left:-50px;"></div>'+
 
