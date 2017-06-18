@@ -5789,7 +5789,7 @@ myPhotoBrowser = myApp.photoBrowser({
    
    //<img src="media/datefaceonly.png" style="width:100px;">
    //<img src="media/duckfaceonly.png" style="width:100px;">
-   ' <div class="toolbar-inner date-template" style="display:none;padding:10px;background-color:#2196f3;">'+
+   ' <div class="toolbar-inner date-template" style="display:none;padding:0;background-color:#2196f3;height:74px;">'+
    '<a href="#" onclick="dateUser();" class="button link" style="color:#ccc;font-size:15px;max-width:80px;border:0;">'+
    '      Unmatch'+
    '</a>'+
@@ -5798,7 +5798,7 @@ myPhotoBrowser = myApp.photoBrowser({
      
      // '<a href="#" class="link button" onclick="showDecide()" style="width:55px;font-family: \'Pacifico\', cursive;font-size:26px;border:0;color:#007aff;><i class="pe-7s-close pe-2x"></i></a>'+
   
-  ' <div class="toolbar-inner duck-template" style="display:none;padding:0;background-color:#2196f3;">'+
+  ' <div class="toolbar-inner duck-template" style="display:none;padding:0;background-color:#2196f3;height:74px;">'+
        '<a href="#" onclick="duckUser();" class="button link" style="color:#ccc;font-size:15px;max-width:80px;border:0;">'+
    '      Unmatch'+
    '</a>'+
