@@ -102,8 +102,8 @@
     flex-shrink: 1;
 }
 
-.homedate {background-color:#ccc;color:white;-webkit-filter: grayscale(100%);}
-.homeduck {background-color:#ccc;color:white;-webkit-filter: grayscale(100%);}
+.homedate {background-color:#ccc;color:white;-webkit-filter: grayscale(80%);}
+.homeduck {background-color:#ccc;color:white;-webkit-filter: grayscale(80%);}
 
 .homedate.active{-webkit-filter:none;}
 .homeduck.active{-webkit-filter:none;}
