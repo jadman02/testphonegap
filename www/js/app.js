@@ -5395,7 +5395,7 @@ if (new_all[i].minutes >= 30240){timestring = '3 weeks';}
 
   if (new_all[i].availarraystring !== ''){
   $( ".profileyo_" + new_all[i].id ).prepend(
-    '<div class="content-block-title" style="padding-top:20px;clear:both;">Availability</div>'+
+    '<div class="content-block-title" style="padding-top:0px;clear:both;margin-top:0px;">Availability</div>'+
 
 '<div class="list-block media-list availabilitylistblock_'+new_all[i].id+'" style="margin-top:0px;clear:both;margin-bottom:-40px;">'+
     '<ul style="background-color:transparent">'+
