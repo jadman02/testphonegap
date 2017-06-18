@@ -102,6 +102,9 @@
     flex-shrink: 1;
 }
 
+.homedate {background-color:#ccc;}
+.homeduck {background-color:#ccc;}
+
 .reorderinner:after {background-color:transparent !important;}
 .availrec {background-color:#e3e3e4;border-radius:0px;}
 .selecrec {background-color:#4cd964;color:white !important;border-radius:15px;}
