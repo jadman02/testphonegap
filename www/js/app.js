@@ -5075,7 +5075,7 @@ console.log(new_all);
 
 
 
-'<div style="z-index:99999999;margin-top:10px;display:none;background-color:white;margin-left:20px;margin-right:20px;border-radius:20px;margin-bottom:20px;" class="prof_'+i+' infoprofile availyo_'+ new_all[i].id+' profileyo_'+ new_all[i].id+'">'+
+'<div style="z-index:99999999;margin-top:15px;display:none;background-color:white;border-radius:20px;margin-bottom:20px;" class="prof_'+i+' infoprofile availyo_'+ new_all[i].id+' profileyo_'+ new_all[i].id+'">'+
 
 
    
