@@ -5004,7 +5004,7 @@ $( ".onlineblock" ).show();
  var photobrowserHTML = 
 
 
- '<div class="popup infopopup" style="background-color:transparent;margin-top:44px;height:calc(100% - 122px);padding-bottom:20px;" >'+
+ '<div class="popup infopopup" style="background-color:transparent;margin-top:44px;height:calc(100% - 127px);padding-bottom:20px;" >'+
 
        //  ' <a href="#tab1" class="prevs button disabled" style="border-radius:5px;position:absolute;left:-37px;top:50%;margin-top:-28px;height:56px;width:56px;border:0;z-index:99;color:#2196f3;background-color:rgba(247, 247, 247, 0.952941);"><i class="pe-7s-angle-left pe-4x" style="margin-left:7px;margin-top:-1px;z-index:-1"></i></a>'+
        //                ' <a href="#tab3" class="nexts button" style="border-radius:5px;position:absolute;right:-37px;width:56px;top:50%;margin-top:-26px;height:56px;color:#2196f3;border:0;z-index:99;background-color:rgba(247, 247, 247, 0.952941);"><i class="pe-7s-angle-right pe-4x" style="margin-left:-35px;margin-top:-1px;"></i></a>'+
@@ -5075,7 +5075,7 @@ console.log(new_all);
 
 
 
-'<div style="z-index:99999999;margin-top:15px;display:none;background-color:white;border-radius:20px;margin-bottom:20px;" class="prof_'+i+' infoprofile availyo_'+ new_all[i].id+' profileyo_'+ new_all[i].id+'">'+
+'<div style="z-index:99999999;margin-top:15px;display:none;background-color:white;border-radius:20px;border-bottom-right-radius:0px;border-bottom-left-radius:0px;margin-bottom:20px;" class="prof_'+i+' infoprofile availyo_'+ new_all[i].id+' profileyo_'+ new_all[i].id+'">'+
 
 
    
