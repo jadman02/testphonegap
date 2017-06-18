@@ -2446,7 +2446,7 @@ $( ".swiper-zoom-container > img, .swiper-zoom-container > svg, .swiper-zoom-con
 
 
 
-$( ".toolbarq" ).css("background-color","#ccc");
+$( ".toolbarq" ).css("background-color","transparent");
 $( ".photobrowserbar" ).css("background-color","#ccc");
 $( ".nametag" ).removeClass('whitetext');
 
@@ -3297,7 +3297,7 @@ myPhotoBrowser = myApp.photoBrowser({
     photos: new_all,
    captionTemplate:'<div style="width:40px;height:40px;background-color:transparent;margin-top:-80px;margin-left:50px;float:right;display:none;"></div><div class="photo-browser-caption" data-caption-index="{{@index}}">{{caption}}</div>',
     
-    toolbarTemplate:'<div class="toolbar tabbar toolbarq" style="height:84px;background-color:#ccc;">'+
+    toolbarTemplate:'<div class="toolbar tabbar toolbarq" style="height:84px;background-color:transparent;">'+
   
    
    //<img src="media/datefaceonly.png" style="width:100px;">
@@ -6307,7 +6307,7 @@ $( ".swiper-zoom-container > img, .swiper-zoom-container > svg, .swiper-zoom-con
 
 
 
-$( ".toolbarq" ).css("background-color","#ccc");
+$( ".toolbarq" ).css("background-color","transparent");
 $( ".photobrowserbar" ).css("background-color","#ccc");
 $( ".nametag" ).removeClass('whitetext');
 
@@ -7157,12 +7157,12 @@ myPhotoBrowser = myApp.photoBrowser({
     photos: new_all,
    captionTemplate:'<div style="width:40px;height:40px;background-color:transparent;margin-top:-80px;margin-left:50px;float:right;display:none;"></div><div class="photo-browser-caption" data-caption-index="{{@index}}">{{caption}}</div>',
     
-    toolbarTemplate:'<div class="toolbar tabbar toolbarq" style="height:84px;background-color:#ccc;">'+
+    toolbarTemplate:'<div class="toolbar tabbar toolbarq" style="height:84px;background-color:transparent;">'+
   
    
    //<img src="media/datefaceonly.png" style="width:100px;">
    //<img src="media/duckfaceonly.png" style="width:100px;">
-   ' <div class="toolbar-inner date-template" style="display:none;padding:0;background-color:#2196f3;">'+
+   ' <div class="toolbar-inner date-template" style="display:none;padding:10px;background-color:#2196f3;">'+
    '<a href="#" onclick="dateUser();" class="button link" style="color:#ccc;font-size:15px;max-width:80px;border:0;">'+
    '      Unmatch'+
    '</a>'+
@@ -7192,13 +7192,13 @@ myPhotoBrowser = myApp.photoBrowser({
            
    //    ' </a>'+
 
-'<a href="#tab3" onclick="dateUser();" class="datebutton disabled button link" style="border-radius:0px;font-family: \'Pacifico\', cursive;font-size:24px;">'+
+'<a href="#tab3" onclick="dateUser();" class="datebutton disabled button link" style="border-radius:20px;font-family: \'Pacifico\', cursive;font-size:24px;">'+
 '<span class="datefloat" style="border:1px solid white;padding:10px;border-radius:5px;margin-right:20px;">Date</span>'+
    '         <div style="width:50px;overflow-x:hidden;position:absolute;right:-1px;bottom:-3px;"><img src="media/datefaceonly.png" style="width:100px;">'+
    '</div>'+
 
        ' </a>'+
-        ' <a href="#tab3" onclick="duckUser();" class="duckbutton disabled button link" style="border-radius:0px;font-family: \'Pacifico\', cursive;font-size:24px;">'+
+        ' <a href="#tab3" onclick="duckUser();" class="duckbutton disabled button link" style="border-radius:20px;font-family: \'Pacifico\', cursive;font-size:24px;">'+
         '<span class="duckfloat" style="border:1px solid white;padding:10px;border-radius:5px;margin-left:20px;">Duck</span>'+
          '   <div style="width:54px;overflow-x:hidden;position:absolute;left:-1px;bottom:-3px;"> <img src="media/duckfaceonly.png" style="width:100px;margin-left:-50px;"></div>'+
 
@@ -10778,7 +10778,7 @@ if ($('.infopopup').length > 0) {
 $( ".toolbarq" ).show();
 $( ".photobrowserbar" ).css("background-color","#ccc");
 $( ".matchcolor" ).removeClass('whitetext');
-$( ".toolbarq" ).css("background-color","#ccc");
+$( ".toolbarq" ).css("background-color","transparent");
 
 
 }
