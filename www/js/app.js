@@ -5030,7 +5030,7 @@ $( ".onlineblock" ).show();
     
     
  
- '   <div class="swiper-wrapper wrapper-questions" style="background: -webkit-linear-gradient(270deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.17) 80%, rgba(255,255,255,1) 100%);">'+
+ '   <div class="swiper-wrapper wrapper-questions" style="">'+
 
 
   '  </div>'+
@@ -5085,7 +5085,7 @@ console.log(new_all);
 
 
 
-'<div class="list-block" style="margin-top:0px;clear:both;">'+
+'<div class="list-block" style="margin-top:0px;clear:both;background: -webkit-linear-gradient(270deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.17) 80%, rgba(255,255,255,1) 100%);">'+
     '<ul class="profileul_'+new_all[i].id+'" style="background-color:transparent">'+
       
         
