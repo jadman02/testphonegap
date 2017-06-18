@@ -5,13 +5,25 @@ var desktoparray = ['media/dateicon.png','media/duckicon.png','media/datetongue.
 function setWant(val){
 
 if (val == 0){
-   if ($( ".homedate" ).hasClass( "active" )){$( ".homedate" ).removeClass("active");} 
-else{$( ".homedate" ).addClass("active");}
+   if ($( ".homedate" ).hasClass( "active" )){$( ".homedate" ).removeClass("active");
+  
+if ($( ".homeduck" ).hasClass( "active" )){homewant = 'duck';updateWant(); }else {homewant = 'offline';updateWant(); }                                           
+                                            
+                                             
+                                             } 
+else{$( ".homedate" ).addClass("active");
+ if ($( ".homeduck" ).hasClass( "active" )){homewant = 'dateduck';updateWant(); }else {homewant = 'date';updateWant(); }  
+    }
 }
 
     if (val == 1){
-       if ($( ".homeduck" ).hasClass( "active" )){$( ".homeduck" ).removeClass("active");} 
-        else{$( ".homeduck" ).addClass("active");}
+       if ($( ".homeduck" ).hasClass( "active" )){$( ".homeduck" ).removeClass("active");
+                                             if ($( ".homedate" ).hasClass( "active" )){homewant = 'date';updateWant(); }else {homewant = 'offline';updateWant(); }
+                                                 } 
+        else{$( ".homeduck" ).addClass("active");
+                                                     if ($( ".homedate" ).hasClass( "active" )){homewant = 'dateduck';updateWant(); }else {homewant = 'duck';updateWant(); }
+
+            }
 
     }
 
@@ -19,7 +31,28 @@ else{$( ".homedate" ).addClass("active");}
     
 }
 
+function updateWant(){
 
+   //Will update firebase user homewant
+   //Check if updateuser function is in go daddy file
+   
+   firebase.auth().currentUser.getToken().then(function(idToken) {   
+$.post( "http://www.dateorduck.com/updatewant.php", { projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,uid:f_uid,want:homewant} )
+
+  .done(function( data ) {
+  
+//getMatches();
+  
+ 
+  
+  });
+
+
+    }).catch(function(error) {
+  // Handle error
+});
+   
+}
 
 function startCamera(){
 
@@ -146,7 +179,7 @@ var f_projectid;
 var canloadchat;
 var viewphotos = false;     
 var viewscroll = false;
-
+var homewant;
 /*
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
@@ -1280,7 +1313,7 @@ zodiac_u = snapshot.child("zodiac").val();
 ethnicity_u = snapshot.child("ethnicity").val();
 height_u = snapshot.child("height").val();
 weight_u = snapshot.child("weight").val();
-
+homewant = snapshot.child("homewant").val();
     
 sortby = snapshot.child("sort").val();
 if (snapshot.child("offsounds").val()){offsounds = snapshot.child("offsounds").val();}
