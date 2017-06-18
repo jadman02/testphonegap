@@ -4913,12 +4913,33 @@ var setopacity = (($( ".wrapper-questions" ).offset().top +88) / $( window ).hei
 function delayYo(){
 
     setTimeout(function(){ scrollQuestions(); }, 0);
-     setTimeout(function(){ scrollQuestions(); }, 50);
-    setTimeout(function(){ scrollQuestions(); }, 100);
-    setTimeout(function(){ scrollQuestions(); }, 200);
-    setTimeout(function(){ scrollQuestions(); }, 300);
-     setTimeout(function(){ scrollQuestions(); }, 400);
-     setTimeout(function(){ scrollQuestions(); }, 500);
+     setTimeout(function(){ scrollQuestions(); }, 30);
+    setTimeout(function(){ scrollQuestions(); }, 60);
+    setTimeout(function(){ scrollQuestions(); }, 90);
+    setTimeout(function(){ scrollQuestions(); }, 120);
+     setTimeout(function(){ scrollQuestions(); }, 180);
+     setTimeout(function(){ scrollQuestions(); }, 210);
+    setTimeout(function(){ scrollQuestions(); }, 240);
+    setTimeout(function(){ scrollQuestions(); }, 270);
+    setTimeout(function(){ scrollQuestions(); }, 310);
+    setTimeout(function(){ scrollQuestions(); }, 350);
+    setTimeout(function(){ scrollQuestions(); }, 380);
+    setTimeout(function(){ scrollQuestions(); }, 410);
+    setTimeout(function(){ scrollQuestions(); }, 450);
+    setTimeout(function(){ scrollQuestions(); }, 480);
+    setTimeout(function(){ scrollQuestions(); }, 510);
+    setTimeout(function(){ scrollQuestions(); }, 550);
+    setTimeout(function(){ scrollQuestions(); }, 580);
+    setTimeout(function(){ scrollQuestions(); }, 610);
+    setTimeout(function(){ scrollQuestions(); }, 650);
+    setTimeout(function(){ scrollQuestions(); }, 700);
+    setTimeout(function(){ scrollQuestions(); }, 730);
+    setTimeout(function(){ scrollQuestions(); }, 780);
+    setTimeout(function(){ scrollQuestions(); }, 810);
+    setTimeout(function(){ scrollQuestions(); }, 850);
+    setTimeout(function(){ scrollQuestions(); }, 900);
+    setTimeout(function(){ scrollQuestions(); }, 950);
+    
 
 
 }
