@@ -4905,7 +4905,7 @@ var setopacity = (($( ".wrapper-questions" ).offset().top +88) / $( window ).hei
 
 function delayYo(){
 
-    setTimeout(function(){ scrollQuestions(); }, 10);
+    setTimeout(function(){ scrollQuestions(); }, 1000);
 
 }
 
@@ -5003,7 +5003,7 @@ $( ".onlineblock" ).show();
 
 
      
-'<div class="swiper-container swiper-questions" style="height:100%;overflow-y:scroll;" ontouchmove="scrollQuestions();" ontouchcancel="scrollQuestions();">'+
+'<div class="swiper-container swiper-questions" style="height:100%;overflow-y:scroll;" ontouchmove="scrollQuestions();" ontouchend="delayYo();">'+
  
 
  '<div style="height:100%;width:100%;overflow-x:hidden;" onclick="backtoProfile();">'+
