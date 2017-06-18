@@ -4890,7 +4890,7 @@ var offsetline = $( window ).height() - 88;
 var offsetdiv = $( ".wrapper-questions" ).offset().top;
 
 //if (offsetdiv > offsetline){$( ".photo-browser-slide" ).css("opacity",1);}
-var setopacity = $( ".wrapper-questions" ).offset().top +88) / $( window ).height();$( ".photo-browser-slide" ).css("opacity",setopacity);$( ".adown" ).css("opacity",setopacity);
+var setopacity = Math.pow((($( ".wrapper-questions" ).offset().top +88) / $( window ).height()),3);$( ".photo-browser-slide" ).css("opacity",setopacity);$( ".adown" ).css("opacity",setopacity);
 
 
 
@@ -4989,12 +4989,12 @@ $( ".onlineblock" ).show();
  var photobrowserHTML = 
 
 
- '<div class="popup infopopup" style="background-color:transparent;margin-top:44px;height:calc(100% - 127px);">'+
+ '<div class="popup infopopup" style="background-color:transparent;margin-top:44px;height:calc(100% - 127px);" onscroll="scrollQuestions();">'+
 
        //  ' <a href="#tab1" class="prevs button disabled" style="border-radius:5px;position:absolute;left:-37px;top:50%;margin-top:-28px;height:56px;width:56px;border:0;z-index:99;color:#2196f3;background-color:rgba(247, 247, 247, 0.952941);"><i class="pe-7s-angle-left pe-4x" style="margin-left:7px;margin-top:-1px;z-index:-1"></i></a>'+
        //                ' <a href="#tab3" class="nexts button" style="border-radius:5px;position:absolute;right:-37px;width:56px;top:50%;margin-top:-26px;height:56px;color:#2196f3;border:0;z-index:99;background-color:rgba(247, 247, 247, 0.952941);"><i class="pe-7s-angle-right pe-4x" style="margin-left:-35px;margin-top:-1px;"></i></a>'+
 
-'<div class="swiper-container swiper-questions" style="height:100%;overflow-y:scroll;"  onscroll="scrollQuestions();">'+
+'<div class="swiper-container swiper-questions" style="height:100%;overflow-y:scroll;">'+
  
 
 
