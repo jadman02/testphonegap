@@ -5005,8 +5005,7 @@ $( ".onlineblock" ).show();
 '<div class="swiper-container swiper-questions" style="height:100%;overflow-y:scroll;">'+
  
 
-
- '<div style="background-color:transparent;height:100%;width:100%;overflow-x:hidden;" onclick="backtoProfile();">'+
+ '<div style="background: -moz-linear-gradient(270deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.17) 17%, rgba(255,255,255,1) 100%); /* ff3.6+ */background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255,255,255,0)), color-stop(17%, rgba(255,255,255,0.17)), color-stop(100%, rgba(255,255,255,1))); /* safari4+,chrome */background: -webkit-linear-gradient(270deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.17) 17%, rgba(255,255,255,1) 100%); /* safari5.1+,chrome10+ */background: -o-linear-gradient(270deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.17) 17%, rgba(255,255,255,1) 100%); /* opera 11.10+ */background: -ms-linear-gradient(270deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.17) 17%, rgba(255,255,255,1) 100%); /* ie10+ */background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.17) 17%, rgba(255,255,255,1) 100%); /* w3c */filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=0 ); /* ie6-9 */height:100%;width:100%;overflow-x:hidden;" onclick="backtoProfile();">'+
  
 
 
