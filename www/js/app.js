@@ -4892,7 +4892,7 @@ var offsetline = $( window ).height() - 88;
 var offsetdiv = $( ".wrapper-questions" ).offset().top;
 
 //if (offsetdiv > offsetline){$( ".photo-browser-slide" ).css("opacity",1);}
-var setopacity = (($( ".wrapper-questions" ).offset().top +88) / $( window ).height());$( ".photo-browser-slide" ).css("opacity",setopacity);$( ".adown" ).css("opacity",setopacity);
+var setopacity = (($( ".wrapper-questions" ).offset().top +10) / $( window ).height());$( ".photo-browser-slide" ).css("opacity",setopacity);$( ".adown" ).css("opacity",setopacity);
 
 
 
