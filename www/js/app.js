@@ -4801,26 +4801,17 @@ var targetdatelikes, targetducklikes;
 var slideheight = $( window ).height();
 
 function getMeta(url){
-  $("<img/>",{
-        load : function(){ 
-        
-        if (this.width > this.height){
-        $( ".swiper-zoom-container > img, .swiper-zoom-container > svg, .swiper-zoom-container > canvas" ).css('height','auto');
+  
+     $( ".swiper-zoom-container > img, .swiper-zoom-container > svg, .swiper-zoom-container > canvas" ).css('height','auto');
         $( ".swiper-zoom-container > img, .swiper-zoom-container > svg, .swiper-zoom-container > canvas" ).css('width',$(document).width() + 'px');
-       // $( ".swiper-zoom-container > img, .swiper-zoom-container > svg, .swiper-zoom-container > canvas" ).css('object-fit','cover');
+    
+    $("<img/>",{
+      load : function(){ 
 
-}
-else if (this.width == this.height){
-        $( ".swiper-zoom-container > img, .swiper-zoom-container > svg, .swiper-zoom-container > canvas" ).css('width',$(document).width() + 'px');
-        $( ".swiper-zoom-container > img, .swiper-zoom-container > svg, .swiper-zoom-container > canvas" ).css('height','auto');
-      //  $( ".swiper-zoom-container > img, .swiper-zoom-container > svg, .swiper-zoom-container > canvas" ).css('object-fit','cover');
-
-}
-        else{
+      if (this.height > this.width){
         
-        $( ".swiper-zoom-container > img, .swiper-zoom-container > svg, .swiper-zoom-container > canvas" ).css('height',$(document).width() + 'px');
-        $( ".swiper-zoom-container > img, .swiper-zoom-container > svg, .swiper-zoom-container > canvas" ).css('width','100%');
-     //   $( ".swiper-zoom-container > img, .swiper-zoom-container > svg, .swiper-zoom-container > canvas" ).css('object-fit','none');
+        $( ".swiper-zoom-container > img, .swiper-zoom-container > svg, .swiper-zoom-container > canvas" ).css('height',$(document).height() + 'px');
+        $( ".swiper-zoom-container > img, .swiper-zoom-container > svg, .swiper-zoom-container > canvas" ).css('width','auto');
 
         
         }
@@ -4875,7 +4866,7 @@ $( ".photo-browser-slide" ).css("opacity","1");
 //$( ".datebutton img" ).css("width","auto");
 //$( ".duckbutton img" ).css("width","auto");
 
-$( ".photobrowserbar" ).css("background-color","hsla(0,0%,0%,0.3)");
+$( ".photobrowserbar" ).css("background-color","transparent");
 
 }
 
