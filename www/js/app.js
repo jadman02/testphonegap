@@ -2,7 +2,22 @@ var refreshIntervalId;
 
 var desktoparray = ['media/dateicon.png','media/duckicon.png','media/datetongue.png','media/dateorducklogo.png']
 
+function setWant(val){
 
+if (val == 0){
+   if ($( ".homedate" ).hasClass( "active" )){$( ".homedate" ).removeClass("active");} 
+else{$( ".homedate" ).addClass("active");}
+}
+
+    if (val == 1){
+       if ($( ".homeduck" ).hasClass( "active" )){$( ".homeduck" ).removeClass("active");} 
+        else{$( ".homeduck" ).addClass("active");}
+
+    }
+
+    
+    
+}
 
 
 
