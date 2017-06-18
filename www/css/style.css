@@ -121,8 +121,8 @@
 
 .popup {z-index:20000;}
 .picker-columns {z-index:30000;}
-.datebutton {border-color:transparent;-webkit-filter:grayscale(60%);}
-.duckbutton {border-color:transparent;-webkit-filter:grayscale(60%);}
+.datebutton {border-color:transparent;-webkit-filter:grayscale(60%);background-color:#ccc;}
+.duckbutton {border-color:transparent;-webkit-filter:grayscale(60%);background-color:#ccc;}
 
 .duckbutton.active {-webkit-filter:none;color:white;background-color:#ffc30e;}
 .datebutton.active {-webkit-filter:none;color:white;background-color:#ffc30e;}
