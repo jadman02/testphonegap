@@ -4895,7 +4895,7 @@ var offsetdiv = $( ".wrapper-questions" ).offset().top;
 var setopacity = (($( ".wrapper-questions" ).offset().top +88) / $( window ).height());$( ".photo-browser-slide" ).css("opacity",setopacity);$( ".adown" ).css("opacity",setopacity);
 
     //if 
-    if (offsetdiv > offsetline) {$( ".photo-browser-slide" ).css("opacity","0");$( ".adown" ).css("opacity","0");}
+    if (offsetdiv > offsetline) {$( ".photo-browser-slide" ).css("opacity","1");$( ".adown" ).css("opacity","1");}
 
     
     
