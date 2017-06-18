@@ -4884,7 +4884,7 @@ var comingback;
 function scrollQuestions(){
 //console.log($( ".wrapper-questions" ).offset().top);
 //console.log($( window ).height());
-alert('scrolled');
+
 
 var offsetline = $( window ).height() - 88;
 var offsetdiv = $( ".wrapper-questions" ).offset().top;
