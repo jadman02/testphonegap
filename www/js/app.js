@@ -5002,7 +5002,7 @@ $( ".onlineblock" ).show();
 
 
      
-'<div class="swiper-container swiper-questions" style="height:100%;overflow-y:scroll;" onvmouseover="scrollQuestions();">'+
+'<div class="swiper-container swiper-questions" style="height:100%;overflow-y:scroll;" ontouchmove="scrollQuestions();" ontouchcancel="scrollQuestions();">'+
  
 
  '<div style="height:100%;width:100%;overflow-x:hidden;" onclick="backtoProfile();">'+
