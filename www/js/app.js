@@ -4912,7 +4912,14 @@ var setopacity = (($( ".wrapper-questions" ).offset().top +88) / $( window ).hei
 
 function delayYo(){
 
-    setTimeout(function(){ scrollQuestions(); }, 10);
+    setTimeout(function(){ scrollQuestions(); }, 0);
+     setTimeout(function(){ scrollQuestions(); }, 50);
+    setTimeout(function(){ scrollQuestions(); }, 100);
+    setTimeout(function(){ scrollQuestions(); }, 200);
+    setTimeout(function(){ scrollQuestions(); }, 300);
+     setTimeout(function(){ scrollQuestions(); }, 400);
+     setTimeout(function(){ scrollQuestions(); }, 500);
+
 
 }
 
@@ -5010,7 +5017,7 @@ $( ".onlineblock" ).show();
 
 
      
-'<div class="swiper-container swiper-questions" style="height:100%;overflow-y:scroll;will-change: opacity;" ontouchmove="scrollQuestions();" onscroll="scrollQuestions();">'+
+'<div class="swiper-container swiper-questions" style="height:100%;overflow-y:scroll;will-change: opacity;" ontouchmove="delayYo()">'+
  
 
  '<div style="height:100%;width:100%;overflow-x:hidden;" onclick="backtoProfile();">'+
