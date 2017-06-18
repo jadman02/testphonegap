@@ -4906,7 +4906,7 @@ var setopacity = (($( ".wrapper-questions" ).offset().top +88) / $( window ).hei
 
 function delayYo(){
 
-    setTimeout(function(){ scrollQuestions(); }, 1000);
+    setTimeout(function(){ scrollQuestions(); }, 10);
 
 }
 
