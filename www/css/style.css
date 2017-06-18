@@ -124,8 +124,10 @@
 .datebutton {border-color:transparent;-webkit-filter:grayscale(60%);}
 .duckbutton {border-color:transparent;-webkit-filter:grayscale(60%);}
 
-.duckbutton.active {-webkit-filter:none;color:white;}
-.datebutton.active {-webkit-filter:none;color:white;}
+.duckbutton.active {-webkit-filter:none;color:white;background-color:#ffc30e;}
+.datebutton.active {-webkit-filter:none;color:white;background-color:#ffc30e;}
+
+
 
 
 
