@@ -5002,7 +5002,7 @@ $( ".onlineblock" ).show();
 
      //onscroll="scrollQuestions();"
      
-'<div class="swiper-container swiper-questions" style="height:100%;overflow-y:scroll;background-color:white;">'+
+'<div class="swiper-container swiper-questions" style="height:100%;overflow-y:scroll;">'+
  
 
 
@@ -5022,7 +5022,7 @@ $( ".onlineblock" ).show();
     
     
  
- '   <div class="swiper-wrapper wrapper-questions">'+
+ '   <div class="swiper-wrapper wrapper-questions" style="background-color:white;">'+
 
 
   '  </div>'+
