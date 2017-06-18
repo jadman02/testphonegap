@@ -5806,7 +5806,7 @@ myPhotoBrowser = myApp.photoBrowser({
     '<a href="#" onclick="'+duckfunction+'" class="button link active lets '+photobrowserclass+'" style="border:1px solid white;margin-right:15px;margin-left:-15px;font-family: \'Pacifico\', cursive;font-size:26px;height:40px;">Let\'s Duck</a></div>'+
  
    
-   ' <div class="toolbar-inner toolbardecide" style="padding-bottom:10px;">'+
+   ' <div class="toolbar-inner toolbardecide" style="padding-bottom:10px;padding-left:0px;padding-right:0px;">'+
     // ' <a href="#" class="link prevphoto" style="color:black">'+
 
     //  '<i class="pe-7s-angle-left pe-3x" ></i>'+
