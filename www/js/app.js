@@ -5011,7 +5011,7 @@ $( ".onlineblock" ).show();
 
 
      
-'<div class="swiper-container swiper-questions" style="background: -webkit-linear-gradient(270deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.17) 80%, rgba(255,255,255,1) 100%);height:100%;overflow-y:scroll;will-change: opacity;">'+
+'<div class="swiper-container swiper-questions" style="height:100%;overflow-y:scroll;will-change: opacity;">'+
  
 
  '<div style="height:100%;width:100%;overflow-x:hidden;" onclick="backtoProfile();">'+
@@ -5030,7 +5030,7 @@ $( ".onlineblock" ).show();
     
     
  
- '   <div class="swiper-wrapper wrapper-questions">'+
+ '   <div class="swiper-wrapper wrapper-questions" style="background: -webkit-linear-gradient(270deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.17) 80%, rgba(255,255,255,1) 100%);">'+
 
 
   '  </div>'+
