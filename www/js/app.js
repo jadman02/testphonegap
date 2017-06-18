@@ -4892,10 +4892,10 @@ var offsetline = $( window ).height() - 88;
 var offsetdiv = $( ".wrapper-questions" ).offset().top;
 
 //if (offsetdiv > offsetline){$( ".photo-browser-slide" ).css("opacity",1);}
-var setopacity = (($( ".wrapper-questions" ).offset().top +88) / $( window ).height());$( ".photo-browser-slide" ).css("opacity",setopacity);$( ".adown" ).css("opacity",setopacity);
+var setopacity = (($( ".wrapper-questions" ).offset().top +88) / $( window ).height()) * 2;$( ".photo-browser-slide" ).css("opacity",setopacity);$( ".adown" ).css("opacity",setopacity);
 
     //if 
-    if (offsetdiv > offsetline) {$( ".photo-browser-slide" ).css("opacity","1");$( ".adown" ).css("opacity","1");}
+   // if (offsetdiv > offsetline) {$( ".photo-browser-slide" ).css("opacity","1");$( ".adown" ).css("opacity","1");}
 
     
     
