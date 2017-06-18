@@ -4802,8 +4802,7 @@ var slideheight = $( window ).height();
 
 function getMeta(url){
   
-     $( ".swiper-zoom-container > img, .swiper-zoom-container > svg, .swiper-zoom-container > canvas" ).css('height','auto');
-        $( ".swiper-zoom-container > img, .swiper-zoom-container > svg, .swiper-zoom-container > canvas" ).css('width',$(document).width() + 'px');
+    
     
     $("<img/>",{
       load : function(){ 
