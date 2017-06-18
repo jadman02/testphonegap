@@ -5011,7 +5011,7 @@ $( ".onlineblock" ).show();
 
 
      
-'<div class="swiper-container swiper-questions" style="height:100%;overflow-y:scroll;will-change: opacity;">'+
+'<div class="swiper-container swiper-questions" style="height:100%;overflow-y:scroll;will-change: opacity;" onscroll="scrollQuestions();" ontouchmove="scrollQuestions();">'+
  
 
  '<div style="height:100%;width:100%;overflow-x:hidden;" onclick="backtoProfile();">'+
@@ -5085,7 +5085,7 @@ console.log(new_all);
 
 
 
-'<div class="list-block" style="margin-top:0px;clear:both;background: -webkit-linear-gradient(270deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.17) 20%, rgba(255,255,255,1) 100%);">'+
+'<div class="list-block" style="margin-top:0px;clear:both;">'+
     '<ul class="profileul_'+new_all[i].id+'" style="background-color:transparent">'+
       
         
