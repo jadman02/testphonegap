@@ -4,6 +4,8 @@ var desktoparray = ['media/dateicon.png','media/duckicon.png','media/datetongue.
 
 
 
+
+
 function startCamera(){
 
 
@@ -45,8 +47,37 @@ var myFunction = function() {
     }
     myFunction();
 
+var mobile = 0;
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {mobile = 1;}
+else{
+mobile = 0;
+
+
 $('.login-loader').hide();
+
+$('.dateduckdesktop').append('<div style="clear:both;width:100%;text-align:center;border-top:1px solid #ccc;margin-top:10px;"><p>Meet people nearby for a date or a <strike>fu**</strike>  duck.</br></br>Open on your phone.</p></div>');
+
+
+
+
 }
+
+
+//if (mobile===1){
+
+
+
+try {
+  // try to use localStorage
+  localStorage.test = 2;        
+} catch (e) {
+  // there was an error so...
+  alert('You are in Privacy Mode\nPlease deactivate Privacy Mode and then reload the page.');
+}
+
+
+
+
 
 // Initialize your app
 var myApp = new Framework7({dynamicNavbar: true,init: false});
@@ -100,7 +131,7 @@ var f_projectid;
 var canloadchat;
 var viewphotos = false;     
 var viewscroll = false;
-var homewant;
+
 /*
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
@@ -1234,7 +1265,7 @@ zodiac_u = snapshot.child("zodiac").val();
 ethnicity_u = snapshot.child("ethnicity").val();
 height_u = snapshot.child("height").val();
 weight_u = snapshot.child("weight").val();
-if (snapshot.child("homewant").val()){homewant = snapshot.child("homewant").val();}
+
     
 sortby = snapshot.child("sort").val();
 if (snapshot.child("offsounds").val()){offsounds = snapshot.child("offsounds").val();}
@@ -1443,11 +1474,6 @@ function addUser() {
   
   
 }
-
-
-
-
-
 
 function processUpdate(){
 
