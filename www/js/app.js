@@ -33,8 +33,8 @@ else{$( ".homedate" ).addClass("active");
 }
 
 
-function updatewant(){
-alert('');
+function updateWant(){
+alert(' ');
 }
 
 function startCamera(){
