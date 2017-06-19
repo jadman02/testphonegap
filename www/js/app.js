@@ -618,18 +618,18 @@ $('.content-here').empty();
     '<div class="no-results-div" style="text-align:center;margin:0 auto;width:300px;position:absolute;top:44px;left:50%;margin-left:-150px;margin-top:54px;">'+
     
       '<h3>Getting Started</h3>'+
-       '<p style="padding-top:0px;margin-top:0px;">Are you looking to date, or duck or open for both?</p>'+
-       '<div class="row" style="border-top:1px solid #c4c4c4;border-bottom:1px solid #c4c4c4;">'+
+       '<p style="padding-top:0px;margin-top:0px;">Are you looking to date, or duck or both? Your profile is not visible until you make a selection.</p>'+
+       '<div class="row" style="border-top:1px solid #c4c4c4;border-bottom:1px solid #c4c4c4;padding-top:10px;padding-bottom:10px;">'+
     '<div class="col-30"><img src="media/datefaceonly.png" style="width:80px;margin:0 auto;"></div>'+
     '<div class="col-70">Press date if you want to meet someone to hang out with.</div>'+
 '</div>'+
-              '<div class="row" style="border-bottom:1px solid #c4c4c4;">'+
+              '<div class="row" style="border-bottom:1px solid #c4c4c4;padding-top:10px;padding-bottom:10px;">'+
     '<div class="col-30"><img src="media/duckfaceonly.png" style="width:80px;margin:0 auto;"></div>'+
     '<div class="col-70">Press duck if you want to meet someone for something less serious.</div>'+
 '</div>'+
 
 
-              '<div class="row" style="border-bottom:1px solid #c4c4c4;">'+
+              '<div class="row" style="border-bottom:1px solid #c4c4c4;padding-top:10px;padding-bottom:10px;">'+
     '<div class="col-30"><img src="media/duckfaceonly.png" style="width:80px;margin:0 auto;"></div>'+
     '<div class="col-70">Press both if you\'re open to both.</div>'+
 '</div>'+
