@@ -3,8 +3,39 @@ var refreshIntervalId;
 var desktoparray = ['media/dateicon.png','media/duckicon.png','media/datetongue.png','media/dateorducklogo.png']
 
 
+function setWant(val){
+
+if (val == 0){
+   if ($( ".homedate" ).hasClass( "active" )){$( ".homedate" ).removeClass("active");
+  
+if ($( ".homeduck" ).hasClass( "active" )){homewant = 'duck';updateWant(); }else {homewant = 'offline';updateWant(); }                                           
+                                            
+                                             
+                                             } 
+else{$( ".homedate" ).addClass("active");
+ if ($( ".homeduck" ).hasClass( "active" )){homewant = 'dateduck';updateWant(); }else {homewant = 'date';updateWant(); }  
+    }
+}
+
+    if (val == 1){
+       if ($( ".homeduck" ).hasClass( "active" )){$( ".homeduck" ).removeClass("active");
+                                             if ($( ".homedate" ).hasClass( "active" )){homewant = 'date';updateWant(); }else {homewant = 'offline';updateWant(); }
+                                                 } 
+        else{$( ".homeduck" ).addClass("active");
+                                                     if ($( ".homedate" ).hasClass( "active" )){homewant = 'dateduck';updateWant(); }else {homewant = 'duck';updateWant(); }
+
+            }
+
+    }
+
+    
+    
+}
 
 
+function updatewant(){
+alert('');
+}
 
 function startCamera(){
 
