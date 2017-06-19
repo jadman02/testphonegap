@@ -1324,7 +1324,8 @@ ethnicity_u = snapshot.child("ethnicity").val();
 height_u = snapshot.child("height").val();
 weight_u = snapshot.child("weight").val();
 homewant = snapshot.child("homewant").val();
-if(homewant){
+alert(homewant);
+       if(homewant){
        if (homewant == 'offline'){$( ".datehome" ).removeClass('active');$( ".duckhome" ).removeClass('active'); }
      if (homewant == 'dateduck'){$( ".datehome" ).addClass('active');$( ".duckhome" ).addClass('active'); }
    if (homewant == 'duck'){$( ".datehome" ).removeClass('active');$( ".duckhome" ).addClass('active'); }
