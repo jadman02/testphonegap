@@ -617,27 +617,19 @@ $('.content-here').empty();
     $('.content-here').append(
     '<div class="no-results-div" style="text-align:center;margin:0 auto;width:300px;position:absolute;top:50%;left:50%;margin-left:-150px;margin-top:-70px;">'+
     
-      '<h3>What are you looking for?</h3><p style="padding-top:0px;margin-top:-10px;">'+
+      '<h3>Getting Started</h3><p style="padding-top:0px;margin-top:-10px;">'+
        
-       '<div class="row">'+
-    '<div class="col-50"><img src="media/datefaceonly.png" style="width:40px;margin:0 auto;"></div>'+
+       '<div class="row" style="border-bottom:1px solid #c4c4c4">'+
+    '<div class="col-50"><img src="media/datefaceonly.png" style="width:80px;margin:0 auto;"></br></br><span style="font-family: 'Pacifico', cursive;font-size:26px;font-weight:100;color:#ccc;clear:both;">Date</span></div>'+
     '<div class="col-50">Pick date to meet up with people around you.</div>'+
 '</div>'+
               '<div class="row">'+
-    '<div class="col-50"><img src="media/datefaceonly.png" style="width:40px;margin:0 auto;"></div>'+
+    '<div class="col-50"><img src="media/duckfaceonly.png" style="width:80px;margin:0 auto;"></div>'+
     '<div class="col-50">Pick duck for something less serious.</div>'+
 '</div>'+
-                     '<div class="row">'+
-    '<div class="col-50"><img src="media/datefaceonly.png" style="width:40px;margin:0 auto;"></div>'+
-    '<div class="col-50">Or you can select both.</div>'+
-'</div>'+
-       
-       ''+
-       '<img src="media/duckfaceonly.png" style="width:40px;margin:0 auto;">'+
-       '<img src="media/dateorducklogo.png" style="width:40px;margin:0 auto;">'+
-      
-       
-       'Dates, ducks, both</p></br>'+
+
+
+
 
 
    
@@ -1371,7 +1363,7 @@ ethnicity_u = snapshot.child("ethnicity").val();
 height_u = snapshot.child("height").val();
 weight_u = snapshot.child("weight").val();
 homewant = snapshot.child("homewant").val();
-alert(homewant);
+
        if(homewant){
        if (homewant == 'offline'){$( ".homedate" ).removeClass('active');$( ".homeduck" ).removeClass('active'); }
      if (homewant == 'dateduck'){$( ".homedate" ).addClass('active');$( ".homeduck" ).addClass('active'); }
