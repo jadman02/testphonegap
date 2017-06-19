@@ -619,19 +619,17 @@ $('.content-here').empty();
     
       '<h3>Getting Started</h3>'+
        '<p style="padding-top:0px;margin-top:0px;">Are you looking to date, or duck or open for both?</p>'+
-       '<div class="row">'+
+       '<div class="row" style="border-top:1px solid #c4c4c4;border-bottom:1px solid #c4c4c4;">'+
     '<div class="col-30"><img src="media/datefaceonly.png" style="width:80px;margin:0 auto;"></div>'+
     '<div class="col-70">Press date if you want to meet someone to hang out with.</div>'+
 '</div>'+
-       '<div style="width:50px;height:50px;text-align:center;margin:0 auto;border-radius:50%;border:1px solid #c4c4c4;padding:5px;">Or</div>'+
-              '<div class="row">'+
+              '<div class="row" style="border-bottom:1px solid #c4c4c4;">'+
     '<div class="col-30"><img src="media/duckfaceonly.png" style="width:80px;margin:0 auto;"></div>'+
     '<div class="col-70">Press duck if you want to meet someone for something less serious.</div>'+
 '</div>'+
 
 
-   '<div style="width:50px;height:50px;text-align:center;margin:0 auto;border-radius:50%;border:1px solid #c4c4c4;padding:5px;">Or</div>'+
-              '<div class="row">'+
+              '<div class="row" style="border-bottom:1px solid #c4c4c4;">'+
     '<div class="col-30"><img src="media/duckfaceonly.png" style="width:80px;margin:0 auto;"></div>'+
     '<div class="col-70">Press both if you\'re open to both.</div>'+
 '</div>'+
