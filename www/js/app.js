@@ -1326,10 +1326,10 @@ weight_u = snapshot.child("weight").val();
 homewant = snapshot.child("homewant").val();
 alert(homewant);
        if(homewant){
-       if (homewant == 'offline'){$( ".datehome" ).removeClass('active');$( ".duckhome" ).removeClass('active'); }
-     if (homewant == 'dateduck'){$( ".datehome" ).addClass('active');$( ".duckhome" ).addClass('active'); }
-   if (homewant == 'duck'){$( ".datehome" ).removeClass('active');$( ".duckhome" ).addClass('active'); }
-    if (homewant == 'date'){$( ".datehome" ).addClass('active');$( ".duckhome" ).removeClass('active'); }
+       if (homewant == 'offline'){$( ".homedate" ).removeClass('active');$( ".homeduck" ).removeClass('active'); }
+     if (homewant == 'dateduck'){$( ".homedate" ).addClass('active');$( ".homeduck" ).addClass('active'); }
+   if (homewant == 'duck'){$( ".homedate" ).removeClass('active');$( ".homeduck" ).addClass('active'); }
+    if (homewant == 'date'){$( ".homedate" ).addClass('active');$( ".homeduck" ).removeClass('active'); }
 }
 sortby = snapshot.child("sort").val();
 if (snapshot.child("offsounds").val()){offsounds = snapshot.child("offsounds").val();}
