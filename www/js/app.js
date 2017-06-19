@@ -47,7 +47,7 @@ $.post( "http://www.dateorduck.com/updatewant.php", { projectid:f_projectid,toke
 
   .done(function( data ) {
 
-getMatches();  
+//getMatches();  
  
   
   });
