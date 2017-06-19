@@ -162,7 +162,7 @@ var f_projectid;
 var canloadchat;
 var viewphotos = false;     
 var viewscroll = false;
-
+var homewant;
 /*
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
