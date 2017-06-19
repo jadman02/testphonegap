@@ -653,7 +653,7 @@ $('.content-here').empty();
 $( ".login-loader" ).hide();
     
 
- $('.no-results-div').empty();
+
    return false;
 
 }   
