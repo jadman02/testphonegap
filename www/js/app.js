@@ -1194,10 +1194,7 @@ new_all.push(all_matches_photos[i][j]);
     
     $( ".ploader" ).hide();
 
-   if (homewant == 'offline'){$( ".datehome" ).removeClass('active');$( ".duckhome" ).removeClass('active'); }
-     if (homewant == 'dateduck'){$( ".datehome" ).addClass('active');$( ".duckhome" ).addClass('active'); }
-   if (homewant == 'duck'){$( ".datehome" ).removeClass('active');$( ".duckhome" ).addClass('active'); }
-    if (homewant == 'date'){$( ".datehome" ).addClass('active');$( ".duckhome" ).removeClass('active'); }
+   
    
    $( ".toolbar" ).show();
     $( ".loginbutton" ).show();
@@ -1327,7 +1324,12 @@ ethnicity_u = snapshot.child("ethnicity").val();
 height_u = snapshot.child("height").val();
 weight_u = snapshot.child("weight").val();
 homewant = snapshot.child("homewant").val();
-    
+if(homewant){
+       if (homewant == 'offline'){$( ".datehome" ).removeClass('active');$( ".duckhome" ).removeClass('active'); }
+     if (homewant == 'dateduck'){$( ".datehome" ).addClass('active');$( ".duckhome" ).addClass('active'); }
+   if (homewant == 'duck'){$( ".datehome" ).removeClass('active');$( ".duckhome" ).addClass('active'); }
+    if (homewant == 'date'){$( ".datehome" ).addClass('active');$( ".duckhome" ).removeClass('active'); }
+}
 sortby = snapshot.child("sort").val();
 if (snapshot.child("offsounds").val()){offsounds = snapshot.child("offsounds").val();}
 if (snapshot.child("availstring").val()){ availarray = JSON.parse(snapshot.child("availstring").val());}
