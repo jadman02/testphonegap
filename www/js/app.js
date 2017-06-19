@@ -611,6 +611,53 @@ if ((initialload === false) && (availarray.length === 0)){
 
 }
 
+if (!homewant || homewant =='offline'){
+$('.content-here').empty();
+   $( ".results-loader" ).hide();
+    $('.content-here').append(
+    '<div class="no-results-div" style="text-align:center;margin:0 auto;width:300px;position:absolute;top:50%;left:50%;margin-left:-150px;margin-top:-70px;">'+
+    
+      '<h3>What are you looking for?</h3><p style="padding-top:0px;margin-top:-10px;">'+
+       
+       '<div class="row">'+
+    '<div class="col-50"><img src="media/datefaceonly.png" style="width:40px;margin:0 auto;"></div>'+
+    '<div class="col-50">Pick date to meet up with people around you.</div>'+
+'</div>'+
+              '<div class="row">'+
+    '<div class="col-50"><img src="media/datefaceonly.png" style="width:40px;margin:0 auto;"></div>'+
+    '<div class="col-50">Pick duck for something less serious.</div>'+
+'</div>'+
+                     '<div class="row">'+
+    '<div class="col-50"><img src="media/datefaceonly.png" style="width:40px;margin:0 auto;"></div>'+
+    '<div class="col-50">Or you can select both.</div>'+
+'</div>'+
+       
+       ''+
+       '<img src="media/duckfaceonly.png" style="width:40px;margin:0 auto;">'+
+       '<img src="media/dateorducklogo.png" style="width:40px;margin:0 auto;">'+
+      
+       
+       'Dates, ducks, both</p></br>'+
+
+
+   
+
+    '</div>');
+
+    $( ".ploader" ).hide();
+
+   
+   
+   $( ".toolbar" ).show();
+    $( ".loginbutton" ).show();
+$( ".login-loader" ).hide();
+    
+
+ $('.no-results-div').empty();
+   return false;
+
+}   
+   
 initialload = true;
 
 if (updatecontinuously){}
