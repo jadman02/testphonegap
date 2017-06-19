@@ -615,22 +615,26 @@ if (!homewant || homewant =='offline'){
 $('.content-here').empty();
    $( ".results-loader" ).hide();
     $('.content-here').append(
-    '<div class="no-results-div" style="text-align:center;margin:0 auto;width:300px;position:absolute;top:50%;left:50%;margin-left:-150px;margin-top:-70px;">'+
+    '<div class="no-results-div" style="text-align:center;margin:0 auto;width:300px;position:absolute;top:44px;left:50%;margin-left:-150px;">'+
     
-      '<h3>Getting Started</h3><p style="padding-top:0px;margin-top:-10px;">'+
-       
-       '<div class="row" style="border-bottom:1px solid #c4c4c4">'+
-    '<div class="col-50"><img src="media/datefaceonly.png" style="width:80px;margin:0 auto;"></br></br><span style="font-family: \'Pacifico\', cursive;font-size:26px;font-weight:100;color:#ccc;clear:both;">Date</span></div>'+
-    '<div class="col-50">Pick date to meet up with people around you.</div>'+
+      '<h3>Getting Started</h3>'+
+       '<p style="padding-top:0px;margin-top:0px;">Are you looking to date, or duck or open for both?</p>'+
+       '<div class="row">'+
+    '<div class="col-50"><img src="media/datefaceonly.png" style="width:80px;margin:0 auto;"></div>'+
+    '<div class="col-50"><span class="button" style="font-family: \'Pacifico\', cursive;font-size:26px;font-weight:100;color:#ccc;clear:both;">Date</span></br>Press date if you want to meet someone to hang out with.</div>'+
 '</div>'+
+       '<div style="width:50px;height:50px;text-align:center;margin:0 auto;border-radius:50%;border:1px solid #c4c4c4;padding:5px;">Or</div>'+
               '<div class="row">'+
-    '<div class="col-50"><img src="media/duckfaceonly.png" style="width:80px;margin:0 auto;"></br></br><span style="font-family: \'Pacifico\', cursive;font-size:26px;font-weight:100;color:#ccc;clear:both;">Date</span></div>'+
-    '<div class="col-50">Pick duck for something less serious.</div>'+
+    '<div class="col-50"><img src="media/duckfaceonly.png" style="width:80px;margin:0 auto;"></div>'+
+    '<div class="col-50"><span class="button" style="font-family: \'Pacifico\', cursive;font-size:26px;font-weight:100;color:#ccc;clear:both;">Duck</span></br>Press duck if you want to meet someone for something less serious.</div>'+
 '</div>'+
 
-
-'Or you can '+
-
+'<div style="width:50px;height:50px;text-align:center;margin:0 auto;border-radius:50%;border:1px solid #c4c4c4;padding:5px;">Or</div>'+
+   '<div style="width:50px;height:50px;text-align:center;margin:0 auto;border-radius:50%;border:1px solid #c4c4c4;padding:5px;">Or</div>'+
+              '<div class="row">'+
+    '<div class="col-50"><img src="media/duckfaceonly.png" style="width:80px;margin:0 auto;"></div>'+
+    '<div class="col-50"><span class="button" style="font-family: \'Pacifico\', cursive;font-size:26px;font-weight:100;color:#ccc;clear:both;">Duck</span></br>Press both if you\'re open to both.</div>'+
+'</div>'+
 
    
 
