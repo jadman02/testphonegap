@@ -617,15 +617,15 @@ $('.content-here').empty();
     $('.content-here').append(
     '<div class="no-results-div" style="text-align:center;margin:0 auto;width:300px;position:absolute;top:44px;left:50%;margin-left:-150px;margin-top:54px;">'+
     
-      '<h3></h3>'+
-       '<p style="padding-top:0px;margin-top:0px;">Are you looking to date, or duck or both? Your profile is not visible until you make a selection.</p>'+
+      '<h3>Get Quacking!</h3>'+
+       '<p style="padding-top:0px;margin-top:0px;">Are you looking to <span style="font-family: 'Pacifico', cursive;">Date</span>, or <span style="font-family: 'Pacifico', cursive;">duck</span> or both? Your profile is not visible until you make a selection.</p>'+
        '<div class="row" style="border-top:1px solid #c4c4c4;border-bottom:1px solid #c4c4c4;padding-top:10px;padding-bottom:10px;">'+
     '<div class="col-30"><img src="media/datefaceonly.png" style="width:80px;margin:0 auto;"></div>'+
-    '<div class="col-70" style="padding-top:5px;">Press date if you want to meet someone to hang out with.</div>'+
+    '<div class="col-70" style="padding-top:5px;">Press <span style="font-family: 'Pacifico', cursive;">date</span> if you want to meet someone to hang out with, find a relationship or make conversation.</div>'+
 '</div>'+
               '<div class="row" style="border-bottom:1px solid #c4c4c4;padding-top:10px;padding-bottom:10px;">'+
     '<div class="col-30"><img src="media/duckfaceonly.png" style="width:80px;margin:0 auto;"></div>'+
-    '<div class="col-70" style="padding-top:5px;">Press duck if you want to get down to business. </div>'+
+    '<div class="col-70" style="padding-top:5px;">Press <span style="font-family: 'Pacifico', cursive;">duck</span> if you want to get down to...ahem...business (replace the D with an F). </div>'+
 '</div>'+
 
 
