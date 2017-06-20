@@ -617,7 +617,7 @@ $('.content-here').empty();
     $('.content-here').append(
     '<div class="no-results-div" style="text-align:center;margin:0 auto;width:300px;position:absolute;top:44px;left:50%;margin-left:-150px;margin-top:54px;">'+
     
-      '<h3>Getting Started</h3>'+
+      '<h3></h3>'+
        '<p style="padding-top:0px;margin-top:0px;">Are you looking to date, or duck or both? Your profile is not visible until you make a selection.</p>'+
        '<div class="row" style="border-top:1px solid #c4c4c4;border-bottom:1px solid #c4c4c4;padding-top:10px;padding-bottom:10px;">'+
     '<div class="col-30"><img src="media/datefaceonly.png" style="width:80px;margin:0 auto;"></div>'+
@@ -630,7 +630,7 @@ $('.content-here').empty();
 
 
               '<div class="row" style="border-bottom:1px solid #c4c4c4;padding-top:10px;padding-bottom:10px;">'+
-    '<div class="col-30"><div style="width:80px;overflow-y:hidden;"><img src="media/dateorducklogo.png" style="width:160px;margin:0 auto;"></div></div>'+
+    '<div class="col-30"><div style="width:80px;overflow-x:hidden;"><img src="media/dateorducklogo.png" style="width:80px;margin:0 auto;"></div></div>'+
     '<div class="col-70" style="padding-top:5px;">Press both if you\'re happy to do either.</div>'+
 '</div>'+
 
