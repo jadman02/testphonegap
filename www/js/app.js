@@ -3065,8 +3065,9 @@ objDiv.scrollTop = objDiv.scrollHeight;setTimeout(function(){ getmoreNotifs();},
 
 function scrollMessages(){
 
-
-if ((($( ".scrolldetect" ).offset().top) == 120) && (canloadchat)) {if (letsload < 20){alert('11');$( ".scrolldetect" ).prepend('<div class="preloader loadmessagesloader" style="width:20px;margin:0 auto;margin-top:10px;"></div>');canloadchat = false;setTimeout(function(){ $( ".loadmessagesloader" ).hide(); alert('yo');}, 500);}else{alert('22');$( ".scrolldetect" ).prepend('<div class="preloader loadmessagesloader" style="width:20px;margin:0 auto;margin-top:10px;"></div>');canloadchat = false;setTimeout(function(){ getPrevious(); }, 500);}}
+alert(canloadchat);
+   alert(letsload);
+if ((($( ".scrolldetect" ).offset().top) == 120) && (canloadchat)) {if (letsload < 20){alert('11');$( ".scrolldetect" ).prepend('<div class="preloader loadmessagesloader" style="width:20px;margin:0 auto;margin-top:10px;"></div>');canloadchat = false;setTimeout(function(){ $( ".loadmessagesloader" ).hide(); alert('yo');}, 500);}else{$( ".scrolldetect" ).prepend('<div class="preloader loadmessagesloader" style="width:20px;margin:0 auto;margin-top:10px;"></div>');canloadchat = false;setTimeout(function(){ getPrevious(); }, 500);}}
 }
 
 function showDecide(){
