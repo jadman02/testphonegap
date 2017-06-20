@@ -4235,9 +4235,17 @@ new_all = singleuserarray;
 
 
    
-if (origin == 88){alert('88');}
-else if (origin == 1){alert('99');photoBrowser(0,singleuserarray[0].age,1,1);}
-else if (!origin){alert('100');photoBrowser(0,singleuserarray[0].age);}
+if (origin == 88){
+   alert('88');
+}
+else if (origin == 1){
+   alert('99');
+   photoBrowser(0,singleuserarray[0].age,1,1);
+}
+else if (origin != 88 && origin != 1){
+   alert('100');
+   photoBrowser(0,singleuserarray[0].age);
+}
 
 
   
