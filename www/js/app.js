@@ -188,6 +188,7 @@ var canloadchat;
 var viewphotos = false;     
 var viewscroll = false;
 var homewant;
+var singlefxallowed;
 /*
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
@@ -3078,6 +3079,7 @@ $( ".toolbardecide" ).show();
 
 function closeCreate(){
 myApp.closeModal('.chatpop');
+   singlefxallowed = true;
 }
 
 function createDate(messageid,messagename){
@@ -4081,6 +4083,9 @@ if(swiperQuestions){comingback = 0; swiperQuestions.slideNext();comingback=1;}}}
 var singleuserarray = [];
 function singleUser(idw,idname,origin){
 
+   if (singlefxallowed === false){return false;}
+singlefxallowed = false;
+  
 
 if (singleuserarray[0] != null){
 
@@ -6204,7 +6209,8 @@ myPhotoBrowser = myApp.photoBrowser({
    ' </div>'+
 '</div>',
    onClose:function(photobrowser){hideProfile();
-   viewphotos = false; 
+  singlefxallowed = true;
+                                  viewphotos = false; 
   viewscroll = false;
        if ($('.chatpop').length > 0) {$( ".chatpop" ).css( "z-index","20000" );if ($('.chatpop').length > 0){myApp.closeModal('.infopopup');}
       if (swiperQuestions){
@@ -7063,7 +7069,7 @@ $( "#messagearea" ).val('');
 }
 
 function clearchatHistory(){
-
+singlefxallowed = true;
 messages_loaded = false;
 
 if (main_all[0] != null){
