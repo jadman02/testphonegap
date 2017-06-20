@@ -602,7 +602,7 @@ var main_all = [];
 
 function getMatches(){
 
-
+new_all = [];
 
 //can put any ads here
 if ((initialload === false) && (availarray.length === 0)){
@@ -657,7 +657,7 @@ initialload = true;
 if (updatecontinuously){}
 else {setInterval(function(){ justGeo(); }, 599000);updatecontinuously=true;}
 
-new_all = [];
+
 
 
     if (timeoutactive === true) {clearTimeout(noresultstimeout);}
