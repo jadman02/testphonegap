@@ -6092,7 +6092,7 @@ var datefunction = ""
 var to_open = 0;
 
 
-       if ($('.chatpop').length > 0 || chatorigin) {alert('yo3');}
+       if ($('.chatpop').length > 0 || chatorigin) {}
 else {
 var countednumbers = 0;
 
