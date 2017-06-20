@@ -4236,7 +4236,7 @@ new_all = singleuserarray;
 
    
 if (origin == 88){alert('88');}
-else if (origin == 1){photoBrowser(0,singleuserarray[0].age,1,1);}
+else if (origin == 1){alert('99');photoBrowser(0,singleuserarray[0].age,1,1);}
 else if (!origin){alert('100');photoBrowser(0,singleuserarray[0].age);}
 
 
@@ -6055,13 +6055,13 @@ else {}
 function photoBrowser(openprofile,arraynumber,mainchange,chatorigin){
 allowedchange = true;
 photoresize = false;
-if ($('.photo-browser').length > 0){alert('yo1');return false;}
+if ($('.photo-browser').length > 0){return false;}
 
 
 
 myApp.closeModal('.picker-sub');
 
-alert(new_all);
+
 
 
 //firebase.database().ref("users/" + f_uid).off('value', userpref);
@@ -6074,7 +6074,7 @@ var datefunction = ""
 var to_open = 0;
 
 
-       if ($('.chatpop').length > 0) {alert('yo3');}
+       if ($('.chatpop').length > 0 || chatorigin) {alert('yo3');}
 else {
 var countednumbers = 0;
 
