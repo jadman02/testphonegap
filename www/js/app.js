@@ -621,17 +621,17 @@ $('.content-here').empty();
        '<p style="padding-top:0px;margin-top:0px;">Are you looking to date, or duck or both? Your profile is not visible until you make a selection.</p>'+
        '<div class="row" style="border-top:1px solid #c4c4c4;border-bottom:1px solid #c4c4c4;padding-top:10px;padding-bottom:10px;">'+
     '<div class="col-30"><img src="media/datefaceonly.png" style="width:80px;margin:0 auto;"></div>'+
-    '<div class="col-70">Press date if you want to meet someone to hang out with.</div>'+
+    '<div class="col-70" style="padding-top:5px;">Press date if you want to meet someone to hang out with.</div>'+
 '</div>'+
               '<div class="row" style="border-bottom:1px solid #c4c4c4;padding-top:10px;padding-bottom:10px;">'+
     '<div class="col-30"><img src="media/duckfaceonly.png" style="width:80px;margin:0 auto;"></div>'+
-    '<div class="col-70">Press duck if you want to meet someone for something less serious.</div>'+
+    '<div class="col-70" style="padding-top:5px;">Press duck if you want to get down to business. </div>'+
 '</div>'+
 
 
               '<div class="row" style="border-bottom:1px solid #c4c4c4;padding-top:10px;padding-bottom:10px;">'+
     '<div class="col-30"><img src="media/duckfaceonly.png" style="width:80px;margin:0 auto;"></div>'+
-    '<div class="col-70">Press both if you\'re open to both.</div>'+
+    '<div class="col-70" style="padding-top:5px;">Press both if you\'re happy to do either.</div>'+
 '</div>'+
 
    
@@ -4084,7 +4084,9 @@ if(swiperQuestions){comingback = 0; swiperQuestions.slideNext();comingback=1;}}}
 var singleuserarray = [];
 function singleUser(idw,idname,origin){
 
-
+//alert(new_all);
+   //alert(main_all);
+//   alert(singleuserarray);
 if (singleuserarray[0] != null){
 
 
@@ -4230,10 +4232,14 @@ if(namescount === 1){matchname = result[0].displayname;}
 else {matchname = result[0].name.substr(0,result[0].displayname.indexOf(' '));}
   singleuserarray.push({widthslides:result[0].widthslides,heightslides:result[0].heightslides,availarraystring:availarraystring,minutes:diff,distancenumber:distance,distancestring:distancestring,photocount:photocount,photos:photostring,name:matchname,age:result[0].age,description:result[0].description,id:targetid,url:'https://graph.facebook.com/'+targetid+'/picture?width=828',caption:'...',industry: result[0].industry, status: result[0].status, politics:result[0].politics,eyes:result[0].eyes,body:result[0].body,religion:result[0].religion,zodiac:result[0].zodiac,ethnicity:result[0].ethnicity,height:result[0].height,weight:result[0].weight});
   
+   alert('here 1');
+   
  // console.log(singleuserarray);
 main_all = new_all;
 new_all = singleuserarray;
 
+   alert('here 2');
+   
 if (origin == 88){}
 else if (origin == 1){photoBrowser(0,singleuserarray[0].age,1,1);}
 else if (!origin){photoBrowser(0,singleuserarray[0].age);}
