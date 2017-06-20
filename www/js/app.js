@@ -3066,7 +3066,7 @@ objDiv.scrollTop = objDiv.scrollHeight;setTimeout(function(){ getmoreNotifs();},
 function scrollMessages(){
 
 
-if ((($( ".scrolldetect" ).offset().top) == 120) && (canloadchat)) {if (letsload < 20){$( ".scrolldetect" ).prepend('<div class="preloader loadmessagesloader" style="width:20px;margin:0 auto;margin-top:10px;"></div>');canloadchat = false;setTimeout(function(){ $( ".loadmessagesloader" ).hide(); }, 500);}else{$( ".scrolldetect" ).prepend('<div class="preloader loadmessagesloader" style="width:20px;margin:0 auto;margin-top:10px;"></div>');canloadchat = false;setTimeout(function(){ getPrevious(); }, 500);}}
+if ((($( ".scrolldetect" ).offset().top) == 120) && (canloadchat)) {if (letsload < 20){$( ".scrolldetect" ).prepend('<div class="preloader loadmessagesloader" style="width:20px;margin:0 auto;margin-top:10px;"></div>');canloadchat = false;setTimeout(function(){ $( ".loadmessagesloader" ).hide(); alert('yo');}, 500);}else{$( ".scrolldetect" ).prepend('<div class="preloader loadmessagesloader" style="width:20px;margin:0 auto;margin-top:10px;"></div>');canloadchat = false;setTimeout(function(){ getPrevious(); }, 500);}}
 }
 
 function showDecide(){
@@ -6105,7 +6105,7 @@ countednumbers = countednumbers + all_matches_photos[i].length;
 
 to_open = countednumbers + openprofile;
 
-alert('got here');
+
 }
 var hiddendivheight = $( window ).height() - 40;
 
