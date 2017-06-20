@@ -4085,10 +4085,8 @@ if(swiperQuestions){comingback = 0; swiperQuestions.slideNext();comingback=1;}}}
 var singleuserarray = [];
 function singleUser(idw,idname,origin){
 
-   alert(singleuserarray);
    
-   if (singlefxallowed === false){return false;}
-singlefxallowed = false;
+
   
 
 if (singleuserarray[0] != null){
@@ -4104,6 +4102,9 @@ else{photoBrowser(0,singleuserarray[0].age);}
 
 else{
 
+      if (singlefxallowed === false){return false;}
+singlefxallowed = false;
+   
 targetid = String(idw);
 targetname = idname;
 firebase.auth().currentUser.getToken().then(function(idToken) { 
