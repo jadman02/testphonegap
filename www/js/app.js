@@ -3084,6 +3084,8 @@ myApp.closeModal('.chatpop');
 
 function createDate(messageid,messagename){
 
+   if ($('.chatpop').length > 0){return false;}
+   
 singleUser(targetid,targetname,88);
 
 var centerdiv;
