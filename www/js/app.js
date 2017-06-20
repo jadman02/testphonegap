@@ -3066,7 +3066,7 @@ objDiv.scrollTop = objDiv.scrollHeight;setTimeout(function(){ getmoreNotifs();},
 function scrollMessages(){
 
 
-if ((($( ".scrolldetect" ).offset().top) == 120) && (canloadchat)) {if (letsload < 20 || existingmessages < 20){alert('11');$( ".scrolldetect" ).prepend('<div class="preloader loadmessagesloader" style="width:20px;margin:0 auto;margin-top:10px;"></div>');canloadchat = false;setTimeout(function(){ $( ".loadmessagesloader" ).hide(); alert('yo');}, 500);}else{$( ".scrolldetect" ).prepend('<div class="preloader loadmessagesloader" style="width:20px;margin:0 auto;margin-top:10px;"></div>');canloadchat = false;setTimeout(function(){ getPrevious(); }, 500);}}
+if ((($( ".scrolldetect" ).offset().top) == 120) && (canloadchat)) {if (letsload < 20 || existingmessages < 20){$( ".scrolldetect" ).prepend('<div class="preloader loadmessagesloader" style="width:20px;margin:0 auto;margin-top:10px;"></div>');canloadchat = false;setTimeout(function(){ $( ".loadmessagesloader" ).hide(); }, 500);}else{$( ".scrolldetect" ).prepend('<div class="preloader loadmessagesloader" style="width:20px;margin:0 auto;margin-top:10px;"></div>');canloadchat = false;setTimeout(function(){ getPrevious(); }, 500);}}
 }
 
 function showDecide(){
@@ -8165,7 +8165,7 @@ var photochatsRef = storageRef.child(photostorage);
 photochatsRef.put($('#takePictureField_').prop('files')[i]).then(function(snapshot) {
   
     
-alert(snapshot.metadata.name);
+
     
     var photodownloadstorage = 'images/' + f_auth_id + '/' +  snapshot.metadata.name;
 
@@ -8177,7 +8177,7 @@ returned ++;
 
 
 
-alert(returned + ',' + postkeyarray[(returned-1)]);      
+      
       
 var newPostKey = postkeyarray[(returned-1)];
     
@@ -8485,7 +8485,7 @@ firebase.database().ref("chats/" + first_number+ '/' + second_number).push({
 var xcountdown;
 function imagesPopup(go){
     
-  
+  var goz;
     
  var popupHTML = '<div class="popup gallery-popupz">'+
                    
@@ -8538,7 +8538,8 @@ firebase.database().ref("photochats/" + first_number+ '/' + second_number).once(
       var objs = snapshot.val();
 
 $.each(objs, function(i, obj) {
-    var expiryval;
+   if (obj.id == go){goz = galleryimagecount;} 
+   var expiryval;
     if (obj.photo_expiry == null){expiryval = i;}
     else {expiryval = obj.photo_expiry;}
     
@@ -8602,7 +8603,7 @@ $( ".gallerytitle").html('<div style="width:29px;height:29px;border-radius:50%;b
   
 
   
-  galleryswiper.slideTo(go,0);
+  galleryswiper.slideTo(goz,0);
   myApp.sizeNavbars();
   });
 
