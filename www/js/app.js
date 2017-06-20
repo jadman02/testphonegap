@@ -621,11 +621,11 @@ $('.content-here').empty();
        '<p style="padding-top:0px;margin-top:0px;">Are you looking to date, or duck or both? Your profile is not visible until you make a selection.</p>'+
        '<div class="row" style="border-top:1px solid #c4c4c4;border-bottom:1px solid #c4c4c4;padding-top:10px;padding-bottom:10px;">'+
     '<div class="col-30" style="padding-top:5px;"><img src="media/datefaceonly.png" style="width:80px;margin:0 auto;"></div>'+
-    '<div class="col-70" style="padding-top:5px;">Press <span style="font-family: \'Pacifico\', cursive;font-size:24px;">Date</span> if you want to meet someone to hang out with, find a relationship or make conversation.</div>'+
+    '<div class="col-70" style="padding-top:5px;">Press <span style="font-family: \'Pacifico\', cursive;font-size:17px;">date</span> if you want to meet someone to hang out with, find a relationship or make conversation.</div>'+
 '</div>'+
               '<div class="row" style="padding-top:10px;padding-bottom:10px;">'+
     '<div class="col-30" style="padding-top:5px;"><img src="media/duckfaceonly.png" style="width:80px;margin:0 auto;"></div>'+
-    '<div class="col-70" style="padding-top:5px;">Press <span style="font-family: \'Pacifico\', cursive;font-size:24px;">Duck</span> if you want to get down to...ahem...business (replace the D with an F). </div>'+
+    '<div class="col-70" style="padding-top:5px;">Press <span style="font-family: \'Pacifico\', cursive;font-size:17px;">duck</span> if you want to get down to...ahem...business (replace the D with an F). </div>'+
 '</div>'+
 
 
