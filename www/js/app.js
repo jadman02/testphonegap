@@ -8119,7 +8119,7 @@ var newValue = firebase.database().ref().push().key;
    $('.messages').append(newValue);
   myMessages.addMessage({
     // Message text
-    text: '<img class="disabled image_'+newValue+'" src="'+URL.createObjectURL($('#takePictureField_').prop('files')[i])+'" onload="$(this).fadeIn(700);scrollBottom();" onclick="imagesPopup(\''+newValue+'\');" style="display:none">',
+    text: '<img class="disabled image_'+newValue+'" src="" onload="$(this).fadeIn(700);scrollBottom();" onclick="imagesPopup(\''+newValue+'\');" style="display:none;">',
     // Random message type
     type: 'sent',
     // Avatar and name:
