@@ -4599,7 +4599,7 @@ else{
     
      myMessages.addMessage({
     // Message text
-    text: '<img src="'+obj.downloadurl+'" onload="$(this).fadeIn(700);" style="display:none" onclick="imagesPopup('+obj.id+');">',
+    text: '<img src="'+obj.downloadurl+'" onload="$(this).fadeIn(700);" style="display:none" onclick="imagesPopup(\''+obj.id+'\');">',
     // Random message type
     type: 'sent',
     // Avatar and name:
@@ -4624,7 +4624,7 @@ else {
      
      myMessages.addMessage({
     // Message text
-    text: '<img src="'+obj.downloadurl+'" onload="$(this).fadeIn(700);" style="display:none" onclick="imagesPopup('+obj.id+');">',
+    text: '<img src="'+obj.downloadurl+'" onload="$(this).fadeIn(700);" style="display:none" onclick="imagesPopup(\''+obj.id+'\');">',
     // Random message type
     type: 'sent',
     // Avatar and name:
@@ -4750,7 +4750,7 @@ if (!obj.photo_expiry){
 
  myMessages.addMessage({
     // Message text
-    text: '<img src="'+obj.downloadurl+'" onload="$(this).fadeIn(700);" style="display:none"  onclick="imagesPopup('+obj.id+')">',
+    text: '<img src="'+obj.downloadurl+'" onload="$(this).fadeIn(700);" style="display:none"  onclick="imagesPopup(\''+obj.id+'\');">',
     // Random message type
     type: 'received',
     // Avatar and name:
@@ -4813,7 +4813,7 @@ else{
     
     myMessages.addMessage({
     // Message text
-    text: '<img src="'+obj.downloadurl+'" onload="$(this).fadeIn(700);" style="display:none"  onclick="imagesPopup('+obj.id+')">',
+    text: '<img src="'+obj.downloadurl+'" onload="$(this).fadeIn(700);" style="display:none"  onclick="imagesPopup(\''+obj.id+'\');">',
     // Random message type
     type: 'received',
     // Avatar and name:
@@ -5077,7 +5077,7 @@ if (obj.param == 'message'){
 if (obj.param == 'image'){
       prevarray.push({
     // Message text
-    text: '<img src="'+obj.downloadurl+'" onload="$(this).fadeIn(700);" style="display:none"  onclick="imagesPopup('+obj.id+')">',
+    text: '<img src="'+obj.downloadurl+'" onload="$(this).fadeIn(700);" style="display:none"  onclick="imagesPopup(\''+obj.id+'\');">',
     // Random message type
     type: 'sent',
     // Avatar and name:
@@ -5114,7 +5114,7 @@ if (obj.param == 'message'){
 if (obj.param == 'image'){
       prevarray.push({
     // Message text
-    text: '<img src="'+obj.downloadurl+'" onload="$(this).fadeIn(700);" style="display:none" onclick="imagesPopup('+obj.id+')">',
+    text: '<img src="'+obj.downloadurl+'" onload="$(this).fadeIn(700);" style="display:none" onclick="imagesPopup(\''+obj.id+'\');">',
     // Random message type
     type: 'received',
     // Avatar and name:
@@ -8119,7 +8119,7 @@ var newValue = firebase.database().ref().push().key;
     
   myMessages.addMessage({
     // Message text
-    text: '<img src="'+URL.createObjectURL($('#takePictureField_').prop('files')[i])+'" onload="$(this).fadeIn(700);scrollBottom();" onclick="imagesPopup('+obj.id+')" style="display:none">',
+    text: '<img src="'+URL.createObjectURL($('#takePictureField_').prop('files')[i])+'" onload="$(this).fadeIn(700);scrollBottom();" onclick="imagesPopup(\''+obj.id+'\');" style="display:none">',
     // Random message type
     type: 'sent',
     // Avatar and name:
