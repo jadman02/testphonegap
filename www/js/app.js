@@ -8484,7 +8484,8 @@ firebase.database().ref("chats/" + first_number+ '/' + second_number).push({
 })(jQuery);
 var xcountdown;
 function imagesPopup(go){
-    if ($('.gallery-popupz').length > 0) {return false;}
+   alert(go); 
+   if ($('.gallery-popupz').length > 0) {return false;}
   var goz;
 
  var popupHTML = '<div class="popup gallery-popupz">'+
