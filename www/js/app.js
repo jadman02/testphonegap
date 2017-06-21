@@ -8484,9 +8484,9 @@ firebase.database().ref("chats/" + first_number+ '/' + second_number).push({
 })(jQuery);
 var xcountdown;
 function imagesPopup(go){
-    
+    if ($('.gallery-popupz').length > 0) {return false;}
   var goz;
-    alert(go);
+
  var popupHTML = '<div class="popup gallery-popupz">'+
                    
                    '<div class="navbar" style="position:absolute;top:0;background-color:#2196f3;color:white;">'+
