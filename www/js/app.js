@@ -8116,7 +8116,7 @@ var newValue = firebase.database().ref().push().key;
 
     postkeyarray.push(newValue);
 
-   
+   $('.messages').append(newValue);
   myMessages.addMessage({
     // Message text
     text: '<img class="disabled image_'+newValue+'" src="'+URL.createObjectURL($('#takePictureField_').prop('files')[i])+'" onload="$(this).fadeIn(700);scrollBottom();" onclick="imagesPopup(\''+newValue+'\');" style="display:none">',
@@ -8181,7 +8181,7 @@ returned ++;
       
 var newPostKey = postkeyarray[(returned-1)];
     
-      alert(newPostKey);
+
       
 conversation_started = true;
 var first_number,second_number;
