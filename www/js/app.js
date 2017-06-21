@@ -8119,7 +8119,7 @@ var newValue = firebase.database().ref().push().key;
     
   myMessages.addMessage({
     // Message text
-    text: '<img src="'+URL.createObjectURL($('#takePictureField_').prop('files')[i])+'" onload="$(this).fadeIn(700);scrollBottom();" onclick="imagesPopup(\''+obj.id+'\');" style="display:none">',
+    text: '<img class="disabled image_'+newValue+'" src="'+URL.createObjectURL($('#takePictureField_').prop('files')[i])+'" onload="$(this).fadeIn(700);scrollBottom();" onclick="imagesPopup(\''+newValue+'\');" style="display:none">',
     // Random message type
     type: 'sent',
     // Avatar and name:
@@ -8181,7 +8181,7 @@ returned ++;
       
 var newPostKey = postkeyarray[(returned-1)];
     
-      
+      $('.image_'+ postkeyarray[(returned-1)]).removeClass("disabled");
       
 conversation_started = true;
 var first_number,second_number;
