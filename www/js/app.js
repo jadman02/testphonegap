@@ -8605,7 +8605,7 @@ $( ".gallerytitle").html('<div style="width:29px;height:29px;border-radius:50%;b
   });
       
   
-alert(goz);
+
   
   galleryswiper.slideTo(goz,0);
   myApp.sizeNavbars();
