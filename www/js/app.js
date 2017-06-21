@@ -8116,10 +8116,9 @@ var newValue = firebase.database().ref().push().key;
 
     postkeyarray.push(newValue);
 
-   $('.messages').append(newValue);
   myMessages.addMessage({
     // Message text
-    text: '<img class="disabled image_'+newValue+'" src="" onload="$(this).fadeIn(700);scrollBottom();" onclick="imagesPopup(\''+newValue+'\');" style="display:none;">',
+    text: '<img class="disabled image_'+newValue+'" src="'+URL.createObjectURL($('#takePictureField_').prop('files')[i])+'" onload="$(this).fadeIn(700);scrollBottom();" onclick="imagesPopup(\''+newValue+'\');" style="display:none;-webkit-filter: blur(50px);">',
     // Random message type
     type: 'sent',
     // Avatar and name:
@@ -8486,7 +8485,7 @@ firebase.database().ref("chats/" + first_number+ '/' + second_number).push({
 })(jQuery);
 var xcountdown;
 function imagesPopup(go){
-   alert(go); 
+
    if ($('.gallery-popupz').length > 0) {return false;}
   var goz;
 
