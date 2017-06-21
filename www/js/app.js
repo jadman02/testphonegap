@@ -8239,6 +8239,8 @@ firebase.database().ref("photochats/" + first_number+ '/' + second_number + '/' 
 
      $(".image_"+newPostKey).attr("src", url); 
  $('.image_'+ newPostKey).removeClass("disabled");
+      $('.image_'+ newPostKey).css("-webkit-filter","none");
+
   
 
   
