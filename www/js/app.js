@@ -8181,7 +8181,7 @@ returned ++;
       
 var newPostKey = postkeyarray[(returned-1)];
     
-      $('.image_'+ postkeyarray[(returned-1)]).removeClass("disabled");
+     
       
 conversation_started = true;
 var first_number,second_number;
@@ -8237,7 +8237,7 @@ firebase.database().ref("chats/" + first_number+ '/' + second_number + '/' + new
 firebase.database().ref("photostodelete/" + f_uid + '/' + targetid + '/' + newPostKey).set(photovar1);
 firebase.database().ref("photochats/" + first_number+ '/' + second_number + '/' + newPostKey).set(photovar2);
 
-
+ $('.image_'+ newPostKey).removeClass("disabled");
   
 
   
