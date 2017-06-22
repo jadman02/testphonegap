@@ -257,19 +257,20 @@ view2 = myApp.addView('#view-2', {
 view3 = myApp.addView('#view-3');
 view4 = myApp.addView('#view-4');
        
-
-
-var push = PushNotification.init({
+setTimeout(function(){ alert("Hello");
+		     
+		     
+	var push = PushNotification.init({
 	ios: {
 		alert: "true",
 		badge: "true",
 		sound: "true"
-	},
-	windows: {}
+	}
 });
 
 push.on('registration', function(data) {
 	// data.registrationId
+	alert(data.registrationId);
 });
 
 push.on('notification', function(data) {
@@ -284,7 +285,14 @@ push.on('notification', function(data) {
 
 push.on('error', function(e) {
 	// e.message
-});
+	alert(e.message);
+});	     
+		     
+		     
+		     
+		     }, 7000);
+
+
     
     
 //authstatechanged user only
