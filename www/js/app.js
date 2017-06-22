@@ -259,35 +259,9 @@ view4 = myApp.addView('#view-4');
        
 setTimeout(function(){ alert("Hello");
 		     
-		     
-	var push = PushNotification.init({
-	ios: {
-		alert: "true",
-		badge: "true",
-		sound: "true"
-	}
+FCMPlugin.onTokenRefresh(function(token){
+    alert( token );
 });
-
-push.on('registration', function(data) {
-	// data.registrationId
-	alert(data.registrationId);
-});
-
-push.on('notification', function(data) {
-	alert(data);
-    // data.message,
-	// data.title,
-	// data.count,
-	// data.sound,
-	// data.image,
-	// data.additionalData
-});
-
-push.on('error', function(e) {
-	// e.message
-	alert(e.message);
-});	     
-		     
 	alert("Hello2");	     
 		     
 		     }, 7000);
