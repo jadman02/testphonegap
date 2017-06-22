@@ -263,9 +263,9 @@ view4 = myApp.addView('#view-4');
 //FCMPlugin.getToken( successCallback(token), errorCallback(err) ); 
 //Keep in mind the function will return null if the token has not been established yet. 
 
-//     FCMPlugin.getToken(function(token){
-//    alert(token);
-//});
+    FCMPlugin.getToken(function(token){
+   alert(token);
+});
 
 f_projectid = firebase.auth().currentUser.toJSON().authDomain.substr(0, firebase.auth().currentUser.toJSON().authDomain.indexOf('.'))
 
