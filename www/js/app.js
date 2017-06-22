@@ -3,7 +3,7 @@ var refreshIntervalId;
 var desktoparray = ['media/dateicon.png','media/duckicon.png','media/datetongue.png','media/dateorducklogo.png']
 
 
-function FCM(){
+function fcm(){
 alert('FCM');
    FCMPlugin.getToken( successCallback(token), errorCallback(err) );
    
