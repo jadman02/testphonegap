@@ -4,13 +4,16 @@ var desktoparray = ['media/dateicon.png','media/duckicon.png','media/datetongue.
 
 
 function fcm(){
-alert(FCMPlugin);
-   FCMPlugin.getToken( successCallback(token), errorCallback(err) );
+window.FirebasePlugin.getToken(function(token) {
+    // save this server-side and use it to push notifications to this device
+    alert(token);
+}, function(error) {
+    alert(error);
+});
    
 }
 
-function successFCM(token){alert(token);}
-function errorFCM(err){alert(err);}
+
 
 function setWant(val){
 
