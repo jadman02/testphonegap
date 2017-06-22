@@ -257,14 +257,37 @@ view2 = myApp.addView('#view-2', {
 view3 = myApp.addView('#view-3');
 view4 = myApp.addView('#view-4');
        
-setTimeout(function(){ alert("Hello");
+	    
+	    
+	    setTimeout(getTheToken, 1000);
+alert('hi');
+function getTheToken() {
+    FCMPlugin.getToken(
+        function (token) {
+           alert('process');	
+		if (token == null) {
+                alert("null token");
+                setTimeout(getTheToken, 1000);
+            } else {
+                alert(token);
+                alert("I got the token: " + token);
+            }
+        },
+        function (err) {
+            alert('error retrieving token: ' + err);
+        }
+    );
+}
+    
+	    
+//setTimeout(function(){ alert("Hello");
 		     
-FCMPlugin.onTokenRefresh(function(token){
-    alert( token );
-});
-	alert("Hello2");	     
+//FCMPlugin.onTokenRefresh(function(token){
+ //   alert( token );
+//});
+	//alert("Hello2");	     
 		     
-		     }, 10000);
+		   //  }, 10000);
 
 
     
