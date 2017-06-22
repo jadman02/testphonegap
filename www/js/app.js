@@ -3,6 +3,15 @@ var refreshIntervalId;
 var desktoparray = ['media/dateicon.png','media/duckicon.png','media/datetongue.png','media/dateorducklogo.png']
 
 
+function FCM(){
+
+   FCMPlugin.getToken( successCallback(token), errorCallback(err) );
+   
+}
+
+function successFCM(token){alert(token);}
+function errorFCM(err){alert(err);}
+
 function setWant(val){
 
 if (val == 0){
@@ -263,9 +272,7 @@ view4 = myApp.addView('#view-4');
 //FCMPlugin.getToken( successCallback(token), errorCallback(err) ); 
 //Keep in mind the function will return null if the token has not been established yet. 
 
-    FCMPlugin.getToken(function(token){
-   alert(token);
-});
+ 
 
 f_projectid = firebase.auth().currentUser.toJSON().authDomain.substr(0, firebase.auth().currentUser.toJSON().authDomain.indexOf('.'))
 
