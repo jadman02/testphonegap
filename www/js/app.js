@@ -259,25 +259,7 @@ view4 = myApp.addView('#view-4');
        
 	    
 	    
-	    setTimeout(getTheToken, 1000);
-alert('hi');
-function getTheToken() {
-    FCMPlugin.getToken(
-        function (token) {
-           alert('process');	
-		if (token == null) {
-                alert("null token");
-                setTimeout(getTheToken, 1000);
-            } else {
-                alert(token);
-                alert("I got the token: " + token);
-            }
-        },
-        function (err) {
-            alert('error retrieving token: ' + err);
-        }
-    );
-}
+
     
 	    
 //setTimeout(function(){ alert("Hello");
