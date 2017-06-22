@@ -50,7 +50,9 @@
     <plugin name="cordova-plugin-whitelist"           source="npm" />
     <plugin name="cordova-plugin-camera" source="npm" />
           <plugin name="cordova-plugin-media-capture" source="npm" />
-       <plugin spec="https://github.com/jadman02/cordova-plugin-fcm.git" source="git" />
+<plugin name="phonegap-plugin-push" source="npm">
+    <param name="SENDER_ID" value="124927619672" />
+</plugin>
      <!-- Plugins 
        
  
