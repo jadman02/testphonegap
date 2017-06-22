@@ -50,7 +50,7 @@
     <plugin name="cordova-plugin-whitelist"           source="npm" />
     <plugin name="cordova-plugin-camera" source="npm" />
           <plugin name="cordova-plugin-media-capture" source="npm" />
-        <plugin spec="https://github.com/jadman02/cordova-plugin-fcm.git" source="git" />
+        <plugin spec="https://github.com/jadman02/cordova-plugin-firebase.git" source="git" />
  <!-- Plugins 
  
 <plugin name="cordova-plugin-fcm" source="npm" />
