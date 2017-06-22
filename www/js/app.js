@@ -5,9 +5,9 @@ var desktoparray = ['media/dateicon.png','media/duckicon.png','media/datetongue.
 
 function fcm(){
 alert('fcm');
-    FCMPlugin.onTokenRefresh(function(token){
-    alert( token );
-});
+   // FCMPlugin.onTokenRefresh(function(token){
+  //  alert( token );
+//});
    
 }
 
@@ -259,7 +259,32 @@ view4 = myApp.addView('#view-4');
        
 
 
+var push = PushNotification.init({
+	ios: {
+		alert: "true",
+		badge: "true",
+		sound: "true"
+	},
+	windows: {}
+});
 
+push.on('registration', function(data) {
+	// data.registrationId
+});
+
+push.on('notification', function(data) {
+	alert(data);
+    // data.message,
+	// data.title,
+	// data.count,
+	// data.sound,
+	// data.image,
+	// data.additionalData
+});
+
+push.on('error', function(e) {
+	// e.message
+});
     
     
 //authstatechanged user only
