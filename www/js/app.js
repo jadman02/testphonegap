@@ -264,7 +264,7 @@ FCMPlugin.onTokenRefresh(function(token){
 });
 	alert("Hello2");	     
 		     
-		     }, 7000);
+		     }, 10000);
 
 
     
