@@ -288,7 +288,7 @@ push.on('error', function(e) {
 	alert(e.message);
 });	     
 		     
-		     
+	alert("Hello2");	     
 		     
 		     }, 7000);
 
