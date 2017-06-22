@@ -4,7 +4,7 @@ var desktoparray = ['media/dateicon.png','media/duckicon.png','media/datetongue.
 
 
 function fcm(){
-alert('FCM');
+alert(FCMPlugin);
    FCMPlugin.getToken( successCallback(token), errorCallback(err) );
    
 }
