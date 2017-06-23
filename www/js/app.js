@@ -300,7 +300,7 @@ f_projectid = firebase.auth().currentUser.toJSON().authDomain.substr(0, firebase
          f_email = user.providerData[0].email;
           f_image = user.providerData[0].photoURL;
                  
-   
+   alert(f_image);
   // $( ".userimagetoolbar" ).css("background-image","url(\'https://graph.facebook.com/"+f_uid+"/picture?type=normal\')");
    
 
