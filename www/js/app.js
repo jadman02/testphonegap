@@ -200,7 +200,6 @@ var viewscroll = false;
 var homewant;
 var singlefxallowed = true;
 var photoresponse;
-var targetpicture;
 /*
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
@@ -1302,7 +1301,7 @@ console.log('updatedtimestamp');
 }
 
 function updateGeo(){
-firebase.auth().currentUser.getToken().then(function(idToken) {  
+firebase.auth().currentUser.getToken().then(function(idToken) {  	
 $.post( "http://www.dateorduck.com/updatelocation.php", { projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,uid:f_uid,latitude:latitudep,longitude:longitudep} )
 //$.post( "updatelocation.php", { uid:f_uid,latitude:latitudep,longitude:longitudep} )
   .done(function( data ) {
@@ -1390,12 +1389,19 @@ ethnicity_u = snapshot.child("ethnicity").val();
 height_u = snapshot.child("height").val();
 weight_u = snapshot.child("weight").val();
 homewant = snapshot.child("homewant").val();
+if (f_image != snapshot.child("image_url").val()){
 
-	    if (snapshot.child("photoresponse").val()){
-	    
-	    if (snapshot.child("photoresponse").val() == 'Y'){f_image = snapshot.child("uploadurl").val();}
-	    }
-	    
+//profilepicture has changed
+if (snapshot.child("photoresponse").val() == 'Y'){
+//will not update, user had photos
+}
+	else{
+//will update photo	
+	
+	}
+	
+	
+}
        if(homewant){
        if (homewant == 'offline'){$( ".homedate" ).removeClass('active');$( ".homeduck" ).removeClass('active'); }
      if (homewant == 'dateduck'){$( ".homedate" ).addClass('active');$( ".homeduck" ).addClass('active'); }
@@ -1587,6 +1593,7 @@ getWifilocation();
 }
 
 function addUser() {
+	
   if (f_token){firebase.database().ref('users/' + f_uid).update({
     name: f_name,
     email: f_email,
@@ -1756,7 +1763,8 @@ var weight_u = weight_pre.substr(0, weight_pre.indexOf(' '));
 
 console.log(status_u);
 
-
+if (f_largeurls.length > 0){photoresponse = 'Y';}
+	else{photoresponse='N';}
 
 
 
@@ -1775,7 +1783,8 @@ weight: weight_u,
     radius:radiussize,
     sort:sortby,
     availstring:availstring,
-    offsounds:offsounds
+    offsounds:offsounds,
+	photoresponse:photoresponse
     
     
   });
@@ -3160,8 +3169,8 @@ $.each(objs, function(i, obj) {
 
 });
 
-if (messageid) {centerdiv = '<div class="center center-date" onclick="singleUser(\''+targetid+'\',\''+targetname+'\')" style="cursor:pointer;"><div style="width:29px;height:29px;border-radius:50%;background-image:url(\'https://graph.facebook.com/'+targetid+'/picture?type=normal\');background-size:cover;background-position:50% 50%;margin-right:5px;"></div>'+targetname+'</div>';}
-else{centerdiv = '<div class="center center-date close-popup" onclick="clearchatHistory();"><div style="width:29px;height:29px;border-radius:50%;background-image:url(\'https://graph.facebook.com/'+targetid+'/picture?type=normal\');background-size:cover;background-position:50% 50%;margin-right:5px;"></div>'+targetname+'</div>';}
+if (messageid) {centerdiv = '<div class="center center-date" onclick="singleUser(\''+targetid+'\',\''+targetname+'\')" style="cursor:pointer;"><div class="navbarphoto"></div>'+targetname+'</div>';}
+else{centerdiv = '<div class="center center-date close-popup" onclick="clearchatHistory();"><div class="navbarphoto"></div>'+targetname+'</div>';}
 
 
 
@@ -4144,7 +4153,7 @@ $.post( "http://www.dateorduck.com/singleuser.php", {projectid:f_projectid,token
   .done(function( data ) {
   console.log(data);
   var result = JSON.parse(data); 
- 
+
 var availarraystring='';
 
 
@@ -4226,8 +4235,9 @@ photoarrayusersmall = result[0].smallurl.split(",");
 
 profilepicstringlarge = photoarrayuserlarge[0];
 profilepicstringsmall = photoarrayusersmall[0];
+$( ".navbarphoto" ).html('	<div style="width:29px;height:29px;border-radius:50%;background-image:url(\''+profilepicstringlarge+'\');background-size:cover;background-position:50% 50%;margin-right:5px;"></div>');
 
-
+	
 photostring=photostring.replace(/,/g, '" class="swiper-lazy" style="height:100%;"></div></div><div class="swiper-slide"><div class="swiper-zoom-container zoom-vertical"><img data-src="')
 
 
@@ -4239,6 +4249,7 @@ photostring = '<div class="swiper-slide"><div class="swiper-zoom-container zoom-
 
 profilepicstringlarge = 'https://graph.facebook.com/'+targetid+'/picture?width=828&height=828';
 profilepicstringsmall = 'https://graph.facebook.com/'+targetid+'/picture?width=368&height=368';
+$( ".navbarphoto" ).html('	<div style="width:29px;height:29px;border-radius:50%;background-image:url(\'https://graph.facebook.com/'+targetid+'/picture?width=100&height=100\');background-size:cover;background-position:50% 50%;margin-right:5px;"></div>');
 
 
 photocount = 1;
