@@ -1392,11 +1392,7 @@ weight_u = snapshot.child("weight").val();
 homewant = snapshot.child("homewant").val();
 	
 
-if (snapshot.child("photoresponse").val()){ 
-if (snapshot.child("photoresponse").val() == 'Y'){
-f_image = snapshot.child("uploadedimage").val();
-}
-    }	
+
 	
 
        if(homewant){
