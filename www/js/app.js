@@ -3169,8 +3169,8 @@ $.each(objs, function(i, obj) {
 
 });
 
-if (messageid) {centerdiv = '<div class="center center-date" onclick="singleUser(\''+targetid+'\',\''+targetname+'\')" style="cursor:pointer;"><div style="width:29px;height:29px;border-radius:50%;background-image:url(\'https://graph.facebook.com/'+targetid+'/picture?type=normal\');background-size:cover;background-position:50% 50%;margin-right:5px;"></div>'+targetname+'</div>';}
-else{centerdiv = '<div class="center center-date close-popup" onclick="clearchatHistory();"><div style="width:29px;height:29px;border-radius:50%;background-image:url(\'https://graph.facebook.com/'+targetid+'/picture?type=normal\');background-size:cover;background-position:50% 50%;margin-right:5px;"></div>'+targetname+'</div>';}
+if (messageid) {centerdiv = '<div class="center center-date" onclick="singleUser(\''+targetid+'\',\''+targetname+'\')" style="cursor:pointer;"><div class="navbarphoto"></div>'+targetname+'</div>';}
+else{centerdiv = '<div class="center center-date close-popup" onclick="clearchatHistory();"><div class="navbarphoto"></div>'+targetname+'</div>';}
 
 
 
@@ -4234,10 +4234,10 @@ photoarrayusersmall = result[0].smallurl.split(",");
 
 
 profilepicstringlarge = photoarrayuserlarge[0];
-	alert(profilepicstringlarge);
 profilepicstringsmall = photoarrayusersmall[0];
+$( ".navbarphoto" ).html('	<div style="width:29px;height:29px;border-radius:50%;background-image:url(\''+profilepicstringlarge+'\');background-size:cover;background-position:50% 50%;margin-right:5px;"></div>');
 
-
+	
 photostring=photostring.replace(/,/g, '" class="swiper-lazy" style="height:100%;"></div></div><div class="swiper-slide"><div class="swiper-zoom-container zoom-vertical"><img data-src="')
 
 
@@ -4249,6 +4249,7 @@ photostring = '<div class="swiper-slide"><div class="swiper-zoom-container zoom-
 
 profilepicstringlarge = 'https://graph.facebook.com/'+targetid+'/picture?width=828&height=828';
 profilepicstringsmall = 'https://graph.facebook.com/'+targetid+'/picture?width=368&height=368';
+$( ".navbarphoto" ).html('	<div style="width:29px;height:29px;border-radius:50%;background-image:url(\'https://graph.facebook.com/'+targetid+'/picture?width=100&height=100\');background-size:cover;background-position:50% 50%;margin-right:5px;"></div>');
 
 
 photocount = 1;
