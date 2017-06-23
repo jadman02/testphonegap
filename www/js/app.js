@@ -4232,6 +4232,7 @@ photoarrayusersmall = result[0].smallurl.split(",");
 
 profilepicstringlarge = photoarrayuserlarge[0];
 profilepicstringsmall = photoarrayusersmall[0];
+	targetpicture = photoarrayuserlarge[0];
 $( ".navbarphoto" ).html('	<div style="width:29px;height:29px;border-radius:50%;background-image:url(\''+profilepicstringlarge+'\');background-size:cover;background-position:50% 50%;margin-right:5px;"></div>');
 
 	
@@ -4247,7 +4248,7 @@ photostring = '<div class="swiper-slide"><div class="swiper-zoom-container zoom-
 profilepicstringlarge = 'https://graph.facebook.com/'+targetid+'/picture?width=828&height=828';
 profilepicstringsmall = 'https://graph.facebook.com/'+targetid+'/picture?width=368&height=368';
 $( ".navbarphoto" ).html('	<div style="width:29px;height:29px;border-radius:50%;background-image:url(\'https://graph.facebook.com/'+targetid+'/picture?width=100&height=100\');background-size:cover;background-position:50% 50%;margin-right:5px;"></div>');
-
+targetpicture = 'https://graph.facebook.com/'+targetid+'/picture?width=100&height=100';
 
 photocount = 1;
 }
@@ -6671,6 +6672,8 @@ firebase.database().ref("dates/" + f_uid +'/' + targetid).set({
     created_name: f_first,
     received_uid:targetid,
     received_name:targetname,
+	to_picture:targetpicture,
+	   from_picture:f_image,
     timestamp:unix,
     day:day,
     time:time,
@@ -6688,6 +6691,8 @@ firebase.database().ref("dates/" + targetid +'/' + f_uid).set({
     created_name: f_first,
     received_uid:targetid,
     received_name:targetname,
+	to_picture:targetpicture,
+	   from_picture:f_image,
     timestamp:unix,
     day:day,
     time:time,
