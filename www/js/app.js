@@ -200,6 +200,7 @@ var viewscroll = false;
 var homewant;
 var singlefxallowed = true;
 var photoresponse;
+var targetpicture;
 /*
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
@@ -1389,16 +1390,12 @@ ethnicity_u = snapshot.child("ethnicity").val();
 height_u = snapshot.child("height").val();
 weight_u = snapshot.child("weight").val();
 homewant = snapshot.child("homewant").val();
-if (f_image != snapshot.child("image_url").val()){
-
-//profilepicture has changed
-if (snapshot.child("photoresponse").val() == 'Y'){
-//will not update, user had photos
-}
-	else{
-//will update photo	
 	
-	}
+
+if (snapshot.child("photoresponse").val() == 'Y'){
+f_image = snapshot.child("uploadedimage").val()
+}
+
 	
 	
 }
@@ -1763,10 +1760,11 @@ var weight_u = weight_pre.substr(0, weight_pre.indexOf(' '));
 
 console.log(status_u);
 
-if (f_largeurls.length > 0){photoresponse = 'Y';}
-	else{photoresponse='N';}
+if (f_largeurls.length > 0){photoresponse = 'Y';f_image = f_largeurls[0];}
+	else{photoresponse='N';f_image =;}
 
 
+ = snapshot.child("uploadedimage"
 
 firebase.database().ref('users/' + f_uid).update({
     gender: newgender,
@@ -2738,6 +2736,8 @@ var targetData = {
     from_name: f_first,
     to_uid:targetid,
     to_name:targetname,
+	from_picture:f_image,
+	   to_picture:targetpicture,
     message:value,
     response:'N',
     timestamp: t_unix,
@@ -4234,6 +4234,7 @@ photoarrayusersmall = result[0].smallurl.split(",");
 
 
 profilepicstringlarge = photoarrayuserlarge[0];
+	targetpicture = profilepicstringlarge;
 profilepicstringsmall = photoarrayusersmall[0];
 $( ".navbarphoto" ).html('	<div style="width:29px;height:29px;border-radius:50%;background-image:url(\''+profilepicstringlarge+'\');background-size:cover;background-position:50% 50%;margin-right:5px;"></div>');
 
@@ -4250,7 +4251,7 @@ photostring = '<div class="swiper-slide"><div class="swiper-zoom-container zoom-
 profilepicstringlarge = 'https://graph.facebook.com/'+targetid+'/picture?width=828&height=828';
 profilepicstringsmall = 'https://graph.facebook.com/'+targetid+'/picture?width=368&height=368';
 $( ".navbarphoto" ).html('	<div style="width:29px;height:29px;border-radius:50%;background-image:url(\'https://graph.facebook.com/'+targetid+'/picture?width=100&height=100\');background-size:cover;background-position:50% 50%;margin-right:5px;"></div>');
-
+targetpicture = profilepicstringlarge;
 
 photocount = 1;
 }
@@ -6674,6 +6675,8 @@ firebase.database().ref("dates/" + f_uid +'/' + targetid).set({
     created_name: f_first,
     received_uid:targetid,
     received_name:targetname,
+	 from_picture:f_image,
+	   to_picture:targetpicture,
     timestamp:unix,
     day:day,
     time:time,
@@ -6691,6 +6694,8 @@ firebase.database().ref("dates/" + targetid +'/' + f_uid).set({
     created_name: f_first,
     received_uid:targetid,
     received_name:targetname,
+	 from_picture:f_image,
+	   to_picture:targetpicture,
     timestamp:unix,
     day:day,
     time:time,
@@ -6772,8 +6777,11 @@ var t_unix = Math.round(+new Date()/1000);
        id:newPostKey,
        from_uid: f_uid,
     from_name: f_first,
+	  
     to_uid:targetid,
     to_name:targetname,
+	    from_picture:f_image,
+	   to_picture:targetpicture,
     message:smessage,
     timestamp: t_unix,
     type:d_type,
@@ -7089,6 +7097,8 @@ if (!messagenum) {messagenum = 1;}
     from_name: f_first,
     to_uid:targetid,
     to_name:targetname,
+	   from_picture:f_image,
+	   to_picture:targetpicture,
     message:newmessage,
     timestamp: t_unix,
     type:d_type,
@@ -7902,6 +7912,8 @@ var t_unix = Math.round(+new Date()/1000);
     from_name: f_first,
     to_uid:targetid,
     to_name:targetname,
+	   from_picture:f_image,
+	   to_picture:targetpicture,
     message:'Date scheduled',
     timestamp: t_unix,
     type:d_type,
@@ -8048,6 +8060,8 @@ var t_unix = Math.round(+new Date()/1000);
     from_name: f_first,
     to_uid:targetid,
     to_name:targetname,
+	   from_picture:f_image,
+	   to_picture:targetpicture,
     message:smessage,
     timestamp: t_unix,
     type:d_type,
@@ -8361,6 +8375,8 @@ if (!messagenum) {messagenum = 1;}
     from_name: f_first,
     to_uid:targetid,
     to_name:targetname,
+	   from_picture:f_image,
+	   to_picture:targetpicture,
     message:'Image ',
     timestamp: t_unix,
     type:d_type,
@@ -9291,6 +9307,8 @@ var t_unix = Math.round(+new Date()/1000);
     from_name: f_first,
     to_uid:targetid,
     to_name:targetname,
+	   from_picture:f_image,
+	   to_picture:targetpicture,
     message:smessage,
     timestamp: t_unix,
     type:d_type,
