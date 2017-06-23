@@ -200,6 +200,7 @@ var viewscroll = false;
 var homewant;
 var singlefxallowed = true;
 var photoresponse;
+var targetpicture;
 /*
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
@@ -1755,9 +1756,9 @@ var weight_pre = $( "#weight-input" ).val();
 var weight_u = weight_pre.substr(0, weight_pre.indexOf(' '));
 
 console.log(status_u);
-
-if (f_largeurls.length > 0){photoresponse = 'Y';}
-	else{photoresponse='N';}
+var uploadurl;
+if (f_largeurls.length > 0){photoresponse = 'Y';uploadurl = f_largeurls[0];}
+	else{photoresponse='N';uploadurl = '';}
 
 
 
@@ -1777,7 +1778,8 @@ weight: weight_u,
     sort:sortby,
     availstring:availstring,
     offsounds:offsounds,
-	photoresponse:photoresponse
+	photoresponse:photoresponse,
+	uploadurl:uploadurl
     
     
   });
