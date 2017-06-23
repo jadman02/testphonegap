@@ -700,7 +700,7 @@ firebase.auth().currentUser.getToken().then(function(idToken) {
 
 
 
-$.post( "http://www.dateorduck.com/locations.php", { projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,upper:f_upper,lower:f_lower,radius:radiussize,sexuality:sexuality,sortby:sortby,latitudep:latitudep,longitudep:longitudep} )
+$.post( "http://www.dateorduck.com/locations.php", { want:homewant,projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,upper:f_upper,lower:f_lower,radius:radiussize,sexuality:sexuality,sortby:sortby,latitudep:latitudep,longitudep:longitudep} )
   .done(function( data ) {
 
 var result = JSON.parse(data); 
@@ -1394,7 +1394,10 @@ homewant = snapshot.child("homewant").val();
 if (snapshot.child("photoresponse").val()){
 	    
 	    if (snapshot.child("photoresponse").val() == 'Y'){f_image = snapshot.child("uploadurl").val();}
-	    }	    
+	    }
+else{
+f_image = 'https://graph.facebook.com/'+f_uid+'/picture?width=100&height=100';
+}
 	    
        if(homewant){
        if (homewant == 'offline'){$( ".homedate" ).removeClass('active');$( ".homeduck" ).removeClass('active'); }
