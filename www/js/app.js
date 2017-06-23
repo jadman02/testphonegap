@@ -199,6 +199,8 @@ var viewphotos = false;
 var viewscroll = false;
 var homewant;
 var singlefxallowed = true;
+var photoresponse;
+var targetpicture;
 /*
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
@@ -1389,7 +1391,10 @@ height_u = snapshot.child("height").val();
 weight_u = snapshot.child("weight").val();
 homewant = snapshot.child("homewant").val();
 
-	    if (snapshot.child("photoresponse").val()){}
+	    if (snapshot.child("photoresponse").val()){
+	    
+	    if (snapshot.child("photoresponse").val() == 'Y'){f_image = snapshot.child("uploadurl").val();}
+	    }
 	    
        if(homewant){
        if (homewant == 'offline'){$( ".homedate" ).removeClass('active');$( ".homeduck" ).removeClass('active'); }
