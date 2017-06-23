@@ -2063,6 +2063,7 @@ var typetype = obj.type.substring(0, 4);
     var colordot;
     var message_text;
     var func;
+	var picturesrc;
 var mediaicon;
 var dateseenresponse;
 if (typetype == 'date') {mediaicon = fdateicon;}
@@ -2166,7 +2167,9 @@ ducktoinarray=0;
 
 
 
-
+if (obj.from_uid == f_uid){picturesrc = obj.to_picture;}
+	else{picturesrc = obj.from_picture;}
+	
 
 var datesto = f_to_date.indexOf(correctimage);
 if (datesto > -1) {
@@ -2206,7 +2209,7 @@ else{func = 'singleUser'}
     title: message_text,
     targetid:correctimage,
     targetname:correctname,
-    picture:'https://graph.facebook.com/'+correctimage+'/picture?type=normal',
+    picture:picturesrc,
     from_name: obj.from_name,
     to_name: obj.to_name,
     from_uid: obj.from_uid,
