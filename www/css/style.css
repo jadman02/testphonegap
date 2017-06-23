@@ -168,13 +168,23 @@
     to {-webkit-transform: translate(0, -0px);    }    
 }
 
-        .agebutton {-webkit-animation-name: Siding;
+        .agebuttonr {-webkit-animation-name: Siding;
     -webkit-animation-duration: 0.5s;
-    -webkit-animation-iteration-count: 10;
+    -webkit-animation-iteration-count: 3;
     -webkit-animation-timing-function: ease-in;}
 @-webkit-keyframes Siding{
     from {-webkit-transform:translate(0, 0);}
     65% {-webkit-transform:translate(15px, 0);}
+    to {-webkit-transform: translate(-0px, 0);    }    
+}
+
+        .agebuttonl {-webkit-animation-name: Siding;
+    -webkit-animation-duration: 0.5s;
+    -webkit-animation-iteration-count: 3;
+    -webkit-animation-timing-function: ease-in;}
+@-webkit-keyframes Siding{
+    from {-webkit-transform:translate(0, 0);}
+    65% {-webkit-transform:translate(-15px, 0);}
     to {-webkit-transform: translate(-0px, 0);    }    
 }
 
