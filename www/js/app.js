@@ -199,8 +199,6 @@ var viewphotos = false;
 var viewscroll = false;
 var homewant;
 var singlefxallowed = true;
-var photoresponse;
-var targetpicture;
 /*
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
@@ -302,7 +300,7 @@ f_projectid = firebase.auth().currentUser.toJSON().authDomain.substr(0, firebase
          f_email = user.providerData[0].email;
           f_image = user.providerData[0].photoURL;
                  
-
+   alert(f_image);
   // $( ".userimagetoolbar" ).css("background-image","url(\'https://graph.facebook.com/"+f_uid+"/picture?type=normal\')");
    
 
@@ -1302,7 +1300,7 @@ console.log('updatedtimestamp');
 }
 
 function updateGeo(){
-firebase.auth().currentUser.getToken().then(function(idToken) {  	
+firebase.auth().currentUser.getToken().then(function(idToken) {  
 $.post( "http://www.dateorduck.com/updatelocation.php", { projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,uid:f_uid,latitude:latitudep,longitude:longitudep} )
 //$.post( "updatelocation.php", { uid:f_uid,latitude:latitudep,longitude:longitudep} )
   .done(function( data ) {
@@ -1390,10 +1388,6 @@ ethnicity_u = snapshot.child("ethnicity").val();
 height_u = snapshot.child("height").val();
 weight_u = snapshot.child("weight").val();
 homewant = snapshot.child("homewant").val();
-	
-
-
-	
 
        if(homewant){
        if (homewant == 'offline'){$( ".homedate" ).removeClass('active');$( ".homeduck" ).removeClass('active'); }
@@ -1586,7 +1580,6 @@ getWifilocation();
 }
 
 function addUser() {
-	
   if (f_token){firebase.database().ref('users/' + f_uid).update({
     name: f_name,
     email: f_email,
@@ -1756,11 +1749,9 @@ var weight_u = weight_pre.substr(0, weight_pre.indexOf(' '));
 
 console.log(status_u);
 
-if (f_largeurls.length > 0){photoresponse = 'Y';f_image = f_largeurls[0];}
-	else{photoresponse='N';f_image =;}
 
 
- = snapshot.child("uploadedimage"
+
 
 firebase.database().ref('users/' + f_uid).update({
     gender: newgender,
@@ -1777,8 +1768,7 @@ weight: weight_u,
     radius:radiussize,
     sort:sortby,
     availstring:availstring,
-    offsounds:offsounds,
-	photoresponse:photoresponse
+    offsounds:offsounds
     
     
   });
@@ -2732,8 +2722,6 @@ var targetData = {
     from_name: f_first,
     to_uid:targetid,
     to_name:targetname,
-	from_picture:f_image,
-	   to_picture:targetpicture,
     message:value,
     response:'N',
     timestamp: t_unix,
@@ -3165,8 +3153,8 @@ $.each(objs, function(i, obj) {
 
 });
 
-if (messageid) {centerdiv = '<div class="center center-date" onclick="singleUser(\''+targetid+'\',\''+targetname+'\')" style="cursor:pointer;"><div class="navbarphoto"></div>'+targetname+'</div>';}
-else{centerdiv = '<div class="center center-date close-popup" onclick="clearchatHistory();"><div class="navbarphoto"></div>'+targetname+'</div>';}
+if (messageid) {centerdiv = '<div class="center center-date" onclick="singleUser(\''+targetid+'\',\''+targetname+'\')" style="cursor:pointer;"><div style="width:29px;height:29px;border-radius:50%;background-image:url(\'https://graph.facebook.com/'+targetid+'/picture?type=normal\');background-size:cover;background-position:50% 50%;margin-right:5px;"></div>'+targetname+'</div>';}
+else{centerdiv = '<div class="center center-date close-popup" onclick="clearchatHistory();"><div style="width:29px;height:29px;border-radius:50%;background-image:url(\'https://graph.facebook.com/'+targetid+'/picture?type=normal\');background-size:cover;background-position:50% 50%;margin-right:5px;"></div>'+targetname+'</div>';}
 
 
 
@@ -4149,7 +4137,7 @@ $.post( "http://www.dateorduck.com/singleuser.php", {projectid:f_projectid,token
   .done(function( data ) {
   console.log(data);
   var result = JSON.parse(data); 
-
+ 
 var availarraystring='';
 
 
@@ -4230,11 +4218,9 @@ photoarrayusersmall = result[0].smallurl.split(",");
 
 
 profilepicstringlarge = photoarrayuserlarge[0];
-	targetpicture = profilepicstringlarge;
 profilepicstringsmall = photoarrayusersmall[0];
-$( ".navbarphoto" ).html('	<div style="width:29px;height:29px;border-radius:50%;background-image:url(\''+profilepicstringlarge+'\');background-size:cover;background-position:50% 50%;margin-right:5px;"></div>');
 
-	
+
 photostring=photostring.replace(/,/g, '" class="swiper-lazy" style="height:100%;"></div></div><div class="swiper-slide"><div class="swiper-zoom-container zoom-vertical"><img data-src="')
 
 
@@ -4246,8 +4232,7 @@ photostring = '<div class="swiper-slide"><div class="swiper-zoom-container zoom-
 
 profilepicstringlarge = 'https://graph.facebook.com/'+targetid+'/picture?width=828&height=828';
 profilepicstringsmall = 'https://graph.facebook.com/'+targetid+'/picture?width=368&height=368';
-$( ".navbarphoto" ).html('	<div style="width:29px;height:29px;border-radius:50%;background-image:url(\'https://graph.facebook.com/'+targetid+'/picture?width=100&height=100\');background-size:cover;background-position:50% 50%;margin-right:5px;"></div>');
-targetpicture = profilepicstringlarge;
+
 
 photocount = 1;
 }
@@ -6671,8 +6656,6 @@ firebase.database().ref("dates/" + f_uid +'/' + targetid).set({
     created_name: f_first,
     received_uid:targetid,
     received_name:targetname,
-	 from_picture:f_image,
-	   to_picture:targetpicture,
     timestamp:unix,
     day:day,
     time:time,
@@ -6690,8 +6673,6 @@ firebase.database().ref("dates/" + targetid +'/' + f_uid).set({
     created_name: f_first,
     received_uid:targetid,
     received_name:targetname,
-	 from_picture:f_image,
-	   to_picture:targetpicture,
     timestamp:unix,
     day:day,
     time:time,
@@ -6773,11 +6754,8 @@ var t_unix = Math.round(+new Date()/1000);
        id:newPostKey,
        from_uid: f_uid,
     from_name: f_first,
-	  
     to_uid:targetid,
     to_name:targetname,
-	    from_picture:f_image,
-	   to_picture:targetpicture,
     message:smessage,
     timestamp: t_unix,
     type:d_type,
@@ -7093,8 +7071,6 @@ if (!messagenum) {messagenum = 1;}
     from_name: f_first,
     to_uid:targetid,
     to_name:targetname,
-	   from_picture:f_image,
-	   to_picture:targetpicture,
     message:newmessage,
     timestamp: t_unix,
     type:d_type,
@@ -7908,8 +7884,6 @@ var t_unix = Math.round(+new Date()/1000);
     from_name: f_first,
     to_uid:targetid,
     to_name:targetname,
-	   from_picture:f_image,
-	   to_picture:targetpicture,
     message:'Date scheduled',
     timestamp: t_unix,
     type:d_type,
@@ -8056,8 +8030,6 @@ var t_unix = Math.round(+new Date()/1000);
     from_name: f_first,
     to_uid:targetid,
     to_name:targetname,
-	   from_picture:f_image,
-	   to_picture:targetpicture,
     message:smessage,
     timestamp: t_unix,
     type:d_type,
@@ -8371,8 +8343,6 @@ if (!messagenum) {messagenum = 1;}
     from_name: f_first,
     to_uid:targetid,
     to_name:targetname,
-	   from_picture:f_image,
-	   to_picture:targetpicture,
     message:'Image ',
     timestamp: t_unix,
     type:d_type,
@@ -9303,8 +9273,6 @@ var t_unix = Math.round(+new Date()/1000);
     from_name: f_first,
     to_uid:targetid,
     to_name:targetname,
-	   from_picture:f_image,
-	   to_picture:targetpicture,
     message:smessage,
     timestamp: t_unix,
     type:d_type,
