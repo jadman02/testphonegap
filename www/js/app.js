@@ -2324,8 +2324,9 @@ rightdates.sort(compare);
 
  var correctname;
  var correctid;
-if (rightdates[i].created_uid == f_uid) {correctname = rightdates[i].received_name;correctid = rightdates[i].received_uid;}
-if (rightdates[i].created_uid != f_uid) {correctname = rightdates[i].created_name;correctid = rightdates[i].created_uid;}
+	 var picturesrc;
+if (rightdates[i].created_uid == f_uid) {picturesrc = rightdates[i].to_picture;correctname = rightdates[i].received_name;correctid = rightdates[i].received_uid;}
+if (rightdates[i].created_uid != f_uid) {picturesrc = rightdates[i].from_picturecorrectname = rightdates[i].created_name;correctid = rightdates[i].created_uid;}
 
  var unix = Math.round(+new Date()/1000);
 
@@ -2426,7 +2427,7 @@ subtitletext+
     '<div class="timeline-item-inner" style="min-width:136px;padding:7px;border-radius:0;">'+
    
           
-                '<div class="timeline-item-title" style="color:black;margin-top:5px;text-align:center;"><div style="width:50px;height:50px;margin:0 auto;border-radius:50%;background-size:cover;background-position:50% 50%;background-image:url(\'https://graph.facebook.com/'+correctid+'/picture?type=normal\')"></div><span style="clear:both;">'+correctname+'<span> </div>'+
+                '<div class="timeline-item-title" style="color:black;margin-top:5px;text-align:center;"><div style="width:50px;height:50px;margin:0 auto;border-radius:50%;background-size:cover;background-position:50% 50%;background-image:url(\''+picturesrc+'\')"></div><span style="clear:both;">'+correctname+'<span> </div>'+
 
 
 
