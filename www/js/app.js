@@ -301,7 +301,7 @@ f_projectid = firebase.auth().currentUser.toJSON().authDomain.substr(0, firebase
          f_email = user.providerData[0].email;
           f_image = user.providerData[0].photoURL;
                  
-   alert(f_image);
+
   // $( ".userimagetoolbar" ).css("background-image","url(\'https://graph.facebook.com/"+f_uid+"/picture?type=normal\')");
    
 
@@ -4132,7 +4132,7 @@ function singleUser(idw,idname,origin){
 
 if (singleuserarray[0] != null){
 
-alert(singleuserarray[0].largeurl[0]);
+
 
 if (origin){photoBrowser(0,singleuserarray[0].age,1,1);}
 else{photoBrowser(0,singleuserarray[0].age);}
@@ -4153,7 +4153,7 @@ $.post( "http://www.dateorduck.com/singleuser.php", {projectid:f_projectid,token
   .done(function( data ) {
   console.log(data);
   var result = JSON.parse(data); 
- alert(singleuserarray[0].largeurl[0]);
+
 var availarraystring='';
 
 
@@ -4234,6 +4234,7 @@ photoarrayusersmall = result[0].smallurl.split(",");
 
 
 profilepicstringlarge = photoarrayuserlarge[0];
+	alert(profilepicstringlarge);
 profilepicstringsmall = photoarrayusersmall[0];
 
 
