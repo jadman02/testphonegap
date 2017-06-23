@@ -199,6 +199,7 @@ var viewphotos = false;
 var viewscroll = false;
 var homewant;
 var singlefxallowed = true;
+var photoresponse;
 /*
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
@@ -1300,7 +1301,7 @@ console.log('updatedtimestamp');
 }
 
 function updateGeo(){
-firebase.auth().currentUser.getToken().then(function(idToken) {  
+firebase.auth().currentUser.getToken().then(function(idToken) {  	
 $.post( "http://www.dateorduck.com/updatelocation.php", { projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,uid:f_uid,latitude:latitudep,longitude:longitudep} )
 //$.post( "updatelocation.php", { uid:f_uid,latitude:latitudep,longitude:longitudep} )
   .done(function( data ) {
@@ -1388,7 +1389,19 @@ ethnicity_u = snapshot.child("ethnicity").val();
 height_u = snapshot.child("height").val();
 weight_u = snapshot.child("weight").val();
 homewant = snapshot.child("homewant").val();
+if (f_image != snapshot.child("image_url").val()){
 
+//profilepicture has changed
+if (snapshot.child("photoresponse").val() == 'Y'){
+//will not update, user had photos
+}
+	else{
+//will update photo	
+	
+	}
+	
+	
+}
        if(homewant){
        if (homewant == 'offline'){$( ".homedate" ).removeClass('active');$( ".homeduck" ).removeClass('active'); }
      if (homewant == 'dateduck'){$( ".homedate" ).addClass('active');$( ".homeduck" ).addClass('active'); }
@@ -1580,6 +1593,7 @@ getWifilocation();
 }
 
 function addUser() {
+	
   if (f_token){firebase.database().ref('users/' + f_uid).update({
     name: f_name,
     email: f_email,
@@ -1749,7 +1763,8 @@ var weight_u = weight_pre.substr(0, weight_pre.indexOf(' '));
 
 console.log(status_u);
 
-
+if (f_largeurls.length > 0){photoresponse = 'Y';}
+	else{photoresponse='N';}
 
 
 
@@ -1768,7 +1783,8 @@ weight: weight_u,
     radius:radiussize,
     sort:sortby,
     availstring:availstring,
-    offsounds:offsounds
+    offsounds:offsounds,
+	photoresponse:photoresponse
     
     
   });
@@ -4116,7 +4132,7 @@ function singleUser(idw,idname,origin){
 
 if (singleuserarray[0] != null){
 
-
+alert(singleuserarray[0].largeurl[0]);
 
 if (origin){photoBrowser(0,singleuserarray[0].age,1,1);}
 else{photoBrowser(0,singleuserarray[0].age);}
@@ -4137,7 +4153,7 @@ $.post( "http://www.dateorduck.com/singleuser.php", {projectid:f_projectid,token
   .done(function( data ) {
   console.log(data);
   var result = JSON.parse(data); 
- 
+ alert(singleuserarray[0].largeurl[0]);
 var availarraystring='';
 
 
