@@ -1389,19 +1389,12 @@ ethnicity_u = snapshot.child("ethnicity").val();
 height_u = snapshot.child("height").val();
 weight_u = snapshot.child("weight").val();
 homewant = snapshot.child("homewant").val();
-if (f_image != snapshot.child("image_url").val()){
 
-//profilepicture has changed
-if (snapshot.child("photoresponse").val() == 'Y'){
-//will not update, user had photos
-}
-	else{
-//will update photo	
-	
-	}
-	
-	
-}
+if (snapshot.child("photoresponse").val()){
+	    
+	    if (snapshot.child("photoresponse").val() == 'Y'){f_image = snapshot.child("uploadurl").val();}
+	    }	    
+	    
        if(homewant){
        if (homewant == 'offline'){$( ".homedate" ).removeClass('active');$( ".homeduck" ).removeClass('active'); }
      if (homewant == 'dateduck'){$( ".homedate" ).addClass('active');$( ".homeduck" ).addClass('active'); }
