@@ -1391,14 +1391,14 @@ height_u = snapshot.child("height").val();
 weight_u = snapshot.child("weight").val();
 homewant = snapshot.child("homewant").val();
 	
+
 if (snapshot.child("photoresponse").val()){ 
 if (snapshot.child("photoresponse").val() == 'Y'){
 f_image = snapshot.child("uploadedimage").val();
 }
-    }
+    }	
 	
-	
-}
+
        if(homewant){
        if (homewant == 'offline'){$( ".homedate" ).removeClass('active');$( ".homeduck" ).removeClass('active'); }
      if (homewant == 'dateduck'){$( ".homedate" ).addClass('active');$( ".homeduck" ).addClass('active'); }
