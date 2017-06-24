@@ -640,8 +640,10 @@ if ((initialload === false) && (availarray.length === 0)){
 }
 
 if (!homewant || homewant =='offline'){
-$('.content-here').empty();
-   $( ".results-loader" ).hide();
+
+	$('.content-here').empty();
+   $( ".buttons-home" ).hide();
+	$( ".results-loader" ).hide();
     $('.content-here').append(
     '<div class="no-results-div" style="text-align:center;margin:0 auto;width:300px;position:absolute;top:44px;left:50%;margin-left:-150px;margin-top:54px;">'+
     
@@ -676,7 +678,7 @@ $( ".login-loader" ).hide();
    return false;
 
 }   
-   
+   $( ".buttons-home" ).show();
 initialload = true;
 
 if (updatecontinuously){}
