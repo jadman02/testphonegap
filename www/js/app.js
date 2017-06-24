@@ -731,9 +731,9 @@ var slidewidth = $( document ).width() / 1.7;
    
    // '<span class="badge age-header header_'+i+'" style="display:none;text-align:left;float:left;width:100%;border-radius:0px;background-color:white;color:black;">'+i+'</span>'+
       '  <div class="swiper-container swiper-container-loaded swiper-'+i+'" style="display:none;height:'+(slidewidth + 37)+'px;clear:both;background-color:white;">'+
-       '<div class="blockleft_'+i+'" style="z-index:999999;display:none;color:white;padding:3px;height:25px;width:100%;background-color:#ccc;position:absolute;left:0;bottom:0px;z-index:9999;"><div style="float:left;"><i  class="pe-7s-angle-left pe-2x" style="margin-left:-9px;color:white;float:left;margin-top:-3px"></i><span style="float:left;font-size:12px;margin-left:-5px;margin-top:2px;">Age '+i+'</span></div></div>'+
-              '<div class="blockright_'+i+' multiple_'+i+'" style="z-index:999999;display:none;margin-top:-10px;color:white;padding:3px;height:25px;width:100%;background-color:#ccc;position:absolute;right:0px;bottom:0px;z-index:9999;"><div style="float:right;"><i  class="pe-7s-angle-right pe-2x" style="margin-right:-9px;color:white;float:right;margin-top:-3px"></i><span style="float:right;font-size:12px;margin-right:-5px;margin-top:2px;">Age '+i+'</span></div></div>'+
-              '<div class="blockright_'+i+' single_'+i+'" style="z-index:999999;display:none;margin-top:-10px;color:white;padding:3px;height:25px;width:100%;background-color:#ccc;position:absolute;right:0px;bottom:0px;z-index:9999;"><div style="float:right;"><span style="float:right;font-size:12px;margin-right:2px;margin-top:2px;">Age '+i+'</span></div></div>'+
+       '<div class="blockleft_'+i+'" style="z-index:999999;display:none;color:white;padding:3px;height:25px;width:100%;background-color:#efeff4;position:absolute;left:0;bottom:0px;z-index:9999;"><div style="float:left;"><i  class="pe-7s-angle-left pe-2x" style="margin-left:-9px;color:white;float:left;margin-top:-5px"></i><span style="float:left;font-size:12px;margin-left:-5px;margin-top:2px;">Age '+i+'</span></div></div>'+
+              '<div class="blockright_'+i+' multiple_'+i+'" style="z-index:999999;display:none;margin-top:-10px;color:white;padding:3px;height:25px;width:100%;background-color:#efeff4;position:absolute;right:0px;bottom:0px;z-index:9999;"><div style="float:right;"><i  class="pe-7s-angle-right pe-2x" style="margin-right:-9px;color:white;float:right;margin-top:-5px"></i><span style="float:right;font-size:12px;margin-right:-5px;margin-top:2px;">Age '+i+'</span></div></div>'+
+              '<div class="blockright_'+i+' single_'+i+'" style="z-index:999999;display:none;margin-top:-10px;color:white;padding:3px;height:25px;width:100%;background-color:#efeff4;position:absolute;right:0px;bottom:0px;z-index:9999;"><div style="float:right;"><span style="float:right;font-size:12px;margin-right:2px;margin-top:2px;">Age '+i+'</span></div></div>'+
     '<div class="swiper-wrapper wrapper_'+i+'">'+
 
    // '<div class="swiper-slide"><div style="background-color:white;height:50%;width:50%;margin-top:50%;margin-left:25%;"></div></div>'+
@@ -777,7 +777,7 @@ $('.blockright_' + currentswiper).hide();$('.blockleft_' + currentswiper).show()
 
 else{
 
-$('.blockright_' + currentswiper).hide();$('.blockleft_' + currentswiper).hide();}
+//$('.blockright_' + currentswiper).hide();$('.blockleft_' + currentswiper).hide();}
 
 
 }
