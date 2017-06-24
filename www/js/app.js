@@ -1407,6 +1407,25 @@ f_image = 'https://graph.facebook.com/'+f_uid+'/picture?width=100&height=100';
     if (homewant == 'date'){$( ".homedate" ).addClass('active');$( ".homeduck" ).removeClass('active'); }
 }
 sortby = snapshot.child("sort").val();
+	    
+	    
+if (sortby){
+
+if (sortby == 'random'){sortBy(1);}
+if (sortby == 'distance'){sortBy(2);}
+if (sortby == 'activity'){sortBy(3);}
+
+
+
+$( ".sortbutton" ).removeClass( "active" );
+$( "#sort" + sortby ).addClass( "active" );
+
+
+
+
+
+}
+	    
 if (snapshot.child("offsounds").val()){offsounds = snapshot.child("offsounds").val();}
 if (snapshot.child("availstring").val()){ availarray = JSON.parse(snapshot.child("availstring").val());}
 f_description = snapshot.child("description").val(); 
@@ -11619,22 +11638,6 @@ $( "#distance_" + radiussize ).addClass( "active" );
 if (offsounds == 'Y'){$('#soundnotif').prop('checked', true);}
 else{$('#soundnotif').prop('checked', false);}
 
-if (sortby){
-
-if (sortby == 'random'){sortBy(1);}
-if (sortby == 'distance'){sortBy(2);}
-if (sortby == 'activity'){sortBy(3);}
-
-
-
-$( ".sortbutton" ).removeClass( "active" );
-$( "#sort" + sortby ).addClass( "active" );
-
-
-
-
-
-}
 
 if (f_age) {$( ".savebutton" ).removeClass('disabled');}
 
