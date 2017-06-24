@@ -731,8 +731,8 @@ var slidewidth = $( document ).width() / 1.7;
    
    // '<span class="badge age-header header_'+i+'" style="display:none;text-align:left;float:left;width:100%;border-radius:0px;background-color:white;color:black;">'+i+'</span>'+
       '  <div class="swiper-container swiper-container-loaded swiper-'+i+'" style="display:none;height:'+(slidewidth + 37)+'px;clear:both;background-color:white;">'+
-       '<div class="blockleft_'+i+'" style="z-index:999999;display:none;color:#007aff;padding:3px;height:25px;width:100%;background-color:#efeff4;position:absolute;left:0;bottom:0px;z-index:9999;"><div style="float:left;"><i  class="pe-7s-angle-left pe-2x" style="margin-left:-9px;color:#007aff;float:left;margin-top:-5px"></i><span style="float:left;font-size:12px;margin-left:-5px;margin-top:2px;">Age '+i+'</span></div></div>'+
-              '<div class="blockright_'+i+' multiple_'+i+'" style="z-index:999999;display:none;margin-top:-10px;color:#007aff;padding:3px;height:25px;width:100%;background-color:#efeff4;position:absolute;right:0px;bottom:0px;z-index:9999;"><div style="float:right;"><i  class="pe-7s-angle-right pe-2x" style="margin-right:-9px;color:#007aff;float:right;margin-top:-5px"></i><span style="float:right;font-size:12px;margin-right:-5px;margin-top:2px;">Age '+i+'</span></div></div>'+
+       '<div class="blockleft_'+i+'" style="z-index:999999;display:none;color:#007aff;padding:3px;height:25px;width:100%;background-color:#efeff4;position:absolute;left:0;bottom:0px;z-index:9999;"><div style="float:left;"><i  class="pe-7s-angle-left pe-2x" style="margin-left:-9px;color:#007aff;float:left;margin-top:-4px"></i><span style="float:left;font-size:12px;margin-left:-5px;margin-top:2px;">Age '+i+'</span></div></div>'+
+              '<div class="blockright_'+i+' multiple_'+i+'" style="z-index:999999;display:none;margin-top:-10px;color:#007aff;padding:3px;height:25px;width:100%;background-color:#efeff4;position:absolute;right:0px;bottom:0px;z-index:9999;"><div style="float:right;"><i  class="pe-7s-angle-right pe-2x" style="margin-right:-9px;color:#007aff;float:right;margin-top:-4px"></i><span style="float:right;font-size:12px;margin-right:-5px;margin-top:2px;">Age '+i+'</span></div></div>'+
               '<div class="blockright_'+i+' single_'+i+'" style="z-index:999999;display:none;margin-top:-10px;color:#007aff;padding:3px;height:25px;width:100%;background-color:#efeff4;position:absolute;right:0px;bottom:0px;z-index:9999;"><div style="float:right;"><span style="float:right;font-size:12px;margin-right:2px;margin-top:2px;">Age '+i+'</span></div></div>'+
     '<div class="swiper-wrapper wrapper_'+i+'">'+
 
@@ -10699,16 +10699,9 @@ var popupHTML = '<div class="popup prefpop">'+
 
 
 
-'<div class="content-block-title">Sort People By</div>'+
+
 
 //'<div id="filterexplain"></div>'+
-
-
-  '<a href="#" id="sortrandom" class="button button-big sortbutton sortby_1 active" onclick="sortBy(1)" style="border:0;border-radius:0px;">Random </a>'+
-  '<a href="#" id="sortdistance" class="button button-big sortbutton sortby_2" onclick="sortBy(2)" style="border:0;border-radius:0px;">Nearby</a>'+
-    '<a href="#" id="sortactivity"  class="button button-big sortbutton sortby_3" onclick="sortBy(3)" style="border:0;border-radius:0px;">Recent</a>'+
-
-
 
 
 
