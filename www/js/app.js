@@ -698,7 +698,7 @@ firebase.auth().currentUser.getToken().then(function(idToken) {
 
 
 
-alert(sortby);
+
 
 $.post( "http://www.dateorduck.com/locations.php", { want:homewant,projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,upper:f_upper,lower:f_lower,radius:radiussize,sexuality:sexuality,sortby:sortby,latitudep:latitudep,longitudep:longitudep} )
   .done(function( data ) {
@@ -707,7 +707,7 @@ var result = JSON.parse(data);
 
 console.log(data);
 console.log(result);
-
+$( ".content-here" ).empty();  
  for (var i = f_lower; i <= f_upper; i++) {}
 
 var slidewidth = $( document ).width() / 1.7;
