@@ -9444,7 +9444,12 @@ $('.sortby_'+ number).addClass('active');
 if ($( "#sortrandom" ).hasClass( "active" )){sortby = 'random';}
 if ($( "#sortdistance" ).hasClass( "active" )){sortby = 'distance';}
 if ($( "#sortactivity" ).hasClass( "active" )){sortby = 'activity';}
-	getMatches();
+
+
+firebase.database().ref('users/' + f_uid).update({
+        sort:sortby
+  });	
+	
 }
 
 
