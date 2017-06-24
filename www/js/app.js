@@ -671,7 +671,7 @@ if (!homewant || homewant =='offline'){
 
    
    
-   $( ".toolbar" ).show();
+  
     $( ".loginbutton" ).show();
 $( ".login-loader" ).hide();
     
@@ -680,9 +680,7 @@ $( ".login-loader" ).hide();
    return false;
 
 }   
-   $( ".buttons-home" ).show();
-	$( ".toolbar" ).show();
-	   $( ".statusbar-overlay" ).css("background-color","#2196f3");
+  
 initialload = true;
 
 if (updatecontinuously){}
@@ -1269,7 +1267,9 @@ new_all.push(all_matches_photos[i][j]);
 
    
    
-   $( ".toolbar" ).show();
+ $( ".buttons-home" ).show();
+	$( ".toolbar" ).show();
+	   $( ".statusbar-overlay" ).css("background-color","#2196f3");
     $( ".loginbutton" ).show();
 $( ".login-loader" ).hide();
     
