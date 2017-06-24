@@ -777,7 +777,8 @@ $('.blockright_' + currentswiper).hide();$('.blockleft_' + currentswiper).show()
 
 else{
 
-//$('.blockright_' + currentswiper).hide();$('.blockleft_' + currentswiper).hide();}
+//$('.blockright_' + currentswiper).hide();$('.blockleft_' + currentswiper).hide();
+}
 
 
 }
