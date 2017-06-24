@@ -9436,40 +9436,15 @@ processUpdate();
 function sortBy(number){
 var relevanticon;
 var relevanttext;
-if (sexuality){processUpdate();  myApp.sizeNavbars();  }
-if (number == 1){relevanticon = '<i class="pe-7s-shuffle pe-lg"></i>';relevanttext='Sort randomly';} 
-if (number == 2){relevanticon = '<i class="pe-7s-map-marker pe-lg"></i>';relevanttext='Sort by nearby first';} 
-if (number == 3){relevanticon = '<i class="pe-7s-clock pe-lg"></i>';relevanttext='Sort by recently active first';}
-
-$('#filterexplain').empty();
-$('#filterexplain').append(
-
- 
-
-
-'<div class="list-block" style="margin:0;">'+
-    '<ul>'+
-    '<li>'+
-    '<div class="item-content" style="border-top:1px solid #c8c7cc;border-bottom:1px solid #c8c7cc;">'+
-        '<div class="item-media">'+
-           relevanticon+
-        '</div>'+
-        '<div class="item-inner">'+
-          '  <div class="item-title">'+
-                relevanttext+
-            '</div>'+
-
-        '</div>'+
-    '</div>'+
-'</li>'+
-    '</ul>'+
-'</div>'
-
-);
+//if (sexuality){processUpdate();  myApp.sizeNavbars();  }
 
 
 $('.sortbutton').removeClass('active');
 $('.sortby_'+ number).addClass('active');
+if ($( "#sortrandom" ).hasClass( "active" )){sortby = 'random';}
+if ($( "#sortdistance" ).hasClass( "active" )){sortby = 'distance';}
+if ($( "#sortactivity" ).hasClass( "active" )){sortby = 'activity';}
+	getMatches();
 }
 
 
