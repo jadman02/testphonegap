@@ -4,10 +4,13 @@ var desktoparray = ['media/dateicon.png','media/duckicon.png','media/datetongue.
 
 
 function fcm(){
-alert('fcm');
-   // FCMPlugin.onTokenRefresh(function(token){
-  //  alert( token );
-//});
+facebookConnectPlugin.api("me/?fields=id", ["public_profile"],
+function (result) {
+alert("Result: " + JSON.stringify(result));
+
+function (error) {
+alert("Failed: " + error);
+});
    
 }
 	
@@ -242,7 +245,7 @@ var app = {
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
 
-alert(navigator.contacts);
+fcm();
 
 //  alert(Keyboard); 
 //soNow();
