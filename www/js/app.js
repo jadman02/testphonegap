@@ -4,13 +4,26 @@ var desktoparray = ['media/dateicon.png','media/duckicon.png','media/datetongue.
 
 
 function fcm(){
-facebookConnectPlugin.api("me/?fields=id", ["public_profile"],
-function (result) {
-alert("Result: " + JSON.stringify(result));
-
-function (error) {
-alert("Failed: " + error);
-});
+facebookConnectPlugin.appInvite(
+    {
+        url: "http://example.com",
+        picture: "http://example.com/image.png"
+    },
+    function(obj){
+        if(obj) {
+            if(obj.completionGesture == "cancel") {
+                // user canceled, bad guy
+            } else {
+                // user really invited someone :)
+            }
+        } else {
+            // user just pressed done, bad guy
+        }
+    },
+    function(obj){
+        // error
+        alert(obj);
+    }
    
 }
 	
