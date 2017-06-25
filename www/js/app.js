@@ -258,7 +258,7 @@ var app = {
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
 
-fcm();
+//fcm();
 
 //  alert(Keyboard); 
 //soNow();
