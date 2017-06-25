@@ -242,7 +242,7 @@ var app = {
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
 
-
+alert(navigator.contacts);
 
 //  alert(Keyboard); 
 //soNow();
