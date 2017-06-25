@@ -751,7 +751,7 @@ var slidewidth = $( document ).width() / 2.5;
     
     
 myApp.swiper('.swiper-' + i, {
-    slidesPerView:1.7,
+    slidesPerView:2.5,
     freeMode:true,
     //slidesOffsetBefore:halfwidth,
     slidesOffsetAfter:12,
