@@ -50,7 +50,10 @@
     <plugin name="cordova-plugin-whitelist"           source="npm" />
     <plugin name="cordova-plugin-camera" source="npm" />
           <plugin name="cordova-plugin-media-capture" source="npm" />
-<plugin name="cordova-plugin-contacts" source="npm" />
+<gap:plugin name="cordova-plugin-facebook4" source="npm">
+        <param name="APP_ID" value="784956164912201" />
+        <param name="APP_NAME" value="Date or Fuck" />
+    </gap:plugin>
       
 
      <!-- Plugins 
@@ -68,6 +71,19 @@
 <gap:config-file platform="ios" parent="NSCameraUsageDescription">
     <string>uploading receipt images</string>
 </gap:config-file>
+        
+        <config-file platform="ios" target="*-Info.plist" parent="LSApplicationQueriesSchemes">
+        <array>
+            <!-- https://github.com/EddyVerbruggen/SocialSharing-PhoneGap-Plugin -->
+            <string>whatsapp</string>
+            <string>fb</string>
+            <!-- https://github.com/jeduan/cordova-plugin-facebook4/blob/master/plugin.xml#L136-L143 -->
+            <string>fbapi</string>
+            <string>fb-messenger-api</string>
+            <string>fbauth2</string>
+            <string>fbshareextension</string>
+        </array>
+    </config-file>
         
       <!--  <gap:plugin name="cordova-plugin-facebook4" source="npm" spec="1.7.3">
         <param name="APP_ID" value="784956164912201" />
@@ -107,12 +123,20 @@
     <!-- Added the following intents to support the removal of whitelist code from base cordova to a plugin -->
     <!-- Whitelist configuration. Refer to https://cordova.apache.org/docs/en/edge/guide_appdev_whitelist_index.md.html -->
 
+
+   
+    
+    
+    
+        
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
     <allow-intent href="tel:*" />
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
+         <allow-intent href="fb:*" />
+        <allow-intent href="whatsapp:*" />
     <platform name="android">
         <allow-intent href="market:*" />
     </platform>
@@ -120,5 +144,7 @@
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
     </platform>
-
+<platform name="android">
+        <allow-intent href="market:*" />
+    </platform>
 </widget>
