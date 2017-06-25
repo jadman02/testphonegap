@@ -50,9 +50,8 @@
     <plugin name="cordova-plugin-whitelist"           source="npm" />
     <plugin name="cordova-plugin-camera" source="npm" />
           <plugin name="cordova-plugin-media-capture" source="npm" />
-<gap:plugin name="pushwoosh-pgb-plugin" source="npm" />
-     
-
+<plugin name="cordova-plugin-contacts" source="npm" />
+      
 
      <!-- Plugins 
        
