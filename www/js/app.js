@@ -658,7 +658,7 @@ if (!homewant || homewant =='offline'){
     '<div class="col-30" style="padding-top:5px;"><img src="media/duckfaceonly.png" style="width:80px;margin:0 auto;"></div>'+
     '<div class="col-70" style="padding-top:5px;">Press <span style="font-family: \'Pacifico\', cursive;font-size:20px;">duck</span> if you want to get down to...ahem...business (replace the D with an F). </div>'+
 '</div>'+
-'<span style="width:100%;text-align:center;">Or press both</span>'+
+
 
 
 
@@ -713,7 +713,7 @@ console.log(result);
 $( ".content-here" ).empty();  
  for (var i = f_lower; i <= f_upper; i++) {}
 
-var slidewidth = $( document ).width() / 1.7;
+var slidewidth = $( document ).width() / 2.5;
     var halfwidth = -Math.abs(slidewidth / 2.23);
      
    //  var rownumber;
