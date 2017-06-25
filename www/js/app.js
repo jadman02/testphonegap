@@ -809,7 +809,7 @@ var ageswiper = swiper.clickedSlide.classList[0].replace("age_", "");
     
  }
 
-
+alert(f_date_me);
 
 descriptionslist = [];
 nameslist = [];
