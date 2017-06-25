@@ -52,7 +52,7 @@
           <plugin name="cordova-plugin-media-capture" source="npm" />
 <gap:plugin name="cordova-plugin-facebook4" source="npm">
         <param name="APP_ID" value="784956164912201" />
-        <param name="APP_NAME" value="Date or Fuck" />
+        <param name="APP_NAME" value="Date or Duck" />
     </gap:plugin>
       
 
