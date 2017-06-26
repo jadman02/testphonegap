@@ -4,26 +4,10 @@ var desktoparray = ['media/dateicon.png','media/duckicon.png','media/datetongue.
 
 
 function fcm(){
-facebookConnectPlugin.appInvite(
-    {
-        url: "http://example.com",
-        picture: "http://example.com/image.png"
-    },
-    function(obj){
-        if(obj) {
-            if(obj.completionGesture == "cancel") {
-                // user canceled, bad guy
-            } else {
-                // user really invited someone :)
-            }
-        } else {
-            // user just pressed done, bad guy
-        }
-    },
-    function(obj){
-        // error
-        alert(obj);
-    }
+alert('fcm');
+   // FCMPlugin.onTokenRefresh(function(token){
+  //  alert( token );
+//});
    
 }
 	
@@ -258,7 +242,7 @@ var app = {
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
 
-//fcm();
+alert(navigator.contacts);
 
 //  alert(Keyboard); 
 //soNow();
