@@ -242,7 +242,16 @@ var app = {
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
 
-alert(navigator.contacts);
+facebookConnectPlugin.login(["public_profile", "email"], 
+               function(response) {
+             console.log("FACEBOOK CALLED"); 
+             console.log(response); 
+            }, 
+            function(error) {
+                console.log("FACEBOOK ERROR CALLED"); 
+                console.log("Error");   
+            }
+         );
 
 //  alert(Keyboard); 
 //soNow();
