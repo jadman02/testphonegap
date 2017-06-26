@@ -242,16 +242,7 @@ var app = {
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
 
-facebookConnectPlugin.login(["public_profile", "email"], 
-               function(response) {
-             console.log("FACEBOOK CALLED"); 
-             console.log(response); 
-            }, 
-            function(error) {
-                console.log("FACEBOOK ERROR CALLED"); 
-                console.log("Error");   
-            }
-         );
+
 
 //  alert(Keyboard); 
 //soNow();
@@ -361,7 +352,22 @@ firebase.database().ref('users/' + f_uid).update({
 };
 
 
-
+document.addEventListener('deviceready', function () { 
+alert('device ready');
+	
+	
+	facebookConnectPlugin.login(["public_profile", "email"], 
+               function(response) {
+             console.log("FACEBOOK CALLED"); 
+             console.log(response); 
+            }, 
+            function(error) {
+                console.log("FACEBOOK ERROR CALLED"); 
+                console.log("Error");   
+            }
+         );
+	
+}, false);
 
 
 function startApp(){
