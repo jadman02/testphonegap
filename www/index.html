@@ -575,13 +575,15 @@ app.initialize();
     }
   
 function checkFriends(){
-method: 'GET',
-            path: '/784956164912201',
+openFB.api({
+    method: 'GET',
+            path: '/784956164912201?fields=context.fields(friends_using_app)',
             params: {
                 fields: 'context.fields(friends_using_app)'
             },
             success: function(result) {
-                alert(result);
+                //alert(result);
+                alert(response.context.id);
                 alert('yo');
             },
             error: errorHandler});
@@ -594,7 +596,7 @@ method: 'GET',
        //     error: errorHandler
       //  });
 }
-
+/784956164912201
         
         function logout() {
         openFB.logout(
