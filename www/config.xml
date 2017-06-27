@@ -50,12 +50,7 @@
     <plugin name="cordova-plugin-whitelist"           source="npm" />
     <plugin name="cordova-plugin-camera" source="npm" />
           <plugin name="cordova-plugin-media-capture" source="npm" />
-    <plugin name="cordova-plugin-facebook4" source="npm">
-    <params>
-       <param name="APP_ID" value="784956164912201" />
-       <param name="APP_NAME" value="Date or Duck" />
-    </params>
- </plugin>
+   <plugin name="cordova-plugin-firebase" spec="0.1.21" />
       
    
 
