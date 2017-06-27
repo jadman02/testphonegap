@@ -533,7 +533,7 @@ app.initialize();
                          
                         $( ".login-loader" ).hide();$( ".loginbutton" ).show();
                     }
-                }, {scope: 'email','user_friends','user_photos'});
+                }, {scope: 'email,user_friends,user_photos'});
     }
     function getInfo() {
         openFB.api({
