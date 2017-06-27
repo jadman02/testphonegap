@@ -4,16 +4,9 @@ var desktoparray = ['media/dateicon.png','media/duckicon.png','media/datetongue.
 
 
 function fcm(){
-facebookConnectPlugin.login(["public_profile", "email"], 
-               function(response) {
-             console.log("FACEBOOK CALLED"); 
-             console.log(response); 
-            }, 
-            function(error) {
-                console.log("FACEBOOK ERROR CALLED"); 
-                console.log("Error");   
-            }
-         );
+FCMPlugin.getToken(function(token){
+    console.log(token);
+});
    
 }
 	
