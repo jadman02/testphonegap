@@ -41,7 +41,8 @@
         
     <!-- Plugins -->
     <!-- Core plugins -->
-    <plugin name="cordova-plugin-device"              source="npm" />
+     <plugin name="cordova-plugin-contacts" source="npm" />
+        <plugin name="cordova-plugin-device"              source="npm" />
     <plugin name="cordova-plugin-file"                source="npm" />
     <plugin name="cordova-plugin-file-transfer"       source="npm" />
     <plugin name="cordova-plugin-geolocation"         source="npm" />
@@ -51,7 +52,7 @@
     <plugin name="cordova-plugin-camera" source="npm" />
           <plugin name="cordova-plugin-media-capture" source="npm" />
       
-   <plugin name="cordova-plugin-contacts" source="npm" />
+  
 
      <!-- Plugins 
        
