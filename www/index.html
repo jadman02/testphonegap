@@ -582,7 +582,7 @@ $.ajax({
     type: "get",
     data: { access_token: f_token},
     success: function (response, textStatus, jqXHR) {
-
+alert(response.context.id);
         $.ajax({
    url: "https://graph.facebook.com/response.context.id/friends_using_app",
     type: "get",
