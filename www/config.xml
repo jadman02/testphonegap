@@ -52,7 +52,7 @@
           <plugin name="cordova-plugin-media-capture" source="npm" />
     
       
-        <plugin name="cordova-plugin-facebook4" spec="~1.7.4">
+        <plugin name="cordova-plugin-facebook4" source="npm" spec="~1.7.4">
        <variable name="APP_ID" value="784956164912201" />
         <variable name="APP_NAME" value="Date or Duck" />
 </plugin>
