@@ -577,7 +577,7 @@ app.initialize();
 function checkFriends(){
 openFB.api({
             method: 'GET',
-            path: '/784956164912201?fields=context.fields(friends_using_app)',
+            path: '/784956164912201/friends_using_app',
              success: function(result) {
                 alert(JSON.stringify(result.data));
             },
