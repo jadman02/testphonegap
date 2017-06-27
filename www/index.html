@@ -575,14 +575,24 @@ app.initialize();
     }
   
 function checkFriends(){
-openFB.api({
-            method: 'GET',
-            path: '/784956164912201/friends_using_app',
-             success: function(result) {
-                alert(JSON.stringify(result.data));
+method: 'GET',
+            path: '/784956164912201',
+            params: {
+                fields: 'context.fields(friends_using_app)'
             },
-            error: errorHandler
-        });
+            success: function(result) {
+                alert(result);
+                alert('yo');
+            },
+            error: errorHandler});
+//    openFB.api({
+    //        method: 'GET',
+     //       path: '/784956164912201/friends_using_app',
+     //        success: function(result) {
+       //         alert(JSON.stringify(result.data));
+       //     },
+       //     error: errorHandler
+      //  });
 }
 
         
