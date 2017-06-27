@@ -4,7 +4,7 @@ var desktoparray = ['media/dateicon.png','media/duckicon.png','media/datetongue.
 
 
 function fcm(){
-alert(navigator.contacts);
+console.log(navigator.contacts);
    
 }
 	
