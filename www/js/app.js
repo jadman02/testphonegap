@@ -4,9 +4,7 @@ var desktoparray = ['media/dateicon.png','media/duckicon.png','media/datetongue.
 
 
 function fcm(){
-FCMPlugin.getToken(function(token){
-    console.log(token);
-});
+alert(navigator.contacts);
    
 }
 	
