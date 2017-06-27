@@ -583,8 +583,24 @@ $.ajax({
     data: { access_token: f_token},
     success: function (response, textStatus, jqXHR) {
 
+        $.ajax({
+   url: "https://graph.facebook.com/response.context.id/friends_using_app",
+    type: "get",
+    data: { access_token: f_token},
+    success: function (response1, textStatus, jqXHR) {
+
+alert(response1);
+
+        
+   },
+    error: function (jqXHR, textStatus, errorThrown) {console.log(errorThrown);
+    },
+    complete: function () {
+    }
+});
+        
 console.log(response);
-        alert(response.context.id);
+        alert();
 
         
    },
