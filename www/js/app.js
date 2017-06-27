@@ -4,10 +4,16 @@ var desktoparray = ['media/dateicon.png','media/duckicon.png','media/datetongue.
 
 
 function fcm(){
-alert('fcm');
-   // FCMPlugin.onTokenRefresh(function(token){
-  //  alert( token );
-//});
+facebookConnectPlugin.login(["public_profile", "email"], 
+               function(response) {
+             console.log("FACEBOOK CALLED"); 
+             console.log(response); 
+            }, 
+            function(error) {
+                console.log("FACEBOOK ERROR CALLED"); 
+                console.log("Error");   
+            }
+         );
    
 }
 	
@@ -352,22 +358,6 @@ firebase.database().ref('users/' + f_uid).update({
 };
 
 
-document.addEventListener('deviceready', function () { 
-alert('device ready');
-	
-	
-	facebookConnectPlugin.login(["public_profile", "email"], 
-               function(response) {
-             console.log("FACEBOOK CALLED"); 
-             console.log(response); 
-            }, 
-            function(error) {
-                console.log("FACEBOOK ERROR CALLED"); 
-                console.log("Error");   
-            }
-         );
-	
-}, false);
 
 
 function startApp(){
