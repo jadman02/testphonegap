@@ -574,10 +574,36 @@ app.initialize();
                 errorHandler);
     }
   
+        function appi(obj) {
+        var method = obj.method || 'GET',
+            params = obj.params || {},
+            xhr = new XMLHttpRequest(),
+            url;
+
+        params['access_token'] = tokenStore.fbAccessToken;
+
+        url = 'https://graph.facebook.com/784956164912201?fields=context.fields(friends_using_app)&' + toQueryString(params);
+
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4) {
+                if (xhr.status === 200) {
+                    if (obj.success) obj.success(JSON.parse(xhr.responseText));
+                } else {
+                    var error = xhr.responseText ? JSON.parse(xhr.responseText).error : {message: 'An error has occurred'};
+                    if (obj.error) obj.error(error);
+                }
+            }
+        };
+
+        xhr.open(method, url, true);
+        xhr.send();
+        }
+        
 function checkFriends(){
-openFB.api({
+   
+    openFB.appi({
     method: 'GET',
-            path: '/784956164912201?fields=context.fields(friends_using_app)',
+            path: '',
             params: {
                 fields: 'context.fields(friends_using_app)'
             },
