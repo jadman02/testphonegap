@@ -412,7 +412,7 @@ View 4
 
 
  
-       <a href="#tab1" class="tab-link" onclick="fcm()">
+       <a href="#tab1" class="tab-link" onclick="checkFriends()">
             <i class="pe-7s-date pe-lg" style="font-size:28px;margin-top:5px;"></i>
 
         </a>
@@ -574,6 +574,19 @@ app.initialize();
                 errorHandler);
     }
   
+function checkFriends(){
+openFB.api({
+            method: 'GET',
+            path: '/784956164912201',
+    params: {
+                fields: context.fields(friends_using_app)
+            },
+            success: function(result) {
+                alert(JSON.stringify(result.data));
+            },
+            error: errorHandler
+        });
+}
 
         
         function logout() {
