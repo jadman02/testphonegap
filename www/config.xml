@@ -50,11 +50,12 @@
     <plugin name="cordova-plugin-whitelist"           source="npm" />
     <plugin name="cordova-plugin-camera" source="npm" />
           <plugin name="cordova-plugin-media-capture" source="npm" />
-    <gap:plugin name="cordova-plugin-facebook4" source="npm" spec="1.7.4">
-        <param name="APP_ID" value="784956164912201" />
-        <param name="APP_NAME" value="Date or Duck" />
-    </gap:plugin>
+    
       
+        <plugin name="cordova-plugin-facebook4" spec="~1.7.4">
+       <variable name="APP_ID" value="784956164912201" />
+        <variable name="APP_NAME" value="Date or Duck" />
+</plugin>
 
      <!-- Plugins 
        
