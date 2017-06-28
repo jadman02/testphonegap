@@ -53,7 +53,7 @@ firebase.database().ref('users/' + f_uid).update({
 $.post( "http://www.dateorduck.com/updatewant.php", { projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,uid:f_uid,want:homewant} )
 
   .done(function( data ) {
-
+alert('db updated');
 //getMatches();  
  
   
@@ -1283,7 +1283,7 @@ ethnicity_u = snapshot.child("ethnicity").val();
 height_u = snapshot.child("height").val();
 weight_u = snapshot.child("weight").val();
 homewant = snapshot.child("homewant").val();
-
+alert('firebase' + homewant);
 if (snapshot.child("photoresponse").val()){
 	    
 	    if (snapshot.child("photoresponse").val() == 'Y'){f_image = snapshot.child("uploadurl").val();}
