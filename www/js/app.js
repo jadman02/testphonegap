@@ -6051,7 +6051,7 @@ if ($('.photo-browser').length > 0){return false;}
 
 myApp.closeModal('.picker-sub');
 
-
+alert('here');
 
 
 //firebase.database().ref("users/" + f_uid).off('value', userpref);
@@ -6061,21 +6061,12 @@ var datefunction = ""
        if ($('.chatpop').length > 0) {$( ".chatpop" ).css( "z-index","10000" );photobrowserclass="photo-browser-close-link";}
        else{duckfunction = "createDuck()";datefunction = "createDate1()";}
 
-var to_open = 0;
+var to_open = openprofile;
 
 
        if ($('.chatpop').length > 0 || chatorigin) {}
 else {
-var countednumbers = 0;
 
-
-for (var i = f_lower; i < arraynumber; i++) {
-
-countednumbers = countednumbers + all_matches_photos[i].length;
-
-}
-
-to_open = countednumbers + openprofile;
 
 
 }
