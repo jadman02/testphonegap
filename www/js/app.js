@@ -630,8 +630,6 @@ var randomswiper, recentswiper, nearbyswiper;
 
 function getMatches(){
 
-new_all = [];
-
 //can put any ads here
 if ((initialload === false) && (availarray.length === 0)){
 
@@ -772,8 +770,9 @@ $.post( "locations.php", { want:homewant,projectid:f_projectid,token:idToken,cur
 
 fetched ++;
 alert('worked');	
+});
 }
-});	
+	
 
 $.post( "http://www.dateorduck.com/locations.php", { want:homewant,projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,upper:f_upper,lower:f_lower,radius:radiussize,sexuality:sexuality,sortby:sortby,latitudep:latitudep,longitudep:longitudep} )
   .done(function( data ) {
