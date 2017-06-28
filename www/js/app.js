@@ -36,7 +36,7 @@ else{$( ".homedate" ).addClass("active");
     }
 
     
- alert(homewant);   
+   
 }
 
 
@@ -630,6 +630,8 @@ var randomswiper, recentswiper, nearbyswiper;
 
 function getMatches(){
 
+	alert('getmatch trigger' + homewant);
+	
 //can put any ads here
 if ((initialload === false) && (availarray.length === 0)){
 
@@ -637,7 +639,7 @@ if ((initialload === false) && (availarray.length === 0)){
 
 }
 
-	alert(homewant);
+	
 	
 if (!homewant || homewant =='offline'){
 
@@ -1290,12 +1292,7 @@ else{
 f_image = 'https://graph.facebook.com/'+f_uid+'/picture?width=100&height=100';
 }
 	    
-       if(homewant){
-       if (homewant == 'offline'){$( ".homedate" ).removeClass('active');$( ".homeduck" ).removeClass('active'); }
-     if (homewant == 'dateduck'){$( ".homedate" ).addClass('active');$( ".homeduck" ).addClass('active'); }
-   if (homewant == 'duck'){$( ".homedate" ).removeClass('active');$( ".homeduck" ).addClass('active'); }
-    if (homewant == 'date'){$( ".homedate" ).addClass('active');$( ".homeduck" ).removeClass('active'); }
-}
+      
 sortby = snapshot.child("sort").val();
 	    
 	    
@@ -1332,7 +1329,13 @@ if (f_gender == 'Female' && f_interested == 'Women') {sexuality = 'lesbian';}
 if (f_gender == 'Female' && f_interested == 'Men') {sexuality = 'female';}
        
    if (loadpref=== false){
- loadpref = true;
+  if(homewant){
+       if (homewant == 'offline'){$( ".homedate" ).removeClass('active');$( ".homeduck" ).removeClass('active'); }
+     if (homewant == 'dateduck'){$( ".homedate" ).addClass('active');$( ".homeduck" ).addClass('active'); }
+   if (homewant == 'duck'){$( ".homedate" ).removeClass('active');$( ".homeduck" ).addClass('active'); }
+    if (homewant == 'date'){$( ".homedate" ).addClass('active');$( ".homeduck" ).removeClass('active'); }
+}
+	   loadpref = true;
  establishNotif();
 
      }  
