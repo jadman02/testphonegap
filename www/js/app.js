@@ -598,9 +598,9 @@ updateGeo();
 
 
 
-function mainLoaded(id){
+function mainLoaded(id,pid){
 $( ".iconpos_" + id ).show();
-$( ".default_" + id ).hide();
+$( ".default_" + pid).hide();
 
 var indivNotif = firebase.database().ref('notifications/' + f_uid + '/' + id);
 indivNotif.once('value', function(snapshot) {
