@@ -44,7 +44,7 @@ function updateWant(){
 
 firebase.database().ref('users/' + f_uid).update({
     homewant:homewant
-  }).then(function() {alert('done');});
+  }).then(function() {});
 	
    //Will update firebase user homewant
    //Check if updateuser function is in go daddy file
@@ -53,7 +53,6 @@ firebase.database().ref('users/' + f_uid).update({
 $.post( "http://www.dateorduck.com/updatewant.php", { projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,uid:f_uid,want:homewant} )
 
   .done(function( data ) {
-alert('db updated');
 //getMatches();  
  
   
