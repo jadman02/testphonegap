@@ -629,8 +629,6 @@ var randomswiper, recentswiper, nearbyswiper;
 
 function getMatches(){
 
-new_all = [];
-
 //can put any ads here
 if ((initialload === false) && (availarray.length === 0)){
 
@@ -767,7 +765,7 @@ for (q = 0; q < fetch.length; q++) {
 
 $.post( "locations.php", { want:homewant,projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,upper:f_upper,lower:f_lower,radius:radiussize,sexuality:sexuality,sortby:fetch[q],latitudep:latitudep,longitudep:longitudep} )
   .done(function( data ) {
-
+alert('locations');
 fetched ++;
 
 
