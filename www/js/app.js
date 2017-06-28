@@ -622,11 +622,7 @@ else{$(  ".arrowdivhome_" + id ).empty();}
 var all_matches_photos=[];
 var new_all = [];
 var main_all = [];
-var random_all = [];
-var nearby_all = [];
-var recent_all = [];
-var nearbyshare = false, recentshare = false;
-var randomswiper, recentswiper, nearbyswiper;
+
 
 function getMatches(){
 
@@ -685,10 +681,8 @@ initialload = true;
 if (updatecontinuously){}
 else {setInterval(function(){ justGeo(); }, 599000);updatecontinuously=true;}
 
-new_all = [];
-random_all = [];
-nearby_all = [];
-recent_all = [];
+
+
 
     if (timeoutactive === true) {clearTimeout(noresultstimeout);}
     
@@ -697,99 +691,122 @@ recent_all = [];
     
 
 
+
 firebase.auth().currentUser.getToken().then(function(idToken) {
 
 
-var homewant = 'dateduck';
-
-randomswiper = myApp.swiper('.swiper-random', {
-    slidesPerView:2.5,
-    freeMode:true,
-    slidesOffsetAfter:12,
-        preloadImages: false,
-    lazyLoading: true,
-    watchSlidesVisibility:true,
-    watchSlidesProgress: true,
-
-    onClick:function(swiper, event) {
 
 
-new_all = random_all;
-var ageswiper = swiper.clickedSlide.classList[0].replace("age_", "");
-
-    photoBrowser(swiper.clickedIndex,'27');}
-  });
- 
-nearbyswiper = myApp.swiper('.swiper-nearby', {
-    slidesPerView:2.5,
-    freeMode:true,
-    slidesOffsetAfter:12,
-        preloadImages: false,
-    lazyLoading: true,
-    watchSlidesVisibility:true,
-    watchSlidesProgress: true,
-
-    onClick:function(swiper, event) {
-
-new_all = nearby_all;
-var ageswiper = swiper.clickedSlide.classList[0].replace("age_", "");
-
-if (nearbyshare){
-photoBrowser(swiper.clickedIndex,'27');
-}
-else{}
-    }
-  });
-  
-recentswiper = myApp.swiper('.swiper-recent', {
-  slidesPerView:2.5,
-    freeMode:true,
-    slidesOffsetAfter:12,
-        preloadImages: false,
-    lazyLoading: true,
-    watchSlidesVisibility:true,
-    watchSlidesProgress: true,
-
-    onClick:function(swiper, event) {
-new_all = recent_all;
-var ageswiper = swiper.clickedSlide.classList[0].replace("age_", "");
-if (recentshare){
-photoBrowser(swiper.clickedIndex,'27');
-}
-else{}
-}
-  });
- 
-
-var fetch = ['random','distance','activity'];
-var fetched = 0;
-for (q = 0; q < fetch.length; q++) { 
 
 
-$.post( "locations.php", { want:homewant,projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,upper:f_upper,lower:f_lower,radius:radiussize,sexuality:sexuality,sortby:fetch[q],latitudep:latitudep,longitudep:longitudep} )
+$.post( "http://www.dateorduck.com/locations.php", { want:homewant,projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,upper:f_upper,lower:f_lower,radius:radiussize,sexuality:sexuality,sortby:sortby,latitudep:latitudep,longitudep:longitudep} )
   .done(function( data ) {
-
-fetched ++;
-
-
 
 var result = JSON.parse(data); 
 
 console.log(data);
 console.log(result);
+$( ".content-here" ).empty();  
+ for (var i = f_lower; i <= f_upper; i++) {}
 
 var slidewidth = $( document ).width() / 2.5;
     var halfwidth = -Math.abs(slidewidth / 2.23);
      
-$( ".swiper-recent" ).css("height",slidewidth + "px");
-$( ".swiper-nearby" ).css("height",slidewidth + "px");
-$( ".swiper-random" ).css("height",slidewidth + "px");
-
+   //  var rownumber;
+  //  var calcrownumber = f_upper-f_lower;
+    
+   // var columnslides;
+  //  var specialstyles;
+  //  if (calcrownumber == 0){rownumber = 3;columnslides=9;}
+   // if (calcrownumber > 0){rownumber = 1;columnslides=1;}
 
     var  slide_number = 0;
- 
+    for (var i = f_lower; i <= f_upper; i++) {
+        
+     
 
- 
+        all_matches_photos[i] = [];
+    $( ".content-here" ).append(
+   
+   // '<span class="badge age-header header_'+i+'" style="display:none;text-align:left;float:left;width:100%;border-radius:0px;background-color:white;color:black;">'+i+'</span>'+
+      '  <div class="swiper-container swiper-container-loaded swiper-'+i+'" style="display:none;height:'+(slidewidth + 37)+'px;clear:both;background-color:white;">'+
+       '<div class="blockleft_'+i+'" style="z-index:999999;display:none;color:#007aff;padding:3px;height:25px;width:100%;background-color:#efeff4;position:absolute;left:0;bottom:0px;z-index:9999;"><div style="float:left;"><i  class="pe-7s-angle-left pe-2x" style="margin-left:-9px;color:#007aff;float:left;margin-top:-4px"></i><span style="float:left;font-size:12px;margin-left:-5px;margin-top:2px;">Age '+i+'</span></div></div>'+
+              '<div class="blockright_'+i+' multiple_'+i+'" style="z-index:999999;display:none;margin-top:-10px;color:#007aff;padding:3px;height:25px;width:100%;background-color:#efeff4;position:absolute;right:0px;bottom:0px;z-index:9999;"><div style="float:right;"><i  class="pe-7s-angle-right pe-2x" style="margin-right:-9px;color:#007aff;float:right;margin-top:-4px"></i><span style="float:right;font-size:12px;margin-right:-5px;margin-top:2px;">Age '+i+'</span></div></div>'+
+              '<div class="blockright_'+i+' single_'+i+'" style="z-index:999999;display:none;margin-top:-10px;color:#007aff;padding:3px;height:25px;width:100%;background-color:#efeff4;position:absolute;right:0px;bottom:0px;z-index:9999;"><div style="float:right;"><span style="float:right;font-size:12px;margin-right:2px;margin-top:2px;">Age '+i+'</span></div></div>'+
+    '<div class="swiper-wrapper wrapper_'+i+'">'+
+
+   // '<div class="swiper-slide"><div style="background-color:white;height:50%;width:50%;margin-top:50%;margin-left:25%;"></div></div>'+
+    '</div>'+
+
+'</div>'
+        
+        );
+        
+
+
+    
+    
+myApp.swiper('.swiper-' + i, {
+    slidesPerView:2.5,
+    freeMode:true,
+    //slidesOffsetBefore:halfwidth,
+    slidesOffsetAfter:12,
+        preloadImages: false,
+    // Enable lazy loading
+    lazyLoading: true,
+   //centeredSlides: true,
+    watchSlidesVisibility:true,
+    watchSlidesProgress: true,
+
+onSlideChangeEnd:function(swiper){
+
+var firstclasslist = $(swiper.slides[0]).attr("class").split(' ');
+ var currentswiper = firstclasslist[0].replace("age_", "");
+var swiperslideslength = swiper.slides.length;
+
+
+
+if (swiper.activeIndex === 0){$('.blockright_' + currentswiper).show();$('.blockleft_' + currentswiper).hide();
+}
+else {
+if (swiper.activeIndex > 0){
+//if(swiper.isEnd){console.log('going to start');swiper.slideTo(0);}
+if (swiper.activeIndex == swiperslideslength-2 || swiper.activeIndex == swiperslideslength-1){
+$('.blockright_' + currentswiper).hide();$('.blockleft_' + currentswiper).show();}
+
+else{
+
+//$('.blockright_' + currentswiper).hide();$('.blockleft_' + currentswiper).hide();
+}
+
+
+}
+
+
+
+}
+
+
+
+
+
+
+},
+
+    onClick:function(swiper, event) {
+
+var ageswiper = swiper.clickedSlide.classList[0].replace("age_", "");
+
+    photoBrowser(swiper.clickedIndex,ageswiper);}
+    //pagination:'.swiper-pagination'
+  });
+  
+  slide_number++;
+    
+ }
+
+	
+
 descriptionslist = [];
 nameslist = [];
 
@@ -800,7 +817,7 @@ nameslist = [];
    
    if (result == 77 ||(result.length ===1 && result[0].uid == f_uid ) ){
    
-
+   
    
     $( ".results-loader" ).hide();
     $('.content-here').append(
@@ -934,7 +951,7 @@ var matchdescription = result[i].description;
 
 
   var swipernumber = subtract - f_lower; 
-
+  var curswiper = $$('.swiper-container')[swipernumber].swiper;
   var graphid = result[i].uid;
 var distance = parseFloat(result[i].distance).toFixed(1);
 var distancerounded = parseFloat(result[i].distance).toFixed(0);
@@ -987,16 +1004,36 @@ var diff = (d_unix - timestampunix)/60;
 var activecircle;
 
 
-if (diff<11){activecircle = '<span style="position:absolute;left:10px;height:10px;width:10px;border-radius:50%;bottom:10px;background-color:#4cd964"></span>';}
-else{activecircle = '<span style="position:absolute;left:10px;bottom:10px;height:10px;width:10px;border-radius:50%;background-color:transparent;border:1px solid #ccc;"></span>';}
+if (diff<11){activecircle = '<span style="position:absolute;left:10px;height:10px;width:10px;border-radius:50%;bottom:45px;background-color:#4cd964"></span>';}
+else{activecircle = '<span style="position:absolute;left:10px;bottom:45px;height:10px;width:10px;border-radius:50%;background-color:transparent;border:1px solid #ccc;"></span>';}
 if ($('.slide_' + graphid).length){
   
 
   
- 
+   var classremove = $('.slide_' + graphid).attr("class").split(' ');
+  
+ var agej = classremove[0].replace("age_", "");
+  
+  for (var k = 0; i <= all_matches_photos[agej].length; k++) {
+     
+
+      
+      if (all_matches_photos[agej][k].url == 'https://graph.facebook.com/'+graphid+'/picture?type=large'){all_matches_photos[agej].splice(k, 1);}
+      
+  }
+
+  
+  
+  $('.slide_' + graphid).remove();
+
+var slidesleft = $(".age_" + agej ).length;
 
 
-
+if (slidesleft === 0) {
+    
+     $('.swiper-' + agej).hide();
+      $('.header_' + agej).hide();
+}
 
 
 
@@ -1032,70 +1069,88 @@ var index4 = f_date_me.indexOf(graphid);
 
 
 
-var randomid = Math.floor(Math.random() * 20);
+
 
 var slidecontent;
 if (index1 > -1) {
-slidecontent = '<div class="age_'+subtract+' swiper-slide slide_'+graphid+'" style="text-align:center;padding-top:3px;padding-left:3px;"><span class="preloader default_'+randomid+'"></span><div style="width:'+slidewidth+'px;margin:0 auto;"><div style="position:absolute;right:10px;top:0px;" class="arrowdivhome_'+graphid+'"></div><div class="distance_'+graphid+'" style="display:none;width:50px;background-color:#2196f3;color:white;z-index:999;padding:0.5px;position:absolute;left: 3px;z-index:1000;font-size:12px;">'+distancestring+'</div><img crossOrigin="Anonymous" id="photo_'+graphid+'" class="swiper-lazy pp photo_'+graphid+'" data-src="'+profilepicstringsmall+'" onload="$(this).fadeIn(700);mainLoaded(\''+graphid+'\',\''+randomid+'\');" style="display:none;'+imagestyle+'-webkit-filter:none;overflow:hidden;margin-top:0px;"/><div style="bottom:0px;right:0px;position:absolute;width:50px;overflow-x:hidden;height:50px;overflow-y:hidden;display:none;" class="icondiv iconpos_'+graphid+'"><img src="media/datefaceonly.png" style="width:100px;"></div>'+activecircle+'<p class="name_'+graphid+'" style="clear:both;font-weight:bold;margin-left:23px;margin-top:-30px;color:white;font-size:15px;text-align:left;">'+matchname+'</p></div></div>';   
+slidecontent = '<div class="age_'+subtract+' swiper-slide slide_'+graphid+'" style="text-align:center;padding-top:3px;padding-left:3px;"><span class="preloader default_'+graphid+'"></span><div style="width:'+slidewidth+'px;margin:0 auto;"><div style="position:absolute;right:10px;top:0px;" class="arrowdivhome_'+graphid+'"></div><div class="distance_'+graphid+'" style="display:none;width:50px;background-color:#2196f3;color:white;z-index:999;padding:0.5px;position:absolute;left: 3px;z-index:1000;font-size:12px;">'+distancestring+'</div><img crossOrigin="Anonymous" id="photo_'+graphid+'" class="swiper-lazy pp photo_'+graphid+'" data-src="'+profilepicstringsmall+'" onload="$(this).fadeIn(700);mainLoaded(\''+graphid+'\');" style="display:none;'+imagestyle+'-webkit-filter:none;overflow:hidden;margin-top:0px;"/><div style="bottom:34px;right:0px;position:absolute;width:50px;overflow-x:hidden;height:50px;overflow-y:hidden;display:none;" class="icondiv iconpos_'+graphid+'"><img src="media/datefaceonly.png" style="width:100px;"></div>'+activecircle+'<p class="name_'+graphid+'" style="clear:both;font-weight:bold;margin-left:23px;margin-top:-30px;color:white;font-size:15px;text-align:left;">'+matchname+'</p></div></div>';   
 }
 
 else if (index2 > -1) {
-slidecontent = '<div class="age_'+subtract+' swiper-slide slide_'+graphid+'" style="text-align:center;padding-top:3px;padding-left:3px;"><span class="preloader default_'+randomid+'"></span><div style="width:'+slidewidth+'px;margin:0 auto;"><div style="position:absolute;right:10px;top:0px;" class="arrowdivhome_'+graphid+'"></div><div class="distance_'+graphid+'" style="display:none;width:50px;background-color:#2196f3;color:white;z-index:999;padding:0.5px;position:absolute;left: 3px;z-index:1000;font-size:12px;">'+distancestring+'</div><img crossOrigin="Anonymous" id="photo_'+graphid+'" onload="$(this).fadeIn(700);mainLoaded(\''+graphid+'\',\''+randomid+'\');" class="swiper-lazy pp photo_'+graphid+'" data-src="'+profilepicstringsmall+'" style="'+imagestyle+'-webkit-filter:none;display:none;overflow:hidden;margin-top:0px;"/><div style="bottom:0px;right:0px;position:absolute;width:50px;overflow-x:hidden;height:50px;overflow-y:hidden;display:none;" class="icondiv iconpos_'+graphid+'"><img src="media/duckfaceonly.png" style="width:100px;"></div>'+activecircle+'<p class="name_'+graphid+'" style="clear:both;font-weight:bold;margin-left:23px;margin-top:-30px;color:white;font-size:15px;text-align:left;">'+matchname+'</p></div></div>';    
+slidecontent = '<div class="age_'+subtract+' swiper-slide slide_'+graphid+'" style="text-align:center;padding-top:3px;padding-left:3px;"><span class="preloader default_'+graphid+'"></span><div style="width:'+slidewidth+'px;margin:0 auto;"><div style="position:absolute;right:10px;top:0px;" class="arrowdivhome_'+graphid+'"></div><div class="distance_'+graphid+'" style="display:none;width:50px;background-color:#2196f3;color:white;z-index:999;padding:0.5px;position:absolute;left: 3px;z-index:1000;font-size:12px;">'+distancestring+'</div><img crossOrigin="Anonymous" id="photo_'+graphid+'" onload="$(this).fadeIn(700);mainLoaded(\''+graphid+'\');" class="swiper-lazy pp photo_'+graphid+'" data-src="'+profilepicstringsmall+'" style="'+imagestyle+'-webkit-filter:none;display:none;overflow:hidden;margin-top:0px;"/><div style="bottom:34px;right:0px;position:absolute;width:50px;overflow-x:hidden;height:50px;overflow-y:hidden;display:none;" class="icondiv iconpos_'+graphid+'"><img src="media/duckfaceonly.png" style="width:100px;"></div>'+activecircle+'<p class="name_'+graphid+'" style="clear:both;font-weight:bold;margin-left:23px;margin-top:-30px;color:white;font-size:15px;text-align:left;">'+matchname+'</p></div></div>';    
 
 } 
 
 
 
 else if (index3 > -1) {
-slidecontent = '<div class="age_'+subtract+' swiper-slide slide_'+graphid+'" style="text-align:center;padding-top:3px;padding-left:3px;"><span class="preloader default_'+randomid+'"></span><div style="width:'+slidewidth+'px;margin:0 auto;"><div style="position:absolute;right:10px;top:0px;" class="arrowdivhome_'+graphid+'"></div><div class="distance_'+graphid+'" style="display:none;width:50px;background-color:#ccc;color:white;z-index:999;padding:0.5px;position:absolute;left: 3px;z-index:1000;font-size:12px;">'+distancestring+'</div><img crossOrigin="Anonymous" id="photo_'+graphid+'" onload="$(this).fadeIn(700);mainLoaded(\''+graphid+'\',\''+randomid+'\');" class="swiper-lazy pp photo_'+graphid+'" data-src="'+profilepicstringsmall+'" style="'+imagestyle+'-webkit-filter:grayscale(80%);overflow:hidden;display:none;margin-top:0px;"/><div style="bottom:0px;right:0px;position:absolute;width:50px;overflow-x:hidden;height:50px;overflow-y:hidden;-webkit-filter:grayscale(1%);display:none;" class="icondiv iconpos_'+graphid+'"><img src="media/duckfaceonly.png" style="width:100px;"></div>'+activecircle+'<p class="name_'+graphid+'" style="-webkit-filter:grayscale(80%);clear:both;font-weight:bold;margin-left:23px;margin-top:-30px;color:white;font-size:15px;text-align:left;">'+matchname+'</p></div></div>';           
+slidecontent = '<div class="age_'+subtract+' swiper-slide slide_'+graphid+'" style="text-align:center;padding-top:3px;padding-left:3px;"><span class="preloader default_'+graphid+'"></span><div style="width:'+slidewidth+'px;margin:0 auto;"><div style="position:absolute;right:10px;top:0px;" class="arrowdivhome_'+graphid+'"></div><div class="distance_'+graphid+'" style="display:none;width:50px;background-color:#ccc;color:white;z-index:999;padding:0.5px;position:absolute;left: 3px;z-index:1000;font-size:12px;">'+distancestring+'</div><img crossOrigin="Anonymous" id="photo_'+graphid+'" onload="$(this).fadeIn(700);mainLoaded(\''+graphid+'\');" class="swiper-lazy pp photo_'+graphid+'" data-src="'+profilepicstringsmall+'" style="'+imagestyle+'-webkit-filter:grayscale(80%);overflow:hidden;display:none;margin-top:0px;"/><div style="bottom:34px;right:0px;position:absolute;width:50px;overflow-x:hidden;height:50px;overflow-y:hidden;-webkit-filter:grayscale(1%);display:none;" class="icondiv iconpos_'+graphid+'"><img src="media/duckfaceonly.png" style="width:100px;"></div>'+activecircle+'<p class="name_'+graphid+'" style="-webkit-filter:grayscale(80%);clear:both;font-weight:bold;margin-left:23px;margin-top:-30px;color:white;font-size:15px;text-align:left;">'+matchname+'</p></div></div>';           
 } 
 
 
 else if (index4 > -1) {
-slidecontent = '<div class="age_'+subtract+' swiper-slide slide_'+graphid+'" style="text-align:center;padding-top:3px;padding-left:3px;"><span class="preloader default_'+randomid+'"></span><div style="width:'+slidewidth+'px;margin:0 auto;"><div style="float" class="arrowdivhome_'+graphid+'"></div><div class="distance_'+graphid+'" style="display:none;width:50px;background-color:#ccc;color:white;z-index:999;padding:0.5px;position:absolute;left: 3px;z-index:1000;font-size:12px;">'+distancestring+'</div><img crossOrigin="Anonymous" id="photo_'+graphid+'" onload="$(this).fadeIn(700);mainLoaded(\''+graphid+'\',\''+randomid+'\');" class="swiper-lazy pp photo_'+graphid+'" data-src="'+profilepicstringsmall+'" style="'+imagestyle+'-webkit-filter:grayscale(80%);overflow:hidden;display:none;margin-top:0px;"/><div style="bottom:0px;right:0px;position:absolute;width:50px;overflow-x:hidden;height:50px;overflow-y:hidden;-webkit-filter:grayscale(1%);display:none;" class="icondiv iconpos_'+graphid+'"><img src="media/datefaceonly.png" style="width:100px;"></div>'+activecircle+'<p class="name_'+graphid+'" style="-webkit-filter:grayscale(80%);clear:both;font-weight:bold;margin-left:23px;margin-top:-30px;color:white;font-size:15px;text-align:left;">'+matchname+'</p></div></div>';      
+slidecontent = '<div class="age_'+subtract+' swiper-slide slide_'+graphid+'" style="text-align:center;padding-top:3px;padding-left:3px;"><span class="preloader default_'+graphid+'"></span><div style="width:'+slidewidth+'px;margin:0 auto;"><div style="float" class="arrowdivhome_'+graphid+'"></div><div class="distance_'+graphid+'" style="display:none;width:50px;background-color:#ccc;color:white;z-index:999;padding:0.5px;position:absolute;left: 3px;z-index:1000;font-size:12px;">'+distancestring+'</div><img crossOrigin="Anonymous" id="photo_'+graphid+'" onload="$(this).fadeIn(700);mainLoaded(\''+graphid+'\');" class="swiper-lazy pp photo_'+graphid+'" data-src="'+profilepicstringsmall+'" style="'+imagestyle+'-webkit-filter:grayscale(80%);overflow:hidden;display:none;margin-top:0px;"/><div style="bottom:34px;right:0px;position:absolute;width:50px;overflow-x:hidden;height:50px;overflow-y:hidden;-webkit-filter:grayscale(1%);display:none;" class="icondiv iconpos_'+graphid+'"><img src="media/datefaceonly.png" style="width:100px;"></div>'+activecircle+'<p class="name_'+graphid+'" style="-webkit-filter:grayscale(80%);clear:both;font-weight:bold;margin-left:23px;margin-top:-30px;color:white;font-size:15px;text-align:left;">'+matchname+'</p></div></div>';      
 } 
 
 
 else {
-slidecontent = '<div class="age_'+subtract+' swiper-slide slide_'+graphid+'" style="text-align:center;padding-top:3px;padding-left:3px;"><span class="preloader default_'+randomid+'"></span><div style="width:'+slidewidth+'px;margin:0 auto;"><div style="position:absolute;right:10px;top:0px;" class="arrowdivhome_'+graphid+'"></div><div class="distance_'+graphid+'" style="display:none;width:50px;background-color:#ccc;color:white;z-index:999;padding:0.5px;position:absolute;left: 3px;z-index:1000;font-size:12px;">'+distancestring+'</div><img crossOrigin="Anonymous" id="photo_'+graphid+'" onload="$(this).fadeIn(700);mainLoaded(\''+graphid+'\',\''+randomid+'\');" class="swiper-lazy pp photo_'+graphid+'" data-src="'+profilepicstringsmall+'" style="'+imagestyle+'-webkit-filter:grayscale(80%);overflow:hidden;display:none;margin-top:0px;"><div style="bottom:0px;right:0px;position:absolute;width:50px;overflow-x:hidden;height:50px;overflow-y:hidden;display:none;" class="icondiv iconpos_'+graphid+'"></div>'+activecircle+'<p class="name_'+graphid+'" style="-webkit-filter:grayscale(80%);clear:both;font-weight:bold;margin-top:-30px;color:white;font-size:15px;text-align:left;float:left;margin-left:23px;">'+matchname+'</p></div></div>';    
+slidecontent = '<div class="age_'+subtract+' swiper-slide slide_'+graphid+'" style="text-align:center;padding-top:3px;padding-left:3px;"><span class="preloader default_'+graphid+'"></span><div style="width:'+slidewidth+'px;margin:0 auto;"><div style="position:absolute;right:10px;top:0px;" class="arrowdivhome_'+graphid+'"></div><div class="distance_'+graphid+'" style="display:none;width:50px;background-color:#ccc;color:white;z-index:999;padding:0.5px;position:absolute;left: 3px;z-index:1000;font-size:12px;">'+distancestring+'</div><img crossOrigin="Anonymous" id="photo_'+graphid+'" onload="$(this).fadeIn(700);mainLoaded(\''+graphid+'\');" class="swiper-lazy pp photo_'+graphid+'" data-src="'+profilepicstringsmall+'" style="'+imagestyle+'-webkit-filter:grayscale(80%);overflow:hidden;display:none;margin-top:0px;"><div style="bottom:34px;right:0px;position:absolute;width:50px;overflow-x:hidden;height:50px;overflow-y:hidden;display:none;" class="icondiv iconpos_'+graphid+'"></div>'+activecircle+'<p class="name_'+graphid+'" style="-webkit-filter:grayscale(80%);clear:both;font-weight:bold;margin-top:-30px;color:white;font-size:15px;text-align:left;float:left;margin-left:23px;">'+matchname+'</p></div></div>';    
 
 }
 
-if (fetched == 1){randomswiper.appendSlide(slidecontent);
+
+
+
+
+
+
+
+
+if(
+
+
+all_matches_photos[subtract].length === 0){curswiper.appendSlide(slidecontent);
+all_matches_photos[subtract].push({widthslides:result[i].widthslides,heightslides:result[i].heightslides,availarraystring:availarraystring,minutes:diff,distancenumber:distance,distancestring:distancestring,photocount:photocount,photos:photostring,name:matchname,age:subtract,description:matchdescription,id:graphid,url:'https://graph.facebook.com/'+graphid+'/picture?width=828',caption:'...',industry: industry_d, status: status_d, politics:politics_d,eyes:eyes_d,body:body_d,religion:religion_d,zodiac:zodiac_d,ethnicity:ethnicity_d,height:height_d,weight:weight_d});
+}
+else {
+
+
+if(sortby=='random'){
+
+
+
+var insertindex = Math.floor(Math.random() * all_matches_photos[subtract].length) +0;
+insertAfterNthChild($('.wrapper_' + subtract), insertindex, slidecontent); 
+all_matches_photos[subtract].splice(insertindex, 0, {widthslides:result[i].widthslides,heightslides:result[i].heightslides,availarraystring:availarraystring,minutes:diff,distancestring:distancestring,distancenumber:distance,photocount:photocount,photos:photostring,name:matchname,age:subtract,description:matchdescription,id:graphid,url:'https://graph.facebook.com/'+graphid+'/picture?width=828',caption:'...',industry: industry_d, status: status_d, politics:politics_d,eyes:eyes_d,body:body_d,religion:religion_d,zodiac:zodiac_d,ethnicity:ethnicity_d,height:height_d,weight:weight_d});
+}
+
+
+if(sortby=='distance' || sortby == 'activity'){
+curswiper.appendSlide(slidecontent);
+all_matches_photos[subtract].push({widthslides:result[i].widthslides,heightslides:result[i].heightslides,availarraystring:availarraystring,minutes:diff,distancestring:distancestring,distancenumber:distance,photocount:photocount,photos:photostring,name:matchname,age:subtract,description:matchdescription,id:graphid,url:'https://graph.facebook.com/'+graphid+'/picture?width=828',caption:'...',industry: industry_d, status: status_d, politics:politics_d,eyes:eyes_d,body:body_d,religion:religion_d,zodiac:zodiac_d,ethnicity:ethnicity_d,height:height_d,weight:weight_d});
+
+}
+
+
+}
+
+
+
+    
+
+
 
 
   
 
-random_all.push({widthslides:result[i].widthslides,heightslides:result[i].heightslides,availarraystring:availarraystring,minutes:diff,distancenumber:distance,distancestring:distancestring,photocount:photocount,photos:photostring,name:matchname,age:subtract,description:matchdescription,id:graphid,url:'https://graph.facebook.com/'+graphid+'/picture?width=828',caption:'...',industry: industry_d, status: status_d, politics:politics_d,eyes:eyes_d,body:body_d,religion:religion_d,zodiac:zodiac_d,ethnicity:ethnicity_d,height:height_d,weight:weight_d});
+//curswiper.slideNext();
+ //console.log('herenext');  
 
-if (random_all[0].id == graphid || random_all[1].id == graphid || random_all[2].id == graphid){
+
+if (all_matches_photos[subtract][0].id == graphid || all_matches_photos[subtract][1].id == graphid || all_matches_photos[subtract][2].id == graphid){
    
 
- $(".photo_"+graphid).attr("src", profilepicstringsmall); 
-
-}
-
-}
-if (fetched == 2){nearbyswiper.appendSlide(slidecontent);
-nearby_all.push({widthslides:result[i].widthslides,heightslides:result[i].heightslides,availarraystring:availarraystring,minutes:diff,distancenumber:distance,distancestring:distancestring,photocount:photocount,photos:photostring,name:matchname,age:subtract,description:matchdescription,id:graphid,url:'https://graph.facebook.com/'+graphid+'/picture?width=828',caption:'...',industry: industry_d, status: status_d, politics:politics_d,eyes:eyes_d,body:body_d,religion:religion_d,zodiac:zodiac_d,ethnicity:ethnicity_d,height:height_d,weight:weight_d});
-
-if (nearby_all[0].id == graphid || nearby_all[1].id == graphid || nearby_all[2].id == graphid){
-   
-
- $(".photo_"+graphid).attr("src", profilepicstringsmall); 
-
-}
-
-}
-if (fetched == 3){recentswiper.appendSlide(slidecontent);
-recent_all.push({widthslides:result[i].widthslides,heightslides:result[i].heightslides,availarraystring:availarraystring,minutes:diff,distancenumber:distance,distancestring:distancestring,photocount:photocount,photos:photostring,name:matchname,age:subtract,description:matchdescription,id:graphid,url:'https://graph.facebook.com/'+graphid+'/picture?width=828',caption:'...',industry: industry_d, status: status_d, politics:politics_d,eyes:eyes_d,body:body_d,religion:religion_d,zodiac:zodiac_d,ethnicity:ethnicity_d,height:height_d,weight:weight_d});
-
-if (recent_all[0].id == graphid || recent_all[1].id == graphid || recent_all[2].id == graphid){
-   
-
- $(".photo_"+graphid).attr("src", profilepicstringsmall); 
-
-}
+  $(".photo_"+graphid).attr("src", profilepicstringsmall); 
 
 }
 
@@ -1104,9 +1159,15 @@ if (recent_all[0].id == graphid || recent_all[1].id == graphid || recent_all[2].
 
 
 
+  
+ // all_matches_photos[subtract].push({url:'https://graph.facebook.com/'+graphid+'/picture?type=large',caption:'...'});      
+
+  
+  //all_matches_photos[subtract].push({url:'https://graph.facebook.com/'+graphid+'/picture?type=large',caption:'...'});
+  //all_matches_photos[subtract].unshift({url:'https://graph.facebook.com/'+graphid+'/picture?type=large',caption:'...'});
 
 
-
+  
   
   
   
@@ -1122,22 +1183,67 @@ if (recent_all[0].id == graphid || recent_all[1].id == graphid || recent_all[2].
 
 
    
+var swiperselector=0;   
+   for (var i = f_lower; i <= f_upper; i++) {
 
+console.log(all_matches_photos[i].length);
+
+if (all_matches_photos[i].length >1){$('.multiple_'+i).show();$('.single_'+i).remove();}else{$('.single_'+i).show();$('.multiple_'+i).remove();}
+if (all_matches_photos[i].length ===0){$( ".swiper-"+i ).hide();}
+
+
+
+
+
+$$('.swiper-container')[swiperselector].swiper.updateContainerSize();
+  $$('.swiper-container')[swiperselector].swiper.updateProgress(); 
+$$('.swiper-container')[swiperselector].swiper.updateSlidesSize();
+$$('.swiper-container')[swiperselector].swiper.updateClasses();
+//$$('.swiper-container')[swiperselector].swiper.slideTo(0);
+
+
+
+
+//$('.swiper-container')[swiperselector].swiper.appendSlide('<div style="width:'+slidewidth+'px;"><img src="media/datetongue.png" style="width:50px;left:50%;top:50%;margin-left:-25px;margin-top:-25px;"></div>')
+
+
+
+  
+  
+swiperselector ++;
+for (var j = 0; j < all_matches_photos[i].length; j++) {
+new_all.push(all_matches_photos[i][j]);
+
+
+
+
+
+}
+
+
+
+}
  
    
- $( ".home-title" ).show(); 
-if (nearbyshare){
-//remove blur, unlock swiper
+  if (new_all.length === 0){
 
-}
-else{   $( ".nearby-helper" ).show();}
-if (recentshare){
-//remove blur, unlock swiper
-}
-else{   $( ".recent-helper" ).show();}   
+    $( ".results-loader" ).hide();
+    $('.content-here').append(
+    '<div class="no-results-div" style="text-align:center;margin:0 auto;width:300px;position:absolute;top:50%;left:50%;margin-left:-150px;margin-top:-70px;">'+
+    
+    '<img src="media/datetongue.png" style="width:80px;margin:0 auto;">'+
+    
+   '<h3>No one is nearby</h3><p style="padding-top:0px;margin-top:-10px;">Try changing your search radius, </br>age range or filters.</p></br>'+
+
+
+   
+
+    '</div>');
+} 
+   
     
     });
-}    
+    
     
    
 
@@ -1153,8 +1259,12 @@ else{   $( ".recent-helper" ).show();}
     
     
     $( ".ploader" ).hide();
-    
-    $( ".toolbar" ).show();
+
+   
+   
+ $( ".buttons-home" ).show();
+	$( ".toolbar" ).show();
+	   $( ".statusbar-overlay" ).css("background-color","#2196f3");
     $( ".loginbutton" ).show();
 $( ".login-loader" ).hide();
     
