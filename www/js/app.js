@@ -709,10 +709,11 @@ randomswiper = myApp.swiper('.swiper-random', {
 
     onClick:function(swiper, event) {
 
-alert('yo');
+
 new_all = random_all;
 
-
+alert(swiper.clickedIndex);
+	    alert(new_all);
     photoBrowser(swiper.clickedIndex,'27');}
   });
  
