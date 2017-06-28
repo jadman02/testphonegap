@@ -709,9 +709,9 @@ randomswiper = myApp.swiper('.swiper-random', {
 
     onClick:function(swiper, event) {
 
-
+alert('yo');
 new_all = random_all;
-var ageswiper = swiper.clickedSlide.classList[0].replace("age_", "");
+
 
     photoBrowser(swiper.clickedIndex,'27');}
   });
@@ -728,7 +728,7 @@ nearbyswiper = myApp.swiper('.swiper-nearby', {
     onClick:function(swiper, event) {
 
 new_all = nearby_all;
-var ageswiper = swiper.clickedSlide.classList[0].replace("age_", "");
+
 
 if (nearbyshare){
 photoBrowser(swiper.clickedIndex,'27');
@@ -748,7 +748,7 @@ recentswiper = myApp.swiper('.swiper-recent', {
 
     onClick:function(swiper, event) {
 new_all = recent_all;
-var ageswiper = swiper.clickedSlide.classList[0].replace("age_", "");
+
 if (recentshare){
 photoBrowser(swiper.clickedIndex,'27');
 }
