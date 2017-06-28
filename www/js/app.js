@@ -629,7 +629,7 @@ var randomswiper, recentswiper, nearbyswiper;
 
 function getMatches(){
 
-	alert('getmatch trigger' + homewant);
+	//alert('getmatch trigger' + homewant);
 	
 //can put any ads here
 if ((initialload === false) && (availarray.length === 0)){
@@ -1235,7 +1235,7 @@ if(userpref) {firebase.database().ref('users/' + f_uid).off('value', userpref);}
 userpref = firebase.database().ref('users/' + f_uid).on("value",function(snapshot) {
     var userexists = snapshot.child('lower').exists(); // true
     
-
+alert('trigger');
     
     if (userexists) { 
     
