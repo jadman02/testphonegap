@@ -637,6 +637,8 @@ if ((initialload === false) && (availarray.length === 0)){
 
 }
 
+	alert(homewant);
+	
 if (!homewant || homewant =='offline'){
 
 	$('.content-here').empty();
