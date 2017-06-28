@@ -1488,7 +1488,23 @@ if(((obj.second_number != f_uid) && (obj.secondnumberduck == 'Y')) && ((obj.firs
 });
 
 $( ".content-here" ).empty();            
-$( ".results-loader" ).show();            
+if (random_all.length > 0){
+
+randomswiper.removeAllSlides();
+nearbyswiper.removeAllSlides();
+recentswiper.removeAllSlides();
+randomswiper.destroy();
+nearbyswiper.destroy();
+recentswiper.destroy();
+} 
+
+
+          $( ".home-title" ).hide(); 
+          
+          $( ".nearby-helper" ).hide(); 
+                    $( ".recent-helper" ).hide(); 
+          
+$( ".results-loader" ).show();          
 getWifilocation();
     
 
