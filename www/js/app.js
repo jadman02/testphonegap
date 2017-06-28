@@ -43,7 +43,7 @@ else{$( ".homedate" ).addClass("active");
 function updateWant(){
 
 firebase.database().ref('users/' + f_uid).update({
-    homewant : homewant
+    homewant:homewant
   });
 
    //Will update firebase user homewant
