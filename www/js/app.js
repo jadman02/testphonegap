@@ -622,7 +622,11 @@ else{$(  ".arrowdivhome_" + id ).empty();}
 var all_matches_photos=[];
 var new_all = [];
 var main_all = [];
-
+var random_all = [];
+var nearby_all = [];
+var recent_all = [];
+var nearbyshare = false, recentshare = false;
+var randomswiper, recentswiper, nearbyswiper;
 
 function getMatches(){
 
@@ -681,7 +685,10 @@ initialload = true;
 if (updatecontinuously){}
 else {setInterval(function(){ justGeo(); }, 599000);updatecontinuously=true;}
 
-
+new_all = [];
+random_all = [];
+nearby_all = [];
+recent_all = [];
 
 
     if (timeoutactive === true) {clearTimeout(noresultstimeout);}
@@ -695,7 +702,67 @@ else {setInterval(function(){ justGeo(); }, 599000);updatecontinuously=true;}
 firebase.auth().currentUser.getToken().then(function(idToken) {
 
 
+randomswiper = myApp.swiper('.swiper-random', {
+    slidesPerView:2.5,
+    freeMode:true,
+    slidesOffsetAfter:12,
+        preloadImages: false,
+    lazyLoading: true,
+    watchSlidesVisibility:true,
+    watchSlidesProgress: true,
 
+    onClick:function(swiper, event) {
+
+
+new_all = random_all;
+var ageswiper = swiper.clickedSlide.classList[0].replace("age_", "");
+
+    photoBrowser(swiper.clickedIndex,'27');}
+  });
+ 
+nearbyswiper = myApp.swiper('.swiper-nearby', {
+    slidesPerView:2.5,
+    freeMode:true,
+    slidesOffsetAfter:12,
+        preloadImages: false,
+    lazyLoading: true,
+    watchSlidesVisibility:true,
+    watchSlidesProgress: true,
+
+    onClick:function(swiper, event) {
+
+new_all = nearby_all;
+var ageswiper = swiper.clickedSlide.classList[0].replace("age_", "");
+
+if (nearbyshare){
+photoBrowser(swiper.clickedIndex,'27');
+}
+else{}
+    }
+  });
+  
+recentswiper = myApp.swiper('.swiper-recent', {
+  slidesPerView:2.5,
+    freeMode:true,
+    slidesOffsetAfter:12,
+        preloadImages: false,
+    lazyLoading: true,
+    watchSlidesVisibility:true,
+    watchSlidesProgress: true,
+
+    onClick:function(swiper, event) {
+new_all = recent_all;
+var ageswiper = swiper.clickedSlide.classList[0].replace("age_", "");
+if (recentshare){
+photoBrowser(swiper.clickedIndex,'27');
+}
+else{}
+}
+  });
+ 
+
+var fetch = ['random','distance','activity'];
+var fetched = 0;
 
 
 
