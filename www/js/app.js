@@ -6061,13 +6061,13 @@ var datefunction = ""
        if ($('.chatpop').length > 0) {$( ".chatpop" ).css( "z-index","10000" );photobrowserclass="photo-browser-close-link";}
        else{duckfunction = "createDuck()";datefunction = "createDate1()";}
 
-var to_open = openprofile;
+var to_open = 0;
 
 
        if ($('.chatpop').length > 0 || chatorigin) {}
 else {
 
-
+to_open = openprofile;
 
 }
 var hiddendivheight = $( window ).height() - 40;
