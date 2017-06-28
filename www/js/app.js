@@ -1027,8 +1027,8 @@ var index4 = f_date_me.indexOf(graphid);
 
 
 
+var randomid = Math.floor(Math.random() * (1000000000 - 0 + 1));
 
-var randomid = Math.floor(Math.random() * 20);
 
 var slidecontent;
 if (index1 > -1) {
