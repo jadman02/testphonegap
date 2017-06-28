@@ -36,7 +36,7 @@ else{$( ".homedate" ).addClass("active");
     }
 
     
-    
+ alert(homewant);   
 }
 
 
