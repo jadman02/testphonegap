@@ -616,26 +616,7 @@ openFB.login(
                 }, {scope: 'user_friends'});
 }
 
-        function getHometown(){
-openFB.login(
-                function(response) {
-                    if(response.status === 'connected') {
 
-                        alert('Facebook login succeeded, got access token: ' + response.authResponse.accessToken);
-                        
-                        window.localStorage.setItem("tokenStore", response.authResponse.accessToken);
-                        
-                        //update
-                        
-                    } else {
-                      
-                        if (response.error ==='undefined') {myApp.alert('Please login to start', 'Login required');}
-                       else {myApp.alert('Facebook login failed: ' + response.error, 'Oops');}
-                        
-
-                    }
-                }, {scope: 'user_hometown'});
-}
         
         function logout() {
         openFB.logout(
