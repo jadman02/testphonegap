@@ -4414,7 +4414,7 @@ new_all = singleuserarray;
 if (singleuserarray[0].availarraystring !== ''){
   $(".availabilitylistblock_"+singleuserarray[0].id).remove();
 	 $(".availtitle").remove();
-	 $( ".profileyo_" + singleuserarray[0].id ).prepend(
+	 $( ".profileyo_" + singleuserarray[0].id ).append(
     '<div class="content-block-title availtitle" style="padding-top:0px;clear:both;margin-top:-20px;">Availability</div>'+
 
 '<div class="list-block media-list availabilitylistblock_'+singleuserarray[0].id+'" style="margin-top:0px;clear:both;margin-bottom:-40px;">'+
