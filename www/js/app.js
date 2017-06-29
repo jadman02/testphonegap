@@ -1299,7 +1299,7 @@ ethnicity_u = snapshot.child("ethnicity").val();
 height_u = snapshot.child("height").val();
 weight_u = snapshot.child("weight").val();
 homewant = snapshot.child("homewant").val();
-alert('firebase' + homewant);
+
 if (snapshot.child("photoresponse").val()){
 	    
 	    if (snapshot.child("photoresponse").val() == 'Y'){f_image = snapshot.child("uploadurl").val();}
@@ -1511,7 +1511,7 @@ if(((obj.second_number != f_uid) && (obj.secondnumberduck == 'Y')) && ((obj.firs
 
 $( ".content-here" ).empty();            
 if (random_all.length > 0){
-alert('length');
+
 randomswiper.removeAllSlides();
 nearbyswiper.removeAllSlides();
 recentswiper.removeAllSlides();
