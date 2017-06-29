@@ -33,7 +33,7 @@ if (response1.summary.total_count ==0) {friendstring = '0 of your friends use Da
 	if (response1.summary.total_count ==1) {friendstring = '1 of your friends uses Date or Duck' }
 	if (response1.summary.total_count >1) {friendstring = response1.summary.total_count + ' of your friends use Date or Duck' }
 	
-	if (response1.summary.total_count > 9){
+	if (response1.summary.total_count > 20){
 
 		 nearbyshare = true;
 		 recentshare = true;
@@ -44,6 +44,25 @@ if (response1.summary.total_count ==0) {friendstring = '0 of your friends use Da
 		$('.nearby-wrapper').css("-webkit-filter","none");
 		$('.recent-wrapper').css("-webkit-filter","none");
 
+		firebase.database().ref('users/' + f_uid).update({
+filtershare:'Y'
+  }).then(function() {});
+		
+		}
+	
+	if ((response1.summary.total_count > 4) && (response1.summary.total_count <20))){
+
+		 nearbyshare = true;
+		 recentshare = true;
+		$('.nearby-title').html('Nearby First');
+		$('.recent-title').html('Recently Online');
+		$('.nearby-helper').hide();
+		$('.recent-helper').hide();
+		$('.nearby-wrapper').css("-webkit-filter","none");
+		$('.recent-wrapper').css("-webkit-filter","none");
+
+
+		
 		}
 	
 	if ((response1.summary.total_count > 4) && (response1.summary.total_count <10)){
@@ -53,6 +72,8 @@ if (response1.summary.total_count ==0) {friendstring = '0 of your friends use Da
 		$('.nearby-wrapper').css("-webkit-filter","none");
 		$('.nearby-title').html('Nearby First');
 	
+
+		
 $('.recent-title').html('<i class="pe-7s-lock pe-lg"></i> Recently Online (Locked)');
 
 recentshare = false;
@@ -1396,6 +1417,7 @@ ethnicity_u = snapshot.child("ethnicity").val();
 height_u = snapshot.child("height").val();
 weight_u = snapshot.child("weight").val();
 homewant = snapshot.child("homewant").val();
+filtershare = snapshot.child("filtershare").val();
 
 if (snapshot.child("photoresponse").val()){
 	    
