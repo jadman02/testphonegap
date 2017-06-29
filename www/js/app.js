@@ -3640,8 +3640,8 @@ $( ".datearea" ).append(
 '</div>  '+
 
 
-'<div class="profileyo_'+ targetid+'" style="border-top:1px solid #c4c4c4;"></div>'+
-alert(new_all[0].sexuality);
+'<div class="profileyo_'+ targetid+'" style="border-top:1px solid #c4c4c4;">'+new_all[0].sexuality+'</div>'+
+
 
 
 '</div>');
