@@ -4244,7 +4244,7 @@ $( ".availabilitylistblock_"+singleuserarray[0].id ).append(
                  '<span class="badge" style="background-color:#4cd964;">'+availablearrayindividual[k].day.charAt(0)+'</span>'+
                 '</div>'+
        ' <div class="item-inner">'+
-       '<div style="position:absolute;right:5px;"><i class="pe-7-angle-right pe-3x"></i></div>'+
+       '<div style="float:right;right:10px;"><i class="pe-7-angle-right pe-3x"></i></div>'+
 	'  <div class="item-input">'+
 
           '    <input type="text" name="name" style="height:30px;font-size:15px;" value="'+availablearrayindividual[k].day+', '+availablearrayindividual[k].time+'" readonly>'+
@@ -4454,7 +4454,7 @@ $( ".availabilitylistblock_"+singleuserarray[0].id ).append(
                  '<span class="badge" style="background-color:#4cd964;">'+availablearrayindividual[k].day.charAt(0)+'</span>'+
                 '</div>'+
        ' <div class="item-inner">'+
-	       '<div style="position:absolute;right:5px;"><i class="pe-7-angle-right pe-3x"></i></div>'+
+       '<div style="float:right;right:10px;"><i class="pe-7-angle-right pe-3x"></i></div>'+
 
         '  <div class="item-input">'+
 
