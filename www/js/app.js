@@ -4247,9 +4247,9 @@ $( ".availabilitylistblock_"+singleuserarray[0].id ).append(
 
 	'  <div class="item-input">'+
 
-          '    <input type="text" name="name" style="height:30px;font-size:15px;" value="'+availablearrayindividual[k].day+', '+availablearrayindividual[k].time+'" readonly>'+
+          '    <input type="text" name="name" style="height:30px;font-size:15px;" value="'+availablearrayindividual[k].day+', '+availablearrayindividual[k].time+'" readonly><i class="pe-7-angle-right pe-3x" style="margin-left:5px;color:#333;"></i>'+
                     '    <input type="text" style="float:right;color:#333;text-align:left;height:30px;font-size:15px;" name="name" value="'+availablearrayindividual[k].fulldate+'" readonly>'+
-'<div><i class="pe-7-angle-right pe-3x" style="float:right;color:black;"></i></div>'+
+
          ' </div>'+
        ' </div>'+
 
@@ -4457,9 +4457,8 @@ $( ".availabilitylistblock_"+singleuserarray[0].id ).append(
 
         '  <div class="item-input">'+
 
-          '    <input type="text" name="name" style="height:30px;font-size:15px;" value="'+availablearrayindividual[k].day+', '+availablearrayindividual[k].time+'" readonly>'+
+          '    <input type="text" name="name" style="height:30px;font-size:15px;" value="'+availablearrayindividual[k].day+', '+availablearrayindividual[k].time+'" readonly><i class="pe-7-angle-right pe-3x" style="margin-left:5px;color:#333;"></i>'+
                     '    <input type="text" style="float:right;color:#333;text-align:left;height:30px;font-size:15px;" name="name" value="'+availablearrayindividual[k].fulldate+'" readonly>'+
-'<div><i class="pe-7-angle-right pe-3x" style="float:right;color:black"></i></div>'+
 
          ' </div>'+
        ' </div>'+
