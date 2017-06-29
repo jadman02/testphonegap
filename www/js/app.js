@@ -46,7 +46,7 @@ if (response1.summary.total_count ==0) {friendstring = '0 of your friends use Da
 
 		}
 	
-	if ((response1.summary.total_count > 4) && (response1.summary.total_count <100)){
+	if ((response1.summary.total_count > 4) && (response1.summary.total_count <10)){
 
 	nearbyshare = true;
 		$('.nearby-helper').hide();
@@ -58,7 +58,7 @@ $('.recent-title').html('<i class="pe-7s-lock pe-lg"></i> Recently Online (Locke
 recentshare = false;
 		$('.recent-wrapper').css("-webkit-filter","blur(5px)");
 		$('.recent-helper').show();
- $('.recent-helper').html('<a class="button active external" style="margin:10px;" href="sms:&body=Hey check out this new App called Date or Duck! http://www.fb/app.com Thoughts? ">Invite Friends</a><p style="font-weight:bold;">'+friendstring+'</p><p style="margin-top:-10px;padding:5px;">Invite <span class="badge" style="background-color:#ff3b30;color:white;">10</span> or more friends on Facebook to <br/>unlock this feature.</p><p style="color:#666;font-size:12px;margin-top:-10px;">We appreciate your help to grow this app!</p>');
+ $('.recent-helper').html('<a class="button active external" style="margin:10px;" href="sms:&body=Check out a new app in the App Store: http://www.fb/app.com. It is called Date or Duck. Thoughts? ">Invite Friends</a><p style="font-weight:bold;">'+friendstring+'</p><p style="margin-top:-10px;padding:5px;">Invite <span class="badge" style="background-color:#ff3b30;color:white;">10</span> or more friends on Facebook to <br/>unlock this feature.</p><p style="color:#666;font-size:12px;margin-top:-10px;">We appreciate your help to grow this app!</p>');
 	
 	}
 
@@ -71,8 +71,8 @@ recentshare = false;
 		$('.recent-title').html('<i class="pe-7s-lock pe-lg"></i> Recently Online (Locked)');
 		$('.nearby-wrapper').css("-webkit-filter","blur(5px)");
 		$('.recent-wrapper').css("-webkit-filter","blur(5px)");
- $('.recent-helper').html('<a href="sms:?body=/Try this App/">Invite Friends</a><p style="font-weight:bold;">'+friendstring+'</p><p style="margin-top:-10px;padding:5px;">Invite <span class="badge" style="background-color:#ff3b30;color:white;">10</span> or more friends on Facebook to <br/>unlock this feature.</p><p style="color:#666;font-size:12px;margin-top:-10px;">We appreciate your help to grow this app!</p>');
- $('.nearby-helper').html('<a href="sms:?body=/Try this App/">Invite Friends</a><p style="font-weight:bold;">'+friendstring+'</p><p style=margin-top:-10px;"padding:5px;">Invite <span class="badge" style="background-color:#ff3b30;color:white;">5</span> or more friends on Facebook to <br/>unlock this feature.</p><p style="color:#666;font-size:12px;margin-top:-10px;">We appreciate your help to grow this app!</p>');
+ $('.recent-helper').html('<a class="button active external" style="margin:10px;" href="sms:&body=Check out a new app in the App Store: http://www.fb/app.com. It is called Date or Duck. Thoughts? ">Invite Friends</a><p style="font-weight:bold;">'+friendstring+'</p><p style="margin-top:-10px;padding:5px;">Invite <span class="badge" style="background-color:#ff3b30;color:white;">10</span> or more friends on Facebook to <br/>unlock this feature.</p><p style="color:#666;font-size:12px;margin-top:-10px;">We appreciate your help to grow this app!</p>');
+ $('.nearby-helper').html('<a class="button active external" style="margin:10px;" href="sms:&body=Check out a new app in the App Store: http://www.fb/app.com. It is called Date or Duck. Thoughts? ">Invite Friends</a><p style="font-weight:bold;">'+friendstring+'</p><p style=margin-top:-10px;"padding:5px;">Invite <span class="badge" style="background-color:#ff3b30;color:white;">5</span> or more friends on Facebook to <br/>unlock this feature.</p><p style="color:#666;font-size:12px;margin-top:-10px;">We appreciate your help to grow this app!</p>');
 	
 	}
 
