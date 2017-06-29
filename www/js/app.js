@@ -27,7 +27,7 @@ var displaySuggestions = function(predictions, status) {
        ' </div>'+
       '</div>'+
 
-    '</li>'+
+    '</li>'
 		  
           });
         };
