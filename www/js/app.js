@@ -1491,10 +1491,10 @@ if(((obj.second_number != f_uid) && (obj.secondnumberduck == 'Y')) && ((obj.firs
 
    
 });
-alert('trigger');
+
 $( ".content-here" ).empty();            
 if (random_all.length > 0){
-
+alert('length');
 randomswiper.removeAllSlides();
 nearbyswiper.removeAllSlides();
 recentswiper.removeAllSlides();
