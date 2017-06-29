@@ -2213,9 +2213,6 @@ for (i = 0; i < notifletsload; i++) {
 function rightPanel(){
 
 $('.timeline-upcoming').empty();
-$('.right-title').text('Calendar');
-$('.addcreatebutton').show();
-$('.backcreatebutton').hide();
   myApp.sizeNavbars();    
     var rightdates = [];
     
