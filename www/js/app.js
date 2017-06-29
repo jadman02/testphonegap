@@ -3641,7 +3641,7 @@ $( ".datearea" ).append(
 
 
 '<div class="profileyomain profileyo_'+ targetid+'" style="border-top:1px solid #c4c4c4;"></div>'+
-             '<span class="preloader preloader-white avail-loader" style="margin-top:20px;clear:both;"></span>'+
+             '<span class="preloader preloader-white avail-loader" style="margin-top:20px;clear:both;margin-bottom:10px;"></span>'+
 
 
 
