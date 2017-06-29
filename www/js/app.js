@@ -8,27 +8,23 @@ share();
    
 }
 
+var displaySuggestions = function(predictions, status) {
+          if (status != google.maps.places.PlacesServiceStatus.OK) {
+            alert(status);
+            return;
+          }
+
+          predictions.forEach(function(prediction) {
+            console.log(prediction);
+          });
+        };
+
 function checkHometown(){
-$.ajax({
-   url: "https://maps.googleapis.com/maps/api/place/search/json?location=-33.8670522,151.1957362&radius=500&types=food&name=harbour&sensor=false&key=AIzaSyDBt1HjdvvRPoawUM5cMhE_iTVadZrDf6g&callback=?",
-    type: "get",
-	dataType: "jsonp",
-    success: function (response1, textStatus, jqXHR) {
 
 
+        var service = new google.maps.places.AutocompleteService();
+        service.getPlacePredictions({ input: 'melb' }, displaySuggestions);
 
-alert(response1);
-
-
-
-
-        
-   },
-    error: function (jqXHR, textStatus, errorThrown) {alert(errorThrown);
-    },
-    complete: function () {
-    }
-});
 }
 
 function fQuery(){
