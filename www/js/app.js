@@ -46,7 +46,7 @@ if (response1.summary.total_count ==0) {friendstring = '0 of your friends use Da
 
 		}
 	
-	if ((response1.summary.total_count > 4) && (response1.summary.total_count <10)){
+	if ((response1.summary.total_count > 4) && (response1.summary.total_count <100)){
 
 	nearbyshare = true;
 		$('.nearby-helper').hide();
