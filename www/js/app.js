@@ -4241,7 +4241,7 @@ $( ".availabilitylistblock_"+singleuserarray[0].id ).append(
 	
        ' <li style="list-style-type:none;width:100%;" onclick="request(\''+availablearrayindividual[k].day+'\',\''+availablearrayindividual[k].time+'\')">'+
        '<div class="item-content">'+
-'<i class="pe-7s-angle-right pe-3x" style="position:absolute;right:5px;color:#333;"></i>'+
+'<i class="pe-7s-angle-right pe-3x" style="position:absolute;right:5px;color:#007aff;"></i>'+
 
       '<div class="item-media">'+
                  '<span class="badge" style="background-color:#4cd964;">'+availablearrayindividual[k].day.charAt(0)+'</span>'+
@@ -4451,7 +4451,7 @@ $( ".availabilitylistblock_"+singleuserarray[0].id ).append(
 
        ' <li style="list-style-type:none;" class="item-link item-content" onclick="request(\''+availablearrayindividual[k].day+'\',\''+availablearrayindividual[k].time+'\')">'+
      '<div class="item-content">'+
-'<i class="pe-7s-angle-right pe-3x" style="position:absolute;right:5px;color:#333;"></i>'+
+'<i class="pe-7s-angle-right pe-3x" style="position:absolute;right:5px;color:#007aff;"></i>'+
 
       '<div class="item-media">'+
                  '<span class="badge" style="background-color:#4cd964;">'+availablearrayindividual[k].day.charAt(0)+'</span>'+
