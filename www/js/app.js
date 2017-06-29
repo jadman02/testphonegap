@@ -4209,8 +4209,8 @@ if (singleuserarray[0] != null){
 	 $( ".profileyo_" + singleuserarray[0].id ).append(
     '<div class="content-block-title availtitle" style="padding-top:0px;clear:both;margin-top:15px;">Availability</div>'+
 
-'<div class="list-block media-list availabilitylistblock_'+singleuserarray[0].id+'" style="margin-top:0px;clear:both;margin-bottom:-40px;">'+
-    '<ul style="background-color:transparent">'+
+'<div class="list-block media-list availabilitylistblock_'+singleuserarray[0].id+'" style="margin-top:0px;clear:both;margin-bottom:-40px;width:100%;">'+
+    '<ul style="background-color:transparent" style="width:100%;">'+
 
 
   
@@ -4239,12 +4239,12 @@ $( ".availabilitylistblock_"+singleuserarray[0].id ).append(
 
        ' <li style="list-style-type:none;width:100%;">'+
        '<div class="item-content">'+
+'<i class="pe-7s-angle-right pe-3x" style="position:absolute;right:5px;color:#333;"></i>'+
 
       '<div class="item-media">'+
                  '<span class="badge" style="background-color:#4cd964;">'+availablearrayindividual[k].day.charAt(0)+'</span>'+
                 '</div>'+
        ' <div class="item-inner">'+
-'<i class="pe-7s-angle-right pe-3x" style="position:absolute;right:5px;color:#333;"></i>'+
 	'  <div class="item-input">'+
 
           '    <input type="text" name="name" style="height:30px;font-size:15px;" value="'+availablearrayindividual[k].day+', '+availablearrayindividual[k].time+'" readonly>'+
@@ -4449,12 +4449,12 @@ $( ".availabilitylistblock_"+singleuserarray[0].id ).append(
 
        ' <li style="list-style-type:none;" class="item-link item-content">'+
      '<div class="item-content">'+
+'<i class="pe-7s-angle-right pe-3x" style="position:absolute;right:5px;color:#333;"></i>'+
 
       '<div class="item-media">'+
                  '<span class="badge" style="background-color:#4cd964;">'+availablearrayindividual[k].day.charAt(0)+'</span>'+
                 '</div>'+
        ' <div class="item-inner">'+
-'<i class="pe-7s-angle-right pe-3x" style="position:absolute;right:5px;color:#333;"></i>'+
         '  <div class="item-input">'+
 
           '    <input type="text" name="name" style="height:30px;font-size:15px;" value="'+availablearrayindividual[k].day+', '+availablearrayindividual[k].time+'" readonly>'+
