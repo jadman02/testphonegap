@@ -4237,7 +4237,9 @@ if (availablearrayindividual[k].id >= tonight_timestamp){
 
 $( ".availabilitylistblock_"+singleuserarray[0].id ).append(
 
-       ' <li style="list-style-type:none;width:100%;">'+
+	
+	
+       ' <li style="list-style-type:none;width:100%;" onclick="request(\''+availablearrayindividual[k].day+'\',\''+availablearrayindividual[k].time+'\')">'+
        '<div class="item-content">'+
 '<i class="pe-7s-angle-right pe-3x" style="position:absolute;right:5px;color:#333;"></i>'+
 
@@ -4447,7 +4449,7 @@ if (availablearrayindividual[k].id >= tonight_timestamp){
 
 $( ".availabilitylistblock_"+singleuserarray[0].id ).append(
 
-       ' <li style="list-style-type:none;" class="item-link item-content">'+
+       ' <li style="list-style-type:none;" class="item-link item-content" onclick="request(\''+availablearrayindividual[k].day+'\',\''+availablearrayindividual[k].time+'\')">'+
      '<div class="item-content">'+
 '<i class="pe-7s-angle-right pe-3x" style="position:absolute;right:5px;color:#333;"></i>'+
 
@@ -4491,9 +4493,9 @@ else if (!origin){
 }
 }
 
-function request(){
-    
-   
+function request(day,time){
+alert(day);    
+   alert(time);
     
 canloadchat = false;
 $( '.picker-items-col-wrapper' ).css("width", "auto");
