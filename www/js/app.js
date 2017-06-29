@@ -31,14 +31,14 @@ try {
 	if (response1.summary.total_count > 21){}
 	else{
 	
-	    $('.recent-helper').html('<a href="#" class="button active" style="margin:10px;">Activate this Feature</a><p style="padding:5px;"> Invite your friends to download Date or Duck. Once <span class="badge" style="color:red;">10</span> or more Facebook friends have downloaded the app you can unlock this feature for free.</p><p style="color:#666;font-size:12px;margin-top:-10px;">We appreciate your help to grow this app!</p>');
+ $('.recent-helper').html('<a href="#" class="button active" style="margin:10px;">Activate</a><p style="padding:5px;"> Invite your friends to download Date or Duck to unlock this feature.</p><p style="color:#666;font-size:12px;margin-top:-10px;">We appreciate your help to grow this app!</p>');
  $('.nearby-helper').html('<a href="#" class="button active" style="margin:10px;">Activate this Feature</a><p style="padding:5px;"> Invite your friends to download Date or Duck. Once <span class="badge" style="color:red;">10</span> or more Facebook friends have downloaded the app you can unlock this feature for free.</p><p style="color:#666;font-size:12px;margin-top:-10px;">We appreciate your help to grow this app!</p>');
 	}
 	    
 } catch(err) {
     
- $('.recent-helper').html('<a href="#" class="button active" style="margin:10px;">Activate this Feature</a><p style="padding:5px;"> Invite your friends to download Date or Duck. Once <span class="badge" style="color:red;">10</span> or more Facebook friends have downloaded the app you can unlock this feature for free.</p><p style="color:#666;font-size:12px;margin-top:-10px;">We appreciate your help to grow this app!</p>');
- $('.nearby-helper').html('<a href="#" class="button active" style="margin:10px;">Activate this Feature</a><p style="padding:5px;"> Invite your friends to download Date or Duck. Once <span class="badge" style="color:red;">10</span> or more Facebook friends have downloaded the app you can unlock this feature for free.</p><p style="color:#666;font-size:12px;margin-top:-10px;">We appreciate your help to grow this app!</p>');
+ $('.recent-helper').html('<a href="#" class="button active" style="margin:10px;">Activate</a><p style="padding:5px;"> Invite your friends to download Date or Duck to unlock this feature.</p><p style="color:#666;font-size:12px;margin-top:-10px;">We appreciate your help to grow this app!</p>');
+ $('.nearby-helper').html('<a href="#" class="button active" style="margin:10px;">Activate</a><p style="padding:5px;"> Invite your friends to download Date or Duck to unlock this feature.</p><p style="color:#666;font-size:12px;margin-top:-10px;">We appreciate your help to grow this app!</p>');
 
 	
 	alert('no permission');
