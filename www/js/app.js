@@ -26,7 +26,7 @@ $.ajax({
 
 
 try {
-   response1.summary.total_count;alert(response1.summary.total_count);
+   response1.summary.total_count;
 	
 	var friendstring;
 if (response1.summary.total_count ==0) {friendstring = '0 of your friends use Date or Duck'}
