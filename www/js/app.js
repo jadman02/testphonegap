@@ -28,17 +28,52 @@ $.ajax({
 try {
    response1.summary.total_count;alert(response1.summary.total_count);
 	
-	if (response1.summary.total_count > 21){}
-	else{
+	var friendstring;
+if (response1.summary.total_count ==0) {friendstring = '0 friends use Date or Duck'}
+	if (response1.summary.total_count ==1) {friendstring = '1 friend uses Date or Duck' }
+	if (response1.summary.total_count >1) {friendstring = response1.summary.total_count + 'friends uses Date or Duck' }
 	
- $('.recent-helper').html('<a href="#" class="button active" style="margin:10px;">Unlock</a><p style="padding:5px;">Invite <span class="badge" style="background-color:#ff3b30;color:white;">10</span> or more friends on Facebook to unlock this feature.</p><p style="color:#666;font-size:12px;margin-top:-10px;">We appreciate your help to grow this app!</p>');
- $('.nearby-helper').html('<a href="#" class="button active" style="margin:10px;">Activate this Feature</a><p style="padding:5px;"> Invite your friends to download Date or Duck. Once <span class="badge" style="color:red;">10</span> or more Facebook friends have downloaded the app you can unlock this feature for free.</p><p style="color:#666;font-size:12px;margin-top:-10px;">We appreciate your help to grow this app!</p>');
+	if (response1.summary.total_count > 5){
+	
+	nearbyshare = true;
+		$('.nearby-helper').hide();
+		$('.nearby-wrapper').css("-webkit-filter","none");
+		
+recentshare = false;
+		$('.recent-wrapper').css("-webkit-filter","blur(5px)");
+		$('.recent-helper').show();
+ $('.recent-helper').html('<h2>'+friendstring+'</h2><p style="padding:5px;">Invite <span class="badge" style="background-color:#ff3b30;color:white;">10</span> or more friends on Facebook to unlock this feature.</p><p style="color:#666;font-size:12px;margin-top:-10px;">We appreciate your help to grow this app!</p>');
+	
 	}
+	else if (response1.summary.total_count > 21){
+	
+		 nearbyshare = true;
+		 recentshare = true;
+		$('.nearby-helper').hide();
+		$('.recent-helper').hide();
+		$('.nearby-wrapper').css("-webkit-filter","none");
+		$('.recent-wrapper').css("-webkit-filter","none");
+	
+	}
+	else {
+	nearbyshare = false;
+		 recentshare = false;
+		$('.nearby-helper').show();
+		$('.recent-helper').show();
+		$('.nearby-wrapper').css("-webkit-filter","blur(5px)");
+		$('.recent-wrapper').css("-webkit-filter","blur(5px)");
+ $('.recent-helper').html('<h2>'+friendstring+'</h2><p style="padding:5px;">Invite <span class="badge" style="background-color:#ff3b30;color:white;">10</span> or more friends on Facebook to unlock this feature.</p><p style="color:#666;font-size:12px;margin-top:-10px;">We appreciate your help to grow this app!</p>');
+ $('.nearby-helper').html('<h2>'+friendstring+'</h2><p style="padding:5px;">Invite <span class="badge" style="background-color:#ff3b30;color:white;">5</span> or more friends on Facebook to unlock this feature.</p><p style="color:#666;font-size:12px;margin-top:-10px;">We appreciate your help to grow this app!</p>');
+	
+	}
+
+
+	
 	    
 } catch(err) {
     
- $('.recent-helper').html('<a href="#" class="button active" style="margin:10px;">Unlock</a><p style="padding:5px;">Invite <span class="badge" style="background-color:#ff3b30;">10</span> or more friends on Facebook to unlock this feature.</p><p style="color:#666;font-size:12px;margin-top:-10px;">We appreciate your help to grow this app!</p>');
- $('.nearby-helper').html('<a href="#" class="button active" style="margin:10px;">Unlock</a><p style="padding:5px;">Invite <span class="badge" style="background-color:#ff3b30;">5</span> or more friends on Facebook to unlock this feature.</p><p style="color:#666;font-size:12px;margin-top:-10px;">We appreciate your help to grow this app!</p>');
+ $('.recent-helper').html('<a href="#" class="button active" style="margin:10px;">Unlock</a><p style="padding:5px;">Invite <span class="badge" style="background-color:#ff3b30;color:white;">10</span> or more friends on Facebook to unlock this feature.</p><p style="color:#666;font-size:12px;margin-top:-10px;">We appreciate your help to grow this app!</p>');
+ $('.nearby-helper').html('<a href="#" class="button active" style="margin:10px;">Unlock</a><p style="padding:5px;">Invite <span class="badge" style="background-color:#ff3b30;color:white;">5</span> or more friends on Facebook to unlock this feature.</p><p style="color:#666;font-size:12px;margin-top:-10px;">We appreciate your help to grow this app!</p>');
 
 	
 	alert('no permission');
