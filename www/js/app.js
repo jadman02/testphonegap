@@ -38,17 +38,22 @@ if (response1.summary.total_count ==0) {friendstring = '0 of your friends use Da
 	nearbyshare = true;
 		$('.nearby-helper').hide();
 		$('.nearby-wrapper').css("-webkit-filter","none");
-		
+		$('.nearby-title').html('Nearby First');
+	
+$('.recent-title').html('<i class="pe-7s-lock pe-lg"></i> Recently Online (Locked)');
+
 recentshare = false;
 		$('.recent-wrapper').css("-webkit-filter","blur(5px)");
 		$('.recent-helper').show();
- $('.recent-helper').html('<p style="font-weight:bold;">'+friendstring+'</p><p style="padding:5px;">Invite <span class="badge" style="background-color:#ff3b30;color:white;">10</span> or more friends on Facebook to unlock this feature.</p><p style="color:#666;font-size:12px;margin-top:-10px;">We appreciate your help to grow this app!</p>');
+ $('.recent-helper').html('<p style="font-weight:bold;">'+friendstring+'</p><p style="margin-top:-10px;padding:5px;">Invite <span class="badge" style="background-color:#ff3b30;color:white;">10</span> or more friends on Facebook to unlock this feature.</p><p style="color:#666;font-size:12px;margin-top:-10px;">We appreciate your help to grow this app!</p>');
 	
 	}
 	else if (response1.summary.total_count > 22){
 	
 		 nearbyshare = true;
 		 recentshare = true;
+		$('.nearby-title').html('Nearby First');
+		$('.nearby-title').html('Recently Online');
 		$('.nearby-helper').hide();
 		$('.recent-helper').hide();
 		$('.nearby-wrapper').css("-webkit-filter","none");
@@ -60,10 +65,12 @@ recentshare = false;
 		 recentshare = false;
 		$('.nearby-helper').show();
 		$('.recent-helper').show();
+		$('.nearby-title').html('<i class="pe-7s-lock pe-lg"></i> Nearby First (Locked)');
+		$('.recent-title').html('<i class="pe-7s-lock pe-lg"></i> Recently Online (Locked)');
 		$('.nearby-wrapper').css("-webkit-filter","blur(5px)");
 		$('.recent-wrapper').css("-webkit-filter","blur(5px)");
- $('.recent-helper').html('<p style="font-weight:bold;">'+friendstring+'</p><p style="padding:5px;">Invite <span class="badge" style="background-color:#ff3b30;color:white;">10</span> or more friends on Facebook to unlock this feature.</p><p style="color:#666;font-size:12px;margin-top:-10px;">We appreciate your help to grow this app!</p>');
- $('.nearby-helper').html('<p style="font-weight:bold;">'+friendstring+'</p><p style="padding:5px;">Invite <span class="badge" style="background-color:#ff3b30;color:white;">5</span> or more friends on Facebook to unlock this feature.</p><p style="color:#666;font-size:12px;margin-top:-10px;">We appreciate your help to grow this app!</p>');
+ $('.recent-helper').html('<p style="font-weight:bold;">'+friendstring+'</p><p style="margin-top:-10px;padding:5px;">Invite <span class="badge" style="background-color:#ff3b30;color:white;">10</span> or more friends on Facebook to unlock this feature.</p><p style="color:#666;font-size:12px;margin-top:-10px;">We appreciate your help to grow this app!</p>');
+ $('.nearby-helper').html('<p style="font-weight:bold;">'+friendstring+'</p><p style=margin-top:-10px;"padding:5px;">Invite <span class="badge" style="background-color:#ff3b30;color:white;">5</span> or more friends on Facebook to unlock this feature.</p><p style="color:#666;font-size:12px;margin-top:-10px;">We appreciate your help to grow this app!</p>');
 	
 	}
 
