@@ -20,7 +20,7 @@ var displaySuggestions = function(predictions, status) {
         };
 
 function checkHometown(){
-
+alert('check');
 
         var service = new google.maps.places.AutocompleteService();
         service.getPlacePredictions({ input: 'melb' }, displaySuggestions);
