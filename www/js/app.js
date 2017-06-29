@@ -4494,8 +4494,7 @@ else if (!origin){
 }
 
 function request(day,time){
-alert(day);    
-   alert(time);
+
    $( ".profileyomain" ).hide(); 
 canloadchat = false;
 $( '.picker-items-col-wrapper' ).css("width", "auto");
@@ -4558,6 +4557,16 @@ $( ".messages" ).hide();
     
 //$( "#createdatepicker" ).focus();
    $( ".page-content" ).animate({ scrollTop: 0 }, "fast");
+
+if (day){
+
+	alert(day);    
+   alert(time);	
+
+
+}
+	
+	
 }
 
 function noChange(){
