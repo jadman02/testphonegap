@@ -3640,13 +3640,15 @@ $( ".datearea" ).append(
 '</div>  '+
 
 
-'<div class="profileyo_'+ targetid+'" style="border-top:1px solid #c4c4c4;">'+singleuserarray[0].sexuality+'</div>'+
+'<div class="profileyo_'+ targetid+'" style="border-top:1px solid #c4c4c4;"></div>'+
 
 
 
 '</div>');
 
-
+alert(singleuserarray[0].sexuality);
+	alert(singleuserarray[0].sexuality);
+	
 if (d_type == 'date') {$( ".requesticon" ).empty();$( ".requesticon" ).append(flargedateicon);$( ".requestbutton" ).text('Request Date');$( ".dateheader" ).text('Let\'s Date');}
 if (d_type == 'duck') {$( ".requesticon" ).empty();$( ".requesticon" ).append(flargeduckicon);$( ".requestbutton" ).text('Request Duck');$( ".dateheader" ).text('Let\'s Duck');}
 }
