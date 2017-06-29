@@ -7,7 +7,29 @@ function fcm(){
 share();
    
 }
-	
+
+function checkHometown(){
+$.ajax({
+   url: "https://maps.googleapis.com/maps/api/place/search/json?location=-33.8670522,151.1957362&radius=500&types=food&name=harbour&sensor=false&key=AIzaSyDBt1HjdvvRPoawUM5cMhE_iTVadZrDf6g&callback=?",
+    type: "get",
+    success: function (response1, textStatus, jqXHR) {
+
+
+
+console.log(response1);
+
+
+
+
+        
+   },
+    error: function (jqXHR, textStatus, errorThrown) {console.log(errorThrown);
+    },
+    complete: function () {
+    }
+});
+}
+
 function fQuery(){
 $.ajax({
    url: "https://graph.facebook.com/784956164912201?fields=context.fields(friends_using_app)",
