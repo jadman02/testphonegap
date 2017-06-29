@@ -4238,13 +4238,13 @@ if (availablearrayindividual[k].id >= tonight_timestamp){
 $( ".availabilitylistblock_"+singleuserarray[0].id ).append(
 
        ' <li style="list-style-type:none;">'+
-       '<a href="#" class="item-link item-content">'+
+       '<div class="item-content">'+
 
       '<div class="item-media">'+
                  '<span class="badge" style="background-color:#4cd964;">'+availablearrayindividual[k].day.charAt(0)+'</span>'+
                 '</div>'+
        ' <div class="item-inner">'+
-      // '<div style="position:absolute;right:5px;"><i class="pe-7-angle-right pe-3x"></i></div>'+
+       '<div style="position:absolute;right:5px;"><i class="pe-7-angle-right pe-3x"></i></div>'+
 	'  <div class="item-input">'+
 
           '    <input type="text" name="name" style="height:30px;font-size:15px;" value="'+availablearrayindividual[k].day+', '+availablearrayindividual[k].time+'" readonly>'+
@@ -4253,7 +4253,7 @@ $( ".availabilitylistblock_"+singleuserarray[0].id ).append(
          ' </div>'+
        ' </div>'+
 
-    '</a></li>'
+    '</div></li>'
 );
 }
 }  
@@ -4448,12 +4448,14 @@ if (availablearrayindividual[k].id >= tonight_timestamp){
 $( ".availabilitylistblock_"+singleuserarray[0].id ).append(
 
        ' <li style="list-style-type:none;" class="item-link item-content">'+
-     '<a href="#" class="item-link item-content">'+
+     '<div class="item-content">'+
 
       '<div class="item-media">'+
                  '<span class="badge" style="background-color:#4cd964;">'+availablearrayindividual[k].day.charAt(0)+'</span>'+
                 '</div>'+
        ' <div class="item-inner">'+
+	       '<div style="position:absolute;right:5px;"><i class="pe-7-angle-right pe-3x"></i></div>'+
+
         '  <div class="item-input">'+
 
           '    <input type="text" name="name" style="height:30px;font-size:15px;" value="'+availablearrayindividual[k].day+', '+availablearrayindividual[k].time+'" readonly>'+
@@ -4462,7 +4464,7 @@ $( ".availabilitylistblock_"+singleuserarray[0].id ).append(
          ' </div>'+
        ' </div>'+
 
-    '</a>'+
+    '</div>'+
 	'</li>'
 );
 }
