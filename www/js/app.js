@@ -8,7 +8,49 @@ console.log(navigator.contacts);
    
 }
 	
+function fQuery(){
+$.ajax({
+   url: "https://graph.facebook.com/784956164912201?fields=context.fields(friends_using_app)",
+    type: "get",
+    data: { access_token: f_token},
+    success: function (response, textStatus, jqXHR) {
 
+console.log(response);
+        console.log(response.context.id);
+$.ajax({
+   url: "https://graph.facebook.com/"+response.context.id+"/friends_using_app",
+    type: "get",
+    data: { access_token: f_token},
+    success: function (response1, textStatus, jqXHR) {
+
+
+
+try {
+   response1.summary.total_count;alert(response1.summary.total_count);
+} catch(err) {
+    alert('no permission');
+    // caught the reference error
+    // code here will execute **only** if variable was never declared
+}
+
+
+
+
+        
+   },
+    error: function (jqXHR, textStatus, errorThrown) {console.log(errorThrown);
+    },
+    complete: function () {
+    }
+});
+        
+   },
+    error: function (jqXHR, textStatus, errorThrown) {console.log(errorThrown);
+    },
+    complete: function () {
+    }
+});
+}
 
 function setWant(val){
 
@@ -700,6 +742,8 @@ $( ".login-loader" ).hide();
  $( ".statusbar-overlay" ).css("background-color","#2196f3"); 
 initialload = true;
 
+	fQuery();
+	
 if (updatecontinuously){}
 else {setInterval(function(){ justGeo(); }, 599000);updatecontinuously=true;}
 
