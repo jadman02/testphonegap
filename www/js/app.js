@@ -4239,7 +4239,7 @@ $( ".availabilitylistblock_"+singleuserarray[0].id ).append(
 
 	
 	
-       ' <li style="list-style-type:none;width:100%;" onclick="request(\''+availablearrayindividual[k].day+'\',\''+availablearrayindividual[k].time+'\')">'+
+       ' <li style="list-style-type:none;width:100%;" onclick="request(\''+availablearrayindividual[k].id+'\',\''+availablearrayindividual[k].time+'\')">'+
        '<div class="item-content">'+
 '<i class="pe-7s-angle-right pe-3x" style="position:absolute;right:5px;color:#007aff;"></i>'+
 
@@ -4449,7 +4449,7 @@ if (availablearrayindividual[k].id >= tonight_timestamp){
 
 $( ".availabilitylistblock_"+singleuserarray[0].id ).append(
 
-       ' <li style="list-style-type:none;" class="item-link item-content" onclick="request(\''+availablearrayindividual[k].day+'\',\''+availablearrayindividual[k].time+'\')">'+
+       ' <li style="list-style-type:none;" class="item-link item-content" onclick="request(\''+availablearrayindividual[k].id+'\',\''+availablearrayindividual[k].time+'\')">'+
      '<div class="item-content">'+
 '<i class="pe-7s-angle-right pe-3x" style="position:absolute;right:5px;color:#007aff;"></i>'+
 
@@ -4493,7 +4493,7 @@ else if (!origin){
 }
 }
 
-function request(day,timeq){
+function request(dayw,timeq){
 
    $( ".profileyomain" ).hide(); 
 canloadchat = false;
@@ -4558,16 +4558,17 @@ $( ".messages" ).hide();
 //$( "#createdatepicker" ).focus();
    $( ".page-content" ).animate({ scrollTop: 0 }, "fast");
 
-	alert(day);    
-   alert(timeq);	
 	
-if (day){
+	
+if (dayw){
+	
 
-	alert(day);    
-   alert(timeq);	
-
+var daycol = pickerCustomToolbar.cols[0];
+daycol.setValue(dayw);
+	
 if (timeq != 'Anytime'){
 
+	
 var timecol = pickerCustomToolbar.cols[1];
 timecol.setValue(timeq);
 }
