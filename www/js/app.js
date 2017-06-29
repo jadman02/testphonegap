@@ -33,12 +33,12 @@ if (response1.summary.total_count ==0) {friendstring = '0 of your friends use Da
 	if (response1.summary.total_count ==1) {friendstring = '1 of your friends uses Date or Duck' }
 	if (response1.summary.total_count >1) {friendstring = response1.summary.total_count + ' of your friends use Date or Duck' }
 	
-	if (response1.summary.total_count > 10){
+	if (response1.summary.total_count > 9){
 
 		 nearbyshare = true;
 		 recentshare = true;
 		$('.nearby-title').html('Nearby First');
-		$('.nearby-title').html('Recently Online');
+		$('.recent-title').html('Recently Online');
 		$('.nearby-helper').hide();
 		$('.recent-helper').hide();
 		$('.nearby-wrapper').css("-webkit-filter","none");
@@ -46,7 +46,7 @@ if (response1.summary.total_count ==0) {friendstring = '0 of your friends use Da
 	
 	}
 	
-	else if (response1.summary.total_count > 5){
+	if ((response1.summary.total_count > 4) && (response1.summary.total_count <10)){
 
 	nearbyshare = true;
 		$('.nearby-helper').hide();
@@ -62,7 +62,7 @@ recentshare = false;
 	
 	}
 
-	else {
+	if (response1.summary.total_count < 5){
 	nearbyshare = false;
 		 recentshare = false;
 		$('.nearby-helper').show();
