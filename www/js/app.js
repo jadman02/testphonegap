@@ -47,7 +47,7 @@ if (response1.summary.total_count ==0) {friendstring = '0 of your friends use Da
 		$('.recent-helper').hide();
 		$('.nearby-wrapper').css("-webkit-filter","none");
 		$('.recent-wrapper').css("-webkit-filter","none");
-	
+	share();
 	}
 	
 	if ((response1.summary.total_count > 4) && (response1.summary.total_count <10)){
