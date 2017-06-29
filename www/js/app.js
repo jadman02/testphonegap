@@ -42,6 +42,23 @@ else{$( ".homedate" ).addClass("active");
 
 function updateWant(){
 
+	if (homewant == 'offline'){
+	if (random_all.length > 0){
+
+randomswiper.removeAllSlides();
+nearbyswiper.removeAllSlides();
+recentswiper.removeAllSlides();
+randomswiper.destroy();
+nearbyswiper.destroy();
+recentswiper.destroy();
+} 
+		new_all = [];
+random_all = [];
+nearby_all = [];
+recent_all = [];
+	
+	}
+	
 firebase.database().ref('users/' + f_uid).update({
     homewant:homewant
   }).then(function() {});
