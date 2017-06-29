@@ -15,15 +15,28 @@ var displaySuggestions = function(predictions, status) {
           }
 
           predictions.forEach(function(prediction) {
-            alert(prediction);
+		  $('.hometownprediction').remove();
+		  $('.hometownli').append();
+		  ' <li class="hometownprediction" style="clear:both;margin-top:0px;">'+
+      '<div class="item-content">'+
+       ' <div class="item-inner">'+
+        '  <div class="item-title label">-></div>'+
+        '  <div class="item-input">'+
+          '    <input type="text" value="'+prediction.description+'" >'+
+         ' </div>'+
+       ' </div>'+
+      '</div>'+
+
+    '</li>'+
+		  
           });
         };
 
 function checkHometown(){
-alert('check');
 
+var hometownquery = $('#homesearch').val();
         var service = new google.maps.places.AutocompleteService();
-        service.getPlacePredictions({ input: 'melb' }, displaySuggestions);
+        service.getPlacePredictions({ input: hometownquery,types: ['geocode'] }, displaySuggestions);
 
 }
 
@@ -10865,7 +10878,7 @@ var popupHTML = '<div class="popup prefpop">'+
  '   <ul class="availul" style="padding-left:10px;padding-right:10px;padding-bottom:20px;">'+
 
   '  </ul>'+
-    '<div class="list-block-label hiderowpref">Update your availability to make it easier for your matches to organise a time to meet you.</div>'+
+    '<div class="list-block-label hiderowpref">Make it easier for your matches to organise a time to meet you.</div>'+
 
 '</div> '+
         
@@ -10940,16 +10953,16 @@ var popupHTML = '<div class="popup prefpop">'+
       
 
       
-' <li class="hiderowpref" style="clear:both;margin-top:0px;">'+
+' <li class="hiderowpref hometownli" style="clear:both;margin-top:0px;">'+
       '<div class="item-content">'+
        ' <div class="item-inner">'+
         '  <div class="item-title label">Hometown</div>'+
         '  <div class="item-input">'+
-          '    <input type="text"  placeholder="Hide" name="name" placeholder="Hide" readonly >'+
+          '    <input type="text"  id="homesearch" placeholder="Hide" name="name" placeholder="Hide" onkeyup="checkHometown()">'+
          ' </div>'+
        ' </div>'+
       '</div>'+
-   ''+
+
     '</li>'+
     
         ' <li class="hiderowpref">'+
