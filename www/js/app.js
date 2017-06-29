@@ -50,7 +50,7 @@ filtershare:'Y'
 		
 		}
 	
-	if ((response1.summary.total_count > 4) && (response1.summary.total_count <20))){
+	if ((response1.summary.total_count > 4) && (response1.summary.total_count <20)){
 
 		 nearbyshare = true;
 		 recentshare = true;
