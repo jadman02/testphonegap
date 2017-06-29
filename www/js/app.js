@@ -46,7 +46,7 @@ if (response1.summary.total_count ==0) {friendstring = '0 of your friends use Da
 		$('.recent-wrapper').css("-webkit-filter","none");
 
 		firebase.database().ref('users/' + f_uid).update({
-recentshare:'Y'
+recentfriends:'Y'
   }).then(function() {});
 		
 		}
@@ -299,7 +299,7 @@ var matcheslistener;
 var noresultstimeout;
 var timeoutactive = false;
 var radiussize,sortby,offsounds;
-var industry_u,status_u,politics_u,eyes_u,body_u,religion_u,zodiac_u,ethnicity_u,height_u,weight_u;
+var industry_u,status_u,politics_u,eyes_u,body_u,religion_u,zodiac_u,ethnicity_u,height_u,weight_u,recentfriends;
 var descriptionslist = [];
 var nameslist = [];
 var fdateicon = '<img src="media/dateicon.png" style="width:28px;margin-right:5px;">';
@@ -804,7 +804,7 @@ $( ".login-loader" ).hide();
  $( ".statusbar-overlay" ).css("background-color","#2196f3"); 
 initialload = true;
 
-if (recentshare){
+if (recentfriends){
 alert('recenthsrae exists');
 	nearbyshare = true;
 		 recentshare = true;
@@ -1417,7 +1417,7 @@ ethnicity_u = snapshot.child("ethnicity").val();
 height_u = snapshot.child("height").val();
 weight_u = snapshot.child("weight").val();
 homewant = snapshot.child("homewant").val();
-filtershare = snapshot.child("filtershare").val();
+recentfriends = snapshot.child("recentfriends").val();
 
 if (snapshot.child("photoresponse").val()){
 	    
