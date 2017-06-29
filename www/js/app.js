@@ -4563,7 +4563,11 @@ if (day){
 	alert(day);    
    alert(time);	
 
+if (time != 'Anytime'){
 
+var timecol = pickerCustomToolbar.cols[1];
+timecol.setValue(time);
+}
 }
 	
 	
