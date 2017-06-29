@@ -697,7 +697,7 @@ $( ".login-loader" ).hide();
    return false;
 
 }   
-  
+ $( ".statusbar-overlay" ).css("background-color","#2196f3"); 
 initialload = true;
 
 if (updatecontinuously){}
