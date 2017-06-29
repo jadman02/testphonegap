@@ -10839,7 +10839,7 @@ var popupHTML = '<div class="popup prefpop">'+
  '   <ul class="availul" style="padding-left:10px;padding-right:10px;padding-bottom:20px;">'+
 
   '  </ul>'+
-    '<div class="list-block-label hiderowpref">Your matches will be notified when your availability changes.</div>'+
+    '<div class="list-block-label hiderowpref">Update your availability to make it easier for your matches to organise a time to meet you.</div>'+
 
 '</div> '+
         
