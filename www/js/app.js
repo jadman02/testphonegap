@@ -33,8 +33,21 @@ if (response1.summary.total_count ==0) {friendstring = '0 of your friends use Da
 	if (response1.summary.total_count ==1) {friendstring = '1 of your friends uses Date or Duck' }
 	if (response1.summary.total_count >1) {friendstring = response1.summary.total_count + ' of your friends use Date or Duck' }
 	
-	if (response1.summary.total_count > 5){
+	if (response1.summary.total_count > 10){
+
+		 nearbyshare = true;
+		 recentshare = true;
+		$('.nearby-title').html('Nearby First');
+		$('.nearby-title').html('Recently Online');
+		$('.nearby-helper').hide();
+		$('.recent-helper').hide();
+		$('.nearby-wrapper').css("-webkit-filter","none");
+		$('.recent-wrapper').css("-webkit-filter","none");
 	
+	}
+	
+	else if (response1.summary.total_count > 5){
+
 	nearbyshare = true;
 		$('.nearby-helper').hide();
 		$('.nearby-wrapper').css("-webkit-filter","none");
@@ -48,18 +61,7 @@ recentshare = false;
  $('.recent-helper').html('<p style="font-weight:bold;">'+friendstring+'</p><p style="margin-top:-10px;padding:5px;">Invite <span class="badge" style="background-color:#ff3b30;color:white;">10</span> or more friends on Facebook to <br/>unlock this feature.</p><p style="color:#666;font-size:12px;margin-top:-10px;">We appreciate your help to grow this app!</p>');
 	
 	}
-	else if (response1.summary.total_count > 10){
-	
-		 nearbyshare = true;
-		 recentshare = true;
-		$('.nearby-title').html('Nearby First');
-		$('.nearby-title').html('Recently Online');
-		$('.nearby-helper').hide();
-		$('.recent-helper').hide();
-		$('.nearby-wrapper').css("-webkit-filter","none");
-		$('.recent-wrapper').css("-webkit-filter","none");
-	
-	}
+
 	else {
 	nearbyshare = false;
 		 recentshare = false;
