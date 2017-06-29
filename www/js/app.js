@@ -3609,7 +3609,7 @@ $( ".datearea" ).append(
 	
 '<a href="#" onclick="request()" class="button dr requestbutton" style="width:150px;margin: 0 auto;margin-top:10px;font-family: \'Pacifico\', cursive;font-size:20px;"></a>'+
 
-		'<div class="dr infop" style="padding:10px;background-color:white;color:#666;"><h3 class="titleconfirm" style="margin-top:54px;display:none;"></h3><p class="infoconfirm">Once you agree on a time to meet you can send instant chat messages to each other.</p></div>'+
+		'<div class="dr infop" style="padding:10px;background-color:white;color:#666;"><h3 class="titleconfirm" style="margin-top:10px;display:none;"></h3><p class="infoconfirm">Once you agree on a time to meet you can send instant chat messages to each other.</p></div>'+
 
 '<div class="waitingreply"></div>'+
 
@@ -7338,6 +7338,9 @@ myList.clearCache();
           canloadchat = false;
           var g = new Date(d_chat_expire*1000 - 3600);
 
+	   
+	    $( ".profileyomain" ).hide();
+	   $( ".avail-loader" ).hide();
 var weekday = [];
 weekday[0] =  "Sunday";
 weekday[1] = "Monday";
