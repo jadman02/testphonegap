@@ -2269,7 +2269,7 @@ if ((datemeinarray==1 && datetoinarray==1) || (duckmeinarray==1 && ducktoinarray
     }
 else{func = 'singleUser'}
 
-alert(picturesrc);
+
 
    
     mynotifs.push({
