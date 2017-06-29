@@ -12,6 +12,7 @@ function checkHometown(){
 $.ajax({
    url: "https://maps.googleapis.com/maps/api/place/search/json?location=-33.8670522,151.1957362&radius=500&types=food&name=harbour&sensor=false&key=AIzaSyDBt1HjdvvRPoawUM5cMhE_iTVadZrDf6g&callback=?",
     type: "get",
+	dataType: "jsonp",
     success: function (response1, textStatus, jqXHR) {
 
 
