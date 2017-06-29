@@ -732,8 +732,6 @@ randomswiper = myApp.swiper('.swiper-random', {
 
 new_all = random_all;
 
-alert(swiper.clickedIndex);
-	    alert(new_all);
     photoBrowser(swiper.clickedIndex,'27');}
   });
  
@@ -6069,7 +6067,7 @@ if ($('.photo-browser').length > 0){return false;}
 
 myApp.closeModal('.picker-sub');
 
-alert('here');
+
 
 
 //firebase.database().ref("users/" + f_uid).off('value', userpref);
