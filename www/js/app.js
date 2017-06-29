@@ -4493,7 +4493,7 @@ else if (!origin){
 }
 }
 
-function request(day,time){
+function request(day,timeq){
 
    $( ".profileyomain" ).hide(); 
 canloadchat = false;
@@ -4558,15 +4558,18 @@ $( ".messages" ).hide();
 //$( "#createdatepicker" ).focus();
    $( ".page-content" ).animate({ scrollTop: 0 }, "fast");
 
+	alert(day);    
+   alert(timeq);	
+	
 if (day){
 
 	alert(day);    
-   alert(time);	
+   alert(timeq);	
 
-if (time != 'Anytime'){
+if (timeq != 'Anytime'){
 
 var timecol = pickerCustomToolbar.cols[1];
-timecol.setValue(time);
+timecol.setValue(timeq);
 }
 }
 	
