@@ -28,7 +28,12 @@ $.ajax({
 try {
    response1.summary.total_count;alert(response1.summary.total_count);
 } catch(err) {
-    alert('no permission');
+    
+ $('.recent-helper').append('<a href="#" class="button active" style="margin:10px;">Activate this Feature</a><p style="padding:5px;"> Invite your friends to download Date or Duck. Once <span class="badge" style="color:red;">10</span> or more Facebook friends have downloaded the app you can unlock this feature for free.</p><p style="color:#666;font-size:12px;margin-top:-10px;">We appreciate your help to grow this app!</p>');
+ $('.nearby-helper').append('<a href="#" class="button active" style="margin:10px;">Activate this Feature</a><p style="padding:5px;"> Invite your friends to download Date or Duck. Once <span class="badge" style="color:red;">10</span> or more Facebook friends have downloaded the app you can unlock this feature for free.</p><p style="color:#666;font-size:12px;margin-top:-10px;">We appreciate your help to grow this app!</p>');
+
+	
+	alert('no permission');
     // caught the reference error
     // code here will execute **only** if variable was never declared
 }
