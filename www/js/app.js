@@ -3646,7 +3646,7 @@ $( ".datearea" ).append(
 
 '</div>');
 
-alert(singleuserarray[0].sexuality);
+alert(new_all[0].sexuality);
 	alert(singleuserarray[0].sexuality);
 	
 if (d_type == 'date') {$( ".requesticon" ).empty();$( ".requesticon" ).append(flargedateicon);$( ".requestbutton" ).text('Request Date');$( ".dateheader" ).text('Let\'s Date');}
