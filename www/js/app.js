@@ -3640,7 +3640,7 @@ $( ".datearea" ).append(
 '</div>  '+
 
 
-'<div class="profileyo_'+ targetid+'" style="border-top:1px solid #c4c4c4;"></div>'+
+'<div class="profileyomain profileyo_'+ targetid+'" style="border-top:1px solid #c4c4c4;"></div>'+
 
 
 
@@ -4496,7 +4496,7 @@ else if (!origin){
 function request(day,time){
 alert(day);    
    alert(time);
-    
+   $( ".profileyomain" ).hide(); 
 canloadchat = false;
 $( '.picker-items-col-wrapper' ).css("width", "auto");
 
@@ -4582,6 +4582,7 @@ $( ".sender-inner" ).hide();
 
 function reverseRequest(){
 
+	$( ".profileyomain" ).show();
 $( ".dateheader" ).hide();
 $( "#createdatepicker" ).hide();
     $( ".dr" ).show();
