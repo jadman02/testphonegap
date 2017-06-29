@@ -1235,7 +1235,7 @@ if(userpref) {firebase.database().ref('users/' + f_uid).off('value', userpref);}
 userpref = firebase.database().ref('users/' + f_uid).on("value",function(snapshot) {
     var userexists = snapshot.child('lower').exists(); // true
     
-alert('trigger');
+
     
     if (userexists) { 
     
@@ -1491,7 +1491,7 @@ if(((obj.second_number != f_uid) && (obj.secondnumberduck == 'Y')) && ((obj.firs
 
    
 });
-
+alert('trigger');
 $( ".content-here" ).empty();            
 if (random_all.length > 0){
 
