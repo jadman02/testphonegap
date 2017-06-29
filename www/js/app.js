@@ -3641,6 +3641,7 @@ $( ".datearea" ).append(
 
 
 '<div class="profileyomain profileyo_'+ targetid+'" style="border-top:1px solid #c4c4c4;"></div>'+
+             '<span class="preloader preloader-white avail-loader" style="margin-top:20px;clear:both;"></span>'+
 
 
 
@@ -4202,8 +4203,11 @@ function singleUser(idw,idname,origin){
 
 if (singleuserarray[0] != null){
 
-
+$(".avail-loader").hide();
  if (singleuserarray[0].availarraystring !== ''){
+	 
+	 
+	 
   $(".availabilitylistblock_"+singleuserarray[0].id).remove();
 	 $(".availtitle").remove();
 	 $( ".profileyo_" + singleuserarray[0].id ).append(
