@@ -818,7 +818,20 @@ $( ".login-loader" ).hide();
  $( ".statusbar-overlay" ).css("background-color","#2196f3"); 
 initialload = true;
 
-	fQuery();
+if (filtershare){
+ nearbyshare = true;
+		 recentshare = true;
+		$('.nearby-title').html('Nearby First');
+		$('.recent-title').html('Recently Online');
+		$('.nearby-helper').hide();
+		$('.recent-helper').hide();
+		$('.nearby-wrapper').css("-webkit-filter","none");
+		$('.recent-wrapper').css("-webkit-filter","none");
+}	
+else{
+fQuery();
+}	
+	
 	
 if (updatecontinuously){}
 else {setInterval(function(){ justGeo(); }, 599000);updatecontinuously=true;}
