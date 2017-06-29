@@ -3605,13 +3605,13 @@ $( ".datearea" ).append(
 
 '<div class="requesticon" style="padding-top:20px;"></div>'+
 
-		'<div class="dr infop" style="padding:10px;background-color:white;color:#666;"><h3 class="titleconfirm" style="margin-top:-40px;display:none;"></h3><p class="infoconfirm">Once you agree on a time to meet you can send instant chat messages to each other.</p></div>'+
 
 	
 '<a href="#" onclick="request()" class="button dr requestbutton" style="width:150px;margin: 0 auto;margin-top:10px;font-family: \'Pacifico\', cursive;font-size:20px;"></a>'+
 
+		'<div class="dr infop" style="padding:10px;background-color:white;color:#666;"><h3 class="titleconfirm" style="margin-top:-40px;display:none;"></h3><p class="infoconfirm">Once you agree on a time to meet you can send instant chat messages to each other.</p></div>'+
 
-'<div class="profileyo_'+ targetid+'">'+ targetid+'</div>'+
+
 
 '<div id="createdatepicker" style="clear:both;border-bottom:1px solid #c4c4c4;margin-top:10px;"></div>'+
 
@@ -3640,8 +3640,8 @@ $( ".datearea" ).append(
 '</div>  '+
 
 
-
-
+'<div class="profileyo_'+ targetid+'" style="border-top:1px solid #c4c4c4;"></div>'+
+alert(new_all[0].sexuality);
 
 
 '</div>');
