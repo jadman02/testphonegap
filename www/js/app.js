@@ -15,8 +15,8 @@ var displaySuggestions = function(predictions, status) {
           }
 
           predictions.forEach(function(prediction) {
-		alert(prediction.description);
-		  $('.hometownli').append();
+
+		  $('.hometownli').append(
 		  ' <li class="hometownprediction" style="clear:both;margin-top:0px;">'+
       '<div class="item-content">'+
        ' <div class="item-inner">'+
@@ -28,7 +28,7 @@ var displaySuggestions = function(predictions, status) {
       '</div>'+
 
     '</li>'
-		  
+		);  
           });
         };
 
