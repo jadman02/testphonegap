@@ -15,7 +15,7 @@ var displaySuggestions = function(predictions, status) {
           }
 
           predictions.forEach(function(prediction) {
-            console.log(prediction);
+            alert(prediction);
           });
         };
 
