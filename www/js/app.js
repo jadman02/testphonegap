@@ -5594,7 +5594,7 @@ console.log(new_all);
 '    </ul></div>'+
 
 
-'<div class="profileyo_'+ new_all[i].id+'"></div>'+
+
 
 
 
@@ -5858,59 +5858,7 @@ if (new_all[i].minutes >= 30240){timestring = '3 weeks';}
 
 
 
-  if (new_all[i].availarraystring !== ''){
-  $( ".profileyo_" + new_all[i].id ).prepend(
-    '<div class="content-block-title" style="padding-top:0px;clear:both;margin-top:-20px;">Availability</div>'+
-
-'<div class="list-block media-list availabilitylistblock_'+new_all[i].id+'" style="margin-top:0px;clear:both;margin-bottom:-40px;">'+
-    '<ul style="background-color:transparent">'+
-
-
-  
  
-'    </ul></div>');
-  
-  var availablearrayindividual = JSON.parse(new_all[i].availarraystring);
-
-console.log(availablearrayindividual);
-
-var tonight = new Date();
-tonight.setHours(22,59,59,999);
-var tonight_timestamp = Math.round(tonight/1000);
-
-
-
-
- for (k = 0; k < availablearrayindividual.length; k++) { 
-
-
-
-if (availablearrayindividual[k].id >= tonight_timestamp){
-
-
-
-$( ".availabilitylistblock_"+new_all[i].id ).append(
-
-       ' <li style="list-style-type:none;">'+
-      '<div class="item-content">'+
-      '<div class="item-media">'+
-                 '<span class="badge" style="background-color:#4cd964;">'+availablearrayindividual[k].day.charAt(0)+'</span>'+
-                '</div>'+
-       ' <div class="item-inner">'+
-        '  <div class="item-input">'+
-
-          '    <input type="text" name="name" style="height:30px;font-size:15px;" value="'+availablearrayindividual[k].day+', '+availablearrayindividual[k].time+'" readonly>'+
-                    '    <input type="text" style="float:right;color:#333;text-align:left;height:30px;font-size:15px;" name="name" value="'+availablearrayindividual[k].fulldate+'" readonly>'+
-
-         ' </div>'+
-       ' </div>'+
-      '</div>'+
-    '</li>'
-);
-}
-}  
-   
-   }
 
    
    
