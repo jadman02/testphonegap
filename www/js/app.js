@@ -4207,7 +4207,7 @@ if (singleuserarray[0] != null){
   $(".availabilitylistblock_"+singleuserarray[0].id).remove();
 	 $(".availtitle").remove();
 	 $( ".profileyo_" + singleuserarray[0].id ).append(
-    '<div class="content-block-title availtitle" style="padding-top:0px;clear:both;">Availability</div>'+
+    '<div class="content-block-title availtitle" style="padding-top:0px;clear:both;margin-top:5px;">Availability</div>'+
 
 '<div class="list-block media-list availabilitylistblock_'+singleuserarray[0].id+'" style="margin-top:0px;clear:both;margin-bottom:-40px;">'+
     '<ul style="background-color:transparent">'+
@@ -4237,7 +4237,7 @@ if (availablearrayindividual[k].id >= tonight_timestamp){
 
 $( ".availabilitylistblock_"+singleuserarray[0].id ).append(
 
-       ' <li style="list-style-type:none;">'+
+       ' <li style="list-style-type:none;" class="item-link item-content">'+
       '<div class="item-content">'+
       '<div class="item-media">'+
                  '<span class="badge" style="background-color:#4cd964;">'+availablearrayindividual[k].day.charAt(0)+'</span>'+
@@ -4415,7 +4415,7 @@ if (singleuserarray[0].availarraystring !== ''){
   $(".availabilitylistblock_"+singleuserarray[0].id).remove();
 	 $(".availtitle").remove();
 	 $( ".profileyo_" + singleuserarray[0].id ).append(
-    '<div class="content-block-title availtitle" style="padding-top:0px;clear:both;">Availability</div>'+
+    '<div class="content-block-title availtitle" style="padding-top:0px;clear:both;margin-top:5px;">Availability</div>'+
 
 '<div class="list-block media-list availabilitylistblock_'+singleuserarray[0].id+'" style="margin-top:0px;clear:both;margin-bottom:-40px;">'+
     '<ul style="background-color:transparent">'+
@@ -4445,7 +4445,7 @@ if (availablearrayindividual[k].id >= tonight_timestamp){
 
 $( ".availabilitylistblock_"+singleuserarray[0].id ).append(
 
-       ' <li style="list-style-type:none;">'+
+       ' <li style="list-style-type:none;" class="item-link item-content">'+
       '<div class="item-content">'+
       '<div class="item-media">'+
                  '<span class="badge" style="background-color:#4cd964;">'+availablearrayindividual[k].day.charAt(0)+'</span>'+
