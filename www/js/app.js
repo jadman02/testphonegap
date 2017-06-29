@@ -5515,8 +5515,7 @@ $( ".nextphoto" ).hide();
 console.log(new_all);
   for (i = 0; i < new_all.length; i++) { 
    var boxcolor,displayavail,availabilityli,availabletext,iconavaill;
-   if (new_all[i].availarraystring){iconavaill='s';boxcolor = 'width:60px;color:#007aff;opacity:1;background-color:transparent;color:#4cd964';displayavail='block';availabletext='<div class="availabletxt_'+new_all[i].id+'" style="display:none;float:left;margin-top:12px;padding-right:10px;">Available</div>';}
-   else{iconavaill='f';boxcolor = 'width:60px;color:#007aff;opacity:1;background-color:transparent';displayavail='none';availabletext='';}
+ iconavaill='f';boxcolor = 'width:60px;color:#007aff;opacity:1;background-color:transparent';displayavail='none';availabletext='';
    
    $( ".wrapper-questions" ).append('<div class="swiper-slide slideinfo_'+new_all[i].id+'" style="height:100%;">'+
 
