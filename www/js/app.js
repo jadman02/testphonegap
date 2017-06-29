@@ -16,14 +16,14 @@ $.ajax({
 
 
 
-console.log(response1);
+alert(response1);
 
 
 
 
         
    },
-    error: function (jqXHR, textStatus, errorThrown) {console.log(errorThrown);
+    error: function (jqXHR, textStatus, errorThrown) {alert(errorThrown);
     },
     complete: function () {
     }
