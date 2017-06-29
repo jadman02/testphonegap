@@ -358,9 +358,14 @@ var app = {
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
 
+	    alert(NativeKeyboard); 
+NativeKeyboard.showMessenger({
+  onSubmit: function(text) {
+    alert("The user typed: " + text);
+  }
+});
 
-
-//  alert(Keyboard); 
+alert(NativeKeyboard); 
 //soNow();
 
 
