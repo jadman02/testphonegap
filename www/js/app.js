@@ -4237,7 +4237,7 @@ if (availablearrayindividual[k].id >= tonight_timestamp){
 
 $( ".availabilitylistblock_"+singleuserarray[0].id ).append(
 
-       ' <li style="list-style-type:none;">'+
+       ' <li style="list-style-type:none;width:100%;">'+
        '<div class="item-content">'+
 
       '<div class="item-media">'+
@@ -4249,7 +4249,7 @@ $( ".availabilitylistblock_"+singleuserarray[0].id ).append(
 
           '    <input type="text" name="name" style="height:30px;font-size:15px;" value="'+availablearrayindividual[k].day+', '+availablearrayindividual[k].time+'" readonly>'+
                     '    <input type="text" style="float:right;color:#333;text-align:left;height:30px;font-size:15px;" name="name" value="'+availablearrayindividual[k].fulldate+'" readonly>'+
-'<div><i class="pe-7-angle-right pe-3x" style="float:right"></i></div>'+
+'<div><i class="pe-7-angle-right pe-3x" style="float:right;color:black;"></i></div>'+
          ' </div>'+
        ' </div>'+
 
@@ -4459,7 +4459,7 @@ $( ".availabilitylistblock_"+singleuserarray[0].id ).append(
 
           '    <input type="text" name="name" style="height:30px;font-size:15px;" value="'+availablearrayindividual[k].day+', '+availablearrayindividual[k].time+'" readonly>'+
                     '    <input type="text" style="float:right;color:#333;text-align:left;height:30px;font-size:15px;" name="name" value="'+availablearrayindividual[k].fulldate+'" readonly>'+
-'<div><i class="pe-7-angle-right pe-3x" style="float:right"></i></div>'+
+'<div><i class="pe-7-angle-right pe-3x" style="float:right;color:black"></i></div>'+
 
          ' </div>'+
        ' </div>'+
