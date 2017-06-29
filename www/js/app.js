@@ -4411,7 +4411,60 @@ else {matchname = result[0].name.substr(0,result[0].displayname.indexOf(' '));}
 main_all = new_all;
 new_all = singleuserarray;
 
+if (singleuserarray[0].availarraystring !== ''){
+  $(".availabilitylistblock_"+singleuserarray[0].id).remove();
+	 $(".availtitle").remove();
+	 $( ".profileyo_" + singleuserarray[0].id ).prepend(
+    '<div class="content-block-title availtitle" style="padding-top:0px;clear:both;margin-top:-20px;">Availability</div>'+
 
+'<div class="list-block media-list availabilitylistblock_'+singleuserarray[0].id+'" style="margin-top:0px;clear:both;margin-bottom:-40px;">'+
+    '<ul style="background-color:transparent">'+
+
+
+  
+ 
+'    </ul></div>');
+  
+  var availablearrayindividual = JSON.parse(singleuserarray[0].availarraystring);
+
+
+var tonight = new Date();
+tonight.setHours(22,59,59,999);
+var tonight_timestamp = Math.round(tonight/1000);
+
+
+
+
+ for (k = 0; k < availablearrayindividual.length; k++) { 
+
+
+
+if (availablearrayindividual[k].id >= tonight_timestamp){
+
+
+
+$( ".availabilitylistblock_"+singleuserarray[0].id ).append(
+
+       ' <li style="list-style-type:none;">'+
+      '<div class="item-content">'+
+      '<div class="item-media">'+
+                 '<span class="badge" style="background-color:#4cd964;">'+availablearrayindividual[k].day.charAt(0)+'</span>'+
+                '</div>'+
+       ' <div class="item-inner">'+
+        '  <div class="item-input">'+
+
+          '    <input type="text" name="name" style="height:30px;font-size:15px;" value="'+availablearrayindividual[k].day+', '+availablearrayindividual[k].time+'" readonly>'+
+                    '    <input type="text" style="float:right;color:#333;text-align:left;height:30px;font-size:15px;" name="name" value="'+availablearrayindividual[k].fulldate+'" readonly>'+
+
+         ' </div>'+
+       ' </div>'+
+      '</div>'+
+    '</li>'
+);
+}
+}  
+   
+   }
    
 if (origin == 88){
 //   alert('88');
