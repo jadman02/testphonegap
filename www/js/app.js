@@ -3598,7 +3598,10 @@ $( ".datearea" ).append(
        
        '<div class="dateheader" style="display:none;background-color:#ccc;padding:11px;text-align:center;font-size:20px;color:white;font-family: \'Pacifico\', cursive;"></div>'+
 
+	'<div class="dr infop" style="padding:10px;background-color:white;color:#666;"><h3 class="titleconfirm" style="margin-top:-40px;display:none;"></h3><p class="infoconfirm">Once you agree on a time to meet you can send instant chat messages to each other.</p></div>'+
 
+'<div class="profileyo_'+ targetid+'">targetid</div>'+
+	
 '<div class="waitingreply"></div>'+
 
 '<div class="requesticon" style="padding-top:20px;"></div>'+
@@ -3635,7 +3638,6 @@ $( ".datearea" ).append(
 '</div>  '+
 
 
-'<div class="dr infop" style="padding:10px;background-color:white;color:#666;"><h3 class="titleconfirm" style="margin-top:-40px;display:none;"></h3><p class="infoconfirm">Once you agree on a time to meet you can send instant chat messages to each other.</p></div>'+
 
 
 
