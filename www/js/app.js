@@ -33,7 +33,8 @@ if (response1.summary.total_count ==0) {friendstring = '0 of your friends use Da
 	if (response1.summary.total_count ==1) {friendstring = '1 of your friends uses Date or Duck' }
 	if (response1.summary.total_count >1) {friendstring = response1.summary.total_count + ' of your friends use Date or Duck' }
 	
-	if (response1.summary.total_count > 20){
+
+	if (response1.summary.total_count > 9){
 
 		 nearbyshare = true;
 		 recentshare = true;
@@ -45,23 +46,8 @@ if (response1.summary.total_count ==0) {friendstring = '0 of your friends use Da
 		$('.recent-wrapper').css("-webkit-filter","none");
 
 		firebase.database().ref('users/' + f_uid).update({
-filtershare:'Y'
+recentshare:'Y'
   }).then(function() {});
-		
-		}
-	
-	if ((response1.summary.total_count > 4) && (response1.summary.total_count <20)){
-
-		 nearbyshare = true;
-		 recentshare = true;
-		$('.nearby-title').html('Nearby First');
-		$('.recent-title').html('Recently Online');
-		$('.nearby-helper').hide();
-		$('.recent-helper').hide();
-		$('.nearby-wrapper').css("-webkit-filter","none");
-		$('.recent-wrapper').css("-webkit-filter","none");
-
-
 		
 		}
 	
@@ -818,8 +804,9 @@ $( ".login-loader" ).hide();
  $( ".statusbar-overlay" ).css("background-color","#2196f3"); 
 initialload = true;
 
-if (filtershare){
- nearbyshare = true;
+if (recentshare){
+alert('recenthsrae exists');
+	nearbyshare = true;
 		 recentshare = true;
 		$('.nearby-title').html('Nearby First');
 		$('.recent-title').html('Recently Online');
