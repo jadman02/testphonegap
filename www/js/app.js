@@ -11,7 +11,7 @@ share();
 var displaySuggestions = function(predictions, status) {
           if (status != google.maps.places.PlacesServiceStatus.OK) {
 
-		  myApp.confirm('Could not confirm your hometown.', 'Error', function () {newHometown();}
+		  myApp.confirm('Could not confirm your hometown.', 'Error', function () {newHometown();});}
 		  
           } else{
 	var predictionsarray = [];
