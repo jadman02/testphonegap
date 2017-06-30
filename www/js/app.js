@@ -1490,9 +1490,10 @@ recentfriends = snapshot.child("recentfriends").val();
 
 if (snapshot.child("photoresponse").val()){
 	    
-	    if (snapshot.child("photoresponse").val() == 'Y'){f_image = snapshot.child("uploadurl").val();}
+	    if (snapshot.child("photoresponse").val() == 'Y'){photoresponse = 'Y';f_image = snapshot.child("uploadurl").val();}
 	    }
 else{
+	photoresponse = 'N';
 f_image = 'https://graph.facebook.com/'+f_uid+'/picture?width=100&height=100';
 }
 	    
@@ -1894,6 +1895,8 @@ var uploadurl;
 //if (f_largeurls.length > 0){photoresponse = 'Y';uploadurl = f_largeurls[0];}
 //	else{photoresponse='N';uploadurl = '';}
 
+	photoresponse = 'N';
+	
 alert(radiussize);
 	alert(sortby);
 	alert(photoresponse);
