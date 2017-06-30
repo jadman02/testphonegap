@@ -11,9 +11,9 @@ share();
 var displaySuggestions = function(predictions, status) {
           if (status != google.maps.places.PlacesServiceStatus.OK) {
 
-		  $$('.alert-text-title').on('click', function () {
+
     myApp.alert('Could not confirm your hometown.', 'Error');
-});
+clearHometown();
 		  
 
 		  
