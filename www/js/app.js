@@ -1889,7 +1889,7 @@ var ethnicity_u = $( "#ethnicity-input" ).val();
 var height_u = $( "#height-input" ).val().substring(0,3);
 var weight_pre = $( "#weight-input" ).val();
 var weight_u = weight_pre.substr(0, weight_pre.indexOf(' '));
-
+alert('12');
 
 var uploadurl;
 //if (f_largeurls.length > 0){photoresponse = 'Y';uploadurl = f_largeurls[0];}
@@ -1897,7 +1897,7 @@ var uploadurl;
 
 	photoresponse = 'N';
 	
-
+alert('13');
 
 firebase.database().ref('users/' + f_uid).update({
     gender: newgender,
@@ -1949,7 +1949,7 @@ console.log(data);
 
 }
 	
-alert('88');
+
 //var hometown_u = $( "#homesearch" ).val();
 var industry_u = $( "#industry-input" ).val();
 var status_u = $( "#status-input" ).val();
