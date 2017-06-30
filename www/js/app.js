@@ -1820,13 +1820,16 @@ var weight_pre = $( "#weight-input" ).val();
 var weight_u = weight_pre.substr(0, weight_pre.indexOf(' '));
 
 
+	} 
+	
 var uploadurl;
-	alert(f_largeurls);
-	alert(uploadurl);
-//if (f_largeurls){
-//	if (f_largeurls.length > 0){photoresponse = 'Y';uploadurl = f_largeurls[0];}
-//	else{photoresponse='N';uploadurl = '';}
-//}
+
+
+try{if (f_largeurls.length > 0){photoresponse = 'Y';uploadurl = f_largeurls[0];}else{photoresponse='N';uploadurl = '';}}
+catch(err) {photoresponse='N';uploadurl = '';}
+	
+	
+
 alert('77');
 
 firebase.database().ref('users/' + f_uid).update({
