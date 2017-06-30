@@ -1897,7 +1897,7 @@ var uploadurl;
 
 	photoresponse = 'N';
 	
-alert('13');
+
 
 firebase.database().ref('users/' + f_uid).update({
     gender: newgender,
@@ -1921,7 +1921,7 @@ weight: weight_u,
     
     
   });
-
+alert('13');
 	if (deletedphoto){
 
 var newsmall = f_smallurls.toString();
@@ -1949,7 +1949,7 @@ console.log(data);
 
 }
 	
-
+alert('14');
 //var hometown_u = $( "#homesearch" ).val();
 var industry_u = $( "#industry-input" ).val();
 var status_u = $( "#status-input" ).val();
