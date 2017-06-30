@@ -10977,7 +10977,7 @@ var popupHTML = '<div class="popup prefpop">'+
        ' <div class="item-inner">'+
         '  <div class="item-title label">Hometown</div>'+
         '  <div class="item-input hometown-input">'+
-          '    <input type="text"  id="homesearch" placeholder="Hide" name="name" onclick="newHometown()" onblur="checkHometown()">'+
+          '    <input type="text"  id="homesearch" placeholder="Hide" val="11" name="name" onclick="newHometown()" onblur="checkHometown()">'+
          ' </div>'+
        ' </div>'+
       '</div>'+
