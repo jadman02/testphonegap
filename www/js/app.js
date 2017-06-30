@@ -70,8 +70,9 @@ function clearHometown(){
 
 }
 
-function focusHometown(){
-
+function newHometown(){
+        $('#homesearch').remove(); 
+	 $('#hometown-input').append('<input type="text"  id="homesearch" placeholder="Hide" name="name" onclick="newHometown()" onblur="checkHometown()">'); 
 	$('#homesearch').focus();
 
 }
@@ -10993,8 +10994,8 @@ var popupHTML = '<div class="popup prefpop">'+
       '<div class="item-content">'+
        ' <div class="item-inner">'+
         '  <div class="item-title label">Hometown</div>'+
-        '  <div class="item-input">'+
-          '    <input type="text"  id="homesearch" placeholder="Hide" name="name" onclick="focusHometown()" onfocus="clearHometown();" onblur="checkHometown()">'+
+        '  <div class="item-input hometown-input">'+
+          '    <input type="text"  id="homesearch" placeholder="Hide" name="name" onclick="newHometown()" onblur="checkHometown()">'+
          ' </div>'+
        ' </div>'+
       '</div>'+
