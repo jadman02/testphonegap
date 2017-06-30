@@ -1770,7 +1770,7 @@ $( "#maxdescription" ).append(inputlength + " / 100");
 
 
 function updateUser(){
-
+alert('updating');
 
 
 if ((pickerDescribe.initialized === false && !f_age) || (pickerDescribe2.initialized === false && !f_lower)) {
