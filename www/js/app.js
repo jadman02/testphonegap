@@ -18,7 +18,7 @@ var displaySuggestions = function(predictions, status) {
 $('.hometownprediction').remove();
           predictions.forEach(function(prediction) {
 prednum ++;
-		  if (prednum == 1) {predcolor = 'black';} else{predcolor = '#ccc';}
+		  if (prednum == 1) {predcolor = '#4cd964';} else{predcolor = '#ccc';}
 		  $('.hometownli').append(
 		  ' <li class="hometownprediction" style="clear:both;margin-top:0px;">'+
       '<div class="item-content">'+
@@ -37,6 +37,9 @@ prednum ++;
 function checkHometown(){
   
 var hometownquery = $('#homesearch').val();
+	if (hometownquery = ''){
+	$('.hometownprediction').remove();}
+	
         var service = new google.maps.places.AutocompleteService();
         service.getPlacePredictions({ input: hometownquery,types: ['(cities)'] }, displaySuggestions);
 
