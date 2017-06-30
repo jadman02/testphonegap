@@ -1890,11 +1890,14 @@ var weight_pre = $( "#weight-input" ).val();
 var weight_u = weight_pre.substr(0, weight_pre.indexOf(' '));
 
 
-//var uploadurl;
+var uploadurl;
 //if (f_largeurls.length > 0){photoresponse = 'Y';uploadurl = f_largeurls[0];}
 //	else{photoresponse='N';uploadurl = '';}
 
-alert('7');
+alert(radiussize);
+	alert(sortby);
+	alert(photoresponse);
+	alert(offsounds;
 
 firebase.database().ref('users/' + f_uid).update({
     gender: newgender,
@@ -1929,11 +1932,10 @@ var newheight = addedheight.toString();
 
 
 console.log('there was a deleted photo');
-
+alert('8');
 firebase.auth().currentUser.getToken().then(function(idToken) { 
 $.post( "updatephotos.php", { projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,uid:f_uid,largeurls:newlarge,smallurls:newsmall,height:newheight,width:newwidth} )
   .done(function( data ) {
-
 
 
 
@@ -1958,14 +1960,14 @@ var ethnicity_u = $( "#ethnicity-input" ).val();
 var height_u = $( "#height-input" ).val().substring(0,3);
 var weight_pre = $( "#weight-input" ).val();
 var weight_u = weight_pre.substr(0, weight_pre.indexOf(' '));
-alert('4');
+alert('9');
 
 firebase.auth().currentUser.getToken().then(function(idToken) {
 $.post( "updatedetails.php", { projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,sexuality:sexuality,uid:f_uid,name:f_name,description:userzdescription,age:newage,availstring:availstringn,industry:industry_u,hometown:'Sydz',status:status_u,politics:politics_u,eyes:eyes_u,body:body_u,religion:religion_u,zodiac:zodiac_u,ethnicity:ethnicity_u,height:height_u,weight:weight_u} )
   .done(function( data ) {
 
 alert(data);
-alert('5');
+alert('10');
 //if (f_gender && (f_gender != newgender)){
 //deleteDatabase(); 
 //}
