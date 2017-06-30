@@ -1804,7 +1804,7 @@ var availstringn = availstring.toString();
 
 if ($('#soundnotif').prop('checked')) {offsounds = 'Y'} else {offsounds = 'N'}
 
-
+alert('66');
 //User Profile details
 
 var industry_u = $( "#industry-input" ).val();
@@ -1824,7 +1824,7 @@ var uploadurl;
 if (f_largeurls.length > 0){photoresponse = 'Y';uploadurl = f_largeurls[0];}
 	else{photoresponse='N';uploadurl = '';}
 
-
+alert('77');
 
 firebase.database().ref('users/' + f_uid).update({
     gender: newgender,
@@ -1841,13 +1841,13 @@ weight: weight_u,
     radius:radiussize,
     sort:sortby,
     availstring:availstring,
-    offsounds:offsounds,
-	photoresponse:photoresponse,
-	uploadurl:uploadurl
+    offsounds:offsounds
+//	photoresponse:photoresponse,
+//	uploadurl:uploadurl
     
     
   });
-
+alert('88');
 if (deletedphoto){
 
 var newsmall = f_smallurls.toString();
@@ -1888,7 +1888,7 @@ var height_u = $( "#height-input" ).val().substring(0,3);
 var weight_pre = $( "#weight-input" ).val();
 var weight_u = weight_pre.substr(0, weight_pre.indexOf(' '));
 
-
+alert('99');
 firebase.auth().currentUser.getToken().then(function(idToken) {
 $.post( "updatedetails.php", { projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,sexuality:sexuality,uid:f_uid,name:f_name,description:userzdescription,age:newage,availstring:availstringn,industry:industry_u,hometown:0,status:status_u,politics:politics_u,eyes:eyes_u,body:body_u,religion:religion_u,zodiac:zodiac_u,ethnicity:ethnicity_u,height:height_u,weight:weight_u} )
   .done(function( data ) {
