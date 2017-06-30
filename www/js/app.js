@@ -10455,7 +10455,7 @@ var userphotospermission = 0;
   }
  });	   
    
-	   if (userphotospermission == 0){getPhotoPermissionNow();}
+	   if (userphotospermission == 0){getPhotoPermissionNow();return false;}
 	   else {
 	   myApp.alert('Upload photos to Facebook.', 'No photos available');return false;
 	   }
@@ -10464,7 +10464,7 @@ var userphotospermission = 0;
 	
 
 	
-	console.log(response);
+
       
 
 pagingalbumurl = response.paging.next;
