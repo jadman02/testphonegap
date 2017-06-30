@@ -1829,14 +1829,14 @@ else {lowerage = pickerDescribe2.value[1];upperage = pickerDescribe2.value[2];}
 
 else {lowerage = f_lower;upperage = f_upper;}
 
-alert('3');
+
 
 if ($( "#distance_10" ).hasClass( "active" )){radiussize = '10';}
 if ($( "#distance_25" ).hasClass( "active" )){radiussize = '25';}
 if ($( "#distance_50" ).hasClass( "active" )){radiussize = '50';}
 if ($( "#distance_100" ).hasClass( "active" )){radiussize = '100';}
 
-alert('4');
+
 availarray = [];
 $( ".availrec" ).each(function() {
 
@@ -1870,7 +1870,7 @@ var availstring = JSON.stringify(availarray);
 
 var availstringn = availstring.toString();
 
-alert('5');
+
 
 if ($('#soundnotif').prop('checked')) {offsounds = 'Y'} else {offsounds = 'N'}
 
@@ -1888,11 +1888,11 @@ var ethnicity_u = $( "#ethnicity-input" ).val();
 var height_u = $( "#height-input" ).val().substring(0,3);
 var weight_pre = $( "#weight-input" ).val();
 var weight_u = weight_pre.substr(0, weight_pre.indexOf(' '));
-alert('6');
-console.log(status_u);
-var uploadurl;
-if (f_largeurls.length > 0){photoresponse = 'Y';uploadurl = f_largeurls[0];}
-	else{photoresponse='N';uploadurl = '';}
+
+
+//var uploadurl;
+//if (f_largeurls.length > 0){photoresponse = 'Y';uploadurl = f_largeurls[0];}
+//	else{photoresponse='N';uploadurl = '';}
 
 alert('7');
 
