@@ -7,76 +7,7 @@ function fcm(){
 share();
    
 }
-
-var displaySuggestions = function(predictions, status) {
-          if (status != google.maps.places.PlacesServiceStatus.OK) {
-
-          } else{
-	var predictionsarray = [];
-$('.hometownprediction').remove();
-          predictions.forEach(function(prediction) {
-
-predictionsarray.push(prediction.description);
-	 
-	  
-          });
-	  }
 	
-	
-	
-		var hometownpicker = myApp.picker({
-    input: '#homesearch',
-         onOpen: function (p){$( '.picker-items-col-wrapper' ).css("width", + $( document ).width() + "px");if (sexuality){processUpdate();  myApp.sizeNavbars();  } },
-onChange:function (p, values, displayValues){$( '#homesearch' ).addClass("profilevaluechosen");},
-    onClose:function (p){hometownpicker.destroy();},
-			toolbarTemplate: 
-        '<div class="toolbar">' +
-            '<div class="toolbar-inner">' +
-                '<div class="left" onclick="removeProfileSet(\'hometown\')">' +
-                    '<a href="#" class="link close-picker" onclick="clearHometown();" style="color:#ff3b30">Cancel</a>' +
-                '</div>' +
-                '<div class="right">' +
-                    '<a href="#" class="link close-picker">Done</a>' +
-                '</div>' +
-            '</div>' +
-        '</div>',
-    cols: [
-       {
-         values: predictionsarray
-       }
-     ]
-}); 
-	
-	hometownpicker.open();
-	
-	  };
-
-function checkHometown(){
-  
-
-	
-var hometownquery = $('#homesearch').val();
-	if (hometownquery == ''){
-	return false;}
-	
-        var service = new google.maps.places.AutocompleteService();
-        service.getPlacePredictions({ input: hometownquery,types: ['(cities)'] }, displaySuggestions);
-
-}
-
-function clearHometown(){
-
-	$('#homesearch').val('');
-
-}
-
-function newHometown(){
-        $('#homesearch').remove(); 
-	 $('.hometown-input').append('<input type="text"  id="homesearch" placeholder="Hide" name="name" onclick="newHometown()" onblur="checkHometown()">'); 
-	$('#homesearch').focus();
-
-}
-
 function fQuery(){
 $.ajax({
    url: "https://graph.facebook.com/784956164912201?fields=context.fields(friends_using_app)",
@@ -368,7 +299,7 @@ var matcheslistener;
 var noresultstimeout;
 var timeoutactive = false;
 var radiussize,sortby,offsounds;
-var industry_u,hometown_u,status_u,politics_u,eyes_u,body_u,religion_u,zodiac_u,ethnicity_u,height_u,weight_u,recentfriends;
+var industry_u,status_u,politics_u,eyes_u,body_u,religion_u,zodiac_u,ethnicity_u,height_u,weight_u,recentfriends;
 var descriptionslist = [];
 var nameslist = [];
 var fdateicon = '<img src="media/dateicon.png" style="width:28px;margin-right:5px;">';
@@ -1474,7 +1405,7 @@ userpref = firebase.database().ref('users/' + f_uid).on("value",function(snapsho
 //});  
         
   //  });
-//hometown_u = snapshot.child("hometown").val();
+
 industry_u = snapshot.child("industry").val();
 status_u = snapshot.child("status").val();
 politics_u = snapshot.child("politics").val();
@@ -1490,10 +1421,9 @@ recentfriends = snapshot.child("recentfriends").val();
 
 if (snapshot.child("photoresponse").val()){
 	    
-	    if (snapshot.child("photoresponse").val() == 'Y'){photoresponse = 'Y';f_image = snapshot.child("uploadurl").val();}
+	    if (snapshot.child("photoresponse").val() == 'Y'){f_image = snapshot.child("uploadurl").val();}
 	    }
 else{
-	photoresponse = 'N';
 f_image = 'https://graph.facebook.com/'+f_uid+'/picture?width=100&height=100';
 }
 	    
@@ -1837,7 +1767,9 @@ if ($( "#distance_25" ).hasClass( "active" )){radiussize = '25';}
 if ($( "#distance_50" ).hasClass( "active" )){radiussize = '50';}
 if ($( "#distance_100" ).hasClass( "active" )){radiussize = '100';}
 
-
+if ($( "#sortrandom" ).hasClass( "active" )){sortby = 'random';}
+if ($( "#sortdistance" ).hasClass( "active" )){sortby = 'distance';}
+if ($( "#sortactivity" ).hasClass( "active" )){sortby = 'activity';}
 availarray = [];
 $( ".availrec" ).each(function() {
 
@@ -1877,7 +1809,7 @@ if ($('#soundnotif').prop('checked')) {offsounds = 'Y'} else {offsounds = 'N'}
 
 
 //User Profile details
-//var hometown_u = $( "#homesearch" ).val();
+
 var industry_u = $( "#industry-input" ).val();
 var status_u = $( "#status-input" ).val();
 var politics_u = $( "#politics-input" ).val();
@@ -1889,19 +1821,37 @@ var ethnicity_u = $( "#ethnicity-input" ).val();
 var height_u = $( "#height-input" ).val().substring(0,3);
 var weight_pre = $( "#weight-input" ).val();
 var weight_u = weight_pre.substr(0, weight_pre.indexOf(' '));
-alert('12');
 
+console.log(status_u);
 var uploadurl;
-//if (f_largeurls.length > 0){photoresponse = 'Y';uploadurl = f_largeurls[0];}
-//	else{photoresponse='N';uploadurl = '';}
-
-	photoresponse = 'N';
-	
+if (f_largeurls.length > 0){photoresponse = 'Y';uploadurl = f_largeurls[0];}
+	else{photoresponse='N';uploadurl = '';}
 
 
 
-alert('13');
-	if (deletedphoto){
+firebase.database().ref('users/' + f_uid).update({
+    gender: newgender,
+    industry:industry_u,
+    status:status_u,
+    politics: politics_u,eyes: eyes_u,body: body_u,religion: religion_u,zodiac: zodiac_u,ethnicity: ethnicity_u,
+height: height_u,
+weight: weight_u,
+        age: newage,
+    interested: newinterested,
+    lower: lowerage,
+    upper: upperage,
+    description:userzdescription,
+    radius:radiussize,
+    sort:sortby,
+    availstring:availstring,
+    offsounds:offsounds,
+	photoresponse:photoresponse,
+	uploadurl:uploadurl
+    
+    
+  });
+
+if (deletedphoto){
 
 var newsmall = f_smallurls.toString();
 var newlarge = f_largeurls.toString();
@@ -1919,6 +1869,7 @@ $.post( "updatephotos.php", { projectid:f_projectid,token:idToken,currentid:fire
 
 
 
+
 console.log(data);
 });
 
@@ -1927,9 +1878,7 @@ console.log(data);
 });
 
 }
-	
-alert('14');
-//var hometown_u = $( "#homesearch" ).val();
+
 var industry_u = $( "#industry-input" ).val();
 var status_u = $( "#status-input" ).val();
 var politics_u = $( "#politics-input" ).val();
@@ -1941,14 +1890,14 @@ var ethnicity_u = $( "#ethnicity-input" ).val();
 var height_u = $( "#height-input" ).val().substring(0,3);
 var weight_pre = $( "#weight-input" ).val();
 var weight_u = weight_pre.substr(0, weight_pre.indexOf(' '));
-alert('99');
+
 
 firebase.auth().currentUser.getToken().then(function(idToken) {
 $.post( "updatedetails.php", { projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,sexuality:sexuality,uid:f_uid,name:f_name,description:userzdescription,age:newage,availstring:availstringn,industry:industry_u,hometown:0,status:status_u,politics:politics_u,eyes:eyes_u,body:body_u,religion:religion_u,zodiac:zodiac_u,ethnicity:ethnicity_u,height:height_u,weight:weight_u} )
   .done(function( data ) {
-
+alert('didan update');
 alert(data);
-alert('10');
+
 //if (f_gender && (f_gender != newgender)){
 //deleteDatabase(); 
 //}
@@ -10831,12 +10780,12 @@ var popupHTML = '<div class="popup prefpop">'+
 
  '   <div class="navbar-inner">'+
 
-  '      <div class="left" style="color:white;"><a href="#" onclick="updateUser();" style="color:green;display:none" class="donechange">Done</a><a href="#" style="color:red;display:none;" class="close-popup doneunchange">Done</a></div>'+
+  '      <div class="left" style="color:white;"></div>'+
    '     <div class="center swipetext" style="color:white;">Filters'+
          //'<div style="width:70px;height:70px;border-radius:50%;background-image:url(\''+f_image+'\');background-size:cover;background-position:50% 50%;margin-top:30px;z-index:100;border:5px solid #2196f3"></div>'+
 
    '</div>'+
-    '    <div class="right"></div>'+
+    '    <div class="right"><a href="#" onclick="updateUser();" style="color:white;display:none" class="donechange">Done</a><a href="#" style="color:white;display:none;" class="close-popup doneunchange">Done</a></div>'+
     
 
     
@@ -10897,7 +10846,7 @@ var popupHTML = '<div class="popup prefpop">'+
  '   <ul class="availul" style="padding-left:10px;padding-right:10px;padding-bottom:20px;">'+
 
   '  </ul>'+
-    '<div class="list-block-label hiderowpref">Make it easier for your matches to organise a time to meet you.</div>'+
+    '<div class="list-block-label hiderowpref">Update your availability to make it easier for your matches to organise a time to meet you.</div>'+
 
 '</div> '+
         
@@ -10972,16 +10921,16 @@ var popupHTML = '<div class="popup prefpop">'+
       
 
       
-' <li class="hiderowpref hometownli" style="clear:both;margin-top:0px;">'+
+' <li class="hiderowpref" style="clear:both;margin-top:0px;">'+
       '<div class="item-content">'+
        ' <div class="item-inner">'+
         '  <div class="item-title label">Hometown</div>'+
-        '  <div class="item-input hometown-input">'+
-          '    <input type="text"  id="homesearch" placeholder="Hide" name="name" onclick="newHometown()" onblur="checkHometown()">'+
+        '  <div class="item-input">'+
+          '    <input type="text"  placeholder="Hide" name="name" placeholder="Hide" readonly >'+
          ' </div>'+
        ' </div>'+
       '</div>'+
-
+   ''+
     '</li>'+
     
         ' <li class="hiderowpref">'+
@@ -11425,7 +11374,6 @@ onChange:function (p, values, displayValues){$( '#body-input' ).addClass("profil
      ]
 }); 
 
-	
 
 var eyespicker = myApp.picker({
     input: '#eyes-input',
@@ -11817,7 +11765,7 @@ else{$('#soundnotif').prop('checked', false);}
 if (f_age) {$( ".savebutton" ).removeClass('disabled');}
 
 
-//if(hometown_u){$( "#homesearch" ).val( hometown_u );}
+
 if(industry_u){$( "#industry-input" ).val( industry_u );}
 if(status_u){$( "#status-input" ).val( status_u );}
 if(politics_u){$( "#politics-input" ).val( politics_u );}
