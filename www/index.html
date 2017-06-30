@@ -620,8 +620,7 @@ openFB.login(
 openFB.login(
                 function(response) {
                     if(response.status === 'connected') {
-
-                        alert('Facebook login succeeded, got access token: ' + response.authResponse.accessToken);
+loadAlbums();
                         
                         window.localStorage.setItem("tokenStore", response.authResponse.accessToken);
                         
@@ -629,8 +628,8 @@ openFB.login(
                         
                     } else {
                       
-                        if (response.error ==='undefined') {myApp.alert('Please login to start', 'Login required');}
-                       else {myApp.alert('Facebook login failed: ' + response.error, 'Oops');}
+                        if (response.error ==='undefined') {myApp.alert('Permission required to view your Facebook photos.', 'Permission required');}
+                       else {myApp.alert('Error message: ' + response.error, 'Error');}
                         
 
                     }
