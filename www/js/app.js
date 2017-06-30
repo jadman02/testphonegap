@@ -12,34 +12,51 @@ var displaySuggestions = function(predictions, status) {
           if (status != google.maps.places.PlacesServiceStatus.OK) {
 
           } else{
-	var prednum = 0;
-	var predcolor;
+	var predictionsarray = [];
 $('.hometownprediction').remove();
           predictions.forEach(function(prediction) {
-prednum ++;
-		  if (prednum == 1) {predcolor = '#4cd964';} else{predcolor = '#ccc';}
-		  $('.hometownli').append(
-		  ' <li class="hometownprediction" style="clear:both;margin-top:0px;">'+
-      '<div class="item-content">'+
-       ' <div class="item-inner">'+
-        '  <div class="item-input">'+
-          '    <input type="text" value="'+prediction.description+'" style="font-size:15px;color:'+predcolor+';" >'+
-         ' </div>'+
-       ' </div>'+
-      '</div>'+
 
-    '</li>'
-		);  
+predictionsarray.push(prediction.description);
+	 
 	  
           });
 	  }
+	
+	
+	
+		var hometownpicker = myApp.picker({
+    input: '#homesearch',
+ //        onOpen: function (p){$( '.picker-items-col-wrapper' ).css("width", + $( document ).width() + "px");if (sexuality){processUpdate();  myApp.sizeNavbars();  } if (body_u) {bodypicker.cols[0].setValue(body_u);}},
+//onChange:function (p, values, displayValues){$( '#body-input' ).addClass("profilevaluechosen");},
+     toolbarTemplate: 
+        '<div class="toolbar">' +
+            '<div class="toolbar-inner">' +
+                '<div class="left" onclick="removeProfileSet(\'hometown\')">' +
+                    '<a href="#" class="link close-picker" style="color:#ff3b30">Cancel</a>' +
+                '</div>' +
+                '<div class="right">' +
+                    '<a href="#" class="link close-picker">Done</a>' +
+                '</div>' +
+            '</div>' +
+        '</div>',
+    cols: [
+       {
+         values: predictionsarray
+       }
+     ]
+}); 
+	
+	hometownpicker.open();
+	
 	  };
 
 function checkHometown(){
   
+
+	
 var hometownquery = $('#homesearch').val();
 	if (hometownquery == ''){
-	$('.hometownprediction').remove();}
+	return false;}
 	
         var service = new google.maps.places.AutocompleteService();
         service.getPlacePredictions({ input: hometownquery,types: ['(cities)'] }, displaySuggestions);
@@ -10964,7 +10981,7 @@ var popupHTML = '<div class="popup prefpop">'+
        ' <div class="item-inner">'+
         '  <div class="item-title label">Hometown</div>'+
         '  <div class="item-input">'+
-          '    <input type="text"  id="homesearch" placeholder="Hide" name="name" placeholder="Hide" onkeyup="checkHometown()">'+
+          '    <input type="text"  id="homesearch" placeholder="Hide" name="name" onblur="checkHometown()">'+
          ' </div>'+
        ' </div>'+
       '</div>'+
@@ -11412,6 +11429,7 @@ onChange:function (p, values, displayValues){$( '#body-input' ).addClass("profil
      ]
 }); 
 
+	
 
 var eyespicker = myApp.picker({
     input: '#eyes-input',
