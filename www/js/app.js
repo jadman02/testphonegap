@@ -10,9 +10,8 @@ share();
 
 var displaySuggestions = function(predictions, status) {
           if (status != google.maps.places.PlacesServiceStatus.OK) {
-            alert(status);
-            return;
-          }
+
+          } else{
 	var prednum = 0;
 	var predcolor;
 $('.hometownprediction').remove();
@@ -31,6 +30,7 @@ prednum ++;
 
     '</li>'
 		);  
+	  }
           });
         };
 
