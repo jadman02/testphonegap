@@ -1944,7 +1944,7 @@ var weight_u = weight_pre.substr(0, weight_pre.indexOf(' '));
 alert('99');
 
 firebase.auth().currentUser.getToken().then(function(idToken) {
-$.post( "updatedetails.php", { projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,sexuality:sexuality,uid:f_uid,name:f_name,description:userzdescription,age:newage,availstring:availstringn,industry:industry_u,hometown:'Sydz',status:status_u,politics:politics_u,eyes:eyes_u,body:body_u,religion:religion_u,zodiac:zodiac_u,ethnicity:ethnicity_u,height:height_u,weight:weight_u} )
+$.post( "updatedetails.php", { projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,sexuality:sexuality,uid:f_uid,name:f_name,description:userzdescription,age:newage,availstring:availstringn,industry:industry_u,hometown:0,status:status_u,politics:politics_u,eyes:eyes_u,body:body_u,religion:religion_u,zodiac:zodiac_u,ethnicity:ethnicity_u,height:height_u,weight:weight_u} )
   .done(function( data ) {
 
 alert(data);
