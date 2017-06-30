@@ -10281,8 +10281,7 @@ $.getJSON(retrieveurl,
 
 
 $( ".swipebuttondone").addClass("disabled");
-$( ".noparray").hide();
-$( ".yesparray").show();
+
 $( ".photoloader").hide();
 
 if (response.data.length === 0){$( ".loadmorebuttonphotos").hide();$( "#nophotosfound").show();return false;}
@@ -10387,7 +10386,7 @@ addedlargearray = f_largeurls;
    '     <div class="center photocount">'+
 '0 photos selected'+
    '</div>'+
-    '    <div class="right"><a href="#" onclick="closeAlbums()" class="noparray" style="color:white;">Save</a><a href="#" class="yesparray" onclick="getPhotoURL()" style="display:none;color:white;">Save</a></div>'+
+    '    <div class="right"><a href="#" onclick="closeAlbums()" class="noparray" style="color:white;">Done</a><a href="#" class="yesparray" onclick="getPhotoURL()" style="display:none;color:white;">Save</a></div>'+
     '</div>'+
 '</div>'+
     '<div class="pages navbar-fixed">'+
@@ -10520,7 +10519,10 @@ virtualTranslate:true,
 slidesPerColumnFill:'row',
  spaceBetween: 3,
 onClick:function(swiper, event){if (sexuality){processUpdate();  myApp.sizeNavbars();  }
-console.log(swiper);
+
+				$( ".noparray").hide();
+$( ".yesparray").show();
+				
 if ($( ".slidee_" + swiper.clickedIndex).hasClass('slidee-selected')){$( ".slidee_" + swiper.clickedIndex).removeClass('slidee-selected');$( ".close_" + swiper.clickedIndex).show();$( ".check_" + swiper.clickedIndex).hide();
 
   var largeurl = swiper.clickedSlide.classList[3].replace("largeurl_", ""); 
