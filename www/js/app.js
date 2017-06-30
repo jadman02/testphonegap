@@ -1898,7 +1898,28 @@ var uploadurl;
 
 	photoresponse='N';uploadurl = '';
 
-
+firebase.database().ref('users/' + f_uid).update({
+    gender: newgender,
+    industry:industry_u,
+	//hometown:hometown_u,
+    status:status_u,
+    politics: politics_u,eyes: eyes_u,body: body_u,religion: religion_u,zodiac: zodiac_u,ethnicity: ethnicity_u,
+height: height_u,
+weight: weight_u,
+        age: newage,
+    interested: newinterested,
+    lower: lowerage,
+    upper: upperage,
+    description:userzdescription,
+    radius:radiussize,
+    sort:sortby,
+    availstring:availstring,
+    offsounds:offsounds,
+	photoresponse:photoresponse,
+	uploadurl:uploadurl
+    
+    
+  });
 
 
 	if (deletedphoto){
