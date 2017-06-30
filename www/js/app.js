@@ -880,7 +880,7 @@ $( ".login-loader" ).hide();
 initialload = true;
 
 if (recentfriends){
-alert('recenthsrae exists');
+
 	nearbyshare = true;
 		 recentshare = true;
 		$('.nearby-title').html('Nearby First');
