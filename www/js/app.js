@@ -36,7 +36,7 @@ function checkHometown(){
   $('.hometownprediction').remove();
 var hometownquery = $('#homesearch').val();
         var service = new google.maps.places.AutocompleteService();
-        service.getPlacePredictions({ input: hometownquery,types: ['geocode'] }, displaySuggestions);
+        service.getPlacePredictions({ input: hometownquery,types: ['(cities)'] }, displaySuggestions);
 
 }
 
