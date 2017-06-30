@@ -26,7 +26,7 @@ predictionsarray.push(prediction.description);
 	
 		var hometownpicker = myApp.picker({
     input: '#homesearch',
-         onOpen: function (p){$( '.picker-items-col-wrapper' ).css("width", + $( document ).width() + "px");if (sexuality){processUpdate();  myApp.sizeNavbars();  } }},
+         onOpen: function (p){$( '.picker-items-col-wrapper' ).css("width", + $( document ).width() + "px");if (sexuality){processUpdate();  myApp.sizeNavbars();  } },
 onChange:function (p, values, displayValues){$( '#homesearch' ).addClass("profilevaluechosen");},
     onClose:function (p){hometownpicker.destroy();},
 			toolbarTemplate: 
@@ -11273,7 +11273,7 @@ myApp.popup(popupHTML);
 if (blocklist){
 if (blocklist.length){$( ".blockbutton" ).removeClass('disabled');}
 }
-if(hometown_u) !=''){$( "#homesearch" ).val(hometown_u);}
+
 if(sexuality){$( ".doneunchange" ).show();$( ".registerdiv" ).hide();$('.hiderowpref').removeClass('hiderowpref');}
 
 if(!sexuality){sortBy(1);$( ".swipetoolbar" ).hide();}
@@ -11836,7 +11836,7 @@ else{$('#soundnotif').prop('checked', false);}
 if (f_age) {$( ".savebutton" ).removeClass('disabled');}
 
 
-
+if(hometown_u){$( "#homesearch" ).val( hometown_u );}
 if(industry_u){$( "#industry-input" ).val( industry_u );}
 if(status_u){$( "#status-input" ).val( status_u );}
 if(politics_u){$( "#politics-input" ).val( politics_u );}
