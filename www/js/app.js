@@ -1703,7 +1703,7 @@ $( "#maxdescription" ).append(inputlength + " / 100");
 function updateUser(){
 
 
-var photoresponse,radiussize,sortby,offsounds;
+
 if ((pickerDescribe.initialized === false && !f_age) || (pickerDescribe2.initialized === false && !f_lower)) {
 
 myApp.alert('Please complete more profile information.', 'Missing Information');
@@ -1819,11 +1819,12 @@ var height_u = $( "#height-input" ).val().substring(0,3);
 var weight_pre = $( "#weight-input" ).val();
 var weight_u = weight_pre.substr(0, weight_pre.indexOf(' '));
 
-console.log(status_u);
+alert('66.5');
 var uploadurl;
-if (f_largeurls.length > 0){photoresponse = 'Y';uploadurl = f_largeurls[0];}
+if (f_largeurls){
+	if (f_largeurls.length > 0){photoresponse = 'Y';uploadurl = f_largeurls[0];}
 	else{photoresponse='N';uploadurl = '';}
-
+}
 alert('77');
 
 firebase.database().ref('users/' + f_uid).update({
