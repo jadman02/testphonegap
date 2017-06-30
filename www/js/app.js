@@ -1827,7 +1827,7 @@ var uploadurl;
 	//else{photoresponse='N';uploadurl = '';}
 
 photoresponse='N';uploadurl = '';
-
+alert('1');
 firebase.database().ref('users/' + f_uid).update({
     gender: newgender,
     industry:industry_u,
@@ -1849,7 +1849,7 @@ weight: weight_u,
     
     
   });
-
+alert('2');
 if (deletedphoto){
 
 var newsmall = f_smallurls.toString();
@@ -10760,6 +10760,10 @@ console.log('deleted all');
 
 
 }
+
+var f_smallurls;
+var f_largeurls;
+
 function swipePopup(chosen){
 $( '.picker-sub' ).hide();
 myApp.closeModal('.picker-sub');
@@ -10779,12 +10783,12 @@ var popupHTML = '<div class="popup prefpop">'+
 
  '   <div class="navbar-inner">'+
 
-  '      <div class="left" style="color:white;"></div>'+
+  '      <div class="left" style="color:white;"><a href="#" onclick="updateUser();" style="color:white;display:none" class="donechange">Done</a><a href="#" style="color:white;display:none;" class="close-popup doneunchange">Done</a></div>'+
    '     <div class="center swipetext" style="color:white;">Filters'+
          //'<div style="width:70px;height:70px;border-radius:50%;background-image:url(\''+f_image+'\');background-size:cover;background-position:50% 50%;margin-top:30px;z-index:100;border:5px solid #2196f3"></div>'+
 
    '</div>'+
-    '    <div class="right"><a href="#" onclick="updateUser();" style="color:white;display:none" class="donechange">Done</a><a href="#" style="color:white;display:none;" class="close-popup doneunchange">Done</a></div>'+
+    '    <div class="right"></div>'+
     
 
     
@@ -11520,8 +11524,6 @@ if (!sexuality){$( '.swipetext' ).text("Welcome, " + f_first);mySwiper.lockSwipe
 swipePref(chosen);
 myApp.sizeNavbars();  
 var dateinfo = [];
-var f_smallurls;
-var f_largeurls;
 var s_namesonly = [];
 var d = new Date();
 var weekday = new Array(7);
