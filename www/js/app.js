@@ -72,7 +72,7 @@ function clearHometown(){
 
 function newHometown(){
         $('#homesearch').remove(); 
-	 $('#hometown-input').append('<input type="text"  id="homesearch" placeholder="Hide" name="name" onclick="newHometown()" onblur="checkHometown()">'); 
+	 $('.hometown-input').append('<input type="text"  id="homesearch" placeholder="Hide" name="name" onclick="newHometown()" onblur="checkHometown()">'); 
 	$('#homesearch').focus();
 
 }
