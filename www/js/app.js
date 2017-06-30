@@ -10454,8 +10454,8 @@ var userphotospermission = 0;
   
   }
  });	   
-   
-	   if (userphotospermission == 0){getPhotoPermissionNow();return false;}
+
+	   if (userphotospermission == 0){getPhotoPermissionNow();myApp.closeModal('.photopopup');return false;}
 	   else {
 	   myApp.alert('Upload photos to Facebook.', 'No photos available');return false;
 	   }
