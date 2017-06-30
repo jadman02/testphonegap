@@ -1897,10 +1897,7 @@ var uploadurl;
 
 	photoresponse = 'N';
 	
-alert(radiussize);
-	alert(sortby);
-	alert(photoresponse);
-	alert(offsounds);
+
 
 firebase.database().ref('users/' + f_uid).update({
     gender: newgender,
@@ -1925,32 +1922,7 @@ weight: weight_u,
     
   });
 
-if (deletedphoto){
 
-var newsmall = f_smallurls.toString();
-var newlarge = f_largeurls.toString();
-
-var newwidth = addedwidth.toString();
-var newheight = addedheight.toString();
-
-
-console.log('there was a deleted photo');
-alert('8');
-firebase.auth().currentUser.getToken().then(function(idToken) { 
-$.post( "updatephotos.php", { projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,uid:f_uid,largeurls:newlarge,smallurls:newsmall,height:newheight,width:newwidth} )
-  .done(function( data ) {
-
-
-
-
-console.log(data);
-});
-
-    }).catch(function(error) {
-  // Handle error
-});
-
-}
 //var hometown_u = $( "#homesearch" ).val();
 var industry_u = $( "#industry-input" ).val();
 var status_u = $( "#status-input" ).val();
