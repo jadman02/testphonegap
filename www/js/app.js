@@ -1922,7 +1922,34 @@ weight: weight_u,
     
   });
 
+	if (deletedphoto){
 
+var newsmall = f_smallurls.toString();
+var newlarge = f_largeurls.toString();
+
+var newwidth = addedwidth.toString();
+var newheight = addedheight.toString();
+
+
+console.log('there was a deleted photo');
+
+firebase.auth().currentUser.getToken().then(function(idToken) { 
+$.post( "updatephotos.php", { projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,uid:f_uid,largeurls:newlarge,smallurls:newsmall,height:newheight,width:newwidth} )
+  .done(function( data ) {
+
+
+
+
+console.log(data);
+});
+
+    }).catch(function(error) {
+  // Handle error
+});
+
+}
+	
+alert('88');
 //var hometown_u = $( "#homesearch" ).val();
 var industry_u = $( "#industry-input" ).val();
 var status_u = $( "#status-input" ).val();
@@ -1935,7 +1962,7 @@ var ethnicity_u = $( "#ethnicity-input" ).val();
 var height_u = $( "#height-input" ).val().substring(0,3);
 var weight_pre = $( "#weight-input" ).val();
 var weight_u = weight_pre.substr(0, weight_pre.indexOf(' '));
-alert('9');
+alert('99');
 
 firebase.auth().currentUser.getToken().then(function(idToken) {
 $.post( "updatedetails.php", { projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,sexuality:sexuality,uid:f_uid,name:f_name,description:userzdescription,age:newage,availstring:availstringn,industry:industry_u,hometown:'Sydz',status:status_u,politics:politics_u,eyes:eyes_u,body:body_u,religion:religion_u,zodiac:zodiac_u,ethnicity:ethnicity_u,height:height_u,weight:weight_u} )
