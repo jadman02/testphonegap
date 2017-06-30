@@ -30,9 +30,10 @@ prednum ++;
 
     '</li>'
 		);  
-	  }
+	  
           });
-        };
+	  }
+	  };
 
 function checkHometown(){
   
