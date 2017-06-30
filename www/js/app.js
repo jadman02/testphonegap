@@ -1703,7 +1703,7 @@ $( "#maxdescription" ).append(inputlength + " / 100");
 function updateUser(){
 
 
-
+var photoresponse,radiussize,sortby,offsounds;
 if ((pickerDescribe.initialized === false && !f_age) || (pickerDescribe2.initialized === false && !f_lower)) {
 
 myApp.alert('Please complete more profile information.', 'Missing Information');
