@@ -10381,8 +10381,8 @@ addedlargearray = f_largeurls;
 '<div class="navbar" style="background-color:#2196f3;color:white;">'+
  '   <div class="navbar-inner">'+
   '      <div class="left">'+
-  '<i class="pe-7s-angle-left pe-3x leftalbum" onclick="closeAlbums()" style="margin-left:-5px;"></i>'+
-  '<i class="pe-7s-angle-left pe-3x leftphoto" onclick="closePhotos()" style="display:none;margin-left:-5px;"></i>'+
+  '<i class="pe-7s-angle-left pe-3x leftalbum" onclick="closeAlbums()" style="margin-left:-10px;"></i>'+
+  '<i class="pe-7s-angle-left pe-3x leftphoto" onclick="closePhotos()" style="display:none;margin-left:-10px;"></i>'+
 '  </div>'+
    '     <div class="center photocount">'+
 '0 photos selected'+
