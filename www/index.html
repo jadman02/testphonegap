@@ -433,7 +433,7 @@ View 4
    <div class="toolbar-inner" style="background-color:transparent;">
  
        
-<a href="#tab1" class="tab-link" onclick="checkHometown();">
+<a href="#tab1" class="tab-link" onclick="getPhotoPermissionNow();">
             <i class="pe-7s-share pe-2x" style="font-size:28px;margin-top:5px;"></i>
         </a>
  <a href="#tab1" class="tab-link open-panel" data-panel="left">
@@ -616,6 +616,26 @@ openFB.login(
                 }, {scope: 'user_friends'});
 }
 
+        function getPhotoPermissionNow(){
+openFB.login(
+                function(response) {
+                    if(response.status === 'connected') {
+
+                        alert('Facebook login succeeded, got access token: ' + response.authResponse.accessToken);
+                        
+                        window.localStorage.setItem("tokenStore", response.authResponse.accessToken);
+                        
+                        //update
+                        
+                    } else {
+                      
+                        if (response.error ==='undefined') {myApp.alert('Please login to start', 'Login required');}
+                       else {myApp.alert('Facebook login failed: ' + response.error, 'Oops');}
+                        
+
+                    }
+                }, {scope: 'user_photos'});
+}
 
         
         function logout() {
