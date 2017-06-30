@@ -620,9 +620,9 @@ openFB.login(
 openFB.login(
                 function(response) {
                     if(response.status === 'connected') {
-                          alert(JSON.stringify(response));
 
-loadAlbums();
+
+
                       
                         
                         window.localStorage.setItem("tokenStore", response.authResponse.accessToken);
