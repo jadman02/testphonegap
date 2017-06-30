@@ -63,6 +63,12 @@ var hometownquery = $('#homesearch').val();
 
 }
 
+function clearHometown(){
+
+	$('#homesearch').val('');
+
+}
+
 function fQuery(){
 $.ajax({
    url: "https://graph.facebook.com/784956164912201?fields=context.fields(friends_using_app)",
@@ -10981,7 +10987,7 @@ var popupHTML = '<div class="popup prefpop">'+
        ' <div class="item-inner">'+
         '  <div class="item-title label">Hometown</div>'+
         '  <div class="item-input">'+
-          '    <input type="text"  id="homesearch" placeholder="Hide" name="name" onblur="checkHometown()">'+
+          '    <input type="text"  id="homesearch" placeholder="Hide" name="name" onfocus="clearHometown();" onblur="checkHometown()">'+
          ' </div>'+
        ' </div>'+
       '</div>'+
