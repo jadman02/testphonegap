@@ -1771,7 +1771,7 @@ $( "#maxdescription" ).append(inputlength + " / 100");
 
 function updateUser(){
 
-
+alert('1');
 
 if ((pickerDescribe.initialized === false && !f_age) || (pickerDescribe2.initialized === false && !f_lower)) {
 
@@ -1779,7 +1779,7 @@ myApp.alert('Please complete more profile information.', 'Missing Information');
 
 return false;}
 
-
+alert('2');
 if (myswiperphotos){
 
 myswiperphotos.destroy();
@@ -1896,7 +1896,7 @@ var uploadurl;
 if (f_largeurls.length > 0){photoresponse = 'Y';uploadurl = f_largeurls[0];}
 	else{photoresponse='N';uploadurl = '';}
 
-
+alert('3');
 
 firebase.database().ref('users/' + f_uid).update({
     gender: newgender,
@@ -1960,14 +1960,14 @@ var ethnicity_u = $( "#ethnicity-input" ).val();
 var height_u = $( "#height-input" ).val().substring(0,3);
 var weight_pre = $( "#weight-input" ).val();
 var weight_u = weight_pre.substr(0, weight_pre.indexOf(' '));
-
+alert('4');
 
 firebase.auth().currentUser.getToken().then(function(idToken) {
 $.post( "updatedetails.php", { projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,sexuality:sexuality,uid:f_uid,name:f_name,description:userzdescription,age:newage,availstring:availstringn,industry:industry_u,hometown:'Sydz',status:status_u,politics:politics_u,eyes:eyes_u,body:body_u,religion:religion_u,zodiac:zodiac_u,ethnicity:ethnicity_u,height:height_u,weight:weight_u} )
   .done(function( data ) {
 
 alert(data);
-
+alert('5');
 //if (f_gender && (f_gender != newgender)){
 //deleteDatabase(); 
 //}
