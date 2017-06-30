@@ -13,7 +13,7 @@ var displaySuggestions = function(predictions, status) {
             alert(status);
             return;
           }
-
+$('.hometownprediction').remove();
           predictions.forEach(function(prediction) {
 
 		  $('.hometownli').append(
@@ -21,7 +21,7 @@ var displaySuggestions = function(predictions, status) {
       '<div class="item-content">'+
        ' <div class="item-inner">'+
         '  <div class="item-input">'+
-          '    <input type="text" value="'+prediction.description+'" >'+
+          '    <input type="text" value="'+prediction.description+'" style="font-size:15px;color:#ccc;" >'+
          ' </div>'+
        ' </div>'+
       '</div>'+
@@ -32,7 +32,7 @@ var displaySuggestions = function(predictions, status) {
         };
 
 function checkHometown(){
-  $('.hometownprediction').remove();
+  
 var hometownquery = $('#homesearch').val();
         var service = new google.maps.places.AutocompleteService();
         service.getPlacePredictions({ input: hometownquery,types: ['(cities)'] }, displaySuggestions);
