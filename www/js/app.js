@@ -1961,7 +1961,7 @@ var height_u = $( "#height-input" ).val().substring(0,3);
 var weight_pre = $( "#weight-input" ).val();
 var weight_u = weight_pre.substr(0, weight_pre.indexOf(' '));
 
-alert('updating');
+
 firebase.auth().currentUser.getToken().then(function(idToken) {
 $.post( "updatedetails.php", { projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,sexuality:sexuality,uid:f_uid,name:f_name,description:userzdescription,age:newage,availstring:availstringn,industry:industry_u,hometown:'Sydz',status:status_u,politics:politics_u,eyes:eyes_u,body:body_u,religion:religion_u,zodiac:zodiac_u,ethnicity:ethnicity_u,height:height_u,weight:weight_u} )
   .done(function( data ) {
@@ -10850,12 +10850,12 @@ var popupHTML = '<div class="popup prefpop">'+
 
  '   <div class="navbar-inner">'+
 
-  '      <div class="left" style="color:white;"></div>'+
+  '      <div class="left" style="color:white;"><a href="#" onclick="updateUser();" style="color:white;display:none" class="donechange">Done</a><a href="#" style="color:white;display:none;" class="close-popup doneunchange">Done</a></div>'+
    '     <div class="center swipetext" style="color:white;">Filters'+
          //'<div style="width:70px;height:70px;border-radius:50%;background-image:url(\''+f_image+'\');background-size:cover;background-position:50% 50%;margin-top:30px;z-index:100;border:5px solid #2196f3"></div>'+
 
    '</div>'+
-    '    <div class="right"><a href="#" onclick="updateUser();" style="color:white;display:none" class="donechange">Done</a><a href="#" style="color:white;display:none;" class="close-popup doneunchange">Done</a></div>'+
+    '    <div class="right"></div>'+
     
 
     
