@@ -1474,7 +1474,7 @@ userpref = firebase.database().ref('users/' + f_uid).on("value",function(snapsho
 //});  
         
   //  });
-hometown_u = snapshot.child("hometown").val();
+//hometown_u = snapshot.child("hometown").val();
 industry_u = snapshot.child("industry").val();
 status_u = snapshot.child("status").val();
 politics_u = snapshot.child("politics").val();
@@ -1878,7 +1878,7 @@ if ($('#soundnotif').prop('checked')) {offsounds = 'Y'} else {offsounds = 'N'}
 
 
 //User Profile details
-var hometown_u = $( "#homesearch" ).val();
+//var hometown_u = $( "#homesearch" ).val();
 var industry_u = $( "#industry-input" ).val();
 var status_u = $( "#status-input" ).val();
 var politics_u = $( "#politics-input" ).val();
@@ -1901,7 +1901,7 @@ if (f_largeurls.length > 0){photoresponse = 'Y';uploadurl = f_largeurls[0];}
 firebase.database().ref('users/' + f_uid).update({
     gender: newgender,
     industry:industry_u,
-	hometown:hometown_u,
+	//hometown:hometown_u,
     status:status_u,
     politics: politics_u,eyes: eyes_u,body: body_u,religion: religion_u,zodiac: zodiac_u,ethnicity: ethnicity_u,
 height: height_u,
@@ -1948,7 +1948,7 @@ console.log(data);
 });
 
 }
-var hometown_u = $( "#homesearch" ).val();
+//var hometown_u = $( "#homesearch" ).val();
 var industry_u = $( "#industry-input" ).val();
 var status_u = $( "#status-input" ).val();
 var politics_u = $( "#politics-input" ).val();
@@ -11836,7 +11836,7 @@ else{$('#soundnotif').prop('checked', false);}
 if (f_age) {$( ".savebutton" ).removeClass('disabled');}
 
 
-if(hometown_u){$( "#homesearch" ).val( hometown_u );}
+//if(hometown_u){$( "#homesearch" ).val( hometown_u );}
 if(industry_u){$( "#industry-input" ).val( industry_u );}
 if(status_u){$( "#status-input" ).val( status_u );}
 if(politics_u){$( "#politics-input" ).val( politics_u );}
