@@ -37,7 +37,7 @@ prednum ++;
 function checkHometown(){
   
 var hometownquery = $('#homesearch').val();
-	if (hometownquery = ''){
+	if (hometownquery == ''){
 	$('.hometownprediction').remove();}
 	
         var service = new google.maps.places.AutocompleteService();
