@@ -10438,7 +10438,31 @@ else {retrievealbumurl = pagingalbumurl}
 
 $.getJSON(retrievealbumurl,
       function(response) {
-    alert(response.data.length);
+   if(response.data.length == 0){
+   
+var userphotospermission = 0;
+     $.getJSON("https://graph.facebook.com/me/permissions?access_token=" + f_token,
+      function(response1) {
+  for (i = 0; i < response1.data.length; i++) { 
+  if (response1.data[i].permission == 'user_photos') {userphotospermission = 1;}
+  
+    if (response1.data[i].status == 'declined') {
+      if ((response1.data[i].permission == 'user_photos') && (response.data1[i].status == 'declined')){
+    userphotospermission = 0;
+      }
+     }
+  
+  }
+ });	   
+   
+	   if (userphotospermission == 0){getPhotoPermissionNow();}
+	   else {
+	   myApp.alert('Upload photos to Facebook.', 'No photos available');return false;
+	   }
+	   
+   }
+	
+
 	
 	console.log(response);
       
