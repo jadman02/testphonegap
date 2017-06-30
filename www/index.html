@@ -621,8 +621,8 @@ openFB.login(
                 function(response) {
                     if(response.status === 'connected') {
 
-var retrievealbumurl = 'https://graph.facebook.com/'+f_uid+'/albums?limit=20&access_token=' + f_token;
-$.getJSON(retrievealbumurl,
+var retrievealbumurl2 = 'https://graph.facebook.com/'+f_uid+'/albums?limit=20&access_token=' + f_token;
+$.getJSON(retrievealbumurl2,
       function(response) {
    if(response.data.length == 0){
    
