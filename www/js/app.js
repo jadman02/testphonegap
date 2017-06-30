@@ -28,11 +28,12 @@ predictionsarray.push(prediction.description);
     input: '#homesearch',
  //        onOpen: function (p){$( '.picker-items-col-wrapper' ).css("width", + $( document ).width() + "px");if (sexuality){processUpdate();  myApp.sizeNavbars();  } if (body_u) {bodypicker.cols[0].setValue(body_u);}},
 //onChange:function (p, values, displayValues){$( '#body-input' ).addClass("profilevaluechosen");},
-     toolbarTemplate: 
+    onClose:function (p){hometownpicker.destroy();},
+			toolbarTemplate: 
         '<div class="toolbar">' +
             '<div class="toolbar-inner">' +
                 '<div class="left" onclick="removeProfileSet(\'hometown\')">' +
-                    '<a href="#" class="link close-picker" style="color:#ff3b30">Cancel</a>' +
+                    '<a href="#" class="link close-picker" onclick="clearHometown();" style="color:#ff3b30">Cancel</a>' +
                 '</div>' +
                 '<div class="right">' +
                     '<a href="#" class="link close-picker">Done</a>' +
