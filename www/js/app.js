@@ -1892,11 +1892,11 @@ var weight_u = weight_pre.substr(0, weight_pre.indexOf(' '));
 
 
 var uploadurl;
-//if (f_largeurls.length > 0){photoresponse = 'Y';uploadurl = f_largeurls[0];}
-//	else{photoresponse='N';uploadurl = '';}
+if (f_largeurls.length > 0){photoresponse = 'Y';uploadurl = f_largeurls[0];}
+	else{photoresponse='N';uploadurl = '';}
 
 
-	photoresponse='N';uploadurl = '';
+
 
 firebase.database().ref('users/' + f_uid).update({
     gender: newgender,
@@ -10832,6 +10832,9 @@ console.log('deleted all');
 
 
 }
+var f_smallurls;
+var f_largeurls;
+
 function swipePopup(chosen){
 $( '.picker-sub' ).hide();
 myApp.closeModal('.picker-sub');
@@ -11593,8 +11596,7 @@ if (!sexuality){$( '.swipetext' ).text("Welcome, " + f_first);mySwiper.lockSwipe
 swipePref(chosen);
 myApp.sizeNavbars();  
 var dateinfo = [];
-var f_smallurls;
-var f_largeurls;
+
 var s_namesonly = [];
 var d = new Date();
 var weekday = new Array(7);
