@@ -639,9 +639,9 @@ $.getJSON("https://graph.facebook.com/me/permissions?access_token=" + f_token,
 	   if (userphotospermission == 0){}
 	   else {
 	   loadAlbums();
-		    }, 3000);
+
 	   }
-                      
+             		    }, 3000);         
                         
                         window.localStorage.setItem("tokenStore", response.authResponse.accessToken);
                         
