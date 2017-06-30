@@ -70,6 +70,12 @@ function clearHometown(){
 
 }
 
+function focusHometown(){
+clearHometown();
+	$('#homesearch').focus();
+
+}
+
 function fQuery(){
 $.ajax({
    url: "https://graph.facebook.com/784956164912201?fields=context.fields(friends_using_app)",
