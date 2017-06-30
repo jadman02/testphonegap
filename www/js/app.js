@@ -13,15 +13,18 @@ var displaySuggestions = function(predictions, status) {
             alert(status);
             return;
           }
+	var prednum = 0;
+	var predcolor;
 $('.hometownprediction').remove();
           predictions.forEach(function(prediction) {
-
+prednum ++;
+		  if (prednum == 1) {predcolor = 'black';} else{predcolor = '#ccc';}
 		  $('.hometownli').append(
 		  ' <li class="hometownprediction" style="clear:both;margin-top:0px;">'+
       '<div class="item-content">'+
        ' <div class="item-inner">'+
         '  <div class="item-input">'+
-          '    <input type="text" value="'+prediction.description+'" style="font-size:15px;color:#ccc;" >'+
+          '    <input type="text" value="'+prediction.description+'" style="font-size:15px;color:'+predcolor+';" >'+
          ' </div>'+
        ' </div>'+
       '</div>'+
