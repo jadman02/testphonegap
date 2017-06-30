@@ -1901,7 +1901,7 @@ var uploadurl;
 firebase.database().ref('users/' + f_uid).update({
     gender: newgender,
     industry:industry_u,
-	//hometown:hometown_u,
+	hometown:hometown_u,
     status:status_u,
     politics: politics_u,eyes: eyes_u,body: body_u,religion: religion_u,zodiac: zodiac_u,ethnicity: ethnicity_u,
 height: height_u,
