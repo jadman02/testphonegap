@@ -10832,8 +10832,8 @@ console.log('deleted all');
 
 
 }
-var f_smallurls;
-var f_largeurls;
+var f_smallurls = [];
+var f_largeurls = [];
 
 function swipePopup(chosen){
 $( '.picker-sub' ).hide();
