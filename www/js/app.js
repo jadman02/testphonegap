@@ -10438,7 +10438,9 @@ else {retrievealbumurl = pagingalbumurl}
 
 $.getJSON(retrievealbumurl,
       function(response) {
-      console.log(response);
+    alert(response.data.length);
+	
+	console.log(response);
       
 
 pagingalbumurl = response.paging.next;
