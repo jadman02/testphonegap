@@ -1767,9 +1767,6 @@ if ($( "#distance_25" ).hasClass( "active" )){radiussize = '25';}
 if ($( "#distance_50" ).hasClass( "active" )){radiussize = '50';}
 if ($( "#distance_100" ).hasClass( "active" )){radiussize = '100';}
 
-if ($( "#sortrandom" ).hasClass( "active" )){sortby = 'random';}
-if ($( "#sortdistance" ).hasClass( "active" )){sortby = 'distance';}
-if ($( "#sortactivity" ).hasClass( "active" )){sortby = 'activity';}
 availarray = [];
 $( ".availrec" ).each(function() {
 
