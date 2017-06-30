@@ -10356,7 +10356,7 @@ addedsmallarray = [];
 addedlargearray = [];
 pagingalbumurl = false;
 albumend = false;
-
+$( ".swipebuttondone").removeClass("disabled");
 }
 
 function photosPopup(){
