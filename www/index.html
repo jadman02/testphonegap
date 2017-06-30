@@ -620,7 +620,8 @@ openFB.login(
 openFB.login(
                 function(response) {
                     if(response.status === 'connected') {
-                          alert(response);
+                          alert(JSON.stringify(response));
+
 loadAlbums();
                       
                         
