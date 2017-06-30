@@ -1771,7 +1771,7 @@ $( "#maxdescription" ).append(inputlength + " / 100");
 
 function updateUser(){
 
-alert('1');
+
 
 if ((pickerDescribe.initialized === false && !f_age) || (pickerDescribe2.initialized === false && !f_lower)) {
 
@@ -1779,7 +1779,7 @@ myApp.alert('Please complete more profile information.', 'Missing Information');
 
 return false;}
 
-alert('2');
+
 if (myswiperphotos){
 
 myswiperphotos.destroy();
@@ -1836,9 +1836,7 @@ if ($( "#distance_25" ).hasClass( "active" )){radiussize = '25';}
 if ($( "#distance_50" ).hasClass( "active" )){radiussize = '50';}
 if ($( "#distance_100" ).hasClass( "active" )){radiussize = '100';}
 
-if ($( "#sortrandom" ).hasClass( "active" )){sortby = 'random';}
-if ($( "#sortdistance" ).hasClass( "active" )){sortby = 'distance';}
-if ($( "#sortactivity" ).hasClass( "active" )){sortby = 'activity';}
+
 availarray = [];
 $( ".availrec" ).each(function() {
 
@@ -1896,7 +1894,7 @@ var uploadurl;
 if (f_largeurls.length > 0){photoresponse = 'Y';uploadurl = f_largeurls[0];}
 	else{photoresponse='N';uploadurl = '';}
 
-alert('3');
+
 
 firebase.database().ref('users/' + f_uid).update({
     gender: newgender,
