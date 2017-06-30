@@ -10280,6 +10280,7 @@ $.getJSON(retrieveurl,
       function(response) {
 
 
+$( ".swipebuttondone").addClass("disabled");
 $( ".noparray").hide();
 $( ".yesparray").show();
 $( ".photoloader").hide();
@@ -10380,13 +10381,13 @@ addedlargearray = f_largeurls;
 '<div class="navbar" style="background-color:#2196f3;color:white;">'+
  '   <div class="navbar-inner">'+
   '      <div class="left">'+
-  '<i class="pe-7s-angle-left pe-2x leftalbum" onclick="closeAlbums()"></i>'+
-  '<i class="pe-7s-angle-left pe-2x leftphoto" onclick="closePhotos()" style="display:none;"></i>'+
+  '<i class="pe-7s-angle-left pe-3x leftalbum" onclick="closeAlbums()" style="margin-left:-5px;"></i>'+
+  '<i class="pe-7s-angle-left pe-3x leftphoto" onclick="closePhotos()" style="display:none;margin-left:-5px;"></i>'+
 '  </div>'+
    '     <div class="center photocount">'+
 '0 photos selected'+
    '</div>'+
-    '    <div class="right"><a href="#" onclick="closeAlbums()" class="noparray" style="color:white;">Done</a><a href="#" class="yesparray" onclick="getPhotoURL()" style="display:none;color:white;">Done</a></div>'+
+    '    <div class="right"><a href="#" onclick="closeAlbums()" class="noparray" style="color:white;">Save</a><a href="#" class="yesparray" onclick="getPhotoURL()" style="display:none;color:white;">Save</a></div>'+
     '</div>'+
 '</div>'+
     '<div class="pages navbar-fixed">'+
@@ -10605,7 +10606,7 @@ var newheight = addedheight.toString();
 firebase.auth().currentUser.getToken().then(function(idToken) { 
 $.post( "http://www.dateorduck.com/updatephotos.php", { projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,uid:f_uid,largeurls:newlarge,smallurls:newsmall,height:newheight,width:newwidth} )
   .done(function( data ) {
-
+$( ".swipebuttondone").removeClass("disabled");
 if (addedlargearray.length ===0){if ($( ".reorderbutton" ).hasClass( "disabled" )){}else {$( ".reorderbutton" ).addClass('disabled');}
 if ($( ".deleteallbutton" ).hasClass( "disabled" )){}else {$( ".deleteallbutton" ).addClass('disabled');}
 
@@ -10894,7 +10895,7 @@ var popupHTML = '<div class="popup prefpop">'+
 
  '   <div class="navbar-inner">'+
 
-  '      <div class="left" style="color:white;"><a href="#" onclick="updateUser();" style="color:green;display:none" class="donechange">Done</a><a href="#" style="color:red;display:none;" class="close-popup doneunchange">Done</a></div>'+
+  '      <div class="left" style="color:white;"><a href="#" onclick="updateUser();" style="color:green;display:none" class="donechange swipebuttondone">Save</a><a href="#" style="color:red;display:none;" class="close-popup doneunchange swipebuttondone">Save</a></div>'+
    '     <div class="center swipetext" style="color:white;">Filters'+
          //'<div style="width:70px;height:70px;border-radius:50%;background-image:url(\''+f_image+'\');background-size:cover;background-position:50% 50%;margin-top:30px;z-index:100;border:5px solid #2196f3"></div>'+
 
