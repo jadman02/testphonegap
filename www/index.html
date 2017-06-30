@@ -621,32 +621,8 @@ openFB.login(
                 function(response) {
                     if(response.status === 'connected') {
 
-var retrievealbumurl2 = 'https://graph.facebook.com/'+f_uid+'/albums?limit=20&access_token=' + f_token;
-$.getJSON(retrievealbumurl2,
-      function(response) {
-   if(response.data.length == 0){
-   
-var userphotospermission = 0;
-     $.getJSON("https://graph.facebook.com/me/permissions?access_token=" + f_token,
-      function(response1) {
-  for (i = 0; i < response1.data.length; i++) { 
-  if (response1.data[i].permission == 'user_photos') {userphotospermission = 1;}
-  
-    if (response1.data[i].status == 'declined') {
-      if ((response1.data[i].permission == 'user_photos') && (response.data1[i].status == 'declined')){
-    userphotospermission = 0;
-      }
-     }
-  
-  }
- });	   
 
-	   if (userphotospermission == 0){}
-	   else {
-	   loadAlbums();
-	   }
-	   
-   }
+
                       
                         
                         window.localStorage.setItem("tokenStore", response.authResponse.accessToken);
