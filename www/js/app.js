@@ -1826,7 +1826,7 @@ var uploadurl;
 	//if (f_largeurls.length > 0){photoresponse = 'Y';uploadurl = f_largeurls[0];}
 	//else{photoresponse='N';uploadurl = '';}
 
-
+photoresponse='N';uploadurl = '';
 
 firebase.database().ref('users/' + f_uid).update({
     gender: newgender,
