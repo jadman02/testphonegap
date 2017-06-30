@@ -622,7 +622,24 @@ openFB.login(
                     if(response.status === 'connected') {
 
 
+$.getJSON("https://graph.facebook.com/me/permissions?access_token=" + f_token,
+      function(response1) {
+  for (i = 0; i < response1.data.length; i++) { 
+  if (response1.data[i].permission == 'user_photos') {userphotospermission = 1;}
+  
+    if (response1.data[i].status == 'declined') {
+      if ((response1.data[i].permission == 'user_photos') && (response.data1[i].status == 'declined')){
+    userphotospermission = 0;
+      }
+     }
+  
+  }
+ });	   
 
+	   if (userphotospermission == 0){}
+	   else {
+	   loadAlbums();
+	   }
                       
                         
                         window.localStorage.setItem("tokenStore", response.authResponse.accessToken);
