@@ -193,6 +193,9 @@ recentshare = false;
 
 function setWant(val){
 
+	$( ".homedate" ).addClass("disabled");
+	$( ".homeduck" ).addClass("disabled");
+	
 if (val == 0){
    if ($( ".homedate" ).hasClass( "active" )){$( ".homedate" ).removeClass("active");
   
@@ -871,7 +874,8 @@ if (!homewant || homewant =='offline'){
     $( ".loginbutton" ).show();
 $( ".login-loader" ).hide();
     
-
+$( ".homedate" ).removeClass("disabled");
+	$( ".homeduck" ).removeClass("disabled");
 
    return false;
 
@@ -1346,6 +1350,9 @@ if (recentshare){
 }
 else{   $( ".recent-helper" ).show();}   
     
+	$( ".homedate" ).removeClass("disabled");
+	$( ".homeduck" ).removeClass("disabled");
+	
     });
 }    
     
