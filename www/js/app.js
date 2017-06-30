@@ -20,7 +20,6 @@ var displaySuggestions = function(predictions, status) {
 		  ' <li class="hometownprediction" style="clear:both;margin-top:0px;">'+
       '<div class="item-content">'+
        ' <div class="item-inner">'+
-        '  <div class="item-title label">-></div>'+
         '  <div class="item-input">'+
           '    <input type="text" value="'+prediction.description+'" >'+
          ' </div>'+
