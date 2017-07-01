@@ -11028,18 +11028,6 @@ var popupHTML = '<div class="popup prefpop">'+
   '<div class="list-block-label registerdiv" style="margin-top:10px;margin-bottom:10px;">To get started, tell us about you and who you are looking to meet. </div>'+
 
       
-'<li class="align-top hiderowpref">'+
- '     <div class="item-content">'+
-   //'<div class="item-media" style="border-radius:50%;width:70px;height:70px;background-image:url(\'https://graph.facebook.com/'+f_uid+'/picture?type=normal\');background-size:cover;background-position:50% 50%;"></div>'+
-  '      <div class="item-inner">'+
-      '<div class="item-title label">About Me</div>'+
-          '  <div class="item-input">'+
- '   <textarea class="resizable" onkeyup="keyUp()" maxlength="100" id="userdescription" style="min-height:70px;" placeholder="Describe yourself and what you are looking for..."></textarea>'+
-  '</div>'+
-    '    </div>'+
-     ' </div>'+
-    '</li>'+
-    '<p id="maxdescription" class="hiderowpref" style="float:right;color:#ccc;font-size:14px;margin-top:5px;margin-right:5px;margin-bottom:-5px;">0 / 100</p>'+
 
 '<li class="newam" style="clear:both;">'+
  '     <div class="item-content">'+
@@ -11064,6 +11052,18 @@ var popupHTML = '<div class="popup prefpop">'+
       '</div>'+
     '</li>'+
       
+'<li class="align-top hiderowpref">'+
+ '     <div class="item-content">'+
+   //'<div class="item-media" style="border-radius:50%;width:70px;height:70px;background-image:url(\'https://graph.facebook.com/'+f_uid+'/picture?type=normal\');background-size:cover;background-position:50% 50%;"></div>'+
+  '      <div class="item-inner">'+
+      '<div class="item-title label">About Me</div>'+
+          '  <div class="item-input">'+
+ '   <textarea class="resizable" onkeyup="keyUp()" maxlength="100" id="userdescription" style="min-height:70px;" placeholder="Describe yourself and what you are looking for..."></textarea>'+
+  '</div>'+
+    '    </div>'+
+     ' </div>'+
+    '</li>'+
+    '<p id="maxdescription" class="hiderowpref" style="float:right;color:#ccc;font-size:14px;margin-top:5px;margin-right:5px;margin-bottom:-5px;">0 / 100</p>'+
 
       
 ' <li class="hiderowpref hometownli" style="clear:both;margin-top:0px;">'+
