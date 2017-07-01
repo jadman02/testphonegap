@@ -376,7 +376,7 @@ var myphotosarray;
 var matcheslistener;
 var noresultstimeout;
 var timeoutactive = false;
-var radiussize,sortby,offsounds;
+var radiussize,radiusunit,sortby,offsounds;
 var industry_u,hometown_u,status_u,politics_u,eyes_u,body_u,religion_u,zodiac_u,ethnicity_u,height_u,weight_u,recentfriends;
 var descriptionslist = [];
 var nameslist = [];
@@ -11190,15 +11190,21 @@ var popupHTML = '<div class="popup prefpop">'+
 
 '<div class="content-block-title" style="margin-top:20px;">Search options</div>'+
 
-'<p class="buttons-row" style="padding-left:10px;padding-right:10px;">'+
-  '<a href="#" id="distance_10" onclick="changeRadius(10)" class="button button-round radiusbutton" style="border:0;border-radius:0px;">10 km</a>'+
-  '<a href="#" id="distance_25" onclick="changeRadius(25)" class="button button-round radiusbutton" style="border:0;border-radius:0px;">25 km</a>'+
-    '<a href="#" id="distance_50" onclick="changeRadius(50)" class="button button-round radiusbutton active" style="border:0;border-radius:0px;">50 km</a>'+
-    '<a href="#" id="distance_100" onclick="changeRadius(100)" class="button button-round radiusbutton" style="border:0;border-radius:0px;">100 km</a>'+
-'</p>'+
-            
-                       
 
+                      ' <div class="list-block media-list">'+
+    '<ul>'+
+                  ' <li class="hiderowpref">'+
+      '<div class="item-content">'+
+       ' <div class="item-inner">'+
+        '  <div class="item-title label">Search Distance</div>'+
+        '  <div class="item-input">'+
+          '    <input type="text" id="distance-input" name="name" readonly>'+
+         ' </div>'+
+       ' </div>'+
+      '</div>'+
+    '</li>'+         
+    '</ul>'+
+'</div>  '+
             
                                  '<div class="content-block-title">Sounds</div>'+
             
@@ -11209,7 +11215,7 @@ var popupHTML = '<div class="popup prefpop">'+
          '   <div class="item-content">'+
 
              '   <div class="item-inner" style="float:left;">'+
-              '<div class="item-title label" style="width:calc(100% - 62px);float:left;font-size:14px;">Turn off sounds</div>'+
+              '<div class="item-title label" style="width:calc(100% - 62px);float:left;font-size:17px;">Turn off sounds</div>'+
               '   <div class="item-input" style="width:52px;float:left;">'+
 '<label class="label-switch">'+
    ' <input type="checkbox" id="soundnotif" onchange="processUpdate();  myApp.sizeNavbars();">'+
@@ -11237,7 +11243,7 @@ var popupHTML = '<div class="popup prefpop">'+
 
              '   <div class="item-inner">'+
                   '  <div class="item-title-row">'+
-                     '   <div class="item-title active button" style="border:0;border-radius:0px;">Logout</div>'+
+                     '   <div class="item-title active button" style="border:0;border-radius:0px;font-size:17px;">Logout</div>'+
                     '</div>'+
                ' </div>'+
            ' </div>'+
@@ -11248,7 +11254,7 @@ var popupHTML = '<div class="popup prefpop">'+
 
              '   <div class="item-inner">'+
                   '  <div class="item-title-row">'+
-                     '   <div class="item-title button" style="border-color:#ff3b30;background-color:#ff3b30;color:white;border:0;border-radius:0px;">Delete Account</div>'+
+                     '   <div class="item-title button" style="font-size:17px;border-color:#ff3b30;background-color:#ff3b30;color:white;border:0;border-radius:0px;">Delete Account</div>'+
                     '</div>'+
                ' </div>'+
            ' </div>'+
@@ -11302,7 +11308,39 @@ if(sexuality){$( ".doneunchange" ).show();$( ".registerdiv" ).hide();$('.hiderow
 
 if(!sexuality){sortBy(1);$( ".swipetoolbar" ).hide();}
 
+'<p class="buttons-row" style="padding-left:10px;padding-right:10px;">'+
+  '<a href="#" id="distance_10" onclick="changeRadius(10)" class="button button-round radiusbutton" style="border:0;border-radius:0px;">10 km</a>'+
+  '<a href="#" id="distance_25" onclick="changeRadius(25)" class="button button-round radiusbutton" style="border:0;border-radius:0px;">25 km</a>'+
+    '<a href="#" id="distance_50" onclick="changeRadius(50)" class="button button-round radiusbutton active" style="border:0;border-radius:0px;">50 km</a>'+
+    '<a href="#" id="distance_100" onclick="changeRadius(100)" class="button button-round radiusbutton" style="border:0;border-radius:0px;">100 km</a>'+
+'</p>'+
 
+	var distancepicker = myApp.picker({
+    input: '#distance-input',
+         onOpen: function (p){$( '.picker-items-col-wrapper' ).css("width", + $( document ).width() + "px");if (radiussize) {distancepicker.cols[0].setValue(radiussize);} if (sexuality){processUpdate();  myApp.sizeNavbars();  }
+},
+     toolbarTemplate: 
+        '<div class="toolbar">' +
+            '<div class="toolbar-inner">' +
+                '<div class="left">' +
+'Search Distance'+
+                '</div>' +
+                '<div class="right">' +
+                    '<a href="#" class="link close-picker">Done</a>' +
+                '</div>' +
+            '</div>' +
+        '</div>',
+    cols: [
+       
+        {
+            values: ('18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99').split(' ')
+        },
+         {
+            textAlign: 'left',
+            values: ('Kilometres Miles').split(' ')
+        },
+    ]
+});  
 	
 var industrypicker = myApp.picker({
     input: '#industry-input',
