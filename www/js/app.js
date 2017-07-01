@@ -990,7 +990,7 @@ fetched ++;
 var result = JSON.parse(data); 
 
 console.log(data);
-console.log(result);
+console.log(JSON.stringify(result));
 
 var slidewidth = $( document ).width() / 2.5;
     var halfwidth = -Math.abs(slidewidth / 2.23);
