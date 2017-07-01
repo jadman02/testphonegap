@@ -10936,6 +10936,34 @@ var popupHTML = '<div class="popup prefpop">'+
     '<a href="#" id="distance_100" onclick="changeRadius(100)" class="button button-round radiusbutton" style="border:0;border-radius:0px;">100 km</a>'+
 '</p>'+
 
+    '<div class="list-block" style="margin-top:0px;">'+
+' <ul class="filterul">'+
+    
+     ' <li class="hiderowpref">'+
+      '<div class="item-content">'+
+       ' <div class="item-inner">'+
+        '  <div class="item-title label">Status</div>'+
+        '  <div class="item-input status-div">'+
+          '    <input type="text" placeholder="All" id="f-status-input" name="name" readonly >'+
+         ' </div>'+
+       ' </div>'+
+      '</div>'+
+    '</li>'+
+    
+
+    
+         ' <li class="hiderowpref">'+
+      '<div class="item-content">'+
+       ' <div class="item-inner">'+
+        '  <div class="item-title label">Industry</div>'+
+        '  <div class="item-input industry-div">'+
+          '    <input type="text" id="f-industry-input" name="name" placeholder="All" readonly >'+
+         ' </div>'+
+       ' </div>'+
+      '</div>'+
+    '</li>'+
+    
+    '</ul></div>'+
 
 
 
@@ -11003,7 +11031,7 @@ var popupHTML = '<div class="popup prefpop">'+
       
 '<li class="align-top hiderowpref">'+
  '     <div class="item-content">'+
-   '<div class="item-media" style="border-radius:50%;width:70px;height:70px;background-image:url(\'https://graph.facebook.com/'+f_uid+'/picture?type=normal\');background-size:cover;background-position:50% 50%;"></div>'+
+   //'<div class="item-media" style="border-radius:50%;width:70px;height:70px;background-image:url(\'https://graph.facebook.com/'+f_uid+'/picture?type=normal\');background-size:cover;background-position:50% 50%;"></div>'+
   '      <div class="item-inner">'+
           '  <div class="item-input">'+
  '   <textarea class="resizable" onkeyup="keyUp()" maxlength="100" id="userdescription" style="min-height:70px;" placeholder="Describe yourself and what you are looking for..."></textarea>'+
