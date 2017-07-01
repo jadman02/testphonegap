@@ -10986,7 +10986,7 @@ var popupHTML = '<div class="popup prefpop">'+
          '<div class="slide-pref pref-1">'+
         
         
-         '<div class="content-block-title" style="margin-top:20px;">When are you available to meet?</div>'+
+
 '<div class="list-block media-list availblock" style="margin-bottom:0px;">'+
  '   <ul class="availul" style="padding-left:10px;padding-right:10px;padding-bottom:20px;">'+
 
@@ -11024,7 +11024,6 @@ var popupHTML = '<div class="popup prefpop">'+
 
 
 
-'<div class="content-block-title hiderowpref" style="margin-top:20px;">Profile Information</div>'+
 
   '<div class="list-block-label registerdiv" style="margin-top:10px;margin-bottom:10px;">To get started, tell us about you and who you are looking to meet. </div>'+
 
@@ -11214,7 +11213,7 @@ var popupHTML = '<div class="popup prefpop">'+
       
                         '<div class="swiper-slide">'+
                         '<div class="slide-pref pref-3">'+
-                         '<div class="content-block-title photos-title" style="margin-top:20px;">Profile Photos</div>'+
+
 
         '<div class="col-25 photoswiperloader" style="width:57.37px;top:50%;margin-top: -28.7px;position: absolute;left: 50%;margin-left: -28.7px;">'+
   '      <span class="preloader"></span>'+
@@ -11234,9 +11233,9 @@ var popupHTML = '<div class="popup prefpop">'+
 
 
  ' <div class="buttons-row">'+
-          '<a href="#" class="button active" onclick="photosPopup();" style="border:0;border-radius:0px;background-color:#4cd964;">Add</a>'+
-          '<a href="#" class="button reorderbutton active disabled" onclick="reorderPhotos();" style="border:0;border-radius:0px;">Re-order</a>'+
-            '<a href="#" class="button deleteallbutton active disabled" onclick="deleteAllPhotos();" style="border:0;border-radius:0px;background-color:#ff3b30;color:white">Delete All</a>'+
+          '<a href="#" class="button active" onclick="photosPopup();" style="border:0;border-radius:0px;background-color:#4cd964;margin-left:5px;margin-right:5px;">Add</a>'+
+          '<a href="#" class="button reorderbutton active disabled" onclick="reorderPhotos();" style="border:0;border-radius:0px;margin-right:5px;">Re-order</a>'+
+            '<a href="#" class="button deleteallbutton active disabled" onclick="deleteAllPhotos();" style="border:0;border-radius:0px;margin-right:5px;background-color:#ff3b30;color:white">Delete All</a>'+
         '</div>'+
 
                         '</div>'+
