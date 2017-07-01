@@ -978,7 +978,7 @@ else{}
 var fetch = ['random','distance','activity'];
 var fetched = 0;
 for (q = 0; q < fetch.length; q++) { 
-
+alert(radiusunit);
 
 $.post( "http://www.dateorduck.com/locations.php", { want:homewant,projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,upper:f_upper,lower:f_lower,radius:radiussize,radiusunit:radiusunit,sexuality:sexuality,sortby:fetch[q],latitudep:latitudep,longitudep:longitudep} )
   .done(function( data ) {
