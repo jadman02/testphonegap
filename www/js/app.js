@@ -10972,7 +10972,102 @@ var popupHTML = '<div class="popup prefpop">'+
        ' </div>'+
       '</div>'+
     '</li>'+
+    ' <li class="hiderowpref">'+
+      '<div class="item-content">'+
+       ' <div class="item-inner">'+
+        '  <div class="item-title label">Zodiac</div>'+
+        '  <div class="item-input f-zodiac-div">'+
+          '    <input type="text" id="f-zodiac-input" name="name" placeholder="Hide" readonly >'+
+         ' </div>'+
+       ' </div>'+
+      '</div>'+
+    '</li>'+
+    ' <li class="hiderowpref">'+
+      '<div class="item-content">'+
+       ' <div class="item-inner">'+
+        '  <div class="item-title label">Politics</div>'+
+        '  <div class="item-input f-politics-div">'+
+          '    <input type="text" id="f-politics-input" name="name" placeholder="Hide" readonly>'+
+         ' </div>'+
+       ' </div>'+
+      '</div>'+
+    '</li>'+
+
+      ' <li class="hiderowpref">'+
+      '<div class="item-content">'+
+       ' <div class="item-inner">'+
+        '  <div class="item-title label">Religion</div>'+
+        '  <div class="item-input f-religion-div">'+
+          '    <input type="text" id="f-religion-input" name="name" placeholder="Hide" readonly>'+
+         ' </div>'+
+       ' </div>'+
+      '</div>'+
+    '</li>'+
+      
+
+  
+
+
+
+
+
+
     
+  ' <li class="hiderowpref">'+
+      '<div class="item-content">'+
+       ' <div class="item-inner">'+
+        '  <div class="item-title label">Ethnicity</div>'+
+        '  <div class="item-input f-ethnicity-div">'+
+          '    <input type="text" id="f-ethnicity-input" name="name" placeholder="Hide" readonly>'+
+         ' </div>'+
+       ' </div>'+
+      '</div>'+
+    '</li>'+
+
+' <li class="hiderowpref">'+
+      '<div class="item-content">'+
+       ' <div class="item-inner">'+
+        '  <div class="item-title label">Eye color</div>'+
+        '  <div class="item-input f-eyes-div">'+
+          '    <input type="text" id="f-eyes-input" name="name" placeholder="Hide" readonly>'+
+         ' </div>'+
+       ' </div>'+
+      '</div>'+
+    '</li>'+
+    ' <li class="hiderowpref">'+
+      '<div class="item-content">'+
+       ' <div class="item-inner">'+
+        '  <div class="item-title label">Body Type</div>'+
+        '  <div class="item-input f-body-div">'+
+          '    <input type="text" id="f-body-input" name="name" placeholder="Hide" readonly>'+
+         ' </div>'+
+       ' </div>'+
+      '</div>'+
+    '</li>'+
+    
+
+  
+     
+       ' <li class="hiderowpref">'+
+      '<div class="item-content">'+
+       ' <div class="item-inner">'+
+        '  <div class="item-title label">Height</div>'+
+        '  <div class="item-input f-height-div">'+
+          '    <input type="text" id="f-height-input" name="name" placeholder="Hide" readonly>'+
+         ' </div>'+
+       ' </div>'+
+      '</div>'+
+    '</li>'+
+       ' <li class="hiderowpref">'+
+      '<div class="item-content">'+
+       ' <div class="item-inner">'+
+        '  <div class="item-title label">Weight</div>'+
+        '  <div class="item-input f-weight-div">'+
+          '    <input type="text" id="f-weight-input" name="name" placeholder="Hide" readonly>'+
+         ' </div>'+
+       ' </div>'+
+      '</div>'+
+    '</li>'+
     '</ul></div>'+
 
 
