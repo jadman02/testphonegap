@@ -11171,9 +11171,9 @@ var popupHTML = '<div class="popup prefpop">'+
 
 
  ' <div class="buttons-row">'+
-          '<a href="#" class="button active" onclick="photosPopup();" style="border:0;border-radius:0px;background-color:#4cd964;margin-left:5px;margin-right:5px;">Add</a>'+
-          '<a href="#" class="button reorderbutton active disabled" onclick="reorderPhotos();" style="border:0;border-radius:0px;margin-right:5px;">Re-order</a>'+
-            '<a href="#" class="button deleteallbutton active disabled" onclick="deleteAllPhotos();" style="border:0;border-radius:0px;margin-right:5px;background-color:#ff3b30;color:white">Remove All</a>'+
+          '<a href="#" class="button active" onclick="photosPopup();" style="font-size:17px;border:0;border-radius:0px;background-color:#4cd964;margin-left:5px;margin-right:5px;">Add</a>'+
+          '<a href="#" class="button reorderbutton active disabled" onclick="reorderPhotos();" style="font-size:17px;border:0;border-radius:0px;margin-right:5px;">Re-order</a>'+
+            '<a href="#" class="button deleteallbutton active disabled" onclick="deleteAllPhotos();" style="font-size:17px;border:0;border-radius:0px;margin-right:5px;background-color:#ff3b30;color:white">Remove All</a>'+
         '</div>'+
 '<div class="list-block" style="margin-top:0px;">'+
 ' <ul">'+
@@ -11197,26 +11197,23 @@ var popupHTML = '<div class="popup prefpop">'+
     '<a href="#" id="distance_100" onclick="changeRadius(100)" class="button button-round radiusbutton" style="border:0;border-radius:0px;">100 km</a>'+
 '</p>'+
 
-                      ' <div class="list-block media-list">'+
-    '<ul>'+
-  ' <li class="hiderowpref">'+
-      '<div class="item-content">'+
-       ' <div class="item-inner">'+
-        '  <div class="item-title label">Body Type</div>'+
-        '  <div class="item-input">'+
-          '    <input type="text" id="distance-input" name="name" placeholder="Hide" readonly>'+
-         ' </div>'+
-       ' </div>'+
-      '</div>'+
-    '</li>'+     
-    '</ul>'+
-'</div>  '+
+
             
                                  '<div class="content-block-title">Sounds</div>'+
             
            
           ' <div class="list-block media-list">'+
     '<ul>'+
+      ' <li class="hiderowpref">'+
+      '<div class="item-content">'+
+       ' <div class="item-inner">'+
+        '  <div class="item-title label">Search Distance</div>'+
+        '  <div class="item-input">'+
+          '    <input type="text" id="distance-input" name="name" placeholder="Hide" readonly>'+
+         ' </div>'+
+       ' </div>'+
+      '</div>'+
+    '</li>'+ 
            ' <li>'+
          '   <div class="item-content">'+
 
