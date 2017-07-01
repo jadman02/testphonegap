@@ -11032,6 +11032,7 @@ var popupHTML = '<div class="popup prefpop">'+
  '     <div class="item-content">'+
    //'<div class="item-media" style="border-radius:50%;width:70px;height:70px;background-image:url(\'https://graph.facebook.com/'+f_uid+'/picture?type=normal\');background-size:cover;background-position:50% 50%;"></div>'+
   '      <div class="item-inner">'+
+      '<div class="item-title label">About Me</div>'+
           '  <div class="item-input">'+
  '   <textarea class="resizable" onkeyup="keyUp()" maxlength="100" id="userdescription" style="min-height:70px;" placeholder="Describe yourself and what you are looking for..."></textarea>'+
   '</div>'+
@@ -11229,7 +11230,6 @@ var popupHTML = '<div class="popup prefpop">'+
 
 '<p style="width:100%;text-align:center;background-color:#ccc;color:#6d6d72;padding-top:10px;padding-bottom:10px;" class="photosliderinfo"></p>'+
 
- '<div class="content-block-title" style="margin-top:20px;">Manage Photos</div>'+
 
 
  ' <div class="buttons-row">'+
