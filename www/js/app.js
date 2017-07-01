@@ -10898,7 +10898,7 @@ var popupHTML = '<div class="popup prefpop">'+
  '   <div class="navbar-inner">'+
 
   '      <div class="left" style="color:white;"><a href="#" onclick="updateUser();" style="color:white;display:none" class="donechange swipebuttondone">Done</a><a href="#" style="color:white;display:none;" class="close-popup doneunchange swipebuttondone">Done</a></div>'+
-   '     <div class="center swipetext" style="color:white;">Filters'+
+   '     <div class="center swipetext" style="color:white;">Availability'+
          //'<div style="width:70px;height:70px;border-radius:50%;background-image:url(\''+f_image+'\');background-size:cover;background-position:50% 50%;margin-top:30px;z-index:100;border:5px solid #2196f3"></div>'+
 
    '</div>'+
@@ -10916,12 +10916,31 @@ var popupHTML = '<div class="popup prefpop">'+
 '<div class="swiper-container swiper-prefer" style="min-height:100%;">'+
 
     '<div class="swiper-wrapper">'+
+'<div class="swiper-slide">'+
+        
+         '<div class="slide-pref pref-0">'+
+        
+        
 
+'<div class="list-block media-list availblock" style="margin-bottom:0px;margin-top:0px;">'+
+ '   <ul class="availul" style="padding-left:10px;padding-right:10px;padding-bottom:20px;">'+
+
+  '  </ul>'+
+    '<div class="list-block-label hiderowpref">Make it easier for your matches to organise a time to meet you.</div>'+
+
+'</div> '+
+        
+ 
+
+
+
+        '</div>'+
+        '</div>'+
        
         '<div class="swiper-slide" >'+
         
 
- '<div class="slide-pref pref-2">'+
+ '<div class="slide-pref pref-1">'+
 
   '<div style="background-color:#2196f3;width:100%;padding-bottom:10px;" class="registerdiv">'+
    '<div style="border-radius:50%;width:70px;height:70px;margin:0 auto;background-image:url(\'https://graph.facebook.com/'+f_uid+'/picture?type=normal\');background-size:cover;background-position:50% 50%;"></div>'+
@@ -11132,7 +11151,7 @@ var popupHTML = '<div class="popup prefpop">'+
                 '</div>'+
       
                         '<div class="swiper-slide">'+
-                        '<div class="slide-pref pref-3">'+
+                        '<div class="slide-pref pref-2">'+
 
 
         '<div class="col-25 photoswiperloader" style="width:57.37px;top:50%;margin-top: -28.7px;position: absolute;left: 50%;margin-left: -28.7px;">'+
@@ -11161,7 +11180,7 @@ var popupHTML = '<div class="popup prefpop">'+
                         '</div>'+
   
             '<div class="swiper-slide">'+
-            '<div class="slide-pref pref-4">'+
+            '<div class="slide-pref pref-3">'+
             
   
 
