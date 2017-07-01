@@ -10708,20 +10708,20 @@ if (sexuality){processUpdate();  myApp.sizeNavbars();  }
 '<div class="navbar" style="background-color:#2196f3;color:white;">'+
  '   <div class="navbar-inner">'+
   '      <div class="left">'+
-  '<i class="pe-7s-angle-left pe-2x leftalbum" onclick="closeReorder()"></i>'+
+  '<i class="pe-7s-angle-left pe-3x leftalbum" style="margin-left:-10px;" onclick="closeReorder()"></i>'+
 
 '  </div>'+
    '     <div class="center">'+
 'Order Photos'+
    '</div>'+
-    '    <div class="right"><a href="#" onclick="changeOrder()" style="color:white;">Done</a></div>'+
+    '    <div class="right"><a href="#" onclick="changeOrder()" style="color:white;">Save</a></div>'+
     '</div>'+
 '</div>'+
     '<div class="pages navbar-fixed">'+
      ' <div data-page="redorderpage" class="page">'+
       '  <div class="page-content" style="background-color:white;padding-bottom:0px;">'+
           
-'<p style="width:100%;text-align:center;background-color:#ccc;color:white;padding-top:10px;padding-bottom:10px;">Drag photos to re-order</p>'+
+'<p style="width:100%;text-align:center;background-color:#ccc;color:#6d6d72;;padding-top:10px;padding-bottom:10px;">Drag photos to re-order</p>'+
           
 ' <div class="list-block media-list" style="width:25%;float:left;margin-top:0px;">'+
    ' <ul class="numbersul" style="background-color:transparent;">'+
@@ -11158,7 +11158,7 @@ var popupHTML = '<div class="popup prefpop">'+
   '      <span class="preloader"></span>'+
    '   </div>'+
 
-'<div class="swiper-container container-photos" style="width:'+sliderwidth+'px;height:250px;padding:10px;">'+
+'<div class="swiper-container container-photos" style="width:'+sliderwidth+'px;height:250px;margin-top:-10px;">'+
     '<div class="swiper-wrapper wrapper-photos">'+
 
 
