@@ -11205,9 +11205,9 @@ var popupHTML = '<div class="popup prefpop">'+
  '     <div class="item-content">'+
 
   '      <div class="item-inner">'+
-      '<div class="item-title label">I am</div>'+
+      '<div class="item-title label">Search distance</div>'+
    '       <div class="item-input">'+
-    '        <input type="text" placeholder="..." readonly id="">'+
+    '        <input type="text" placeholder="..." readonly id="distance-input">'+
      '     </div>'+
       '  </div>'+
       '</div>'+
@@ -11219,19 +11219,8 @@ var popupHTML = '<div class="popup prefpop">'+
            
           ' <div class="list-block media-list">'+
     '<ul>'+
-      ' <li class="hiderowpref">'+
-      '<div class="item-content">'+
-       ' <div class="item-inner">'+
-        '  <div class="item-title label">Search Distance</div>'+
-        '  <div class="item-input">'+
-          '    <input type="text" id="distance-input" name="name" placeholder="Hide" readonly>'+
-         ' </div>'+
-       ' </div>'+
-      '</div>'+
-    '</li>'+ 
            ' <li>'+
          '   <div class="item-content">'+
-
              '   <div class="item-inner" style="float:left;">'+
               '<div class="item-title label" style="width:calc(100% - 62px);float:left;font-size:17px;">Turn off sounds</div>'+
               '   <div class="item-input" style="width:52px;float:left;">'+
