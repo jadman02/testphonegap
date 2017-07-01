@@ -1573,7 +1573,7 @@ if (f_gender == 'Female' && f_interested == 'Men') {sexuality = 'female';}
     firebase.database().ref('users/' + f_uid).once("value",function(snapshot) {
     f_token = snapshot.child("token").val();
 
-    swipePopup(2);
+    swipePopup(1);
     });
     
     
@@ -10917,195 +10917,7 @@ var popupHTML = '<div class="popup prefpop">'+
 
     '<div class="swiper-wrapper">'+
 
-        '<div class="swiper-slide" >'+
-         '<div class="slide-pref pref-0">'+
-
-
-
-    
-
-
-
-
-'<div class="content-block-title">Search radius</div>'+
-
-'<p class="buttons-row" style="padding-left:10px;padding-right:10px;">'+
-  '<a href="#" id="distance_10" onclick="changeRadius(10)" class="button button-round radiusbutton" style="border:0;border-radius:0px;">10 km</a>'+
-  '<a href="#" id="distance_25" onclick="changeRadius(25)" class="button button-round radiusbutton" style="border:0;border-radius:0px;">25 km</a>'+
-    '<a href="#" id="distance_50" onclick="changeRadius(50)" class="button button-round radiusbutton active" style="border:0;border-radius:0px;">50 km</a>'+
-    '<a href="#" id="distance_100" onclick="changeRadius(100)" class="button button-round radiusbutton" style="border:0;border-radius:0px;">100 km</a>'+
-'</p>'+
-
-    '<div class="list-block" style="margin-top:0px;">'+
-' <ul class="filterul">'+
-    
-         ' <li class="hiderowpref">'+
-      '<div class="item-content">'+
-       ' <div class="item-inner">'+
-        '  <div class="item-title label">Distance</div>'+
-        '  <div class="item-input f-distance-div">'+
-          '    <input type="text" placeholder="All" id="f-distance-input" name="name" readonly >'+
-         ' </div>'+
-       ' </div>'+
-      '</div>'+
-    '</li>'+
-     ' <li class="hiderowpref">'+
-      '<div class="item-content">'+
-       ' <div class="item-inner">'+
-        '  <div class="item-title label">Status</div>'+
-        '  <div class="item-input f-status-div">'+
-          '    <input type="text" placeholder="All" id="f-status-input" name="name" readonly >'+
-         ' </div>'+
-       ' </div>'+
-      '</div>'+
-    '</li>'+
-    
-
-    
-         ' <li class="hiderowpref">'+
-      '<div class="item-content">'+
-       ' <div class="item-inner">'+
-        '  <div class="item-title label">Industry</div>'+
-        '  <div class="item-input f-industry-div">'+
-          '    <input type="text" id="f-industry-input" name="name" placeholder="All" readonly >'+
-         ' </div>'+
-       ' </div>'+
-      '</div>'+
-    '</li>'+
-    ' <li class="hiderowpref">'+
-      '<div class="item-content">'+
-       ' <div class="item-inner">'+
-        '  <div class="item-title label">Zodiac</div>'+
-        '  <div class="item-input f-zodiac-div">'+
-          '    <input type="text" id="f-zodiac-input" name="name" placeholder="Hide" readonly >'+
-         ' </div>'+
-       ' </div>'+
-      '</div>'+
-    '</li>'+
-    ' <li class="hiderowpref">'+
-      '<div class="item-content">'+
-       ' <div class="item-inner">'+
-        '  <div class="item-title label">Politics</div>'+
-        '  <div class="item-input f-politics-div">'+
-          '    <input type="text" id="f-politics-input" name="name" placeholder="Hide" readonly>'+
-         ' </div>'+
-       ' </div>'+
-      '</div>'+
-    '</li>'+
-
-      ' <li class="hiderowpref">'+
-      '<div class="item-content">'+
-       ' <div class="item-inner">'+
-        '  <div class="item-title label">Religion</div>'+
-        '  <div class="item-input f-religion-div">'+
-          '    <input type="text" id="f-religion-input" name="name" placeholder="Hide" readonly>'+
-         ' </div>'+
-       ' </div>'+
-      '</div>'+
-    '</li>'+
-      
-
-  
-
-
-
-
-
-
-    
-  ' <li class="hiderowpref">'+
-      '<div class="item-content">'+
-       ' <div class="item-inner">'+
-        '  <div class="item-title label">Ethnicity</div>'+
-        '  <div class="item-input f-ethnicity-div">'+
-          '    <input type="text" id="f-ethnicity-input" name="name" placeholder="Hide" readonly>'+
-         ' </div>'+
-       ' </div>'+
-      '</div>'+
-    '</li>'+
-
-' <li class="hiderowpref">'+
-      '<div class="item-content">'+
-       ' <div class="item-inner">'+
-        '  <div class="item-title label">Eye color</div>'+
-        '  <div class="item-input f-eyes-div">'+
-          '    <input type="text" id="f-eyes-input" name="name" placeholder="Hide" readonly>'+
-         ' </div>'+
-       ' </div>'+
-      '</div>'+
-    '</li>'+
-    ' <li class="hiderowpref">'+
-      '<div class="item-content">'+
-       ' <div class="item-inner">'+
-        '  <div class="item-title label">Body Type</div>'+
-        '  <div class="item-input f-body-div">'+
-          '    <input type="text" id="f-body-input" name="name" placeholder="Hide" readonly>'+
-         ' </div>'+
-       ' </div>'+
-      '</div>'+
-    '</li>'+
-    
-
-  
-     
-       ' <li class="hiderowpref">'+
-      '<div class="item-content">'+
-       ' <div class="item-inner">'+
-        '  <div class="item-title label">Height</div>'+
-        '  <div class="item-input f-height-div">'+
-          '    <input type="text" id="f-height-input" name="name" placeholder="Hide" readonly>'+
-         ' </div>'+
-       ' </div>'+
-      '</div>'+
-    '</li>'+
-       ' <li class="hiderowpref">'+
-      '<div class="item-content">'+
-       ' <div class="item-inner">'+
-        '  <div class="item-title label">Weight</div>'+
-        '  <div class="item-input f-weight-div">'+
-          '    <input type="text" id="f-weight-input" name="name" placeholder="Hide" readonly>'+
-         ' </div>'+
-       ' </div>'+
-      '</div>'+
-    '</li>'+
-    '</ul></div>'+
-
-
-
-
-//'<div id="filterexplain"></div>'+
-
-
-
-
-//'<p class="buttons-row" style="padding-left:10px;padding-right:10px;">'+
- // '<a href="#" id="sortrandom" class="button button-round sortbutton sortby_1 active" onclick="sortBy(1)">Random</a>'+
-  //'<a href="#" id="sortdistance" class="button button-round sortbutton sortby_2" onclick="sortBy(2)">Distance</a>'+
-  //  '<a href="#" id="sortactivity" class="button button-round sortbutton sortby_3" onclick="sortBy(3)">Recent</a>'+
-//'</p>'+
-    
-        '</div>'+
-        '</div>'+
-        '<div class="swiper-slide">'+
-        
-         '<div class="slide-pref pref-1">'+
-        
-        
-
-'<div class="list-block media-list availblock" style="margin-bottom:0px;margin-top:0px;">'+
- '   <ul class="availul" style="padding-left:10px;padding-right:10px;padding-bottom:20px;">'+
-
-  '  </ul>'+
-    '<div class="list-block-label hiderowpref">Make it easier for your matches to organise a time to meet you.</div>'+
-
-'</div> '+
-        
- 
-
-
-
-        '</div>'+
-        '</div>'+
+       
         '<div class="swiper-slide" >'+
         
 
@@ -11353,11 +11165,19 @@ var popupHTML = '<div class="popup prefpop">'+
             
   
 
+'<div class="content-block-title" style="margin-top:20px;">Search options</div>'+
+
+'<p class="buttons-row" style="padding-left:10px;padding-right:10px;">'+
+  '<a href="#" id="distance_10" onclick="changeRadius(10)" class="button button-round radiusbutton" style="border:0;border-radius:0px;">10 km</a>'+
+  '<a href="#" id="distance_25" onclick="changeRadius(25)" class="button button-round radiusbutton" style="border:0;border-radius:0px;">25 km</a>'+
+    '<a href="#" id="distance_50" onclick="changeRadius(50)" class="button button-round radiusbutton active" style="border:0;border-radius:0px;">50 km</a>'+
+    '<a href="#" id="distance_100" onclick="changeRadius(100)" class="button button-round radiusbutton" style="border:0;border-radius:0px;">100 km</a>'+
+'</p>'+
             
                        
 
             
-                                 '<div class="content-block-title" style="margin-top:20px;">Sounds</div>'+
+                                 '<div class="content-block-title">Sounds</div>'+
             
            
           ' <div class="list-block media-list">'+
@@ -11433,12 +11253,12 @@ var popupHTML = '<div class="popup prefpop">'+
 '<div class="toolbar tabbar swipetoolbar" style="background-color:#ccc;">'+
 ' <div class="toolbar-inner" style="padding:0;">'+
 
-          '   <a href="#" class="button tab-link tab-swipe pan0 active" onclick="swipePref(0)" style="border-radius:0;font-size:17px;border:0;text-align:center;"><i class="pe-7s-filter pe-lg" style="width:22px;margin:0 auto;"></i></a>'+
-         '   <a href="#" class="button tab-link tab-swipe pan1 " onclick="swipePref(1)" style="border-radius:0;font-size:17px;border:0;text-align:center;"><i class="pe-7s-clock pe-lg" style="width:22px;margin:0 auto;"></i></a>'+
+       //   '   <a href="#" class="button tab-link tab-swipe pan0 active" onclick="swipePref(0)" style="border-radius:0;font-size:17px;border:0;text-align:center;"><i class="pe-7s-filter pe-lg" style="width:22px;margin:0 auto;"></i></a>'+
+         '   <a href="#" class="button tab-link tab-swipe pan0 " onclick="swipePref(0)" style="border-radius:0;font-size:17px;border:0;text-align:center;"><i class="pe-7s-clock pe-lg" style="width:22px;margin:0 auto;"></i></a>'+
         
-          '  <a href="#" class="button tab-link tab-swipe pan2" onclick="swipePref(2)" style="border-radius:0;font-size:17px;border:0;text-align:center;"><i class="pe-7s-info pe-lg" style="width:22px;margin:0 auto;"></i></a>'+
-          '  <a href="#" class="button tab-link tab-swipe pan3" onclick="swipePref(3);" style="border-radius:0;font-size:17px;border:0;text-align:center;"><i class="pe-7s-camera pe-lg" style="width:22px;margin:0 auto;"></i></a>'+
-          '  <a href="#" class="button tab-link tab-swipe pan4" onclick="swipePref(4)" style="border-radius:0;font-size:17px;border:0;text-align:center;"><i class="pe-7s-config pe-lg" style="width:22px;margin:0 auto;"></i></a>'+
+          '  <a href="#" class="button tab-link tab-swipe pan1" onclick="swipePref(1)" style="border-radius:0;font-size:17px;border:0;text-align:center;"><i class="pe-7s-info pe-lg" style="width:22px;margin:0 auto;"></i></a>'+
+          '  <a href="#" class="button tab-link tab-swipe pan2" onclick="swipePref(2);" style="border-radius:0;font-size:17px;border:0;text-align:center;"><i class="pe-7s-camera pe-lg" style="width:22px;margin:0 auto;"></i></a>'+
+          '  <a href="#" class="button tab-link tab-swipe pan3" onclick="swipePref(3)" style="border-radius:0;font-size:17px;border:0;text-align:center;"><i class="pe-7s-config pe-lg" style="width:22px;margin:0 auto;"></i></a>'+
       
 
  '</div>'+
@@ -11530,6 +11350,8 @@ onChange:function (p, values, displayValues){$( '#status-input' ).addClass("prof
      ]
 }); 
 
+	
+	
 var heightpicker = myApp.picker({
     input: '#height-input',
      onChange:function (p, values, displayValues){$( '#height-input' ).addClass("profilevaluechosen");},
@@ -11593,6 +11415,8 @@ var heightpicker = myApp.picker({
      ]
 }); 
 
+	
+	
 var weightpicker = myApp.picker({
     input: '#weight-input',
          onOpen: function (p){$( '.picker-items-col-wrapper' ).css("width", + $( document ).width() + "px");if (sexuality){processUpdate();  myApp.sizeNavbars();  } if (weight_u) {
@@ -11772,20 +11596,18 @@ onSlideChangeStart:function(swiper){
 $( ".page-content" ).scrollTop( 0 );
 $( ".tab-swipe").removeClass('active');
 $( ".pan" + swiper.activeIndex ).addClass('active');
-if (swiper.activeIndex == 0){$( ".swipetext" ).text('Filters');
+
+if (swiper.activeIndex == 0){$( ".swipetext" ).text('Availability');
 $( ".slide-pref" ).hide();$( ".pref-0").show();
 }
-if (swiper.activeIndex == 1){$( ".swipetext" ).text('Availability');
+if (swiper.activeIndex == 1){$( ".swipetext" ).text('Profile');
 $( ".slide-pref" ).hide();$( ".pref-1").show();
 }
-if (swiper.activeIndex == 2){$( ".swipetext" ).text('Profile');
+if (swiper.activeIndex == 2){$( ".swipetext" ).text('Photos');getData();
 $( ".slide-pref" ).hide();$( ".pref-2").show();
 }
-if (swiper.activeIndex == 3){$( ".swipetext" ).text('Photos');getData();
+if (swiper.activeIndex == 3){$( ".swipetext" ).text('Settings');
 $( ".slide-pref" ).hide();$( ".pref-3").show();
-}
-if (swiper.activeIndex == 4){$( ".swipetext" ).text('Settings');
-$( ".slide-pref" ).hide();$( ".pref-4").show();
 }
 
 if (!sexuality){$( '.swipetext' ).text("Welcome, " + f_first);mySwiper.lockSwipes();}
@@ -12254,7 +12076,6 @@ myApp.pickerModal(
       '<div class="toolbar tabbar" style="z-index:9999;background-color:#ccc;">' +
         '<div class="toolbar-inner" style="padding:0;">' +
          
-         '   <a href="#" class="button tab-link tab-swipe home0" onclick="swipePopup(0);" style="border-radius:0;font-size:17px;border:0;text-align:center;"><i class="pe-7s-filter pe-lg" style="width:22px;margin:0 auto;"></i></a>'+
          '   <a href="#" class="button tab-link tab-swipe home1 " onclick="swipePopup(1);" style="border-radius:0;font-size:17px;border:0;text-align:center;"><i class="pe-7s-clock pe-lg" style="width:22px;margin:0 auto;"></i></a>'+
         
           '  <a href="#" class="button tab-link tab-swipe home2" onclick="swipePopup(2);" style="border-radius:0;font-size:17px;border:0;text-align:center;"><i class="pe-7s-info pe-lg" style="width:22px;margin:0 auto;"></i></a>'+
