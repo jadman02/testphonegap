@@ -11931,6 +11931,7 @@ else{$('#soundnotif').prop('checked', false);}
 if (f_age) {$( ".savebutton" ).removeClass('disabled');}
 
 
+	
 if(hometown_u){$( "#homesearch" ).val( hometown_u );}
 if(industry_u){$( "#industry-input" ).val( industry_u );}
 if(status_u){$( "#status-input" ).val( status_u );}
@@ -11980,7 +11981,7 @@ if (height_u) {
                                                                                           if (height_u == 203) {var heightset = '203 cm (6\' 8\'\')';}
                                                                                           $( "#height-input" ).val( heightset );
                                                                                           }
-
+$( "#distance-input" ).val( radiussize + " " + radiusunit );
 if (f_age && f_gender) {$( "#picker-describe" ).val( f_gender + ", " + f_age );}
 
 
