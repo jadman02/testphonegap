@@ -11459,6 +11459,14 @@ if(sexuality){$( ".doneunchange" ).show();$( ".registerdiv" ).hide();$('.hiderow
 
 if(!sexuality){sortBy(1);$( ".swipetoolbar" ).hide();}
 
+//var industryarray = ['Accounting', 'Administration','Advertising','Agriculture','Banking and finance', 'Business', 'Charity', 'Creative arts','Construction','Consulting', 'Design', 'Education','Energy','Events', 'Engineering','Environment','Healthcare','Hospitality','HR and Recruitment', 'IT','Law','Law Enforcement','Leisure','Management','Manufacturing', 'Marketing','Media','Other','Pharmaceuticals','PR','Property','Public Services','Retail','Sales','Science','Security','Social Care','Small business','Sport','Tourism','Transport','Utilities','Voluntary work'];
+//var statuspicker = ['Single', 'Married', 'Engaged','Open relationship', 'Committed relationship','It\'s Complicated'];	
+//var pickerarray = [];
+	
+
+
+	
+	
 var industrypicker = myApp.picker({
     input: '#industry-input',
          onOpen: function (p){$( '.picker-items-col-wrapper' ).css("width", + $( document ).width() + "px");if (industry_u) {industrypicker.cols[0].setValue(industry_u);} if (sexuality){processUpdate();  myApp.sizeNavbars();  }
