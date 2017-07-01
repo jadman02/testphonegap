@@ -2676,7 +2676,7 @@ for (i = 0; i < f_largeurls.length; i++) {
 
 
 
-   $( ".wrapper-photos" ).append('<div class="swiper-slide" style="height:250px;background-image:url(\''+f_largeurls[i]+'\');background-size:cover;background-position:50% 50%;"><div class="button" style="border:0;border-radius:0px;background-color:#ff3b30;color:white;position:absolute;bottom:10px;right:10px;" onclick="deleteIndividual()">Delete Photo</div></div>');
+   $( ".wrapper-photos" ).append('<div class="swiper-slide" style="height:250px;background-image:url(\''+f_largeurls[i]+'\');background-size:cover;background-position:50% 50%;"><div class="button" style="border:0;border-radius:0px;background-color:#ff3b30;color:white;position:absolute;bottom:10px;right:5px;" onclick="deleteIndividual()">Remove Photo</div></div>');
    
 
    
@@ -10658,7 +10658,7 @@ for (i = 0; i < addedlargearray.length; i++) {
 
 
    
-      $( ".wrapper-photos" ).append('<div class="swiper-slide" style="height:250px;background-image:url(\''+addedlargearray[i]+'\');background-size:cover;background-position:50% 50%;"><div class="button" style="color:#ff3b30;color:white;position:absolute;bottom:10px;right:10px;" onclick="deleteIndividual()">Delete Photo</div></div>');
+      $( ".wrapper-photos" ).append('<div class="swiper-slide" style="height:250px;background-image:url(\''+addedlargearray[i]+'\');background-size:cover;background-position:50% 50%;"><div class="button" style="border:0;border-radius:0px;background-color:#ff3b30;color:white;position:absolute;bottom:10px;right:5px;" onclick="deleteIndividual()">Remove Photo</div></div>');
    
 }
 
@@ -11159,7 +11159,7 @@ var popupHTML = '<div class="popup prefpop">'+
    '   </div>'+
 
 '<div class="swiper-container container-photos" style="width:'+sliderwidth+'px;height:250px;">'+
-    '<div class="swiper-wrapper wrapper-photos" style="margin-top:-10px;">'+
+    '<div class="swiper-wrapper wrapper-photos">'+
 
 
     '</div>'+
@@ -11173,7 +11173,7 @@ var popupHTML = '<div class="popup prefpop">'+
  ' <div class="buttons-row">'+
           '<a href="#" class="button active" onclick="photosPopup();" style="border:0;border-radius:0px;background-color:#4cd964;margin-left:5px;margin-right:5px;">Add</a>'+
           '<a href="#" class="button reorderbutton active disabled" onclick="reorderPhotos();" style="border:0;border-radius:0px;margin-right:5px;">Re-order</a>'+
-            '<a href="#" class="button deleteallbutton active disabled" onclick="deleteAllPhotos();" style="border:0;border-radius:0px;margin-right:5px;background-color:#ff3b30;color:white">Delete All</a>'+
+            '<a href="#" class="button deleteallbutton active disabled" onclick="deleteAllPhotos();" style="border:0;border-radius:0px;margin-right:5px;background-color:#ff3b30;color:white">Remove All</a>'+
         '</div>'+
 '<div class="list-block" style="margin-top:0px;">'+
 ' <ul">'+
