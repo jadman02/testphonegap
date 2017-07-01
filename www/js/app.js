@@ -11459,13 +11459,7 @@ if(sexuality){$( ".doneunchange" ).show();$( ".registerdiv" ).hide();$('.hiderow
 
 if(!sexuality){sortBy(1);$( ".swipetoolbar" ).hide();}
 
-//var industryarray = ['Accounting', 'Administration','Advertising','Agriculture','Banking and finance', 'Business', 'Charity', 'Creative arts','Construction','Consulting', 'Design', 'Education','Energy','Events', 'Engineering','Environment','Healthcare','Hospitality','HR and Recruitment', 'IT','Law','Law Enforcement','Leisure','Management','Manufacturing', 'Marketing','Media','Other','Pharmaceuticals','PR','Property','Public Services','Retail','Sales','Science','Security','Social Care','Small business','Sport','Tourism','Transport','Utilities','Voluntary work'];
-//var statuspicker = ['Single', 'Married', 'Engaged','Open relationship', 'Committed relationship','It\'s Complicated'];	
-//var pickerarray = [];
-	
 
-
-	
 	
 var industrypicker = myApp.picker({
     input: '#industry-input',
@@ -11490,6 +11484,28 @@ onChange:function (p, values, displayValues){$( '#industry-input' ).addClass("pr
      ]
 });   
 
+	var findustrypicker = myApp.picker({
+    input: '#f-industry-input',
+         onOpen: function (p){$( '.picker-items-col-wrapper' ).css("width", + $( document ).width() + "px");if (f_industry_u) {findustrypicker.cols[0].setValue(f_industry_u);} if (sexuality){processUpdate();  myApp.sizeNavbars();  }
+},
+onChange:function (p, values, displayValues){$( '#f-industry-input' ).addClass("profilevaluechosen");},
+     toolbarTemplate: 
+        '<div class="toolbar">' +
+            '<div class="toolbar-inner">' +
+                '<div class="left" onclick="removeProfileSet(\'f_industry\')">' +
+                    '<a href="#" class="link close-picker" style="color:#ff3b30">Cancel</a>' +
+                '</div>' +
+                '<div class="right">' +
+                    '<a href="#" class="link close-picker">Done</a>' +
+                '</div>' +
+            '</div>' +
+        '</div>',
+    cols: [
+       {
+         values: ['Accounting', 'Administration','Advertising','Agriculture','Banking and finance', 'Business', 'Charity', 'Creative arts','Construction','Consulting', 'Design', 'Education','Energy','Events', 'Engineering','Environment','Healthcare','Hospitality','HR and Recruitment', 'IT','Law','Law Enforcement','Leisure','Management','Manufacturing', 'Marketing','Media','Other','Pharmaceuticals','PR','Property','Public Services','Retail','Sales','Science','Security','Social Care','Small business','Sport','Tourism','Transport','Utilities','Voluntary work']
+       }
+     ]
+}); 
 
 
 var statuspicker = myApp.picker({
