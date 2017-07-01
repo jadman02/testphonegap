@@ -11158,8 +11158,8 @@ var popupHTML = '<div class="popup prefpop">'+
   '      <span class="preloader"></span>'+
    '   </div>'+
 
-'<div class="swiper-container container-photos" style="width:'+sliderwidth+'px;height:250px;margin-top:-10px;">'+
-    '<div class="swiper-wrapper wrapper-photos">'+
+'<div class="swiper-container container-photos" style="width:'+sliderwidth+'px;height:250px;">'+
+    '<div class="swiper-wrapper wrapper-photos" style="margin-top:-10px;">'+
 
 
     '</div>'+
