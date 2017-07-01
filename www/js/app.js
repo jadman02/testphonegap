@@ -1536,7 +1536,7 @@ if (snapshot.child("availstring").val()){ availarray = JSON.parse(snapshot.child
 f_description = snapshot.child("description").val(); 
         f_lower = snapshot.child("lower").val(); 
          
-	    radiusunit = snapshot.child("radius").val(); 
+
 	    
 	    if(snapshot.child("radius").val()){radiussize = snapshot.child("radius").val(); }
 	       else{radiussize ='50' }
