@@ -11058,7 +11058,7 @@ var popupHTML = '<div class="popup prefpop">'+
   '      <div class="item-inner">'+
       '<div class="item-title label">About Me</div>'+
           '  <div class="item-input">'+
- '   <textarea class="resizable" onkeyup="keyUp()" maxlength="100" id="userdescription" style="min-height:70px;" placeholder="Describe yourself and what you are looking for..."></textarea>'+
+ '   <textarea class="resizable" onkeyup="keyUp()" maxlength="100" id="userdescription" style="min-height:44px;" placeholder="Hide"></textarea>'+
   '</div>'+
     '    </div>'+
      ' </div>'+
