@@ -360,7 +360,7 @@ var f_to_date = [],f_to_duck = [],f_date_me = [],f_duck_me = [],f_date_match = [
 var f_auth_id;
 var blocklist;
 var lastkey;
-var pickerDescribe,pickerDescribe2, pickerCustomToolbar;
+var pickerDescribe,pickerDescribe2, pickerCustomToolbar,distancepicker;
 var existingmessages;
 var additions = 0;
 var myPhotoBrowser;
@@ -11323,7 +11323,7 @@ if(!sexuality){sortBy(1);$( ".swipetoolbar" ).hide();}
 
 
 //if (radiussize) {distancepicker.cols[0].setValue(radiussize);}
-	var distancepicker = myApp.picker({
+distancepicker = myApp.picker({
     input: '#distance-input',
          onOpen: function (p){$( '.picker-items-col-wrapper' ).css("width", + ($( document ).width()/2) + "px");if (radiussize) {distancepicker.cols[0].setValue(radiussize);} if (radiusunit) {distancepicker.cols[1].setValue(radiusunit);} if (sexuality){processUpdate();  myApp.sizeNavbars();  }
 },
