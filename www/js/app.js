@@ -1542,7 +1542,7 @@ f_description = snapshot.child("description").val();
 	       else{radiussize ='50' }
 	    if(snapshot.child("radiusunit").val()){radiusunit = snapshot.child("radiusunit").val(); }
 	       else{radiusunit ='Kilometres' }
-	    
+	    alert(radiusunit);
 f_token = snapshot.child("token").val();
         f_upper = snapshot.child("upper").val(); 
         f_interested = snapshot.child("interested").val(); 
