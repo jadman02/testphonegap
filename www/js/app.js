@@ -11205,7 +11205,7 @@ var popupHTML = '<div class="popup prefpop">'+
  '     <div class="item-content">'+
 
   '      <div class="item-inner">'+
-      '<div class="item-title label">Search distance</div>'+
+      '<div class="item-title label" style="width:120px;">Search radius</div>'+
    '       <div class="item-input">'+
     '        <input type="text" placeholder="..." readonly id="distance-input">'+
      '     </div>'+
@@ -11319,7 +11319,7 @@ if(!sexuality){sortBy(1);$( ".swipetoolbar" ).hide();}
 //if (radiussize) {distancepicker.cols[0].setValue(radiussize);}
 	var distancepicker = myApp.picker({
     input: '#distance-input',
-         onOpen: function (p){$( '.picker-items-col-wrapper' ).css("width", + $( document ).width() + "px"); if (sexuality){processUpdate();  myApp.sizeNavbars();  }
+         onOpen: function (p){$( '.picker-items-col-wrapper' ).css("width", + ($( document ).width()/2) + "px"); if (sexuality){processUpdate();  myApp.sizeNavbars();  }
 },
      toolbarTemplate: 
         '<div class="toolbar">' +
