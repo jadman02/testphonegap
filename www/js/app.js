@@ -2665,12 +2665,12 @@ $.post( "http://www.dateorduck.com/userdata.php", {projectid:f_projectid,token:i
   
         $( ".photosliderinfo" ).addClass('pictures');
 
-       if (f_largeurls.length === 0){       $( ".photosliderinfo" ).html('You have added '+f_largeurls.length+' photo to your profile');
+       if (f_largeurls.length === 1){       $( ".photosliderinfo" ).html('You have added '+f_largeurls.length+' photo to your profile');
 }
 else{       $( ".photosliderinfo" ).html('You have added '+f_largeurls.length+' photos to your profile');
 }
        
-console.log(f_largeurls.length);
+
 for (i = 0; i < f_largeurls.length; i++) { 
 
 
@@ -11158,7 +11158,7 @@ var popupHTML = '<div class="popup prefpop">'+
   '      <span class="preloader"></span>'+
    '   </div>'+
 
-'<div class="swiper-container container-photos" style="width:'+sliderwidth+'px;height:250px;">'+
+'<div class="swiper-container container-photos" style="width:'+sliderwidth+'px;height:250px;padding:10px;">'+
     '<div class="swiper-wrapper wrapper-photos">'+
 
 
@@ -11176,6 +11176,9 @@ var popupHTML = '<div class="popup prefpop">'+
             '<a href="#" class="button deleteallbutton active disabled" onclick="deleteAllPhotos();" style="border:0;border-radius:0px;margin-right:5px;background-color:#ff3b30;color:white">Delete All</a>'+
         '</div>'+
 
+        '<div class="list-block-label hiderowpref">Photos can be uploaded from your Facebook account.</div>'+
+
+    
                         '</div>'+
                         '</div>'+
   
