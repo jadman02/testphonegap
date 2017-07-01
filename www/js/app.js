@@ -11041,8 +11041,9 @@ var popupHTML = '<div class="popup prefpop">'+
 
 '<li class="newam" style="clear:both;">'+
  '     <div class="item-content">'+
-  '<div class="item-title label">I am</div>'+
+
   '      <div class="item-inner">'+
+      '<div class="item-title label">I am</div>'+
    '       <div class="item-input">'+
     '        <input type="text" placeholder="..." readonly id="picker-describe">'+
      '     </div>'+
@@ -11053,8 +11054,9 @@ var popupHTML = '<div class="popup prefpop">'+
        
 '<li class="newme">'+
  '     <div class="item-content">'+
-  '<div class="item-title label">Preference</div>'+
+
   '      <div class="item-inner">'+
+      '<div class="item-title label">Preference</div>'+
    '       <div class="item-input">'+
     '        <input type="text" placeholder="..." readonly id="picker-describe2">'+
      '     </div>'+
@@ -11068,7 +11070,7 @@ var popupHTML = '<div class="popup prefpop">'+
   '      <div class="item-inner">'+
       '<div class="item-title label">About Me</div>'+
           '  <div class="item-input">'+
- '   <textarea class="resizable" onkeyup="keyUp()" maxlength="100" id="userdescription" style="width: calc(100% - 40px);min-height:88px;" placeholder="Hide"></textarea>'+
+ '   <textarea class="resizable" onkeyup="keyUp()" maxlength="100" id="userdescription" style="width: calc(100% - 40px);min-height:88px;max-height:176px;" placeholder="Hide"></textarea>'+
   '</div>'+
     '    </div>'+
      ' </div>'+
