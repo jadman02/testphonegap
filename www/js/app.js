@@ -12076,11 +12076,11 @@ myApp.pickerModal(
       '<div class="toolbar tabbar" style="z-index:9999;background-color:#ccc;">' +
         '<div class="toolbar-inner" style="padding:0;">' +
          
-         '   <a href="#" class="button tab-link tab-swipe home1 " onclick="swipePopup(1);" style="border-radius:0;font-size:17px;border:0;text-align:center;"><i class="pe-7s-clock pe-lg" style="width:22px;margin:0 auto;"></i></a>'+
+         '   <a href="#" class="button tab-link tab-swipe home1 " onclick="swipePopup(0);" style="border-radius:0;font-size:17px;border:0;text-align:center;"><i class="pe-7s-clock pe-lg" style="width:22px;margin:0 auto;"></i></a>'+
         
-          '  <a href="#" class="button tab-link tab-swipe home2" onclick="swipePopup(2);" style="border-radius:0;font-size:17px;border:0;text-align:center;"><i class="pe-7s-info pe-lg" style="width:22px;margin:0 auto;"></i></a>'+
-          '  <a href="#" class="button tab-link tab-swipe home3" onclick="swipePopup(3);" style="border-radius:0;font-size:17px;border:0;text-align:center;"><i class="pe-7s-camera pe-lg" style="width:22px;margin:0 auto;"></i></a>'+
-          '  <a href="#" class="button tab-link tab-swipe home4" onclick="swipePopup(4);" style="border-radius:0;font-size:17px;border:0;text-align:center;"><i class="pe-7s-config pe-lg" style="width:22px;margin:0 auto;"></i></a>'+
+          '  <a href="#" class="button tab-link tab-swipe home2" onclick="swipePopup(1);" style="border-radius:0;font-size:17px;border:0;text-align:center;"><i class="pe-7s-info pe-lg" style="width:22px;margin:0 auto;"></i></a>'+
+          '  <a href="#" class="button tab-link tab-swipe home3" onclick="swipePopup(2);" style="border-radius:0;font-size:17px;border:0;text-align:center;"><i class="pe-7s-camera pe-lg" style="width:22px;margin:0 auto;"></i></a>'+
+          '  <a href="#" class="button tab-link tab-swipe home4" onclick="swipePopup(3);" style="border-radius:0;font-size:17px;border:0;text-align:center;"><i class="pe-7s-config pe-lg" style="width:22px;margin:0 auto;"></i></a>'+
       
 
          
