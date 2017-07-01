@@ -10911,7 +10911,7 @@ var popupHTML = '<div class="popup prefpop">'+
 
   '  <div class="pages">'+
  '     <div data-page="home-3" class="page">'+
-   '     <div class="page-content" style="padding-top:44px;background-color:white;">'+
+   '     <div class="page-content" style="background-color:white;">'+
 
 '<div class="swiper-container swiper-prefer" style="min-height:100%;">'+
 
@@ -10987,7 +10987,7 @@ var popupHTML = '<div class="popup prefpop">'+
         
         
 
-'<div class="list-block media-list availblock" style="margin-bottom:0px;">'+
+'<div class="list-block media-list availblock" style="margin-bottom:0px;margin-top:0px;">'+
  '   <ul class="availul" style="padding-left:10px;padding-right:10px;padding-bottom:20px;">'+
 
   '  </ul>'+
