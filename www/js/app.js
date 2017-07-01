@@ -1535,14 +1535,7 @@ if (snapshot.child("offsounds").val()){offsounds = snapshot.child("offsounds").v
 if (snapshot.child("availstring").val()){ availarray = JSON.parse(snapshot.child("availstring").val());}
 f_description = snapshot.child("description").val(); 
         f_lower = snapshot.child("lower").val(); 
-         
-	    radiusunit = snapshot.child("radius").val(); 
-	    
-	    if(snapshot.child("radius").val()){radiussize = snapshot.child("radius").val(); }
-	       else{radiussize ='50' }
-	    if(snapshot.child("radiusunit").val()){radiusunit = snapshot.child("radiusunit").val(); }
-	       else{radiusunit ='Kilometres' }
-	    
+         radiussize = snapshot.child("radius").val(); 
 f_token = snapshot.child("token").val();
         f_upper = snapshot.child("upper").val(); 
         f_interested = snapshot.child("interested").val(); 
@@ -1852,9 +1845,11 @@ else {lowerage = f_lower;upperage = f_upper;}
 
 
 
+if ($( "#distance_10" ).hasClass( "active" )){radiussize = '10';}
+if ($( "#distance_25" ).hasClass( "active" )){radiussize = '25';}
+if ($( "#distance_50" ).hasClass( "active" )){radiussize = '50';}
+if ($( "#distance_100" ).hasClass( "active" )){radiussize = '100';}
 
-radiussize = distancepicker.value[0];
-	radiusunit = distancepicker.value[1];
 
 availarray = [];
 $( ".availrec" ).each(function() {
@@ -1930,7 +1925,6 @@ weight: weight_u,
     upper: upperage,
     description:userzdescription,
     radius:radiussize,
-	radiusunit:radiusunit,
     sort:sortby,
     availstring:availstring,
     offsounds:offsounds,
@@ -2682,7 +2676,7 @@ for (i = 0; i < f_largeurls.length; i++) {
 
 
 
-   $( ".wrapper-photos" ).append('<div class="swiper-slide" style="height:250px;background-image:url(\''+f_largeurls[i]+'\');background-size:cover;background-position:50% 50%;"><div class="button" style="border:0;border-radius:0px;background-color:#ff3b30;color:white;position:absolute;bottom:10px;right:5px;font-size:17px;" onclick="deleteIndividual()">Remove</div></div>');
+   $( ".wrapper-photos" ).append('<div class="swiper-slide" style="height:250px;background-image:url(\''+f_largeurls[i]+'\');background-size:cover;background-position:50% 50%;"><div class="button" style="border:0;border-radius:0px;background-color:#ff3b30;color:white;position:absolute;bottom:10px;right:5px;" onclick="deleteIndividual()">Remove Photo</div></div>');
    
 
    
@@ -9656,11 +9650,11 @@ function insertAfterNthChild($parent, index, content){
     $(content).insertBefore($parent.children().eq(index));
 }
 
-//function changeRadius(number){
-//$('.radiusbutton').removeClass('active');
-//$('#distance_'+ number).addClass('active');
-//processUpdate();
-//}
+function changeRadius(number){
+$('.radiusbutton').removeClass('active');
+$('#distance_'+ number).addClass('active');
+processUpdate();
+}
 
 
 
@@ -10664,7 +10658,7 @@ for (i = 0; i < addedlargearray.length; i++) {
 
 
    
-      $( ".wrapper-photos" ).append('<div class="swiper-slide" style="height:250px;background-image:url(\''+addedlargearray[i]+'\');background-size:cover;background-position:50% 50%;"><div class="button" style="border:0;border-radius:0px;background-color:#ff3b30;color:white;position:absolute;bottom:10px;right:5px;font-size:17px;" onclick="deleteIndividual()">Remove</div></div>');
+      $( ".wrapper-photos" ).append('<div class="swiper-slide" style="height:250px;background-image:url(\''+addedlargearray[i]+'\');background-size:cover;background-position:50% 50%;"><div class="button" style="border:0;border-radius:0px;background-color:#ff3b30;color:white;position:absolute;bottom:10px;right:5px;" onclick="deleteIndividual()">Remove Photo</div></div>');
    
 }
 
@@ -11178,8 +11172,8 @@ var popupHTML = '<div class="popup prefpop">'+
 
  ' <div class="buttons-row">'+
           '<a href="#" class="button active" onclick="photosPopup();" style="font-size:17px;border:0;border-radius:0px;background-color:#4cd964;margin-left:5px;margin-right:5px;">Add</a>'+
-          '<a href="#" class="button reorderbutton active disabled" onclick="reorderPhotos();" style="font-size:17px;border:0;border-radius:0px;margin-right:5px;">Order</a>'+
-            '<a href="#" class="button deleteallbutton active disabled" onclick="deleteAllPhotos();" style="font-size:17px;border:0;border-radius:0px;margin-right:5px;background-color:#ff3b30;color:white">Clear</a>'+
+          '<a href="#" class="button reorderbutton active disabled" onclick="reorderPhotos();" style="font-size:17px;border:0;border-radius:0px;margin-right:5px;">Re-order</a>'+
+            '<a href="#" class="button deleteallbutton active disabled" onclick="deleteAllPhotos();" style="font-size:17px;border:0;border-radius:0px;margin-right:5px;background-color:#ff3b30;color:white">Remove All</a>'+
         '</div>'+
 '<div class="list-block" style="margin-top:0px;">'+
 ' <ul">'+
@@ -11228,7 +11222,7 @@ var popupHTML = '<div class="popup prefpop">'+
            ' <li>'+
          '   <div class="item-content">'+
              '   <div class="item-inner" style="float:left;">'+
-              '<div class="item-title label" style="width:calc(100% - 62px);float:left;font-size:17px;font-weight:normal;">Turn off sounds</div>'+
+              '<div class="item-title label" style="width:calc(100% - 62px);float:left;font-size:17px;">Turn off sounds</div>'+
               '   <div class="item-input" style="width:52px;float:left;">'+
 '<label class="label-switch">'+
    ' <input type="checkbox" id="soundnotif" onchange="processUpdate();  myApp.sizeNavbars();">'+
@@ -11245,7 +11239,7 @@ var popupHTML = '<div class="popup prefpop">'+
 
              '   <div class="item-inner">'+
                   '  <div class="item-title-row">'+
-                     '   <div class="item-title button blockbutton active disabled" onclick="unblock()" style="font-size:17px;border:0;border-radius:0px;">Unblock all </div>'+
+                     '   <div class="item-title button blockbutton active disabled" onclick="unblock()" style="border:0;border-radius:0px;">Unblock all </div>'+
                     '</div>'+
                ' </div>'+
            ' </div>'+
@@ -11325,7 +11319,7 @@ if(!sexuality){sortBy(1);$( ".swipetoolbar" ).hide();}
 //if (radiussize) {distancepicker.cols[0].setValue(radiussize);}
 	var distancepicker = myApp.picker({
     input: '#distance-input',
-         onOpen: function (p){$( '.picker-items-col-wrapper' ).css("width", + ($( document ).width()/2) + "px");if (radiussize) {distancepicker.cols[0].setValue(radiussize);} if (radiusunit) {distancepicker.cols[1].setValue(radiusunit);} if (sexuality){processUpdate();  myApp.sizeNavbars();  }
+         onOpen: function (p){$( '.picker-items-col-wrapper' ).css("width", + ($( document ).width()/2) + "px"); if (sexuality){processUpdate();  myApp.sizeNavbars();  }
 },
      toolbarTemplate: 
         '<div class="toolbar">' +
@@ -11913,13 +11907,13 @@ $( "#maxdescription" ).text(inputlengthd + ' / 100 ');
 
 
 
-//if (radiussize){
+if (radiussize){
 
-//$( ".radiusbutton" ).removeClass( "active" );
-//$( "#distance_" + radiussize ).addClass( "active" );
+$( ".radiusbutton" ).removeClass( "active" );
+$( "#distance_" + radiussize ).addClass( "active" );
 
 
-//}
+}
 
 
 
