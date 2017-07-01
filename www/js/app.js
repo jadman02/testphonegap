@@ -11634,7 +11634,7 @@ if (!sexuality){$( '.swipetext' ).text("Welcome, " + f_first);mySwiper.lockSwipe
 
 }
 });   
-
+$( ".slide-pref" ).hide();
 swipePref(chosen);
 myApp.sizeNavbars();  
 var dateinfo = [];
@@ -12084,7 +12084,7 @@ formatValue: function (p, values, displayValues) {
   }
   
   
-function swipePref(index){mySwiper.slideTo(index);}
+function swipePref(index){$( ".pref-" + index).show();mySwiper.slideTo(index);}
 
 function navPicker(){
 
