@@ -360,7 +360,7 @@ var f_to_date = [],f_to_duck = [],f_date_me = [],f_duck_me = [],f_date_match = [
 var f_auth_id;
 var blocklist;
 var lastkey;
-var pickerDescribe,pickerDescribe2, pickerCustomToolbar,distancepicker;
+var pickerDescribe,pickerDescribe2, pickerCustomToolbar;
 var existingmessages;
 var additions = 0;
 var myPhotoBrowser;
@@ -978,7 +978,7 @@ else{}
 var fetch = ['random','distance','activity'];
 var fetched = 0;
 for (q = 0; q < fetch.length; q++) { 
-alert(radiusunit);
+
 
 $.post( "http://www.dateorduck.com/locations.php", { want:homewant,projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,upper:f_upper,lower:f_lower,radius:radiussize,radiusunit:radiusunit,sexuality:sexuality,sortby:fetch[q],latitudep:latitudep,longitudep:longitudep} )
   .done(function( data ) {
@@ -1536,13 +1536,13 @@ if (snapshot.child("availstring").val()){ availarray = JSON.parse(snapshot.child
 f_description = snapshot.child("description").val(); 
         f_lower = snapshot.child("lower").val(); 
          
-
+	    radiusunit = snapshot.child("radius").val(); 
 	    
 	    if(snapshot.child("radius").val()){radiussize = snapshot.child("radius").val(); }
 	       else{radiussize ='50' }
 	    if(snapshot.child("radiusunit").val()){radiusunit = snapshot.child("radiusunit").val(); }
 	       else{radiusunit ='Kilometres' }
-	    alert(radiusunit);
+	    
 f_token = snapshot.child("token").val();
         f_upper = snapshot.child("upper").val(); 
         f_interested = snapshot.child("interested").val(); 
@@ -11323,7 +11323,7 @@ if(!sexuality){sortBy(1);$( ".swipetoolbar" ).hide();}
 
 
 //if (radiussize) {distancepicker.cols[0].setValue(radiussize);}
-distancepicker = myApp.picker({
+	var distancepicker = myApp.picker({
     input: '#distance-input',
          onOpen: function (p){$( '.picker-items-col-wrapper' ).css("width", + ($( document ).width()/2) + "px");if (radiussize) {distancepicker.cols[0].setValue(radiussize);} if (radiusunit) {distancepicker.cols[1].setValue(radiusunit);} if (sexuality){processUpdate();  myApp.sizeNavbars();  }
 },
@@ -11931,7 +11931,6 @@ else{$('#soundnotif').prop('checked', false);}
 if (f_age) {$( ".savebutton" ).removeClass('disabled');}
 
 
-	
 if(hometown_u){$( "#homesearch" ).val( hometown_u );}
 if(industry_u){$( "#industry-input" ).val( industry_u );}
 if(status_u){$( "#status-input" ).val( status_u );}
@@ -11981,7 +11980,7 @@ if (height_u) {
                                                                                           if (height_u == 203) {var heightset = '203 cm (6\' 8\'\')';}
                                                                                           $( "#height-input" ).val( heightset );
                                                                                           }
-$( "#distance-input" ).val( radiussize + " " + radiusunit );
+
 if (f_age && f_gender) {$( "#picker-describe" ).val( f_gender + ", " + f_age );}
 
 
