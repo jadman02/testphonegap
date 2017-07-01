@@ -11175,9 +11175,10 @@ var popupHTML = '<div class="popup prefpop">'+
           '<a href="#" class="button reorderbutton active disabled" onclick="reorderPhotos();" style="border:0;border-radius:0px;margin-right:5px;">Re-order</a>'+
             '<a href="#" class="button deleteallbutton active disabled" onclick="deleteAllPhotos();" style="border:0;border-radius:0px;margin-right:5px;background-color:#ff3b30;color:white">Delete All</a>'+
         '</div>'+
-
+'<div class="list-block" style="margin-top:0px;">'+
+' <ul">'+
         '<div class="list-block-label hiderowpref">Photos can be uploaded from your Facebook account.</div>'+
-
+ '</ul></div>'+
     
                         '</div>'+
                         '</div>'+
