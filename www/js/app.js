@@ -10939,11 +10939,21 @@ var popupHTML = '<div class="popup prefpop">'+
     '<div class="list-block" style="margin-top:0px;">'+
 ' <ul class="filterul">'+
     
+         ' <li class="hiderowpref">'+
+      '<div class="item-content">'+
+       ' <div class="item-inner">'+
+        '  <div class="item-title label">Distance</div>'+
+        '  <div class="item-input f-distance-div">'+
+          '    <input type="text" placeholder="All" id="f-distance-input" name="name" readonly >'+
+         ' </div>'+
+       ' </div>'+
+      '</div>'+
+    '</li>'+
      ' <li class="hiderowpref">'+
       '<div class="item-content">'+
        ' <div class="item-inner">'+
         '  <div class="item-title label">Status</div>'+
-        '  <div class="item-input status-div">'+
+        '  <div class="item-input f-status-div">'+
           '    <input type="text" placeholder="All" id="f-status-input" name="name" readonly >'+
          ' </div>'+
        ' </div>'+
@@ -10956,7 +10966,7 @@ var popupHTML = '<div class="popup prefpop">'+
       '<div class="item-content">'+
        ' <div class="item-inner">'+
         '  <div class="item-title label">Industry</div>'+
-        '  <div class="item-input industry-div">'+
+        '  <div class="item-input f-industry-div">'+
           '    <input type="text" id="f-industry-input" name="name" placeholder="All" readonly >'+
          ' </div>'+
        ' </div>'+
@@ -11058,12 +11068,12 @@ var popupHTML = '<div class="popup prefpop">'+
   '      <div class="item-inner">'+
       '<div class="item-title label">About Me</div>'+
           '  <div class="item-input">'+
- '   <textarea class="resizable" onkeyup="keyUp()" maxlength="100" id="userdescription" style="min-height:44px;" placeholder="Hide"></textarea>'+
+ '   <textarea class="resizable" onkeyup="keyUp()" maxlength="100" id="userdescription" style="width: calc(100% - 40px);min-height:88px;" placeholder="Hide"></textarea>'+
   '</div>'+
     '    </div>'+
      ' </div>'+
     '</li>'+
-    '<p id="maxdescription" class="hiderowpref" style="float:right;color:#ccc;font-size:14px;margin-top:5px;margin-right:5px;margin-bottom:-5px;">0 / 100</p>'+
+    '<p id="maxdescription" class="hiderowpref" style="float:right;color:#ccc;font-size:12px;margin-top:-20px;margin-right:5px;margin-bottom:-5px;">0 / 100</p>'+
 
       
 ' <li class="hiderowpref hometownli" style="clear:both;margin-top:0px;">'+
