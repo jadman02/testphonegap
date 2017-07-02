@@ -980,7 +980,7 @@ var fetched = 0;
 for (q = 0; q < fetch.length; q++) { 
 
 
-$.post( "http://www.dateorduck.com/locations.php", { want:homewant,projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,upper:f_upper,lower:f_lower,radius:radiussize,radiusunit:"Miles",sexuality:sexuality,sortby:fetch[q],latitudep:latitudep,longitudep:longitudep} )
+$.post( "http://www.dateorduck.com/locations.php", { want:homewant,projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,upper:f_upper,lower:f_lower,radius:radiussize,radiusunit:radiusunit,sexuality:sexuality,sortby:fetch[q],latitudep:latitudep,longitudep:longitudep} )
   .done(function( data ) {
 
 fetched ++;
@@ -989,8 +989,8 @@ fetched ++;
 
 var result = JSON.parse(data); 
 
-console.log(data);
-alert(JSON.stringify(result));
+
+//alert(JSON.stringify(result));
 
 var slidewidth = $( document ).width() / 2.5;
     var halfwidth = -Math.abs(slidewidth / 2.23);
@@ -1536,6 +1536,9 @@ if (snapshot.child("availstring").val()){ availarray = JSON.parse(snapshot.child
 f_description = snapshot.child("description").val(); 
         f_lower = snapshot.child("lower").val(); 
          radiussize = snapshot.child("radius").val(); 
+	      
+	    if(snapshot.child("radiusunit").val()){radiusunit = snapshot.child("radiusunit").val();}
+	    else{radiusunit = "Kilometres";}
 f_token = snapshot.child("token").val();
         f_upper = snapshot.child("upper").val(); 
         f_interested = snapshot.child("interested").val(); 
