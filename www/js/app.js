@@ -980,9 +980,9 @@ var fetched = 0;
 for (q = 0; q < fetch.length; q++) { 
 
 
-$.post( "http://www.dateorduck.com/locations.php", { want:homewant,projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,upper:f_upper,lower:f_lower,radius:radiussize,sexuality:sexuality,sortby:fetch[q],latitudep:latitudep,longitudep:longitudep} )
+$.post( "http://www.dateorduck.com/locations.php", { want:homewant,projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,upper:f_upper,lower:f_lower,radius:radiussize,radiusunit:'Kilometres',sexuality:sexuality,sortby:fetch[q],latitudep:latitudep,longitudep:longitudep} )
   .done(function( data ) {
-
+alert('got back');
 fetched ++;
 
 
