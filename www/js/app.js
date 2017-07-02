@@ -980,9 +980,9 @@ var fetched = 0;
 for (q = 0; q < fetch.length; q++) { 
 
 
-$.post( "http://www.dateorduck.com/locations.php", { want:homewant,projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,upper:f_upper,lower:f_lower,radius:radiussize,radiusunit:'Kilometres',sexuality:sexuality,sortby:fetch[q],latitudep:latitudep,longitudep:longitudep} )
+$.post( "http://www.dateorduck.com/locations.php", { want:homewant,projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,upper:f_upper,lower:f_lower,radius:radiussize,radiusunit:"Kilometres",sexuality:sexuality,sortby:fetch[q],latitudep:latitudep,longitudep:longitudep} )
   .done(function( data ) {
-alert('got back');
+
 fetched ++;
 
 
@@ -990,7 +990,7 @@ fetched ++;
 var result = JSON.parse(data); 
 
 console.log(data);
-console.log(JSON.stringify(result));
+alert(JSON.stringify(result));
 
 var slidewidth = $( document ).width() / 2.5;
     var halfwidth = -Math.abs(slidewidth / 2.23);
