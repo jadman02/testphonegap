@@ -11218,7 +11218,16 @@ var popupHTML = '<div class="popup prefpop">'+
       '  </div>'+
       '</div>'+
     '</li>'+
-        '</li></li>'+
+'<li style="clear:both;">'+
+ '     <div class="item-content">'+
+
+  '      <div class="item-inner">'+
+      '<div class="item-title label" style="width:120px;"></div>'+
+   '       <div class="item-input">'+
+     '     </div>'+
+      '  </div>'+
+      '</div>'+
+    '</li>'+
     '</ul>'+
 '</div>'+
                                  '<div class="content-block-title">Sounds</div>'+
