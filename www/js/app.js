@@ -360,6 +360,7 @@ var f_to_date = [],f_to_duck = [],f_date_me = [],f_duck_me = [],f_date_match = [
 var f_auth_id;
 var blocklist;
 var lastkey;
+	var distancepicker;
 var pickerDescribe,pickerDescribe2, pickerCustomToolbar;
 var existingmessages;
 var additions = 0;
@@ -11320,9 +11321,9 @@ if(!sexuality){sortBy(1);$( ".swipetoolbar" ).hide();}
 
 
 //if (radiussize) {distancepicker.cols[0].setValue(radiussize);}
-	var distancepicker = myApp.picker({
+distancepicker = myApp.picker({
     input: '#distance-input',
-         onOpen: function (p){$( '.picker-items-col-wrapper' ).css("width", + ($( document ).width()/2) + "px"); if (sexuality){processUpdate();  myApp.sizeNavbars();  }
+         onOpen: function (p){$( '.picker-items-col-wrapper' ).css("width", + ($( document ).width()/2) + "px"); if (radiussize) {distancepicker.cols[0].setValue(radiussize); if (radiusunit) {distancepicker.cols[1].setValue(radiusunit); if (sexuality){processUpdate();  myApp.sizeNavbars();  }
 },
      toolbarTemplate: 
         '<div class="toolbar">' +
@@ -11338,7 +11339,7 @@ if(!sexuality){sortBy(1);$( ".swipetoolbar" ).hide();}
     cols: [
        
         {
-            values: ('1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99').split(' ')
+            values: ('1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100').split(' ')
         },
          {
             textAlign: 'left',
