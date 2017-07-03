@@ -11928,7 +11928,7 @@ else{$('#soundnotif').prop('checked', false);}
 
 if (f_age) {$( ".savebutton" ).removeClass('disabled');}
 
-
+$( "#distance-input" ).val( radiussize + ' ' +radiusunit' );
 if(hometown_u){$( "#homesearch" ).val( hometown_u );}
 if(industry_u){$( "#industry-input" ).val( industry_u );}
 if(status_u){$( "#status-input" ).val( status_u );}
