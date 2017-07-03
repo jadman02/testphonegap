@@ -1804,6 +1804,8 @@ myswiperphotos.destroy();
 myswiperphotos = false;
 }
 
+	alert('1');
+	
 var newage,newinterested,newgender;
 
 if (pickerDescribe.initialized === false) {newage = f_age;newgender = f_gender;}
@@ -1818,7 +1820,7 @@ else {userzdescription = '';}
 
 //Need to delete old reference
 
-
+alert('2');
 
 
 if (pickerDescribe.initialized === true) {f_age = pickerDescribe.value[1];f_gender = pickerDescribe.value[0];}
@@ -1836,7 +1838,7 @@ if (f_gender == 'Female' && f_interested == 'Men') {sexuality = 'female';}
 
 var lowerage,upperage;
 
-
+alert('3');
 
 if (pickerDescribe2.initialized === true) {
 
@@ -1855,7 +1857,7 @@ radiussize = distancepicker.value[0];
 //if ($( "#distance_50" ).hasClass( "active" )){radiussize = '50';}
 //if ($( "#distance_100" ).hasClass( "active" )){radiussize = '100';}
 
-
+alert('4');
 availarray = [];
 $( ".availrec" ).each(function() {
 
@@ -1875,7 +1877,7 @@ var timesaved = valueinputted[1];
 
 }
 
-
+alert('5');
 
 
 
@@ -1889,7 +1891,7 @@ var availstring = JSON.stringify(availarray);
 
 var availstringn = availstring.toString();
 
-
+alert('6');
 
 if ($('#soundnotif').prop('checked')) {offsounds = 'Y'} else {offsounds = 'N'}
 
@@ -1908,12 +1910,12 @@ var height_u = $( "#height-input" ).val().substring(0,3);
 var weight_pre = $( "#weight-input" ).val();
 var weight_u = weight_pre.substr(0, weight_pre.indexOf(' '));
 
-
+alert('7');
 var uploadurl;
 if (f_largeurls.length > 0){photoresponse = 'Y';uploadurl = f_largeurls[0];}
 	else{photoresponse='N';uploadurl = '';}
 
-
+alert('7.5');
 
 
 firebase.database().ref('users/' + f_uid).update({
@@ -1939,7 +1941,7 @@ weight: weight_u,
     
     
   });
-
+alert('8');
 
 	if (deletedphoto){
 
