@@ -2679,7 +2679,7 @@ for (i = 0; i < f_largeurls.length; i++) {
 
 
 
-   $( ".wrapper-photos" ).append('<div class="swiper-slide" style="height:250px;background-image:url(\''+f_largeurls[i]+'\');background-size:cover;background-position:50% 50%;"><div class="button" style="border:0;border-radius:0px;background-color:#ff3b30;color:white;position:absolute;bottom:10px;right:5px;" onclick="deleteIndividual()">Remove Photo</div></div>');
+   $( ".wrapper-photos" ).append('<div class="swiper-slide" style="height:250px;background-image:url(\''+f_largeurls[i]+'\');background-size:cover;background-position:50% 50%;"><div class="button" style="border:0;border-radius:0px;background-color:#ff3b30;color:white;position:absolute;bottom:10px;right:5px;" onclick="deleteIndividual()">Remove</div></div>');
    
 
    
@@ -10661,7 +10661,7 @@ for (i = 0; i < addedlargearray.length; i++) {
 
 
    
-      $( ".wrapper-photos" ).append('<div class="swiper-slide" style="height:250px;background-image:url(\''+addedlargearray[i]+'\');background-size:cover;background-position:50% 50%;"><div class="button" style="border:0;border-radius:0px;background-color:#ff3b30;color:white;position:absolute;bottom:10px;right:5px;" onclick="deleteIndividual()">Remove Photo</div></div>');
+      $( ".wrapper-photos" ).append('<div class="swiper-slide" style="height:250px;background-image:url(\''+addedlargearray[i]+'\');background-size:cover;background-position:50% 50%;"><div class="button" style="border:0;border-radius:0px;background-color:#ff3b30;color:white;position:absolute;bottom:10px;right:5px;" onclick="deleteIndividual()">Remove</div></div>');
    
 }
 
@@ -11176,7 +11176,7 @@ var popupHTML = '<div class="popup prefpop">'+
  ' <div class="buttons-row">'+
           '<a href="#" class="button active" onclick="photosPopup();" style="font-size:17px;border:0;border-radius:0px;background-color:#4cd964;margin-left:5px;margin-right:5px;">Add</a>'+
           '<a href="#" class="button reorderbutton active disabled" onclick="reorderPhotos();" style="font-size:17px;border:0;border-radius:0px;margin-right:5px;">Re-order</a>'+
-            '<a href="#" class="button deleteallbutton active disabled" onclick="deleteAllPhotos();" style="font-size:17px;border:0;border-radius:0px;margin-right:5px;background-color:#ff3b30;color:white">Remove All</a>'+
+            '<a href="#" class="button deleteallbutton active disabled" onclick="deleteAllPhotos();" style="font-size:17px;border:0;border-radius:0px;margin-right:5px;background-color:#ff3b30;color:white">Clear</a>'+
         '</div>'+
 '<div class="list-block" style="margin-top:0px;">'+
 ' <ul">'+
@@ -11225,7 +11225,7 @@ var popupHTML = '<div class="popup prefpop">'+
            ' <li>'+
          '   <div class="item-content">'+
              '   <div class="item-inner" style="float:left;">'+
-              '<div class="item-title label" style="width:calc(100% - 62px);float:left;font-size:17px;">Turn off sounds</div>'+
+              '<div class="item-title label" style="width:calc(100% - 62px);float:left;font-size:17px;font-weight:normal;">Turn off sounds</div>'+
               '   <div class="item-input" style="width:52px;float:left;">'+
 '<label class="label-switch">'+
    ' <input type="checkbox" id="soundnotif" onchange="processUpdate();  myApp.sizeNavbars();">'+
@@ -11242,7 +11242,7 @@ var popupHTML = '<div class="popup prefpop">'+
 
              '   <div class="item-inner">'+
                   '  <div class="item-title-row">'+
-                     '   <div class="item-title button blockbutton active disabled" onclick="unblock()" style="border:0;border-radius:0px;">Unblock all </div>'+
+                     '   <div class="item-title button blockbutton active disabled" onclick="unblock()" style="font-size:17px;border:0;border-radius:0px;">Unblock all </div>'+
                     '</div>'+
                ' </div>'+
            ' </div>'+
