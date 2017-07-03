@@ -9656,11 +9656,11 @@ function insertAfterNthChild($parent, index, content){
     $(content).insertBefore($parent.children().eq(index));
 }
 
-function changeRadius(number){
-$('.radiusbutton').removeClass('active');
-$('#distance_'+ number).addClass('active');
-processUpdate();
-}
+//function changeRadius(number){
+//$('.radiusbutton').removeClass('active');
+//$('#distance_'+ number).addClass('active');
+//processUpdate();
+//}
 
 
 
@@ -11196,12 +11196,12 @@ var popupHTML = '<div class="popup prefpop">'+
 
 '<div class="content-block-title" style="margin-top:20px;">Search options</div>'+
 
-    '<p class="buttons-row" style="padding-left:10px;padding-right:10px;">'+
-  '<a href="#" id="distance_10" onclick="changeRadius(10)" class="button button-round radiusbutton" style="border:0;border-radius:0px;">10 km</a>'+
-  '<a href="#" id="distance_25" onclick="changeRadius(25)" class="button button-round radiusbutton" style="border:0;border-radius:0px;">25 km</a>'+
-    '<a href="#" id="distance_50" onclick="changeRadius(50)" class="button button-round radiusbutton active" style="border:0;border-radius:0px;">50 km</a>'+
-    '<a href="#" id="distance_100" onclick="changeRadius(100)" class="button button-round radiusbutton" style="border:0;border-radius:0px;">100 km</a>'+
-'</p>'+
+  //  '<p class="buttons-row" style="padding-left:10px;padding-right:10px;">'+
+ // '<a href="#" id="distance_10" onclick="changeRadius(10)" class="button button-round radiusbutton" style="border:0;border-radius:0px;">10 km</a>'+
+ // '<a href="#" id="distance_25" onclick="changeRadius(25)" class="button button-round radiusbutton" style="border:0;border-radius:0px;">25 km</a>'+
+ //   '<a href="#" id="distance_50" onclick="changeRadius(50)" class="button button-round radiusbutton active" style="border:0;border-radius:0px;">50 km</a>'+
+ //   '<a href="#" id="distance_100" onclick="changeRadius(100)" class="button button-round radiusbutton" style="border:0;border-radius:0px;">100 km</a>'+
+//'</p>'+
 
 
             
