@@ -1849,8 +1849,7 @@ else {lowerage = pickerDescribe2.value[1];upperage = pickerDescribe2.value[2];}
 
 else {lowerage = f_lower;upperage = f_upper;}
 
-radiussize = distancepicker.value[0];
-	radiusunit = distancepicker.value[1];
+
 
 //if ($( "#distance_10" ).hasClass( "active" )){radiussize = '10';}
 //if ($( "#distance_25" ).hasClass( "active" )){radiussize = '25';}
@@ -11346,11 +11345,15 @@ if(sexuality){$( ".doneunchange" ).show();$( ".registerdiv" ).hide();$('.hiderow
 if(!sexuality){sortBy(1);$( ".swipetoolbar" ).hide();}
 
 
+
+
 //if (radiussize) {distancepicker.cols[0].setValue(radiussize);}
 distancepicker = myApp.picker({
     input: '#distance-input',
          onOpen: function (p){$( '.picker-items-col-wrapper' ).css("width", + ($( document ).width()/2) + "px"); if (radiussize) {distancepicker.cols[0].setValue(radiussize);} if (radiusunit) {distancepicker.cols[1].setValue(radiusunit); }if (sexuality){processUpdate();  myApp.sizeNavbars();  }
 },
+	onChange:function (p, values, displayValues){radiussize = distancepicker.value[0];
+	radiusunit = distancepicker.value[1];},
      toolbarTemplate: 
         '<div class="toolbar">' +
             '<div class="toolbar-inner">' +
