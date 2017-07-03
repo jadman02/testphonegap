@@ -2643,7 +2643,7 @@ function getData(){
 alert('1');
 
 deletedphoto = false;
-
+alert(myswiperphotos);
 if(!myswiperphotos){
 	alert('2');
 firebase.auth().currentUser.getToken().then(function(idToken) { 
