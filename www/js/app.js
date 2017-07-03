@@ -1847,12 +1847,13 @@ else {lowerage = pickerDescribe2.value[1];upperage = pickerDescribe2.value[2];}
 
 else {lowerage = f_lower;upperage = f_upper;}
 
+radiussize = distancepicker.value[0];
+	radiusunit = distancepicker.value[1];
 
-
-if ($( "#distance_10" ).hasClass( "active" )){radiussize = '10';}
-if ($( "#distance_25" ).hasClass( "active" )){radiussize = '25';}
-if ($( "#distance_50" ).hasClass( "active" )){radiussize = '50';}
-if ($( "#distance_100" ).hasClass( "active" )){radiussize = '100';}
+//if ($( "#distance_10" ).hasClass( "active" )){radiussize = '10';}
+//if ($( "#distance_25" ).hasClass( "active" )){radiussize = '25';}
+//if ($( "#distance_50" ).hasClass( "active" )){radiussize = '50';}
+//if ($( "#distance_100" ).hasClass( "active" )){radiussize = '100';}
 
 
 availarray = [];
@@ -1929,6 +1930,7 @@ weight: weight_u,
     upper: upperage,
     description:userzdescription,
     radius:radiussize,
+	   radiusunit:radiusunit,
     sort:sortby,
     availstring:availstring,
     offsounds:offsounds,
