@@ -2640,17 +2640,18 @@ pickerDescribe2.open();
 var deletedphoto;
 function getData(){
 
-
+alert('1');
 
 deletedphoto = false;
 
 if(!myswiperphotos){
+	alert('2');
 firebase.auth().currentUser.getToken().then(function(idToken) { 
 $.post( "http://www.dateorduck.com/userdata.php", {projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,uid:f_uid} )
   .done(function( data ) {
   var result = JSON.parse(data); 
  console.log(result);
-
+alert('3');
 
 
  
@@ -2673,7 +2674,7 @@ $.post( "http://www.dateorduck.com/userdata.php", {projectid:f_projectid,token:i
 
        if (f_largeurls.length === 1){       $( ".photosliderinfo" ).html('You have added '+f_largeurls.length+' photo to your profile');
 }
-else{       $( ".photosliderinfo" ).html('You have added '+f_largeurls.length+' photos to your profile');
+else{       $( ".photosliderinfo" ).html('You have added '+f_largeurls.length+' photos to your profile');alert('4');
 }
        
 
@@ -2688,7 +2689,7 @@ for (i = 0; i < f_largeurls.length; i++) {
    
 }
 
-	    alert('88');
+	   alert('5');
 	  
     myswiperphotos = myApp.swiper('.container-photos', {
     pagination:'.swiper-pagination',
@@ -2713,6 +2714,8 @@ for (i = 0; i < f_largeurls.length; i++) {
   }
   else {
 
+	  alert('6');
+	  
     f_smallurls = [];
   f_largeurls = [];
   addedheight = [];
