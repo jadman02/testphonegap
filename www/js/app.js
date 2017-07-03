@@ -11323,7 +11323,7 @@ if(!sexuality){sortBy(1);$( ".swipetoolbar" ).hide();}
 //if (radiussize) {distancepicker.cols[0].setValue(radiussize);}
 distancepicker = myApp.picker({
     input: '#distance-input',
-         onOpen: function (p){$( '.picker-items-col-wrapper' ).css("width", + ($( document ).width()/2) + "px"); if (radiussize) {distancepicker.cols[0].setValue(radiussize); if (radiusunit) {distancepicker.cols[1].setValue(radiusunit); if (sexuality){processUpdate();  myApp.sizeNavbars();  }
+         onOpen: function (p){$( '.picker-items-col-wrapper' ).css("width", + ($( document ).width()/2) + "px"); if (radiussize) {distancepicker.cols[0].setValue(radiussize);} if (radiusunit) {distancepicker.cols[1].setValue(radiusunit); }if (sexuality){processUpdate();  myApp.sizeNavbars();  }
 },
      toolbarTemplate: 
         '<div class="toolbar">' +
