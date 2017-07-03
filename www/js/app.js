@@ -11172,7 +11172,7 @@ var popupHTML = '<div class="popup prefpop">'+
                         '<div class="slide-pref pref-2">'+
 
 
-        '<div class="col-25 photoswiperloader" style="width:57.37px;top:50%;margin-top: -28.7px;position: absolute;left: 50%;margin-left: -28.7px;">'+
+        '<div class="col-25 photoswiperloader" style="width:57.37px;top:50%;margin-top: -28.7px;top:50%;position: absolute;left: 50%;margin-left: -28.7px;">'+
   '      <span class="preloader"></span>'+
    '   </div>'+
 
