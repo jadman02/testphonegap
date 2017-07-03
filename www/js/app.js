@@ -2640,18 +2640,18 @@ pickerDescribe2.open();
 var deletedphoto;
 function getData(){
 
-alert('1');
+
 
 deletedphoto = false;
-alert(myswiperphotos);
-if(!myswiperphotos){
-	alert('2');
+
+if(photosloaded === false){
+
 firebase.auth().currentUser.getToken().then(function(idToken) { 
 $.post( "http://www.dateorduck.com/userdata.php", {projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,uid:f_uid} )
   .done(function( data ) {
   var result = JSON.parse(data); 
  console.log(result);
-alert('3');
+
 
 
  
@@ -2689,7 +2689,7 @@ for (i = 0; i < f_largeurls.length; i++) {
    
 }
 
-	   alert('5');
+
 	  
     myswiperphotos = myApp.swiper('.container-photos', {
     pagination:'.swiper-pagination',
@@ -2743,6 +2743,12 @@ for (i = 0; i < f_largeurls.length; i++) {
 });
   
   }
+
+
+	
+
+photosloaded = true;
+	
 }
 
 function deleteIndividual(){
@@ -10888,12 +10894,13 @@ console.log('deleted all');
 }
 var f_smallurls = [];
 var f_largeurls = [];
+var photosloaded;
 
 function swipePopup(chosen){
 $( '.picker-sub' ).hide();
 myApp.closeModal('.picker-sub');
 
-
+photosloaded = false;
 
 var sliderwidth = $( document ).width();
 var sliderheight = $( document ).height();
