@@ -2688,6 +2688,8 @@ for (i = 0; i < f_largeurls.length; i++) {
    
 }
 
+	    alert('88');
+	  
     myswiperphotos = myApp.swiper('.container-photos', {
     pagination:'.swiper-pagination',
     paginationType:'progress',
@@ -2710,7 +2712,7 @@ for (i = 0; i < f_largeurls.length; i++) {
   
   }
   else {
-  alert('yo');
+
     f_smallurls = [];
   f_largeurls = [];
   addedheight = [];
