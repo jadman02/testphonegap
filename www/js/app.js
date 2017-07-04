@@ -860,8 +860,17 @@ if (!homewant || homewant =='offline'){
     '<div class="col-70" style="padding-top:5px;">Press <span style="font-family: \'Pacifico\', cursive;font-size:20px;">duck</span> if you want to get down to...ahem...business (replace the D with an F). </div>'+
 '</div>'+
 
+'<div class="swiper-container swiper-helper-info">'+
+   ' <div class="swiper-wrapper">'+
+     '   <div class="swiper-slide" style="height:300px;">Slide 1</div>'+
+     '   <div class="swiper-slide" style="height:300px;">Slide 2</div>'+
+      '  <div class="swiper-slide" style="height:300px;">Slide 3</div>'+
+       
+   ' </div>'+
 
-
+    '<div class="swiper-pagination"></div>'+
+'</div>'+
+	    
 
    
 
@@ -870,7 +879,9 @@ if (!homewant || homewant =='offline'){
     $( ".ploader" ).hide();
 
    
-   
+myApp.swiper('.swiper-helper-info', {
+    pagination:'.swiper-pagination'
+  });
   
     $( ".loginbutton" ).show();
 $( ".login-loader" ).hide();
