@@ -870,7 +870,9 @@ if (!homewant || homewant =='offline'){
     $( ".ploader" ).hide();
 
    
-
+myApp.swiper('.swiper-helper-info', {
+    pagination:'.swiper-pagination'
+  });
   
     $( ".loginbutton" ).show();
 $( ".login-loader" ).hide();
