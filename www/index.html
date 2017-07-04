@@ -648,7 +648,7 @@ tokenStore = false;storage.removeItem(tokenStore);$( ".toolbar" ).hide();
 }, function(error) {
   // An error happened.
 });
-                   // alert('Logout successful');
+                   $( ".toolbar" ).hide();// alert('Logout successful');
                 },
                 errorHandler);
     }
