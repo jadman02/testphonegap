@@ -850,20 +850,20 @@ if (!homewant || homewant =='offline'){
     
 	$('.content-here').append(
     '<div class="no-results-div" style="text-align:center;margin:0 auto;width:300px;position:absolute;top:44px;left:50%;margin-left:-150px;margin-top:54px;">'+
-
-      '<h3>Get Quacking!</h3>'+
-       '<div class="row" style="border-top:1px solid #c4c4c4;padding-top:10px;padding-bottom:10px;">'+
+'<div class="topdiv">'+
+     // '<h3>Get Quacking!</h3>'+
+       '<div class="row" style="padding-top:10px;padding-bottom:10px;">'+
     '<div class="col-30" style="padding-top:5px;"><img src="media/datefaceonly.png" style="width:80px;margin:0 auto;"></div>'+
     '<div class="col-70" style="padding-top:5px;">Press <span style="font-family: \'Pacifico\', cursive;font-size:20px;">date</span> if you want to find something more serious like a relationship.</div>'+
 '</div>'+
-              '<div class="row" style="padding-top:10px;padding-bottom:10px;border-bottom:1px solid #c4c4c4;">'+
+              '<div class="row" style="padding-top:10px;padding-bottom:10px;">'+
     '<div class="col-30" style="padding-top:5px;"><img src="media/duckfaceonly.png" style="width:80px;margin:0 auto;"></div>'+
     '<div class="col-70" style="padding-top:5px;">Press <span style="font-family: \'Pacifico\', cursive;font-size:20px;">duck</span> if you want to get down to...ahem...business (replace the D with an F). </div>'+
 '</div>'+
-	    
+	 '</div>'+   
 		'<h3>Features</h3>'+
 		
-'<div class="swiper-container swiper-helper-info" style="height: calc(100% - 290px);">'+
+'<div class="swiper-container swiper-helper-info" style="height: calc(100% - 280px);">'+
    ' <div class="swiper-wrapper">'+
      '   <div class="swiper-slide" style="background-color:#2196f3;"><i class="pe-7s-like pe-3x"></i><h2>Efficient Matching</h2><p>Find people looking for the same thing as you.</p></div>'+
      '   <div class="swiper-slide" style="background-color:#2196f3;"><i class="pe-7s-date pe-3x"></i><h2>Time saving</h2><p>Schedule meetings in your calendar and notify your matches of your availability.</p></div>'+
@@ -879,7 +879,7 @@ if (!homewant || homewant =='offline'){
 
     '</div>');
 
-
+alert($( ".topdiv" ).height());
 	
     $( ".ploader" ).hide();
 myApp.swiper('.swiper-helper-info', {
