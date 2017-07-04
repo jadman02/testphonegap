@@ -246,7 +246,7 @@
  -->
              
 
-             <span class="preloader preloader-white login-loader" style="width:42px;margin-left:-21px;margin-top:20px;clear:both;"></span>
+             <span class="preloader preloader-white login-loader" style="margin-top:20px;clear:both;"></span>
 
 
 
@@ -644,13 +644,14 @@ openFB.login(
         openFB.logout(
                 function() {
                     firebase.auth().signOut().then(function() {
-                          myApp.closeModal();loaded = false; f_token = false;loadpref = false;fbLogoutUser();myFunction();
+                          myApp.closeModal();loaded = false; f_token = false;loadpref = false;
                         
 tokenStore = false;storage.removeItem(tokenStore);$( ".toolbar" ).hide();
 }, function(error) {
   // An error happened.
 });
-                   $( ".toolbar" ).hide();// alert('Logout successful');
+                  //  myFunction();
+                   //$( ".toolbar" ).hide();// alert('Logout successful');
                 },
                 errorHandler);
     }
