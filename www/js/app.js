@@ -861,14 +861,28 @@ if (!homewant || homewant =='offline'){
     '<div class="col-70" style="padding-top:5px;">Press <span style="font-family: \'Pacifico\', cursive;font-size:20px;">duck</span> if you want to get down to...ahem...business (replace the D with an F). </div>'+
 '</div>'+
 	    
+'<div class="swiper-container swiper-helper-info" style="height: calc(100% - 290px);">'+
+   ' <div class="swiper-wrapper">'+
+     '   <div class="swiper-slide" style="height:300px;"><i class="pe-7s-like pe-3x"></i><h2>Efficient Matching</h2><p>Find people looking for the same thing as you.</p></div>'+
+     '   <div class="swiper-slide" style="height:300px;"><i class="pe-7s-date pe-3x"></i><h2>Time saving</h2><p>Schedule meetings in your calendar and notify your matches of your availability.</p></div>'+
+		     '   <div class="swiper-slide" style="height:300px;"><i class="pe-7s-chat pe-3x"></i><h2>Real Life Interaction</h2><p>Chat is disabled until you both agree on a time to meet up until midnight of your date.</p></div>'+
 
+      '  <div class="swiper-slide" style="height:300px;"><i class="pe-7s-camera pe-3x"></i><h2>Send Photobombs</h2><p>Photos you send will explode (delete) 24 hours after being seen.</p></div>'+
+       
+   ' </div>'+
+
+    '<div class="swiper-pagination"></div>'+
+'</div>'+
+   
 
     '</div>');
 
 
 	
     $( ".ploader" ).hide();
-
+myApp.swiper('.swiper-helper-info', {
+    pagination:'.swiper-pagination'
+  });
    
 myApp.swiper('.swiper-helper-info', {
     pagination:'.swiper-pagination'
