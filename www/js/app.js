@@ -850,7 +850,7 @@ if (!homewant || homewant =='offline'){
     
 	$('.content-here').append(
     '<div class="no-results-div" style="text-align:center;margin:0 auto;width:300px;position:absolute;top:44px;left:50%;margin-left:-150px;margin-top:54px;">'+
-    '<div class="heightquack">'+
+
       '<h3>Get Quacking!</h3>'+
        '<div class="row" style="border-top:1px solid #c4c4c4;padding-top:10px;padding-bottom:10px;">'+
     '<div class="col-30" style="padding-top:5px;"><img src="media/datefaceonly.png" style="width:80px;margin:0 auto;"></div>'+
@@ -860,19 +860,23 @@ if (!homewant || homewant =='offline'){
     '<div class="col-30" style="padding-top:5px;"><img src="media/duckfaceonly.png" style="width:80px;margin:0 auto;"></div>'+
     '<div class="col-70" style="padding-top:5px;">Press <span style="font-family: \'Pacifico\', cursive;font-size:20px;">duck</span> if you want to get down to...ahem...business (replace the D with an F). </div>'+
 '</div>'+
-'</div>'+
-	    '<h3>What\'s New</h3>'+
-	    
-'<div class="swiper-container swiper-helper-info">'+
-   ' <div class="swiper-wrapper">'+
-     '   <div class="swiper-slide" style="height:300px;">Slide 1</div>'+
-     '   <div class="swiper-slide" style="height:300px;">Slide 2</div>'+
-      '  <div class="swiper-slide" style="height:300px;">Slide 3</div>'+
-       
-   ' </div>'+
 
-    '<div class="swiper-pagination"></div>'+
-'</div>'+
+		 '<div class="row" style="padding-top:10px;padding-bottom:10px;">'+
+    '<div class="col-30" style="padding-top:5px;"><i class="pe-7s- pe-2x"></i></div>'+
+    '<div class="col-70" style="padding-top:5px;">Stay organised with a calendar to schedule your time.</div>'+
+'</div>'+    
+	 '<div class="row" style="padding-top:10px;padding-bottom:10px;">'+
+    '<div class="col-30" style="padding-top:5px;"><i class="pe-7s-calendar pe-2x"></i></div>'+
+    '<div class="col-70" style="padding-top:5px;">Stay organised with a calendar to schedule your time.</div>'+
+'</div>'+    
+		 '<div class="row" style="padding-top:10px;padding-bottom:10px;">'+
+    '<div class="col-30" style="padding-top:5px;"><i class="pe-7s- pe-2x"></i></div>'+
+    '<div class="col-70" style="padding-top:5px;">Stay organised with a calendar to schedule your time.</div>'+
+'</div>'+    
+		 '<div class="row" style="padding-top:10px;padding-bottom:10px;">'+
+    '<div class="col-30" style="padding-top:5px;"><i class="pe-7s-camera pe-2x"></i></div>'+
+    '<div class="col-70" style="padding-top:5px;">Photos last for 24 hours.</div>'+
+'</div>'+    
 	    
 
    
