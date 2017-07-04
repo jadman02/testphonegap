@@ -860,23 +860,6 @@ if (!homewant || homewant =='offline'){
     '<div class="col-30" style="padding-top:5px;"><img src="media/duckfaceonly.png" style="width:80px;margin:0 auto;"></div>'+
     '<div class="col-70" style="padding-top:5px;">Press <span style="font-family: \'Pacifico\', cursive;font-size:20px;">duck</span> if you want to get down to...ahem...business (replace the D with an F). </div>'+
 '</div>'+
-
-		 '<div class="row" style="padding-top:10px;padding-bottom:10px;">'+
-    '<div class="col-30" style="padding-top:5px;"><i class="pe-7s- pe-2x"></i></div>'+
-    '<div class="col-70" style="padding-top:5px;">Stay organised with a calendar to schedule your time.</div>'+
-'</div>'+    
-	 '<div class="row" style="padding-top:10px;padding-bottom:10px;">'+
-    '<div class="col-30" style="padding-top:5px;"><i class="pe-7s-calendar pe-2x"></i></div>'+
-    '<div class="col-70" style="padding-top:5px;">Stay organised with a calendar to schedule your time.</div>'+
-'</div>'+    
-		 '<div class="row" style="padding-top:10px;padding-bottom:10px;">'+
-    '<div class="col-30" style="padding-top:5px;"><i class="pe-7s- pe-2x"></i></div>'+
-    '<div class="col-70" style="padding-top:5px;">Stay organised with a calendar to schedule your time.</div>'+
-'</div>'+    
-		 '<div class="row" style="padding-top:10px;padding-bottom:10px;">'+
-    '<div class="col-30" style="padding-top:5px;"><i class="pe-7s-camera pe-2x"></i></div>'+
-    '<div class="col-70" style="padding-top:5px;">Photos last for 24 hours.</div>'+
-'</div>'+    
 	    
 '<div class="swiper-container swiper-helper-info" style="height: calc(100% - 236px);">'+
    ' <div class="swiper-wrapper">'+
