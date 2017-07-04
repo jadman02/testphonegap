@@ -3536,7 +3536,7 @@ console.log(unixleft);
 console.log(daysleft);
 var hoursleft = unixleft / 3600;
 var salut;
-if (daysleft ===0){
+if (daysleft <=0){
 
 salut='tonight';
 }
