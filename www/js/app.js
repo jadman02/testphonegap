@@ -861,7 +861,7 @@ if (!homewant || homewant =='offline'){
     '<div class="col-70" style="padding-top:5px;">Press <span style="font-family: \'Pacifico\', cursive;font-size:20px;">duck</span> if you want to get down to...ahem...business (replace the D with an F). </div>'+
 '</div>'+
 	 '</div>'+   
-		'<h3>Features</h3>'+
+
 		
 '<div class="swiper-container swiper-helper-info" style="background-color:#2196f3;color:white;">'+
    ' <div class="swiper-wrapper">'+
