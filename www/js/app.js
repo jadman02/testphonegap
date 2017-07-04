@@ -2481,7 +2481,7 @@ rightdates.sort(compare);
  var correctid;
 	 var picturesrc;
 if (rightdates[i].created_uid == f_uid) {picturesrc = rightdates[i].to_picture;correctname = rightdates[i].received_name;correctid = rightdates[i].received_uid;}
-if (rightdates[i].created_uid != f_uid) {picturesrc = rightdates[i].from_picturecorrectname = rightdates[i].created_name;correctid = rightdates[i].created_uid;}
+if (rightdates[i].created_uid != f_uid) {picturesrc = rightdates[i].from_picture;correctname = rightdates[i].created_name;correctid = rightdates[i].created_uid;}
 
  var unix = Math.round(+new Date()/1000);
 
