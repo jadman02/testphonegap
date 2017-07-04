@@ -3528,7 +3528,7 @@ console.log('daysleft' + daysleft);
 
 var weekdaynamew = weekday[expiredateobject.getDay()];
 
-if(daysleft === 0){chatdaystring = 'Today';}
+if(daysleft <= 0){chatdaystring = 'Today';}
 else if(daysleft === 1){chatdaystring = 'Tomorrow';}
 else chatdaystring = weekdaynamew;
 
