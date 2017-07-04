@@ -850,7 +850,7 @@ if (!homewant || homewant =='offline'){
     
 	$('.content-here').append(
     '<div class="no-results-div" style="text-align:center;margin:0 auto;width:300px;position:absolute;top:44px;left:50%;margin-left:-150px;margin-top:54px;">'+
-    '<div class="heightquack">'
+    '<div class="heightquack">'+
       '<h3>Get Quacking!</h3>'+
        '<div class="row" style="border-top:1px solid #c4c4c4;padding-top:10px;padding-bottom:10px;">'+
     '<div class="col-30" style="padding-top:5px;"><img src="media/datefaceonly.png" style="width:80px;margin:0 auto;"></div>'+
