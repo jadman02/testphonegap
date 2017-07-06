@@ -869,10 +869,10 @@ var ptrContentq = $$('.pull-to-refresh-content-1');
 
 		
 '<div class="swiper-container swiper-helper-info" style="background-color:#ccc;color:white;margin-left:-10px;margin-right:-10px;padding-top:10px;">'+
-'    <div class="content-block-title" style="width:100%;text-align:center;margin-top:10px;">How this App Works</div>'+
+'    <div class="content-block-title" style="width:100%;text-align:center;margin-top:10px;margin-left:-5px;">How this App Works</div>'+
 		' <div class="swiper-wrapper">'+
-     '   <div class="swiper-slide" style="height:'+swiperheight +'px;"><div class="squareheight" style="height:153px;top:50%;margin-top:-77px;position:absolute;width:300px;left:50%;margin-left:-150px;"><i class="twa twa-4x twa-coffee" style="margin-top:5px;"></i><h2>Find your next<br/> coffee date...</h2></div></div>'+
-     '   <div class="swiper-slide" style="height:'+swiperheight +'px;"><div class="squareheight" style="height:153px;top:50%;margin-top:-77px;position:absolute;width:300px;left:50%;margin-left:-150px"><i class="twa twa-4x twa-sweat-drops" style="margin-top:5px;"></i><h2>Or invite someone over<br/> tonight...</h2></div></div>'+
+     '   <div class="swiper-slide" style="height:'+swiperheight +'px;"><div class="squareheight" style="height:153px;top:50%;margin-top:-85px;position:absolute;width:300px;left:50%;margin-left:-150px;"><i class="twa twa-5x twa-coffee" style="margin-top:5px;"></i><h2>Find your next<br/> coffee date...</h2></div></div>'+
+     '   <div class="swiper-slide" style="height:'+swiperheight +'px;"><div class="squareheight" style="height:153px;top:50%;margin-top:-85px;position:absolute;width:300px;left:50%;margin-left:-150px"><i class="twa twa-5x twa-sweat-drops" style="margin-top:5px;"></i><h2>Or invite someone over<br/> tonight...</h2></div></div>'+
           '   <div class="swiper-slide" style="height:'+swiperheight +'px;"><div class="squareheight" style="top:50%;margin-top:-75px;position:absolute;width:300px;left:50%;margin-left:-150px"><i class="twa twa-4x twa-sweat-drops" style="margin-top:5px;"></i><h2>Or invite someone over<br/> tonight...</h2></div></div>'+
 
 		'   <div class="swiper-slide" style="height:'+swiperheight +'px;"><p><i class="twa twa-5x twa-sweat-drops" style="margin-top:5px;"></i><h3>...Or invite someone over tomorrow ...</h3></div>'+
