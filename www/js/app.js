@@ -874,13 +874,10 @@ var ptrContentq = $$('.pull-to-refresh-content-1');
      '   <div class="swiper-slide" style="height:'+swiperheight +'px;"><div class="squareheight" style="height:153px;top:50%;margin-top:-95px;position:absolute;width:300px;left:50%;margin-left:-150px;"><i class="twa twa-4x twa-coffee" style="margin-top:5px;"></i><h2>Find your next<br/> coffee date...</h2></div></div>'+
      '   <div class="swiper-slide" style="height:'+swiperheight +'px;"><div class="squareheight" style="height:153px;top:50%;margin-top:-95px;position:absolute;width:300px;left:50%;margin-left:-150px"><i class="twa twa-4x twa-sweat-drops" style="margin-top:5px;"></i><h2>Or invite someone over<br/> tonight...</h2></div></div>'+
      '   <div class="swiper-slide" style="height:'+swiperheight +'px;"><div class="squareheight" style="height:153px;top:50%;margin-top:-95px;position:absolute;width:300px;left:50%;margin-left:-150px"><i class="twa twa-4x twa-calendar" style="margin-top:5px;"></i><h2>Once you both agree on</br> a time to meet...</h2></div></div>'+
-     '   <div class="swiper-slide" style="height:'+swiperheight +'px;"><div class="squareheight" style="height:153px;top:50%;margin-top:-95px;position:absolute;width:300px;left:50%;margin-left:-150px"><i class="twa twa-4x twa-calendar" style="margin-top:5px;"></i><h2>Chat is enabled until midnight of your date...</h2></div></div>'+
+     '   <div class="swiper-slide" style="height:'+swiperheight +'px;"><div class="squareheight" style="height:153px;top:50%;margin-top:-95px;position:absolute;width:300px;left:50%;margin-left:-150px"><i class="twa twa-4x twa-clock12" style="margin-top:5px;"></i><h2>Chat is enabled until midnight of your date...</h2></div></div>'+
      '   <div class="swiper-slide" style="height:'+swiperheight +'px;"><div class="squareheight" style="height:153px;top:50%;margin-top:-95px;position:absolute;width:300px;left:50%;margin-left:-150px"><i class="twa twa-4x twa-bomb" style="margin-top:5px;"></i><h2>You can send photos that delete after 24 hours...</h2></div></div>'+
 
-		'   <div class="swiper-slide" style="height:'+swiperheight +'px;"><p><i class="twa twa-5x twa-sweat-drops" style="margin-top:5px;"></i><h3>...Or invite someone over tomorrow ...</h3></div>'+
-
-      '  <div class="swiper-slide" style="height:'+swiperheight +'px;"><i class="pe-7s-camera pe-3x"></i><h2>Send Photobombs</h2><p>Photos you send will explode (delete) 24 hours after being seen.</p></div>'+
-       
+		
    ' </div>'+
 
     '<div class="swiper-pagination-p" style="margin-top:-20px;margin-bottom:20px;"></div>'+
@@ -890,7 +887,6 @@ var ptrContentq = $$('.pull-to-refresh-content-1');
     '</div>');
 
 
-	alert($( ".squareheight" ).height())
     $( ".ploader" ).hide();
 var homeswiperhelper = myApp.swiper('.swiper-helper-info', {
     pagination:'.swiper-pagination-p'
