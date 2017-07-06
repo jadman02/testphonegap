@@ -6432,7 +6432,7 @@ var hiddendivheight = $( window ).height() - 40;
 	alert(JSON.stringify(new_all));
 	
 
-	
+	alert(to_open);
 myPhotoBrowser = myApp.photoBrowser({
     zoom: false,
     expositionHideCaptions:true,
