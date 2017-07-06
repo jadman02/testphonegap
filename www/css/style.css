@@ -30,7 +30,7 @@
        url('/fonts/Pacifico-regular.svg#Pacifico') format('svg');
 }
 
-.actions-modal-button{background-color:#2196f3;color:white;}
+.actions-modal-button{background-color:white;color:#2196f3;}
 
 .swiper-zoom-container > img, .swiper-zoom-container > svg, .swiper-zoom-container > canvas{object-fit:cover}
 .hiderowpref {display:none}
