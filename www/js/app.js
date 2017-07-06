@@ -868,7 +868,7 @@ if (!homewant || homewant =='offline'){
 '<div class="swiper-container swiper-helper-info" style="background-color:#ccc;color:#2196f3;margin-left:-10px;margin-right:-10px;padding-top:10px;">'+
 
 		' <div class="swiper-wrapper">'+
-     '   <div class="swiper-slide" style="height:'+swiperheight +'px;"><div style="position:absolute;top:50%;"><p><i class="pe-7s-like pe-3x"></i> Find people looking for the same thing as you.</p></div></div>'+
+     '   <div class="swiper-slide" style="height:'+swiperheight +'px;"><p><i class="pe-7s-like pe-3x"></i> <i class="twa twa-3x twa-coffee" style="margin-top:5px;"></i><h3>What are you looking for?</h3>Find people looking for the same thing as you.</p></div>'+
      '   <div class="swiper-slide" style="height:'+swiperheight +'px;"><i class="pe-7s-date pe-3x"></i><h2>Time saving</h2><p>Schedule meetings in your calendar and notify your matches of your availability.</p></div>'+
 		     '   <div class="swiper-slide" style="height:'+swiperheight +'px;"><i class="pe-7s-chat pe-3x"></i><h2>Real Life Interaction</h2><p>Chat is disabled until you both agree on a time to meet up until midnight of your date.</p></div>'+
 
@@ -876,7 +876,7 @@ if (!homewant || homewant =='offline'){
        
    ' </div>'+
 
-    '<div class="swiper-pagination-p" style="margin-top:-20px;"></div>'+
+    '<div class="swiper-pagination-p" style="margin-top:-20px;margin-bottom:20px;"></div>'+
 '</div>'+
    
 
