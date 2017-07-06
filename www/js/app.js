@@ -959,7 +959,7 @@ randomswiper = myApp.swiper('.swiper-random', {
 
 
 new_all = random_all;
-alert(JSON.stringify(swiper));
+
     photoBrowser(swiper.clickedIndex);}
   });
  
@@ -975,7 +975,7 @@ nearbyswiper = myApp.swiper('.swiper-nearby', {
     onClick:function(swiper, event) {
 
 new_all = nearby_all;
-alert(JSON.stringify(swiper));
+
 
 if (nearbyshare){
 photoBrowser(swiper.clickedIndex);
@@ -995,7 +995,7 @@ recentswiper = myApp.swiper('.swiper-recent', {
 
     onClick:function(swiper, event) {
 new_all = recent_all;
-alert(JSON.stringify(swiper));
+
 if (recentshare){
 photoBrowser(swiper.clickedIndex);
 }
