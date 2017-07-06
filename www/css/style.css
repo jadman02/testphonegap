@@ -29,9 +29,6 @@
        url('/fonts/Pacifico-regular.ttf') format('truetype'),
        url('/fonts/Pacifico-regular.svg#Pacifico') format('svg');
 }
-
-.actions-modal-button{background-color:white;color:#2196f3;}
-
 .swiper-zoom-container > img, .swiper-zoom-container > svg, .swiper-zoom-container > canvas{object-fit:cover}
 .hiderowpref {display:none}
 .tabbar a.active.imagelibrary{background-color:transparent !important;}
