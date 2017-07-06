@@ -848,6 +848,10 @@ if (!homewant || homewant =='offline'){
 	$( ".toolbar" ).hide();
 	$( ".results-loader" ).hide();
     
+	new_all = [];
+random_all = [];
+nearby_all = [];
+recent_all = [];
 
 	myApp.destroyPullToRefresh('.pull-to-refresh-content-1'); 
 	
@@ -904,8 +908,8 @@ $( ".homedate" ).removeClass("disabled");
 }   
  $( ".statusbar-overlay" ).css("background-color","#2196f3"); 
 	
-var ptrContentq = $$('.pull-to-refresh-content-1');
-	myApp.initPullToRefresh(ptrContentq);
+
+	myApp.initPullToRefresh('.pull-to-refresh-content-1');
 initialload = true;
 
 if (recentfriends){
@@ -6529,7 +6533,7 @@ myPhotoBrowser = myApp.photoBrowser({
 
    ' </div>'+
 '</div>',
-   onClose:function(photobrowser){hideProfile();
+   onClose:function(photobrowser){myApp.closeModal('.actions-modal');hideProfile();
   singlefxallowed = true;
                                   viewphotos = false; 
   viewscroll = false;
