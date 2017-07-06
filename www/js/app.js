@@ -1021,6 +1021,8 @@ var result = JSON.parse(data);
 
 //alert(JSON.stringify(result));
 
+	if (fetched == 2){alert(JSON.stringify(result));}
+	
 var slidewidth = $( document ).width() / 2.5;
     var halfwidth = -Math.abs(slidewidth / 2.23);
      
