@@ -11068,7 +11068,7 @@ var popupHTML = '<div class="popup prefpop">'+
        ' <div class="item-inner">'+
         '  <div class="item-title label">Hometown</div>'+
         '  <div class="item-input hometown-input">'+
-     '   <textarea class="resizable" id="homesearch" onclick="newHometown()" onblur="checkHometown()" placeholder="Hide"  style="min-height:88px;max-height:132px;"></textarea>'+
+     '   <textarea class="resizable" id="homesearch" onclick="newHometown()" onblur="checkHometown()" placeholder="Hide"  style="min-height:60px;max-height:132px;"></textarea>'+
            ' </div>'+
        ' </div>'+
       '</div>'+
