@@ -1076,6 +1076,7 @@ var blocked = 0;
 var subtract = result[i].age;
 var laston = result[i].timestamp;
 
+	   var hometown_d = result[i].hometown;
 var industry_d = result[i].industry;
 var status_d = result[i].status;
 var politics_d = result[i].politics;
@@ -1308,7 +1309,7 @@ if (fetched == 1){randomswiper.appendSlide(slidecontent);
 
   
 
-random_all.push({widthslides:result[i].widthslides,heightslides:result[i].heightslides,availarraystring:availarraystring,minutes:diff,distancenumber:distance,distancestring:distancestring,photocount:photocount,photos:photostring,name:matchname,age:subtract,description:matchdescription,id:graphid,url:'https://graph.facebook.com/'+graphid+'/picture?width=828',caption:'...',industry: industry_d, status: status_d, politics:politics_d,eyes:eyes_d,body:body_d,religion:religion_d,zodiac:zodiac_d,ethnicity:ethnicity_d,height:height_d,weight:weight_d});
+random_all.push({hometown:hometown_d,widthslides:result[i].widthslides,heightslides:result[i].heightslides,availarraystring:availarraystring,minutes:diff,distancenumber:distance,distancestring:distancestring,photocount:photocount,photos:photostring,name:matchname,age:subtract,description:matchdescription,id:graphid,url:'https://graph.facebook.com/'+graphid+'/picture?width=828',caption:'...',industry: industry_d, status: status_d, politics:politics_d,eyes:eyes_d,body:body_d,religion:religion_d,zodiac:zodiac_d,ethnicity:ethnicity_d,height:height_d,weight:weight_d});
 
 if (random_all[0].id == graphid || random_all[1].id == graphid || random_all[2].id == graphid){
    
@@ -1319,7 +1320,7 @@ if (random_all[0].id == graphid || random_all[1].id == graphid || random_all[2].
 
 }
 if (fetched == 2){nearbyswiper.appendSlide(slidecontent);
-nearby_all.push({widthslides:result[i].widthslides,heightslides:result[i].heightslides,availarraystring:availarraystring,minutes:diff,distancenumber:distance,distancestring:distancestring,photocount:photocount,photos:photostring,name:matchname,age:subtract,description:matchdescription,id:graphid,url:'https://graph.facebook.com/'+graphid+'/picture?width=828',caption:'...',industry: industry_d, status: status_d, politics:politics_d,eyes:eyes_d,body:body_d,religion:religion_d,zodiac:zodiac_d,ethnicity:ethnicity_d,height:height_d,weight:weight_d});
+nearby_all.push({hometown:hometown_d,widthslides:result[i].widthslides,heightslides:result[i].heightslides,availarraystring:availarraystring,minutes:diff,distancenumber:distance,distancestring:distancestring,photocount:photocount,photos:photostring,name:matchname,age:subtract,description:matchdescription,id:graphid,url:'https://graph.facebook.com/'+graphid+'/picture?width=828',caption:'...',industry: industry_d, status: status_d, politics:politics_d,eyes:eyes_d,body:body_d,religion:religion_d,zodiac:zodiac_d,ethnicity:ethnicity_d,height:height_d,weight:weight_d});
 
 if (nearby_all[0].id == graphid || nearby_all[1].id == graphid || nearby_all[2].id == graphid){
    
@@ -1330,7 +1331,7 @@ if (nearby_all[0].id == graphid || nearby_all[1].id == graphid || nearby_all[2].
 
 }
 if (fetched == 3){recentswiper.appendSlide(slidecontent);
-recent_all.push({widthslides:result[i].widthslides,heightslides:result[i].heightslides,availarraystring:availarraystring,minutes:diff,distancenumber:distance,distancestring:distancestring,photocount:photocount,photos:photostring,name:matchname,age:subtract,description:matchdescription,id:graphid,url:'https://graph.facebook.com/'+graphid+'/picture?width=828',caption:'...',industry: industry_d, status: status_d, politics:politics_d,eyes:eyes_d,body:body_d,religion:religion_d,zodiac:zodiac_d,ethnicity:ethnicity_d,height:height_d,weight:weight_d});
+recent_all.push({hometown:hometown_d,widthslides:result[i].widthslides,heightslides:result[i].heightslides,availarraystring:availarraystring,minutes:diff,distancenumber:distance,distancestring:distancestring,photocount:photocount,photos:photostring,name:matchname,age:subtract,description:matchdescription,id:graphid,url:'https://graph.facebook.com/'+graphid+'/picture?width=828',caption:'...',industry: industry_d, status: status_d, politics:politics_d,eyes:eyes_d,body:body_d,religion:religion_d,zodiac:zodiac_d,ethnicity:ethnicity_d,height:height_d,weight:weight_d});
 
 if (recent_all[0].id == graphid || recent_all[1].id == graphid || recent_all[2].id == graphid){
    
