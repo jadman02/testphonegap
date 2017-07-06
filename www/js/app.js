@@ -851,7 +851,7 @@ if (!homewant || homewant =='offline'){
 var ptrContentq = $$('.pull-to-refresh-content-1');
 	myApp.destroyPullToRefresh(ptrContentq); 
 	
-	var swiperheight = $( window ).height() - 280;
+	var swiperheight = $( window ).height() - 270;
 	alert(swiperheight);
 	$('.content-here').append(
     '<div class="no-results-div" style="text-align:center;margin:0 auto;width:300px;position:absolute;top:44px;left:50%;margin-left:-150px;margin-top:54px;">'+
@@ -871,8 +871,8 @@ var ptrContentq = $$('.pull-to-refresh-content-1');
 '<div class="swiper-container swiper-helper-info" style="background-color:#ccc;color:#2196f3;margin-left:-10px;margin-right:-10px;padding-top:10px;">'+
 
 		' <div class="swiper-wrapper">'+
-     '   <div class="swiper-slide" style="height:'+swiperheight +'px;"><p><i class="pe-7s-like pe-3x"></i> <i class="twa twa-5x twa-coffee" style="margin-top:5px;"></i><h3>Find a coffee date...</h3></div>'+
-     '   <div class="swiper-slide" style="height:'+swiperheight +'px;"><p><i class="pe-7s-like pe-3x"></i> <i class="twa twa-5x twa-sweat-drops" style="margin-top:5px;"></i><h3>Or invite sogmeone over...</h3></div>'+
+     '   <div class="swiper-slide" style="height:'+swiperheight +'px;"><p><i class="twa twa-5x twa-coffee" style="margin-top:5px;"></i><h3>Find a coffee date...</h3></div>'+
+     '   <div class="swiper-slide" style="height:'+swiperheight +'px;"><p><i class="twa twa-5x twa-sweat-drops" style="margin-top:5px;"></i><h3>Or invite sogmeone over...</h3></div>'+
 		     '   <div class="swiper-slide" style="height:'+swiperheight +'px;"><i class="pe-7s-chat pe-3x"></i><h2>Real Life Interaction</h2><p>Chat is disabled until you both agree on a time to meet up until midnight of your date.</p></div>'+
 
       '  <div class="swiper-slide" style="height:'+swiperheight +'px;"><i class="pe-7s-camera pe-3x"></i><h2>Send Photobombs</h2><p>Photos you send will explode (delete) 24 hours after being seen.</p></div>'+
