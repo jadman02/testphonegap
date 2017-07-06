@@ -78,8 +78,9 @@ function clearHometown(){
 
 function newHometown(){
         $('#homesearch').remove(); 
-	 $('.hometown-input').append('<input type="text"  id="homesearch" placeholder="Hide" name="name" onclick="newHometown()" onblur="checkHometown()">'); 
+	 $('.hometown-input').append('<textarea class="resizable" id="homesearch" onclick="newHometown()" onblur="checkHometown()" placeholder="Hide"  style="min-height:60px;max-height:132px;"></textarea>'); 
 	$('#homesearch').focus();
+  
 
 }
 
@@ -12568,7 +12569,7 @@ if (targetreported){disabledattribute=true;}else{disabledattribute=false;}
             bold: true,
             onClick: function () {
   
-
+  
   
   
                 if ($('.infopopup').length > 0) {
