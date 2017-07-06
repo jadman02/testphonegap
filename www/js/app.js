@@ -11377,7 +11377,7 @@ distancepicker = myApp.picker({
     input: '#distance-input',
          onOpen: function (p){$( '.picker-items-col-wrapper' ).css("width", + ($( document ).width()/2) + "px");distancepicker.cols[0].setValue(radiussize);distancepicker.cols[1].setValue(radiusunit);if (sexuality){processUpdate();  myApp.sizeNavbars();  }
 },
-	onChange:function (p, values, displayValues){radiussize = distancepicker.value[0];
+	onClose:function (p, values, displayValues){radiussize = distancepicker.value[0];
 	radiusunit = distancepicker.value[1];},
      toolbarTemplate: 
         '<div class="toolbar">' +
