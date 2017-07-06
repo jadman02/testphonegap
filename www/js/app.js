@@ -851,7 +851,7 @@ if (!homewant || homewant =='offline'){
 var ptrContentq = $$('.pull-to-refresh-content-1');
 	myApp.destroyPullToRefresh(ptrContentq); 
 	
-	var swiperheight = $( window ).height() - 321;
+	var swiperheight = $( window ).height() - 325;
 	alert(swiperheight);
 	$('.content-here').append(
     '<div class="no-results-div" style="text-align:center;margin:0 auto;width:300px;position:absolute;top:44px;left:50%;margin-left:-150px;margin-top:54px;">'+
@@ -869,7 +869,7 @@ var ptrContentq = $$('.pull-to-refresh-content-1');
 
 		
 '<div class="swiper-container swiper-helper-info" style="background-color:#ccc;color:white;margin-left:-10px;margin-right:-10px;padding-top:10px;">'+
-'    <div class="content-block-title" style="width:100%;text-align:center;margin-top:10px;margin-left:-5px;">How this App Works</div>'+
+'    <div class="content-block-title" style="width:100%;text-align:center;margin-top:15px;margin-left:0px;">How this App Works</div>'+
 		' <div class="swiper-wrapper">'+
      '   <div class="swiper-slide" style="height:'+swiperheight +'px;"><div class="squareheight" style="height:153px;top:50%;margin-top:-85px;position:absolute;width:300px;left:50%;margin-left:-150px;"><i class="twa twa-5x twa-coffee" style="margin-top:5px;"></i><h2>Find your next<br/> coffee date...</h2></div></div>'+
      '   <div class="swiper-slide" style="height:'+swiperheight +'px;"><div class="squareheight" style="height:153px;top:50%;margin-top:-85px;position:absolute;width:300px;left:50%;margin-left:-150px"><i class="twa twa-5x twa-sweat-drops" style="margin-top:5px;"></i><h2>Or invite someone over<br/> tonight...</h2></div></div>'+
