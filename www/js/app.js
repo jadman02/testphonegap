@@ -5900,7 +5900,7 @@ $( ".profileul_"+new_all[i].id ).prepend(
        ' <div class="item-inner">'+
         '  <div class="item-title label">Hometown</div>'+
         '  <div class="item-input">'+
-	'<textarea class="resizable"  value="'+new_all[i].hometown+'" style="min-height:60px;max-height:132px;"></textarea>'
+	'<textarea class="resizable"  value="'+new_all[i].hometown+'" style="min-height:60px;max-height:132px;"></textarea>'+
 
          ' </div>'+
        ' </div>'+
