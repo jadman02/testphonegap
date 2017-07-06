@@ -942,7 +942,7 @@ recent_all = [];
     
     
 
-$( ".home-title" ).show();
+
 firebase.auth().currentUser.getToken().then(function(idToken) {
 
 
@@ -1062,7 +1062,7 @@ nameslist = [];
    }
    else {
  
-
+$( ".home-title" ).show();
  var tonight = new Date();
 tonight.setHours(22,59,59,999);
 var tonight_timestamp = Math.round(tonight/1000);
