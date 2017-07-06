@@ -1044,18 +1044,18 @@ nameslist = [];
    if (result == 77 ||(result.length ===1 && result[0].uid == f_uid ) ){
    
 
-   
-    $( ".results-loader" ).hide();
+   $( ".home-title" ).hide(); 
+
+ $( ".results-loader" ).hide();
     $('.content-here').append(
     '<div class="no-results-div" style="text-align:center;margin:0 auto;width:300px;position:absolute;top:50%;left:50%;margin-left:-150px;margin-top:-70px;">'+
     
-    '<img src="media/datetongue.png" style="width:80px;margin:0 auto;">'+
+    '<img src="media/datetongue.png" style="width:120px;margin:0 auto;">'+
     
-   '<h3>No one is nearby</h3><p style="padding-top:0px;margin-top:-10px;">Try changing your search radius, </br>age range or filters.</p></br>'+
+   '<h3>No one found nearby</h3><p style="padding-top:0px;margin-top:-10px;">Try changing your search radius </br> or age range.</p></br>'+
 
 
    
-
     '</div>');
    
    
@@ -1365,10 +1365,10 @@ if (recent_all[0].id == graphid || recent_all[1].id == graphid || recent_all[2].
 
 
    
+ $( ".home-title" ).show(); 
 
  
    
- $( ".home-title" ).show(); 
 if (nearbyshare){
 //remove blur, unlock swiper
 
@@ -3199,14 +3199,15 @@ else {myPhotoBrowser.swiper.slideNext();allowedchange = true;myPhotoBrowser.swip
   
   
 if (new_all.length === 0){myPhotoBrowser.close();myApp.closeModal();
-alert('thirdpos');
+ $( ".home-title" ).hide(); 
+
  $( ".results-loader" ).hide();
     $('.content-here').append(
     '<div class="no-results-div" style="text-align:center;margin:0 auto;width:300px;position:absolute;top:50%;left:50%;margin-left:-150px;margin-top:-70px;">'+
     
-    '<img src="media/datetongue.png" style="width:80px;margin:0 auto;">'+
+    '<img src="media/datetongue.png" style="width:120px;margin:0 auto;">'+
     
-   '<h3>No one is nearby</h3><p style="padding-top:0px;margin-top:-10px;">Try changing your search radius, </br>age range or filters.</p></br>'+
+   '<h3>No one found nearby</h3><p style="padding-top:0px;margin-top:-10px;">Try changing your search radius </br> or age range.</p></br>'+
 
 
    
@@ -6429,10 +6430,7 @@ to_open = openprofile;
 }
 var hiddendivheight = $( window ).height() - 40;
 
-	alert(JSON.stringify(new_all));
-	
 
-	alert(to_open);
 myPhotoBrowser = myApp.photoBrowser({
     zoom: false,
     expositionHideCaptions:true,
