@@ -3195,7 +3195,7 @@ else {myPhotoBrowser.swiper.slideNext();allowedchange = true;myPhotoBrowser.swip
   
   
 if (new_all.length === 0){myPhotoBrowser.close();myApp.closeModal();
-alert('thirdpos');
+
  $( ".results-loader" ).hide();
     $('.content-here').append(
     '<div class="no-results-div" style="text-align:center;margin:0 auto;width:300px;position:absolute;top:50%;left:50%;margin-left:-150px;margin-top:-70px;">'+
@@ -3213,11 +3213,7 @@ alert('thirdpos');
              
 
        // myPhotoBrowser.swiper.slideTo(blockindex);
-        if (new_all.length===1){
-  if (myPhotoBrowser.swiper.isBeginning === true){$( ".prevphoto" ).addClass( "disabled" );}
-   else{$( ".prevphoto" ).removeClass( "disabled" );}
-      if (myPhotoBrowser.swiper.isEnd === true){$( ".nextphoto" ).addClass( "disabled" );}
-      else{$( ".nextphoto" ).removeClass( "disabled" );}
+
  
  
    
@@ -3310,7 +3306,8 @@ $( ".toolbardecide" ).show();
 } 
 
 function closeCreate(){
-myApp.closeModal('.chatpop');
+myApp.closeModal('.actions-modal');
+	myApp.closeModal('.chatpop');
    singlefxallowed = true;
 }
 
@@ -3375,7 +3372,7 @@ var popupHTML = '<div class="popup chatpop">'+
   
 
   
-  '<a href="#" class="link icon-only date-back" onclick="closeCreate()" style="margin-left:-10px;color:white;">    <i class="pe-7s-angle-left pe-3x"></i>   </a>'+
+  '<a href="#" class="link icon-only date-back" onclick="closeCreate();" style="margin-left:-10px;color:white;">    <i class="pe-7s-angle-left pe-3x"></i>   </a>'+
       '<a href="#" class="link icon-only date-close" onclick="reverseRequest();" style="color:white;font-weight:bold;display:none;margin-left:-10px;">  <i class="pe-7s-angle-left pe-3x"></i>  </a>'+
       '<a href="#" class="link icon-only date2-close" onclick="noChange();" style="color:white;display:none;font-weight:bold;margin-left:-10px;">  <i class="pe-7s-angle-left pe-3x"></i>  </a>'+
       '<a href="#" class="link icon-only date1-close" onclick="reverseRequest();dateConfirmationPage();" style="color:white;display:none;font-weight:bold;margin-left:-10px;">  <i class="pe-7s-angle-left pe-3x"></i>  </a>'+
@@ -4708,6 +4705,7 @@ timecol.setValue(timeq);
 }
 
 function noChange(){
+	myApp.closeModal('.actions-modal');
 canloadchat = true;
 $( ".sender-inner" ).hide();
  $( ".messages" ).show();
@@ -4728,7 +4726,7 @@ $( ".sender-inner" ).hide();
 }
 
 function reverseRequest(){
-
+myApp.closeModal('.actions-modal');
 	$( ".profileyomain" ).show();
 $( ".dateheader" ).hide();
 $( "#createdatepicker" ).hide();
