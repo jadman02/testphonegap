@@ -343,7 +343,7 @@ try {
 
 
 // Initialize your app
-var myApp = new Framework7({dynamicNavbar: true,init: false});
+var myApp = new Framework7({dynamicNavbar: true,modalActionsCloseByOutside:true,init: false});
 
 // Export selectors engine
 var $$ = Dom7;
@@ -855,7 +855,7 @@ var ptrContentq = $$('.pull-to-refresh-content-1');
 	alert(swiperheight);
 	$('.content-here').append(
     '<div class="no-results-div" style="text-align:center;margin:0 auto;width:300px;position:absolute;top:44px;left:50%;margin-left:-150px;margin-top:54px;">'+
-'<div class="topdiv" style="background-color:#2196f3;color:white;">'+
+'<div class="topdiv">'+
      // '<h3>Get Quacking!</h3>'+
        '<div class="row" style="padding-top:10px;padding-bottom:10px;">'+
     '<div class="col-30" style="padding-top:5px;"><img src="media/datefaceonly.png" style="width:80px;margin:0 auto;"></div>'+
