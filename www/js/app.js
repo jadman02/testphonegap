@@ -6429,6 +6429,10 @@ to_open = openprofile;
 }
 var hiddendivheight = $( window ).height() - 40;
 
+	alert(JSON.stringify(new_all));
+	
+
+	
 myPhotoBrowser = myApp.photoBrowser({
     zoom: false,
     expositionHideCaptions:true,
