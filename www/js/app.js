@@ -865,7 +865,7 @@ if (!homewant || homewant =='offline'){
 	 '</div>'+   
 
 		
-'<div class="swiper-container swiper-helper-info" style="background-color:#ccc;color:white;margin:-10px;">'+
+'<div class="swiper-container swiper-helper-info" style="background-color:#ccc;color:white;margin-left:-10px;margin-right:-10px;">'+
    ' <div class="swiper-wrapper">'+
      '   <div class="swiper-slide" style="height:'+swiperheight +'px;"><i class="pe-7s-like pe-3x"></i><h2>Efficient Matching</h2><p>Find people looking for the same thing as you.</p></div>'+
      '   <div class="swiper-slide" style="height:'+swiperheight +'px;"><i class="pe-7s-date pe-3x"></i><h2>Time saving</h2><p>Schedule meetings in your calendar and notify your matches of your availability.</p></div>'+
