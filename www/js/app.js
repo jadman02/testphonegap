@@ -960,7 +960,7 @@ randomswiper = myApp.swiper('.swiper-random', {
 
 new_all = random_all;
 
-    photoBrowser(swiper.clickedIndex);}
+    photoBrowser(randomswiper.clickedIndex);}
   });
  
 nearbyswiper = myApp.swiper('.swiper-nearby', {
@@ -978,7 +978,7 @@ new_all = nearby_all;
 
 
 if (nearbyshare){
-photoBrowser(swiper.clickedIndex);
+photoBrowser(nearbyswiper.clickedIndex);
 }
 else{}
     }
@@ -997,7 +997,7 @@ recentswiper = myApp.swiper('.swiper-recent', {
 new_all = recent_all;
 
 if (recentshare){
-photoBrowser(swiper.clickedIndex);
+photoBrowser(recentswiper.clickedIndex);
 }
 else{}
 }
