@@ -5854,16 +5854,7 @@ console.log(new_all);
     '</li>'+
 
   
-       ' <li>'+
-      '<div class="item-content">'+
-       ' <div class="item-inner">'+
-        '  <div class="item-title label">Hometown</div>'+
-        '  <div class="item-input">'+
-          '    <input type="text" name="name" value="Melbourne" readonly>'+
-         ' </div>'+
-       ' </div>'+
-      '</div>'+
-    '</li>'+
+      
        
 '    </ul></div>'+
 
@@ -5898,7 +5889,20 @@ $( ".profileul_"+new_all[i].id ).prepend(
 );
 }
 
-
+if (new_all[i].hometown){
+$( ".profileul_"+new_all[i].id ).prepend(
+ ' <li>'+
+      '<div class="item-content">'+
+       ' <div class="item-inner">'+
+        '  <div class="item-title label">Hometown</div>'+
+        '  <div class="item-input">'+
+          '    <input type="text" name="name" value="'+new_all[i].hometown+'" readonly>'+
+         ' </div>'+
+       ' </div>'+
+      '</div>'+
+    '</li>'
+);
+}
 
 
 
@@ -6430,7 +6434,8 @@ to_open = openprofile;
 }
 var hiddendivheight = $( window ).height() - 40;
 
-
+alert(JSON.stringify(new_all));
+	
 myPhotoBrowser = myApp.photoBrowser({
     zoom: false,
     expositionHideCaptions:true,
