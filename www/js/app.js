@@ -11068,8 +11068,8 @@ var popupHTML = '<div class="popup prefpop">'+
        ' <div class="item-inner">'+
         '  <div class="item-title label">Hometown</div>'+
         '  <div class="item-input hometown-input">'+
-          '    <input type="text"  id="homesearch" placeholder="Hide" val="11" name="name" onclick="newHometown()" onblur="checkHometown()">'+
-         ' </div>'+
+     '   <textarea class="resizable" id="homesearch" onclick="newHometown()" onblur="checkHometown()" placeholder="Hide"  style="min-height:44px;max-height:132px;"></textarea>'+
+           ' </div>'+
        ' </div>'+
       '</div>'+
 
