@@ -848,11 +848,11 @@ if (!homewant || homewant =='offline'){
 	$( ".toolbar" ).hide();
 	$( ".results-loader" ).hide();
     
-var ptrContentq = $$('.pull-to-refresh-content-1');
-	myApp.destroyPullToRefresh(ptrContentq); 
+
+	myApp.destroyPullToRefresh('.pull-to-refresh-content-1'); 
 	
 	var swiperheight = $( window ).height() - 328;
-	alert(swiperheight);
+	
 	$('.content-here').append(
     '<div class="no-results-div" style="text-align:center;margin:0 auto;width:300px;position:absolute;top:44px;left:50%;margin-left:-150px;margin-top:54px;">'+
 '<div class="topdiv">'+
@@ -3310,6 +3310,7 @@ $( ".toolbardecide" ).show();
 } 
 
 function closeCreate(){
+	myApp.closeModal('.actions-modal');
 myApp.closeModal('.chatpop');
    singlefxallowed = true;
 }
@@ -4708,6 +4709,7 @@ timecol.setValue(timeq);
 }
 
 function noChange(){
+	myApp.closeModal('.actions-modal');
 canloadchat = true;
 $( ".sender-inner" ).hide();
  $( ".messages" ).show();
@@ -4728,7 +4730,7 @@ $( ".sender-inner" ).hide();
 }
 
 function reverseRequest(){
-
+myApp.closeModal('.actions-modal');
 	$( ".profileyomain" ).show();
 $( ".dateheader" ).hide();
 $( "#createdatepicker" ).hide();
