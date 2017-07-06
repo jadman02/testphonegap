@@ -942,7 +942,7 @@ recent_all = [];
     
     
 
-
+$( ".home-title" ).show();
 firebase.auth().currentUser.getToken().then(function(idToken) {
 
 
@@ -1365,7 +1365,7 @@ if (recent_all[0].id == graphid || recent_all[1].id == graphid || recent_all[2].
 
 
    
- $( ".home-title" ).show(); 
+  
 
  
    
