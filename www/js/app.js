@@ -1828,7 +1828,7 @@ myswiperphotos.destroy();
 myswiperphotos = false;
 }
 
-	alert('1');
+	
 	
 var newage,newinterested,newgender;
 
@@ -1844,7 +1844,7 @@ else {userzdescription = '';}
 
 //Need to delete old reference
 
-alert('2');
+
 
 
 if (pickerDescribe.initialized === true) {f_age = pickerDescribe.value[1];f_gender = pickerDescribe.value[0];}
@@ -1862,7 +1862,7 @@ if (f_gender == 'Female' && f_interested == 'Men') {sexuality = 'female';}
 
 var lowerage,upperage;
 
-alert('3');
+
 
 if (pickerDescribe2.initialized === true) {
 
@@ -1880,7 +1880,7 @@ else {lowerage = f_lower;upperage = f_upper;}
 //if ($( "#distance_50" ).hasClass( "active" )){radiussize = '50';}
 //if ($( "#distance_100" ).hasClass( "active" )){radiussize = '100';}
 
-alert('4');
+
 availarray = [];
 $( ".availrec" ).each(function() {
 
@@ -1900,7 +1900,7 @@ var timesaved = valueinputted[1];
 
 }
 
-alert('5');
+
 
 
 
@@ -1914,7 +1914,7 @@ var availstring = JSON.stringify(availarray);
 
 var availstringn = availstring.toString();
 
-alert('6');
+
 
 if ($('#soundnotif').prop('checked')) {offsounds = 'Y'} else {offsounds = 'N'}
 
@@ -1933,12 +1933,12 @@ var height_u = $( "#height-input" ).val().substring(0,3);
 var weight_pre = $( "#weight-input" ).val();
 var weight_u = weight_pre.substr(0, weight_pre.indexOf(' '));
 
-alert('7');
+
 var uploadurl;
 if (f_largeurls.length > 0){photoresponse = 'Y';uploadurl = f_largeurls[0];}
 	else{photoresponse='N';uploadurl = '';}
 
-alert('7.5');
+
 
 
 firebase.database().ref('users/' + f_uid).update({
@@ -1964,7 +1964,7 @@ weight: weight_u,
     
     
   });
-alert('8');
+
 
 	if (deletedphoto){
 
@@ -1975,7 +1975,7 @@ var newwidth = addedwidth.toString();
 var newheight = addedheight.toString();
 
 
-console.log('there was a deleted photo');
+
 
 firebase.auth().currentUser.getToken().then(function(idToken) { 
 $.post( "http://www.dateorduck.com/updatephotos.php", { projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,uid:f_uid,largeurls:newlarge,smallurls:newsmall,height:newheight,width:newwidth} )
@@ -1984,7 +1984,7 @@ $.post( "http://www.dateorduck.com/updatephotos.php", { projectid:f_projectid,to
 
 
 
-console.log(data);
+
 });
 
     }).catch(function(error) {
@@ -2699,7 +2699,7 @@ $.post( "http://www.dateorduck.com/userdata.php", {projectid:f_projectid,token:i
 
        if (f_largeurls.length === 1){       $( ".photosliderinfo" ).html('You have added '+f_largeurls.length+' photo to your profile');
 }
-else{       $( ".photosliderinfo" ).html('You have added '+f_largeurls.length+' photos to your profile');alert('4');
+else{       $( ".photosliderinfo" ).html('You have added '+f_largeurls.length+' photos to your profile');
 }
        
 
