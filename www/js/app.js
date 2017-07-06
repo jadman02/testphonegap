@@ -12136,9 +12136,10 @@ $( ".popup-overlay" ).css("z-index","10500");
     },
     onOpen:   function (p){if (sexuality){processUpdate();  myApp.sizeNavbars();  }
           //   $( '.picker-items-col-wrapper' ).css("width", + $( document ).width() + "px");
-$('.picker-items-col').eq(0).css('width','50%');
+$('.picker-items-col').eq(0).css('width','33%');
 
-$('.picker-items-col').eq(1).css('width','50%');
+$('.picker-items-col').eq(1).css('width','33%');
+			   $('.picker-items-col').eq(2).css('width','33%');
 
     var interestedcol = pickerDescribe2.cols[0];
 var lowercol = pickerDescribe2.cols[1];
