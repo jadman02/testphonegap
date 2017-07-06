@@ -851,7 +851,7 @@ if (!homewant || homewant =='offline'){
 var ptrContentq = $$('.pull-to-refresh-content-1');
 	myApp.destroyPullToRefresh(ptrContentq); 
 	
-	var swiperheight = $( window ).height() - 290;
+	var swiperheight = $( window ).height() - 289;
 	alert(swiperheight);
 	$('.content-here').append(
     '<div class="no-results-div" style="text-align:center;margin:0 auto;width:300px;position:absolute;top:44px;left:50%;margin-left:-150px;margin-top:54px;">'+
@@ -871,7 +871,7 @@ var ptrContentq = $$('.pull-to-refresh-content-1');
 '<div class="swiper-container swiper-helper-info" style="background-color:#ccc;color:#2196f3;margin-left:-10px;margin-right:-10px;padding-top:10px;">'+
 
 		' <div class="swiper-wrapper">'+
-     '   <div class="swiper-slide" style="height:'+swiperheight +'px;"><div class="squareheight"><i class="twa twa-5x twa-coffee" style="margin-top:5px;"></i><h2>Use this app to find your next coffee date...</h2></div></div>'+
+     '   <div class="swiper-slide" style="height:'+swiperheight +'px;"><div class="squareheight" style="top:50%;margin-top:-75px;"><i class="twa twa-5x twa-coffee" style="margin-top:5px;"></i><h2>Use this app to find your next coffee date...</h2></div></div>'+
      '   <div class="swiper-slide" style="height:'+swiperheight +'px;"><p><i class="twa twa-5x twa-sweat-drops" style="margin-top:5px;"></i><h3>...Or invite someone over tomorrow ...</h3></div>'+
      '   <div class="swiper-slide" style="height:'+swiperheight +'px;"><p><i class="twa twa-5x twa-sweat-drops" style="margin-top:5px;"></i><h3>...Or invite someone over tomorrow ...</h3></div>'+
 
@@ -903,6 +903,9 @@ $( ".homedate" ).removeClass("disabled");
 
 }   
  $( ".statusbar-overlay" ).css("background-color","#2196f3"); 
+	
+var ptrContentq = $$('.pull-to-refresh-content-1');
+	myApp.initPullToRefresh(ptrContentq);
 initialload = true;
 
 if (recentfriends){
