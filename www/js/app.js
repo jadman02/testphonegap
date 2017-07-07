@@ -601,9 +601,9 @@ function startApp(){
 
 
 
-document.addEventListener("screenshot", function() {
-    alert("Screenshot");
-}, false);
+//document.addEventListener("screenshot", function() {
+  //  alert("Screenshot");
+//}, false);
 
 
 $$('.panel-right').on('panel:opened', function () {
