@@ -51,7 +51,7 @@
     <plugin name="cordova-plugin-whitelist"           source="npm" />
     <plugin name="cordova-plugin-camera" source="npm" />
           <plugin name="cordova-plugin-media-capture" source="npm" />
- <plugin name="cordova-plugin-privacyscreen" source="npm" />
+
 
      <!-- Plugins 
        
