@@ -856,7 +856,6 @@ random_all = [];
 nearby_all = [];
 recent_all = [];
 
-	myApp.destroyPullToRefresh('.pull-to-refresh-content-1'); 
 	
 	var swiperheight = $( window ).height() - 328;
 	
@@ -878,8 +877,8 @@ recent_all = [];
 '<div class="swiper-container swiper-helper-info" style="z-index:99999999999999;background-color:#ccc;color:#6d6d72;margin-left:-10px;margin-right:-10px;padding-top:10px;">'+
 '    <div class="content-block-title" style="width:100%;text-align:center;margin-top:15px;margin-left:0px;">How this App Works</div>'+
 		' <div class="swiper-wrapper">'+
-     '   <div class="swiper-slide" style="height:'+swiperheight +'px;background-color:red;"><div class="squareheight" style="height:153px;top:50%;margin-top:-95px;position:absolute;width:300px;left:50%;margin-left:-150px;"><i class="twa twa-4x twa-coffee" style="margin-top:5px;"></i><h2>Find your next<br/> coffee date...</h2></div></div>'+
-     '   <div class="swiper-slide" style="height:'+swiperheight +'px;background-color:red;"><div class="squareheight" style="height:153px;top:50%;margin-top:-95px;position:absolute;width:300px;left:50%;margin-left:-150px"><i class="twa twa-4x twa-sweat-drops" style="margin-top:5px;"></i><h2>Or invite someone over<br/> tonight...</h2></div></div>'+
+     '   <div class="swiper-slide" style="height:'+swiperheight +'px;"><div class="squareheight" style="height:153px;top:50%;margin-top:-95px;position:absolute;width:300px;left:50%;margin-left:-150px;"><i class="twa twa-4x twa-coffee" style="margin-top:5px;"></i><h2>Find your next<br/> coffee date...</h2></div></div>'+
+     '   <div class="swiper-slide" style="height:'+swiperheight +'px;"><div class="squareheight" style="height:153px;top:50%;margin-top:-95px;position:absolute;width:300px;left:50%;margin-left:-150px"><i class="twa twa-4x twa-sweat-drops" style="margin-top:5px;"></i><h2>Or invite someone over<br/> tonight...</h2></div></div>'+
      '   <div class="swiper-slide" style="height:'+swiperheight +'px;"><div class="squareheight" style="height:153px;top:50%;margin-top:-95px;position:absolute;width:300px;left:50%;margin-left:-150px"><i class="twa twa-4x twa-calendar" style="margin-top:5px;"></i><h2>Once you both agree on</br> a time to meet...</h2></div></div>'+
      '   <div class="swiper-slide" style="height:'+swiperheight +'px;"><div class="squareheight" style="height:153px;top:50%;margin-top:-95px;position:absolute;width:300px;left:50%;margin-left:-150px"><i class="twa twa-4x twa-clock12" style="margin-top:5px;"></i><h2>Chat is enabled until <br/>midnight of your date...</h2></div></div>'+
      '   <div class="swiper-slide" style="height:'+swiperheight +'px;"><div class="squareheight" style="height:153px;top:50%;margin-top:-95px;position:absolute;width:300px;left:50%;margin-left:-150px"><i class="twa twa-4x twa-bomb" style="margin-top:5px;"></i><h2>You can send photos that delete after 24 hours...</h2></div></div>'+
@@ -912,7 +911,6 @@ $( ".homedate" ).removeClass("disabled");
  $( ".statusbar-overlay" ).css("background-color","#2196f3"); 
 	
 
-	myApp.initPullToRefresh('.pull-to-refresh-content-1');
 initialload = true;
 
 if (recentfriends){
