@@ -876,8 +876,8 @@ recent_all = [];
 '<div class="swiper-container swiper-helper-info" style="background-color:#ccc;color:#6d6d72;margin-left:-10px;margin-right:-10px;padding-top:10px;">'+
 '    <div class="content-block-title" style="width:100%;text-align:center;margin-top:15px;margin-left:0px;">How this App Works</div>'+
 		' <div class="swiper-wrapper">'+
-     '   <div class="swiper-slide" style="height:'+swiperheight +'px;"><div class="squareheight" style="height:153px;top:50%;margin-top:-95px;position:absolute;width:300px;left:50%;margin-left:-150px;"><i class="twa twa-4x twa-coffee" style="margin-top:5px;"></i><h2>Find your next<br/> coffee date...</h2></div></div>'+
-     '   <div class="swiper-slide" style="height:'+swiperheight +'px;"><div class="squareheight" style="height:153px;top:50%;margin-top:-95px;position:absolute;width:300px;left:50%;margin-left:-150px"><i class="twa twa-4x twa-sweat-drops" style="margin-top:5px;"></i><h2>Or invite someone over<br/> tonight...</h2></div></div>'+
+     '   <div class="swiper-slide" style="height:'+swiperheight +'px;background-color:red;"><div class="squareheight" style="height:153px;top:50%;margin-top:-95px;position:absolute;width:300px;left:50%;margin-left:-150px;"><i class="twa twa-4x twa-coffee" style="margin-top:5px;"></i><h2>Find your next<br/> coffee date...</h2></div></div>'+
+     '   <div class="swiper-slide" style="height:'+swiperheight +'px;background-color:red;"><div class="squareheight" style="height:153px;top:50%;margin-top:-95px;position:absolute;width:300px;left:50%;margin-left:-150px"><i class="twa twa-4x twa-sweat-drops" style="margin-top:5px;"></i><h2>Or invite someone over<br/> tonight...</h2></div></div>'+
      '   <div class="swiper-slide" style="height:'+swiperheight +'px;"><div class="squareheight" style="height:153px;top:50%;margin-top:-95px;position:absolute;width:300px;left:50%;margin-left:-150px"><i class="twa twa-4x twa-calendar" style="margin-top:5px;"></i><h2>Once you both agree on</br> a time to meet...</h2></div></div>'+
      '   <div class="swiper-slide" style="height:'+swiperheight +'px;"><div class="squareheight" style="height:153px;top:50%;margin-top:-95px;position:absolute;width:300px;left:50%;margin-left:-150px"><i class="twa twa-4x twa-clock12" style="margin-top:5px;"></i><h2>Chat is enabled until <br/>midnight of your date...</h2></div></div>'+
      '   <div class="swiper-slide" style="height:'+swiperheight +'px;"><div class="squareheight" style="height:153px;top:50%;margin-top:-95px;position:absolute;width:300px;left:50%;margin-left:-150px"><i class="twa twa-4x twa-bomb" style="margin-top:5px;"></i><h2>You can send photos that delete after 24 hours...</h2></div></div>'+
@@ -10966,12 +10966,12 @@ var popupHTML = '<div class="popup prefpop">'+
 
  '   <div class="navbar-inner">'+
 
-  '      <div class="left" style="color:white;"><a href="#" onclick="updateUser();" style="color:white;display:none" class="donechange swipebuttondone">Done</a><a href="#" style="color:white;display:none;" class="close-popup doneunchange swipebuttondone">Done</a></div>'+
+  '      <div class="left" style="color:white;"></div>'+
    '     <div class="center swipetext" style="color:white;">Availability'+
          //'<div style="width:70px;height:70px;border-radius:50%;background-image:url(\''+f_image+'\');background-size:cover;background-position:50% 50%;margin-top:30px;z-index:100;border:5px solid #2196f3"></div>'+
 
    '</div>'+
-    '    <div class="right"></div>'+
+    '    <div class="right"><a href="#" onclick="updateUser();" style="color:white;display:none" class="donechange swipebuttondone">Done</a><a href="#" style="color:white;display:none;" class="close-popup doneunchange swipebuttondone">Done</a></div>'+
     
 
     
