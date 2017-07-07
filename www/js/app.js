@@ -1233,11 +1233,11 @@ var diff = (d_unix - timestampunix)/60;
 
 
 
-var activecircle;
+var activecircle='';
 
 
-if (diff<11){activecircle = '<span style="position:absolute;left:10px;height:10px;width:10px;border-radius:50%;bottom:10px;background-color:#4cd964"></span>';}
-else{activecircle = '<span style="position:absolute;left:10px;bottom:10px;height:10px;width:10px;border-radius:50%;background-color:transparent;border:1px solid #ccc;"></span>';}
+//if (diff<11){activecircle = '<span style="position:absolute;left:10px;height:10px;width:10px;border-radius:50%;bottom:10px;background-color:#4cd964"></span>';}
+//else{activecircle = '<span style="position:absolute;left:10px;bottom:10px;height:10px;width:10px;border-radius:50%;background-color:transparent;border:1px solid #ccc;"></span>';}
 if ($('.slide_' + graphid).length){
   
 
