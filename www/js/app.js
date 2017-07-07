@@ -441,9 +441,7 @@ var app = {
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
 
-document.addEventListener("screenshot", function() {
-    alert("Screenshot");
-}, false);
+
 //soNow();
 
 
@@ -603,7 +601,9 @@ function startApp(){
 
 
 
-
+document.addEventListener("screenshot", function() {
+    alert("Screenshot");
+}, false);
 
 
 $$('.panel-right').on('panel:opened', function () {
