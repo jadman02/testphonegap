@@ -1005,14 +1005,18 @@ else{}
   });
  
 
-var fetch = ['random','distance','activity'];
-var fetched = 0;
-for (q = 0; q < fetch.length; q++) { 
 
-setTimeout(function(){ 
-$.post( "http://www.dateorduck.com/locations.php", { want:homewant,projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,upper:f_upper,lower:f_lower,radius:radiussize,radiusunit:radiusunit,sexuality:sexuality,sortby:fetch[q],latitudep:latitudep,longitudep:longitudep} )
+	
+	dbCall('random');
+	dbCall('distance');
+	dbCall('activity');
+	
+function dbCall(fetch){
+
+
+$.post( "http://www.dateorduck.com/locations.php", { want:homewant,projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,upper:f_upper,lower:f_lower,radius:radiussize,radiusunit:radiusunit,sexuality:sexuality,sortby:fetch,latitudep:latitudep,longitudep:longitudep} )
   .done(function( data ) {
-fetched ++;
+
 
 
 
@@ -1306,7 +1310,7 @@ slidecontent = '<div class="age_'+subtract+' swiper-slide slide_'+graphid+'" sty
 
 }
 
-if (fetched == 1){randomswiper.appendSlide(slidecontent);
+if (fetch == 'random'){randomswiper.appendSlide(slidecontent);
 
 
   
@@ -1321,7 +1325,7 @@ if (random_all[0].id == graphid || random_all[1].id == graphid || random_all[2].
 }
 
 }
-if (fetched == 2){nearbyswiper.appendSlide(slidecontent);
+if (fetch == 'distance'){nearbyswiper.appendSlide(slidecontent);
 nearby_all.push({hometown:hometown_d,widthslides:result[i].widthslides,heightslides:result[i].heightslides,availarraystring:availarraystring,minutes:diff,distancenumber:distance,distancestring:distancestring,photocount:photocount,photos:photostring,name:matchname,age:subtract,description:matchdescription,id:graphid,url:'https://graph.facebook.com/'+graphid+'/picture?width=828',caption:'...',industry: industry_d, status: status_d, politics:politics_d,eyes:eyes_d,body:body_d,religion:religion_d,zodiac:zodiac_d,ethnicity:ethnicity_d,height:height_d,weight:weight_d});
 
 if (nearby_all[0].id == graphid || nearby_all[1].id == graphid || nearby_all[2].id == graphid){
@@ -1332,7 +1336,7 @@ if (nearby_all[0].id == graphid || nearby_all[1].id == graphid || nearby_all[2].
 }
 
 }
-if (fetched == 3){recentswiper.appendSlide(slidecontent);
+if (fetch == 'activity'){recentswiper.appendSlide(slidecontent);
 recent_all.push({hometown:hometown_d,widthslides:result[i].widthslides,heightslides:result[i].heightslides,availarraystring:availarraystring,minutes:diff,distancenumber:distance,distancestring:distancestring,photocount:photocount,photos:photostring,name:matchname,age:subtract,description:matchdescription,id:graphid,url:'https://graph.facebook.com/'+graphid+'/picture?width=828',caption:'...',industry: industry_d, status: status_d, politics:politics_d,eyes:eyes_d,body:body_d,religion:religion_d,zodiac:zodiac_d,ethnicity:ethnicity_d,height:height_d,weight:weight_d});
 
 if (recent_all[0].id == graphid || recent_all[1].id == graphid || recent_all[2].id == graphid){
@@ -1386,7 +1390,7 @@ else{   $( ".recent-helper" ).show();}
 	
     });
 	
-	}, 300);
+
 	
 }    
     
