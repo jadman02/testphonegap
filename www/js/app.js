@@ -441,7 +441,9 @@ var app = {
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
 
-
+document.addEventListener("screenshot", function() {
+    alert("Screenshot");
+}, false);
 //soNow();
 
 
