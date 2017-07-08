@@ -6462,7 +6462,7 @@ myPhotoBrowser = myApp.photoBrowser({
     '<div class="photo-browser-slide photo-browser-slide-lazy swiper-slide">'+
 
     '<div class="preloader {{@root.preloaderColorClass}}">{{#if @root.material}}{{@root.materialPreloaderSvg}}{{/if}}</div>'+
-    '<div class="swiper-container swiper-vertical" style="height:100%;min-width:'+$(document).width()+'px">'+
+    '<div class="swiper-container swiper-vertical" style="height:100%;min-width:'+$(document).width()+'px;background-color:red">'+
 
 
     '<div class="swiper-wrapper vertical-wrapper-swiper">'+
