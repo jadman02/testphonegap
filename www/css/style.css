@@ -203,6 +203,7 @@
 .picker-calendar-day {color:white;background-color:black;}
 .toolbar ~ .photo-browser-captions {bottom:90px;background-color:white;display:none;}
 .whitetext{color:white !important;}
+.whitetext{color:#2196f3 !important;}
 .tabbar a {color:white;}
 .tabbar a.active {color:white;background-color:#2196f3;}
 .list-block ul:after{background-color:transparent;}
