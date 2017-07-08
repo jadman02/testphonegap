@@ -4354,7 +4354,7 @@ $(".avail-loader").hide();
 	 $( ".profileyo_" + singleuserarray[0].id ).append(
     '<div class="content-block-title availtitle" style="padding-top:0px;clear:both;margin-top:15px;">'+targetname+'\'s Availability</div>'+
 
-'<div class="list-block media-list availabilitylistblock_'+singleuserarray[0].id+'" style="margin-top:0px;clear:both;margin-bottom:-40px;width:100%;">'+
+'<div class="list-block media-list availabilitylistblock_'+singleuserarray[0].id+'" style="z-index:99999999999999;margin-top:0px;clear:both;margin-bottom:-40px;width:100%;">'+
     '<ul style="background-color:transparent" style="width:100%;">'+
 
 
