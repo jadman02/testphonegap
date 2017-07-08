@@ -5592,7 +5592,7 @@ $( ".swiper-zoom-container > img, .swiper-zoom-container > svg, .swiper-zoom-con
 
 
 
-$( ".nametag" ).addClass('bluetext');
+$( ".greytag" ).addClass('bluetext');
 //$( ".photo-browser-slide img" ).css("height","100%");
 
 $( ".datebutton" ).addClass('imagelibrary');
@@ -5690,7 +5690,7 @@ $( ".swiper-zoom-container > img, .swiper-zoom-container > svg, .swiper-zoom-con
 
 $( ".toolbarq" ).css("background-color","transparent");
 $( ".photobrowserbar" ).css("background-color","#ccc");
-$( ".nametag" ).removeClass('bluetext'); 
+$( ".greytag" ).removeClass('bluetext'); 
 
 
 
@@ -6689,13 +6689,13 @@ $( ".photo-browser-caption" ).append(targetdescription);
    ' <div class="navbar-inner">'+
       '  <div class="left sliding">'+
           '  <a href="#" style="margin-left:-10px;"class="link photo-browser-close-link {{#unless backLinkText}}icon-only{{/unless}} {{js "this.type === \'page\' ? \'back\' : \'\'"}}">'+
-            '<i class="pe-7s-angle-left pe-3x matchcolor"></i>'+
+            '<i class="pe-7s-angle-left pe-3x matchcolor greytag"></i>'+
             '<span class="badge agecat" style="margin-left:-10px;display:none;">'+arraynumber+'</span>'+
             
 
            ' </a>'+
        ' </div>'+
-       ' <div class="center sliding nametag matchcolor">'+
+       ' <div class="center sliding nametag matchcolor greytag">'+
         //  '  <span class="photo-browser-current"></span> '+
         //  '  <span class="photo-browser-of">{{ofText}}</span> '+
         //  '  <span class="photo-browser-total"></span>'+
@@ -6704,7 +6704,7 @@ $( ".photo-browser-caption" ).append(targetdescription);
 //'<a href="#" class="link"><div class="cameradivnum" style="background-color:transparent;border-radius:50%;opacity:0.9;float:left;z-index:999;"><i class="pe-7s-camera pe-lg matchcolor" style="margin-top:3px;margin-left:-5px;"></i><div class="camerabadge badge" style="position:absolute;right:0px;margin-right:-10px;top:5px;z-index:999;"></div></div></a>'+
        '<a href="#" class="link">'+
         
-        '    <i class="pe-7s-more pe-lg matchcolor"></i>'+
+        '    <i class="pe-7s-more pe-lg matchcolor greytag"></i>'+
      
        ' </a>'+
        '</div>'+
