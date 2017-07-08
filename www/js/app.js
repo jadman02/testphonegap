@@ -3457,7 +3457,7 @@ var popupHTML = '<div class="popup chatpop">'+
         
         
         '</div>'+
-  '<div class="page-content messages-content" onscroll="scrollMessages();" id="messagediv" style="background-color:#f7f7f8">'+
+  '<div class="page-content messages-content" onscroll="scrollMessages();" id="messagediv" style="padding-bottom:0px;background-color:#f7f7f8">'+
 
 
 
