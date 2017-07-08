@@ -4744,7 +4744,8 @@ $( ".sender-inner" ).hide();
 }
 
 function reverseRequest(){
-myApp.closeModal('.actions-modal');
+$( ".datetoolbar" ).hide();
+	myApp.closeModal('.actions-modal');
 	$( ".profileyomain" ).show();
 $( ".dateheader" ).hide();
 $( "#createdatepicker" ).hide();
