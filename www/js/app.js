@@ -10269,7 +10269,7 @@ var popupHTML = '<div class="popup prefpop">'+
   '<div class="toolbar tabbar">'+
    ' <div class="toolbar-inner">'+
     '  <a href="#tab1" onclick="tabOne();" class="tab1 tab-link active"><i class="pe-7s-note2 pe-lg"></i></a>'+
-     ' <a href="#tab2" onclick="tabTwo();" class="tab2 tab-link"><i class="pe-7s-unlock pe-lg"></i></a>'+
+     ' <a href="#tab2" onclick="tabTwo();" class="tab2 tab-link"><i class="pe-7s-look pe-lg"></i></a>'+
     '</div>'+
   '</div>'+
 '</div>'+
