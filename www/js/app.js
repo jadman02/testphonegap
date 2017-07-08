@@ -5592,7 +5592,7 @@ $( ".swiper-zoom-container > img, .swiper-zoom-container > svg, .swiper-zoom-con
 
 
 
-$( ".nametag" ).addClass('whitetext');
+$( ".nametag" ).addClass('bluetext');
 //$( ".photo-browser-slide img" ).css("height","100%");
 
 $( ".datebutton" ).addClass('imagelibrary');
@@ -5690,7 +5690,7 @@ $( ".swiper-zoom-container > img, .swiper-zoom-container > svg, .swiper-zoom-con
 
 $( ".toolbarq" ).css("background-color","transparent");
 $( ".photobrowserbar" ).css("background-color","#ccc");
-$( ".nametag" ).removeClass('whitetext'); 
+$( ".nametag" ).removeClass('bluetext'); 
 
 
 
