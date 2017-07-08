@@ -5587,7 +5587,7 @@ $( ".toolbarq" ).hide();
 $( ".swiper-zoom-container > img, .swiper-zoom-container > svg, .swiper-zoom-container > canvas" ).css('width','100%');	
 $( ".swiper-zoom-container > img, .swiper-zoom-container > svg, .swiper-zoom-container > canvas" ).css('height','auto');
 	
-	$( ".swiper-zoom-container > img, .swiper-zoom-container > svg, .swiper-zoom-container > canvas" ).css('object-fit','none');
+	//$( ".swiper-zoom-container > img, .swiper-zoom-container > svg, .swiper-zoom-container > canvas" ).css('object-fit','none');
 //put original image here
 
 
