@@ -14,9 +14,9 @@
        url('../fonts/Pacifico-regular.svg#Pacifico') format('svg');
 }
 
-/* Rules for all screen sizes */
+/* Rules for all screen sizes background-image:url('media/LongBackground.png');background-size:cover;background-position:50% 50%;*/
 
-.photo-browser-swiper-container {background-image:url('media/LongBackground.png');background-size:cover;background-position:50% 50%;}
+.photo-browser-swiper-container {background-color:red;}
 
 @font-face {
   font-family: 'Pacifico';
