@@ -10217,7 +10217,7 @@ var popupHTML = '<div class="popup prefpop">'+
 '<div class="navbar" style="background-color:#2196f3;">'+
  '   <div class="navbar-inner">'+
 
-  '      <div class="center">Terms and Conditions of Use</div>'+
+  '      <div class="center" style="color:white;">Terms and Conditions of Use</div>'+
  
     '    <div class="right"><a href="#" onclick="showPloader();" style="color:white;">Done</a></div>'+
     '</div>'+
@@ -10242,7 +10242,7 @@ var popupHTML = '<div class="popup prefpop">'+
  '<div class="navbar" style="background-color:#2196f3;">'+
  '   <div class="navbar-inner">'+
 
-  '      <div class="center">Privacy Policy</div>'+
+  '      <div class="center" style="color:white;">Privacy Policy</div>'+
  
     '    <div class="right close-popup"><a href="#" onclick="showPloader();" class="close-popup" style="color:white;">Done</a></div>'+
     '</div>'+
@@ -10266,8 +10266,8 @@ var popupHTML = '<div class="popup prefpop">'+
   '</div>'+
 
  
-  '<div class="toolbar tabbar">'+
-   ' <div class="toolbar-inner">'+
+  '<div class="toolbar tabbar" style="padding:0px;background-color:#ccc;">'+
+   ' <div class="toolbar-inner"  style="padding:0px;">'+
     '  <a href="#tab1" onclick="tabOne();" class="tab1 tab-link active"><i class="pe-7s-note2 pe-lg"></i></a>'+
      ' <a href="#tab2" onclick="tabTwo();" class="tab2 tab-link"><i class="pe-7s-look pe-lg"></i></a>'+
     '</div>'+
