@@ -14,10 +14,14 @@
        url('../fonts/Pacifico-regular.svg#Pacifico') format('svg');
 }
 
-/* Rules for all screen sizes */
+/* Rules for all screen sizes 
 
 .photo-browser-swiper-container {-webkit-filter: grayscale(100%);background-image:url("../media/LongBackground.png");background-size:cover;background-position:50% 50%;}
-photo-browser-swiper-wrapper{-webkit-filter:none;}
+.photo-browser-swiper-wrapper{-webkit-filter:none;}
+
+
+*/
+
 @font-face {
   font-family: 'Pacifico';
   font-weight: 400;
