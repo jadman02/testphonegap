@@ -6462,7 +6462,7 @@ myPhotoBrowser = myApp.photoBrowser({
     '<div class="photo-browser-slide photo-browser-slide-lazy swiper-slide">'+
 
     '<div class="preloader {{@root.preloaderColorClass}}">{{#if @root.material}}{{@root.materialPreloaderSvg}}{{/if}}</div>'+
-    '<div class="swiper-container swiper-vertical" style="height:100%;min-width:'+$(document).width()+'px;background-image:url(\'media/dateorducklogo.png\');background-size:cover;background-position:50% 50%;">'+
+    '<div class="swiper-container swiper-vertical" style="height:100%;min-width:'+$(document).width()+'px;background-image:url(\'media/LongBackground.png\');background-size:cover;background-position:50% 50%;">'+
 
 
     '<div class="swiper-wrapper vertical-wrapper-swiper">'+
