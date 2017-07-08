@@ -3853,7 +3853,7 @@ onChange:function(p, value, displayValue){
         },
         {
             textAlign: 'left',
-            values: (' Morning Afternoon Mid-day Evening').split(' ')
+            values: (' Morning Afternoon Midday Evening').split(' ')
         },
     ]
 });          
