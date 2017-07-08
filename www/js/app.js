@@ -5690,7 +5690,7 @@ $( ".swiper-zoom-container > img, .swiper-zoom-container > svg, .swiper-zoom-con
 
 $( ".toolbarq" ).css("background-color","transparent");
 $( ".photobrowserbar" ).css("background-color","#ccc");
-$( ".nametag" ).removeClass('whitetext');
+$( ".nametag" ).removeClass('whitetext'); 
 
 
 
