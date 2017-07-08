@@ -10294,13 +10294,13 @@ $( "#tab2" ).removeClass('active');
  $( ".tab1" ).addClass('active');
 $( ".tab2" ).removeClass('active');
 
-$.get( "terms.html", function( data ) {
+$.get( "http://www.dateorduck.com/terms.html", function( data ) {
 
 $( ".terms-inner" ).html(data);
 
 
 
-console.log(data);
+
 
 });
 
@@ -10315,7 +10315,7 @@ $( "#tab2" ).addClass('active');
  $( ".tab1" ).removeClass('active');
 $( ".tab2" ).addClass('active');
 
-$.get( "privacy.html", function( data ) {
+$.get( "http://www.dateorduck.com/privacy.html", function( data ) {
 
 $( ".privacy-inner" ).html(data);
 
