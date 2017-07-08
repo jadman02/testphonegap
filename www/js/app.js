@@ -5582,7 +5582,12 @@ function getMeta(url){
 function backtoProfile(){
 myApp.closeModal('.infopopup') ;
 $( ".toolbarq" ).hide();
-getMeta(new_all[myPhotoBrowser.activeIndex].url);
+//getMeta(new_all[myPhotoBrowser.activeIndex].url);
+	
+$( ".swiper-zoom-container > img, .swiper-zoom-container > svg, .swiper-zoom-container > canvas" ).css('width','100%');	
+$( ".swiper-zoom-container > img, .swiper-zoom-container > svg, .swiper-zoom-container > canvas" ).css('height','auto');
+	
+	$( ".swiper-zoom-container > img, .swiper-zoom-container > svg, .swiper-zoom-container > canvas" ).css('object-fit','none');
 //put original image here
 
 
@@ -6462,7 +6467,7 @@ myPhotoBrowser = myApp.photoBrowser({
     '<div class="photo-browser-slide photo-browser-slide-lazy swiper-slide">'+
 
     '<div class="preloader {{@root.preloaderColorClass}}">{{#if @root.material}}{{@root.materialPreloaderSvg}}{{/if}}</div>'+
-    '<div class="swiper-container swiper-vertical" style="height:100%;min-width:'+$(document).width()+'px;background-image:url(\'media/LongBackground.png\');background-size:cover;background-position:50% 50%;">'+
+    '<div class="swiper-container swiper-vertical" style="height:100%;min-width:'+$(document).width()+'px;background-color:#ccc;">'+
 
 
     '<div class="swiper-wrapper vertical-wrapper-swiper">'+
@@ -6584,7 +6589,8 @@ if (allowedchange){
 
 if (photoresize){
 if ($('.infopopup').length > 0){}
-else{getMeta(new_all[swiper.activeIndex].url);
+else{
+	//getMeta(new_all[swiper.activeIndex].url);
   } 
   }
   
