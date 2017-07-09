@@ -2123,7 +2123,7 @@ if (typeof interestnewarray == 'undefined' && interestnewarray.length === 0){com
 
 if ((d_day == pickerCustomToolbar.cols[0].displayValue) && (d_time ==pickerCustomToolbar.cols[1].displayValue) && (datemessageq == '' ) && (compareninterest == comparedinterest))
 {
-alert('1');
+
 if (d_response=='Y'){noChange();}
 else if (d_response=="W"){reverseRequest();dateConfirmationPage();}
 
@@ -7525,7 +7525,7 @@ myList.clearCache();
 
    function dateConfirmationPage(details){
           $( ".datetoolbar" ).show();
-	 alert('1');
+
 	   canloadchat = false;
           var g = new Date(d_chat_expire*1000 - 3600);
 
