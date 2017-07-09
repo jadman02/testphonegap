@@ -2999,7 +2999,8 @@ var swiperno = 0;
         
         
               var blockindex = myPhotoBrowser.swiper.activeIndex;
-myPhotoBrowser.swiper.removeSlide(blockindex);
+alert(blockindex);
+	 myPhotoBrowser.swiper.removeSlide(blockindex);
             myPhotoBrowser.swiper.updateSlidesSize();
 	 
 	 
@@ -3008,10 +3009,10 @@ myPhotoBrowser.swiper.removeSlide(blockindex);
 //recent_all = [];
 
 for (var i = 0; i < random_all; i++) {
-if (random_all[i].id = targetid){alert('position' + i);}
+if (random_all[i].id == targetid){alert('position' + i);}
 }
 
-	 
+return false;	 
 var firstpos;
 var lastpos;
 
