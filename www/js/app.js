@@ -2752,7 +2752,7 @@ for (i = 0; i < f_largeurls.length; i++) {
   }
   else {
 
-	  alert('6');
+
 	  
     f_smallurls = [];
   f_largeurls = [];
@@ -10736,7 +10736,7 @@ if ($( ".deleteallbutton" ).hasClass( "disabled" )){$( ".deleteallbutton" ).remo
   //swiperPhotos.removeAllSlides();
 //swiperPhotos.destroy();
   myApp.closeModal('.photopopup');
-updatephotoslider();
+setTimeout(function(){ updatephotoslider(); }, 3000);
 });
 
     }).catch(function(error) {
