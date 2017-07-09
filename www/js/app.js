@@ -3001,16 +3001,10 @@ var swiperno = 0;
               var blockindex = myPhotoBrowser.swiper.activeIndex;
 	 
 	 
-	 if ($('.infopopup').length > 0) {
-			
-swiperQuestions.removeSlide(blockindex);
-            swiperQuestions.updateSlidesSize();
-			
-			}
-	 else{
+
 	 myPhotoBrowser.swiper.removeSlide(blockindex);
             myPhotoBrowser.swiper.updateSlidesSize();
-	 }
+	 
 	 
 	 
 	 new_all = new_all.slice(0,blockindex).concat(new_all.slice(blockindex+1));
@@ -3197,19 +3191,12 @@ firebase.database().ref('matches/' + f_uid + '/' + targetid).update({
 
 }
  
-	 	if ($('.infopopup').length > 0) {
-			
-			 if (firstpos == 'Y'){allowedchange = true;swiperQuestions.swiper.slideNext();swiperQuestions.swiper.slidePrev();  }
-else if  (lastpos == 'Y'){allowedchange = true;swiperQuestions.swiper.slidePrev();swiperQuestions.swiper.slideNext();  }
-else {allowedchange = true;swiperQuestions.swiper.slideNext();swiperQuestions.swiper.slidePrev();} 
-			
-			}	       
-else{
+
 	 
  if (firstpos == 'Y'){myPhotoBrowser.swiper.slideNext();allowedchange = true;myPhotoBrowser.swiper.slidePrev();  }
 else if  (lastpos == 'Y'){myPhotoBrowser.swiper.slidePrev();allowedchange = true;myPhotoBrowser.swiper.slideNext();  }
 else {myPhotoBrowser.swiper.slideNext();allowedchange = true;myPhotoBrowser.swiper.slidePrev();} 
-}	 
+	 
 	
             
     
