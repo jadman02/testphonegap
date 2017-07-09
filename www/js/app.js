@@ -3275,9 +3275,9 @@ $( ".photo-browser-caption" ).append(targetdescription);
   }
         
  if (new_all.length>0){
-	 //checkMatch(targetid);
-		       
-swiperQuestions.slideTo(myPhotoBrowser.swiper.activeIndex);
+	 checkMatch(targetid);
+	if ($('.infopopup').length > 0) {swiperQuestions.slideTo(myPhotoBrowser.swiper.activeIndex);}	       
+
 		      }
 	 
 	 
