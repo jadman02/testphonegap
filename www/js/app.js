@@ -3446,7 +3446,7 @@ var popupHTML = '<div class="popup chatpop">'+
 
 
  ' <div class="toolbar-inner date-inner" style="padding-left:0px;padding-right:0px;display:none;text-align:center;background-color:#2196f3;">'+
-'<input id="datemessageq" placeholder="Message (optional)" style="width: calc(100% - 70px);margin-left:5px;background-color:white;margin-top:5px;max-height:44px;" type="text">'+ 
+'<input id="datemessageq" placeholder="Message (optional)" style="width: calc(100% - 70px);margin-left:5px;background-color:white;max-height:44px;" type="text">'+ 
 '<a href="#" style="z-index:99999999;height:44px;color:white;background-color:#2196f3;float:left;line-height:44px;width:70px;" onclick="processDupdate();"><span style="margin: 0 auto;padding-right:10px;padding-left:10px;">Send</span></a>'+
 
   
