@@ -3008,7 +3008,7 @@ alert(blockindex);
 //nearby_all = [];
 //recent_all = [];
 
-for (var i = 0; i < random_all; i++) {
+for (var i = 0; i < random_all.length; i++) {
 if (random_all[i].id == targetid){alert('position' + i);}
 }
 
