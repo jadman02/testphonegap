@@ -3207,59 +3207,6 @@ if (new_all.length === 0){myPhotoBrowser.close();myApp.closeModal();
 
        // myPhotoBrowser.swiper.slideTo(blockindex);
         if (new_all.length===1){
-  if (myPhotoBrowser.swiper.isBeginning === true){$( ".prevphoto" ).addClass( "disabled" );}
-   else{$( ".prevphoto" ).removeClass( "disabled" );}
-      if (myPhotoBrowser.swiper.isEnd === true){$( ".nextphoto" ).addClass( "disabled" );}
-      else{$( ".nextphoto" ).removeClass( "disabled" );}
- 
- 
-   
-//var windowheight = $( window ).height();
-//$( ".photo-browser-slide img").css( "height", "100% - 144px)" );
-$( ".photo-browser-caption" ).empty();
- $( ".nametag" ).empty();
-
-
-
-
-$( ".datebutton" ).removeClass( "active" );
-$( ".duckbutton" ).removeClass( "active" );
-$( ".duckbutton" ).addClass( "disabled" );
-$( ".datebutton" ).addClass( "disabled" );
-$( ".loaderlink" ).show();
-$( ".orlink" ).hide();
-
-match = 0;
-
-
-         var target = new_all[myPhotoBrowser.activeIndex].url;
-        var pretarget = target.replace("https://graph.facebook.com/", ""); 
-        targetid = String(pretarget.replace("/picture?width=828", ""));
-
-
-$( ".photo-browser-slide.swiper-slide-active img" ).css( "-webkit-filter","grayscale(80%)" );
- //$( ".photo-browser-slide.swiper-slide-active img" ).css( "height", "100% - 144px)" );
-$( ".duck-template" ).hide();
-$( ".date-template" ).hide();
-unmatchNavbar();
-
-$( ".toolbardecide" ).show();
-
-
-
-$( ".datebutton" ).removeClass( "likesme" );
-$( ".duckbutton" ).removeClass( "likesme" );
-
-var targetdescription= new_all[myPhotoBrowser.activeIndex].description;
-targetname = new_all[myPhotoBrowser.activeIndex].name;  
-var targetage = new_all[myPhotoBrowser.activeIndex].age;  
-  $( ".nametag" ).empty();
-$( ".nametag" ).append('<span class="rr r_'+targetid+'">'+targetname+', '+targetage+'</span>');
-$( ".photo-browser-caption" ).empty();
-$( ".photo-browser-caption" ).append(targetdescription);
-    myApp.sizeNavbars();
-
-
 checkMatch(targetid);
  
    
