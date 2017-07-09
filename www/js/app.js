@@ -2784,7 +2784,8 @@ for (i = 0; i < f_largeurls.length; i++) {
 
 
 	
-
+if (photosloaded === true){myswiperphotos.update();}
+    
 photosloaded = true;
 	
 }
