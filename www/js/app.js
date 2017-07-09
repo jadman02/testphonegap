@@ -10736,7 +10736,7 @@ if ($( ".deleteallbutton" ).hasClass( "disabled" )){$( ".deleteallbutton" ).remo
   //swiperPhotos.removeAllSlides();
 //swiperPhotos.destroy();
   myApp.closeModal('.photopopup');
-setTimeout(function(){ updatephotoslider(); }, 3000);
+updatephotoslider(); 
 });
 
     }).catch(function(error) {
