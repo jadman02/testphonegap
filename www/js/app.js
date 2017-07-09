@@ -3029,17 +3029,7 @@ recentswiper.updateSlidesSize();
 }
 	 
 
-var firstpos;
-var lastpos;
 
-	 if (blockindex == (new_all.length-1)){lastpos = 'Y';} else {lastpos ='N';}
-if (blockindex == 0){firstpos = 'Y';} else{firstpos ='N';}
-
-	 if (firstpos == 'Y'){myPhotoBrowser.swiper.slideNext();allowedchange = true;myPhotoBrowser.swiper.slidePrev();  }
-else if  (lastpos == 'Y'){myPhotoBrowser.swiper.slidePrev();allowedchange = true;myPhotoBrowser.swiper.slideNext();  }
-else {myPhotoBrowser.swiper.slideNext();allowedchange = true;myPhotoBrowser.swiper.slidePrev();}  	 
-
-new_all = new_all.slice(0,blockindex).concat(new_all.slice(blockindex+1));
 
 	 
 
@@ -3271,7 +3261,17 @@ checkMatch(targetid);
     });
 
 
+var firstpos;
+var lastpos;
 
+	 if (blockindex == (new_all.length-1)){lastpos = 'Y';} else {lastpos ='N';}
+if (blockindex == 0){firstpos = 'Y';} else{firstpos ='N';}
+
+	 if (firstpos == 'Y'){myPhotoBrowser.swiper.slideNext();allowedchange = true;myPhotoBrowser.swiper.slidePrev();  }
+else if  (lastpos == 'Y'){myPhotoBrowser.swiper.slidePrev();allowedchange = true;myPhotoBrowser.swiper.slideNext();  }
+else {myPhotoBrowser.swiper.slideNext();allowedchange = true;myPhotoBrowser.swiper.slidePrev();}  	 
+
+new_all = new_all.slice(0,blockindex).concat(new_all.slice(blockindex+1));
     
 }
 var canscrollnotif = true;
