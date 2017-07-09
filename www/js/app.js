@@ -2999,20 +2999,36 @@ var swiperno = 0;
         
         
               var blockindex = myPhotoBrowser.swiper.activeIndex;
-alert(blockindex);
+
 	 myPhotoBrowser.swiper.removeSlide(blockindex);
             myPhotoBrowser.swiper.updateSlidesSize();
 	 
 	 
-// = [];
-//nearby_all = [];
-//recent_all = [];
+
 
 for (var i = 0; i < random_all.length; i++) {
-if (random_all[i].id == targetid){alert('position' + i);}
+if (random_all[i].id == targetid){ 
+
+randomswiper.removeSlide(i);  
+randomswiper.updateSlidesSize();
+}
 }
 
-return false;	 
+	 for (var i = 0; i < nearby_all.length; i++) {
+if (nearby_all[i].id == targetid){ 
+nearbyswiper.removeSlide(i);  
+nearbyswiper.updateSlidesSize();
+}
+}
+
+	 	 for (var i = 0; i < recent_all.length; i++) {
+if (recent_all[i].id == targetid){ 
+recentswiper.removeSlide(i);  
+recentswiper.updateSlidesSize();
+}
+}
+	 
+
 var firstpos;
 var lastpos;
 
@@ -3028,7 +3044,7 @@ new_all = new_all.slice(0,blockindex).concat(new_all.slice(blockindex+1));
 	 
 
              myApp.closeModal('.actions-modal');
-            
+       return false;     
                         allowedchange = false;
             
        var first_number,second_number;
