@@ -2999,68 +2999,33 @@ var swiperno = 0;
         
         
               var blockindex = myPhotoBrowser.swiper.activeIndex;
-              var swipertarget = $( ".agecat" ).text();
-              
+myPhotoBrowser.swiper.removeSlide(blockindex);
+            myPhotoBrowser.swiper.updateSlidesSize();
+	 
+	 
+// = [];
+//nearby_all = [];
+//recent_all = [];
 
-//agearray              
-var profilesbefore = 0;
-for (var i = f_lower; i < swipertarget; i++) {
-swiperno ++;
-profilesbefore = profilesbefore + all_matches_photos[i].length;
-
+for (var i = 0; i < random_all; i++) {
+if (random_all[i].id = targetid){alert('position' + i);}
 }
 
-
-
-var ageindex = blockindex - profilesbefore;
-     //  console.log(all_matches_photos[swipertarget]);     
-     //  console.log(new_all);   
-
-
-
-
-
-all_matches_photos[swipertarget] = all_matches_photos[swipertarget].slice(0,ageindex).concat(all_matches_photos[swipertarget].slice(ageindex+1));
-
-
-             
-
-//new all array
-
+	 
 var firstpos;
 var lastpos;
 
-//alert(blockindex);
-//alert(new_all.length);
-
-if (blockindex == (new_all.length-1)){lastpos = 'Y';} else {lastpos ='N';}
+	 if (blockindex == (new_all.length-1)){lastpos = 'Y';} else {lastpos ='N';}
 if (blockindex == 0){firstpos = 'Y';} else{firstpos ='N';}
 
-
-//alert(firstpos + 'firstpos');
-//alert(lastpos + 'lastpos');
+	 if (firstpos == 'Y'){myPhotoBrowser.swiper.slideNext();allowedchange = true;myPhotoBrowser.swiper.slidePrev();  }
+else if  (lastpos == 'Y'){myPhotoBrowser.swiper.slidePrev();allowedchange = true;myPhotoBrowser.swiper.slideNext();  }
+else {myPhotoBrowser.swiper.slideNext();allowedchange = true;myPhotoBrowser.swiper.slidePrev();}  	 
 
 new_all = new_all.slice(0,blockindex).concat(new_all.slice(blockindex+1));
-      
-//console.log(all_matches_photos[swipertarget]);     
-  //     console.log(new_all); 
 
-//remove slide from photobrowser              
-              myPhotoBrowser.swiper.removeSlide(blockindex);
-            myPhotoBrowser.swiper.updateSlidesSize() ;
-              
+	 
 
-//remove from curswiper
-
-var realswiperno = swiperno + 1;
-
-$$('.swiper-container')[swiperno].swiper.removeSlide(ageindex);  
-            $$('.swiper-container')[swiperno].swiper.updateSlidesSize() ;   
-              
-              
-  
-             if (all_matches_photos[swipertarget].length ===1) {$( ".single_"+i ).show();$( ".multiple_"+i ).hide();}
-             if (all_matches_photos[swipertarget].length ===0) {$( ".single_"+i ).show();$( ".swiper-"+i ).hide();}
              myApp.closeModal('.actions-modal');
             
                         allowedchange = false;
@@ -3191,9 +3156,7 @@ firebase.database().ref('matches/' + f_uid + '/' + targetid).update({
 }
       
 
-if (firstpos == 'Y'){myPhotoBrowser.swiper.slideNext();allowedchange = true;myPhotoBrowser.swiper.slidePrev();  }
-else if  (lastpos == 'Y'){myPhotoBrowser.swiper.slidePrev();allowedchange = true;myPhotoBrowser.swiper.slideNext();  }
-else {myPhotoBrowser.swiper.slideNext();allowedchange = true;myPhotoBrowser.swiper.slidePrev();}              
+            
     
     //myPhotoBrowser.swiper.slideTo(blockindex);          
 
