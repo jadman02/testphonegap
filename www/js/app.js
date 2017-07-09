@@ -3002,10 +3002,49 @@ var swiperno = 0;
 
 	 myPhotoBrowser.swiper.removeSlide(blockindex);
             myPhotoBrowser.swiper.updateSlidesSize();
-	 
-	 
+	 new_all = new_all.slice(0,blockindex).concat(new_all.slice(blockindex+1));
 
+	 if (new_all.length>0){
+		for (var i = 0; i < random_all.length; i++) {
+if (random_all[i].id == targetid){ 
 
+randomswiper.removeSlide(i);  
+randomswiper.updateSlidesSize();
+	random_all = random_all.slice(0,i).concat(random_all.slice(i+1));
+}
+}
+
+	 for (var i = 0; i < nearby_all.length; i++) {
+if (nearby_all[i].id == targetid){ 
+nearbyswiper.removeSlide(i);  
+nearbyswiper.updateSlidesSize();
+	nearby_all = nearby_all.slice(0,i).concat(nearby_all.slice(i+1));
+}
+}
+
+	 	 for (var i = 0; i < recent_all.length; i++) {
+if (recent_all[i].id == targetid){ 
+recentswiper.removeSlide(i);  
+recentswiper.updateSlidesSize();
+	recent_all = recent_all.slice(0,i).concat(recent_all.slice(i+1));
+
+}
+}
+	 }
+	 
+	 else {
+	 	randomswiper.removeAllSlides();
+nearbyswiper.removeAllSlides();
+recentswiper.removeAllSlides();
+randomswiper.destroy();
+nearbyswiper.destroy();
+recentswiper.destroy();
+
+		new_all = [];
+random_all = [];
+nearby_all = [];
+recent_all = [];
+	 }
 
 	 
 
@@ -3014,7 +3053,6 @@ var lastpos;
 
 	 if (blockindex == (new_all.length-1)){lastpos = 'Y';} else {lastpos ='N';}
 if (blockindex == 0){firstpos = 'Y';} else{firstpos ='N';}
-new_all = new_all.slice(0,blockindex).concat(new_all.slice(blockindex+1));
 
 
 	 
@@ -3184,17 +3222,7 @@ if (new_all.length === 0){myPhotoBrowser.close();myApp.closeModal();
     '</div>');
 
 			  
-	randomswiper.removeAllSlides();
-nearbyswiper.removeAllSlides();
-recentswiper.removeAllSlides();
-randomswiper.destroy();
-nearbyswiper.destroy();
-recentswiper.destroy();
-
-		new_all = [];
-random_all = [];
-nearby_all = [];
-recent_all = [];		  
+		  
 
 }
              
@@ -3203,31 +3231,7 @@ recent_all = [];
         if (new_all.length>0){
 checkMatch(targetid);
  
-		for (var i = 0; i < random_all.length; i++) {
-if (random_all[i].id == targetid){ 
 
-randomswiper.removeSlide(i);  
-randomswiper.updateSlidesSize();
-	random_all = random_all.slice(0,i).concat(random_all.slice(i+1));
-}
-}
-
-	 for (var i = 0; i < nearby_all.length; i++) {
-if (nearby_all[i].id == targetid){ 
-nearbyswiper.removeSlide(i);  
-nearbyswiper.updateSlidesSize();
-	nearby_all = nearby_all.slice(0,i).concat(nearby_all.slice(i+1));
-}
-}
-
-	 	 for (var i = 0; i < recent_all.length; i++) {
-if (recent_all[i].id == targetid){ 
-recentswiper.removeSlide(i);  
-recentswiper.updateSlidesSize();
-	recent_all = recent_all.slice(0,i).concat(recent_all.slice(i+1));
-
-}
-}
    
   }
         
