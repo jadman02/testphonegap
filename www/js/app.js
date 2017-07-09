@@ -10750,7 +10750,7 @@ function updatephotoslider(){
 
 myswiperphotos.removeAllSlides();
 
-
+alert(addedlargearray);
 	
 if (addedlargearray.length > 0){
 
