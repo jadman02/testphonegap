@@ -3268,13 +3268,15 @@ $( ".photo-browser-caption" ).append(targetdescription);
 
 
 
-		checkMatch(targetid);
+		
  
 
    
   }
         
-        
+ if (new_all.length>0){checkMatch(targetid);}
+	 
+	 
     });
 
 
