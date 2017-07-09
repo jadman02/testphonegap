@@ -878,7 +878,7 @@ recent_all = [];
 '    <div class="content-block-title" style="width:100%;text-align:center;margin-top:15px;margin-left:0px;">How this App Works</div>'+
 		' <div class="swiper-wrapper">'+
      '   <div class="swiper-slide" style="height:'+swiperheight +'px;"><div class="squareheight" style="height:153px;top:50%;margin-top:-95px;position:absolute;width:300px;left:50%;margin-left:-150px;"><i class="twa twa-4x twa-coffee" style="margin-top:5px;"></i><h2>Find your next<br/> coffee date...</h2></div></div>'+
-     '   <div class="swiper-slide" style="height:'+swiperheight +'px;"><div class="squareheight" style="height:153px;top:50%;margin-top:-95px;position:absolute;width:300px;left:50%;margin-left:-150px"><i class="twa twa-4x twa-sweat-drops" style="margin-top:5px;"></i><h2>Or invite someone over<br/> tonight...</h2></div></div>'+
+     '   <div class="swiper-slide" style="height:'+swiperheight +'px;"><div class="squareheight" style="height:153px;top:50%;margin-top:-95px;position:absolute;width:300px;left:50%;margin-left:-150px"><i class="twa twa-4x twa-eggplant" style="margin-top:5px;"></i><h2>Or invite someone over<br/> tonight...</h2></div></div>'+
      '   <div class="swiper-slide" style="height:'+swiperheight +'px;"><div class="squareheight" style="height:153px;top:50%;margin-top:-95px;position:absolute;width:300px;left:50%;margin-left:-150px"><i class="twa twa-4x twa-calendar" style="margin-top:5px;"></i><h2>Once you both agree on</br> a time to meet...</h2></div></div>'+
      '   <div class="swiper-slide" style="height:'+swiperheight +'px;"><div class="squareheight" style="height:153px;top:50%;margin-top:-95px;position:absolute;width:300px;left:50%;margin-left:-150px"><i class="twa twa-4x twa-clock12" style="margin-top:5px;"></i><h2>Chat is enabled until <br/>midnight of your date...</h2></div></div>'+
      '   <div class="swiper-slide" style="height:'+swiperheight +'px;"><div class="squareheight" style="height:153px;top:50%;margin-top:-95px;position:absolute;width:300px;left:50%;margin-left:-150px"><i class="twa twa-4x twa-bomb" style="margin-top:5px;"></i><h2>You can send photos that delete after 24 hours...</h2></div></div>'+
@@ -3857,7 +3857,7 @@ var fivestamp_timestamp = Math.round(fivestamp/1000);
 
 
 
-    if ((pickerCustomToolbar.cols[0].displayValue == 'Today') && (pickerCustomToolbar.cols[1].displayValue == 'Morning') && (unixnow>middaystamp_timestamp)){pickerCustomToolbar.cols[1].setValue('');}
+    if ((pickerCustomToolbar.cols[0].displayValue == 'Today') && (pickerCustomToolbar.cols[1].displayValue == 'Morning') && (unixnow<middaystamp_timestamp)){pickerCustomToolbar.cols[1].setValue('');}
         if ((pickerCustomToolbar.cols[0].displayValue == 'Today') && (pickerCustomToolbar.cols[1].displayValue == 'Mid-day') && (unixnow>threestamp_timestamp)){pickerCustomToolbar.cols[1].setValue('');}
                 if ((pickerCustomToolbar.cols[0].displayValue == 'Today') && (pickerCustomToolbar.cols[1].displayValue == 'Afternoon') && (unixnow>fivestamp_timestamp)){pickerCustomToolbar.cols[1].setValue('');}
 
