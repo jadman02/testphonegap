@@ -3841,7 +3841,30 @@ pickerCustomToolbar = myApp.picker({
                  onOpen: function (p){$( '.picker-items-col-wrapper' ).css("width", + $( document ).width() + "px");},
     toolbar:false,
 onChange:function(p, value, displayValue){
+setTimeout(function(){
 
+var middaystamp = new Date();
+middaystamp.setHours(12,00,00,000);
+var middaystamp_timestamp = Math.round(middaystamp/1000);
+
+var threestamp = new Date();
+threestamp.setHours(12,00,00,000);
+var threestamp_timestamp = Math.round(threestamp/1000);
+
+var fivestamp = new Date();
+fivestamp.setHours(17,00,00,000);
+var fivestamp_timestamp = Math.round(fivestamp/1000);
+
+
+
+    if ((pickerCustomToolbar.cols[0].displayValue == 'Today') && (pickerCustomToolbar.cols[1].displayValue == 'Morning') && (unixnow>middaystamp_timestamp)){pickerCustomToolbar.cols[1].setValue('');}
+        if ((pickerCustomToolbar.cols[0].displayValue == 'Today') && (pickerCustomToolbar.cols[1].displayValue == 'Mid-day') && (unixnow>threestamp_timestamp)){pickerCustomToolbar.cols[1].setValue('');}
+                if ((pickerCustomToolbar.cols[0].displayValue == 'Today') && (pickerCustomToolbar.cols[1].displayValue == 'Afternoon') && (unixnow>fivestamp_timestamp)){pickerCustomToolbar.cols[1].setValue('');}
+
+
+}, 1000);
+	
+	
     if (p.cols[0].displayValue == 'Now' && (dateset == 'Y')){p.cols[1].setValue('');}
 
 },
