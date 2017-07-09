@@ -4774,7 +4774,7 @@ $( ".sender-inner" ).hide();
 }
 
 function reverseRequest(){
-//$( ".datetoolbar" ).hide();
+if ($('.availtitle').length > 0){$( ".datetoolbar" ).hide();}
 	myApp.closeModal('.actions-modal');
 	$( ".profileyomain" ).show();
 $( ".dateheader" ).hide();
