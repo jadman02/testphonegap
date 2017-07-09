@@ -3003,7 +3003,13 @@ var swiperno = 0;
 	 myPhotoBrowser.swiper.removeSlide(blockindex);
             myPhotoBrowser.swiper.updateSlidesSize();
 	 
-	 
+	 var firstpos;
+var lastpos;
+
+	 if (blockindex == (new_all.length-1)){lastpos = 'Y';} else {lastpos ='N';}
+if (blockindex == 0){firstpos = 'Y';} else{firstpos ='N';}
+
+	new_all = new_all.slice(0,blockindex).concat(new_all.slice(blockindex+1));
 
 
 for (var i = 0; i < random_all.length; i++) {
@@ -3162,7 +3168,9 @@ firebase.database().ref('matches/' + f_uid + '/' + targetid).update({
 
 }
       
-
+	 if (firstpos == 'Y'){myPhotoBrowser.swiper.slideNext();allowedchange = true;myPhotoBrowser.swiper.slidePrev();  }
+else if  (lastpos == 'Y'){myPhotoBrowser.swiper.slidePrev();allowedchange = true;myPhotoBrowser.swiper.slideNext();  }
+else {myPhotoBrowser.swiper.slideNext();allowedchange = true;myPhotoBrowser.swiper.slidePrev();}  
             
     
     //myPhotoBrowser.swiper.slideTo(blockindex);          
@@ -3198,11 +3206,7 @@ if (new_all.length === 0){myPhotoBrowser.close();myApp.closeModal();
              
 
        // myPhotoBrowser.swiper.slideTo(blockindex);
-        if (new_all.length===1){
-  if (myPhotoBrowser.swiper.isBeginning === true){$( ".prevphoto" ).addClass( "disabled" );}
-   else{$( ".prevphoto" ).removeClass( "disabled" );}
-      if (myPhotoBrowser.swiper.isEnd === true){$( ".nextphoto" ).addClass( "disabled" );}
-      else{$( ".nextphoto" ).removeClass( "disabled" );}
+
  
  
    
@@ -3261,17 +3265,11 @@ checkMatch(targetid);
     });
 
 
-var firstpos;
-var lastpos;
 
-	 if (blockindex == (new_all.length-1)){lastpos = 'Y';} else {lastpos ='N';}
-if (blockindex == 0){firstpos = 'Y';} else{firstpos ='N';}
+	
+	 
 
-	 if (firstpos == 'Y'){myPhotoBrowser.swiper.slideNext();allowedchange = true;myPhotoBrowser.swiper.slidePrev();  }
-else if  (lastpos == 'Y'){myPhotoBrowser.swiper.slidePrev();allowedchange = true;myPhotoBrowser.swiper.slideNext();  }
-else {myPhotoBrowser.swiper.slideNext();allowedchange = true;myPhotoBrowser.swiper.slidePrev();}  	 
 
-new_all = new_all.slice(0,blockindex).concat(new_all.slice(blockindex+1));
     
 }
 var canscrollnotif = true;
