@@ -10743,8 +10743,10 @@ function updatephotoslider(){
 
 myswiperphotos.removeAllSlides();
 
-console.log(addedlargearray);
+alert(addedlargearray);
 
+	alert(JSON.stringify(addedlargearray));
+	
 if (addedlargearray.length > 0){
 
 
