@@ -3029,6 +3029,12 @@ recentswiper.updateSlidesSize();
 }
 	 
 
+var firstpos;
+var lastpos;
+
+	 if (blockindex == (new_all.length-1)){lastpos = 'Y';} else {lastpos ='N';}
+if (blockindex == 0){firstpos = 'Y';} else{firstpos ='N';}
+new_all = new_all.slice(0,blockindex).concat(new_all.slice(blockindex+1));
 
 
 	 
@@ -3036,7 +3042,7 @@ recentswiper.updateSlidesSize();
              myApp.closeModal('.actions-modal');
      
                         allowedchange = false;
-            checkMatch(targetid);
+
        var first_number,second_number;
 
 if (Number(f_uid) > Number(targetid) ) {second_number = f_uid;first_number = targetid;}
@@ -3162,7 +3168,9 @@ firebase.database().ref('matches/' + f_uid + '/' + targetid).update({
 
 }
       
-
+	 if (firstpos == 'Y'){myPhotoBrowser.swiper.slideNext();allowedchange = true;myPhotoBrowser.swiper.slidePrev();  }
+else if  (lastpos == 'Y'){myPhotoBrowser.swiper.slidePrev();allowedchange = true;myPhotoBrowser.swiper.slideNext();  }
+else {myPhotoBrowser.swiper.slideNext();allowedchange = true;myPhotoBrowser.swiper.slidePrev();} 
             
     
     //myPhotoBrowser.swiper.slideTo(blockindex);          
@@ -3261,17 +3269,9 @@ checkMatch(targetid);
     });
 
 
-var firstpos;
-var lastpos;
+ 	 
 
-	 if (blockindex == (new_all.length-1)){lastpos = 'Y';} else {lastpos ='N';}
-if (blockindex == 0){firstpos = 'Y';} else{firstpos ='N';}
 
-	 if (firstpos == 'Y'){myPhotoBrowser.swiper.slideNext();allowedchange = true;myPhotoBrowser.swiper.slidePrev();  }
-else if  (lastpos == 'Y'){myPhotoBrowser.swiper.slidePrev();allowedchange = true;myPhotoBrowser.swiper.slideNext();  }
-else {myPhotoBrowser.swiper.slideNext();allowedchange = true;myPhotoBrowser.swiper.slidePrev();}  	 
-
-new_all = new_all.slice(0,blockindex).concat(new_all.slice(blockindex+1));
     
 }
 var canscrollnotif = true;
