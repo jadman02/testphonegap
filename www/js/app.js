@@ -3044,9 +3044,9 @@ new_all = new_all.slice(0,blockindex).concat(new_all.slice(blockindex+1));
 	 
 
              myApp.closeModal('.actions-modal');
-       return false;     
+     
                         allowedchange = false;
-            
+            checkMatch(targetid);
        var first_number,second_number;
 
 if (Number(f_uid) > Number(targetid) ) {second_number = f_uid;first_number = targetid;}
