@@ -3274,7 +3274,11 @@ $( ".photo-browser-caption" ).append(targetdescription);
    
   }
         
- if (new_all.length>0){checkMatch(targetid);}
+ if (new_all.length>0){
+	 //checkMatch(targetid);
+		       
+swiperQuestions.slideTo(myPhotoBrowser.swiper.activeIndex);
+		      }
 	 
 	 
     });
