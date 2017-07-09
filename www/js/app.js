@@ -3005,6 +3005,8 @@ var swiperno = 0;
 	 myPhotoBrowser.swiper.removeSlide(blockindex);
             myPhotoBrowser.swiper.updateSlidesSize();
 	 
+	 swiperQuestions.removeSlide(blockindex);
+            swiperQuestions.updateSlidesSize();
 	 
 	 
 	 new_all = new_all.slice(0,blockindex).concat(new_all.slice(blockindex+1));
