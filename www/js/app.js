@@ -2999,7 +2999,7 @@ var swiperno = 0;
         
         
               var blockindex = myPhotoBrowser.swiper.activeIndex;
-
+swiperQuestions.removeSlide(blockindex);
 	 myPhotoBrowser.swiper.removeSlide(blockindex);
             myPhotoBrowser.swiper.updateSlidesSize();
 	 new_all = new_all.slice(0,blockindex).concat(new_all.slice(blockindex+1));
