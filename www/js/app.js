@@ -3859,7 +3859,7 @@ var fivestamp_timestamp = Math.round(fivestamp/1000);
 
 
 
-    if ((pickerCustomToolbar.cols[0].displayValue == 'Today') && (pickerCustomToolbar.cols[1].displayValue == 'Morning') && (unixnow<middaystamp_timestamp)){pickerCustomToolbar.cols[1].setValue('');}
+    if ((pickerCustomToolbar.cols[0].displayValue == 'Today') && (pickerCustomToolbar.cols[1].displayValue == 'Morning') && (unixnow>middaystamp_timestamp)){pickerCustomToolbar.cols[1].setValue('');}
         if ((pickerCustomToolbar.cols[0].displayValue == 'Today') && (pickerCustomToolbar.cols[1].displayValue == 'Mid-day') && (unixnow>threestamp_timestamp)){pickerCustomToolbar.cols[1].setValue('');}
                 if ((pickerCustomToolbar.cols[0].displayValue == 'Today') && (pickerCustomToolbar.cols[1].displayValue == 'Afternoon') && (unixnow>fivestamp_timestamp)){pickerCustomToolbar.cols[1].setValue('');}
 
