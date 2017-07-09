@@ -10906,7 +10906,7 @@ for (i = 0; i < newurl.length; i++) {
 
 
 
-   $( ".wrapper-photos" ).append('<div class="swiper-slide" style="height:250px;background-image:url(\''+newurl[i]+'\');background-size:cover;background-position:50% 50%;"><div class="button" style="background-color:#2196f3;color:white;position:absolute;bottom:10px;right:10px;" onclick="deleteIndividual()"><i class="pe-7s-trash pe-lg"></i> Delete</div></div>');
+   $( ".wrapper-photos" ).append('<div class="swiper-slide" style="height:250px;background-image:url(\''+newurl[i]+'\');background-size:cover;background-position:50% 50%;"><div class="button" style="border:0;border-radius:0px;background-color:#ff3b30;color:white;position:absolute;bottom:10px;right:5px;" onclick="deleteIndividual()"><i class="pe-7s-trash pe-lg"></i> Remove</div></div>');
    
 }
   myApp.closeModal('.redorderpopup');
