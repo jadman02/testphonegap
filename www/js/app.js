@@ -3843,6 +3843,8 @@ pickerCustomToolbar = myApp.picker({
 onChange:function(p, value, displayValue){
 setTimeout(function(){
 
+	var unixnow = Math.round(+new Date()/1000);
+	
 var middaystamp = new Date();
 middaystamp.setHours(12,00,00,000);
 var middaystamp_timestamp = Math.round(middaystamp/1000);
