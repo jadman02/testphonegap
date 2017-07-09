@@ -3446,9 +3446,12 @@ var popupHTML = '<div class="popup chatpop">'+
 
 
  ' <div class="toolbar-inner date-inner" style="padding-left:0px;padding-right:0px;display:none;text-align:center;background-color:#2196f3;">'+
-  '<div style="width: calc(100% - 70px); height:44px;max-height:44px;background-color:#2196f3;padding-left:5px;padding-right:5px;float:left;" class="link"><input id="datemessageq" placeholder="Message (optional)" style="color:white;background-color:#2196f3;margin-top:5px;max-height:44px;" type="text"></div>'+
-  '<div style="float:left;width:70px;"><a href="#" class="link" style="height:44px;color:white;background-color:#2196f3;float:left;" onclick="processDupdate();"><span style="margin: 0 auto;padding-right:10px;">Send</span></a></div>'+
-  '</div>'+
+'<input id="datemessageq" placeholder="Message (optional)" style="color:white;background-color:#2196f3;margin-top:5px;max-height:44px;" type="text">'+ 
+'<a href="#" class="link" style="height:44px;color:white;background-color:#2196f3;float:left;" onclick="processDupdate();"><span style="margin: 0 auto;padding-right:10px;">Send</span></a>'+
+
+  
+    
+    '</div>'+
 
  ' <div class="toolbar-inner message-inner" style="display:none;background-color:#2196f3;padding-left:0px;padding-right:0px;">'+
   '<a href="#" class="link icon-only" style="margin-left:5px;"><i class="pe-7s-camera pe-lg" style="color:white;font-size:28px;"></i><i class="twa twa-bomb" style="z-index:999;margin-left:-10px;margin-top:-15px;"></i></a> <input type="file" size="70" accept="image/*" class="dealPictureField imagenotchosen" id="takePictureField_" onchange="getPicture();" style="background-color:transparent;color:transparent;float:left;cursor: pointer;height:54px;width:50px;z-index:1;opacity:0;background-color:red;margin-top:-12px;margin-left:-50px;"><form><input id="messagearea" type="text" placeholder="Enter Message"></form><a href="#" class="link sendbutton" style="color:white;margin-right:10px;margin-left:10px;" onclick="sendMessage();">Send</a>'+
@@ -4771,7 +4774,7 @@ $( ".sender-inner" ).hide();
 }
 
 function reverseRequest(){
-//$( ".datetoolbar" ).hide();
+$( ".datetoolbar" ).hide();
 	myApp.closeModal('.actions-modal');
 	$( ".profileyomain" ).show();
 $( ".dateheader" ).hide();
