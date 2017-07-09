@@ -2128,14 +2128,14 @@ if (d_response=='Y'){noChange();}
 else if (d_response=="W"){reverseRequest();dateConfirmationPage();}
 
 }
-else{dateRequest();$( ".datetoolbar" ).show();}
+else{$( ".datetoolbar" ).show();dateRequest();}
 
 
    
 
 }
 
-else {dateRequest();}
+else {$( ".datetoolbar" ).show();dateRequest();}
 
 }
 
