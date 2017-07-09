@@ -2128,14 +2128,14 @@ if (d_response=='Y'){noChange();}
 else if (d_response=="W"){reverseRequest();dateConfirmationPage();}
 
 }
-else{$( ".datetoolbar" ).show();dateRequest();}
+else{dateRequest();}
 
 
    
 
 }
 
-else {$( ".datetoolbar" ).show();dateRequest();}
+else {dateRequest();}
 
 }
 
@@ -3424,7 +3424,7 @@ var popupHTML = '<div class="popup chatpop">'+
 
 '<div class="pages" style="margin-top:-44px;">'+
 '<div data-page="datepopup" class="page">'+
-'<div class="toolbar messagebar datetoolbar" style="display:none;background-color:transparent;">'+
+'<div class="toolbar messagebar datetoolbar" style="display:none;background-color:red;">'+
 
 
 ' <div class="toolbar-inner yes-inner" style="background-color:rgba(247, 247, 248,0.9);margin-top:-10px;height:54px;padding-bottom:10px;display:none;text-align:center;">'+
