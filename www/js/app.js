@@ -3195,9 +3195,9 @@ firebase.database().ref('matches/' + f_uid + '/' + targetid).update({
  
 
 	 
- if (firstpos == 'Y'){myPhotoBrowser.swiper.slideNext();allowedchange = true;myPhotoBrowser.swiper.slidePrev();swiperQuestions.slideTo(myPhotoBrowser.swiper.activeIndex);  }
-else if  (lastpos == 'Y'){myPhotoBrowser.swiper.slidePrev();allowedchange = true;myPhotoBrowser.swiper.slideNext();swiperQuestions.slideTo(myPhotoBrowser.swiper.activeIndex);  }
-else {myPhotoBrowser.swiper.slideNext();allowedchange = true;myPhotoBrowser.swiper.slidePrev();swiperQuestions.slideTo(myPhotoBrowser.swiper.activeIndex); }
+ if (firstpos == 'Y'){myPhotoBrowser.swiper.slideNext();allowedchange = true;myPhotoBrowser.swiper.slidePrev();swiperQuestions.slideNext();swiperQuestions.slidePrev();  }
+else if  (lastpos == 'Y'){myPhotoBrowser.swiper.slidePrev();allowedchange = true;myPhotoBrowser.swiper.slideNext();swiperQuestions.slidePrev();swiperQuestions.slideNext();  }
+else {myPhotoBrowser.swiper.slideNext();allowedchange = true;myPhotoBrowser.swiper.slidePrev();swiperQuestions.slideNext();swiperQuestions.slidePrev(); }
 	 
 	
             
