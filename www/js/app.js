@@ -3201,8 +3201,7 @@ else {myPhotoBrowser.swiper.slideNext();allowedchange = true;myPhotoBrowser.swip
 }	 
 else {
 	
-myPhotoBrowser.swiper.slideNext();allowedchange = true;myPhotoBrowser.swiper.slidePrev();swiperQuestions.slideNext();swiperQuestions.slidePrev(); 
-	
+myApp.closeModal('.infopopup') ;	
 	 }
 	
             
