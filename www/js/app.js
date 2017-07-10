@@ -5804,7 +5804,7 @@ $( ".onlineblock" ).show();
 
 
      
-'<div class="swiper-container swiper-questions" style="height:100%;overflow-y:scroll;will-change: opacity;">'+
+'<div class="swiper-container swiper-questions" style="height:100%;overflow-y:scroll;">'+
  
 
  '<div style="height:100%;width:100%;overflow-x:hidden;" onclick="backtoProfile();">'+
@@ -5858,7 +5858,7 @@ console.log(new_all);
 
 
 
-'<h3 onclick="scrolltoTop()" class="adown arrowdown_'+new_all[i].id+' availyope availyo_'+ new_all[i].id+'" style="display:none;margin-top:-60px;right:0px;'+boxcolor+';font-size:14px;padding:0px;margin-left:10px;"><i class="pe-7f-angle-down pe-3x" style="float:left;"></i>'+
+'<h3 onclick="scrolltoTop()" class="adown arrowdown_'+new_all[i].id+' availyope availyo_'+ new_all[i].id+'" style="display:block;margin-top:-60px;right:0px;'+boxcolor+';font-size:14px;padding:0px;margin-left:10px;"><i class="pe-7f-angle-down pe-3x" style="float:left;"></i>'+
           
 '</h3>'+
 
@@ -6217,7 +6217,7 @@ swiperQuestions = myApp.swiper('.swiper-questions', {
   $( ".infoprofile").hide();$( ".adown" ).css( "opacity","1" );
   var wrapperheightshould = $(".prof_" + swiper.activeIndex).height();
 $( ".wrapper-questions").css("height",(wrapperheightshould - 150)+ "px");
-$( ".availyope").hide();
+//$( ".availyope").hide();
 $( ".availyo_"+ new_all[0].id ).show();
 
 
