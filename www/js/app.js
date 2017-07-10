@@ -3194,11 +3194,14 @@ firebase.database().ref('matches/' + f_uid + '/' + targetid).update({
 }
  
 
-	 
+if (new_all.length>1){	 
  if (firstpos == 'Y'){myPhotoBrowser.swiper.slideNext();allowedchange = true;myPhotoBrowser.swiper.slidePrev();swiperQuestions.slideNext();swiperQuestions.slidePrev();  }
 else if  (lastpos == 'Y'){myPhotoBrowser.swiper.slidePrev();allowedchange = true;myPhotoBrowser.swiper.slideNext();swiperQuestions.slidePrev();swiperQuestions.slideNext();  }
 else {myPhotoBrowser.swiper.slideNext();allowedchange = true;myPhotoBrowser.swiper.slidePrev();swiperQuestions.slideNext();swiperQuestions.slidePrev(); }
-	 
+}	 
+else {
+	swiperQuestions.slideTo(0); 
+	 }
 	
             
     
