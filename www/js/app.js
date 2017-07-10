@@ -3200,7 +3200,8 @@ else if  (lastpos == 'Y'){myPhotoBrowser.swiper.slidePrev();allowedchange = true
 else {myPhotoBrowser.swiper.slideNext();allowedchange = true;myPhotoBrowser.swiper.slidePrev();swiperQuestions.slideNext();swiperQuestions.slidePrev(); }
 }	 
 else {
-	
+	swiperQuestions.slideTo(0);
+	$( ".availyo_"+ new_all[0].id ).show();
 	
 	 }
 	
@@ -5858,7 +5859,7 @@ console.log(new_all);
 
 
 
-'<h3 onclick="scrolltoTop()" class="adown arrowdown_'+new_all[i].id+' availyope availyo_'+ new_all[i].id+'" style="display:block;margin-top:-60px;right:0px;'+boxcolor+';font-size:14px;padding:0px;margin-left:10px;"><i class="pe-7f-angle-down pe-3x" style="float:left;"></i>'+
+'<h3 onclick="scrolltoTop()" class="adown arrowdown_'+new_all[i].id+' availyope availyo_'+ new_all[i].id+'" style="display:none;margin-top:-60px;right:0px;'+boxcolor+';font-size:14px;padding:0px;margin-left:10px;"><i class="pe-7f-angle-down pe-3x" style="float:left;"></i>'+
           
 '</h3>'+
 
@@ -5867,7 +5868,7 @@ console.log(new_all);
 
 
 
-'<div onclick="scrolltoTop()" style="z-index:99999999;margin-top:15px;background-color:white;border-radius:20px;border-bottom-right-radius:0px;border-bottom-left-radius:0px;margin-bottom:20px;" class="prof_'+i+' infoprofile availyo_'+ new_all[i].id+'">'+
+'<div onclick="scrolltoTop()" style="z-index:99999999;margin-top:15px;background-color:white;border-radius:20px;border-bottom-right-radius:0px;border-bottom-left-radius:0px;margin-bottom:20px;display:none;" class="prof_'+i+' infoprofile availyo_'+ new_all[i].id+'">'+
 
 
    
@@ -6214,11 +6215,11 @@ swiperQuestions = myApp.swiper('.swiper-questions', {
 
 
   myPhotoBrowser.swiper.setWrapperTranslate(0);
-  //$( ".infoprofile").hide();
+  $( ".infoprofile").hide();
 	  $( ".adown" ).css( "opacity","1" );
   var wrapperheightshould = $(".prof_" + swiper.activeIndex).height();
 $( ".wrapper-questions").css("height",(wrapperheightshould - 150)+ "px");
-//$( ".availyope").hide();
+$( ".availyope").hide();
 $( ".availyo_"+ new_all[0].id ).show();
 
 
