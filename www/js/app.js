@@ -3000,7 +3000,7 @@ var swiperno = 0;
         
               var blockindex = myPhotoBrowser.swiper.activeIndex;
 	 
-	 
+	  targetid = new_all[blockindex].id;
 
 	 myPhotoBrowser.swiper.removeSlide(blockindex);
             myPhotoBrowser.swiper.updateSlidesSize();
@@ -3070,7 +3070,7 @@ if (blockindex == 0){firstpos = 'Y';} else{firstpos ='N';}
 
 
 		  
-		  targetid = new_all[blockindex].id;
+		 
  
 
    
