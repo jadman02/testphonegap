@@ -3010,7 +3010,7 @@ var swiperno = 0;
 	 
 	 
 	 new_all = new_all.slice(0,blockindex).concat(new_all.slice(blockindex+1));
-alert(new_all.length);
+
 	 if (new_all.length>0){
 		for (var i = 0; i < random_all.length; i++) {
 if (random_all[i].id == targetid){ 
@@ -3068,6 +3068,52 @@ if (blockindex == 0){firstpos = 'Y';} else{firstpos ='N';}
      
                         allowedchange = false;
 
+	  if (new_all.length===1){
+$( ".photo-browser-caption" ).empty();
+ $( ".nametag" ).empty();
+
+
+targetid = new_all[0].id;
+
+$( ".datebutton" ).removeClass( "active" );
+$( ".duckbutton" ).removeClass( "active" );
+$( ".duckbutton" ).addClass( "disabled" );
+$( ".datebutton" ).addClass( "disabled" );
+$( ".loaderlink" ).show();
+$( ".orlink" ).hide();
+
+match = 0;
+
+$( ".photo-browser-slide.swiper-slide-active img" ).css( "-webkit-filter","grayscale(80%)" );
+ //$( ".photo-browser-slide.swiper-slide-active img" ).css( "height", "100% - 144px)" );
+$( ".duck-template" ).hide();
+$( ".date-template" ).hide();
+unmatchNavbar();
+
+$( ".toolbardecide" ).show();
+
+
+
+$( ".datebutton" ).removeClass( "likesme" );
+$( ".duckbutton" ).removeClass( "likesme" );
+
+var targetdescription= new_all[myPhotoBrowser.activeIndex].description;
+targetname = new_all[myPhotoBrowser.activeIndex].name;  
+var targetage = new_all[myPhotoBrowser.activeIndex].age;  
+  $( ".nametag" ).empty();
+$( ".nametag" ).append('<span class="rr r_'+targetid+'">'+targetname+', '+targetage+'</span>');
+$( ".photo-browser-caption" ).empty();
+$( ".photo-browser-caption" ).append(targetdescription);
+    myApp.sizeNavbars();
+
+
+
+		
+ 
+
+   
+  }
+	 
        var first_number,second_number;
 
 if (Number(f_uid) > Number(targetid) ) {second_number = f_uid;first_number = targetid;}
@@ -3244,51 +3290,7 @@ if (new_all.length === 0){myPhotoBrowser.close();myApp.closeModal();
              
 
        // myPhotoBrowser.swiper.slideTo(blockindex);
-        if (new_all.length===1){
-$( ".photo-browser-caption" ).empty();
- $( ".nametag" ).empty();
-
-
-
-
-$( ".datebutton" ).removeClass( "active" );
-$( ".duckbutton" ).removeClass( "active" );
-$( ".duckbutton" ).addClass( "disabled" );
-$( ".datebutton" ).addClass( "disabled" );
-$( ".loaderlink" ).show();
-$( ".orlink" ).hide();
-
-match = 0;
-
-$( ".photo-browser-slide.swiper-slide-active img" ).css( "-webkit-filter","grayscale(80%)" );
- //$( ".photo-browser-slide.swiper-slide-active img" ).css( "height", "100% - 144px)" );
-$( ".duck-template" ).hide();
-$( ".date-template" ).hide();
-unmatchNavbar();
-
-$( ".toolbardecide" ).show();
-
-
-
-$( ".datebutton" ).removeClass( "likesme" );
-$( ".duckbutton" ).removeClass( "likesme" );
-
-var targetdescription= new_all[myPhotoBrowser.activeIndex].description;
-targetname = new_all[myPhotoBrowser.activeIndex].name;  
-var targetage = new_all[myPhotoBrowser.activeIndex].age;  
-  $( ".nametag" ).empty();
-$( ".nametag" ).append('<span class="rr r_'+targetid+'">'+targetname+', '+targetage+'</span>');
-$( ".photo-browser-caption" ).empty();
-$( ".photo-browser-caption" ).append(targetdescription);
-    myApp.sizeNavbars();
-
-
-
-		
- 
-
-   
-  }
+       
         
  if (new_all.length>0){
 	 checkMatch(targetid);
