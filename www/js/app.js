@@ -3068,13 +3068,13 @@ if (blockindex == 0){firstpos = 'Y';} else{firstpos ='N';}
      
                         allowedchange = false;
 
-	  if (new_all.length===1){
+
 		  
-		  targetid = new_all[0].id;
+		  targetid = new_all[blockindex].id;
  
 
    
-  }
+  
 	 
        var first_number,second_number;
 
