@@ -3097,9 +3097,9 @@ $( ".toolbardecide" ).show();
 $( ".datebutton" ).removeClass( "likesme" );
 $( ".duckbutton" ).removeClass( "likesme" );
 
-var targetdescription= new_all[myPhotoBrowser.activeIndex].description;
-targetname = new_all[myPhotoBrowser.activeIndex].name;  
-var targetage = new_all[myPhotoBrowser.activeIndex].age;  
+var targetdescription= new_all[0].description;
+targetname = new_all[0].name;  
+var targetage = new_all[0].age;  
   $( ".nametag" ).empty();
 $( ".nametag" ).append('<span class="rr r_'+targetid+'">'+targetname+', '+targetage+'</span>');
 $( ".photo-browser-caption" ).empty();
@@ -3118,7 +3118,7 @@ $( ".photo-browser-caption" ).append(targetdescription);
 
 if (Number(f_uid) > Number(targetid) ) {second_number = f_uid;first_number = targetid;}
 else {first_number = f_uid;second_number = targetid;}
-alert(targetid);
+
 
 
 var theirnotifs = firebase.database().ref('notifications/' + targetid  + '/' + f_uid);
