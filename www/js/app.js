@@ -3010,7 +3010,7 @@ var swiperno = 0;
 	 
 	 
 	 new_all = new_all.slice(0,blockindex).concat(new_all.slice(blockindex+1));
-
+alert(new_all.length);
 	 if (new_all.length>0){
 		for (var i = 0; i < random_all.length; i++) {
 if (random_all[i].id == targetid){ 
