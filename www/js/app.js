@@ -3201,7 +3201,7 @@ else {myPhotoBrowser.swiper.slideNext();allowedchange = true;myPhotoBrowser.swip
 }	 
 else {
 	
-	backtoProfile();questions();
+swiperQuestions.slideNext();swiperQuestions.slidePrev();
 	
 	 }
 	
