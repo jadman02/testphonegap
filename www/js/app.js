@@ -3200,7 +3200,7 @@ else if  (lastpos == 'Y'){myPhotoBrowser.swiper.slidePrev();allowedchange = true
 else {myPhotoBrowser.swiper.slideNext();allowedchange = true;myPhotoBrowser.swiper.slidePrev();swiperQuestions.slideNext();swiperQuestions.slidePrev(); }
 }	 
 else {
-	swiperQuestions.slideTo(0); 
+	backtoProfile();questions();
 	 }
 	
             
