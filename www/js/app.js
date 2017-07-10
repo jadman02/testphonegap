@@ -3073,7 +3073,7 @@ if (blockindex == 0){firstpos = 'Y';} else{firstpos ='N';}
 if (Number(f_uid) > Number(targetid) ) {second_number = f_uid;first_number = targetid;}
 else {first_number = f_uid;second_number = targetid;}
 
-
+alert('1');
 
 var theirnotifs = firebase.database().ref('notifications/' + targetid  + '/' + f_uid);
 theirnotifs.remove().then(function() {
@@ -3192,7 +3192,7 @@ firebase.database().ref('matches/' + f_uid + '/' + targetid).update({
 
 
 }
- 
+ alert('2');
 
 if (new_all.length>1){	 
  if (firstpos == 'Y'){myPhotoBrowser.swiper.slideNext();allowedchange = true;myPhotoBrowser.swiper.slidePrev();swiperQuestions.slideNext();swiperQuestions.slidePrev();  }
