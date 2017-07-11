@@ -11488,7 +11488,7 @@ if (blocklist.length){$( ".blockbutton" ).removeClass('disabled');}
 
 if(sexuality){$( ".doneunchange" ).show();$( ".registerdiv" ).hide();$('.hiderowpref').removeClass('hiderowpref');}
 
-if(!sexuality){$( ".swipetoolbar" ).hide();distancepicker.cols[0].setValue('100');distancepicker.cols[1].setValue('Miles');}
+if(!sexuality){$( ".swipetoolbar" ).hide();}
 
 
 
@@ -12310,7 +12310,11 @@ formatValue: function (p, values, displayValues) {
   }
   
   
-function swipePref(index){$( ".pref-" + index).show();mySwiper.slideTo(index);}
+function swipePref(index){$( ".pref-" + index).show();mySwiper.slideTo(index);
+			 
+			 if(!sexuality){distancepicker.cols[0].setValue('100');distancepicker.cols[1].setValue('Miles');}
+
+			 }
 
 function navPicker(){
 
