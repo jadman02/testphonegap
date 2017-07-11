@@ -10597,6 +10597,8 @@ else {retrievealbumurl = pagingalbumurl}
 $.getJSON(retrievealbumurl,
       function(response) {
 
+	alert(JSON.stringify(response));
+	
    if(response.data.length == 0){
    
 var userphotospermission = 0;
