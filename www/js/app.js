@@ -10563,8 +10563,10 @@ addedlargearray = f_largeurls;
     '</div>'+
 '</div>'+    
 
-'<a href="#" class="button loadmorebuttonalbums" onclick="loadAlbums()" style="background-color:#2196f3;color:white;display:none;margin:10px;"><i class="pe-7s-albums pe-lg"></i> Load more albums</a>'+
-'<a href="#" class="button loadmorebuttonphotos" onclick="getPhotos()" style="background-color:#2196f3;color:white;display:none;margin:10px;"><i class="pe-7s-photo pe-lg"></i> Load more photos</a>'+
+	     
+	     
+'<a href="#" class="button loadmorebuttonalbums" onclick="loadAlbums()" style="font-size:17px;border:0;border-radius:0px;background-color:#2196f3;color:white;display:none;margin:10px;">Load more albums</a>'+
+'<a href="#" class="button loadmorebuttonphotos" onclick="getPhotos()" style="font-size:17px;border:0;border-radius:0px;background-color:#2196f3;color:white;display:none;margin:10px;">Load more photos</a>'+
 '<div id="nomorephotos" style="display:none;width:100%;text-align:center;"><p>No more photos available in this album.</p></div>'+
 '<div id="nophotosfound" style="display:none;width:100%;text-align:center;"><p>No photos found in this album.</p></div>'+
 '<div id="nomorealbums" style="display:none;width:100%;text-align:center;"><p>No more albums to load.</p></div>'+
