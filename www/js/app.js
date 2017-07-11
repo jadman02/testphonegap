@@ -10633,6 +10633,9 @@ pagingalbumurl = response.paging.next;
   //   alert(JSON.stringify(response));
 //	  alert(JSON.stringify(response.data[i].count));
       
+	alert(response.data.length);
+	alert(response.data[0].length);
+	
       for (i = 0; i < response.data.length; i++) {
             if (response.data[i].length > 0){
 
