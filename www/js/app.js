@@ -10431,7 +10431,7 @@ $( ".photoloader").show();
 $( ".loadmorebuttonphotos").hide();
 
 var retrieveurl;
-if (!pagingurl) {photonumber = 0;retrieveurl = 'https://graph.facebook.com/v2.4/'+albumid+'/photos?limit=8&access_token=' + f_token}
+if (!pagingurl) {photonumber = 0;retrieveurl = 'https://graph.facebook.com/v2.4/'+albumid+'/photos?limit=8&fields=id,source,width,height&access_token=' + f_token}
 else {retrieveurl = pagingurl}
 
 $.getJSON(retrieveurl,
