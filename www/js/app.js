@@ -11107,7 +11107,7 @@ var popupHTML = '<div class="popup prefpop">'+
 
  '<div class="slide-pref pref-1">'+
 
-  '<div style="background-color:#2196f3;width:100%;padding-bottom:10px;" class="registerdiv">'+
+  '<div style="background-color:transparent;width:100%;padding-bottom:10px;" class="registerdiv">'+
    '<div style="border-radius:50%;width:70px;height:70px;margin:0 auto;background-image:url(\'https://graph.facebook.com/'+f_uid+'/picture?type=normal\');background-size:cover;background-position:50% 50%;"></div>'+
 
 
