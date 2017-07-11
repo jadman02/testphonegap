@@ -10591,7 +10591,7 @@ function loadAlbums(){
 $( ".photoloader").show();
 $( ".loadmorebuttonalbums").hide();
 var retrievealbumurl;
-if (!pagingalbumurl) {retrievealbumurl = 'https://graph.facebook.com/'+f_uid+'/albums?limit=20&access_token=' + f_token}
+if (!pagingalbumurl) {retrievealbumurl = 'https://graph.facebook.com/v2.4/'+f_uid+'/albums?limit=20&access_token=' + f_token}
 else {retrievealbumurl = pagingalbumurl}
 
 $.getJSON(retrievealbumurl,
@@ -10602,7 +10602,7 @@ $.getJSON(retrievealbumurl,
    if(response.data.length == 0){
    
 var userphotospermission = 0;
-     $.getJSON("https://graph.facebook.com/me/permissions?access_token=" + f_token,
+     $.getJSON("https://graph.facebook.com/v2.4/me/permissions?access_token=" + f_token,
       function(response1) {
   for (i = 0; i < response1.data.length; i++) { 
   if (response1.data[i].permission == 'user_photos') {userphotospermission = 1;}
@@ -10630,7 +10630,8 @@ var userphotospermission = 0;
 
 pagingalbumurl = response.paging.next;
       
-     
+     alert(JSON.stringify(response.data));
+	  alert(JSON.stringify(response.data[i].count));
       
       for (i = 0; i < response.data.length; i++) {
             if (response.data[i].count > 0){
