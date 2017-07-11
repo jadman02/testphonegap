@@ -10591,7 +10591,7 @@ function loadAlbums(){
 $( ".photoloader").show();
 $( ".loadmorebuttonalbums").hide();
 var retrievealbumurl;
-if (!pagingalbumurl) {retrievealbumurl = 'https://graph.facebook.com/v2.4/'+f_uid+'/albums?limit=20&access_token=' + f_token}
+if (!pagingalbumurl) {retrievealbumurl = 'https://graph.facebook.com/v2.4/'+f_uid+'/albums?limit=20&summary=1&access_token=' + f_token}
 else {retrievealbumurl = pagingalbumurl}
 
 $.getJSON(retrievealbumurl,
@@ -10630,7 +10630,7 @@ var userphotospermission = 0;
 
 pagingalbumurl = response.paging.next;
 
-      alert(JSON.stringify(response.data));
+      alert(JSON.stringify(response));
 
 	if (response.data.length > 0){
       for (i = 0; i < response.data.length; i++) {
