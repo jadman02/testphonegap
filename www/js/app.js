@@ -11045,7 +11045,7 @@ var photosloaded;
 function swipePopup(chosen){
 $( '.picker-sub' ).hide();
 myApp.closeModal('.picker-sub');
-alert('chosen');
+
 photosloaded = false;
 
 var sliderwidth = $( document ).width();
@@ -11859,7 +11859,6 @@ if (!sexuality){$( '.swipetext' ).text("Welcome, " + f_first);mySwiper.lockSwipe
 });   
 $( ".slide-pref" ).hide();
 swipePref(chosen);
-	alert('got here 44');
 myApp.sizeNavbars();  
 var dateinfo = [];
 
