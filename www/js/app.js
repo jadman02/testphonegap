@@ -10630,12 +10630,12 @@ var userphotospermission = 0;
 
 pagingalbumurl = response.paging.next;
       
-     alert(JSON.stringify(response));
-	  alert(JSON.stringify(response.data[i].count));
+  //   alert(JSON.stringify(response));
+//	  alert(JSON.stringify(response.data[i].count));
       
       for (i = 0; i < response.data.length; i++) {
-            if (response.data[i].count > 0){
-		    alert(response.data[i].id);
+            if (response.data[i].length > 0){
+
       $( ".albumul" ).append(
       
 
