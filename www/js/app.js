@@ -1067,7 +1067,7 @@ nameslist = [];
    }
    else {
  
-$( ".home-title" ).show();
+
  var tonight = new Date();
 tonight.setHours(22,59,59,999);
 var tonight_timestamp = Math.round(tonight/1000);
@@ -1391,7 +1391,7 @@ else{   $( ".recent-helper" ).show();}
     });
 	
 if ((random_all.length === 0) || (nearby_all.length === 0) || (recent_all.length === 0)){
-alert('here9999');
+
 
  $( ".home-title" ).hide(); 
 
@@ -1410,6 +1410,7 @@ alert('here9999');
 		  
 
 }
+	else {$( ".home-title" ).show();}
 	
 }    
     
