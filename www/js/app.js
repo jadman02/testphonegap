@@ -10597,7 +10597,7 @@ else {retrievealbumurl = pagingalbumurl}
 $.getJSON(retrievealbumurl,
       function(response) {
 
-	alert(JSON.stringify(response));
+	
 	
    if(response.data.length == 0){
    
@@ -10630,7 +10630,7 @@ var userphotospermission = 0;
 
 pagingalbumurl = response.paging.next;
       
-      
+      alert('got here 88');
       
       for (i = 0; i < response.data.length; i++) {
             if (response.data[i].count > 0){
