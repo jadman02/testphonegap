@@ -1958,7 +1958,7 @@ var availstringn = availstring.toString();
 
 
 if ($('#soundnotif').prop('checked')) {offsounds = 'Y'} else {offsounds = 'N'}
-alert('3');
+
 
 //User Profile details
 var hometown_u = $( "#homesearch" ).val();
@@ -1974,12 +1974,12 @@ var height_u = $( "#height-input" ).val().substring(0,3);
 var weight_pre = $( "#weight-input" ).val();
 var weight_u = weight_pre.substr(0, weight_pre.indexOf(' '));
 
-alert('4');
+
 var uploadurl;
 if (f_largeurls.length > 0){photoresponse = 'Y';uploadurl = f_largeurls[0];}
 	else{photoresponse='N';uploadurl = '';}
 
-alert('5');
+
 
 
 firebase.database().ref('users/' + f_uid).update({
@@ -2006,7 +2006,7 @@ weight: weight_u,
     
   });
 
-
+alert('6');
 	if (deletedphoto){
 
 var newsmall = f_smallurls.toString();
@@ -2015,7 +2015,7 @@ var newlarge = f_largeurls.toString();
 var newwidth = addedwidth.toString();
 var newheight = addedheight.toString();
 
-
+alert('7');
 
 
 firebase.auth().currentUser.getToken().then(function(idToken) { 
@@ -2034,7 +2034,7 @@ $.post( "http://www.dateorduck.com/updatephotos.php", { projectid:f_projectid,to
 
 }
 	
-
+alert('8');
 var hometown_u = $( "#homesearch" ).val();
 var industry_u = $( "#industry-input" ).val();
 var status_u = $( "#status-input" ).val();
@@ -2064,7 +2064,7 @@ $.post( "http://www.dateorduck.com/updatedetails.php", { projectid:f_projectid,t
 
   
   });
-
+alert('9');
    }).catch(function(error) {
   // Handle error
 });
@@ -2074,7 +2074,7 @@ f_upper = upperage;
 
 
 //if (loadpref2===true){getWifilocation();}
-
+alert('10');
 loadpref2 = true;
 myApp.closeModal();
 $( ".popup-overlay" ).remove();
