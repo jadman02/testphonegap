@@ -3201,7 +3201,7 @@ firebase.database().ref('matches/' + f_uid + '/' + targetid).update({
 
 }
 
-alert(new_all.length);
+
 if (new_all.length>1){	 
 	
 		 if (blockindex == (new_all.length-1)){lastpos = 'Y';} else {lastpos ='N';}
@@ -3214,7 +3214,7 @@ else {myPhotoBrowser.swiper.slideNext();allowedchange = true;myPhotoBrowser.swip
 else {
  
 	$( ".availyo_"+ new_all[0].id ).show();
-
+myPhotoBrowser.close();myApp.closeModal();
 	 }
 	
             
