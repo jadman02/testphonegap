@@ -1642,7 +1642,7 @@ if (f_gender == 'Female' && f_interested == 'Men') {sexuality = 'female';}
     firebase.database().ref('users/' + f_uid).once("value",function(snapshot) {
     f_token = snapshot.child("token").val();
 
-    swipePopup(1);
+    swipePopup(2);
     });
     
     
