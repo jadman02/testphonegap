@@ -1391,7 +1391,7 @@ else{   $( ".recent-helper" ).show();}
     });
 	
 if ((random_all.length === 0) || (nearby_all.length === 0) || (recent_all.length === 0)){
-
+alert('here9999');
 
  $( ".home-title" ).hide(); 
 
