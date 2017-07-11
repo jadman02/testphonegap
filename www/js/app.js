@@ -1409,7 +1409,7 @@ if ((random_all.length === 0) || (nearby_all.length === 0) || (recent_all.length
 		  
 
 }
-	else {$( ".home-title" ).show();}	
+	else {$( ".home-title" ).show(); $('.content-here').empty();}	
 	
 	
 	
