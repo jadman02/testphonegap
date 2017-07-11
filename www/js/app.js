@@ -11488,7 +11488,7 @@ if (blocklist.length){$( ".blockbutton" ).removeClass('disabled');}
 
 if(sexuality){$( ".doneunchange" ).show();$( ".registerdiv" ).hide();$('.hiderowpref').removeClass('hiderowpref');}
 
-if(!sexuality){$( ".swipetoolbar" ).hide();}
+if(!sexuality){$( ".swipetoolbar" ).hide();distancepicker.cols[0].setValue('100');distancepicker.cols[1].setValue('Miles');}
 
 
 
