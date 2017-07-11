@@ -3040,7 +3040,7 @@ recentswiper.updateSlidesSize();
 	 }
 	 
 	 else {
-		  alert('1');
+
 	 	randomswiper.removeAllSlides();
 nearbyswiper.removeAllSlides();
 recentswiper.removeAllSlides();
@@ -3214,7 +3214,7 @@ else {myPhotoBrowser.swiper.slideNext();allowedchange = true;myPhotoBrowser.swip
 else {
  
 	$( ".availyo_"+ new_all[0].id ).show();
-	 alert('2');
+
 	 }
 	
             
@@ -3233,7 +3233,7 @@ else {
   
   
 if (new_all.length === 0){
-	 alert('3');
+
 	myPhotoBrowser.close();myApp.closeModal();
  $( ".home-title" ).hide(); 
 
