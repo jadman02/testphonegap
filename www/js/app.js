@@ -1642,7 +1642,7 @@ if (f_gender == 'Female' && f_interested == 'Men') {sexuality = 'female';}
     firebase.database().ref('users/' + f_uid).once("value",function(snapshot) {
     f_token = snapshot.child("token").val();
 
-    swipePopup(2);
+    swipePopup(1);
     });
     
     
@@ -11046,7 +11046,7 @@ var photosloaded;
 function swipePopup(chosen){
 $( '.picker-sub' ).hide();
 myApp.closeModal('.picker-sub');
-
+alert('chosen');
 photosloaded = false;
 
 var sliderwidth = $( document ).width();
@@ -11488,7 +11488,7 @@ if (blocklist.length){$( ".blockbutton" ).removeClass('disabled');}
 
 if(sexuality){$( ".doneunchange" ).show();$( ".registerdiv" ).hide();$('.hiderowpref').removeClass('hiderowpref');}
 
-if(!sexuality){sortBy(1);$( ".swipetoolbar" ).hide();}
+if(!sexuality){$( ".swipetoolbar" ).hide();}
 
 
 
@@ -11860,6 +11860,7 @@ if (!sexuality){$( '.swipetext' ).text("Welcome, " + f_first);mySwiper.lockSwipe
 });   
 $( ".slide-pref" ).hide();
 swipePref(chosen);
+	alert('got here 44');
 myApp.sizeNavbars();  
 var dateinfo = [];
 
