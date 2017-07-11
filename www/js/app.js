@@ -1862,7 +1862,7 @@ myApp.alert('Please complete more profile information.', 'Missing Information');
 
 return false;}
 
-alert('1');
+
 if (myswiperphotos){
 
 myswiperphotos.destroy();
@@ -1870,7 +1870,7 @@ myswiperphotos = false;
 }
 
 	
-alert('2');	
+	
 var newage,newinterested,newgender;
 
 if (pickerDescribe.initialized === false) {newage = f_age;newgender = f_gender;}
@@ -1958,7 +1958,7 @@ var availstringn = availstring.toString();
 
 
 if ($('#soundnotif').prop('checked')) {offsounds = 'Y'} else {offsounds = 'N'}
-
+alert('3');
 
 //User Profile details
 var hometown_u = $( "#homesearch" ).val();
@@ -1974,12 +1974,12 @@ var height_u = $( "#height-input" ).val().substring(0,3);
 var weight_pre = $( "#weight-input" ).val();
 var weight_u = weight_pre.substr(0, weight_pre.indexOf(' '));
 
-
+alert('4');
 var uploadurl;
 if (f_largeurls.length > 0){photoresponse = 'Y';uploadurl = f_largeurls[0];}
 	else{photoresponse='N';uploadurl = '';}
 
-
+alert('5');
 
 
 firebase.database().ref('users/' + f_uid).update({
