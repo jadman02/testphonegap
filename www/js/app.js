@@ -3040,6 +3040,7 @@ recentswiper.updateSlidesSize();
 	 }
 	 
 	 else {
+		  alert('1');
 	 	randomswiper.removeAllSlides();
 nearbyswiper.removeAllSlides();
 recentswiper.removeAllSlides();
@@ -3062,7 +3063,7 @@ var lastpos;
 if (blockindex == 0){firstpos = 'Y';} else{firstpos ='N';}
 
 
-	 
+	
 
              myApp.closeModal('.actions-modal');
      
@@ -3210,7 +3211,7 @@ else {myPhotoBrowser.swiper.slideNext();allowedchange = true;myPhotoBrowser.swip
 else {
  
 	$( ".availyo_"+ new_all[0].id ).show();
-	
+	 alert('2');
 	 }
 	
             
@@ -3228,7 +3229,9 @@ else {
    //    console.log(new_all); 
   
   
-if (new_all.length === 0){myPhotoBrowser.close();myApp.closeModal();
+if (new_all.length === 0){
+	 alert('3');
+	myPhotoBrowser.close();myApp.closeModal();
  $( ".home-title" ).hide(); 
 
  $( ".results-loader" ).hide();
@@ -3243,7 +3246,7 @@ if (new_all.length === 0){myPhotoBrowser.close();myApp.closeModal();
    
     '</div>');
 
-			  
+	 alert('4');		  
 		  
 
 }
