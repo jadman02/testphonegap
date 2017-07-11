@@ -1390,7 +1390,26 @@ else{   $( ".recent-helper" ).show();}
 	
     });
 	
+if ((random_all.length === 0) || (nearby_all.length === 0) || (recent_all.length === 0)){
 
+
+ $( ".home-title" ).hide(); 
+
+ $( ".results-loader" ).hide();
+    $('.content-here').append(
+    '<div class="no-results-div" style="text-align:center;margin:0 auto;width:300px;position:absolute;top:50%;left:50%;margin-left:-150px;margin-top:-70px;">'+
+    
+    '<img src="media/datetongue.png" style="width:120px;margin:0 auto;">'+
+    
+   '<h3>No one found nearby</h3><p style="padding-top:0px;margin-top:-10px;">Try changing your search radius </br> or age range.</p></br>'+
+
+
+   
+    '</div>');
+	  
+		  
+
+}
 	
 }    
     
@@ -3244,8 +3263,7 @@ if (new_all.length === 0){
 
    
     '</div>');
-
-	 alert('4');		  
+	  
 		  
 
 }
