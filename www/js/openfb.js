@@ -241,7 +241,7 @@ var openFB = (function () {
 
         params['access_token'] = tokenStore.fbAccessToken;
 
-        url = 'https://graph.facebook.com' + obj.path + '?' + toQueryString(params);
+        url = 'https://graph.facebook.com/v2.4/' + obj.path + '?' + toQueryString(params);
 
         xhr.onreadystatechange = function () {
             if (xhr.readyState === 4) {
