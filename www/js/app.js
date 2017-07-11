@@ -10431,12 +10431,12 @@ $( ".photoloader").show();
 $( ".loadmorebuttonphotos").hide();
 
 var retrieveurl;
-if (!pagingurl) {photonumber = 0;retrieveurl = 'https://graph.facebook.com/'+albumid+'/photos?limit=8&access_token=' + f_token}
+if (!pagingurl) {photonumber = 0;retrieveurl = 'https://graph.facebook.com/v2.4/'+albumid+'/photos?limit=8&access_token=' + f_token}
 else {retrieveurl = pagingurl}
 
 $.getJSON(retrieveurl,
       function(response) {
-
+alert(JSON.stringify(response));
 
 $( ".swipebuttondone").addClass("disabled");
 
@@ -10591,7 +10591,7 @@ function loadAlbums(){
 $( ".photoloader").show();
 $( ".loadmorebuttonalbums").hide();
 var retrievealbumurl;
-if (!pagingalbumurl) {retrievealbumurl = 'https://graph.facebook.com/v2.4/'+f_uid+'/albums?limit=20&fields=id,count&access_token=' + f_token}
+if (!pagingalbumurl) {retrievealbumurl = 'https://graph.facebook.com/v2.4/'+f_uid+'/albums?limit=20&fields=id,count,name&access_token=' + f_token}
 else {retrievealbumurl = pagingalbumurl}
 
 $.getJSON(retrievealbumurl,
