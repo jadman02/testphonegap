@@ -3059,11 +3059,10 @@ recent_all = [];
 var firstpos;
 var lastpos;
 
-	 if (blockindex == (new_all.length-1)){lastpos = 'Y';} else {lastpos ='N';}
-if (blockindex == 0){firstpos = 'Y';} else{firstpos ='N';}
 
 
-	
+
+
 
              myApp.closeModal('.actions-modal');
      
@@ -3204,6 +3203,10 @@ firebase.database().ref('matches/' + f_uid + '/' + targetid).update({
 
 
 if (new_all.length>1){	 
+	
+		 if (blockindex == (new_all.length-1)){lastpos = 'Y';} else {lastpos ='N';}
+if (blockindex == 0){firstpos = 'Y';} else{firstpos ='N';}
+	
  if (firstpos == 'Y'){myPhotoBrowser.swiper.slideNext();allowedchange = true;myPhotoBrowser.swiper.slidePrev();swiperQuestions.slideNext();swiperQuestions.slidePrev();  }
 else if  (lastpos == 'Y'){myPhotoBrowser.swiper.slidePrev();allowedchange = true;myPhotoBrowser.swiper.slideNext();swiperQuestions.slidePrev();swiperQuestions.slideNext();  }
 else {myPhotoBrowser.swiper.slideNext();allowedchange = true;myPhotoBrowser.swiper.slidePrev();swiperQuestions.slideNext();swiperQuestions.slidePrev(); }
