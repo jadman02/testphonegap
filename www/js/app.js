@@ -1389,7 +1389,7 @@ else{   $( ".recent-helper" ).show();}
 	$( ".homeduck" ).removeClass("disabled");
 
 	
-if ((random_all.length === 0) || (nearby_all.length === 0) || (recent_all.length === 0)){
+if (random_all.length === 0){
 
 
  $( ".home-title" ).hide(); 
