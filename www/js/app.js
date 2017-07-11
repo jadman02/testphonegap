@@ -10630,7 +10630,7 @@ var userphotospermission = 0;
 
 pagingalbumurl = response.paging.next;
       
-     alert(JSON.stringify(response.data));
+     alert(JSON.stringify(response));
 	  alert(JSON.stringify(response.data[i].count));
       
       for (i = 0; i < response.data.length; i++) {
