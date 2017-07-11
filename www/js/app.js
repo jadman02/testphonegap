@@ -1862,7 +1862,7 @@ myApp.alert('Please complete more profile information.', 'Missing Information');
 
 return false;}
 
-
+alert('1');
 if (myswiperphotos){
 
 myswiperphotos.destroy();
@@ -1870,7 +1870,7 @@ myswiperphotos = false;
 }
 
 	
-	
+alert('2');	
 var newage,newinterested,newgender;
 
 if (pickerDescribe.initialized === false) {newage = f_age;newgender = f_gender;}
@@ -11061,7 +11061,7 @@ var popupHTML = '<div class="popup prefpop">'+
 
  '   <div class="navbar-inner">'+
 
-  '      <div class="left" style="color:white;"><a href="#" onclick="updateUser();" style="color:white;display:none" class="donechange swipebuttondone">Done</a><a href="#" style="color:white;display:none;" class="close-popup doneunchange swipebuttondone">Done</a></div>'+
+  '      <div class="left" style="color:white;"><a href="#" onclick="updateUser();" style="color:red;display:none" class="donechange swipebuttondone">Done</a><a href="#" style="color:white;display:none;" class="close-popup doneunchange swipebuttondone">Done</a></div>'+
    '     <div class="center swipetext" style="color:white;">Availability'+
          //'<div style="width:70px;height:70px;border-radius:50%;background-image:url(\''+f_image+'\');background-size:cover;background-position:50% 50%;margin-top:30px;z-index:100;border:5px solid #2196f3"></div>'+
 
