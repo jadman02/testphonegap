@@ -12203,7 +12203,7 @@ onChange:    function (p, value, displayValue){
         var spick = pickerDescribe2.value;
         
         if (fpick && spick) {
-        if(!sexuality){sexuality=true;$( ".registerdiv" ).slideUp();$('.hiderowpref').removeClass('hiderowpref');$( ".swipetoolbar" ).show();$( '.swipetext' ).text("Profile");mySwiper.unlockSwipes();$( ".donechange" ).show();$( ".doneunchange" ).hide();myApp.sizeNavbars(); }
+        if(!sexuality){sexuality=true;distancepicker.cols[0].setValue(radiussize);distancepicker.cols[1].setValue(radiusunit);$( ".registerdiv" ).slideUp();$('.hiderowpref').removeClass('hiderowpref');$( ".swipetoolbar" ).show();$( '.swipetext' ).text("Profile");mySwiper.unlockSwipes();$( ".donechange" ).show();$( ".doneunchange" ).hide();myApp.sizeNavbars(); }
         $( ".savebutton" ).removeClass( "disabled" );}
         else {$( ".savebutton" ).addClass( "disabled" );}
         }
@@ -12249,7 +12249,7 @@ $( ".popup-overlay" ).css("z-index","10500");
         var spick = pickerDescribe2.value;
         
         if (fpick && spick) {
-                if(!sexuality){sexuality=true;$( ".registerdiv" ).slideUp();$('.hiderowpref').removeClass('hiderowpref');$( ".swipetoolbar" ).show();$( '.swipetext' ).text("Profile");mySwiper.unlockSwipes();$( ".donechange" ).show();$( ".doneunchange" ).hide();myApp.sizeNavbars(); }
+                if(!sexuality){sexuality=true;distancepicker.cols[0].setValue(radiussize);distancepicker.cols[1].setValue(radiusunit);$( ".registerdiv" ).slideUp();$('.hiderowpref').removeClass('hiderowpref');$( ".swipetoolbar" ).show();$( '.swipetext' ).text("Profile");mySwiper.unlockSwipes();$( ".donechange" ).show();$( ".doneunchange" ).hide();myApp.sizeNavbars(); }
         $( ".savebutton" ).removeClass( "disabled" );}
         else {$( ".savebutton" ).addClass( "disabled" );}
         }
