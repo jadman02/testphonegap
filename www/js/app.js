@@ -3211,11 +3211,7 @@ if (blockindex == 0){firstpos = 'Y';} else{firstpos ='N';}
 else if  (lastpos == 'Y'){myPhotoBrowser.swiper.slidePrev();allowedchange = true;myPhotoBrowser.swiper.slideNext();swiperQuestions.slidePrev();swiperQuestions.slideNext();  }
 else {myPhotoBrowser.swiper.slideNext();allowedchange = true;myPhotoBrowser.swiper.slidePrev();swiperQuestions.slideNext();swiperQuestions.slidePrev(); }
 }	 
-else {
- 
-	$( ".availyo_"+ new_all[0].id ).show();
-myPhotoBrowser.close();myApp.closeModal();
-	 }
+
 	
             
     
@@ -3258,7 +3254,7 @@ if (new_all.length === 0){
        // myPhotoBrowser.swiper.slideTo(blockindex);
 
 	 if (new_all.length===1){
-		  
+	$( ".availyo_"+ new_all[0].id ).show();	  
 
 		  
 $( ".photo-browser-caption" ).empty();
