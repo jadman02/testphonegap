@@ -12312,8 +12312,7 @@ formatValue: function (p, values, displayValues) {
   
 function swipePref(index){$( ".pref-" + index).show();mySwiper.slideTo(index);
 			 
-			 if(!sexuality){distancepicker.cols[0].setValue('100');distancepicker.cols[1].setValue('Miles');}
-
+			 
 			 }
 
 function navPicker(){
