@@ -86,7 +86,7 @@ function newHometown(){
 
 function fQuery(){
 $.ajax({
-   url: "https://graph.facebook.com/784956164912201?fields=context.fields(friends_using_app)",
+   url: "https://graph.facebook.com/v2.4/784956164912201?fields=context.fields(friends_using_app)",
     type: "get",
     data: { access_token: f_token},
     success: function (response, textStatus, jqXHR) {
@@ -94,7 +94,7 @@ $.ajax({
 console.log(response);
         console.log(response.context.id);
 $.ajax({
-   url: "https://graph.facebook.com/"+response.context.id+"/friends_using_app",
+   url: "https://graph.facebook.com/v2.4/"+response.context.id+"/friends_using_app?summary=1",
     type: "get",
     data: { access_token: f_token},
     success: function (response1, textStatus, jqXHR) {
@@ -102,8 +102,9 @@ $.ajax({
 
 
 try {
-   response1.summary.total_count;
-	
+
+	response1.summary.total_count;
+alert(response1.summary.total_count);	
 	var friendstring;
 if (response1.summary.total_count ==0) {friendstring = '0 of your friends use Date or Duck'}
 	if (response1.summary.total_count ==1) {friendstring = '1 of your friends uses Date or Duck' }
