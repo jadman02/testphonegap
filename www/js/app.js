@@ -1398,6 +1398,8 @@ if (random_all.length === 0){
  $( ".home-title" ).hide(); 
 
  $( ".results-loader" ).hide();
+	 $( ".nearby-helper" ).hide(); 
+	 $( ".recent-helper" ).hide();
     $('.content-here').append(
     '<div class="no-results-div" style="text-align:center;margin:0 auto;width:300px;position:absolute;top:50%;left:50%;margin-left:-150px;margin-top:-70px;">'+
     
@@ -3263,7 +3265,8 @@ if (new_all.length === 0){
 
 	myPhotoBrowser.close();myApp.closeModal();
  $( ".home-title" ).hide(); 
-
+ $( ".nearby-helper" ).hide(); 
+	 $( ".recent-helper" ).hide();
  $( ".results-loader" ).hide();
     $('.content-here').append(
     '<div class="no-results-div" style="text-align:center;margin:0 auto;width:300px;position:absolute;top:50%;left:50%;margin-left:-150px;margin-top:-70px;">'+
