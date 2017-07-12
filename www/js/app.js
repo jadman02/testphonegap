@@ -91,7 +91,7 @@ $.ajax({
     type: "get",
     data: { access_token: f_token},
     success: function (response, textStatus, jqXHR) {
-
+alert('ww');
 alert(JSON.stringify(response));
         alert(JSON.stringify(response.context.id));
 $.ajax({
