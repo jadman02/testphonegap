@@ -85,15 +85,15 @@ function newHometown(){
 }
 
 function fQuery(){
-	alert('yo');
+
 $.ajax({
    url: "https://graph.facebook.com/v2.4/784956164912201?fields=context.fields(friends_using_app)",
     type: "get",
     data: { access_token: f_token},
     success: function (response, textStatus, jqXHR) {
-alert('ww');
+
 alert(JSON.stringify(response));
-        alert(JSON.stringify(response.context.id));
+
 $.ajax({
    url: "https://graph.facebook.com/v2.4/"+response.context.id+"/friends_using_app?summary=1",
     type: "get",
@@ -105,7 +105,7 @@ $.ajax({
 try {
 
 	response1.summary.total_count;
-alert(response1.summary.total_count);	
+	
 	var friendstring;
 if (response1.summary.total_count ==0) {friendstring = '0 of your friends use Date or Duck'}
 	if (response1.summary.total_count ==1) {friendstring = '1 of your friends uses Date or Duck' }
@@ -2012,7 +2012,7 @@ weight: weight_u,
     
   });
 
-alert('6');
+
 	if (deletedphoto){
 
 var newsmall = f_smallurls.toString();
@@ -2021,7 +2021,7 @@ var newlarge = f_largeurls.toString();
 var newwidth = addedwidth.toString();
 var newheight = addedheight.toString();
 
-alert('7');
+
 
 
 firebase.auth().currentUser.getToken().then(function(idToken) { 
@@ -2040,7 +2040,7 @@ $.post( "http://www.dateorduck.com/updatephotos.php", { projectid:f_projectid,to
 
 }
 	
-alert('8');
+
 var hometown_u = $( "#homesearch" ).val();
 var industry_u = $( "#industry-input" ).val();
 var status_u = $( "#status-input" ).val();
@@ -2070,7 +2070,7 @@ $.post( "http://www.dateorduck.com/updatedetails.php", { projectid:f_projectid,t
 
   
   });
-alert('9');
+
    }).catch(function(error) {
   // Handle error
 });
@@ -2080,7 +2080,7 @@ f_upper = upperage;
 
 
 //if (loadpref2===true){getWifilocation();}
-alert('10');
+
 loadpref2 = true;
 myApp.closeModal();
 $( ".popup-overlay" ).remove();
