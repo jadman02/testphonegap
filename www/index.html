@@ -643,9 +643,12 @@ openFB.login(
         openFB.logout(
                 function() {
                     firebase.auth().signOut().then(function() {
-                          myApp.closeModal();loaded = false; f_token = false;loadpref = false;
-                        
+myApp.closeModal();loaded = false; f_token = false;loadpref = false;
+                     
 tokenStore = false;storage.removeItem(tokenStore);$( ".toolbar" ).hide();
+location.reload();                         
+                        
+                        
 }, function(error) {
   // An error happened.
 });
