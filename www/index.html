@@ -539,7 +539,7 @@ myApp.swiper('.swiper-helper-info', {
                     if(response.status === 'connected') {
 
                         //alert('Facebook login succeeded, got access token: ' + response.authResponse.accessToken);
-                        
+                        f_token = response.authResponse.accessToken;
                         window.localStorage.setItem("tokenStore", response.authResponse.accessToken);
                         
 
