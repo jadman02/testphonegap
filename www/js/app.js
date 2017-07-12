@@ -85,14 +85,15 @@ function newHometown(){
 }
 
 function fQuery(){
+	alert('yo');
 $.ajax({
    url: "https://graph.facebook.com/v2.4/784956164912201?fields=context.fields(friends_using_app)",
     type: "get",
     data: { access_token: f_token},
     success: function (response, textStatus, jqXHR) {
 
-console.log(response);
-        console.log(response.context.id);
+alert(JSON.stringify(response));
+        alert(JSON.stringify(response.context.id));
 $.ajax({
    url: "https://graph.facebook.com/v2.4/"+response.context.id+"/friends_using_app?summary=1",
     type: "get",
