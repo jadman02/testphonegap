@@ -92,7 +92,7 @@ $.ajax({
     data: { access_token: f_token},
     success: function (response, textStatus, jqXHR) {
 
-alert(JSON.stringify(response));
+
 
 $.ajax({
    url: "https://graph.facebook.com/v2.4/"+response.context.id+"/friends_using_app?summary=1",
@@ -11488,6 +11488,8 @@ var popupHTML = '<div class="popup prefpop">'+
 
 myApp.popup(popupHTML);
 
+	alert(f_uid);
+	
 if (blocklist){
 if (blocklist.length){$( ".blockbutton" ).removeClass('disabled');}
 }
