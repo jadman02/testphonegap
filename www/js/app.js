@@ -11488,7 +11488,6 @@ var popupHTML = '<div class="popup prefpop">'+
 
 myApp.popup(popupHTML);
 
-	alert(f_uid);
 	
 if (blocklist){
 if (blocklist.length){$( ".blockbutton" ).removeClass('disabled');}
