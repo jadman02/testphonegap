@@ -644,9 +644,26 @@ openFB.login(
                 function() {
                     firebase.auth().signOut().then(function() {
 myApp.closeModal();loaded = false; f_token = false;loadpref = false;
-                     
+        sexuality = false;
+radiussize = '100';
+radiusunit = 'Kilometres';
+industry_u = false;
+hometown_u = false;
+status_u = false;
+politics_u = false;
+eyes_u = false;
+body_u = false;
+
+availarray = [];
+f_description = '';
+offsounds = 'N';
+f_age = false;
+f_interested = false;
+f_gender = false;
+f_upper = false;
+f_lower = false;             
 tokenStore = false;storage.removeItem(tokenStore);$( ".toolbar" ).hide();
-location.reload();                         
+                       
                         
                         
 }, function(error) {
