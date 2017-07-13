@@ -645,6 +645,9 @@ openFB.login(
                     firebase.auth().signOut().then(function() {
 myApp.closeModal();loaded = false; f_token = false;loadpref = false;
         sexuality = false;
+                        homewant = false;
+                        $( ".homedate" ).removeClass("active");
+                        $( ".homeduck" ).removeClass("active");
 radiussize = '100';
 radiusunit = 'Kilometres';
 industry_u = false;
