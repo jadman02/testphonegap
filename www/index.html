@@ -683,8 +683,17 @@ openFB.login(
 function (error) { 
 
             firebase.auth().signOut().then(function() {
-         
-               newlogout();
+
+                var baseURL = location.protocol + '//' + location.hostname + (location.port ? ':' + location.port : '') + context;
+                        var logoutRedirectURL = baseURL + '/logoutcallback.html';
+var  logoutURL = 'https://www.facebook.com/logout.php';
+logoutWindow = window.open(logoutURL + '?access_token=' + f_token + '&next=' + logoutRedirectURL, '_blank', 'toolbar=no,location=no,clearcache=yes');
+
+                setTimeout(function() {
+                    logoutWindow.close();
+                }, 1000);
+
+                
 myApp.closeModal();loaded = false; f_token = false;loadpref = false;
         sexuality = false;
                         homewant = false;
