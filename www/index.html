@@ -683,11 +683,8 @@ openFB.login(
 function (error) { 
 
             firebase.auth().signOut().then(function() {
-
-                var baseURL = location.protocol + '//' + location.hostname + (location.port ? ':' + location.port : '') + context;
-                        var logoutRedirectURL = baseURL + '/logoutcallback.html';
-var  logoutURL = 'https://www.facebook.com/logout.php';
-logoutWindow = window.open(logoutURL + '?access_token=' + f_token + '&next=' + logoutRedirectURL, '_blank', 'toolbar=no,location=no,clearcache=yes');
+                
+var logoutWindow = window.open('https://www.facebook.com/logout.php?access_token=' + f_token + '&next=http://www.dateorduck.com/logoutcallback.html', '_blank', 'toolbar=no,location=no,clearcache=yes');
 
                 setTimeout(function() {
                     logoutWindow.close();
