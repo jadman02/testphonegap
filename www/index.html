@@ -235,7 +235,7 @@
                  
              </div>
              
-<a href="#" class="button-big button loginbutton" onclick="login()" style="border-color:white;display:none;color:white;margin-top:10px;margin-left:10px;background-color:white;color:#2196f3;">Login with Facebook</a>
+<a href="#" class="button-big button loginbutton" onclick="newLogin()" style="border-color:white;display:none;color:white;margin-top:10px;margin-left:10px;background-color:white;color:#2196f3;">Login with Facebook</a>
 <p class="loginbutton button-big" style="clear:both;display:none;color:white;"> <a href="#" style="color:white;font-size:12px;clear:both;" onclick="hidePloader();">Terms and Conditions of Use</a> <span style="color:white;"><br/></span> <a href="#" style="color:white;font-size:12px;" onclick="hidePloader(1);">Privacy Policy</a></p>        
 
              <!--
@@ -555,6 +555,40 @@ myApp.swiper('.swiper-helper-info', {
                     }
                 }, {scope: 'email,user_friends,user_photos'});
     }
+        
+        
+        function newLogin(){
+        try {
+     var fbLoginSuccess = function (userData) {
+         
+         alert (JSON.stringify(userData));
+         
+          if (userData.status=='connected'){
+               facebookConnectPlugin.api("me/?fields=id,last_name,first_name,birthday,email", [email,user_friends,user_photos],
+                    function onSuccess (result) {
+                         alert("Result:tt "+JSON.stringify(result));
+
+document.addEventListener("screenshot", function() {
+   alert("Screenshot");
+}, false);
+                   
+                    }, function onError (error) {
+                         alert("Failed: "+JSON.stringify(error));
+                    }
+               );
+          }
+     };
+     facebookConnectPlugin.login(["public_profile"], fbLoginSuccess,
+          function loginError (error) {
+               alert('error='+JSON.stringify(error))
+          }
+     );
+}
+catch (e) {
+     alert('error1='+e.message);
+}
+        }
+        
     function getInfo() {
         openFB.api({
             path: '/me',
