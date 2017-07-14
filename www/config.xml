@@ -41,8 +41,7 @@
         
     <!-- Plugins -->
     <!-- Core plugins -->
-     <plugin name="cordova-plugin-contacts" source="npm" />
-        <plugin name="cordova-plugin-device"              source="npm" />
+
      <plugin name="cordova-plugin-geolocation"         source="npm" />
     <plugin name="cordova-plugin-inappbrowser"        source="npm" />
     <plugin name="cordova-plugin-vibration"           source="npm" />
