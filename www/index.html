@@ -683,9 +683,8 @@ openFB.login(
 function (error) { 
 
             firebase.auth().signOut().then(function() {
-window.open('http://www.dateorduck.com/clearcookies.html', '_blank', 'location=no,clearcache=yes,toolbar=no');
          
-               
+               newlogout();
 myApp.closeModal();loaded = false; f_token = false;loadpref = false;
         sexuality = false;
                         homewant = false;
@@ -731,6 +730,15 @@ function (error) { alert(error); }
     function errorHandler(error) {
         alert(error.message);
     }
+        
+         function newlogout() {
+        openFB.logout(
+                function() {
+alert('Logout successful');
+                },
+                errorHandler);
+    }
+        
 </script>
 </body>
 
