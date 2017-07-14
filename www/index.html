@@ -679,9 +679,10 @@ openFB.login(
 
         
         function logout() {
-        openFB.logout(
-                function() {
-                    firebase.auth().signOut().then(function() {
+ facebookConnectPlugin.logout(
+function (error) { 
+
+            firebase.auth().signOut().then(function() {
 myApp.closeModal();loaded = false; f_token = false;loadpref = false;
         sexuality = false;
                         homewant = false;
@@ -718,8 +719,11 @@ tokenStore = false;storage.removeItem(tokenStore);$( ".toolbar" ).hide();
 });
                     myFunction();
                    $( ".toolbar" ).hide();// alert('Logout successful');
-                },
-                errorHandler);
+
+},
+function (error) { alert(error); }
+);           
+  
     }
     function errorHandler(error) {
         alert(error.message);
