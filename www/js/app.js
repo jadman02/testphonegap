@@ -11430,8 +11430,10 @@ var popupHTML = '<div class="popup prefpop">'+
                ' </div>'+
            ' </div>'+
         '</li>'+
+    
+    
                         '<div class="content-block-title" style="margin-top:20px;">My Account</div>'+
-       ' <a href="http://www.dateorduck.com/clearcookies.html" class="external" target="_blank"><li onclick="logout()">'+
+       '<li onclick="logout()">'+
          '   <div class="item-content">'+
 
              '   <div class="item-inner">'+
@@ -11440,7 +11442,7 @@ var popupHTML = '<div class="popup prefpop">'+
                     '</div>'+
                ' </div>'+
            ' </div>'+
-        '</li></a>'+
+        '</li>'+
 
          ' <li onclick="deleteAccount()">'+
          '   <div class="item-content">'+
