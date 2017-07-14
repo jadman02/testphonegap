@@ -683,21 +683,8 @@ openFB.login(
 function (error) { 
 
             firebase.auth().signOut().then(function() {
-                
-  function delete_cookie(name) 
-{
-    document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT; path=/';
-}
-
-
-var cookies = document.cookie.split(";");
-for (var i = 0; i < cookies.length; i++)
-{
-    if(cookies[i].split("=")[0].indexOf("fblo_") != -1)
-        delete_cookie(cookies[i].split("=")[0]);
-}
- alert('done'); 
-                
+             
+               
 myApp.closeModal();loaded = false; f_token = false;loadpref = false;
         sexuality = false;
                         homewant = false;
