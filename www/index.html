@@ -561,22 +561,27 @@ myApp.swiper('.swiper-helper-info', {
         try {
      var fbLoginSuccess = function (userData) {
          
-         alert (JSON.stringify(userData));
          
-          if (userData.status=='connected'){
-               facebookConnectPlugin.api("me/?fields=id,last_name,first_name,birthday,email", [email,user_friends,user_photos],
-                    function onSuccess (result) {
-                         alert("Result:tt "+JSON.stringify(result));
+         if(userData.status === 'connected') {
 
-document.addEventListener("screenshot", function() {
-   alert("Screenshot");
-}, false);
-                   
-                    }, function onError (error) {
-                         alert("Failed: "+JSON.stringify(error));
+                        //alert('Facebook login succeeded, got access token: ' + response.authResponse.accessToken);
+                        f_token = userData.authResponse.accessToken;
+             f_token_expiry = userData.authResponse.expiresIn;
+                        window.localStorage.setItem("tokenStore", userData.authResponse.accessToken);
+                        
+
+                        startApp();
+                        
+                    } else {
+                      
+                        if (userData.error ==='undefined') {myApp.alert('Please login to start', 'Login required');}
+                       else {myApp.alert('Facebook login failed: ' + userData.error, 'Oops');}
+                        
+                         
+                        $( ".login-loader" ).hide();$( ".loginbutton" ).show();
                     }
-               );
-          }
+         
+         alert (JSON.stringify(userData));
      };
      facebookConnectPlugin.login(["public_profile"], fbLoginSuccess,
           function loginError (error) {
