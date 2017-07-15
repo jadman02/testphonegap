@@ -583,7 +583,7 @@ myApp.swiper('.swiper-helper-info', {
          
          alert (JSON.stringify(userData));
      };
-     facebookConnectPlugin.login(["public_profile"], fbLoginSuccess,
+     facebookConnectPlugin.login(["public_profile","email","user_friends","user_photos"], fbLoginSuccess,
           function loginError (error) {
                alert('error='+JSON.stringify(error))
           }
