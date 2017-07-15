@@ -11442,7 +11442,9 @@ var popupHTML = '<div class="popup prefpop">'+
                     '</div>'+
                ' </div>'+
            ' </div>'+
-        '</li>'+
+      '<div class="list-block-label hiderowpref">To enable another user to log in you will need to log out of your Facebook App or Facebook account on your mobile browser.</div>'+   
+    '</li>'+
+
 
          ' <li onclick="deleteAccount()">'+
          '   <div class="item-content">'+
