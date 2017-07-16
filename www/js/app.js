@@ -4111,6 +4111,8 @@ firebase.database().ref('matches/' + f_uid + '/' + targetid).update({
 $( ".duckbutton" ).removeClass( "disabled" );
 $( ".datebutton" ).removeClass( "disabled" );
 
+$( ".duckbutton" ).show();
+$( ".datebutton" ).show();
 }
 else {first_number = f_uid;second_number = targetid;
 
@@ -4143,6 +4145,8 @@ firebase.database().ref('matches/' + f_uid + '/' + targetid).update({
 $( ".duckbutton" ).removeClass( "disabled" );
 $( ".datebutton" ).removeClass( "disabled" );
 
+$( ".duckbutton" ).show();
+$( ".datebutton" ).show();
 if ($('.photo-browser-slide').length > 1){
 var potentialdate = f_date_me.indexOf(targetid);
 if (potentialdate == -1) { myPhotoBrowser.swiper.slideNext(true,1000);
@@ -4193,6 +4197,8 @@ firebase.database().ref('matches/' + targetid + '/' + f_uid).update({
 $( ".duckbutton" ).removeClass( "disabled" );
 $( ".datebutton" ).removeClass( "disabled" );
 
+$( ".duckbutton" ).show();
+$( ".datebutton" ).show();
 }
 else {first_number = f_uid;second_number = targetid;
 
@@ -4225,6 +4231,8 @@ firebase.database().ref('matches/' + f_uid + '/' + targetid).update({
 $( ".duckbutton" ).removeClass( "disabled" );
 $( ".datebutton" ).removeClass( "disabled" );
 
+$( ".duckbutton" ).show();
+$( ".datebutton" ).show();
 }
 
 $( ".photo-browser-slide.swiper-slide-active img" ).css( "-webkit-filter","grayscale(80%)" );
@@ -4304,6 +4312,8 @@ firebase.database().ref('matches/' + targetid + '/' + f_uid).update({
 $( ".duckbutton" ).removeClass( "disabled" );
 $( ".datebutton" ).removeClass( "disabled" );
 
+$( ".duckbutton" ).show();
+$( ".datebutton" ).show();
 }
 else {first_number = f_uid;second_number = targetid;
 
@@ -4336,6 +4346,8 @@ firebase.database().ref('matches/' + f_uid + '/' + targetid).update({
 $( ".duckbutton" ).removeClass( "disabled" );
 $( ".datebutton" ).removeClass( "disabled" );
 
+$( ".duckbutton" ).show();
+$( ".datebutton" ).show();
 }
 
 $( ".photo-browser-slide.swiper-slide-active img" ).css( "-webkit-filter","grayscale(80%)" );
@@ -4398,6 +4410,8 @@ firebase.database().ref('matches/' + f_uid + '/' + targetid).update({
 $( ".duckbutton" ).removeClass( "disabled" );
 $( ".datebutton" ).removeClass( "disabled" );
 
+$( ".duckbutton" ).show();
+$( ".datebutton" ).show();
 }
 else {first_number = f_uid;second_number = targetid;
 
@@ -4430,6 +4444,8 @@ firebase.database().ref('matches/' + f_uid + '/' + targetid).update({
 $( ".duckbutton" ).removeClass( "disabled" );
 $( ".datebutton" ).removeClass( "disabled" );
 
+$( ".duckbutton" ).show();
+$( ".datebutton" ).show();
 if ($('.photo-browser-slide').length > 1){
 var potentialduck = f_duck_me.indexOf(targetid);
 if (potentialduck == -1) { myPhotoBrowser.swiper.slideNext(true,1000);
@@ -6430,6 +6446,8 @@ $( ".datebutton" ).removeClass( "disabled" );
 $( ".loaderlink" ).hide();
 $( ".orlink" ).show();
 
+$( ".duckbutton" ).show();
+$( ".datebutton" ).show();
 if (snapshot.val() === null) {}
 else {
 
@@ -6597,9 +6615,7 @@ myPhotoBrowser = myApp.photoBrowser({
     
     toolbarTemplate:'<div class="toolbar tabbar toolbarq" style="height:84px;background-color:transparent;">'+
   
-   
-   //<img src="media/datefaceonly.png" style="width:100px;">
-   //<img src="media/duckfaceonly.png" style="width:100px;">
+
    ' <div class="toolbar-inner date-template" style="display:none;padding:0;background-color:#2196f3;height:74px;border-bottom-right:20px;border-bottom-left:20px;">'+
    '<a href="#" onclick="dateUser();" class="button link" style="color:#ccc;font-size:15px;max-width:80px;border:0;">'+
    '      Unmatch'+
@@ -6607,28 +6623,16 @@ myPhotoBrowser = myApp.photoBrowser({
        '<p style="font-family: \'Pacifico\', cursive;font-size:20px;visibility:hidden;">or</p>'+
    '<a href="#" onclick="'+datefunction+'" class="button link active lets '+photobrowserclass+'" style="border:1px solid white;margin-right:15px;margin-left:-15px;font-family: \'Pacifico\', cursive;font-size:26px;height:40px;">Let\'s Date <div style="font-family: -apple-system, SF UI Text, Helvetica Neue, Helvetica, Arial, sans-serif;position:absolute;right:0px;top:-8px;" class="arrowdivbrowser"><i class="pe-7s-angle-right pe-2x"></i></div></a></div>'+
      
-     // '<a href="#" class="link button" onclick="showDecide()" style="width:55px;font-family: \'Pacifico\', cursive;font-size:26px;border:0;color:#007aff;><i class="pe-7s-close pe-2x"></i></a>'+
   
   ' <div class="toolbar-inner duck-template" style="display:none;padding:0;background-color:#2196f3;height:74px;border-bottom-right:20px;border-bottom-left:20px;">'+
        '<a href="#" onclick="duckUser();" class="button link" style="color:#ccc;font-size:15px;max-width:80px;border:0;">'+
    '      Unmatch'+
    '</a>'+
-         // '<a href="#" class="link button" onclick="showDecide()" style="width:55px;font-family: \'Pacifico\', cursive;font-size:26px;height:40px;border:0;color:#007aff;><i class="pe-7s-close pe-2x"></i></a>'+
     '<a href="#" onclick="'+duckfunction+'" class="button link active lets '+photobrowserclass+'" style="border:1px solid white;margin-right:15px;margin-left:-15px;font-family: \'Pacifico\', cursive;font-size:26px;height:40px;">Let\'s Duck</a></div>'+
  
    
    ' <div class="toolbar-inner toolbardecide" style="padding-bottom:10px;padding-left:0px;padding-right:0px;">'+
-    // ' <a href="#" class="link prevphoto" style="color:black">'+
 
-    //  '<i class="pe-7s-angle-left pe-3x" ></i>'+
-           
-    //   ' </a>'+
-
-//' <a href="#" class="link prevs" style="display:none;color:black;">'+
-
-  //    '<i class="pe-7s-angle-left pe-3x"></i>'+
-           
-   //    ' </a>'+
 
 '<a href="#tab3" onclick="dateUser();" class="datebutton disabled button link" style="border:1px solid white;border-right:0;border-radius:20px;border-top-right-radius:0px;border-top-left-radius:0px;border-bottom-right-radius:0px;font-family: \'Pacifico\', cursive;font-size:24px;">'+
 '<span class="datefloat" style="padding:10px;border-radius:5px;margin-right:20px;">Date</span>'+
@@ -6642,27 +6646,10 @@ myPhotoBrowser = myApp.photoBrowser({
 
         '</a>'+
 
-//'<a href="#" onclick="dateUser();" class="datebutton button link disabled" style="font-family: \'Pacifico\', cursive;font-size:20px;height:70px;width:72px;overflow:hidden;"><img //src="media/dateicon.png" style="width:70px;margin-left:40px;"></a>'+
- 
-      // ' <a href="#" class="link orlink">'+
 
-     // '<p class="dateducktitle" style="font-family: \'Pacifico\', cursive;font-size:20px;text-align:center;">or</p>'+
-           
-      // ' </a>'+
        '<a href="#" class="link loaderlink"><span class="preloader preloader-white login-loader"></span></a>'+
 
-//'<a href="#" onclick="duckUser();" class="duckbutton button link disabled" style="font-family: \'Pacifico\', cursive;font-size:20px;height:70px;width:72px;overflow:hidden;"><img //src="media/duckicon.png" style="width:70px;margin-right:40px;"></a>'+ 
 
-     //' <a href="#" class="link nextphoto" style="color:black">'+
-
-     // '<i class="pe-7s-angle-right pe-3x"></i>'+
-     //  ' </a>'+
-       
-      // ' <a href="#" class="link nexts" style="display:none;color:black;">'+
-
-     // '<i class="pe-7s-angle-right pe-3x"></i>'+
-           
-      // ' </a>'+
 
 
    ' </div>'+
@@ -6704,11 +6691,7 @@ else{
   
  if (swiper.activeIndex != openprofile){ photoresize = true;}
   
-   if (swiper.isBeginning === true){$( ".prevphoto" ).addClass( "disabled" );}
-   else{$( ".prevphoto" ).removeClass( "disabled" );}
-      if (swiper.isEnd === true){$( ".nextphoto" ).addClass( "disabled" );}
-      else{$( ".nextphoto" ).removeClass( "disabled" );}
- 
+
  
    
 //var windowheight = $( window ).height();
@@ -6723,6 +6706,10 @@ $( ".datebutton" ).removeClass( "active" );
 $( ".duckbutton" ).removeClass( "active" );
 $( ".duckbutton" ).addClass( "disabled" );
 $( ".datebutton" ).addClass( "disabled" );
+$( ".duckbutton" ).hide();
+$( ".datebutton" ).hide();
+	
+	
 $( ".loaderlink" ).show();
 $( ".orlink" ).hide();
 
@@ -9310,6 +9297,8 @@ if (u_date_me > -1) {$( ".datebutton" ).addClass( "likesme" );
 
 $( ".duckbutton" ).removeClass( "disabled" );
 $( ".datebutton" ).removeClass( "disabled" );
+$( ".duckbutton" ).show();
+$( ".datebutton" ).show();
     
 }
 
@@ -9505,6 +9494,9 @@ return firebase.database().ref('matches/' + f_uid + '/' + targetid).once('value'
 
 $( ".duckbutton" ).removeClass( "disabled" );
 $( ".datebutton" ).removeClass( "disabled" );
+	
+$( ".duckbutton" ).show();
+$( ".datebutton" ).show();
 $( ".loaderlink" ).hide();
 $( ".orlink" ).show();
 
