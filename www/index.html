@@ -681,14 +681,44 @@ openFB.login(
                 }, {scope: 'user_photos'});
 }
 
+function logout(){
+	  var loginmethod = window.localStorage.getItem("loginmethod");
+
+    if (loginmethod == '1'){logoutPlugin();}
+    else{logoutOpen();}
+
+}
         
-        function logout() {
-facebookConnectPlugin.getLoginStatus(function(response) {
-     alert(JSON.stringify(response));
-        if (response && response.status === 'connected') {
+        function logoutPlugin() {
+
             facebookConnectPlugin.logout(
 function (error) { 
 
+            
+                    myFunction();
+                   $( ".toolbar" ).hide();// alert('Logout successful');
+
+},
+function (error) { alert(error); }
+);           
+
+    }
+    function errorHandler(error) {
+        alert(error.message);
+    }
+        
+         function logoutOpen() {
+        openFB.logout(
+                function() {
+                    logoutDo();
+myFunction();
+                   $( ".toolbar" ).hide();
+                },
+                errorHandler);
+    }
+
+        function logoutDo(){
+        
             firebase.auth().signOut().then(function() {
 
 
@@ -728,26 +758,8 @@ tokenStore = false;storage.removeItem(tokenStore);$( ".toolbar" ).hide();
 }, function(error) {
   // An error happened.
 });
-                    myFunction();
-                   $( ".toolbar" ).hide();// alert('Logout successful');
-
-},
-function (error) { alert(error); }
-);           
-        }
-     },true);
-    }
-    function errorHandler(error) {
-        alert(error.message);
-    }
         
-         function newlogout() {
-        openFB.logout(
-                function() {
-alert('Logout successful');
-                },
-                errorHandler);
-    }
+        }
         
 </script>
 </body>
