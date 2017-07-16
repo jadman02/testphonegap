@@ -552,8 +552,12 @@ myApp.swiper('.swiper-helper-info', {
                         
                     } else {
                       
-                        if (response.error ==='undefined') {myApp.alert('Please login to start', 'Login required');}
-                       else {myApp.alert('Facebook login failed: ' + response.error, 'Oops');}
+                        if (response.error ==='undefined') {
+			//	myApp.alert('Please login to start', 'Login required');
+			}
+                       else {
+			//       myApp.alert('Facebook login failed: ' + response.error, 'Oops');
+		       }
                         
                          
                         $( ".login-loader" ).hide();$( ".loginbutton" ).show(); $( ".secondlogin" ).show();
@@ -594,12 +598,14 @@ myApp.swiper('.swiper-helper-info', {
      };
      facebookConnectPlugin.login(["public_profile","email","user_friends","user_photos"], fbLoginSuccess,
           function loginError (error) {
+	     $( ".login-loader" ).hide();$( ".loginbutton" ).show(); $( ".secondlogin" ).show();
                //alert('error='+JSON.stringify(error))
           }
      );
 }
 catch (e) {
-     alert('error1='+e.message);
+   //  alert('error1='+e.message);
+	$( ".login-loader" ).hide();$( ".loginbutton" ).show(); $( ".secondlogin" ).show();
 }
         }
         
