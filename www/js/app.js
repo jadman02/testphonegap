@@ -505,7 +505,7 @@ f_projectid = firebase.auth().currentUser.toJSON().authDomain.substr(0, firebase
              
 	  var originalid = window.localStorage.getItem("originalid");
 
-                        if (!originalid) {window.localStorage.setItem("originalid", f_uid);window.localStorage.setItem("originalid", f_first);}
+                        if (!originalid) {window.localStorage.setItem("originalid", f_uid);window.localStorage.setItem("originalname", f_first);}
 
   // $( ".userimagetoolbar" ).css("background-image","url(\'https://graph.facebook.com/"+f_uid+"/picture?type=normal\')");
    
@@ -545,8 +545,8 @@ firebase.database().ref('users/' + f_uid).update({
              
 	  var originalid = window.localStorage.getItem("originalid");
 
-                        if (originalid) {$( ".mainlogin" ).html('Login Jarrod');}
-	  else {$( ".mainlogin" ).html('Login with Facebook');}
+                        if (originalid) {$( ".mainlogin" ).html('<div style="height:30px;background-image:url(\'https://graph.facebook.com/'+f_uid+'/picture?width=60\');background-size:cover;background-position:50% 50%;float:left;"></div><div style="float:left;">' + f_first + '</div>'); $( ".secondloginbutton" ).show();}
+	  else {$( ".mainlogin" ).html('Login with Facebook'); $( ".loginbutton" ).show();}
 	  
 	  
 	  
