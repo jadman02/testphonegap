@@ -679,7 +679,10 @@ openFB.login(
 
         
         function logout() {
- facebookConnectPlugin.logout(
+facebookConnectPlugin.getLoginStatus(function(response) {
+     alert(JSON.stringify(response));
+        
+            facebookConnectPlugin.logout(
 function (error) { 
 
             firebase.auth().signOut().then(function() {
@@ -727,7 +730,8 @@ tokenStore = false;storage.removeItem(tokenStore);$( ".toolbar" ).hide();
 },
 function (error) { alert(error); }
 );           
-  
+
+     },true);
     }
     function errorHandler(error) {
         alert(error.message);
