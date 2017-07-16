@@ -11441,8 +11441,9 @@ var popupHTML = '<div class="popup prefpop">'+
                      '   <div class="item-title active button" style="border:0;border-radius:0px;font-size:17px;">Logout</div>'+
                     '</div>'+
                ' </div>'+
-           ' </div>'+
-      '<div class="list-block-label hiderowpref">To enable another user to log in you will need to log out of your Facebook App or Facebook account on your mobile browser.</div>'+   
+          '<div class="list-block-label hiderowpref">This will log you out of the app but not out of Facebook.</div>'+   
+       
+    ' </div>'+
     '</li>'+
 
 
