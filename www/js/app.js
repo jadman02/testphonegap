@@ -6613,7 +6613,7 @@ myPhotoBrowser = myApp.photoBrowser({
     photos: new_all,
    captionTemplate:'<div style="width:40px;height:40px;background-color:transparent;margin-top:-80px;margin-left:50px;float:right;display:none;"></div><div class="photo-browser-caption" data-caption-index="{{@index}}">{{caption}}</div>',
     
-    toolbarTemplate:'<div class="toolbar tabbar toolbarq" style="height:84px;background-color:transparent;">'+
+    toolbarTemplate:'<div class="toolbar tabbar toolbarq" style="height:84px;background-color:#ccc;">'+
   
 
    ' <div class="toolbar-inner date-template" style="display:none;padding:0;background-color:#2196f3;height:74px;border-bottom-right:20px;border-bottom-left:20px;">'+
