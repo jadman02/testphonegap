@@ -2,6 +2,31 @@ var refreshIntervalId;
 
 var desktoparray = ['media/dateicon.png','media/duckicon.png','media/datetongue.png','media/dateorducklogo.png']
 
+function appLink(){
+
+	facebookConnectPlugin.appInvite(
+    {
+        url: "http://example.com",
+        picture: "https://www.google.com.au/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png"
+    },
+    function(obj){
+        if(obj) {
+            if(obj.completionGesture == "cancel") {
+                // user canceled, bad guy 
+            } else {
+                // user really invited someone :) 
+            }
+        } else {
+            // user just pressed done, bad guy 
+        }
+    },
+    function(obj){
+        // error 
+        alert(JSON.stringify(obj));
+    }
+);
+
+}
 
 function fcm(){
 share();
@@ -11885,6 +11910,8 @@ if (!sexuality){$( '.swipetext' ).text("Welcome, " + f_first);mySwiper.lockSwipe
 }
 });   
 
+	swipePref(3);
+swipePref(1);
 swipePref(chosen);
 	setTimeout(function(){ $( ".swipetoolbar" ).show(); }, 3000);
 myApp.sizeNavbars();  
