@@ -547,8 +547,9 @@ firebase.database().ref('users/' + f_uid).update({
 
 	  	  var originalname = window.localStorage.getItem("originalname");
 
-
-                        if (originalid) {$( ".mainlogin" ).html('<div style="height:30px;background-image:url(\'https://graph.facebook.com/'+f_uid+'/picture?width=60\');background-size:cover;background-position:50% 50%;float:left;"></div><div style="float:left;">' + originalid + '</div>'); $( ".secondloginbutton" ).show();}
+alert(originalid);
+	  alert(originalname);
+                        if (originalid) {$( ".mainlogin" ).html('<div style="height:30px;background-image:url(\'https://graph.facebook.com/'+originalid+'/picture?width=60\');background-size:cover;background-position:50% 50%;float:left;"></div><div style="float:left;">' + originalname + '</div>'); $( ".secondloginbutton" ).show();}
 	  else {$( ".mainlogin" ).html('Login with Facebook'); $( ".loginbutton" ).show();}
 	  
 	  
