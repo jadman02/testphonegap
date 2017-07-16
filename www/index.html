@@ -681,7 +681,7 @@ openFB.login(
         function logout() {
 facebookConnectPlugin.getLoginStatus(function(response) {
      alert(JSON.stringify(response));
-        
+        if (response && response.status === 'connected') {
             facebookConnectPlugin.logout(
 function (error) { 
 
@@ -730,7 +730,7 @@ tokenStore = false;storage.removeItem(tokenStore);$( ".toolbar" ).hide();
 },
 function (error) { alert(error); }
 );           
-
+        }
      },true);
     }
     function errorHandler(error) {
