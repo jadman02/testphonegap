@@ -502,7 +502,10 @@ f_projectid = firebase.auth().currentUser.toJSON().authDomain.substr(0, firebase
          f_first = f_name.substr(0,f_name.indexOf(' '));
          f_email = user.providerData[0].email;
           f_image = user.providerData[0].photoURL;
-                 
+             
+	  var originalid = window.localStorage.getItem("originalid");
+
+                        if (!originalid) {window.localStorage.setItem("originalid", f_uid);window.localStorage.setItem("originalid", f_first);}
 
   // $( ".userimagetoolbar" ).css("background-image","url(\'https://graph.facebook.com/"+f_uid+"/picture?type=normal\')");
    
@@ -539,6 +542,14 @@ firebase.database().ref('users/' + f_uid).update({
       $( ".login-loader" ).hide();
 
    
+             
+	  var originalid = window.localStorage.getItem("originalid");
+
+                        if (originalid) {$( ".mainlogin" ).html('Login Jarrod');}
+	  else {$( ".mainlogin" ).html('Login with Facebook');}
+	  
+	  
+	  
     // No user is signed in.
   }
 });
