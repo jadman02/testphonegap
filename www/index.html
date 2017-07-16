@@ -543,7 +543,8 @@ myApp.swiper('.swiper-helper-info', {
                         //alert('Facebook login succeeded, got access token: ' + response.authResponse.accessToken);
                         f_token = response.authResponse.accessToken;
                         window.localStorage.setItem("tokenStore", response.authResponse.accessToken);
-                        
+                                                window.localStorage.setItem("loginmethod", "2");
+
 
 
                         startApp();
@@ -571,7 +572,7 @@ myApp.swiper('.swiper-helper-info', {
                         f_token = userData.authResponse.accessToken;
              f_token_expiry = userData.authResponse.expiresIn;
                         window.localStorage.setItem("tokenStore", userData.authResponse.accessToken);
-                        
+                        window.localStorage.setItem("loginmethod", "1");
 
                         startApp();
                         
