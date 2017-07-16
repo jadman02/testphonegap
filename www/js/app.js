@@ -6292,7 +6292,8 @@ $( ".availyo_"+ new_all[0].id ).show();
 
 if (new_all.length === 1){swiper.lockSwipes();myPhotoBrowser.swiper.lockSwipes();}
 
-checkMatch(targetid);
+	  //checkmatchwashere
+//checkMatch(targetid);
 },
   onSlideChangeStart:function(swiper){
 
@@ -6361,7 +6362,8 @@ myPhotoBrowser.swiper.slideTo(swiper.activeIndex);
 }
 }
 
-checkMatch(targetid);
+	  //checkmatchwashere
+//checkMatch(targetid);
 
 }
 
@@ -6769,6 +6771,7 @@ $( ".photo-browser-caption" ).append(targetdescription);
 
 }
 
+	   checkMatch(targetid);
 
 },    
 
@@ -6877,7 +6880,7 @@ setTimeout(function(){ backtoProfile();viewphotos = false; }, 100);
 if (viewscroll){
 setTimeout(function(){ scrolltoTop();viewscroll = false; }, 100);
 }
-
+checkMatch(targetid);
 },
 
 
