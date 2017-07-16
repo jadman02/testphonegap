@@ -502,7 +502,7 @@ f_projectid = firebase.auth().currentUser.toJSON().authDomain.substr(0, firebase
          f_first = f_name.substr(0,f_name.indexOf(' '));
          f_email = user.providerData[0].email;
           f_image = user.providerData[0].photoURL;
-             
+             localStorage.removeItem("originalid");
 	  var originalid = window.localStorage.getItem("originalid");
 
                         if (!originalid) {window.localStorage.setItem("originalid", f_uid);window.localStorage.setItem("originalname", f_first);}
