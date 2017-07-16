@@ -6302,7 +6302,7 @@ swiperQuestions = myApp.swiper('.swiper-questions', {
   var wrapperheightshould = $(".prof_" + swiper.activeIndex).height();
 $( ".wrapper-questions").css("height",(wrapperheightshould - 150)+ "px");
 $( ".availyope").hide();
-$( ".availyo_"+ new_all[0].id ).show();
+//$( ".availyo_"+ new_all[0].id ).show();
 
 
 
@@ -11081,12 +11081,12 @@ var popupHTML = '<div class="popup prefpop">'+
 
  '   <div class="navbar-inner">'+
 
-  '      <div class="left" style="color:white;"><a href="#" onclick="updateUser();" style="color:red;display:none" class="donechange swipebuttondone">Done</a><a href="#" style="color:white;display:none;" class="close-popup doneunchange swipebuttondone">Done</a></div>'+
+  '      <div class="left" style="color:white;"></div>'+
    '     <div class="center swipetext" style="color:white;">Availability'+
          //'<div style="width:70px;height:70px;border-radius:50%;background-image:url(\''+f_image+'\');background-size:cover;background-position:50% 50%;margin-top:30px;z-index:100;border:5px solid #2196f3"></div>'+
 
    '</div>'+
-    '    <div class="right"></div>'+
+    '    <div class="right"><a href="#" onclick="updateUser();" style="color:white;display:none" class="donechange swipebuttondone">Done</a><a href="#" style="color:white;display:none;" class="close-popup doneunchange swipebuttondone">Done</a></div>'+
     
 
     
@@ -11449,7 +11449,7 @@ var popupHTML = '<div class="popup prefpop">'+
                      '   <div class="item-title active button" style="border:0;border-radius:0px;font-size:17px;">Logout</div>'+
                     '</div>'+
                ' </div>'+
-          '<div class="list-block-label hiderowpref" style="clear:both;">This will log you out of the app but not out of Facebook.</div>'+   
+          '<div class="list-block-label hiderowpref" style="clear:both;float:left;">This will log you out of the app, but not out of Facebook.</div>'+   
        
     ' </div>'+
     '</li>'+
