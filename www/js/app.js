@@ -11513,7 +11513,7 @@ if (blocklist.length){$( ".blockbutton" ).removeClass('disabled');}
 
 if(sexuality){$( ".doneunchange" ).show();$( ".registerdiv" ).hide();$('.hiderowpref').removeClass('hiderowpref');}
 
-if(!sexuality){$( ".swipetoolbar" ).hide();}
+if(!sexuality){alert('no sexuality');$( ".swipetoolbar" ).hide();}
 
 
 
