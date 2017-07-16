@@ -549,7 +549,7 @@ firebase.database().ref('users/' + f_uid).update({
 
 alert(originalid);
 	  alert(originalname);
-                        if (originalid) {$( ".mainlogin" ).html('<div style="height:30px;width:30px;border-radius:50%;background-image:url(\'https://graph.facebook.com/'+originalid+'/picture?width=60\');background-size:cover;background-position:50% 50%;float:left;margin-top:5px;"></div><div style="float:left;margin-left:5px;">' + originalname + '</div>'); $( ".secondlogin" ).show();}
+                        if (originalid) {$( ".mainlogin" ).html('<div style="height:30px;width:30px;border-radius:50%;background-image:url(\'https://graph.facebook.com/'+originalid+'/picture?width=60\');background-size:cover;background-position:50% 50%;float:left;margin-top:5px;"></div><div style="float:left;margin-left:5px;"> Login </div>'); $( ".secondlogin" ).show();}
 	  else {$( ".mainlogin" ).html('Login with Facebook'); $( ".loginbutton" ).show();}
 	  
 	  
