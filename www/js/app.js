@@ -502,7 +502,7 @@ f_projectid = firebase.auth().currentUser.toJSON().authDomain.substr(0, firebase
          f_first = f_name.substr(0,f_name.indexOf(' '));
          f_email = user.providerData[0].email;
           f_image = user.providerData[0].photoURL;
-             localStorage.removeItem("originalid");
+       
 	  var originalid = window.localStorage.getItem("originalid");
 
                         if (!originalid) {window.localStorage.setItem("originalid", f_uid);window.localStorage.setItem("originalname", f_first);}
@@ -549,7 +549,7 @@ firebase.database().ref('users/' + f_uid).update({
 
 alert(originalid);
 	  alert(originalname);
-                        if (originalid) {$( ".mainlogin" ).html('<div style="height:30px;background-image:url(\'https://graph.facebook.com/'+originalid+'/picture?width=60\');background-size:cover;background-position:50% 50%;float:left;"></div><div style="float:left;">' + originalname + '</div>'); $( ".secondloginbutton" ).show();}
+                        if (originalid) {$( ".mainlogin" ).html('<div style="height:30px;width:30px;border-radius:50%;background-image:url(\'https://graph.facebook.com/'+originalid+'/picture?width=60\');background-size:cover;background-position:50% 50%;float:left;"></div><div style="float:left;">' + originalname + '</div>'); $( ".secondlogin" ).show();}
 	  else {$( ".mainlogin" ).html('Login with Facebook'); $( ".loginbutton" ).show();}
 	  
 	  
