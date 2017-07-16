@@ -536,7 +536,7 @@ firebase.database().ref('users/' + f_uid).update({
   } else {
       
 
-      
+     localStorage.removeItem("originalid"); 
       $( ".ploader" ).show();
       $( ".loginbutton" ).show();
       $( ".login-loader" ).hide();
