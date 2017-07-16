@@ -6758,7 +6758,7 @@ $( ".photo-browser-caption" ).append(targetdescription);
 
 }
 
-	   checkMatch(targetid);
+	setTimeout(function(){ checkMatch(targetid); }, 3000);   
 
 },    
 
