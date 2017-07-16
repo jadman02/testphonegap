@@ -585,7 +585,7 @@ myApp.swiper('.swiper-helper-info', {
                         $( ".login-loader" ).hide();$( ".loginbutton" ).show();
                     }
          
-         alert (JSON.stringify(userData));
+         
      };
      facebookConnectPlugin.login(["public_profile","email","user_friends","user_photos"], fbLoginSuccess,
           function loginError (error) {
@@ -683,7 +683,7 @@ openFB.login(
 
 function logout(){
 	  var loginmethod = window.localStorage.getItem("loginmethod");
-alert(loginmethod);
+
     if (loginmethod == '1'){logoutPlugin();}
     else{logoutOpen();}
 
