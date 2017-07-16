@@ -11852,10 +11852,11 @@ onChange:function (p, values, displayValues){$( '#religion-input' ).addClass("pr
        }
      ]
 }); 
-
+$( ".slide-pref" ).hide();
 mySwiper = myApp.swiper('.swiper-prefer', {
 
 onSlideChangeEnd:function(swiper){$( ".page-content" ).scrollTop( 0 );},
+	onInit:function(swiper){$( ".swipetoolbar" ).show();$( ".pan" + swiper.activeIndex ).addClass('active');},
 onSlideChangeStart:function(swiper){
 
 
@@ -11883,7 +11884,7 @@ if (!sexuality){$( '.swipetext' ).text("Welcome, " + f_first);mySwiper.lockSwipe
 
 }
 });   
-$( ".slide-pref" ).hide();
+
 swipePref(chosen);
 myApp.sizeNavbars();  
 var dateinfo = [];
