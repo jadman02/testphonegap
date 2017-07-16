@@ -556,7 +556,7 @@ myApp.swiper('.swiper-helper-info', {
                        else {myApp.alert('Facebook login failed: ' + response.error, 'Oops');}
                         
                          
-                        $( ".login-loader" ).hide();$( ".loginbutton" ).show();
+                        $( ".login-loader" ).hide();$( ".loginbutton" ).show(); $( ".secondlogin" ).show();
                     }
                 }, {scope: 'email,user_friends,user_photos'});
     }
@@ -586,8 +586,8 @@ myApp.swiper('.swiper-helper-info', {
                       //  if (userData.error ==='undefined') {myApp.alert('Please login to start', 'Login required');}
                     //   else {myApp.alert('Facebook login failed: ' + userData.error, 'Oops');}
                         
-                         
-                        $( ".login-loader" ).hide();$( ".loginbutton" ).show();
+                          $( ".login-loader" ).hide();$( ".loginbutton" ).show(); $( ".secondlogin" ).show();
+                       
                     }
          
          
