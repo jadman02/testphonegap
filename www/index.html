@@ -683,7 +683,7 @@ openFB.login(
 
 function logout(){
 	  var loginmethod = window.localStorage.getItem("loginmethod");
-
+alert(loginmethod);
     if (loginmethod == '1'){logoutPlugin();}
     else{logoutOpen();}
 
@@ -694,7 +694,7 @@ function logout(){
             facebookConnectPlugin.logout(
 function (error) { 
 
-            
+            logoutDo();
                     myFunction();
                    $( ".toolbar" ).hide();// alert('Logout successful');
 
