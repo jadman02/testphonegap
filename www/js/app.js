@@ -505,7 +505,7 @@ f_projectid = firebase.auth().currentUser.toJSON().authDomain.substr(0, firebase
        
 	  var originalid = window.localStorage.getItem("originalid");
 
-                        if (!originalid) {window.localStorage.setItem("originalid", f_uid);window.localStorage.setItem("originalname", f_first);}
+                        if (!originalid) {window.localStorage.setItem("originalid", f_uid);}
 
   // $( ".userimagetoolbar" ).css("background-image","url(\'https://graph.facebook.com/"+f_uid+"/picture?type=normal\')");
    
@@ -545,12 +545,11 @@ firebase.database().ref('users/' + f_uid).update({
              
 	  var originalid = window.localStorage.getItem("originalid");
 
-	  	  var originalname = window.localStorage.getItem("originalname");
 
-alert(originalid);
-	  alert(originalname);
-                        if (originalid) {$( ".mainlogin" ).html('Login'); $( ".secondlogin" ).show();}
-	  else {$( ".mainlogin" ).html('Login with Facebook'); $( ".loginbutton" ).show();}
+
+
+                        if (originalid) {$( ".secondlogin" ).show();}
+	  else {$( ".loginbutton" ).show();}
 	  
 	  
 	  
