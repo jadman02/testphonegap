@@ -6359,7 +6359,7 @@ $( ".camerabadge" ).text(new_all[swiper.activeIndex].photocount);
  
 $( ".infoprofile").hide();
 $( ".availyope").hide();
-$( ".availyo_"+ new_all[swiper.activeIndex].id ).show();
+
 //$(".swiper-questions").css("background-image", "url("+new_all[swiper.activeIndex].url+")"); 
 //$(".slideinfo_"+new_all[swiper.activeIndex + 1].id).css("background-size", "cover"); 
 //$(".slideinfo_"+new_all[swiper.activeIndex + 1].id).css("background-position", "50% 50%"); 
@@ -6440,7 +6440,7 @@ else {first_number = f_uid;second_number = targetid;}
 return firebase.database().ref('matches/' + f_uid + '/' + targetid).once('value').then(function(snapshot) {
 
 
-
+$( ".availyo_"+ new_all[swiperQuestions.activeIndex].id ).show();
 $( ".duckbutton" ).removeClass( "disabled" );
 $( ".datebutton" ).removeClass( "disabled" );
 $( ".loaderlink" ).hide();
@@ -6613,7 +6613,7 @@ myPhotoBrowser = myApp.photoBrowser({
     photos: new_all,
    captionTemplate:'<div style="width:40px;height:40px;background-color:transparent;margin-top:-80px;margin-left:50px;float:right;display:none;"></div><div class="photo-browser-caption" data-caption-index="{{@index}}">{{caption}}</div>',
     
-    toolbarTemplate:'<div class="toolbar tabbar toolbarq" style="height:84px;background-color:#ccc;">'+
+    toolbarTemplate:'<div class="toolbar tabbar toolbarq" style="height:84px;background-color:transparent;">'+
   
 
    ' <div class="toolbar-inner date-template" style="display:none;padding:0;background-color:#2196f3;height:74px;border-bottom-right:20px;border-bottom-left:20px;">'+
