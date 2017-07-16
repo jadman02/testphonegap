@@ -235,8 +235,10 @@
                  
              </div>
              
-<a href="#" class="button-big button loginbutton" onclick="newLogin()" style="border-color:white;display:none;color:white;margin-top:10px;margin-left:10px;background-color:white;color:#2196f3;">Login with Facebook</a>
-<p class="loginbutton button-big" style="clear:both;display:none;color:white;"> <a href="#" style="color:white;font-size:12px;clear:both;" onclick="hidePloader();">Terms and Conditions of Use</a> <span style="color:white;"><br/></span> <a href="#" style="color:white;font-size:12px;" onclick="hidePloader(1);">Privacy Policy</a></p>        
+<a href="#" class="button-big button loginbutton mainlogin" onclick="newLogin()" style="border-color:white;display:none;color:white;margin-top:10px;margin-left:10px;background-color:white;color:#2196f3;"></a>
+<a href="#" class="button-big button secondlogin" onclick="login()" style="border-color:white;display:none;color:white;margin-top:10px;margin-left:10px;background-color:white;color:#2196f3;">Login new user</a>
+
+             <p class="loginbutton button-big" style="clear:both;display:none;color:white;"> <a href="#" style="color:white;font-size:12px;clear:both;" onclick="hidePloader();">Terms and Conditions of Use</a> <span style="color:white;"><br/></span> <a href="#" style="color:white;font-size:12px;" onclick="hidePloader(1);">Privacy Policy</a></p>        
 
              <!--
              <p class="loginbutton" style="font-size:12px;display:none;padding-left:10px;padding-right:10px;">This is because You need a Facebook account to login (to keep profile photos decent).</p>
@@ -542,6 +544,7 @@ myApp.swiper('.swiper-helper-info', {
                         f_token = response.authResponse.accessToken;
                         window.localStorage.setItem("tokenStore", response.authResponse.accessToken);
                         
+
 
                         startApp();
                         
