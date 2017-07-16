@@ -11441,7 +11441,7 @@ var popupHTML = '<div class="popup prefpop">'+
                      '   <div class="item-title active button" style="border:0;border-radius:0px;font-size:17px;">Logout</div>'+
                     '</div>'+
                ' </div>'+
-          '<div class="list-block-label hiderowpref">This will log you out of the app but not out of Facebook.</div>'+   
+          '<div class="list-block-label hiderowpref" style="clear:both;">This will log you out of the app but not out of Facebook.</div>'+   
        
     ' </div>'+
     '</li>'+
