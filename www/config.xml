@@ -60,7 +60,7 @@
 -->
 
       <gap:plugin name="cordova-plugin-customurlscheme" source="npm">
-  <param name="URL_SCHEME" value="dateorduck" />
+  <param name="URL_SCHEME" value="mycoolapp" />
 </gap:plugin>
 
 <gap:config-file platform="ios" parent="NSPhotoLibraryUsageDescription">
