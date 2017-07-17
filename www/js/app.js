@@ -29,7 +29,11 @@ function appLink(){
 }
 
 function fcm(){
-share();
+NativeKeyboard.showMessenger({
+  onSubmit: function(text) {
+    console.log("The user typed: " + text);
+  }
+});
    
 }
 
