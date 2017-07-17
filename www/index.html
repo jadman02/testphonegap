@@ -698,11 +698,14 @@ openFB.login(
 }
 
 function logout(){
-	  var loginmethod = window.localStorage.getItem("loginmethod");
+	myApp.confirm('Are you sure?', 'Logout', function () {
+      
+    
+	var loginmethod = window.localStorage.getItem("loginmethod");
 
     if (loginmethod == '1'){logoutPlugin();}
     else{logoutOpen();}
-
+});
 }
         
         function logoutPlugin() {
