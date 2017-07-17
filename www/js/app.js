@@ -11106,6 +11106,20 @@ var popupHTML = '<div class="popup prefpop">'+
 
   '<div id="tab99" class="view-99 view tab active">'+
 
+    '<div class="toolbar tabbar swipetoolbar" style="background-color:#ccc;z-index:9999999999;position:absolute;bottom:0px;">'+
+' <div class="toolbar-inner" style="padding:0;">'+
+
+       //   '   <a href="#" class="button tab-link tab-swipe pan0 active" onclick="swipePref(0)" style="border-radius:0;font-size:17px;border:0;text-align:center;"><i class="pe-7s-filter pe-lg" style="width:22px;margin:0 auto;"></i></a>'+
+         '   <a href="#" class="button tab-link tab-swipe pan0 " onclick="swipePref(0)" style="border-radius:0;font-size:17px;border:0;text-align:center;"><i class="pe-7s-clock pe-lg" style="width:22px;margin:0 auto;"></i></a>'+
+        
+          '  <a href="#" class="button tab-link tab-swipe pan1" onclick="swipePref(1)" style="border-radius:0;font-size:17px;border:0;text-align:center;"><i class="pe-7s-info pe-lg" style="width:22px;margin:0 auto;"></i></a>'+
+          '  <a href="#" class="button tab-link tab-swipe pan2" onclick="swipePref(2);" style="border-radius:0;font-size:17px;border:0;text-align:center;"><i class="pe-7s-camera pe-lg" style="width:22px;margin:0 auto;"></i></a>'+
+          '  <a href="#" class="button tab-link tab-swipe pan3" onclick="swipePref(3)" style="border-radius:0;font-size:17px;border:0;text-align:center;"><i class="pe-7s-config pe-lg" style="width:22px;margin:0 auto;"></i></a>'+
+      
+
+ '</div>'+
+ '</div>'+
+    
 '<div class="navbar" style="background-color:#2196f3;">'+
 
  '   <div class="navbar-inner">'+
@@ -11514,19 +11528,7 @@ var popupHTML = '<div class="popup prefpop">'+
  //tabs
       '</div>'+
 
-'<div class="toolbar tabbar swipetoolbar" style="background-color:#ccc;z-index:9999999999;position:absolute;bottom:0px;">'+
-' <div class="toolbar-inner" style="padding:0;">'+
 
-       //   '   <a href="#" class="button tab-link tab-swipe pan0 active" onclick="swipePref(0)" style="border-radius:0;font-size:17px;border:0;text-align:center;"><i class="pe-7s-filter pe-lg" style="width:22px;margin:0 auto;"></i></a>'+
-         '   <a href="#" class="button tab-link tab-swipe pan0 " onclick="swipePref(0)" style="border-radius:0;font-size:17px;border:0;text-align:center;"><i class="pe-7s-clock pe-lg" style="width:22px;margin:0 auto;"></i></a>'+
-        
-          '  <a href="#" class="button tab-link tab-swipe pan1" onclick="swipePref(1)" style="border-radius:0;font-size:17px;border:0;text-align:center;"><i class="pe-7s-info pe-lg" style="width:22px;margin:0 auto;"></i></a>'+
-          '  <a href="#" class="button tab-link tab-swipe pan2" onclick="swipePref(2);" style="border-radius:0;font-size:17px;border:0;text-align:center;"><i class="pe-7s-camera pe-lg" style="width:22px;margin:0 auto;"></i></a>'+
-          '  <a href="#" class="button tab-link tab-swipe pan3" onclick="swipePref(3)" style="border-radius:0;font-size:17px;border:0;text-align:center;"><i class="pe-7s-config pe-lg" style="width:22px;margin:0 auto;"></i></a>'+
-      
-
- '</div>'+
- '</div>'+
 
 '</div>'+
   //tabs
@@ -11542,8 +11544,8 @@ if (blocklist.length){$( ".blockbutton" ).removeClass('disabled');}
 
 if(sexuality){$( ".doneunchange" ).show();$( ".registerdiv" ).hide();$('.hiderowpref').removeClass('hiderowpref');}
 
-if(!sexuality){alert('no sexuality');
-	      // $( ".swipetoolbar" ).hide();
+if(!sexuality){
+	       $( ".swipetoolbar" ).hide();
 	      }
 
 
