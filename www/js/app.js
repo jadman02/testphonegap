@@ -6,7 +6,7 @@ function appLink(){
 
 	facebookConnectPlugin.appInvite(
     {
-        url: "http://example.com",
+        url: "https://fb.me/1554148374659639",
         picture: "https://www.google.com.au/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png"
     },
     function(obj){
