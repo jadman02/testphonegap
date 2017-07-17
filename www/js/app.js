@@ -11542,7 +11542,9 @@ if (blocklist.length){$( ".blockbutton" ).removeClass('disabled');}
 
 if(sexuality){$( ".doneunchange" ).show();$( ".registerdiv" ).hide();$('.hiderowpref').removeClass('hiderowpref');}
 
-if(!sexuality){alert('no sexuality');$( ".swipetoolbar" ).hide();}
+if(!sexuality){alert('no sexuality');
+	      // $( ".swipetoolbar" ).hide();
+	      }
 
 
 
@@ -11914,8 +11916,7 @@ if (!sexuality){$( '.swipetext' ).text("Welcome, " + f_first);mySwiper.lockSwipe
 }
 });   
 
-	swipePref(3);
-swipePref(1);
+
 swipePref(chosen);
 	setTimeout(function(){ $( ".swipetoolbar" ).show(); }, 3000);
 myApp.sizeNavbars();  
