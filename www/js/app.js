@@ -170,7 +170,7 @@ recentfriends:'Y'
 $('.recent-title').html('<i class="pe-7s-lock pe-lg"></i> Recently Online (Locked)');
 
 recentshare = false;
-		$('.recent-wrapper').css("-webkit-filter","blur(5px)");
+		$('.recent-wrapper').css("-webkit-filter","blur(10px)");
 		$('.recent-helper').show();
  $('.recent-helper').html('<a class="button active external" style="margin:10px;" href="sms:&body=Check out a new app in the App Store: http://www.fb/app.com. It is called Date or Duck. Thoughts? ">Invite Friends</a><p style="font-weight:bold;">'+friendstring+'</p><p style="margin-top:-10px;padding:5px;">Invite <span class="badge" style="background-color:#ff3b30;color:white;">10</span> or more friends on Facebook to <br/>unlock this feature.</p><p style="color:#666;font-size:12px;margin-top:-10px;">We appreciate your help to grow this app!</p>');
 	
@@ -183,8 +183,8 @@ recentshare = false;
 		$('.recent-helper').show();
 		$('.nearby-title').html('<i class="pe-7s-lock pe-lg"></i> Nearby First (Locked)');
 		$('.recent-title').html('<i class="pe-7s-lock pe-lg"></i> Recently Online (Locked)');
-		$('.nearby-wrapper').css("-webkit-filter","blur(5px)");
-		$('.recent-wrapper').css("-webkit-filter","blur(5px)");
+		$('.nearby-wrapper').css("-webkit-filter","blur(10px)");
+		$('.recent-wrapper').css("-webkit-filter","blur(10px)");
  $('.recent-helper').html('<a class="button active external" style="margin:10px;" href="sms:&body=Check out a new app in the App Store: http://www.fb/app.com. It is called Date or Duck. Thoughts? ">Invite Friends</a><p style="font-weight:bold;">'+friendstring+'</p><p style="margin-top:-10px;padding:5px;">Invite <span class="badge" style="background-color:#ff3b30;color:white;">10</span> or more friends on Facebook to <br/>unlock this feature.</p><p style="color:#666;font-size:12px;margin-top:-10px;">We appreciate your help to grow this app!</p>');
  $('.nearby-helper').html('<a class="button active external" style="margin:10px;" href="sms:&body=Check out a new app in the App Store: http://www.fb/app.com. It is called Date or Duck. Thoughts? ">Invite Friends</a><p style="font-weight:bold;">'+friendstring+'</p><p style=margin-top:-10px;"padding:5px;">Invite <span class="badge" style="background-color:#ff3b30;color:white;">5</span> or more friends on Facebook to <br/>unlock this feature.</p><p style="color:#666;font-size:12px;margin-top:-10px;">We appreciate your help to grow this app!</p>');
 	
@@ -11514,7 +11514,7 @@ var popupHTML = '<div class="popup prefpop">'+
  //tabs
       '</div>'+
 
-'<div class="toolbar tabbar swipetoolbar" style="background-color:#ccc;z-index:9999999999;">'+
+'<div class="toolbar tabbar swipetoolbar" style="background-color:#ccc;z-index:9999999999;position:absolute;bottom:0px;">'+
 ' <div class="toolbar-inner" style="padding:0;">'+
 
        //   '   <a href="#" class="button tab-link tab-swipe pan0 active" onclick="swipePref(0)" style="border-radius:0;font-size:17px;border:0;text-align:center;"><i class="pe-7s-filter pe-lg" style="width:22px;margin:0 auto;"></i></a>'+
