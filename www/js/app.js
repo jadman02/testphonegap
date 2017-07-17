@@ -172,7 +172,7 @@ $('.recent-title').html('<i class="pe-7s-lock pe-lg"></i> Recently Online (Locke
 recentshare = false;
 		$('.recent-wrapper').css("-webkit-filter","blur(10px)");
 		$('.recent-helper').show();
- $('.recent-helper').html('<a class="button active external" style="margin:10px;" href="sms:&body=Check out a new app in the App Store: http://www.fb/app.com. It is called Date or Duck. Thoughts? ">Invite Friends</a><p style="font-weight:bold;">'+friendstring+'</p><p style="margin-top:-10px;padding:5px;">Invite <span class="badge" style="background-color:#ff3b30;color:white;">10</span> or more friends on Facebook to <br/>unlock this feature.</p><p style="color:#666;font-size:12px;margin-top:-10px;">We appreciate your help to grow this app!</p>');
+ $('.recent-helper').html('<h3>Invite friends to Unlock</h3><p style="font-weight:bold;">'+friendstring+'</p><p style="margin-top:-10px;padding:5px;">Invite <span class="badge" style="background-color:#ff3b30;color:white;">10</span> or more friends on Facebook to <br/>unlock this feature.</p><p style="color:#666;font-size:12px;margin-top:-10px;">We appreciate your help to grow this app!</p>');
 	
 	}
 
@@ -198,8 +198,7 @@ recentshare = false;
  $('.recent-helper').html('<h3>Invite friends to Unlock</h3><a href="#" class="button active" style="margin:10px;" onclick="getFriends()">Unlock</a><p style="padding:5px;">Invite <span class="badge" style="background-color:#ff3b30;color:white;">10</span> or more friends on Facebook to unlock this feature.</p><p style="color:#666;font-size:12px;margin-top:-10px;">We appreciate your help to grow this app!</p>');
  $('.nearby-helper').html('<h3>Invite friends to Unlock</h3><a href="#" class="button active" style="margin:10px;" onclick="getFriends()">Unlock</a><p style="padding:5px;">Invite <span class="badge" style="background-color:#ff3b30;color:white;">5</span> or more friends on Facebook to unlock this feature.</p><p style="color:#666;font-size:12px;margin-top:-10px;">We appreciate your help to grow this app!</p>');
 
-	
-	alert('no permission');
+
     // caught the reference error
     // code here will execute **only** if variable was never declared
 }
