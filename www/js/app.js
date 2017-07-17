@@ -172,7 +172,7 @@ $('.recent-title').html('<i class="pe-7s-lock pe-lg"></i> Recently Online (Locke
 recentshare = false;
 		$('.recent-wrapper').css("-webkit-filter","blur(10px)");
 		$('.recent-helper').show();
- $('.recent-helper').html('<h3>Invite friends to Unlock</h3><p style="font-weight:bold;">'+friendstring+'</p><p style="margin-top:-10px;padding:5px;">Invite <span class="badge" style="background-color:#ff3b30;color:white;">10</span> or more friends on Facebook to <br/>unlock this feature.</p><p style="color:#666;font-size:12px;margin-top:-10px;">We appreciate your help to grow this app!</p>');
+ $('.recent-helper').html('<p style="font-weight:bold;">'+friendstring+'</p><p style="margin-top:-10px;padding:5px;">Invite <span class="badge" style="background-color:#ff3b30;color:white;">10</span> or more friends on Facebook to <br/>unlock this feature.</p><p style="color:#666;font-size:12px;margin-top:-10px;"><div class="row"><div class="col-50"><a class="button active external" href="sms:&body=Check out a new app in the App Store: https://fb.me/1554148374659639. It is called Date or Duck. Thoughts? ">Send SMS</a></div><div class="col-50"><a class="button active external" href="#" onclick="appLink()">Invite Friends</a></div></div>We appreciate your help to grow this app!</p>');
 	
 	}
 
@@ -185,8 +185,8 @@ recentshare = false;
 		$('.recent-title').html('<i class="pe-7s-lock pe-lg"></i> Recently Online (Locked)');
 		$('.nearby-wrapper').css("-webkit-filter","blur(10px)");
 		$('.recent-wrapper').css("-webkit-filter","blur(10px)");
- $('.recent-helper').html('<h3>Invite friends to Unlock</h3><p style="font-weight:bold;">'+friendstring+'</p><p style="margin-top:-10px;padding:5px;">Invite <span class="badge" style="background-color:#ff3b30;color:white;">10</span> or more friends on Facebook to <br/>unlock this feature.</p><p style="color:#666;font-size:12px;margin-top:-10px;">We appreciate your help to grow this app!</p>');
- $('.nearby-helper').html('<h3>Invite friends to Unlock</h3><p style="font-weight:bold;">'+friendstring+'</p><p style=margin-top:-10px;"padding:5px;">Invite <span class="badge" style="background-color:#ff3b30;color:white;">5</span> or more friends on Facebook to <br/>unlock this feature.</p><p style="color:#666;font-size:12px;margin-top:-10px;">We appreciate your help to grow this app!</p>');
+ $('.recent-helper').html('<p style="font-weight:bold;">'+friendstring+'</p><p style="margin-top:-10px;padding:5px;">Invite <span class="badge" style="background-color:#ff3b30;color:white;">10</span> or more friends on Facebook to <br/>unlock this feature.</p><p style="color:#666;font-size:12px;margin-top:-10px;"><div class="row"><div class="col-50"><a class="button active external" href="sms:&body=Check out a new app in the App Store: https://fb.me/1554148374659639. It is called Date or Duck. Thoughts? ">Send SMS</a></div><div class="col-50"><a class="button active external" href="#" onclick="appLink()">Invite Friends</a></div></div>   We appreciate your help to grow this app!</p>');
+ $('.nearby-helper').html('<p style="font-weight:bold;">'+friendstring+'</p><p style=margin-top:-10px;"padding:5px;">Invite <span class="badge" style="background-color:#ff3b30;color:white;">5</span> or more friends on Facebook to <br/>unlock this feature.</p><p style="color:#666;font-size:12px;margin-top:-10px;"><div class="row"><div class="col-50"><a class="button active external" href="sms:&body=Check out a new app in the App Store: https://fb.me/1554148374659639. It is called Date or Duck. Thoughts? ">Send SMS</a></div><div class="col-50"><a class="button active external" href="#" onclick="appLink()">Invite Friends</a></div></div>   We appreciate your help to grow this app!</p>');
 	
 	}
 
@@ -195,8 +195,8 @@ recentshare = false;
 	    
 } catch(err) {
     
- $('.recent-helper').html('<h3>Invite friends to Unlock</h3><a href="#" class="button active" style="margin:10px;" onclick="getFriends()">Unlock</a><p style="padding:5px;">Invite <span class="badge" style="background-color:#ff3b30;color:white;">10</span> or more friends on Facebook to unlock this feature.</p><p style="color:#666;font-size:12px;margin-top:-10px;">We appreciate your help to grow this app!</p>');
- $('.nearby-helper').html('<h3>Invite friends to Unlock</h3><a href="#" class="button active" style="margin:10px;" onclick="getFriends()">Unlock</a><p style="padding:5px;">Invite <span class="badge" style="background-color:#ff3b30;color:white;">5</span> or more friends on Facebook to unlock this feature.</p><p style="color:#666;font-size:12px;margin-top:-10px;">We appreciate your help to grow this app!</p>');
+ $('.recent-helper').html('<a href="#" class="button active" style="margin:10px;" onclick="getFriends()">Unlock</a><p style="padding:5px;">Invite <span class="badge" style="background-color:#ff3b30;color:white;">10</span> or more friends on Facebook to unlock this feature.</p><p style="color:#666;font-size:12px;margin-top:-10px;">We appreciate your help to grow this app!</p>');
+ $('.nearby-helper').html('<a href="#" class="button active" style="margin:10px;" onclick="getFriends()">Unlock</a><p style="padding:5px;">Invite <span class="badge" style="background-color:#ff3b30;color:white;">5</span> or more friends on Facebook to unlock this feature.</p><p style="color:#666;font-size:12px;margin-top:-10px;">We appreciate your help to grow this app!</p>');
 
 
     // caught the reference error
