@@ -211,9 +211,9 @@ $('.recent-helper').html(
                 '<div class="item-inner">'+
                     '<div class="item-title-row">'+
                       '  <div class="item-title">'+friendstring+'</div>'+
-                        '<div class="item-after"><a href="#" class="button active">Invite friends</a></div>'+
+                       // '<div class="item-after"></div>'+
                    ' </div>'+
-                    //<div class="item-subtitle">Subtitle</div>
+                    '<div class="item-subtitle"><a href="#" class="button active">Invite friends</a></div>'+
                    ' <div class="item-text">Invite <span class="badge" style="background-color:#ff3b30;color:white;">5</span> or more friends on Facebook to <br/>unlock this feature.</div>'+
                 '</div>'+
             '</div>'+
@@ -221,7 +221,7 @@ $('.recent-helper').html(
     '</ul></div>  ');
 
 		$('.nearby-helper').html(
-		'<div class="list-block media-list" style="margin-top:5px;margin-bottom:5px;"><ul>'+
+		'<div class="list-block media-list" style="margin-top:-20px;margin-bottom:5px;"><ul>'+
      '   <li>'+
           '  <div class="item-content">'+
               // ' <div class="item-media">'+
