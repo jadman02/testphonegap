@@ -941,6 +941,8 @@ recent_all = [];
     '<div class="swiper-pagination-p" style="margin-top:-20px;margin-bottom:20px;"></div>'+
 '</div>'+
    
+		'    <div class="content-block-title" style="width:100%;text-align:center;margin-top:15px;margin-left:0px;">Support this app</div>'+
+'<a href="#" class="button-big button">Tell My Friends</a>'+
 
     '</div>');
 
