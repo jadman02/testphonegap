@@ -8,7 +8,7 @@ facebookConnectPlugin.showDialog({
 	method: "share",
 	href: "https://fb.me/1554148374659639",
 	caption: "Date or Duck App",
-	description: "Efficient dating app for busy people.",
+	description: "Dating app for busy people.",
 	picture: 'https://www.google.com.au/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png',
 	hashtag: '#dateorduck',
 	share_feedWeb: true, // iOS only
