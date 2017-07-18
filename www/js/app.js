@@ -5,24 +5,30 @@ var desktoparray = ['media/dateicon.png','media/duckicon.png','media/datetongue.
 function sharePop(){
 
 	myApp.modal({
-    title:  'Tell your friends about Date or Duck',
-    text: 'You can unlock some app features by inviting your friends. We appreciate your help to grow this app!',
+    title:  'Tell your friends',
+    text: 'You can unlock some app features by inviting your friends to try Date or Duck.',
     verticalButtons: true,
     buttons: [
       {
-        text: 'Invite Friends',
+        text: 'Send Private Invite',
         onClick: function() {
           appLink();
         }
       },
       {
-        text: 'SMS Friends',
+        text: 'Send SMS',
         onClick: function() {
           myApp.alert('You clicked second button!')
         }
       },
       {
         text: 'Share on Facebook',
+        onClick: function() {
+          myApp.alert('You clicked third button!')
+        }
+      },
+	    {
+        text: 'Cancel',
         onClick: function() {
           myApp.alert('You clicked third button!')
         }
