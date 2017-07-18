@@ -4958,12 +4958,12 @@ $( ".date2-close" ).hide();
           myApp.sizeNavbars();
 alert('3');
 //myMessagebar = myApp.messagebar('.messagebar', {
-  //  maxHeight: 200
+//  maxHeight: 200
 //}); 
-//myMessages = myApp.messages('.messages', {
-  //  autoLayout: true,
-    //scrollMessages:true
-//}); 
+myMessages = myApp.messages('.messages', {
+    autoLayout: true,
+    scrollMessages:true
+}); 
 
 //if (myMessages) {myMessages.clean();}
 
@@ -7455,7 +7455,7 @@ firebase.database().ref("chats/" + first_number+ '/' + second_number).push({
     label: 'Sent ' + messagetimetitle
   });
 
-myMessagebar.clear();
+//myMessagebar.clear();
   var messageq;
 var existingnotifications = firebase.database().ref("notifications/" + f_uid).once('value').then(function(snapshot) {
 var objs = snapshot.val();
