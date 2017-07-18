@@ -4,37 +4,15 @@ var desktoparray = ['media/dateicon.png','media/duckicon.png','media/datetongue.
 
 function sharePop(){
 
-	myApp.modal({
-    title:  'Tell your friends',
-    text: 'You can unlock some app features by inviting your friends to try Date or Duck.',
-    verticalButtons: true,
-    buttons: [
-      {
-        text: 'Send Private Invite',
-        onClick: function() {
-          appLink();
-        }
-      },
-      {
-        text: 'Send SMS',
-        onClick: function() {
-          myApp.alert('You clicked second button!')
-        }
-      },
-      {
-        text: 'Share on Facebook',
-        onClick: function() {
-          myApp.alert('You clicked third button!')
-        }
-      },
-	    {
-        text: 'Cancel',
-        onClick: function() {
-          myApp.alert('You clicked third button!')
-        }
-      },
-    ]
-  });
+facebookConnectPlugin.showDialog({
+	method: "share",
+	href: "http://google.com",
+	caption: "Such caption, very feed.",
+	description: "Much description",
+	picture: 'https://www.google.com.au/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png',
+	hashtag: '#myHashtag',
+	share_feedWeb: true, // iOS only
+}, function (response) {}, function (response) {})
 
 	
 }
