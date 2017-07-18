@@ -35,9 +35,7 @@ function sharePop(){
       },
     ]
   });
-	$('.modal-overlay-visible').css("background-color","#2196f3");
-	$('.modal-overlay-visible').css("z-index","13000");
-	$('.modal-overlay-visible').css("display","block");
+
 	
 }
 
@@ -6024,7 +6022,7 @@ console.log(new_all);
 
 
 
-'<div onclick="scrolltoTop()" style="z-index:99999999;margin-top:15px;background-color:white;border-radius:20px;border-bottom-right-radius:0px;border-bottom-left-radius:0px;margin-bottom:20px;display:none;" class="prof_'+i+' infoprofile availyo_'+ new_all[i].id+'">'+
+'<div onclick="scrolltoTop()" style="z-index:12000;margin-top:15px;background-color:white;border-radius:20px;border-bottom-right-radius:0px;border-bottom-left-radius:0px;margin-bottom:20px;display:none;" class="prof_'+i+' infoprofile availyo_'+ new_all[i].id+'">'+
 
 
    
