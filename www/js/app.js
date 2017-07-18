@@ -915,6 +915,8 @@ recent_all = [];
     '<div class="no-results-div" style="text-align:center;margin:0 auto;width:300px;position:absolute;top:44px;left:50%;margin-left:-150px;margin-top:54px;">'+
 '<div class="topdiv">'+
      // '<h3>Get Quacking!</h3>'+
+				'    <div class="content-block-title" style="width:100%;text-align:center;margin-top:15px;margin-left:0px;">Get Quacking</div>'+
+
        '<div class="row" style="padding-top:10px;padding-bottom:10px;">'+
     '<div class="col-30" style="padding-top:5px;"><img src="media/datefaceonly.png" style="width:80px;margin:0 auto;"></div>'+
     '<div class="col-70" style="padding-top:5px;">Press <span style="font-family: \'Pacifico\', cursive;font-size:20px;">date</span> if you want to find something more serious like a relationship.</div>'+
@@ -942,7 +944,7 @@ recent_all = [];
 '</div>'+
    
 		'    <div class="content-block-title" style="width:100%;text-align:center;margin-top:15px;margin-left:0px;">Support this app</div>'+
-'<a href="#" class="button-big button">Tell My Friends</a>'+
+'<a href="#" class="button-big button" style="margin-bottom:10px;">Tell My Friends</a>'+
 
     '</div>');
 
