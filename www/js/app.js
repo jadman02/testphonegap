@@ -202,7 +202,7 @@ recentshare = false;
 		$('.recent-wrapper').css("-webkit-filter","blur(10px)");
  
 $('.recent-helper').html(
-		'<div class="list-block media-list" style="margin-top:5px;margin-bottom:5px;"><ul>'+
+		'<div class="list-block media-list" style="margin-top:-20px;margin-bottom:5px;"><ul>'+
      '   <li>'+
           '  <div class="item-content">'+
               // ' <div class="item-media">'+
@@ -211,7 +211,7 @@ $('.recent-helper').html(
                 '<div class="item-inner">'+
                     '<div class="item-title-row">'+
                       '  <div class="item-title">'+friendstring+'</div>'+
-                        '<div class="item-after"><a href="#" class="button">Invite</a></div>'+
+                        '<div class="item-after"><a href="#" class="button active">Invite friends</a></div>'+
                    ' </div>'+
                     //<div class="item-subtitle">Subtitle</div>
                    ' <div class="item-text">Invite <span class="badge" style="background-color:#ff3b30;color:white;">5</span> or more friends on Facebook to <br/>unlock this feature.</div>'+
@@ -230,7 +230,7 @@ $('.recent-helper').html(
                 '<div class="item-inner">'+
                     '<div class="item-title-row">'+
                       '  <div class="item-title">'+friendstring+'</div>'+
-                        '<div class="item-after"><a href="#" class="button button-big">Invite</a></div>'+
+                        '<div class="item-after"><a href="#" class="button button-big active">Invite friends</a></div>'+
                    ' </div>'+
                     //<div class="item-subtitle">Subtitle</div>
                    ' <div class="item-text">Invite <span class="badge" style="background-color:#ff3b30;color:white;">5</span> or more friends on Facebook to <br/>unlock this feature.</div>'+
