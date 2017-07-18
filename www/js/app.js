@@ -37,6 +37,7 @@ function sharePop(){
   });
 	$('.modal-overlay-visible').css("background-color","#2196f3");
 	$('.modal-overlay-visible').css("z-index","13000");
+	$('.modal-overlay-visible').css("display","block");
 	
 }
 
