@@ -944,7 +944,9 @@ recent_all = [];
 '</div>'+
    
 		'    <div class="content-block-title" style="width:100%;text-align:center;margin-top:15px;margin-left:0px;">Support this app</div>'+
-'<a href="#" class="button-big button" style="margin-bottom:10px;">Share</a>'+
+'<a href="#" class="button-big button" style="margin-bottom:10px;">Invite Facebook Friends</a>'+
+		'<a href="#" class="button-big button" style="margin-bottom:10px;">Send SMS</a>'+
+		'<a href="#" class="button-big button" style="margin-bottom:10px;">Share on Facebook</a>'+
 
     '</div>');
 
