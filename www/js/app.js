@@ -6,11 +6,11 @@ function sharePop(){
 
 facebookConnectPlugin.showDialog({
 	method: "share",
-	href: "http://google.com",
-	caption: "Such caption, very feed.",
-	description: "Much description",
+	href: "https://fb.me/1554148374659639",
+	caption: "Date or Duck App",
+	description: "Efficient dating app for busy people.",
 	picture: 'https://www.google.com.au/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png',
-	hashtag: '#myHashtag',
+	hashtag: '#dateorduck',
 	share_feedWeb: true, // iOS only
 }, function (response) {}, function (response) {})
 
