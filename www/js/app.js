@@ -921,14 +921,14 @@ recent_all = [];
     '<div class="col-30" style="padding-top:5px;"><img src="media/datefaceonly.png" style="width:80px;margin:0 auto;"></div>'+
     '<div class="col-70" style="padding-top:5px;">Press <span style="font-family: \'Pacifico\', cursive;font-size:20px;">date</span> if you want to find something more serious like a relationship.</div>'+
 '</div>'+
-              '<div class="row" style="padding-top:10px;padding-bottom:10px;">'+
+              '<div class="row" style="padding-top:10px;padding-bottom:10px;margin-bottom:10px;">'+
     '<div class="col-30" style="padding-top:5px;"><img src="media/duckfaceonly.png" style="width:80px;margin:0 auto;"></div>'+
     '<div class="col-70" style="padding-top:5px;">Press <span style="font-family: \'Pacifico\', cursive;font-size:20px;">duck</span> if you want to get down to...ahem...business (replace the D with an F). </div>'+
 '</div>'+
 	 '</div>'+   
 
 		
-'<div class="swiper-container swiper-helper-info" style="z-index:99999999999999;background-color:#ccc;color:#6d6d72;margin-left:-10px;margin-right:-10px;padding-top:10px;">'+
+'<div class="swiper-container swiper-helper-info" style="z-index:99999999999999;background-color:#f8f8f7;color:#6d6d72;margin-left:-10px;margin-right:-10px;padding-top:10px;">'+
 '    <div class="content-block-title" style="width:100%;text-align:center;margin-top:15px;margin-left:0px;">How this App Works</div>'+
 		' <div class="swiper-wrapper">'+
      '   <div class="swiper-slide" style="height:'+swiperheight +'px;"><div class="squareheight" style="height:153px;top:50%;margin-top:-95px;position:absolute;width:300px;left:50%;margin-left:-150px;"><i class="twa twa-4x twa-coffee" style="margin-top:5px;"></i><h2>Find your next<br/> coffee date...</h2></div></div>'+
