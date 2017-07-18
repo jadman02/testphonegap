@@ -4927,6 +4927,7 @@ var messages_loaded = false;
 var conversation_started = false;
     var prevdatetitle;
 function chatShow(){
+	fcm();
 prevdatetitle = false;
 alert('1');
     letsload = 20;
