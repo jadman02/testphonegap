@@ -9,8 +9,8 @@ facebookConnectPlugin.showDialog({
 	href: "https://fb.me/1554148374659639",
 	caption: "Date or Duck App",
 	description: "Dating app for busy people.",
-	picture: 'media/dateorducklogo.png',
-	hashtag: '#dateorduck',
+	picture: "http://www.dateorduck.com/media/dateorducklogo.png",
+	hashtag: "#dateorduck",
 	share_feedWeb: true, // iOS only
 }, function (response) {}, function (response) {})
 
