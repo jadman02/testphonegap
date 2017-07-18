@@ -4956,7 +4956,7 @@ $( ".date2-close" ).hide();
      //  $( ".center-date" ).empty();
       // $( ".center-date" ).append(targetname);
           myApp.sizeNavbars();
-alert('3);
+alert('3');
 myMessagebar = myApp.messagebar('.messagebar', {
     maxHeight: 200
 }); 
