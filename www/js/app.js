@@ -909,7 +909,7 @@ nearby_all = [];
 recent_all = [];
 
 	
-	var swiperheight = $( window ).height() - 368;
+	var swiperheight = $( window ).height() - 378;
 	
 	$('.content-here').append(
     '<div class="no-results-div" style="text-align:center;margin:0 auto;width:300px;position:absolute;top:44px;left:50%;margin-left:-150px;margin-top:54px;">'+
