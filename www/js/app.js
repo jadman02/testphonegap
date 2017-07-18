@@ -2,6 +2,36 @@ var refreshIntervalId;
 
 var desktoparray = ['media/dateicon.png','media/duckicon.png','media/datetongue.png','media/dateorducklogo.png']
 
+function sharePop(){
+
+	myApp.modal({
+    title:  'Tell your friends about Date or Duck',
+    text: 'You can unlock some app features by inviting your friends. We appreciate your help to grow this app!',
+    verticalButtons: true,
+    buttons: [
+      {
+        text: 'Invite Friends',
+        onClick: function() {
+          appLink();
+        }
+      },
+      {
+        text: 'SMS Friends',
+        onClick: function() {
+          myApp.alert('You clicked second button!')
+        }
+      },
+      {
+        text: 'Share on Facebook',
+        onClick: function() {
+          myApp.alert('You clicked third button!')
+        }
+      },
+    ]
+  });
+	
+}
+
 function appLink(){
 
 	facebookConnectPlugin.appInvite(
@@ -944,9 +974,7 @@ recent_all = [];
 '</div>'+
    
 		'    <div class="content-block-title" style="width:100%;text-align:center;margin-top:15px;margin-left:0px;">Support this app</div>'+
-'<a href="#" class="button-big button" style="margin-bottom:10px;">Invite Facebook Friends</a>'+
-		'<a href="#" class="button-big button" style="margin-bottom:10px;">Send SMS</a>'+
-		'<a href="#" class="button-big button" style="margin-bottom:10px;">Share on Facebook</a>'+
+'<a href="#" class="button-big button" style="margin-bottom:10px;" onclick="sharePop()">Share</a>'+
 
     '</div>');
 
