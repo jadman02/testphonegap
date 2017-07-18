@@ -200,7 +200,28 @@ recentshare = false;
 		$('.recent-title').html('<i class="pe-7s-lock pe-lg"></i> Recently Online (Locked)');
 		$('.nearby-wrapper').css("-webkit-filter","blur(10px)");
 		$('.recent-wrapper').css("-webkit-filter","blur(10px)");
- $('.recent-helper').html('<p style="margin-top:-10px;padding:5px;">'+friendstring+'. Invite <span class="badge" style="background-color:#ff3b30;color:white;">10</span> or more friends on Facebook to <br/>unlock this feature.</p>');
+ 
+$('.recent-helper').html(
+		'<div class="list-block media-list"><ul>'+
+     '   <li>'+
+          '  <div class="item-content">'+
+              // ' <div class="item-media">'+
+               //    ' <img src="path/to/img.jpg">'+
+              // ' </div>'+
+                '<div class="item-inner">'+
+                    '<div class="item-title-row">'+
+                      '  <div class="item-title">'+friendstring+'</div>'+
+                        '<div class="item-after">Element label</div>'+
+                   ' </div>'+
+                    //<div class="item-subtitle">Subtitle</div>
+                   ' <div class="item-text">Invite <span class="badge" style="background-color:#ff3b30;color:white;">5</span> or more friends on Facebook to <br/>unlock this feature.</div>'+
+                '</div>'+
+            '</div>'+
+        '</li>'+
+    '</ul></div>  ');
+		
+		
+		//$('.recent-helper').html('<p style="margin-top:-10px;padding:5px;">'+friendstring+'. Invite <span class="badge" style="background-color:#ff3b30;color:white;">10</span> or more friends on Facebook to <br/>unlock this feature.</p>');
  $('.nearby-helper').html('<p style=margin-top:-10px;"padding:5px;">'+friendstring+'. Invite <span class="badge" style="background-color:#ff3b30;color:white;">5</span> or more friends on Facebook to <br/>unlock this feature.</p>');
 //	$('.summary-helper').html('<p style="font-weight:bold;"></p><div class="row"><div class="col-50"><a class="button active external" href="sms:&body=Check out a new app in the App Store: https://fb.me/1554148374659639. It is called Date or Duck. Thoughts? ">Send SMS</a></div><div class="col-50"><a class="button active external" href="#" onclick="appLink()">Invite Friends</a></div></div><p style="color:#666;font-size:12px;margin-top:-10px;">We appreciate your help to grow this app!</p>');
 	
