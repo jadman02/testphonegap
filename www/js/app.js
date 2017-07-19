@@ -284,7 +284,7 @@ $('.nearby-helper').html(
               // ' </div>'+
                 '<div class="item-inner">'+
                     '<div class="item-title-row">'+
-                      '  <div class="item-title">Invite friends to unlock</div>'+
+                      '  <div class="item-title">Invite friends to use this app</div>'+
                        // '<div class="item-after"></div>'+
                    ' </div>'+
                     '<div class="item-subtitle" style="margin-top:5px;margin-bottom:5px;"><a href="#" class="button active" onclick="getFriends()">Find friends</a></div>'+
@@ -303,7 +303,7 @@ $('.nearby-helper').html(
               // ' </div>'+
                 '<div class="item-inner">'+
                     '<div class="item-title-row">'+
-                      '  <div class="item-title">Invite friends to unlock</div>'+
+                      '  <div class="item-title">Invite friends to use this app</div>'+
                        // '<div class="item-after"></div>'+
                    ' </div>'+
                     '<div class="item-subtitle" style="margin-top:5px;margin-bottom:5px;"><a href="#" class="button active" onclick="getFriends()">Find friends</a></div>'+
