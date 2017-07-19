@@ -204,7 +204,7 @@ recentshare = false;
 $('.recent-helper').html(
 		'<div class="list-block media-list" style="margin-top:-20px;margin-bottom:5px;"><ul>'+
      '   <li>'+
-          '  <div class="item-content" style="background-color:#f7f7f8;border-radius:5px;margin-left:20px;margin-right:20px;">'+
+          '  <div class="item-content" style="background-color:#f7f7f8;border-radius:5px;margin-left:20px;margin-right:20px;margin-top:10px;">'+
               // ' <div class="item-media">'+
                //    ' <img src="path/to/img.jpg">'+
               // ' </div>'+
@@ -214,7 +214,7 @@ $('.recent-helper').html(
                        // '<div class="item-after"></div>'+
                    ' </div>'+
                     '<div class="item-subtitle" style="margin-top:5px;margin-bottom:5px;"><a href="#" class="button active">Invite friends</a></div>'+
-                   ' <div class="item-text">Invite <span class="badge" style="background-color:#ff3b30;color:white;">5</span> or more friends on Facebook to <br/>unlock this feature.</div>'+
+                   ' <div class="item-text">Invite <span class="badge" style="background-color:#ff3b30;color:white;">5</span> or more friends on Facebook to unlock this feature.</div>'+
                 '</div>'+
             '</div>'+
         '</li>'+
