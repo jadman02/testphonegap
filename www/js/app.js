@@ -159,7 +159,7 @@ if (response1.summary.total_count ==0) {friendstring = 'No friends use this app'
 	
 
 	if (response1.summary.total_count > 9){
-
+alert('9');
 		 nearbyshare = true;
 		 recentshare = true;
 		$('.nearby-title').html('Nearby First');
@@ -212,6 +212,7 @@ recentshare = false;
 	}
 
 	if (response1.summary.total_count < 5){
+		alert('5');
 	nearbyshare = false;
 		 recentshare = false;
 		$('.nearby-helper').show();
@@ -272,6 +273,8 @@ $('.recent-helper').html(
 	    
 } catch(err) {
 
+	alert('2');
+	
 $('.nearby-helper').html(
 		'<div class="list-block media-list" style="margin-top:-20px;margin-bottom:5px;"><ul>'+
      '   <li>'+
