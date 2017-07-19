@@ -130,7 +130,7 @@ function newHometown(){
 
 function fQuery(){
 
-	$( ".summary-helper" ).show(); 
+	
 	
 $.ajax({
    url: "https://graph.facebook.com/v2.4/784956164912201?fields=context.fields(friends_using_app)",
@@ -271,7 +271,45 @@ $('.recent-helper').html(
 	
 	    
 } catch(err) {
-    
+
+$('.nearby-helper').html(
+		'<div class="list-block media-list" style="margin-top:-20px;margin-bottom:5px;"><ul>'+
+     '   <li>'+
+          '  <div class="item-content" style="background-color:#f7f7f8;border-radius:5px;margin-left:20px;margin-right:20px;margin-top:10px;">'+
+              // ' <div class="item-media">'+
+               //    ' <img src="path/to/img.jpg">'+
+              // ' </div>'+
+                '<div class="item-inner">'+
+                    '<div class="item-title-row">'+
+                      '  <div class="item-title">Invite friends to unlock</div>'+
+                       // '<div class="item-after"></div>'+
+                   ' </div>'+
+                    '<div class="item-subtitle" style="margin-top:5px;margin-bottom:5px;"><a href="#" class="button active" onclick="getFriends()">Find friends</a></div>'+
+                   ' <div class="item-text">Sign up <span class="badge" style="background-color:#ff3b30;color:white;">5</span> friends on Facebook to unlock this feature.</div>'+
+                '</div>'+
+            '</div>'+
+        '</li>'+
+    '</ul></div>  ');
+	
+	$('.recent-helper').html(
+		'<div class="list-block media-list" style="margin-top:-20px;margin-bottom:5px;"><ul>'+
+     '   <li>'+
+          '  <div class="item-content" style="background-color:#f7f7f8;border-radius:5px;margin-left:20px;margin-right:20px;margin-top:10px;">'+
+              // ' <div class="item-media">'+
+               //    ' <img src="path/to/img.jpg">'+
+              // ' </div>'+
+                '<div class="item-inner">'+
+                    '<div class="item-title-row">'+
+                      '  <div class="item-title">Invite friends to unlock</div>'+
+                       // '<div class="item-after"></div>'+
+                   ' </div>'+
+                    '<div class="item-subtitle" style="margin-top:5px;margin-bottom:5px;"><a href="#" class="button active" onclick="getFriends()">Find friends</a></div>'+
+                   ' <div class="item-text">Sign up <span class="badge" style="background-color:#ff3b30;color:white;">10</span> friends on Facebook to unlock this feature.</div>'+
+                '</div>'+
+            '</div>'+
+        '</li>'+
+    '</ul></div>  ');
+	
  $('.recent-helper').html('<p style="padding:5px;">'+friendstring+'. Invite <span class="badge" style="background-color:#ff3b30;color:white;">10</span> or more friends on Facebook to unlock this feature.</p>');
  $('.nearby-helper').html('<p style="padding:5px;">'+friendstring+'. Invite <span class="badge" style="background-color:#ff3b30;color:white;">5</span> or more friends on Facebook to unlock this feature.</p>');
 
@@ -282,7 +320,7 @@ $('.recent-helper').html(
 }
 
 
-
+$( ".summary-helper" ).show(); 
 
         
    },
