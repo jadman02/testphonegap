@@ -130,6 +130,8 @@ function newHometown(){
 
 function fQuery(){
 
+	$( ".summary-helper" ).show(); 
+	
 $.ajax({
    url: "https://graph.facebook.com/v2.4/784956164912201?fields=context.fields(friends_using_app)",
     type: "get",
@@ -1929,6 +1931,7 @@ recentswiper.destroy();
           
           $( ".nearby-helper" ).hide(); 
                     $( ".recent-helper" ).hide(); 
+	$( ".summary-helper" ).hide(); 
           
 $( ".results-loader" ).show();          
 getWifilocation();
