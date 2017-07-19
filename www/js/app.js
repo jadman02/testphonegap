@@ -159,7 +159,7 @@ if (response1.summary.total_count ==0) {friendstring = 'No friends use this app'
 	
 
 	if (response1.summary.total_count > 9){
-alert('9');
+
 		 nearbyshare = true;
 		 recentshare = true;
 		$('.nearby-title').html('Nearby First');
@@ -212,7 +212,7 @@ recentshare = false;
 	}
 
 	if (response1.summary.total_count < 5){
-		alert('5');
+
 	nearbyshare = false;
 		 recentshare = false;
 		$('.nearby-helper').show();
@@ -273,7 +273,7 @@ $('.recent-helper').html(
 	    
 } catch(err) {
 
-	alert('2');
+
 	
 $('.nearby-helper').html(
 		'<div class="list-block media-list" style="margin-top:-20px;margin-bottom:5px;"><ul>'+
@@ -313,8 +313,8 @@ $('.nearby-helper').html(
         '</li>'+
     '</ul></div>  ');
 	
- $('.recent-helper').html('<p style="padding:5px;">'+friendstring+'. Invite <span class="badge" style="background-color:#ff3b30;color:white;">10</span> or more friends on Facebook to unlock this feature.</p>');
- $('.nearby-helper').html('<p style="padding:5px;">'+friendstring+'. Invite <span class="badge" style="background-color:#ff3b30;color:white;">5</span> or more friends on Facebook to unlock this feature.</p>');
+// $('.recent-helper').html('<p style="padding:5px;">'+friendstring+'. Invite <span class="badge" style="background-color:#ff3b30;color:white;">10</span> or more friends on Facebook to unlock this feature.</p>');
+// $('.nearby-helper').html('<p style="padding:5px;">'+friendstring+'. Invite <span class="badge" style="background-color:#ff3b30;color:white;">5</span> or more friends on Facebook to unlock this feature.</p>');
 
 	//$('.summary-helper').html('<p style="font-weight:bold;">Invite friends to unlock features</p><div class="row"><div class="col-100"><a class="button active" href="#" onclick="getFriends">Unlock</a></div></div><p style="color:#666;font-size:12px;margin-top:-10px;">Features are locked based on how many friends you invite to use the app.</p>');
 
