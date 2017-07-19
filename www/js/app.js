@@ -204,7 +204,7 @@ recentshare = false;
 $('.recent-helper').html(
 		'<div class="list-block media-list" style="margin-top:-20px;margin-bottom:5px;"><ul>'+
      '   <li>'+
-          '  <div class="item-content" style="background-color:#ccc;border-radius:5px;">'+
+          '  <div class="item-content" style="background-color:#f7f7f8;border-radius:5px;margin-left:20px;margin-right:20px;">'+
               // ' <div class="item-media">'+
                //    ' <img src="path/to/img.jpg">'+
               // ' </div>'+
