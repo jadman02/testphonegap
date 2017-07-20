@@ -10785,7 +10785,8 @@ alert('loadal2');
 $.getJSON(retrievealbumurl,
       function(response) {
 	
-	
+	alert('loadal3');
+
    if(response.data.length == 0){
    
 var userphotospermission = 0;
@@ -10802,7 +10803,7 @@ var userphotospermission = 0;
   
   }
  });	   
-alert('loadal3');
+
 	   if (userphotospermission == 0){alert('no photo permission');getPhotoPermissionNow();myApp.closeModal('.photopopup');return false;}
 	   else {
 	   myApp.alert('Upload photos to Facebook to make them available to use in this app.', 'No photos are available');myApp.closeModal('.photopopup');return false;
