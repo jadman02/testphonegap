@@ -130,64 +130,11 @@ function newHometown(){
 
 function fQuery(){
 
-alert('fQuery');
-      var userfriendspermission = 0;
+	alert('fquery');
 
-	    
-		     openFB.api({
-            method: 'GET',
-            path: '/me/permissions',
-            success: function(response) {
-              alert('response');
-		     for (i = 0; i < response.data.length; i++) { 
-
-  if (response.data[i].permission == 'user_friends' && response.data[i].status == 'granted'){userfriendspermission = 1;}
-    }
-
-		    if (userfriendspermission === 0){
-		    
-			      $('.nearby-helper').html(
-		'<div class="list-block media-list" style="margin-top:-20px;margin-bottom:5px;"><ul>'+
-     '   <li>'+
-          '  <div class="item-content" style="background-color:#f7f7f8;border-radius:5px;margin-left:20px;margin-right:20px;margin-top:10px;">'+
-              // ' <div class="item-media">'+
-               //    ' <img src="path/to/img.jpg">'+
-              // ' </div>'+
-                '<div class="item-inner">'+
-                    '<div class="item-title-row">'+
-                      '  <div class="item-title">Invite friends to use this app</div>'+
-                       // '<div class="item-after"></div>'+
-                   ' </div>'+
-                    '<div class="item-subtitle" style="margin-top:5px;margin-bottom:5px;"><a href="#" class="button active" onclick="getFriends()">Find friends</a></div>'+
-                   ' <div class="item-text">Sign up <span class="badge" style="background-color:#ff3b30;color:white;">5</span> friends on Facebook to unlock this feature.</div>'+
-                '</div>'+
-            '</div>'+
-        '</li>'+
-    '</ul></div>  ');
 	
-	$('.recent-helper').html(
-		'<div class="list-block media-list" style="margin-top:-20px;margin-bottom:5px;"><ul>'+
-     '   <li>'+
-          '  <div class="item-content" style="background-color:#f7f7f8;border-radius:5px;margin-left:20px;margin-right:20px;margin-top:10px;">'+
-              // ' <div class="item-media">'+
-               //    ' <img src="path/to/img.jpg">'+
-              // ' </div>'+
-                '<div class="item-inner">'+
-                    '<div class="item-title-row">'+
-                      '  <div class="item-title">Invite friends to use this app</div>'+
-                       // '<div class="item-after"></div>'+
-                   ' </div>'+
-                    '<div class="item-subtitle" style="margin-top:5px;margin-bottom:5px;"><a href="#" class="button active" onclick="getFriends()">Find friends</a></div>'+
-                   ' <div class="item-text">Sign up <span class="badge" style="background-color:#ff3b30;color:white;">10</span> friends on Facebook to unlock this feature.</div>'+
-                '</div>'+
-            '</div>'+
-        '</li>'+
-    '</ul></div>  ');
-		    
-		    }
-		    else{
-		    
-			    $.ajax({
+	
+$.ajax({
    url: "https://graph.facebook.com/v2.4/784956164912201?fields=context.fields(friends_using_app)",
     type: "get",
     data: { access_token: f_token},
@@ -398,19 +345,6 @@ $( ".summary-helper" ).show();
     complete: function () {
     }
 });
-		    
-		    
-		    
-		    }
-		    
-		   // alert(JSON.stringify(result.data));
-            },
-            error: errorHandler
-        });
-
-    
-
-	
 }
 
 function setWant(val){
@@ -1171,12 +1105,10 @@ alert('got here 55');
 		$('.recent-wrapper').css("-webkit-filter","none");
 }	
 else{
-
+alert('got here 44');
 	//check permission first
 	
-fQuery;
-
-	
+readPermissions();
 	
 	
 
