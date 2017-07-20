@@ -1094,7 +1094,7 @@ $( ".homedate" ).removeClass("disabled");
 initialload = true;
 
 if (recentfriends){
-
+$( ".summary-helper" ).show();
 	nearbyshare = true;
 		 recentshare = true;
 		$('.nearby-title').html('Nearby First');
@@ -6088,7 +6088,7 @@ $( ".prevs" ).show();
 $( ".prevphoto" ).hide();
 $( ".nextphoto" ).hide();
   
-console.log(new_all);
+
   for (i = 0; i < new_all.length; i++) { 
    var boxcolor,displayavail,availabilityli,availabletext,iconavaill;
  iconavaill='f';boxcolor = 'width:60px;color:#007aff;opacity:1;background-color:transparent';displayavail='none';availabletext='';
@@ -6557,7 +6557,7 @@ myPhotoBrowser.swiper.slideTo(swiper.activeIndex);
 
 //console.log(myPhotoBrowser.swiper.activeIndex);
 swiperQuestions.slideTo(myPhotoBrowser.swiper.activeIndex,0);
-
+$( ".availyo_"+ new_all[swiperQuestions.activeIndex].id ).show();
 $( ".toolbarq" ).show();
 
 comingback = 1;
