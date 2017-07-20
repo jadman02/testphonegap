@@ -10845,7 +10845,7 @@ pagingalbumurl = response.paging.next;
       }
       }
       
-      if (response.data.length < 20) {$( ".loadmorebuttonalbums").hide();$( "#nomorealbums").show();albumend = true;}
+      if (response.data.length < 20) {$( ".loadmorebuttonalbums").hide();$( "#nomorealbums").show();$( ".photoloader").hide();albumend = true;}
 else{$( ".loadmorebuttonalbums").show();}
       
 
