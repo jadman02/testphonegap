@@ -655,7 +655,7 @@ catch (e) {
 
 	    
 function photoPermissions(){
-
+alert('1');
 var userphotospermission = 0;
 
 var loginmethod = window.localStorage.getItem("loginmethod");
@@ -687,7 +687,7 @@ facebookConnectPlugin.api("me/permissions", [], cb9, cb7);
     }
 	
 	else{
-	
+	alert('2');
 	
 		     openFB.api({
             method: 'GET',
@@ -704,7 +704,7 @@ facebookConnectPlugin.api("me/permissions", [], cb9, cb7);
 			    getPhotoPermissionNow();
 		    
 		    }
-		    else{loadAlbums();}
+		    else{alert('3');loadAlbums();}
 		    
 		   // alert(JSON.stringify(result.data));
             },
@@ -994,11 +994,11 @@ fQuery();
                         window.localStorage.setItem("tokenStore", response.authResponse.accessToken);
                         
                         //update
-                        alert('11');
+
                     } else {
               
                         
-alert('22');
+
                     }
                 }, {scope: 'user_photos'});
 		}
