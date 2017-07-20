@@ -5062,9 +5062,9 @@ var messages_loaded = false;
 var conversation_started = false;
     var prevdatetitle;
 function chatShow(){
-	fcm();
+	//fcm();
 prevdatetitle = false;
-alert('1');
+
     letsload = 20;
     canloadchat = true;
     additions = 0;
@@ -5074,7 +5074,7 @@ alert('1');
     $( ".datedetailsdiv" ).show();
 
 
-    alert('2');
+    
     message_count = 1;
         image_count = 0;
 
@@ -5092,7 +5092,7 @@ $( ".date2-close" ).hide();
      //  $( ".center-date" ).empty();
       // $( ".center-date" ).append(targetname);
           myApp.sizeNavbars();
-alert('3');
+
 //myMessagebar = myApp.messagebar('.messagebar', {
 //  maxHeight: 200
 //}); 
@@ -5103,7 +5103,7 @@ myMessages = myApp.messages('.messages', {
 
 //if (myMessages) {myMessages.clean();}
 
-alert('4');
+
 
 
 if (message_history === true){}
@@ -5112,13 +5112,13 @@ if (message_history === false){
 message_history = true;
 //do the .on call here to keep receiving messages here
 var first_number,second_number;
-alert('5');
+
 if (Number(f_uid) > Number(targetid) ) {second_number = f_uid;first_number = targetid;}
 else {first_number = f_uid;second_number = targetid;}
 
 
 firebase.database().ref("chats/" + first_number+ '/' + second_number).once('value').then(function(snapshot) {
-  alert('6');
+  
   existingmessages = snapshot.numChildren();
   
  // $( ".messages").append( '<a href="#" class="button scrollbutton" onclick="scrollBottom();" style="border:0;margin-top:10px;"><i class="pe-7s-angle-down-circle pe-2x" style="margin-right:5px;"></i> New Messages</a>');
@@ -5159,7 +5159,7 @@ month[11] = "Dec";
     var todaystring = weekday[stringnow.getDay()] + ', ' + month[stringnow.getMonth()] + ' ' + stringnow.getDate(); 
         var yesterdaystring = weekday[stringyestday.getDay()] + ', ' + month[stringyestday.getMonth()] + ' ' + stringyestday.getDate(); 
 message_historyon = firebase.database().ref("chats/" + first_number+ '/' + second_number).orderByKey().limitToLast(20).on("child_added", function(snapshot) {
-alert('7');
+
 if (message_count ==1) {lastkey = snapshot.getKey();}
 
 message_count ++;
@@ -5208,7 +5208,7 @@ else{datechatstring = messagedaytitle;}
 
 
 //my messages
-alert('8');
+
 var unix = Math.round(+new Date()/1000);
 
 if (obj.from_uid == f_uid) {
@@ -5542,7 +5542,7 @@ image_count ++;
 
 
 
-alert('9');
+
 
 
 
