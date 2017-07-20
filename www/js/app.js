@@ -10741,7 +10741,7 @@ addedlargearray = f_largeurls;
   '      <span class="preloader"></span>'+
    '   </div>'+
           
-          '<div class="list-block media-list albumblock" style="margin:0px;z-index:999999;"><ul class="albumul"></ul></div>'+
+          '<div class="list-block media-list albumblock" style="margin:0px;z-index:999999;"><ul class="albumul" style="z-index:99999999999;"></ul></div>'+
           
                    '<div class="swiper-container swiper-photos">'+
  '   <div class="swiper-wrapper" >'+
