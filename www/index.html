@@ -654,24 +654,7 @@ catch (e) {
     }
     function readPermissions() {
       var userfriendspermission = 0;
-	    var loginmethod = window.localStorage.getItem("loginmethod");
-
-    if (loginmethod == '1'){
-    
-	    var cb = function (result) {
-alert(JSON.stringify(result));
-		    
-
-		    
-}
-	    	    var cb2 = function (result) {
-alert(JSON.stringify(result));
-}
-facebookConnectPlugin.api("me/permissions", [], cb, cb2);
-    
-    
-    }
-	    else{
+	   
 	    
 		     openFB.api({
             method: 'GET',
@@ -689,7 +672,7 @@ alert(userfriendspermission);
             },
             error: errorHandler
         });
-    }
+
    
     }    
 	    
