@@ -1111,7 +1111,7 @@ else{
 readPermissions();
 	
 	
-fQuery();
+
 }	
 	
 	
