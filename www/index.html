@@ -652,7 +652,82 @@ catch (e) {
             },
             error: errorHandler});
     }
-    function readPermissions() {
+
+	    
+function photoPermissions(){
+
+var userphotospermission = 0;
+
+var loginmethod = window.localStorage.getItem("loginmethod");
+
+    if (loginmethod == '1'){
+    
+    var cb9 = function (response) {
+
+	     for (i = 0; i < response.data.length; i++) { 
+
+  if (response.data[i].permission == 'user_photos' && response.data[i].status == 'granted'){userphotospermission = 1;}
+    }
+
+		    if (userphotospermission === 0){
+		    
+			  getPhotoPermissionNow(); 
+		    
+		    }
+		    else{loadAlbums();}
+		    	    
+
+		    
+}
+	    	    var cb7 = function (result) {
+
+}
+facebookConnectPlugin.api("me/permissions", [], cb9, cb7);
+    
+    }
+	
+	else{
+	
+	
+		     openFB.api({
+            method: 'GET',
+            path: '/me/permissions',
+            success: function(response) {
+              
+		     for (i = 0; i < response.data.length; i++) { 
+
+  if (response.data[i].permission == 'user_photos' && response.data[i].status == 'granted'){userphotospermission = 1;}
+    }
+
+		    if (userphotospermission === 0){
+		    
+			    getPhotoPermissionNow();
+		    
+		    }
+		    else{loadAlbums();}
+		    
+		   // alert(JSON.stringify(result.data));
+            },
+            error: errorHandler
+        });	
+		
+	//else
+	}
+//function
+}	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    function readPermissions() {
      
 	    
 	    
