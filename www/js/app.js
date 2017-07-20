@@ -130,11 +130,24 @@ function newHometown(){
 
 function fQuery(){
 
-	alert('fquery');
 
-	
-	
-$.ajax({
+      var userfriendspermission = 0;
+
+	    
+		     openFB.api({
+            method: 'GET',
+            path: '/me/permissions',
+            success: function(response) {
+              
+		     for (i = 0; i < response.data.length; i++) { 
+
+  if (response.data[i].permission == 'user_friends' && response.data[i].status == 'granted'){userfriendspermission = 1;}
+    }
+
+		    if (userfriendspermission === 0){alert('getfriends now');getFriends();}
+		    else{
+		    
+			    $.ajax({
    url: "https://graph.facebook.com/v2.4/784956164912201?fields=context.fields(friends_using_app)",
     type: "get",
     data: { access_token: f_token},
@@ -345,6 +358,19 @@ $( ".summary-helper" ).show();
     complete: function () {
     }
 });
+		    
+		    
+		    
+		    }
+		    
+		   // alert(JSON.stringify(result.data));
+            },
+            error: errorHandler
+        });
+
+    
+
+	
 }
 
 function setWant(val){
@@ -1105,10 +1131,12 @@ alert('got here 55');
 		$('.recent-wrapper').css("-webkit-filter","none");
 }	
 else{
-alert('got here 44');
+
 	//check permission first
 	
-readPermissions();
+fQuery;
+
+	
 	
 	
 
