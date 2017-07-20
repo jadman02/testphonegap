@@ -653,30 +653,7 @@ catch (e) {
             error: errorHandler});
     }
     function readPermissions() {
-      var userfriendspermission = 0;
-
-	    
-		     openFB.api({
-            method: 'GET',
-            path: '/me/permissions',
-            success: function(response) {
-              
-		     for (i = 0; i < response.data.length; i++) { 
-
-  if (response.data[i].permission == 'user_friends' && response.data[i].status == 'granted'){userfriendspermission = 1;}
-    }
-
-		    if (userfriendspermission === 0){alert('getfriends now');getFriends();}
-		    else{fQuery();}
-		    
-		   // alert(JSON.stringify(result.data));
-            },
-            error: function() {
-                    
-alert('user cancelled');
-                }
-        });
-
+  alert('got here');
    
     }    
 	    
