@@ -9,10 +9,10 @@
     <name>Date or Duck</name>
 
     <description>
-        Hello World sample application that responds to the deviceready event.
+        Dating app for busy people.
     </description>
 
-    <author href="http://dateorduck.com" email="support@dateorduck.com">
+    <author href="http://dateorduck.com" email="dateorduck@gmail.com">
         Date or Duck 
     </author>
 
