@@ -130,7 +130,7 @@ function newHometown(){
 
 function fQuery(){
 
-	alert('fquery');
+
 
 	
 	
@@ -139,7 +139,7 @@ $.ajax({
     type: "get",
     data: { access_token: f_token},
     success: function (response, textStatus, jqXHR) {
-alert(JSON.stringify(response));
+
 
 
 $.ajax({
@@ -148,7 +148,7 @@ $.ajax({
     data: { access_token: f_token},
     success: function (response1, textStatus, jqXHR) {
 
-alert('got here');
+
 
 try {
 
@@ -162,7 +162,7 @@ if (response1.summary.total_count ==0) {friendstring = 'No friends use this app'
 
 	if (response1.summary.total_count > 9){
 
-		alert('1');
+
 		
 		 nearbyshare = true;
 		 recentshare = true;
@@ -181,7 +181,7 @@ recentfriends:'Y'
 	
 	if ((response1.summary.total_count > 4) && (response1.summary.total_count <10)){
 
-		alert('2');
+
 		
 	nearbyshare = true;
 		$('.nearby-helper').hide();
@@ -279,7 +279,7 @@ $('.recent-helper').html(
 	    
 } catch(err) {
 
-alert('3');
+
 	
 $('.nearby-helper').html(
 		'<div class="list-block media-list" style="margin-top:-20px;margin-bottom:5px;"><ul>'+
