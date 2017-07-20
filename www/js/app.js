@@ -1094,7 +1094,7 @@ $( ".homedate" ).removeClass("disabled");
 initialload = true;
 
 if (recentfriends){
-alert('got here 55');
+
 	nearbyshare = true;
 		 recentshare = true;
 		$('.nearby-title').html('Nearby First');
@@ -1105,7 +1105,7 @@ alert('got here 55');
 		$('.recent-wrapper').css("-webkit-filter","none");
 }	
 else{
-alert('got here 44');
+
 	//check permission first
 	
 readPermissions();
