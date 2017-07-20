@@ -715,13 +715,13 @@ catch (e) {
     '</ul></div>  ');
 		    
 		    }
-		    else{alert('readpermissions fquery');fQuery();}
+		    else{fQuery();}
 		    	    
 
 		    
 }
 	    	    var cb2 = function (result) {
-alert(JSON.stringify(result));
+
 }
 facebookConnectPlugin.api("me/permissions", [], cb, cb2);
     
@@ -781,7 +781,7 @@ facebookConnectPlugin.api("me/permissions", [], cb, cb2);
     '</ul></div>  ');
 		    
 		    }
-		    else{alert('readpermissions fquery');fQuery();}
+		    else{fQuery();}
 		    
 		   // alert(JSON.stringify(result.data));
             },
@@ -811,8 +811,7 @@ function getFriends(){
 
 	var loginmethod = window.localStorage.getItem("loginmethod");
 
-	alert('loginmethod' + loginmethod);
-	
+
     if (loginmethod == '1'){
     
     
@@ -855,13 +854,13 @@ fQuery();
               f_token = response.authResponse.accessToken;
                         
                         window.localStorage.setItem("tokenStore", response.authResponse.accessToken);
-			    alert('yytt1');
+
               fQuery();          
                         //update
                         
                     } else {
                       
-                        alert('yytt2');
+
 
                     }
                 }, {scope: 'user_friends'});
