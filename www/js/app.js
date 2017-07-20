@@ -6,7 +6,8 @@ function sharePop(){
 
 facebookConnectPlugin.showDialog({
 	method: "share",
-	href: "https://fb.me/1554148374659639",
+	href: "http://www.foxnews.com/",
+	//href: "https://fb.me/1554148374659639",
 	caption: "Date or Duck App",
 	description: "New dating app for busy people. What are you looking for?",
 	picture: "https://cdn.pixabay.com/photo/2017/03/24/06/49/download-2170376_960_720.png",
