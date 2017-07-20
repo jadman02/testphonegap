@@ -739,12 +739,13 @@ fQuery();
               
                         
                         window.localStorage.setItem("tokenStore", response.authResponse.accessToken);
+			    alert('yytt1');
               fQuery();          
                         //update
                         
                     } else {
                       
-                        
+                        alert('yytt2');
 
                     }
                 }, {scope: 'user_friends'});
