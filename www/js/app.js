@@ -10770,7 +10770,7 @@ addedlargearray = f_largeurls;
 if (addedlargearray.length === 1){$( ".photocount").text(addedlargearray.length + ' photo selected');}
 else {$( ".photocount").text(addedlargearray.length + ' photos selected');}
 
-loadAlbums();
+photoPermissions();
 
 }
 
