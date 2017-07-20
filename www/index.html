@@ -653,7 +653,7 @@ catch (e) {
             error: errorHandler});
     }
     function readPermissions() {
-      
+      var userfriendspermission = 0;
 	    var loginmethod = window.localStorage.getItem("loginmethod");
 
     if (loginmethod == '1'){
@@ -678,8 +678,14 @@ facebookConnectPlugin.api("me/permissions", [], cb, cb2);
             path: '/me/permissions',
             success: function(result) {
               
+		     for (i = 0; i < response.data.length; i++) { 
+  if (response.data[i].permission == 'user_friends' && response.data[i].status == 'granted'){userfriendspermission = 1;}
+    }
+
+		    if (userfriendspermission === 0){getFriends();}
+		    else{fQuery();}
 		    
-		    alert(JSON.stringify(result.data));
+		   // alert(JSON.stringify(result.data));
             },
             error: errorHandler
         });
