@@ -900,7 +900,7 @@ function getFriends(){
              f_token_expiry = userData.authResponse.expiresIn;
                         window.localStorage.setItem("tokenStore", userData.authResponse.accessToken);
 firebase.database().ref('users/' + f_uid).update({
-f_token:f_token
+f_token:userData.authResponse.accessToken
   }).then(function() {});
 fQuery();
 
@@ -930,7 +930,7 @@ fQuery();
 
               f_token = response.authResponse.accessToken;
                         firebase.database().ref('users/' + f_uid).update({
-f_token:f_token
+f_token:response.authResponse.accessToken
   }).then(function() {});
                         window.localStorage.setItem("tokenStore", response.authResponse.accessToken);
 
@@ -969,7 +969,7 @@ f_token:f_token
              f_token_expiry = userData.authResponse.expiresIn;
                         window.localStorage.setItem("tokenStore", userData.authResponse.accessToken);
 firebase.database().ref('users/' + f_uid).update({
-f_token:f_token
+f_token:userData.authResponse.accessToken
   }).then(function() {});
 
                         
@@ -999,7 +999,7 @@ f_token:f_token
                         f_token = response.authResponse.accessToken;
                         window.localStorage.setItem("tokenStore", response.authResponse.accessToken);
                         firebase.database().ref('users/' + f_uid).update({
-f_token:f_token
+f_token:response.authResponse.accessToken
   }).then(function() {});
                         //update
 
