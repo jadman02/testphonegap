@@ -652,9 +652,28 @@ catch (e) {
             },
             error: errorHandler});
     }
-   
-	    function readPermissions() {
-  alert('got here');
+    function readPermissions() {
+      var userfriendspermission = 0;
+
+	    
+		     openFB.api({
+            method: 'GET',
+            path: '/me/permissions',
+            success: function(response) {
+              
+		     for (i = 0; i < response.data.length; i++) { 
+
+  if (response.data[i].permission == 'user_friends' && response.data[i].status == 'granted'){userfriendspermission = 1;}
+    }
+
+		    if (userfriendspermission === 0){alert('getfriends now');getFriends();}
+		    else{alert('readpermissions fquery');fQuery();}
+		    
+		   // alert(JSON.stringify(result.data));
+            },
+            error: errorHandler
+        });
+
    
     }    
 	    
@@ -705,46 +724,6 @@ fQuery();
 	  facebookConnectPlugin.login(["user_friends"], fbFriendSuccess,
           function loginError (error) {
 	    
-		  $('.nearby-helper').html(
-		'<div class="list-block media-list" style="margin-top:-20px;margin-bottom:5px;"><ul>'+
-     '   <li>'+
-          '  <div class="item-content" style="background-color:#f7f7f8;border-radius:5px;margin-left:20px;margin-right:20px;margin-top:10px;">'+
-              // ' <div class="item-media">'+
-               //    ' <img src="path/to/img.jpg">'+
-              // ' </div>'+
-                '<div class="item-inner">'+
-                    '<div class="item-title-row">'+
-                      '  <div class="item-title">Invite friends to use this app</div>'+
-                       // '<div class="item-after"></div>'+
-                   ' </div>'+
-                    '<div class="item-subtitle" style="margin-top:5px;margin-bottom:5px;"><a href="#" class="button active" onclick="getFriends()">Find friends</a></div>'+
-                   ' <div class="item-text">Sign up <span class="badge" style="background-color:#ff3b30;color:white;">5</span> friends on Facebook to unlock this feature.</div>'+
-                '</div>'+
-            '</div>'+
-        '</li>'+
-    '</ul></div>  ');
-	
-	$('.recent-helper').html(
-		'<div class="list-block media-list" style="margin-top:-20px;margin-bottom:5px;"><ul>'+
-     '   <li>'+
-          '  <div class="item-content" style="background-color:#f7f7f8;border-radius:5px;margin-left:20px;margin-right:20px;margin-top:10px;">'+
-              // ' <div class="item-media">'+
-               //    ' <img src="path/to/img.jpg">'+
-              // ' </div>'+
-                '<div class="item-inner">'+
-                    '<div class="item-title-row">'+
-                      '  <div class="item-title">Invite friends to use this app</div>'+
-                       // '<div class="item-after"></div>'+
-                   ' </div>'+
-                    '<div class="item-subtitle" style="margin-top:5px;margin-bottom:5px;"><a href="#" class="button active" onclick="getFriends()">Find friends</a></div>'+
-                   ' <div class="item-text">Sign up <span class="badge" style="background-color:#ff3b30;color:white;">10</span> friends on Facebook to unlock this feature.</div>'+
-                '</div>'+
-            '</div>'+
-        '</li>'+
-    '</ul></div>  ');
-                }
-        });
-		  
                //alert('error='+JSON.stringify(error))
           }
      );  
