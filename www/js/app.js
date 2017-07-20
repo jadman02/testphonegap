@@ -10775,39 +10775,25 @@ loadAlbums();
 }
 
 function loadAlbums(){
-alert('loadal1');
+
 $( ".photoloader").show();
 $( ".loadmorebuttonalbums").hide();
 var retrievealbumurl;
 if (!pagingalbumurl) {retrievealbumurl = 'https://graph.facebook.com/v2.4/'+f_uid+'/albums?limit=20&fields=id,count,name&access_token=' + f_token}
 else {retrievealbumurl = pagingalbumurl}
-alert('loadal2');
+
 $.getJSON(retrievealbumurl,
       function(response) {
 	
-	alert('loadal3');
+alert(response);
 
    if(response.data.length == 0){
    
-var userphotospermission = 0;
-     $.getJSON("https://graph.facebook.com/v2.4/me/permissions?access_token=" + f_token,
-      function(response1) {
-  for (i = 0; i < response1.data.length; i++) { 
-  if (response1.data[i].permission == 'user_photos') {userphotospermission = 1;}
-  
-    if (response1.data[i].status == 'declined') {
-      if ((response1.data[i].permission == 'user_photos') && (response.data1[i].status == 'declined')){
-    userphotospermission = 0;
-      }
-     }
-  
-  }
- });	   
 
-	   if (userphotospermission == 0){alert('no photo permission');getPhotoPermissionNow();myApp.closeModal('.photopopup');return false;}
-	   else {
-	   myApp.alert('Upload photos to Facebook to make them available to use in this app.', 'No photos are available');myApp.closeModal('.photopopup');return false;
-	   }
+
+
+	   	   myApp.alert('Upload photos to Facebook to make them available to use in this app.', 'No photos are available');myApp.closeModal('.photopopup');return false;
+
 	   
    }
 	
