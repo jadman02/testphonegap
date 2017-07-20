@@ -10775,7 +10775,7 @@ photoPermissions();
 }
 
 function loadAlbums(){
-
+alert('4');
 $( ".photoloader").show();
 $( ".loadmorebuttonalbums").hide();
 var retrievealbumurl;
@@ -10785,7 +10785,7 @@ else {retrievealbumurl = pagingalbumurl}
 $.getJSON(retrievealbumurl,
       function(response) {
 	
-
+alert('5');
 
    if(response.data.length == 0){
    
