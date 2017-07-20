@@ -131,6 +131,8 @@ function newHometown(){
 function fQuery(){
 
 	alert('fquery');
+
+	
 	
 $.ajax({
    url: "https://graph.facebook.com/v2.4/784956164912201?fields=context.fields(friends_using_app)",
@@ -1104,6 +1106,11 @@ if (recentfriends){
 }	
 else{
 
+	//check permission first
+	
+readPermissions();
+	
+	
 fQuery();
 }	
 	
