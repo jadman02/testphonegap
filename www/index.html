@@ -654,19 +654,20 @@ catch (e) {
     }
     function readPermissions() {
       var userfriendspermission = 0;
-	   
+
 	    
 		     openFB.api({
             method: 'GET',
             path: '/me/permissions',
-            success: function(result) {
+            success: function(response) {
               
 		     for (i = 0; i < response.data.length; i++) { 
+
   if (response.data[i].permission == 'user_friends' && response.data[i].status == 'granted'){userfriendspermission = 1;}
     }
-alert(userfriendspermission);
+
 		    if (userfriendspermission === 0){alert('getfriends now');getFriends();}
-		    else{fQuery();}
+		    else{alert('readpermissions fquery');fQuery();}
 		    
 		   // alert(JSON.stringify(result.data));
             },
