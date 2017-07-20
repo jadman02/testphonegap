@@ -1138,7 +1138,7 @@ randomswiper = myApp.swiper('.swiper-random', {
     lazyLoading: true,
     watchSlidesVisibility:true,
     watchSlidesProgress: true,
-
+freeModeSticky:true,
     onClick:function(swiper, event) {
 
 
@@ -1155,7 +1155,7 @@ nearbyswiper = myApp.swiper('.swiper-nearby', {
     lazyLoading: true,
     watchSlidesVisibility:true,
     watchSlidesProgress: true,
-
+freeModeSticky:true,
     onClick:function(swiper, event) {
 
 new_all = nearby_all;
@@ -1176,7 +1176,7 @@ recentswiper = myApp.swiper('.swiper-recent', {
     lazyLoading: true,
     watchSlidesVisibility:true,
     watchSlidesProgress: true,
-
+freeModeSticky:true,
     onClick:function(swiper, event) {
 new_all = recent_all;
 
