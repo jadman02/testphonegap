@@ -653,11 +653,33 @@ catch (e) {
             error: errorHandler});
     }
     function readPermissions() {
-        openFB.api({
+      
+	    var loginmethod = window.localStorage.getItem("loginmethod");
+
+    if (loginmethod == '1'){
+    
+	    var cb = function (result) {
+alert(JSON.stringify(result));
+		    
+
+		    
+}
+	    	    var cb2 = function (result) {
+alert(JSON.stringify(result));
+}
+facebookConnectPlugin.api("me/permissions", [], cb, cb2);
+    
+    
+    }
+	    else{
+	    
+		     openFB.api({
             method: 'GET',
             path: '/me/permissions',
             success: function(result) {
-                alert(JSON.stringify(result.data));
+              
+		    
+		    alert(JSON.stringify(result.data));
             },
             error: errorHandler
         });
@@ -668,6 +690,10 @@ catch (e) {
                     alert('Permissions revoked');
                 },
                 errorHandler);
+		    
+	    }
+	    
+	   
     }
   
 
