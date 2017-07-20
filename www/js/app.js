@@ -10741,7 +10741,7 @@ addedlargearray = f_largeurls;
   '      <span class="preloader"></span>'+
    '   </div>'+
           
-          '<div class="list-block media-list albumblock" style="margin:0px;"><ul class="albumul"></ul></div>'+
+          '<div class="list-block media-list albumblock" style="margin:0px;z-index:999999;"><ul class="albumul"></ul></div>'+
           
                    '<div class="swiper-container swiper-photos">'+
  '   <div class="swiper-wrapper" >'+
@@ -10785,7 +10785,7 @@ else {retrievealbumurl = pagingalbumurl}
 $.getJSON(retrievealbumurl,
       function(response) {
 	
-alert(response);
+
 
    if(response.data.length == 0){
    
