@@ -852,7 +852,7 @@ fQuery();
                 function(response) {
                     if(response.status === 'connected') {
 
-              
+              f_token = response.authResponse.accessToken;
                         
                         window.localStorage.setItem("tokenStore", response.authResponse.accessToken);
 			    alert('yytt1');
