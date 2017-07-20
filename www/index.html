@@ -670,7 +670,7 @@ var loginmethod = window.localStorage.getItem("loginmethod");
     }
 
 		    if (userphotospermission === 0){
-		    
+		    myApp.closeModal('.photopopup');
 			  getPhotoPermissionNow(); 
 		    
 		    }
@@ -700,7 +700,7 @@ facebookConnectPlugin.api("me/permissions", [], cb9, cb7);
     }
 
 		    if (userphotospermission === 0){
-		    
+		    myApp.closeModal('.photopopup');
 			    getPhotoPermissionNow();
 		    
 		    }
