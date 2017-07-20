@@ -1092,7 +1092,7 @@ $( ".homedate" ).removeClass("disabled");
 initialload = true;
 
 if (recentfriends){
-
+alert('recentfriends pres');
 	nearbyshare = true;
 		 recentshare = true;
 		$('.nearby-title').html('Nearby First');
@@ -1103,6 +1103,7 @@ if (recentfriends){
 		$('.recent-wrapper').css("-webkit-filter","none");
 }	
 else{
+	alert('fquery area');
 fQuery();
 }	
 	
