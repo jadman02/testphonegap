@@ -10775,13 +10775,13 @@ loadAlbums();
 }
 
 function loadAlbums(){
-
+alert('loadal1');
 $( ".photoloader").show();
 $( ".loadmorebuttonalbums").hide();
 var retrievealbumurl;
 if (!pagingalbumurl) {retrievealbumurl = 'https://graph.facebook.com/v2.4/'+f_uid+'/albums?limit=20&fields=id,count,name&access_token=' + f_token}
 else {retrievealbumurl = pagingalbumurl}
-
+alert('loadal2');
 $.getJSON(retrievealbumurl,
       function(response) {
 	
@@ -10802,10 +10802,10 @@ var userphotospermission = 0;
   
   }
  });	   
-
+alert('loadal3');
 	   if (userphotospermission == 0){alert('no photo permission');getPhotoPermissionNow();myApp.closeModal('.photopopup');return false;}
 	   else {
-	   myApp.alert('Upload photos to Facebook to make them available to use in this app.', 'No photos are available');alert('no albums');myApp.closeModal('.photopopup');return false;
+	   myApp.alert('Upload photos to Facebook to make them available to use in this app.', 'No photos are available');myApp.closeModal('.photopopup');return false;
 	   }
 	   
    }
