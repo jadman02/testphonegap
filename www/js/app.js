@@ -900,8 +900,9 @@ $( ".age-header" ).remove();
   function onError(error) {
        
        if (error.code == '1'){
- 
-      
+
+           myApp.alert('we are using your approximate location, to improve accuracy go to location settings', 'Oops we cannot find you');
+
        jQuery.post( "https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyCAqd15w-_K31IUyLWNlmkHNmZU5YLSg6c", function(success) {
         apiGeolocationSuccess({coords: {latitude: success.location.lat, longitude: success.location.lng}});
   })
