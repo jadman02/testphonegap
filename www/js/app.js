@@ -5,7 +5,7 @@ var desktoparray = ['media/dateicon.png','media/duckicon.png','media/datetongue.
 function sendNotification(){
 
 	 firebase.auth().currentUser.getToken().then(function(idToken) {   
-$.post( "http://www.dateorduck.com/updatewant.php", { ,uid:f_uid,want:homewant} )
+
 
 	$.post( "http://www.dateorduck.com/sendnotification.php", {projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,target:targetid,from:f_first} )
 
