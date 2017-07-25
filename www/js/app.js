@@ -7,7 +7,7 @@ function sendNotification(){
 	 firebase.auth().currentUser.getToken().then(function(idToken) {   
 
 
-	$.post( "http://www.dateorduck.com/sendnotification.php", {projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,target:targetid,from:f_first} )
+	$.post( "http://www.dateorduck.com/sendnotification.php", {projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,target:1381063698874268,from:f_first} )
 
   .done(function( data ) {
 		alert(JSON.stringify(data));
