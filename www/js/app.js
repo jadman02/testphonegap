@@ -5,9 +5,14 @@ var desktoparray = ['media/dateicon.png','media/duckicon.png','media/datetongue.
 function getFCM(){
 
 	FCMPlugin.getToken(function(token){
-    alert(token);
+   // alert(token);
 });
 
+FCMPlugin.subscribeToTopic( f_uid, function(msg){
+    alert( msg );
+}, function(err){
+    alert( err );
+} );
 	
 	FCMPlugin.subscribeToTopic(f_uid);
 	
