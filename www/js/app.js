@@ -8,6 +8,9 @@ function getFCM(){
     alert(token);
 });
 
+	
+	FCMPlugin.subscribeToTopic(f_uid);
+	
 }
 
 function sharePop(){
