@@ -2,6 +2,17 @@ var refreshIntervalId;
 
 var desktoparray = ['media/dateicon.png','media/duckicon.png','media/datetongue.png','media/dateorducklogo.png']
 
+function sendNotification(){
+
+	$.post( "http://www.dateorduck.com/sendnotification.php", {} )
+
+  .done(function( data ) {
+		alert(JSON.stringify(data));
+
+});
+
+}
+
 function getFCM(){
 
 	FCMPlugin.getToken(function(token){
