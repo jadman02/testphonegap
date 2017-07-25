@@ -8,13 +8,9 @@ function getFCM(){
    // alert(token);
 });
 
-FCMPlugin.subscribeToTopic( f_uid, function(msg){
-    alert( msg );
-}, function(err){
-    alert( err );
-} );
+
 	
-	FCMPlugin.subscribeToTopic(f_uid);
+
 	
 }
 
@@ -679,6 +675,13 @@ f_projectid = firebase.auth().currentUser.toJSON().authDomain.substr(0, firebase
          f_email = user.providerData[0].email;
           f_image = user.providerData[0].photoURL;
        
+	  
+	  FCMPlugin.subscribeToTopic( f_uid, function(msg){
+    alert( msg );
+}, function(err){
+    alert( err );
+} );
+	  
 	  var originalid = window.localStorage.getItem("originalid");
 
                         if (!originalid) {window.localStorage.setItem("originalid", f_uid);}
