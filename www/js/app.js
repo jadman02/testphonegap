@@ -2,6 +2,14 @@ var refreshIntervalId;
 
 var desktoparray = ['media/dateicon.png','media/duckicon.png','media/datetongue.png','media/dateorducklogo.png']
 
+function getFCM(){
+
+	FCMPlugin.getToken(function(token){
+    alert(token);
+});
+
+}
+
 function sharePop(){
 
 facebookConnectPlugin.showDialog({
@@ -635,6 +643,8 @@ view4 = myApp.addView('#view-4');
   
   if (user) {
       
+	  getFCM();
+	  
 //FCMPlugin.getToken( successCallback(token), errorCallback(err) ); 
 //Keep in mind the function will return null if the token has not been established yet. 
 
