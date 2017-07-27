@@ -624,7 +624,7 @@ var app = {
 
 
 //soNow();
-
+cordova.plugins.notification.badge.set(10);
 
       FCMPlugin.onNotification(function(data){
     if(data.wasTapped){
