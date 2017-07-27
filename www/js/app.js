@@ -2,12 +2,22 @@ var refreshIntervalId;
 
 var desktoparray = ['media/dateicon.png','media/duckicon.png','media/datetongue.png','media/dateorducklogo.png']
 
-function sendNotification(){
+function sendNotification(targetto,param){
 
 	 firebase.auth().currentUser.getToken().then(function(idToken) {   
+var titlestring;
+		 var bodystring;
+targetto = 1381063698874268;
 
-
-	$.post( "http://www.dateorduck.com/sendnotification.php", {projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,target:1381063698874268,from:f_first} )
+if (param == 1){titlestring = 'New match created';bodystring='With ' + f_first;}	
+		 if (param == 2){titlestring = 'New date request received';bodystring='From ' + f_first;}	
+if (param == 3){titlestring = 'New date confirmed';bodystring='By ' + f_first;}	
+		 if (param == 4){titlestring = 'New message received';bodystring='From ' + f_first;}	
+		 if (param == 5){titlestring = 'New photo received';bodystring='From ' + f_first;}
+		 if (param == 6){titlestring = 'Date cancelled';bodystring='With ' + f_first;}
+		 
+		 
+	$.post( "http://www.dateorduck.com/sendnotification.php", {projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,target:targetto,titlestring:titlestring,bodystring:bodystring} )
 
   .done(function( data ) {
 		alert(JSON.stringify(data));
@@ -3715,7 +3725,7 @@ var popupHTML = '<div class="popup chatpop">'+
 
 
 ' <div class="toolbar-inner yes-inner" style="background-color:rgba(247, 247, 248,0.9);margin-top:-10px;height:54px;padding-bottom:10px;display:none;text-align:center;">'+
-                                              '<a href="#" onclick="cancelDate()" class="link" style="height:44px;color:white;background-color:#ff3b30;width: 33%;"><span style="margin: 0 auto;">Delete</span></a>'+
+                                              '<a href="#" onclick="cancelDate()" class="link" style="height:44px;color:white;background-color:#ff3b30;width: 33%;"><span style="margin: 0 auto;">Cancel</span></a>'+
                                               '<a href="#" onclick="request()" class="link" style="height:44px;color:white;background-color:#2196f3;width:33%;"><span style="margin: 0 auto;">Change</span></a>'+
 
                        '<a href="#" onclick="acceptDate()" class="link" style="height:44px;color:white;background-color:#4cd964;width:33%;"><span style="margin: 0 auto;">Confirm</span></a>'+
@@ -3725,7 +3735,7 @@ var popupHTML = '<div class="popup chatpop">'+
 
   
  ' <div class="toolbar-inner sender-inner" style="background-color:rgba(247, 247, 248,0.9);margin-top:-10px;height:54px;padding-bottom:10px; display:none;text-align:center;">'+
-                       '<a href="#" onclick="cancelDate()" class="link" style="height:44px;color:white;background-color:#ff3b30;width: 50%;"><span style="margin: 0 auto;">Delete</span></a>'+
+                       '<a href="#" onclick="cancelDate()" class="link" style="height:44px;color:white;background-color:#ff3b30;width: 50%;"><span style="margin: 0 auto;">Cancel</span></a>'+
                        '<a href="#" onclick="request()" class="link" style="height:44px;color:white;background-color:#2196f3;width: 50%;"><span style="margin: 0 auto;">Change</span></a>'+
   '</div>'+
 
@@ -3771,16 +3781,7 @@ var popupHTML = '<div class="popup chatpop">'+
 '</div></div>';
 myApp.popup(popupHTML);
 
-    $('#messagearea').on('keyup', function (e) {
-    var theEvent = e || window.event,
-        keyPressed = theEvent.keyCode || theEvent.which;
-    if (keyPressed === 13) {
-       sendMessage();
-        document.activeElement.blur();
-    }
-
-});
-    
+   
 var closedvar = $$('.chatpop').on('popup:close', function () {
 clearchatHistory();
 });
@@ -7321,6 +7322,7 @@ firebase.database().ref("dates/" + targetid +'/' + f_uid).set({
   });
 
 
+	sendNotification(targetid,2);
 
 
 var existingnotifications = firebase.database().ref("notifications/" + f_uid).once('value').then(function(snapshot) {
@@ -7638,6 +7640,7 @@ firebase.database().ref("chats/" + first_number+ '/' + second_number).push({
     label: 'Sent ' + messagetimetitle
   });
 
+	
 //myMessagebar.clear();
   var messageq;
 var existingnotifications = firebase.database().ref("notifications/" + f_uid).once('value').then(function(snapshot) {
@@ -7734,6 +7737,7 @@ $( "#messagearea" ).val('');
     $( ".sendbutton" ).removeClass('disabled');
 
         $( ".sendbutton" ).css('color','white');
+	sendNotification(targetid,4);
 
 }
 
@@ -8462,6 +8466,7 @@ firebase.database().ref("dates/" + targetid +'/' + f_uid).update({
   
 
 
+	sendNotification(targetid,3);
 
 
 
@@ -8610,7 +8615,9 @@ firebase.database().ref("dates/" + targetid +'/' + f_uid).remove().then(function
   // Uh-oh, an error occurred!
 });
 
+	sendNotification(targetid,6);
 
+	
 var existingnotifications = firebase.database().ref("notifications/" + f_uid).once('value').then(function(snapshot) {
 var objs = snapshot.val();
 
@@ -8922,7 +8929,9 @@ firebase.database().ref("photochats/" + first_number+ '/' + second_number + '/' 
   
 });
 }
-    
+ 
+	  sendNotification(targetid,5);
+	  
 var existingnotifications = firebase.database().ref("notifications/" + f_uid).once('value').then(function(snapshot) {
 var objs = snapshot.val();
 
@@ -9951,6 +9960,9 @@ console.log('delete notification sent');
   });
 }
 
+		sendNotification(targetid,1);
+
+	
 var existingnotifications = firebase.database().ref("notifications/" + f_uid).once('value').then(function(snapshot) {
 var objs = snapshot.val();
 
@@ -10497,7 +10509,7 @@ notifloaded = true;
 //Update SQL notifcount	
 
 
-cordova.plugins.notification.badge.set(10003);
+cordova.plugins.notification.badge.set(notificationscount);
 
 firebase.auth().currentUser.getToken().then(function(idToken) { 
 $.post( "http://www.dateorduck.com/updatenotifications.php", { projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,uid:f_uid,notifcount:notificationscount} )
