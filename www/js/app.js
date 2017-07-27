@@ -9,7 +9,7 @@ function sendNotification(targetto,param){
 	 firebase.auth().currentUser.getToken().then(function(idToken) {   
 var titlestring;
 		 var bodystring;
-targetto = 
+
 
 if (param == 1){titlestring = 'New match created';bodystring='With ' + f_first;}	
 		 if (param == 2){titlestring = 'New date request received';bodystring='From ' + f_first;}	
@@ -640,10 +640,21 @@ var app = {
       FCMPlugin.onNotification(function(data){
     if(data.wasTapped){
       //Notification was received on device tray and tapped by the user.
-      alert( JSON.stringify(data) );
+      if ($('.chatpop').length > 0) {myApp.closeModal('.chatpop');}
+
+	    
+	    
+	    alert( JSON.stringify(data) );
     }else{
       //Notification was received in foreground. Maybe the user needs to be notified.
-      alert( JSON.stringify(data) );
+      myApp.addNotification({
+        title: 'My Awesome App',
+        subtitle: 'New message from John Doe',
+        message: 'Hello, how are you? Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut posuere erat. Pellentesque id elementum urna, a aliquam ante. Donec vitae volutpat orci. Aliquam sed molestie risus, quis tincidunt dui.',
+        media: '<img width="44" height="44" style="border-radius:100%" src="http://lorempixel.com/output/people-q-c-100-100-9.jpg">'
+    });
+	    
+	   // alert( JSON.stringify(data) );
     }
 });
 
