@@ -10497,7 +10497,7 @@ notifloaded = true;
 //Update SQL notifcount	
 
 
-cordova.plugins.notification.badge.set(103);
+cordova.plugins.notification.badge.set(10003);
 
 firebase.auth().currentUser.getToken().then(function(idToken) { 
 $.post( "http://www.dateorduck.com/updatenotifications.php", { projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,uid:f_uid,notifcount:notificationscount} )
