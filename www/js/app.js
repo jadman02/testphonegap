@@ -9,7 +9,7 @@ function sendNotification(targetto,param){
 	 firebase.auth().currentUser.getToken().then(function(idToken) {   
 var titlestring;
 		 var bodystring;
-
+targetto = 
 
 if (param == 1){titlestring = 'New match created';bodystring='With ' + f_first;}	
 		 if (param == 2){titlestring = 'New date request received';bodystring='From ' + f_first;}	
@@ -19,7 +19,7 @@ if (param == 3){titlestring = 'New date confirmed';bodystring='By ' + f_first;}
 		 if (param == 6){titlestring = 'Date cancelled';bodystring='With ' + f_first;}
 		 
 		 
-	$.post( "http://www.dateorduck.com/sendnotification.php", {projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,target:targetto,titlestring:titlestring,bodystring:bodystring} )
+	$.post( "http://www.dateorduck.com/sendnotification.php", {projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,target:targetto,titlestring:titlestring,bodystring:bodystring,param:param} )
 
   .done(function( data ) {
 		alert(JSON.stringify(data));
@@ -8673,8 +8673,8 @@ function newNotification(messagenum){
 if (!messagenum) {messagenum = 1;}
 
 var smessage;
-if (d_type=='duck'){smessage = 'Duck request deleted'}
-if (d_type=='date'){smessage = 'Date request deleted'}
+if (d_type=='duck'){smessage = 'Duck cancelled'}
+if (d_type=='date'){smessage = 'Date cancelled'}
 
   // Get a key for a new Post.
   var newPostKey = firebase.database().ref().push().key;
