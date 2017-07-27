@@ -22,7 +22,7 @@ if (param == 3){titlestring = 'New date confirmed';bodystring='By ' + f_first;}
 	$.post( "http://www.dateorduck.com/sendnotification.php", {projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,target:targetto,titlestring:titlestring,bodystring:bodystring,param:param} )
 
   .done(function( data ) {
-		alert(JSON.stringify(data));
+		//alert(JSON.stringify(data));
 
 });
 		 });
@@ -644,7 +644,7 @@ var app = {
 
 	    
 	    
-	    alert( JSON.stringify(data) );
+	  //  alert( JSON.stringify(data) );
     }else{
       //Notification was received in foreground. Maybe the user needs to be notified.
       myApp.addNotification({
