@@ -2,12 +2,14 @@ var refreshIntervalId;
 
 var desktoparray = ['media/dateicon.png','media/duckicon.png','media/datetongue.png','media/dateorducklogo.png']
 
+
+
 function sendNotification(targetto,param){
 
 	 firebase.auth().currentUser.getToken().then(function(idToken) {   
 var titlestring;
 		 var bodystring;
-targetto = 1381063698874268;
+
 
 if (param == 1){titlestring = 'New match created';bodystring='With ' + f_first;}	
 		 if (param == 2){titlestring = 'New date request received';bodystring='From ' + f_first;}	
@@ -3737,6 +3739,7 @@ var popupHTML = '<div class="popup chatpop">'+
  ' <div class="toolbar-inner sender-inner" style="background-color:rgba(247, 247, 248,0.9);margin-top:-10px;height:54px;padding-bottom:10px; display:none;text-align:center;">'+
                        '<a href="#" onclick="cancelDate()" class="link" style="height:44px;color:white;background-color:#ff3b30;width: 50%;"><span style="margin: 0 auto;">Cancel</span></a>'+
                        '<a href="#" onclick="request()" class="link" style="height:44px;color:white;background-color:#2196f3;width: 50%;"><span style="margin: 0 auto;">Change</span></a>'+
+
   '</div>'+
 
 
