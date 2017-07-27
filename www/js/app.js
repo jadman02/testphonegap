@@ -624,7 +624,6 @@ var app = {
 
 
 //soNow();
-cordova.plugins.notification.badge.set(10);
 
       FCMPlugin.onNotification(function(data){
     if(data.wasTapped){
@@ -10498,11 +10497,12 @@ notifloaded = true;
 //Update SQL notifcount	
 
 
-	alert('notificationscount' + notificationscount);
+cordova.plugins.notification.badge.set(notificationscount);
+
 firebase.auth().currentUser.getToken().then(function(idToken) { 
 $.post( "http://www.dateorduck.com/updatenotifications.php", { projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,uid:f_uid,notifcount:notificationscount} )
   .done(function( data ) {
-alert('done');
+
 
 });
 });
