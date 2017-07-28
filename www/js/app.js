@@ -10545,8 +10545,9 @@ $( ".notifspan" ).addClass('notifbounce');
 setTimeout(function(){ $( ".notifspan" ).removeClass('notifbounce'); }, 5000);
 
    if (offsounds == 'Y'){}else{
-    if ($('.chatpop').length > 0) {}
-    else {$('#buzzer')[0].play();}
+    $('#buzzer')[0].play();
+	   //if ($('.chatpop').length > 0) {}
+    //else {$('#buzzer')[0].play();}
     }
 return false;
 
