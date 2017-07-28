@@ -658,7 +658,7 @@ var app = {
 		    subtitle:data.aps.alert.title,
         message: data.aps.alert.body,
 		    hold:2000,
-		    onClick:directUser(data.ev1,data.ev2);,
+		    onClick:function(){directUser(data.ev1,data.ev2);},
         media: '<img width="44" height="44" style="border-radius:100%" src="media/icon-76.png">'
     });
 	    
