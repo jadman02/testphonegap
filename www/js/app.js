@@ -3660,8 +3660,8 @@ myApp.closeModal('.chatpop');
 
 
 function createDate(messageid,messagename){
-alert('got here1');
-   if ($('.chatpop').length > 0){return false;}
+if (messagename === 0) {}
+else {   if ($('.chatpop').length > 0){return false;}}
    alert('got here2');
 singleUser(targetid,targetname,88);
 
