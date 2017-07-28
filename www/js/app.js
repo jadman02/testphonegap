@@ -650,7 +650,7 @@ var app = {
 	    myApp.addNotification({
         title: 'Date or Duck',
 		    subtitle:data.aps.alert.body,
-        message: data.aps.alert.title,
+        message: data.aps.alert.title + 'ndasjkds dasdas j lksdj ja sdjas jdlksa jdlkasj ndasjkds dasdas j lksdj ja sdjas jdlksa jdlkasj ndasjkds dasdas j lksdj ja sdjas jdlksa jdlkasj ndasjkds dasdas j lksdj ja sdjas jdlksa jdlkasj ndasjkds dasdas j lksdj ja sdjas jdlksa jdlkasj ndasjkds dasdas j lksdj ja sdjas jdlksa jdlkasj ndasjkds dasdas j lksdj ja sdjas jdlksa jdlkasj ndasjkds dasdas j lksdj ja sdjas jdlksa jdlkasj ndasjkds dasdas j lksdj ja sdjas jdlksa jdlkasj',
         media: '<img width="44" height="44" style="border-radius:100%" src="http://lorempixel.com/output/people-q-c-100-100-9.jpg">'
     });
 	    
