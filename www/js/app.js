@@ -17,9 +17,11 @@ if (param == 3){titlestring = 'New date confirmed';bodystring='By ' + f_first;}
 		 if (param == 4){titlestring = 'New message received';bodystring='From ' + f_first;}	
 		 if (param == 5){titlestring = 'New photo received';bodystring='From ' + f_first;}
 		 if (param == 6){titlestring = 'Date cancelled';bodystring='With ' + f_first;}
+		 var typesend;
+		 if (d_type){typesend = d_type;}
+		 else {typesend = 'date';}
 		 
-		 
-	$.post( "http://www.dateorduck.com/sendnotification.php", {projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,target:targetto,titlestring:titlestring,bodystring:bodystring,param:param,type:d_type,firstname:f_first} )
+	$.post( "http://www.dateorduck.com/sendnotification.php", {projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,target:targetto,titlestring:titlestring,bodystring:bodystring,param:param,type:typesend,firstname:f_first} )
 
   .done(function( data ) {
 		//alert(JSON.stringify(data));
