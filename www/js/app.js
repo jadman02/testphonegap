@@ -534,9 +534,9 @@ try {
 
 function directUser(id,type){
 	if ($('.chatpop').length > 0) {myApp.closeModal('.chatpop');}
-
-	if (type =='date'){createDate1(id);}
-	else {createDuck(id)}
+alert(id);
+	if (type =='date'){createDate1(id,0);}
+	else {createDuck(id,0);}
 	
 	
 	
