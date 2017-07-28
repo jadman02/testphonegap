@@ -579,11 +579,7 @@ myApp.swiper('.swiper-helper-info', {
 
 
                         startApp();
-                        FCMPlugin.subscribeToTopic( response.authResponse.userID, function(msg){
-    alert( msg );
-}, function(err){
-    alert( err );
-} );
+    
                     } else {
                       
                         if (response.error ==='undefined') {
@@ -620,11 +616,7 @@ myApp.swiper('.swiper-helper-info', {
 
                         startApp();
                         
-FCMPlugin.subscribeToTopic( userData.authResponse.userID, function(msg){
-    alert( msg );
-}, function(err){
-    alert( err );
-} );
+
 		 
                     } else {
                       
