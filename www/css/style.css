@@ -16,11 +16,14 @@
 
 /* Rules for all screen sizes 
 
+
 .photo-browser-swiper-container {-webkit-filter: grayscale(100%);background-image:url("../media/LongBackground.png");background-size:cover;background-position:50% 50%;}
 .photo-browser-swiper-wrapper{-webkit-filter:none;}
 
 
 */
+
+.notifications{z-index:999999999999999999999}
 
 @font-face {
   font-family: 'Pacifico';
