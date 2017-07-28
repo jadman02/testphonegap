@@ -4845,7 +4845,7 @@ targetname = idname;
 	alert(longitudep);
 	alert(firebase.auth().currentUser.uid);
 	alert(f_projectid);
-	alert(idToken);
+
 	
 firebase.auth().currentUser.getToken().then(function(idToken) { 
 $.post( "http://www.dateorduck.com/singleuser.php", {projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,uid:targetid,latitudep:latitudep,longitudep:longitudep} )
