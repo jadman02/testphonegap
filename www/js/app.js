@@ -983,6 +983,19 @@ longitudep = position.coords.longitude;
 //alert(latitudep);
 //alert(longitudep);
 
+	alert('inside wifi1');
+	alert(datatap);
+	if (datatap === true){
+	
+	
+	alert('inside wifi2');
+	  targetid = tapid;
+	    targetname = tapname;
+	    directUser(tapid,taptype,tapname);
+	datatap = false; tapid = false; taptype = false; tapname = false; 
+	}
+	
+	
 updateGeo();
 
    
@@ -1057,6 +1070,7 @@ longitudep = position.coords.longitude;
 //alert(latitudep);
 //alert(longitudep);
 
+	
 	alert('inside wifi1');
 	alert(datatap);
 	if (datatap === true){
