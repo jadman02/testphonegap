@@ -4803,12 +4803,14 @@ alert('33');
       if (singlefxallowed === false){alert('33.5');return false;}
 singlefxallowed = false;
    alert('33.7');
+
 targetid = String(idw);
 targetname = idname;
 firebase.auth().currentUser.getToken().then(function(idToken) { 
 $.post( "http://www.dateorduck.com/singleuser.php", {projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,uid:targetid,latitudep:latitudep,longitudep:longitudep} )
   .done(function( data ) {
  alert('44');
+alert(JSON.stringify(data));
 	console.log(data);
   var result = JSON.parse(data); 
 
