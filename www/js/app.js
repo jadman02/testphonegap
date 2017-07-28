@@ -657,12 +657,13 @@ var app = {
       //Notification was received on device tray and tapped by the user.
     alert('inside tap');
 	    
-	    
+	   if (latitudep){directUser(data.ev1,data.ev2,data.ev3);}
+	    else{
 	    datatap = true;
 	    tapid = data.ev1;
 	taptype = data.ev2;
 	tapname = data.ev3;
-
+	    }
 	    
 	    
 	    
@@ -4751,7 +4752,7 @@ var singleuserarray = [];
 function singleUser(idw,idname,origin){
 
    
-alert('11');
+
   
 
 if (singleuserarray[0] != null){
