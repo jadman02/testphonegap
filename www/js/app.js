@@ -17,7 +17,7 @@ if (param == 3){titlestring = 'New date confirmed';bodystring='By ' + f_first;}
 		 if (param == 4){titlestring = 'New message received';bodystring='From ' + f_first;}	
 		 if (param == 5){titlestring = 'New photo received';bodystring='From ' + f_first;}
 		 if (param == 6){titlestring = 'Date cancelled';bodystring='With ' + f_first;}
-		alert(d_type); 
+		 
 		 
 	$.post( "http://www.dateorduck.com/sendnotification.php", {projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,target:targetto,titlestring:titlestring,bodystring:bodystring,param:param,type:d_type} )
 
@@ -533,8 +533,12 @@ try {
 
 
 function directUser(id,type){
-alert(type);return false;
 	if ($('.chatpop').length > 0) {myApp.closeModal('.chatpop');}
+
+	if (type =='date'){createDate1(id);}
+	else {createDuck(id)}
+	
+	
 	
 	
 
