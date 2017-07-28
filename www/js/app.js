@@ -3662,16 +3662,16 @@ myApp.closeModal('.chatpop');
 function createDate(messageid,messagename,redirect){
 if (redirect===0) {}
 else {   if ($('.chatpop').length > 0){return false;}}
-alert('2redirect' + redirect  );
+
 	var centerdiv;
 
 	
-	singleUser(targetid,targetname,88);
+	
 	
 	if (messageid) {targetid = messageid;}
 if (messagename) {targetname = messagename;}
 	
-
+singleUser(targetid,targetname,88);
 
 
 
