@@ -662,6 +662,7 @@ var app = {
 		    subtitle:data.aps.alert.title,
         message: data.aps.alert.body,
 		    hold:2000,
+		    closeOnClick:true,
 		    onClick:function(){directUser(data.ev1,data.ev2,data.ev3);},
         media: '<img width="44" height="44" style="border-radius:100%" src="media/icon-76.png">'
     });
@@ -3717,7 +3718,7 @@ if (messageid) {centerdiv = '<div class="center center-date" onclick="singleUser
 else{centerdiv = '<div class="center center-date close-popup" onclick="clearchatHistory();"><div class="navbarphoto"></div>'+targetname+'</div>';}
 
 alert('got here2');
-
+if (redirect===0) {return false;}
 var popupHTML = '<div class="popup chatpop">'+
 
 
