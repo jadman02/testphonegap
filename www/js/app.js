@@ -652,6 +652,8 @@ var app = {
     if(data.wasTapped){
       //Notification was received on device tray and tapped by the user.
      alert( JSON.stringify(data) );
+	  targetid = data.ev1;
+	    targetname = data.ev3;
 	    directUser(data.ev1,data.ev2,data.ev3);
 	    
 
@@ -4810,6 +4812,8 @@ $.post( "http://www.dateorduck.com/singleuser.php", {projectid:f_projectid,token
 	console.log(data);
   var result = JSON.parse(data); 
 
+	
+	
 var availarraystring='';
 
 
@@ -5002,14 +5006,14 @@ $( ".availabilitylistblock_"+singleuserarray[0].id ).append(
    }
    
 if (origin == 88){
-//   alert('88');
+   alert('88');
 }
 else if (origin == 1){
-  // alert('99');
+   alert('99');
    photoBrowser(0,singleuserarray[0].age,1,1);
 }
 else if (!origin){
-   //alert('100');
+   alert('100');
    photoBrowser(0,singleuserarray[0].age);
 }
 
