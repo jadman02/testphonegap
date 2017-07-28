@@ -534,7 +534,7 @@ try {
 
 function directUser(id,type){
 	if ($('.chatpop').length > 0) {myApp.closeModal('.chatpop');}
-alert(id);
+
 	if (type =='date'){createDate1(id,0);}
 	else {createDuck(id,0);}
 	
@@ -3660,9 +3660,9 @@ myApp.closeModal('.chatpop');
 
 
 function createDate(messageid,messagename){
-
+alert('got here1');
    if ($('.chatpop').length > 0){return false;}
-   
+   alert('got here2');
 singleUser(targetid,targetname,88);
 
 var centerdiv;
