@@ -655,7 +655,9 @@ var app = {
       FCMPlugin.onNotification(function(data){
     if(data.wasTapped){
       //Notification was received on device tray and tapped by the user.
-    
+    alert('inside tap');
+	    
+	    
 	    datatap = true;
 	    tapid = data.ev1;
 	taptype = data.ev2;
@@ -1055,10 +1057,10 @@ longitudep = position.coords.longitude;
 //alert(latitudep);
 //alert(longitudep);
 
-	if (datatap){
+	if (datatap === true){
 	
 	
-	
+	alert('inside wifi');
 	  targetid = tapid;
 	    targetname = tapname;
 	    directUser(tapid,taptype,tapname);
