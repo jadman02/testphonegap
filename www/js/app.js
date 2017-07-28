@@ -10,7 +10,7 @@ function sendNotification(targetto,param){
 var titlestring;
 		 var bodystring;
 
-
+targetto = f_uid;
 if (param == 1){titlestring = 'New match created';bodystring='With ' + f_first;}	
 		 if (param == 2){titlestring = 'New date request received';bodystring='From ' + f_first;}	
 if (param == 3){titlestring = 'New date confirmed';bodystring='By ' + f_first;}	
