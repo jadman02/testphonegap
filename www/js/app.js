@@ -4721,11 +4721,11 @@ var singleuserarray = [];
 function singleUser(idw,idname,origin){
 
    
-
+alert('11');
   
 
 if (singleuserarray[0] != null){
-
+alert('11.5');
 $(".avail-loader").hide();
  if (singleuserarray[0].availarraystring !== ''){
 	 
@@ -4797,16 +4797,17 @@ else{photoBrowser(0,singleuserarray[0].age);}
 }
 
 else{
-
-      if (singlefxallowed === false){return false;}
+alert('33');
+      if (singlefxallowed === false){alert('33.5');return false;}
 singlefxallowed = false;
-   
+   alert('33.7');
 targetid = String(idw);
 targetname = idname;
 firebase.auth().currentUser.getToken().then(function(idToken) { 
 $.post( "http://www.dateorduck.com/singleuser.php", {projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,uid:targetid,latitudep:latitudep,longitudep:longitudep} )
   .done(function( data ) {
-  console.log(data);
+ alert('44');
+	console.log(data);
   var result = JSON.parse(data); 
 
 var availarraystring='';
