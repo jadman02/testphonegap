@@ -542,7 +542,6 @@ var $$ = Dom7;
 
 var view1, view2, view3, view4;
 var updatecontinuously = false;
-var subscribeset = false;
 var initialload = false;
 var allowedchange = true;
 var view3 = myApp.addView('#view-3');
@@ -713,16 +712,16 @@ f_projectid = firebase.auth().currentUser.toJSON().authDomain.substr(0, firebase
          f_email = user.providerData[0].email;
           f_image = user.providerData[0].photoURL;
        
-	  if (subscribeset){}
-	  else{
-	                      FCMPlugin.subscribeToTopic( f_uid, function(msg){
-    alert( msg );
-}, function(err){
-    alert( err );
-} );
-	  }
+//	  if (subscribeset){}
+//	  else{
+//		  FCMPlugin.subscribeToTopic( f_uid, function(msg){
+  //  alert( msg );
+//}, function(err){
+  //  alert( err );
+//} );
+	  //}
 	  
-	  subscribeset = true;
+	  //subscribeset = true;
 
 	  
 	  var originalid = window.localStorage.getItem("originalid");
