@@ -651,7 +651,7 @@ var app = {
         title: 'Date or Duck',
 		    subtitle:data.aps.alert.title,
         message: data.aps.alert.body,
-        media: '<img width="44" height="44" style="border-radius:100%" src="../res/icons/ios/icon-small.png">'
+        media: '<img width="44" height="44" style="border-radius:100%" src="media/icon-76.png">'
     });
 	    
 	   // alert( JSON.stringify(data) );
