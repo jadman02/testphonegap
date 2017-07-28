@@ -3717,8 +3717,8 @@ $.each(objs, function(i, obj) {
 if (messageid) {centerdiv = '<div class="center center-date" onclick="singleUser(\''+targetid+'\',\''+targetname+'\')" style="cursor:pointer;"><div class="navbarphoto"></div>'+targetname+'</div>';}
 else{centerdiv = '<div class="center center-date close-popup" onclick="clearchatHistory();"><div class="navbarphoto"></div>'+targetname+'</div>';}
 var divcentrecontent;
-	if (redirect === 0){divcentrecontent='<div class="center center-date" onclick="singleUser(\''+targetid+'\',\''+targetname+'\')" style="cursor:pointer;"><div class="navbarphoto"></div>'+targetname+'</div>';}
-	else {divcentrecontent='<span id="centerholder" style="color:white;z-index:99999999999999999999999999999999;"></span>';}
+	if (redirect === 0){divcentrecontent='<div class="center center-date" onclick="singleUser(\''+targetid+'\',\''+targetname+'\')" style="cursor:pointer;color:white;"><div class="navbarphoto"></div>'+targetname+'</div>';}
+	else {divcentrecontent='<span id="centerholder" style="color:white;z-index:99999999999999999999999999999999;color:white;"></span>';}
 
 
 var popupHTML = '<div class="popup chatpop">'+
@@ -3832,7 +3832,7 @@ clearchatHistory();
 //existingDate();
 //setDate();
 $( "#centerholder" ).append(centerdiv);
-	alert($('.chatpop').length);
+
 myApp.sizeNavbars();
 //$( "#centerholder" ).remove();
 
@@ -9928,7 +9928,7 @@ else{createDate();}
 function createDate1(idz,name,redirect){
 d_type = 'date';
 keepopen = 1;
-alert('1redirect' + redirect  );
+
 if (idz) {createDate(idz,name,redirect)}
 else{createDate();}
     
