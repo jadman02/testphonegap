@@ -3659,15 +3659,17 @@ myApp.closeModal('.chatpop');
 
 
 
-function createDate(messageid,messagename){
-if (messagename === 0) {}
+function createDate(messageid,messagename,redirect){
+if (redirect) {}
 else {   if ($('.chatpop').length > 0){return false;}}
-   alert('got here2');
-singleUser(targetid,targetname,88);
 
-var centerdiv;
+	var centerdiv;
 if (messageid) {targetid = messageid;}
 if (messagename) {targetname = messagename;}
+	
+singleUser(targetid,targetname,88);
+
+
 
 existingchatnotifications = firebase.database().ref("notifications/" + f_uid).once("value", function(snapshot) {
 var objs = snapshot.val();
