@@ -17,9 +17,9 @@ if (param == 3){titlestring = 'New date confirmed';bodystring='By ' + f_first;}
 		 if (param == 4){titlestring = 'New message received';bodystring='From ' + f_first;}	
 		 if (param == 5){titlestring = 'New photo received';bodystring='From ' + f_first;}
 		 if (param == 6){titlestring = 'Date cancelled';bodystring='With ' + f_first;}
+		alert(d_type); 
 		 
-		 
-	$.post( "http://www.dateorduck.com/sendnotification.php", {projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,target:targetto,titlestring:titlestring,bodystring:bodystring,param:param} )
+	$.post( "http://www.dateorduck.com/sendnotification.php", {projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,target:targetto,titlestring:titlestring,bodystring:bodystring,param:param,type:d_type} )
 
   .done(function( data ) {
 		//alert(JSON.stringify(data));
@@ -532,7 +532,13 @@ try {
 
 
 
+function directUser(id,type){
+alert(type);return false;
+	if ($('.chatpop').length > 0) {myApp.closeModal('.chatpop');}
+	
+	
 
+}
 
 // Initialize your app
 var myApp = new Framework7({dynamicNavbar: true,modalActionsCloseByOutside:true,init: false});
@@ -651,6 +657,8 @@ var app = {
         title: 'Date or Duck',
 		    subtitle:data.aps.alert.title,
         message: data.aps.alert.body,
+		    hold:2000,
+		    onClick:directUser(data.ev1,data.ev2);,
         media: '<img width="44" height="44" style="border-radius:100%" src="media/icon-76.png">'
     });
 	    
