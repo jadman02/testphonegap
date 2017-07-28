@@ -654,7 +654,8 @@ var app = {
         media: '<img width="44" height="44" style="border-radius:100%" src="http://lorempixel.com/output/people-q-c-100-100-9.jpg">'
     });
 	    
-	    alert( JSON.stringify(data) );
+	    alert( JSON.stringify(data.aps) );
+	    alert( data.aps[0].alert[0].body );
     }
 });
 
