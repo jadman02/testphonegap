@@ -640,7 +640,7 @@ var app = {
       FCMPlugin.onNotification(function(data){
     if(data.wasTapped){
       //Notification was received on device tray and tapped by the user.
-      if ($('.chatpop').length > 0) {myApp.closeModal('.chatpop');}
+     // if ($('.chatpop').length > 0) {myApp.closeModal('.chatpop');}
 
 	    
 	    
@@ -648,6 +648,12 @@ var app = {
     }else{
       //Notification was received in foreground. Maybe the user needs to be notified.
 
+	    myApp.addNotification({
+        title: 'My Awesome App',
+        subtitle: 'New message from John Doe',
+        message: 'Hello, how are you? Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut posuere erat. Pellentesque id elementum urna, a aliquam ante. Donec vitae volutpat orci. Aliquam sed molestie risus, quis tincidunt dui.',
+        media: '<img width="44" height="44" style="border-radius:100%" src="http://lorempixel.com/output/people-q-c-100-100-9.jpg">'
+    });
 	    
 	    alert( JSON.stringify(data) );
     }
