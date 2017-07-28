@@ -648,14 +648,13 @@ var app = {
       //Notification was received in foreground. Maybe the user needs to be notified.
 
 	    myApp.addNotification({
-        title: 'My Awesome App',
-        subtitle: 'New message from John Doe',
-        message: 'Hello, how are you? Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut posuere erat. Pellentesque id elementum urna, a aliquam ante. Donec vitae volutpat orci. Aliquam sed molestie risus, quis tincidunt dui.',
+        title: 'Jarrod',
+        message: 'data.aps.alert.title',
         media: '<img width="44" height="44" style="border-radius:100%" src="http://lorempixel.com/output/people-q-c-100-100-9.jpg">'
     });
 	    
-	    alert( JSON.stringify(data.aps) );
-	    alert( data.aps.alert.body );
+	    alert( JSON.stringify(data) );
+
     }
 });
 
