@@ -649,11 +649,13 @@ var app = {
       FCMPlugin.onNotification(function(data){
     if(data.wasTapped){
       //Notification was received on device tray and tapped by the user.
-     // if ($('.chatpop').length > 0) {myApp.closeModal('.chatpop');}
+     alert( JSON.stringify(data) );
+	    directUser(data.ev1,data.ev2,data.ev3);
+	    
 
 	    
 	    
-	  //  alert( JSON.stringify(data) );
+	    
     }else{
       //Notification was received in foreground. Maybe the user needs to be notified.
 
