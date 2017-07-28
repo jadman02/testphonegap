@@ -551,6 +551,10 @@ var myApp = new Framework7({dynamicNavbar: true,modalActionsCloseByOutside:true,
 
 // Export selectors engine
 var $$ = Dom7;
+var datatap, tapid, taptype, tapname;
+
+
+
 
 var view1, view2, view3, view4;
 var updatecontinuously = false;
@@ -651,11 +655,11 @@ var app = {
       FCMPlugin.onNotification(function(data){
     if(data.wasTapped){
       //Notification was received on device tray and tapped by the user.
-     alert( JSON.stringify(data) );
-	  targetid = data.ev1;
-	    targetname = data.ev3;
-	    directUser(data.ev1,data.ev2,data.ev3);
-	    
+    
+	    datatap = true;
+	    tapid = data.ev1;
+	taptype = data.ev2;
+	tapname = data.ev3;
 
 	    
 	    
@@ -1051,6 +1055,16 @@ longitudep = position.coords.longitude;
 //alert(latitudep);
 //alert(longitudep);
 
+	if (datatap){
+	
+	
+	
+	  targetid = tapid;
+	    targetname = tapname;
+	    directUser(tapid,taptype,tapname);
+	datatap = false; tapid = false; taptype = false; tapname = false; 
+	}
+	
 updateGeo();
 
     $( ".age-header" ).remove();
