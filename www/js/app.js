@@ -3830,7 +3830,7 @@ clearchatHistory();
 //existingDate();
 //setDate();
 $( "#centerholder" ).append(centerdiv);
-	alert(centerdiv);
+	alert($('.chatpop').length);
 myApp.sizeNavbars();
 //$( "#centerholder" ).remove();
 
