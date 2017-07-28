@@ -3716,7 +3716,9 @@ $.each(objs, function(i, obj) {
 	
 if (messageid) {centerdiv = '<div class="center center-date" onclick="singleUser(\''+targetid+'\',\''+targetname+'\')" style="cursor:pointer;"><div class="navbarphoto"></div>'+targetname+'</div>';}
 else{centerdiv = '<div class="center center-date close-popup" onclick="clearchatHistory();"><div class="navbarphoto"></div>'+targetname+'</div>';}
-
+var divcentrecontent;
+	if (redirect === 0){divcentrecontent='<div class="center center-date" onclick="singleUser(\''+targetid+'\',\''+targetname+'\')" style="cursor:pointer;"><div class="navbarphoto"></div>'+targetname+'</div>';}
+	else {divcentrecontent='<span id="centerholder" style="color:white;z-index:99999999999999999999999999999999;"></span>';}
 
 
 var popupHTML = '<div class="popup chatpop">'+
@@ -3739,7 +3741,7 @@ var popupHTML = '<div class="popup chatpop">'+
 
   '</div>'+
 
-   '     <span id="centerholder" style="color:white;z-index:99999999999999999999999999999999;"></span>'+
+   divcentrecontent+
     '    <div class="right" onclick="actionSheet()" style="font-size:14px;">'+   
     
 
