@@ -3738,7 +3738,7 @@ var popupHTML = '<div class="popup chatpop">'+
 
   '</div>'+
 
-   '     <span id="centerholder" style="color:white;"></span>'+
+   '     <span id="centerholder" style="color:white;z-index:99999999999999999999999999999999;"></span>'+
     '    <div class="right" onclick="actionSheet()" style="font-size:14px;">'+   
     
 
