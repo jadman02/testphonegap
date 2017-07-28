@@ -649,9 +649,9 @@ var app = {
 
 	    myApp.addNotification({
         title: 'Date or Duck',
-		    subtitle:data.aps.alert.body,
-        message: data.aps.alert.title,
-        media: '<img width="44" height="44" style="border-radius:100%" src="/res/icons/ios/icon-small.png">'
+		    subtitle:data.aps.alert.title,
+        message: data.aps.alert.body,
+        media: '<img width="44" height="44" style="border-radius:100%" src="../res/icons/ios/icon-small.png">'
     });
 	    
 	   // alert( JSON.stringify(data) );
