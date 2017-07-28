@@ -4759,7 +4759,7 @@ alert('11');
   
 
 if (singleuserarray[0] != null){
-alert('11.5');
+
 $(".avail-loader").hide();
  if (singleuserarray[0].availarraystring !== ''){
 	 
@@ -4831,27 +4831,18 @@ else{photoBrowser(0,singleuserarray[0].age);}
 }
 
 else{
-alert('33');
+
       if (singlefxallowed === false){alert('33.5');return false;}
 singlefxallowed = false;
-   alert('33.7');
+
 
 targetid = String(idw);
-	alert('idw' + idw);
-targetname = idname;
-	alert('idname' + idname);
-	alert('targetid'+  targetid);
-	alert(latitudep);
-	alert(longitudep);
-	alert(firebase.auth().currentUser.uid);
-	alert(f_projectid);
-
 	
 firebase.auth().currentUser.getToken().then(function(idToken) { 
 $.post( "http://www.dateorduck.com/singleuser.php", {projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,uid:targetid,latitudep:latitudep,longitudep:longitudep} )
   .done(function( data ) {
- alert('44');
-alert(JSON.stringify(data));
+
+
 	console.log(data);
   var result = JSON.parse(data); 
 
@@ -5049,14 +5040,14 @@ $( ".availabilitylistblock_"+singleuserarray[0].id ).append(
    }
    
 if (origin == 88){
-   alert('88');
+   //alert('88');
 }
 else if (origin == 1){
-   alert('99');
+   //alert('99');
    photoBrowser(0,singleuserarray[0].age,1,1);
 }
 else if (!origin){
-   alert('100');
+   //alert('100');
    photoBrowser(0,singleuserarray[0].age);
 }
 
