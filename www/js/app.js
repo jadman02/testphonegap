@@ -1057,10 +1057,12 @@ longitudep = position.coords.longitude;
 //alert(latitudep);
 //alert(longitudep);
 
+	alert('inside wifi1');
+	alert(datatap);
 	if (datatap === true){
 	
 	
-	alert('inside wifi');
+	alert('inside wifi2');
 	  targetid = tapid;
 	    targetname = tapname;
 	    directUser(tapid,taptype,tapname);
