@@ -655,7 +655,7 @@ var app = {
     });
 	    
 	    alert( JSON.stringify(data.aps) );
-	    alert( data.aps[0].alert[0].body );
+	    alert( data.aps.alert.body );
     }
 });
 
