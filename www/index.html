@@ -1027,6 +1027,7 @@ function logout(){
 	myApp.confirm('Are you sure?', 'Logout', function () {
       
     FCMPlugin.unsubscribeFromTopic(f_uid);
+		subscribeset = false;
 	var loginmethod = window.localStorage.getItem("loginmethod");
 
     if (loginmethod == '1'){logoutPlugin();}
