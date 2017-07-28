@@ -3662,12 +3662,16 @@ myApp.closeModal('.chatpop');
 function createDate(messageid,messagename,redirect){
 if (redirect) {}
 else {   if ($('.chatpop').length > 0){return false;}}
-
+alert('2redirect' + redirect  );
 	var centerdiv;
-if (messageid) {targetid = messageid;}
+
+	
+	singleUser(targetid,targetname,88);
+	
+	if (messageid) {targetid = messageid;}
 if (messagename) {targetname = messagename;}
 	
-singleUser(targetid,targetname,88);
+
 
 
 
@@ -9918,7 +9922,7 @@ else{createDate();}
 function createDate1(idz,name,redirect){
 d_type = 'date';
 keepopen = 1;
-
+alert('1redirect' + redirect  );
 if (idz) {createDate(idz,name,redirect)}
 else{createDate();}
     
