@@ -9907,19 +9907,19 @@ firebase.database().ref('/photostodelete/' + obk.from_uid + '/' + obk.to_uid+'/'
     
 }    
 
-function createDuck(idq,nameq){
+function createDuck(idq,nameq,redirect){
 keepopen = 1;
 d_type = 'duck';
-if (idq) {createDate(idq,nameq)}
+if (idq) {createDate(idq,nameq,redirect)}
 else{createDate();}
     
 }
 
-function createDate1(idz,name){
+function createDate1(idz,name,redirect){
 d_type = 'date';
 keepopen = 1;
 
-if (idz) {createDate(idz,name)}
+if (idz) {createDate(idz,name,redirect)}
 else{createDate();}
     
 }
