@@ -3711,10 +3711,12 @@ $.each(objs, function(i, obj) {
 
 });
 
+	alert('got here1');
+	
 if (messageid) {centerdiv = '<div class="center center-date" onclick="singleUser(\''+targetid+'\',\''+targetname+'\')" style="cursor:pointer;"><div class="navbarphoto"></div>'+targetname+'</div>';}
 else{centerdiv = '<div class="center center-date close-popup" onclick="clearchatHistory();"><div class="navbarphoto"></div>'+targetname+'</div>';}
 
-
+alert('got here2');
 
 var popupHTML = '<div class="popup chatpop">'+
 
