@@ -567,6 +567,8 @@ myApp.swiper('.swiper-helper-info', {
             
         openFB.login(
                 function(response) {
+			          alert(JSON.stringify(response));
+
                     if(response.status === 'connected') {
 
                         //alert('Facebook login succeeded, got access token: ' + response.authResponse.accessToken);
@@ -601,7 +603,7 @@ myApp.swiper('.swiper-helper-info', {
             $( ".loginbutton" ).hide();
 		try {
      var fbLoginSuccess = function (userData) {
-         
+          alert(JSON.stringify(userData));
          
          if(userData.status === 'connected') {
 
@@ -614,6 +616,12 @@ myApp.swiper('.swiper-helper-info', {
 
                         startApp();
                         
+//FCMPlugin.subscribeToTopic( f_uid, function(msg){
+  //  alert( msg );
+//}, function(err){
+  //  alert( err );
+//} );
+		 
                     } else {
                       
                       //  if (userData.error ==='undefined') {myApp.alert('Please login to start', 'Login required');}
