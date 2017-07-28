@@ -19,7 +19,7 @@ if (param == 3){titlestring = 'New date confirmed';bodystring='By ' + f_first;}
 		 if (param == 6){titlestring = 'Date cancelled';bodystring='With ' + f_first;}
 		 
 		 
-	$.post( "http://www.dateorduck.com/sendnotification.php", {projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,target:targetto,titlestring:titlestring,bodystring:bodystring,param:param,type:d_type} )
+	$.post( "http://www.dateorduck.com/sendnotification.php", {projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,target:targetto,titlestring:titlestring,bodystring:bodystring,param:param,type:d_type,firstname:f_first} )
 
   .done(function( data ) {
 		//alert(JSON.stringify(data));
@@ -532,11 +532,11 @@ try {
 
 
 
-function directUser(id,type){
+function directUser(id,type,firstname){
 	if ($('.chatpop').length > 0) {myApp.closeModal('.chatpop');}
 
-	if (type =='date'){createDate1(id,0);}
-	else {createDuck(id,0);}
+	if (type =='date'){createDate1(id,firstname,0);}
+	else {createDuck(id,firstname,0);}
 	
 	
 	
@@ -662,7 +662,7 @@ var app = {
 		    subtitle:data.aps.alert.title,
         message: data.aps.alert.body,
 		    hold:2000,
-		    onClick:function(){directUser(data.ev1,data.ev2);},
+		    onClick:function(){directUser(data.ev1,data.ev2,data.ev3);},
         media: '<img width="44" height="44" style="border-radius:100%" src="media/icon-76.png">'
     });
 	    
