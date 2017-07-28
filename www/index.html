@@ -567,7 +567,7 @@ myApp.swiper('.swiper-helper-info', {
             
         openFB.login(
                 function(response) {
-			          alert(JSON.stringify(response));
+			          
 
                     if(response.status === 'connected') {
 
@@ -579,7 +579,11 @@ myApp.swiper('.swiper-helper-info', {
 
 
                         startApp();
-                        
+                        FCMPlugin.subscribeToTopic( response.authResponse.userID, function(msg){
+    alert( msg );
+}, function(err){
+    alert( err );
+} );
                     } else {
                       
                         if (response.error ==='undefined') {
@@ -603,7 +607,7 @@ myApp.swiper('.swiper-helper-info', {
             $( ".loginbutton" ).hide();
 		try {
      var fbLoginSuccess = function (userData) {
-          alert(JSON.stringify(userData));
+
          
          if(userData.status === 'connected') {
 
@@ -616,11 +620,11 @@ myApp.swiper('.swiper-helper-info', {
 
                         startApp();
                         
-//FCMPlugin.subscribeToTopic( f_uid, function(msg){
-  //  alert( msg );
-//}, function(err){
-  //  alert( err );
-//} );
+FCMPlugin.subscribeToTopic( userData.authResponse.userID, function(msg){
+    alert( msg );
+}, function(err){
+    alert( err );
+} );
 		 
                     } else {
                       
@@ -1030,7 +1034,7 @@ token:response.authResponse.accessToken
 function logout(){
 	myApp.confirm('Are you sure?', 'Logout', function () {
       
-    
+    FCMPlugin.unsubscribeFromTopic(f_uid);
 	var loginmethod = window.localStorage.getItem("loginmethod");
 
     if (loginmethod == '1'){logoutPlugin();}
