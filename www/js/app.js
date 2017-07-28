@@ -4805,7 +4805,10 @@ singlefxallowed = false;
    alert('33.7');
 
 targetid = String(idw);
+	alert('idw' + idw);
 targetname = idname;
+	alert('idname' + idname);
+	alert('targetid'+  targetid);
 firebase.auth().currentUser.getToken().then(function(idToken) { 
 $.post( "http://www.dateorduck.com/singleuser.php", {projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,uid:targetid,latitudep:latitudep,longitudep:longitudep} )
   .done(function( data ) {
