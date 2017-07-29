@@ -1716,7 +1716,7 @@ if (recent_all[0].id == graphid || recent_all[1].id == graphid || recent_all[2].
 //if (nearbyshare){
 //remove blur, unlock swiper
 
-}
+//}
 //else{   $( ".nearby-helper" ).show();}
 //if (recentshare){
 //remove blur, unlock swiper
