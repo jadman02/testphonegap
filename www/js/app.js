@@ -159,7 +159,7 @@ function newHometown(){
 function fQuery(){
 
 
-alert(random_all.length);
+
 	
 	
 $.ajax({
@@ -246,7 +246,7 @@ recentshare = false;
 	}
 
 	if (response1.summary.total_count < 5){
-
+if ($('.no-results-div').length > 0) {alert('no results div present');}
 	nearbyshare = false;
 		 recentshare = false;
 		$('.nearby-helper').show();
@@ -4484,6 +4484,9 @@ if ($('.photo-browser-slide').length > 1){
 var potentialdate = f_date_me.indexOf(targetid);
 if (potentialdate == -1) { myPhotoBrowser.swiper.slideNext(true,1000);
 
+			  
+
+			  
 if ($('.infopopup').length > 0) {
 if(swiperQuestions){comingback = 0; swiperQuestions.slideNext();comingback=1;}}
 }
