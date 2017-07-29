@@ -722,10 +722,11 @@ view4 = myApp.addView('#view-4');
   
   if (user) {
       
+	  alert('1');
  cordova.plugins.notification.badge.get(function (badge) {
 alert(badge);
 });
-	  
+alert('2');	  
 //FCMPlugin.getToken( successCallback(token), errorCallback(err) ); 
 //Keep in mind the function will return null if the token has not been established yet. 
 
