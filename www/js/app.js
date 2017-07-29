@@ -246,7 +246,8 @@ recentshare = false;
 	}
 
 	if (response1.summary.total_count < 5){
-if ($('.no-results-div').length > 0) {alert('no results div present');}
+if ($('.no-results-div').length > 0) {}
+else{		
 	nearbyshare = false;
 		 recentshare = false;
 		$('.nearby-helper').show();
@@ -303,7 +304,7 @@ $('.recent-helper').html(
 	}
 
 
-	
+	}	
 	    
 } catch(err) {
 
