@@ -209,7 +209,8 @@ recentfriends:'Y'
 	
 	if ((response1.summary.total_count > 4) && (response1.summary.total_count <10)){
 
-if ($('.no-results-div').length > 0) {}
+if ($('.no-results-div').length > 0) {$('.nearby-helper').hide();
+		$('.recent-helper').hide();}
 		else{
 		
 	nearbyshare = true;
@@ -247,7 +248,8 @@ recentshare = false;
 	}
 	}
 	if (response1.summary.total_count < 5){
-if ($('.no-results-div').length > 0) {}
+if ($('.no-results-div').length > 0) {$('.nearby-helper').hide();
+		$('.recent-helper').hide();}
 else{		
 	nearbyshare = false;
 		 recentshare = false;
@@ -1384,7 +1386,7 @@ nameslist = [];
    if (result == 77 ||(result.length ===1 && result[0].uid == f_uid ) ){
    
 setTimeout(function(){ $('.nearby-helper').hide();
-		$('.recent-helper').hide(); }, 2000);
+		$('.recent-helper').hide(); }, 1000);
    $( ".home-title" ).hide(); 
 
  $( ".results-loader" ).hide();
