@@ -1383,7 +1383,7 @@ nameslist = [];
    
    if (result == 77 ||(result.length ===1 && result[0].uid == f_uid ) ){
    
-
+alert('0');
    $( ".home-title" ).hide(); 
 
  $( ".results-loader" ).hide();
@@ -1726,6 +1726,7 @@ else{   $( ".recent-helper" ).show();}
 	
 if (random_all.length === 0){
 
+	alert('1');
 
  $( ".home-title" ).hide(); 
 
