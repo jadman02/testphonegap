@@ -1383,10 +1383,10 @@ nameslist = [];
    
    if (result == 77 ||(result.length ===1 && result[0].uid == f_uid ) ){
    
-
+setTimeout(function(){ $('.nearby-helper').hide();
+		$('.recent-helper').hide(); }, 2000);
    $( ".home-title" ).hide(); 
-$('.nearby-helper').hide();
-		$('.recent-helper').hide();
+
  $( ".results-loader" ).hide();
     $('.content-here').append(
     '<div class="no-results-div" style="background-color:white;z-index:30000000;text-align:center;margin:0 auto;width:300px;position:absolute;top:50%;left:50%;margin-left:-150px;margin-top:-70px;">'+
@@ -1733,8 +1733,8 @@ if ($('.no-results-div').length > 0) {}
  $( ".home-title" ).hide(); 
 
  $( ".results-loader" ).hide();
-	 $( ".nearby-helper" ).hide(); 
-	 $( ".recent-helper" ).hide();
+setTimeout(function(){ $('.nearby-helper').hide();
+		$('.recent-helper').hide(); }, 2000);
     $('.content-here').append(
     '<div class="no-results-div" style="background-color:white;z-index:30000000;text-align:center;margin:0 auto;width:300px;position:absolute;top:50%;left:50%;margin-left:-150px;margin-top:-70px;">'+
     
@@ -3601,8 +3601,8 @@ if (new_all.length === 0){
 
 	myPhotoBrowser.close();myApp.closeModal();
  $( ".home-title" ).hide(); 
- $( ".nearby-helper" ).hide(); 
-	 $( ".recent-helper" ).hide();
+setTimeout(function(){ $('.nearby-helper').hide();
+		$('.recent-helper').hide(); }, 2000);
  $( ".results-loader" ).hide();
     $('.content-here').append(
     '<div class="no-results-div" style="background-color:white;z-index:30000000;text-align:center;margin:0 auto;width:300px;position:absolute;top:50%;left:50%;margin-left:-150px;margin-top:-70px;">'+
