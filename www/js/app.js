@@ -3747,8 +3747,10 @@ $.each(objs, function(i, obj) {
 
    if ((obj.to_uid == f_uid) && (obj.from_uid == targetid) && (obj.received=='N')){
     
-
+alert('obj.new_message_count' + obj.new_message_count);
     
+	   
+	   
        firebase.database().ref('notifications/' +f_uid + '/' + targetid).update({
     received:'Y',
     new_message_count:'0',
