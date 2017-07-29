@@ -1729,11 +1729,11 @@ else{   $( ".recent-helper" ).show();}
 	
 if (random_all.length === 0){
 
-alert('0');
+
 if ($('.no-results-div').length > 0) {}
 	else{
 
-		alert('1');
+		
 		$( ".home-title" ).hide(); 
 
  $( ".results-loader" ).hide();
