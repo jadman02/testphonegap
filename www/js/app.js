@@ -717,7 +717,15 @@ view4 = myApp.addView('#view-4');
   if (user) {
       
 cordova.plugins.notification.badge.get(function (badge) {
-alert(badge);
+
+if (badge >0){	
+	
+$( ".notifspan" ).show();
+$( ".notifspan" ).addClass('notifbounce');
+setTimeout(function(){ $( ".notifspan" ).removeClass('notifbounce'); }, 5000);}
+
+else {$( ".notifspan" ).hide();}
+	
 });
 
 //FCMPlugin.getToken( successCallback(token), errorCallback(err) ); 
