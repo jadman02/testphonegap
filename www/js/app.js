@@ -1395,7 +1395,7 @@ setTimeout(function(){ $('.nearby-helper').hide();
     
     '<img src="media/datetongue.png" style="width:120px;margin:0 auto;">'+
     
-   '<h3>No one found nearby</h3><p style="padding-top:0px;margin-top:-10px;">Try changing your search radius </br> or age range.</p></br>'+
+   '<h3 style="color:red">No one found nearby</h3><p style="padding-top:0px;margin-top:-10px;">Try changing your search radius </br> or age range.</p></br>'+
 
 
    
@@ -1744,7 +1744,7 @@ setTimeout(function(){ $('.nearby-helper').hide();
     
     '<img src="media/datetongue.png" style="width:120px;margin:0 auto;">'+
     
-   '<h3>No one found nearby</h3><p style="padding-top:0px;margin-top:-10px;">Try changing your search radius </br> or age range.</p></br>'+
+   '<h3 style="color:green">No one found nearby</h3><p style="padding-top:0px;margin-top:-10px;">Try changing your search radius </br> or age range.</p></br>'+
 
 
    
@@ -3613,7 +3613,7 @@ setTimeout(function(){ $('.nearby-helper').hide();
     
     '<img src="media/datetongue.png" style="width:120px;margin:0 auto;">'+
     
-   '<h3>No one found nearby</h3><p style="padding-top:0px;margin-top:-10px;">Try changing your search radius </br> or age range.</p></br>'+
+   '<h3 style="color:yellow">No one found nearby</h3><p style="padding-top:0px;margin-top:-10px;">Try changing your search radius </br> or age range.</p></br>'+
 
 
    
