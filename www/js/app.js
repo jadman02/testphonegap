@@ -1388,7 +1388,7 @@ nameslist = [];
 setTimeout(function(){ $('.nearby-helper').hide();
 		$('.recent-helper').hide(); }, 1000);
    $( ".home-title" ).hide(); 
-
+alert('1');
  $( ".results-loader" ).hide();
     $('.content-here').append(
     '<div class="no-results-div" style="background-color:white;z-index:30000000;text-align:center;margin:0 auto;width:300px;position:absolute;top:50%;left:50%;margin-left:-150px;margin-top:-70px;">'+
@@ -1739,7 +1739,9 @@ if ($('.no-results-div').length > 0) {}
  $( ".results-loader" ).hide();
 setTimeout(function(){ $('.nearby-helper').hide();
 		$('.recent-helper').hide(); }, 2000);
-    $('.content-here').append(
+    
+alert('2');
+		$('.content-here').append(
     '<div class="no-results-div" style="background-color:white;z-index:30000000;text-align:center;margin:0 auto;width:300px;position:absolute;top:50%;left:50%;margin-left:-150px;margin-top:-70px;">'+
     
     '<img src="media/datetongue.png" style="width:120px;margin:0 auto;">'+
@@ -3608,7 +3610,9 @@ if (new_all.length === 0){
 setTimeout(function(){ $('.nearby-helper').hide();
 		$('.recent-helper').hide(); }, 2000);
  $( ".results-loader" ).hide();
-    $('.content-here').append(
+    
+alert('3');
+	$('.content-here').append(
     '<div class="no-results-div" style="background-color:white;z-index:30000000;text-align:center;margin:0 auto;width:300px;position:absolute;top:50%;left:50%;margin-left:-150px;margin-top:-70px;">'+
     
     '<img src="media/datetongue.png" style="width:120px;margin:0 auto;">'+
