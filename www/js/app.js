@@ -1389,8 +1389,7 @@ nameslist = [];
    
    if (result == 77 ||(result.length ===1 && result[0].uid == f_uid ) ){
    
-setTimeout(function(){ $('.nearby-helper').hide();
-		$('.recent-helper').hide(); }, 1000);
+
    $( ".home-title" ).hide(); 
 
  $( ".results-loader" ).hide();
@@ -1741,8 +1740,6 @@ if ($('.no-results-div').length > 0) {}
 		$( ".home-title" ).hide(); 
 
  $( ".results-loader" ).hide();
-setTimeout(function(){ $('.nearby-helper').hide();
-		$('.recent-helper').hide(); }, 2000);
     
 
 		$('.content-here').append(
@@ -3611,8 +3608,6 @@ if (new_all.length === 0){
 
 	myPhotoBrowser.close();myApp.closeModal();
  $( ".home-title" ).hide(); 
-setTimeout(function(){ $('.nearby-helper').hide();
-		$('.recent-helper').hide(); }, 2000);
  $( ".results-loader" ).hide();
     
 
