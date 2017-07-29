@@ -658,6 +658,8 @@ var app = {
 $( ".notifspan" ).addClass('notifbounce');
 setTimeout(function(){ $( ".notifspan" ).removeClass('notifbounce'); }, 5000);
 	      
+	      cordova.plugins.notification.badge.set(data.ev4);
+	      
 	      if(data.wasTapped){
       //Notification was received on device tray and tapped by the user.
 
