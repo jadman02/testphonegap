@@ -1385,7 +1385,8 @@ nameslist = [];
    
 
    $( ".home-title" ).hide(); 
-
+$('.nearby-helper').hide();
+		$('.recent-helper').hide();
  $( ".results-loader" ).hide();
     $('.content-here').append(
     '<div class="no-results-div" style="background-color:white;z-index:30000000;text-align:center;margin:0 auto;width:300px;position:absolute;top:50%;left:50%;margin-left:-150px;margin-top:-70px;">'+
