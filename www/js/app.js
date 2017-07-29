@@ -1753,7 +1753,7 @@ setTimeout(function(){ $('.nearby-helper').hide();
 		  
 	}
 }
-	else {$( ".home-title" ).show(); $('.content-here').empty();}	
+	else {alert('22');$( ".home-title" ).show(); $('.content-here').empty();}	
 	
 	
 	
