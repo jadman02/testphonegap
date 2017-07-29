@@ -1713,15 +1713,15 @@ if (recent_all[0].id == graphid || recent_all[1].id == graphid || recent_all[2].
 
  
    
-//if (nearbyshare){
+if (nearbyshare){
 //remove blur, unlock swiper
 
-//}
-//else{   $( ".nearby-helper" ).show();}
-//if (recentshare){
+}
+else{   $( ".nearby-helper" ).show();}
+if (recentshare){
 //remove blur, unlock swiper
-//}
-//else{   $( ".recent-helper" ).show();}   
+}
+else{   $( ".recent-helper" ).show();}   
     
 	$( ".homedate" ).removeClass("disabled");
 	$( ".homeduck" ).removeClass("disabled");
@@ -1729,10 +1729,12 @@ if (recent_all[0].id == graphid || recent_all[1].id == graphid || recent_all[2].
 	
 if (random_all.length === 0){
 
-
+alert('0');
 if ($('.no-results-div').length > 0) {}
 	else{
- $( ".home-title" ).hide(); 
+
+		alert('1');
+		$( ".home-title" ).hide(); 
 
  $( ".results-loader" ).hide();
 setTimeout(function(){ $('.nearby-helper').hide();
