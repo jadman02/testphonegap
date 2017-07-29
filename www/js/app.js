@@ -209,7 +209,7 @@ recentfriends:'Y'
 	
 	if ((response1.summary.total_count > 4) && (response1.summary.total_count <10)){
 
-
+alert(random_all.length):
 		
 	nearbyshare = true;
 		$('.nearby-helper').hide();
