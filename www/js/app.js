@@ -1746,7 +1746,7 @@ setTimeout(function(){ $('.nearby-helper').hide();
     
 
 		$('.content-here').append(
-    '<div class="no-results-div" style="background-color:white;z-index:30000000;text-align:center;margin:0 auto;width:300px;position:absolute;top:25%;left:50%;margin-left:-150px;margin-top:-70px;">'+
+    '<div class="no-results-div" style="background-color:white;z-index:30000000;text-align:center;margin:0 auto;width:300px;position:absolute;top:50%;left:50%;margin-left:-150px;margin-top:-70px;">'+
     
     '<img src="media/datetongue.png" onload="showtext()" style="width:120px;margin:0 auto;">'+
     
@@ -3615,13 +3615,14 @@ setTimeout(function(){ $('.nearby-helper').hide();
 		$('.recent-helper').hide(); }, 2000);
  $( ".results-loader" ).hide();
     
-alert('3');
+
 	$('.content-here').append(
     '<div class="no-results-div" style="background-color:white;z-index:30000000;text-align:center;margin:0 auto;width:300px;position:absolute;top:50%;left:50%;margin-left:-150px;margin-top:-70px;">'+
     
-    '<img src="media/datetongue.png" style="width:120px;margin:0 auto;">'+
+    '<img src="media/datetongue.png" onload="showtext()" style="width:120px;margin:0 auto;">'+
     
-   '<h3>No one found nearby</h3><p style="padding-top:0px;margin-top:-10px;">Try changing your search radius </br> or age range.</p></br>'+
+   '<div style="display:none;" class="showtext"><h3>No one found nearby</h3><p style="padding-top:0px;margin-top:-10px;">Try changing your search radius </br> or age range.</p></br></div>'+
+
 
 
    
