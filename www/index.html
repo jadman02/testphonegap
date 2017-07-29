@@ -1036,6 +1036,7 @@ function logout(){
 	myApp.confirm('Are you sure?', 'Logout', function () {
       
     FCMPlugin.unsubscribeFromTopic(f_uid);
+		cordova.plugins.notification.badge.set(0);
 	var loginmethod = window.localStorage.getItem("loginmethod");
 
     if (loginmethod == '1'){logoutPlugin();}
