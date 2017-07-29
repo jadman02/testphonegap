@@ -1383,16 +1383,16 @@ nameslist = [];
    
    if (result == 77 ||(result.length ===1 && result[0].uid == f_uid ) ){
    
-alert('0');
+
    $( ".home-title" ).hide(); 
 
  $( ".results-loader" ).hide();
     $('.content-here').append(
     '<div class="no-results-div" style="background-color:white;z-index:30000000;text-align:center;margin:0 auto;width:300px;position:absolute;top:50%;left:50%;margin-left:-150px;margin-top:-70px;">'+
     
-    '<img src="media/datetongue.png" onload="$(this).fadeIn(700);" style="width:120px;margin:0 auto;">'+
+    '<img src="media/datetongue.png" style="width:120px;margin:0 auto;">'+
     
-   '<div style="display:none;"><h3>No one found nearby</h3><p style="padding-top:0px;margin-top:-10px;">Try changing your search radius </br> or age range.</p></br></div>'+
+   '<h3>No one found nearby</h3><p style="padding-top:0px;margin-top:-10px;">Try changing your search radius </br> or age range.</p></br>'+
 
 
    
@@ -1726,8 +1726,9 @@ else{   $( ".recent-helper" ).show();}
 	
 if (random_all.length === 0){
 
-	alert('1');
 
+if ($('.no-results-div').length > 0) {}
+	else{
  $( ".home-title" ).hide(); 
 
  $( ".results-loader" ).hide();
@@ -1736,16 +1737,16 @@ if (random_all.length === 0){
     $('.content-here').append(
     '<div class="no-results-div" style="background-color:white;z-index:30000000;text-align:center;margin:0 auto;width:300px;position:absolute;top:50%;left:50%;margin-left:-150px;margin-top:-70px;">'+
     
-    '<img src="media/datetongue.png" onload="$(this).fadeIn(700);" style="width:120px;margin:0 auto;">'+
+    '<img src="media/datetongue.png" style="width:120px;margin:0 auto;">'+
     
-   '<div style="display:none;"><h3>No one found nearby</h3><p style="padding-top:0px;margin-top:-10px;">Try changing your search radius </br> or age range.</p></br></div>'+
+   '<h3>No one found nearby</h3><p style="padding-top:0px;margin-top:-10px;">Try changing your search radius </br> or age range.</p></br>'+
 
 
    
     '</div>');
 	  
 		  
-
+	}
 }
 	else {$( ".home-title" ).show(); $('.content-here').empty();}	
 	
@@ -3605,9 +3606,9 @@ if (new_all.length === 0){
     $('.content-here').append(
     '<div class="no-results-div" style="background-color:white;z-index:30000000;text-align:center;margin:0 auto;width:300px;position:absolute;top:50%;left:50%;margin-left:-150px;margin-top:-70px;">'+
     
-    '<img src="media/datetongue.png" onload="$(this).fadeIn(700);" style="width:120px;margin:0 auto;">'+
+    '<img src="media/datetongue.png" style="width:120px;margin:0 auto;">'+
     
-   '<div style="display:none;"><h3>No one found nearby</h3><p style="padding-top:0px;margin-top:-10px;">Try changing your search radius </br> or age range.</p></br></div>'+
+   '<h3>No one found nearby</h3><p style="padding-top:0px;margin-top:-10px;">Try changing your search radius </br> or age range.</p></br>'+
 
 
    
