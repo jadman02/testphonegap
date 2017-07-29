@@ -31,17 +31,7 @@ if (param == 3){titlestring = 'New date confirmed';bodystring='By ' + f_first;}
 
 }
 
-function getFCM(){
 
-	FCMPlugin.getToken(function(token){
-   // alert(token);
-});
-
-
-	
-
-	
-}
 
 function sharePop(){
 
@@ -726,8 +716,10 @@ view4 = myApp.addView('#view-4');
   
   if (user) {
       
-	  getFCM();
-	  
+cordova.plugins.notification.badge.get(function (badge) {
+alert(badge);
+});
+
 //FCMPlugin.getToken( successCallback(token), errorCallback(err) ); 
 //Keep in mind the function will return null if the token has not been established yet. 
 
