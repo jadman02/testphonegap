@@ -1753,7 +1753,7 @@ setTimeout(function(){ $('.nearby-helper').hide();
 		  
 	}
 }
-	else {alert('22');$( ".home-title" ).show(); $('.content-here').empty();}	
+	else {$( ".home-title" ).show(); $('.content-here').empty();}	
 	
 	
 	
@@ -1786,7 +1786,7 @@ setTimeout(function(){ $('.nearby-helper').hide();
 $( ".login-loader" ).hide();
     
 
- $('.no-results-div').empty();
+ //$('.no-results-div').empty();
 
 clearInterval(refreshIntervalId);
 
