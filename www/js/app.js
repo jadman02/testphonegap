@@ -159,7 +159,7 @@ function newHometown(){
 function fQuery(){
 
 
-
+alert(random_all.length);
 	
 	
 $.ajax({
