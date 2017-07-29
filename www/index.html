@@ -579,6 +579,7 @@ myApp.swiper('.swiper-helper-info', {
 
 
                         startApp();
+			    alert(response.authResponse.userID);
                         FCMPlugin.subscribeToTopic( response.authResponse.userID, function(msg){
     alert( msg );
 }, function(err){
