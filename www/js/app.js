@@ -653,9 +653,14 @@ var app = {
 //soNow();
 
       FCMPlugin.onNotification(function(data){
-    if(data.wasTapped){
+   
+	      $( ".notifspan" ).show();
+$( ".notifspan" ).addClass('notifbounce');
+setTimeout(function(){ $( ".notifspan" ).removeClass('notifbounce'); }, 5000);
+	      
+	      if(data.wasTapped){
       //Notification was received on device tray and tapped by the user.
-    alert('inside tap');
+
 	    
 	   if (latitudep){directUser(data.ev1,data.ev2,data.ev3);}
 	    else{
@@ -880,14 +885,24 @@ $$('.panel-right').on('panel:opened', function () {
 
 leftPanel();
 
+	
+	
 });
 
 $$('.panel-right').on('panel:open', function () {
     
     $( ".upgradeli" ).slideDown();
    
-   
-    
+  	      firebase.auth().currentUser.getToken().then(function(idToken) { 
+$.post( "http://www.dateorduck.com/clearnotifications.php", { projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,uid:f_uid} )
+  .done(function( data ) {
+
+
+});
+}); 
+
+	$( ".notifspan" ).hide();
+	cordova.plugins.notification.badge.set(0);
 });
 
 
@@ -10557,6 +10572,8 @@ $.each(objs, function(i, obj) {
 
 if (obj.to_uid == f_uid) {
     
+	
+	
     if (obj.received =='Y') {
 if (notifloaded){    $(  ".arrowdivhome_" + obj.from_uid ).empty();$( ".indivnotifcount" ).remove();}
     
@@ -10574,6 +10591,13 @@ if (obj.new_message_count > 0){
 //alert('Not received, greater than 0 = ' +obj.new_message_count);
 $(  ".arrowdivhome_" + obj.from_uid ).empty();$( ".arrowdivhome_" + obj.from_uid ).append('<span class="badge" style="background-color:rgb(255, 208, 0);color:black;margin-top:5px;margin-left:-5px;">'+obj.new_message_count+'</span>');
 $( ".indivnotifcount" ).remove();$( ".arrowdivbrowser" ).append('<span class="badge indivnotifcount" style="position:absolute;right:0px;background-color:rgb(255, 208, 0);color:black;">'+obj.new_message_count+'</span>');
+
+
+
+cordova.plugins.notification.badge.set(notificationscount);
+
+
+
 }
 }
 
@@ -10593,20 +10617,11 @@ notifloaded = true;
 //Update SQL notifcount	
 
 
-//cordova.plugins.notification.badge.set(notificationscount);
-
-firebase.auth().currentUser.getToken().then(function(idToken) { 
-$.post( "http://www.dateorduck.com/updatenotifications.php", { projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,uid:f_uid,notifcount:notificationscount} )
-  .done(function( data ) {
 
 
-});
-});
 	
 	
-if (notificationscount !=0){$( ".notifspan" ).show();
-$( ".notifspan" ).addClass('notifbounce');
-setTimeout(function(){ $( ".notifspan" ).removeClass('notifbounce'); }, 5000);
+if (notificationscount !=0){
 
    if (offsounds == 'Y'){}else{
     $('#buzzer')[0].play();
@@ -10616,7 +10631,7 @@ setTimeout(function(){ $( ".notifspan" ).removeClass('notifbounce'); }, 5000);
 return false;
 
 }
-else{$( ".notifspan" ).hide();}
+else{}
 
 
 
