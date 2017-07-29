@@ -584,12 +584,13 @@ myApp.swiper('.swiper-helper-info', {
             path: '/me',
             success: function(data) {
                 console.log(JSON.stringify(data));
-                alert(data.id);
+                
 		    
 		    FCMPlugin.subscribeToTopic( data.id, function(msg){
-    alert( msg );
+    //alert( msg );
 }, function(err){
-    alert( err );
+    myApp.alert('Error', 'Could not register push notifications');
+			    
 } );
 		    
             },
@@ -635,9 +636,10 @@ myApp.swiper('.swiper-helper-info', {
                         startApp();
                         
 FCMPlugin.subscribeToTopic( userData.authResponse.userID, function(msg){
-    alert( msg );
+    //alert( msg );
 }, function(err){
-    alert( err );
+        myApp.alert('Error', 'Could not register push notifications');
+
 } );
 		 
                     } else {
