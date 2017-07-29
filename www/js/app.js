@@ -3746,7 +3746,23 @@ $.each(objs, function(i, obj) {
    
 
    if ((obj.to_uid == f_uid) && (obj.from_uid == targetid) && (obj.received=='N')){
-    
+
+	   cordova.plugins.notification.badge.get(function (badge) {
+	   var newcount = badge-obj.new_message_count;
+	   if (newcount < 1){
+
+
+$( ".notifspan" ).hide();
+	   }
+		   
+		   else {
+		   	    $( ".notifspan" ).show();
+$( ".notifspan" ).addClass('notifbounce');
+setTimeout(function(){ $( ".notifspan" ).removeClass('notifbounce'); }, 5000);
+		   }
+	   
+	   });
+	   
 alert('obj.new_message_count' + obj.new_message_count);
     
 	   
