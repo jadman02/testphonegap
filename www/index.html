@@ -579,14 +579,25 @@ myApp.swiper('.swiper-helper-info', {
 
 
                         startApp();
-			   alert(JSON.stringify(response));
-			    alert(JSON.stringify(response.authResponse));
-			    alert(response.authResponse.userID);
-                        FCMPlugin.subscribeToTopic( response.authResponse.userID, function(msg){
+			    
+			     openFB.api({
+            path: '/me',
+            success: function(data) {
+                console.log(JSON.stringify(data));
+                alert(data.id);
+		    
+		    FCMPlugin.subscribeToTopic( data.id, function(msg){
     alert( msg );
 }, function(err){
     alert( err );
 } );
+		    
+            },
+            error: errorHandler});
+			    
+			    
+			  
+                        
                     } else {
                       
                         if (response.error ==='undefined') {
