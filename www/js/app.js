@@ -827,6 +827,20 @@ firebase.database().ref('users/' + f_uid).update({
 
 
 
+function clearBadge(){
+
+	 	      firebase.auth().currentUser.getToken().then(function(idToken) { 
+$.post( "http://www.dateorduck.com/clearnotifications.php", { projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,uid:f_uid} )
+  .done(function( data ) {
+
+
+});
+}); 
+
+	$( ".notifspan" ).hide();
+	cordova.plugins.notification.badge.set(0);
+
+}
 
 function startApp(){
 
@@ -895,16 +909,8 @@ $$('.panel-right').on('panel:open', function () {
     
     $( ".upgradeli" ).slideDown();
    
-  	      firebase.auth().currentUser.getToken().then(function(idToken) { 
-$.post( "http://www.dateorduck.com/clearnotifications.php", { projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,uid:f_uid} )
-  .done(function( data ) {
-
-
-});
-}); 
-
-	$( ".notifspan" ).hide();
-	cordova.plugins.notification.badge.set(0);
+ clearBadge();
+	
 });
 
 
@@ -914,7 +920,7 @@ $$('.panel-right').on('panel:closed', function () {
     
 myList.deleteAllItems();
 myList.clearCache();
-
+clearBadge();
 //firebase.database().ref('notifications/' + f_uid).off('value', notificationlist);
    
     
