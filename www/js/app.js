@@ -209,7 +209,8 @@ recentfriends:'Y'
 	
 	if ((response1.summary.total_count > 4) && (response1.summary.total_count <10)){
 
-
+if ($('.no-results-div').length > 0) {}
+		else{
 		
 	nearbyshare = true;
 		$('.nearby-helper').hide();
@@ -244,7 +245,7 @@ recentshare = false;
 		//$('.recent-helper').html('<p style="margin-top:-10px;padding:5px;">'+friendstring+'. Invite <span class="badge" style="background-color:#ff3b30;color:white;">10</span> or more friends on Facebook to <br/>unlock this feature.</p>');
 	//$('.summary-helper').html('<p style="font-weight:bold;">'+friendstring+'</p><div class="row"><div class="col-50"><a class="button active external" href="sms:&body=Check out a new app in the App Store: https://fb.me/1554148374659639. It is called Date or Duck. Thoughts? ">Send SMS</a></div><div class="col-50"><a class="button active external" href="#" onclick="appLink()">Invite Friends</a></div></div><p style="color:#666;font-size:12px;margin-top:-10px;">We appreciate your help to grow this app!</p>');
 	}
-
+	}
 	if (response1.summary.total_count < 5){
 if ($('.no-results-div').length > 0) {}
 else{		
@@ -1177,7 +1178,7 @@ recent_all = [];
 	var swiperheight = $( window ).height() - 378;
 	
 	$('.content-here').append(
-    '<div class="no-results-div" style="text-align:center;margin:0 auto;width:300px;position:absolute;top:44px;left:50%;margin-left:-150px;margin-top:54px;">'+
+    '<div class="no-results-div" style="background-color:white;z-index:30000000;text-align:center;margin:0 auto;width:300px;position:absolute;top:44px;left:50%;margin-left:-150px;margin-top:54px;">'+
 '<div class="topdiv">'+
      // '<h3>Get Quacking!</h3>'+
 				'    <div class="content-block-title" style="width:100%;text-align:center;margin-top:15px;margin-left:0px;">Get Quacking</div>'+
@@ -1387,7 +1388,7 @@ nameslist = [];
 
  $( ".results-loader" ).hide();
     $('.content-here').append(
-    '<div class="no-results-div" style="text-align:center;margin:0 auto;width:300px;position:absolute;top:50%;left:50%;margin-left:-150px;margin-top:-70px;">'+
+    '<div class="no-results-div" style="background-color:white;z-index:30000000;text-align:center;margin:0 auto;width:300px;position:absolute;top:50%;left:50%;margin-left:-150px;margin-top:-70px;">'+
     
     '<img src="media/datetongue.png" style="width:120px;margin:0 auto;">'+
     
@@ -1732,7 +1733,7 @@ if (random_all.length === 0){
 	 $( ".nearby-helper" ).hide(); 
 	 $( ".recent-helper" ).hide();
     $('.content-here').append(
-    '<div class="no-results-div" style="text-align:center;margin:0 auto;width:300px;position:absolute;top:50%;left:50%;margin-left:-150px;margin-top:-70px;">'+
+    '<div class="no-results-div" style="background-color:white;z-index:30000000;text-align:center;margin:0 auto;width:300px;position:absolute;top:50%;left:50%;margin-left:-150px;margin-top:-70px;">'+
     
     '<img src="media/datetongue.png" style="width:120px;margin:0 auto;">'+
     
@@ -3601,7 +3602,7 @@ if (new_all.length === 0){
 	 $( ".recent-helper" ).hide();
  $( ".results-loader" ).hide();
     $('.content-here').append(
-    '<div class="no-results-div" style="text-align:center;margin:0 auto;width:300px;position:absolute;top:50%;left:50%;margin-left:-150px;margin-top:-70px;">'+
+    '<div class="no-results-div" style="background-color:white;z-index:30000000;text-align:center;margin:0 auto;width:300px;position:absolute;top:50%;left:50%;margin-left:-150px;margin-top:-70px;">'+
     
     '<img src="media/datetongue.png" style="width:120px;margin:0 auto;">'+
     
