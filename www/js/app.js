@@ -7053,7 +7053,7 @@ else{
 //$( ".photo-browser-slide img").css( "height", "100% - 144px)" );
 $( ".photo-browser-caption" ).empty();
  $( ".nametag" ).empty();
-
+myApp.closeModal('.actions-modal');
 
 
 
