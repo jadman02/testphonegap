@@ -7017,7 +7017,7 @@ myPhotoBrowser = myApp.photoBrowser({
        ' </a>'+
         ' <a href="#tab3" onclick="duckUser();" class="duckbutton disabled button link" style="border:1px solid white;border-left:0;border-radius:20px;border-top-left-radius:0px;border-top-right-radius:0px;border-bottom-left-radius:0px;font-family: \'Pacifico\', cursive;font-size:24px;">'+
         '<span class="duckfloat" style="padding:10px;border-radius:5px;margin-left:20px;">Duck</span>'+
-         '   <div style="width:54px;overflow-x:hidden;position:absolute;left:-1px;bottom:-8px;"> <img src="media/duckfaceonly.png" style="width:100px;margin-left:-54px;"></div>'+
+         '   <div style="width:54px;overflow-x:hidden;position:absolute;left:-1px;bottom:-8px;"> <img src="media/duckfaceonly.png" style="width:100px;margin-left:-52px;"></div>'+
 
         '</a>'+
 
