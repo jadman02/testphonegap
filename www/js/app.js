@@ -720,7 +720,7 @@ view4 = myApp.addView('#view-4');
   
   if (user) {
      var checkbadge = false;
-	  if (f_projectid){}
+	  if (f_projectid){checkbadge = false;}
 	  else{checkbadge = true;}
 	  
 cordova.plugins.notification.badge.get(function (badge) {
@@ -772,10 +772,16 @@ f_projectid = firebase.auth().currentUser.toJSON().authDomain.substr(0, firebase
   .done(function( data1 ) {
 	
 		var result1 = JSON.parse(data1); 	  
-			    alert(JSON.stringify(result1));
-			    alert(result1[0].notificationcount);
+
 	cordova.plugins.notification.badge.set(result1[0].notificationcount);
 
+			    if (result1[0].notificationcount >0){	
+	
+$( ".notifspan" ).show();
+$( ".notifspan" ).addClass('notifbounce');
+setTimeout(function(){ $( ".notifspan" ).removeClass('notifbounce'); }, 5000);}
+
+else {$( ".notifspan" ).hide();}
 
 });
 });  
