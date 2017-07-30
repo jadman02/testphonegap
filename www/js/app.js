@@ -10892,7 +10892,7 @@ else {retrieveurl = pagingurl}
 
 $.getJSON(retrieveurl,
       function(response) {
-alert(JSON.stringify(response));
+
 
 $( ".swipebuttondone").addClass("disabled");
 
@@ -11211,6 +11211,7 @@ var newlarge = addedlargearray.toString();
 
 var newwidth = addedwidth.toString();
 var newheight = addedheight.toString();
+
 firebase.auth().currentUser.getToken().then(function(idToken) { 
 $.post( "http://www.dateorduck.com/updatephotos.php", { projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,uid:f_uid,largeurls:newlarge,smallurls:newsmall,height:newheight,width:newwidth} )
   .done(function( data ) {
@@ -11250,7 +11251,7 @@ function updatephotoslider(){
 myswiperphotos.removeAllSlides();
 
 
-	
+	alert(addedlargearray.length);
 if (addedlargearray.length > 0){
 
 
@@ -11270,7 +11271,7 @@ for (i = 0; i < addedlargearray.length; i++) {
 
 myswiperphotos.update();
 $( ".photosliderinfo" ).addClass('pictures');
-       if (f_largeurls.length === 1){       $( ".photosliderinfo" ).html('You have added '+f_largeurls.length+' photo to your profile');
+       if (addedlargearray.length === 1){       $( ".photosliderinfo" ).html('You have added '+f_largeurls.length+' photo to your profile');
 }
 else{       $( ".photosliderinfo" ).html('You have added '+f_largeurls.length+' photos to your profile');
 }
