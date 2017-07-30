@@ -4232,7 +4232,7 @@ $( ".datearea" ).append(
 '<div class="row duck-row" style="display:none;clear:both;margin-top:10px;">'+
 
 
-        '<div class="buttons-row" style="width:100%;">'+
+        '<div class="buttons-row" style="width:100%;padding-left:10px;padding-right:10px;">'+
            ' <a href="#tab1" class="button button-big button-place button-my" onclick="duckClass(1);">My Place</a>'+
             '<a href="#tab2" class="button button-big button-place button-your" onclick="duckClass(2);">Your Place</a>'+
         '</div>'+
@@ -5471,7 +5471,7 @@ if (obj.param == 'message'){
     // Random message type
     type: 'sent',
     // Avatar and name:
-    avatar: 'https://graph.facebook.com/'+f_uid+'/picture?type=normal',
+    //avatar: 'https://graph.facebook.com/'+f_uid+'/picture?type=normal',
     name: f_first,
     // Day
         day:datechatstring,
@@ -5506,7 +5506,7 @@ else{
     // Random message type
     type: 'sent',
     // Avatar and name:
-    avatar: 'https://graph.facebook.com/'+f_uid+'/picture?type=normal',
+    //avatar: 'https://graph.facebook.com/'+f_uid+'/picture?type=normal',
     name: f_first,
             day:datechatstring,
 
@@ -5530,8 +5530,8 @@ else {
     text: '<img src="'+obj.downloadurl+'" onload="$(this).fadeIn(700);" style="display:none" onclick="imagesPopup(\''+obj.id+'\');">',
     // Random message type
     type: 'sent',
-    // Avatar and name:
-    avatar: 'https://graph.facebook.com/'+f_uid+'/picture?type=normal',
+    // ' and name:
+   // avatar: 'https://graph.facebook.com/'+f_uid+'/picture?type=normal',
     name: f_first,
             day:datechatstring,
 
@@ -5636,7 +5636,7 @@ if (obj.param == 'message'){
     // Random message type
     type: 'received',
     // Avatar and name:
-    avatar: 'https://graph.facebook.com/'+targetid+'/picture?type=normal',
+   // avatar: 'https://graph.facebook.com/'+targetid+'/picture?type=normal',
     name: targetname,
         day:datechatstring,
     label: 'Sent ' + messagetimetitle
@@ -5657,7 +5657,7 @@ if (!obj.photo_expiry){
     // Random message type
     type: 'received',
     // Avatar and name:
-    avatar: 'https://graph.facebook.com/'+targetid+'/picture?type=normal',
+  //  avatar: 'https://graph.facebook.com/'+targetid+'/picture?type=normal',
     name: f_first,
             day:datechatstring,
 
@@ -5720,7 +5720,7 @@ else{
     // Random message type
     type: 'received',
     // Avatar and name:
-    avatar: 'https://graph.facebook.com/'+targetid+'/picture?type=normal',
+   // avatar: 'https://graph.facebook.com/'+targetid+'/picture?type=normal',
     name: f_first,
             day:datechatstring,
 
@@ -5967,7 +5967,7 @@ if (obj.param == 'message'){
     // Random message type
     type: 'sent',
     // Avatar and name:
-    avatar: 'https://graph.facebook.com/'+f_uid+'/picture?type=normal',
+   // avatar: 'https://graph.facebook.com/'+f_uid+'/picture?type=normal',
     name: f_first,
         day:datechatstring,
     label: 'Sent ' + messagetimetitle
@@ -5984,7 +5984,7 @@ if (obj.param == 'image'){
     // Random message type
     type: 'sent',
     // Avatar and name:
-    avatar: 'https://graph.facebook.com/'+f_uid+'/picture?type=normal',
+ //   avatar: 'https://graph.facebook.com/'+f_uid+'/picture?type=normal',
     name: f_first,
             day:datechatstring,
 
@@ -6007,7 +6007,7 @@ if (obj.param == 'message'){
     // Random message type
     type: 'received',
     // Avatar and name:
-    avatar: 'https://graph.facebook.com/'+targetid+'/picture?type=normal',
+   // avatar: 'https://graph.facebook.com/'+targetid+'/picture?type=normal',
     name: targetname,
         day:datechatstring,
     label: 'Sent ' + messagetimetitle
@@ -6021,7 +6021,7 @@ if (obj.param == 'image'){
     // Random message type
     type: 'received',
     // Avatar and name:
-    avatar: 'https://graph.facebook.com/'+f_uid+'/picture?type=normal',
+  //  avatar: 'https://graph.facebook.com/'+f_uid+'/picture?type=normal',
     name: f_first,
             day:datechatstring,
 
@@ -7826,7 +7826,7 @@ firebase.database().ref("chats/" + first_number+ '/' + second_number).push({
     // Random message type
     type: 'sent',
     // Avatar and name:
-    avatar: 'https://graph.facebook.com/'+f_uid+'/picture?type=normal',
+   // avatar: 'https://graph.facebook.com/'+f_uid+'/picture?type=normal',
     name: f_first,
         day:datechatstring,
     label: 'Sent ' + messagetimetitle
@@ -8994,7 +8994,7 @@ var newValue = firebase.database().ref().push().key;
     // Random message type
     type: 'sent',
     // Avatar and name:
-    avatar: 'https://graph.facebook.com/'+f_uid+'/picture?type=normal',
+  //  avatar: 'https://graph.facebook.com/'+f_uid+'/picture?type=normal',
     name: f_first,
             day:datechatstring,
 
@@ -9317,7 +9317,7 @@ var t_unix = Math.round(+new Date()/1000);
     // Random message type
     type: 'sent',
     // Avatar and name:
-    avatar: 'https://graph.facebook.com/'+f_uid+'/picture?type=normal',
+   // avatar: 'https://graph.facebook.com/'+f_uid+'/picture?type=normal',
     name: f_first
     // Day
    // day: !conversationStarted ? 'Today' : false,
