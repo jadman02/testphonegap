@@ -1187,18 +1187,18 @@ recent_all = [];
     '<div class="no-results-div" style="background-color:white;z-index:30000000;text-align:center;margin:0 auto;width:300px;position:absolute;top:44px;left:50%;margin-left:-150px;margin-top:54px;">'+
 '<div class="topdiv">'+
      // '<h3>Get Quacking!</h3>'+
-				'    <div class="content-block-title" style="width:100%;text-align:center;margin-top:15px;margin-left:0px;">Get Quacking</div>'+
+				'    <div class="content-block-title" style="width:100%;text-align:center;margin-top:15px;margin-left:0px;">Get Quacking, It\'s Easy</div>'+
 
        '<div class="row" style="padding-top:10px;padding-bottom:10px;">'+
     '<div class="col-30" style="padding-top:5px;"><img src="media/datefaceonly.png" style="width:80px;margin:0 auto;"></div>'+
    // '<div class="col-70" style="padding-top:5px;">Press <span style="font-family: \'Pacifico\', cursive;font-size:20px;">date</span> if you want to find something more serious like a relationship.</div>'+
-		    '<div class="col-70" style="padding-top:5px;">Press <span style="font-family: \'Pacifico\', cursive;font-size:24px;">date</span> to find love</div>'+
+		    '<div class="col-70" style="padding-top:5px;">Press <span style="font-family: \'Pacifico\', cursive;font-size:26px;">Date</span> to find love (or not)</div>'+
 
 '</div>'+
               '<div class="row" style="padding-top:10px;padding-bottom:10px;margin-bottom:10px;">'+
     '<div class="col-30" style="padding-top:5px;"><img src="media/duckfaceonly.png" style="width:80px;margin:0 auto;"></div>'+
 //    '<div class="col-70" style="padding-top:5px;">Press <span style="font-family: \'Pacifico\', cursive;font-size:20px;">duck</span> if you want to get down to...ahem...business (replace the D with another letter). </div>'+
-		    '<div class="col-70" style="padding-top:5px;">Press <span style="font-family: \'Pacifico\', cursive;font-size:24px;">date</span> to find fun (replace the D with another letter)</div>'+
+		    '<div class="col-70" style="padding-top:5px;">Press <span style="font-family: \'Pacifico\', cursive;font-size:26px;">date</span> to find fun (replace the D with another letter)</div>'+
 
 		'</div>'+
 	 '</div>'+   
