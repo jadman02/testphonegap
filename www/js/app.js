@@ -6778,7 +6778,7 @@ $( ".camerabadge" ).text(new_all[myPhotoBrowser.swiper.activeIndex].photocount);
 }
 
 function checkMatch(targetid){
-
+alert(targetid);
 var indivNotif = firebase.database().ref('notifications/' + f_uid + '/' + targetid);
 indivNotif.once('value', function(snapshot) {
 
@@ -7187,13 +7187,8 @@ $( ".photo-browser-caption" ).append(targetdescription);
 
 myPhotoBrowser.open();
 
-	
-	for (v = 0; v < new_all.length; v++) { 
-	
-targetid = new_all[v].id;
+targetid = new_all[myPhotoBrowser.activeIndex].id;
 
-	
-	
 var mySwiperVertical = myApp.swiper('.swiper-vertical', {
   direction: 'vertical',
   zoom:'true',
@@ -7247,7 +7242,7 @@ setTimeout(function(){ backtoProfile();viewphotos = false; }, 100);
 if (viewscroll){
 setTimeout(function(){ scrolltoTop();viewscroll = false; }, 100);
 }
-checkMatch(targetid);
+
 	
 },
 
@@ -7268,7 +7263,6 @@ checkMatch(targetid);
 }
 });
 
-}
 
 //var windowwidth = $( ".photo-browser-swiper-container" ).width();
 
@@ -7281,7 +7275,7 @@ $( ".photo-browser-caption" ).empty();
 
 myPhotoBrowser.swiper.slideTo(to_open,100);
 
-
+checkMatch(targetid);
 
 
 
