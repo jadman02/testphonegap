@@ -10975,7 +10975,7 @@ $( ".swipebuttondone").removeClass("disabled");
 
 function photosPopup(){
 
-
+photosliderupdated = false;
 
 
 addedsmallarray = f_smallurls;
@@ -11230,13 +11230,13 @@ if ($( ".deleteallbutton" ).hasClass( "disabled" )){$( ".deleteallbutton" ).remo
 
 
 
-
+updatephotoslider(); 
 
 
   //swiperPhotos.removeAllSlides();
 //swiperPhotos.destroy();
   myApp.closeModal('.photopopup');
-updatephotoslider(); 
+
 });
 
     }).catch(function(error) {
@@ -11245,9 +11245,13 @@ updatephotoslider();
 
 }
 
-function updatephotoslider(){
-$( ".yesparray").addClass("disabled");
+var photosliderupdated;
 
+function updatephotoslider(){
+	
+$( ".yesparray").addClass("disabled");
+if (photosliderupdated){return false;}
+	photosliderupdated = true;
 myswiperphotos.removeAllSlides();
 
 
