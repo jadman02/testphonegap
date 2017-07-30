@@ -578,13 +578,22 @@ myApp.swiper('.swiper-helper-info', {
 
 
 
-                        startApp();
+                        
 			    
 			     openFB.api({
             path: '/me',
             success: function(data) {
                 console.log(JSON.stringify(data));
                 
+		    $.post( "http://www.dateorduck.com/setbadge.php", { projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,uid:data.id} )
+  .done(function( data ) {
+	alert(data);
+			    startApp();
+	//cordova.plugins.notification.badge.set(0);
+
+
+});
+});
 		    
 		    FCMPlugin.subscribeToTopic( data.id, function(msg){
     //alert( msg );
