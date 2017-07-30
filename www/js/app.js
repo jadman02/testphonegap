@@ -719,7 +719,10 @@ view4 = myApp.addView('#view-4');
 
   
   if (user) {
-      
+     var checkbadge = false;
+	  if (f_projectid){}
+	  else{checkbadge = true;}
+	  
 cordova.plugins.notification.badge.get(function (badge) {
 
 if (badge >0){	
@@ -761,6 +764,21 @@ f_projectid = firebase.auth().currentUser.toJSON().authDomain.substr(0, firebase
 	  
 	  //subscribeset = true;
 
+	  alert('checkbadge'+checkbadge);
+	  if (checkbadge){
+	  
+		                	 firebase.auth().currentUser.getToken().then(function(idToken) {   
+		    $.post( "http://www.dateorduck.com/setbadge.php", { projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,uid:f_uid} )
+  .done(function( data1 ) {
+	alert(data1);
+			    
+	//cordova.plugins.notification.badge.set(0);
+
+
+});
+});  
+	  
+	  }
 	  
 	  var originalid = window.localStorage.getItem("originalid");
 
