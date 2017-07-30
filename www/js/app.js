@@ -773,8 +773,8 @@ f_projectid = firebase.auth().currentUser.toJSON().authDomain.substr(0, firebase
 	
 		var result1 = JSON.parse(data1); 	  
 			    alert(JSON.stringify(result1));
-			    alert(result1.notificationcount);
-	//cordova.plugins.notification.badge.set(0);
+			    alert(result1[0].notificationcount);
+	cordova.plugins.notification.badge.set(result1[0].notificationcount);
 
 
 });
