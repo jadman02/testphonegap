@@ -7188,9 +7188,9 @@ $( ".photo-browser-caption" ).append(targetdescription);
 myPhotoBrowser.open();
 
 	
-	for (i = 0; i < new_all.length; i++) { 
+	for (v = 0; v < new_all.length; v++) { 
 	
-targetid = new_all[i].id;
+targetid = new_all[v].id;
 
 	
 	
