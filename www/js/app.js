@@ -10585,7 +10585,11 @@ desertRef.delete().then(function() {
 
 }
 
-logout();
+FCMPlugin.unsubscribeFromTopic(f_uid);
+		cordova.plugins.notification.badge.set(0);
+	var loginmethod = window.localStorage.getItem("loginmethod");
+    if (loginmethod == '1'){logoutPlugin();}
+    else{logoutOpen();}
 
 });
   
