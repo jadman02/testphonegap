@@ -831,6 +831,10 @@ firebase.database().ref('users/' + f_uid).update({
 
 
 
+
+
+
+
 function clearBadge(){
 
 	 	      firebase.auth().currentUser.getToken().then(function(idToken) { 
