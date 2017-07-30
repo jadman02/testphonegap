@@ -7243,6 +7243,7 @@ if (viewscroll){
 setTimeout(function(){ scrolltoTop();viewscroll = false; }, 100);
 }
 checkMatch(targetid);
+	alert('checked');
 },
 
 
