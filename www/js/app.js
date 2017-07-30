@@ -6778,7 +6778,7 @@ $( ".camerabadge" ).text(new_all[myPhotoBrowser.swiper.activeIndex].photocount);
 }
 
 function checkMatch(targetid){
-
+alert(targetid);
 var indivNotif = firebase.database().ref('notifications/' + f_uid + '/' + targetid);
 indivNotif.once('value', function(snapshot) {
 
@@ -7243,7 +7243,7 @@ if (viewscroll){
 setTimeout(function(){ scrolltoTop();viewscroll = false; }, 100);
 }
 checkMatch(targetid);
-	alert('checked');
+	
 },
 
 
