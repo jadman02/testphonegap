@@ -1234,7 +1234,7 @@ recent_all = [];
 	 '</div>'+   
 
 	
-		  '<div class="list-block-label">Only people that want the same thing will be able to find you. Until then, your profile is offline and not visible.</div>'+
+		  '<div class="list-block-label" style="color:#ccc;margin-bottom:10px;">Choose one, or both. Your profile is hidden until you decide.</div>'+
 
 		
 '<div class="swiper-container swiper-helper-info" style="z-index:99999999999999;background-color:#ccc;color:#6d6d72;margin-left:-10px;margin-right:-10px;padding-top:10px;">'+
