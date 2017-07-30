@@ -1233,6 +1233,9 @@ recent_all = [];
 		'</div>'+
 	 '</div>'+   
 
+	
+		  '<div class="list-block-label">Only people that want the same thing will be able to find you. Until then, your profile is offline and not visible.</div>'+
+
 		
 '<div class="swiper-container swiper-helper-info" style="z-index:99999999999999;background-color:#ccc;color:#6d6d72;margin-left:-10px;margin-right:-10px;padding-top:10px;">'+
 '    <div class="content-block-title" style="width:100%;text-align:center;margin-top:15px;margin-left:0px;">How this App Works</div>'+
