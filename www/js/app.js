@@ -11246,7 +11246,7 @@ updatephotoslider();
 }
 
 function updatephotoslider(){
-
+$( ".yesparray").addClass("disabled");
 
 myswiperphotos.removeAllSlides();
 
