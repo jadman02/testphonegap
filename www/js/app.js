@@ -1198,7 +1198,7 @@ recent_all = [];
               '<div class="row" style="padding-top:10px;padding-bottom:10px;margin-bottom:10px;">'+
     '<div class="col-30" style="padding-top:5px;"><img src="media/duckfaceonly.png" style="width:80px;margin:0 auto;"></div>'+
 //    '<div class="col-70" style="padding-top:5px;">Press <span style="font-family: \'Pacifico\', cursive;font-size:20px;">duck</span> if you want to get down to...ahem...business (replace the D with another letter). </div>'+
-		    '<div class="col-70" style="padding-top:5px;">Press <span style="font-family: \'Pacifico\', cursive;font-size:26px;">date</span> to find fun (replace the D with another letter)</div>'+
+		    '<div class="col-70" style="padding-top:5px;">Press <span style="font-family: \'Pacifico\', cursive;font-size:26px;">Duck</span> to find fun (replace the D with another letter)</div>'+
 
 		'</div>'+
 	 '</div>'+   
