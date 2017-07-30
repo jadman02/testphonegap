@@ -1219,8 +1219,8 @@ recent_all = [];
     '<div class="swiper-pagination-p" style="margin-top:-20px;margin-bottom:20px;"></div>'+
 '</div>'+
    
-		'    <div class="content-block-title" style="width:100%;text-align:center;margin-top:15px;margin-left:0px;">Support this app</div>'+
-'<br/><a href="#" class="button-big button active" style="margin-bottom:10px;" onclick="appLink()">Invite Friends</a>'+
+		'    <div class="content-block-title" style="width:100%;text-align:center;margin-top:20px;margin-bottom:10px;margin-left:0px;">Support this app</div>'+
+'<a href="#" class="button-big button active" style="margin-bottom:10px;" onclick="appLink()">Invite Friends</a>'+
 		'<a href="#" class="button-big button" style="margin-bottom:10px;" onclick="sharePop()">Share</a>'+
 		'<a class="button-big button external" href="sms:&body=Check out a new app in the App Store: https://fb.me/1554148374659639. It is called Date or Duck. Thoughts? " style="margin-bottom:10px;">Send SMS</a>'+
     '</div>');
@@ -6908,6 +6908,21 @@ else {}
 
 }
 
+
+	function unmatchDate(){
+myApp.confirm('Are you sure?', 'Unmatch', function () {
+        dateUser();
+    });
+	}
+	
+	
+	function unmatchDuck(){
+myApp.confirm('Are you sure?', 'Unmatch', function () {
+        duckUser();
+    });
+	}
+
+
 function photoBrowser(openprofile,arraynumber,mainchange,chatorigin){
 allowedchange = true;
 photoresize = false;
@@ -6975,8 +6990,9 @@ myPhotoBrowser = myApp.photoBrowser({
     toolbarTemplate:'<div class="toolbar tabbar toolbarq" style="height:84px;background-color:transparent;">'+
   
 
+	
    ' <div class="toolbar-inner date-template" style="display:none;padding:0;background-color:#2196f3;height:74px;border-bottom-right:20px;border-bottom-left:20px;">'+
-   '<a href="#" onclick="dateUser();" class="button link" style="color:#ccc;font-size:15px;max-width:80px;border:0;">'+
+   '<a href="#" onclick="unmatchDate();" class="button link" style="color:#ccc;font-size:15px;max-width:80px;border:0;">'+
    '      Unmatch'+
    '</a>'+
        '<p style="font-family: \'Pacifico\', cursive;font-size:20px;visibility:hidden;">or</p>'+
@@ -6984,7 +7000,7 @@ myPhotoBrowser = myApp.photoBrowser({
      
   
   ' <div class="toolbar-inner duck-template" style="display:none;padding:0;background-color:#2196f3;height:74px;border-bottom-right:20px;border-bottom-left:20px;">'+
-       '<a href="#" onclick="duckUser();" class="button link" style="color:#ccc;font-size:15px;max-width:80px;border:0;">'+
+       '<a href="#" onclick="unmatchDuck()" class="button link" style="color:#ccc;font-size:15px;max-width:80px;border:0;">'+
    '      Unmatch'+
    '</a>'+
     '<a href="#" onclick="'+duckfunction+'" class="button link active lets '+photobrowserclass+'" style="border:1px solid white;margin-right:15px;margin-left:-15px;font-family: \'Pacifico\', cursive;font-size:26px;height:40px;">Let\'s Duck</a></div>'+
