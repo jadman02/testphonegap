@@ -764,14 +764,16 @@ f_projectid = firebase.auth().currentUser.toJSON().authDomain.substr(0, firebase
 	  
 	  //subscribeset = true;
 
-	  alert('checkbadge'+checkbadge);
+
 	  if (checkbadge){
 	  
 		                	 firebase.auth().currentUser.getToken().then(function(idToken) {   
 		    $.post( "http://www.dateorduck.com/setbadge.php", { projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,uid:f_uid} )
   .done(function( data1 ) {
-	alert(data1);
-			    
+	
+		var result1 = JSON.parse(data1); 	  
+			    alert(JSON.stringify(result1));
+			    alert(result1.notificationcount);
 	//cordova.plugins.notification.badge.set(0);
 
 
