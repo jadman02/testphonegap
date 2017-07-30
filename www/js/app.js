@@ -1192,13 +1192,13 @@ recent_all = [];
        '<div class="row" style="padding-top:10px;padding-bottom:10px;">'+
     '<div class="col-30" style="padding-top:5px;"><img src="media/datefaceonly.png" style="width:80px;margin:0 auto;"></div>'+
    // '<div class="col-70" style="padding-top:5px;">Press <span style="font-family: \'Pacifico\', cursive;font-size:20px;">date</span> if you want to find something more serious like a relationship.</div>'+
-		    '<div class="col-70" style="padding-top:5px;">Press <span style="font-family: \'Pacifico\', cursive;font-size:26px;">date</span> above to find love <br/>(or at least meet someone nice)</div>'+
+		    '<div class="col-70" style="padding-top:5px;">Press <span style="font-family: \'Pacifico\', cursive;font-size:26px;">date</span> to find love <br/>(or at least try)</div>'+
 
 '</div>'+
               '<div class="row" style="padding-top:10px;padding-bottom:10px;margin-bottom:10px;">'+
     '<div class="col-30" style="padding-top:5px;"><img src="media/duckfaceonly.png" style="width:80px;margin:0 auto;"></div>'+
 //    '<div class="col-70" style="padding-top:5px;">Press <span style="font-family: \'Pacifico\', cursive;font-size:20px;">duck</span> if you want to get down to...ahem...business (replace the D with another letter). </div>'+
-		    '<div class="col-70" style="padding-top:5px;">Press <span style="font-family: \'Pacifico\', cursive;font-size:26px;">Duck</span> to find fun <br/>(replace the D with another letter)</div>'+
+		    '<div class="col-70" style="padding-top:5px;">Press <span style="font-family: \'Pacifico\', cursive;font-size:26px;">duck</span> to find fun <br/>(replace the D with another letter)</div>'+
 
 		'</div>'+
 	 '</div>'+   
@@ -1220,7 +1220,7 @@ recent_all = [];
 '</div>'+
    
 		'    <div class="content-block-title" style="width:100%;text-align:center;margin-top:15px;margin-left:0px;">Support this app</div>'+
-'<a href="#" class="button-big button active" style="margin-bottom:10px;" onclick="appLink()">Invite Friends</a>'+
+'<br/><a href="#" class="button-big button active" style="margin-bottom:10px;" onclick="appLink()">Invite Friends</a>'+
 		'<a href="#" class="button-big button" style="margin-bottom:10px;" onclick="sharePop()">Share</a>'+
 		'<a class="button-big button external" href="sms:&body=Check out a new app in the App Store: https://fb.me/1554148374659639. It is called Date or Duck. Thoughts? " style="margin-bottom:10px;">Send SMS</a>'+
     '</div>');
