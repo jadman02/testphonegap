@@ -1242,6 +1242,7 @@ recent_all = [];
 		' <div class="swiper-wrapper">'+
      '   <div class="swiper-slide" style="height:'+swiperheight +'px;"><div class="squareheight" style="height:153px;top:50%;margin-top:-85px;position:absolute;width:300px;left:50%;margin-left:-150px;"><i class="twa twa-4x twa-coffee" style="margin-top:5px;"></i><h2>Find your next<br/> coffee date...</h2></div></div>'+
      '   <div class="swiper-slide" style="height:'+swiperheight +'px;"><div class="squareheight" style="height:153px;top:50%;margin-top:-85px;position:absolute;width:300px;left:50%;margin-left:-150px"><i class="twa twa-4x twa-wave" style="margin-top:5px;"></i><h2>Or invite someone over<br/> tonight...</h2></div></div>'+
+		               '   <div class="swiper-slide" style="height:'+swiperheight +'px;"><div class="squareheight" style="height:153px;top:50%;margin-top:-85px;position:absolute;width:300px;left:50%;margin-left:-150px"><i class="twa twa-4x twa-heart-eyes" style="margin-top:5px;"></i><h2>When you like someone, <br/>they can see</h2></div></div>'+
 
 		'   <div class="swiper-slide" style="height:'+swiperheight +'px;"><div class="squareheight" style="height:153px;top:50%;margin-top:-85px;position:absolute;width:300px;left:50%;margin-left:-150px"><i class="twa twa-4x twa-calendar" style="margin-top:5px;"></i><h2>Once you both agree on</br> a time to meet...</h2></div></div>'+
 
@@ -1249,8 +1250,7 @@ recent_all = [];
 
 		'   <div class="swiper-slide" style="height:'+swiperheight +'px;"><div class="squareheight" style="height:153px;top:50%;margin-top:-85px;position:absolute;width:300px;left:50%;margin-left:-150px"><i class="twa twa-4x twa-bomb" style="margin-top:5px;"></i><h2>You can send photos that delete after 24 hours...</h2></div></div>'+
 
-		               '   <div class="swiper-slide" style="height:'+swiperheight +'px;"><div class="squareheight" style="height:153px;top:50%;margin-top:-85px;position:absolute;width:300px;left:50%;margin-left:-150px"><i class="twa twa-4x twa-watch" style="margin-top:5px;"></i><h2>You share your availability<br/> and schedule dates</h2></div></div>'+
-		               '   <div class="swiper-slide" style="height:'+swiperheight +'px;"><div class="squareheight" style="height:153px;top:50%;margin-top:-85px;position:absolute;width:300px;left:50%;margin-left:-150px"><i class="twa twa-4x twa-heart-eyes" style="margin-top:5px;"></i><h2>When you like someone, <br/>they can see you\'re interested</h2></div></div>'+
+		               '   <div class="swiper-slide" style="height:'+swiperheight +'px;"><div class="squareheight" style="height:153px;top:50%;margin-top:-85px;position:absolute;width:300px;left:50%;margin-left:-150px"><i class="twa twa-4x twa-watch" style="margin-top:5px;"></i><h2>You can share availability<br/> to easily schedule dates</h2></div></div>'+
 
    ' </div>'+
 
