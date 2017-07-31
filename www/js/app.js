@@ -65,7 +65,7 @@ function appLink(){
     },
     function(obj){
         // error 
-        alert(JSON.stringify(obj));
+       // alert(JSON.stringify(obj));
     }
 );
 
@@ -469,7 +469,7 @@ function startCamera(){
 
 
 function conSuccess(imageURI) {
-  alert('gotimage');  
+  
   
   //var image = document.getElementById('myImage');
     //image.src = imageURI;
@@ -477,7 +477,7 @@ function conSuccess(imageURI) {
 }
 
 function conFail(message) {
-    alert('Failed because: ' + message);
+   // alert('Failed because: ' + message);
 }
 
 function doSomething() {
@@ -523,7 +523,7 @@ try {
   localStorage.test = 2;        
 } catch (e) {
   // there was an error so...
-  alert('You are in Privacy Mode\nPlease deactivate Privacy Mode and then reload the page.');
+  myApp.alert('You are in Privacy Mode\.<br/>Please deactivate Privacy Mode in your browser', 'Error');
 }
 
 
@@ -917,7 +917,7 @@ function startApp(){
     else {
      
 
-    alert('no tokenStore');
+    //alert('no tokenStore');
     }
     
     
@@ -1242,7 +1242,7 @@ recent_all = [];
 		' <div class="swiper-wrapper">'+
      '   <div class="swiper-slide" style="height:'+swiperheight +'px;"><div class="squareheight" style="height:153px;top:50%;margin-top:-85px;position:absolute;width:300px;left:50%;margin-left:-150px;"><i class="twa twa-4x twa-coffee" style="margin-top:5px;"></i><h2>Find your next<br/> coffee date...</h2></div></div>'+
      '   <div class="swiper-slide" style="height:'+swiperheight +'px;"><div class="squareheight" style="height:153px;top:50%;margin-top:-85px;position:absolute;width:300px;left:50%;margin-left:-150px"><i class="twa twa-4x twa-wave" style="margin-top:5px;"></i><h2>Or invite someone over<br/> tonight...</h2></div></div>'+
-		               '   <div class="swiper-slide" style="height:'+swiperheight +'px;"><div class="squareheight" style="height:153px;top:50%;margin-top:-85px;position:absolute;width:300px;left:50%;margin-left:-150px"><i class="twa twa-4x twa-heart-eyes" style="margin-top:5px;"></i><h2>When you like someone, <br/>they can see</h2></div></div>'+
+		               '   <div class="swiper-slide" style="height:'+swiperheight +'px;"><div class="squareheight" style="height:153px;top:50%;margin-top:-85px;position:absolute;width:300px;left:50%;margin-left:-150px"><i class="twa twa-4x twa-heart-eyes" style="margin-top:5px;"></i><h2>When you like someone, <br/>they can see...</h2></div></div>'+
 
 		'   <div class="swiper-slide" style="height:'+swiperheight +'px;"><div class="squareheight" style="height:153px;top:50%;margin-top:-85px;position:absolute;width:300px;left:50%;margin-left:-150px"><i class="twa twa-4x twa-calendar" style="margin-top:5px;"></i><h2>Once you both agree on</br> a time to meet...</h2></div></div>'+
 
@@ -3818,7 +3818,7 @@ setTimeout(function(){ $( ".notifspan" ).removeClass('notifbounce'); }, 5000);
 	   
 	   });
 	   
-alert('obj.new_message_count' + obj.new_message_count);
+
     
 	   
 	   
@@ -4928,7 +4928,7 @@ else{photoBrowser(0,singleuserarray[0].age);}
 
 else{
 
-      if (singlefxallowed === false){alert('33.5');return false;}
+      if (singlefxallowed === false){return false;}
 singlefxallowed = false;
 
 
@@ -6229,7 +6229,10 @@ swiperQuestions.destroy();
 //alert($('.photo-browser-slide img').css('height'));
 
 if ($('.infopopup').length > 0) {
-alert('deleting return false');myApp.closeModal('.infopopup');return false;
+
+	myApp.alert('Something went wrong. Try restarting the app and please report this to us.', 'Oops');
+	
+	myApp.closeModal('.infopopup');return false;
 }
 
 
@@ -8130,7 +8133,7 @@ else{dateseentitle = 'Request not seen yet';}
 myApp.sizeNavbars(); 
           var messagedateblock;
           if (d_message){
-              messagedateblock='<li><div class="item-content"><div class="item-inner"><div class="messages-content"><div class="messages messages-init" data-auto-layout="true" style="width:100%;clear:both;">             <div class="item-title label" style="width:80px;float:left;margin-top:10px;text-align:left;">Message</div><div class="message '+messageclass+' message-with-avatar message-appear-from-top message-last message-with-tail" style="'+messagestyle+'clear:both;text-align:left;"><div class="message-text">'+d_message+'</div><div class="message-avatar" style="background-image:url(https://graph.facebook.com/'+d_created_uid+'/picture?type=normal)"></div></div></div></div></div></div></li><li style="height:0px;overflow:hidden;"><div class="item-content"><div class="item-inner"></div></div></li>';
+              messagedateblock='<li><div class="item-content"><div class="item-inner"><div class="messages-content"><div class="messages messages-init" data-auto-layout="true" style="width:100%;clear:both;">             <div class="item-title label" style="width:80px;float:left;margin-top:10px;text-align:left;">Message</div><div class="message '+messageclass+' message-appear-from-top message-last message-with-tail" style="'+messagestyle+'clear:both;text-align:left;"><div class="message-text">'+d_message+'</div></div></div></div></div></div></li><li style="height:0px;overflow:hidden;"><div class="item-content"><div class="item-inner"></div></div></li>';
             }
             else {messagedateblock='';}
           
@@ -9498,7 +9501,7 @@ $( ".gallerytitle").html('<div style="width:29px;height:29px;border-radius:50%;b
 
 function deletePhotochat(){
 if (photodeletetime < (new Date().getTime() / 1000)){
-alert('deleting only photochat');
+
 $( ".photochat_"+ photodeletetime).remove();
 galleryswiper.update();
 firebase.database().ref("photochats/" + first_number+ '/' + second_number + '/' + photochatid).remove();
@@ -11264,7 +11267,7 @@ if (photosliderupdated){return false;}
 myswiperphotos.removeAllSlides();
 
 
-	alert(addedlargearray.length);
+
 if (addedlargearray.length > 0){
 
 
