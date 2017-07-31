@@ -7040,7 +7040,8 @@ myPhotoBrowser = myApp.photoBrowser({
        '<a href="#" onclick="unmatchDuck()" class="button link" style="color:#ccc;font-size:15px;max-width:80px;border:0;">'+
    '      Unmatch'+
    '</a>'+
-    '<a href="#" onclick="'+duckfunction+'" class="button link active lets '+photobrowserclass+'" style="border:1px solid white;margin-right:15px;margin-left:-15px;font-family: \'Pacifico\', cursive;font-size:26px;height:40px;">Let\'s Duck</a></div>'+
+	   '<a href="#" onclick="'+duckfunction+'" class="button link active lets '+photobrowserclass+'" style="border:1px solid white;margin-right:15px;margin-left:-15px;font-family: \'Pacifico\', cursive;font-size:26px;height:40px;">Let\'s Duck <div style="font-family: -apple-system, SF UI Text, Helvetica Neue, Helvetica, Arial, sans-serif;position:absolute;right:0px;top:-8px;" class="arrowdivbrowser"><i class="pe-7s-angle-right pe-2x"></i></div></a></div>'+
+
  
    
    ' <div class="toolbar-inner toolbardecide" style="padding-bottom:10px;padding-left:0px;padding-right:0px;">'+
