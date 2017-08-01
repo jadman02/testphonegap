@@ -416,7 +416,7 @@ else{$( ".homedate" ).addClass("active");
 function updateWant(){
 
 	if (homewant == 'offline'){
-	if (random_all.length > 0){
+	if (randomswiper){
 
 randomswiper.removeAllSlides();
 nearbyswiper.removeAllSlides();
@@ -424,6 +424,7 @@ recentswiper.removeAllSlides();
 randomswiper.destroy();
 nearbyswiper.destroy();
 recentswiper.destroy();
+		alert('randomswiper exists');
 } 
 		new_all = [];
 random_all = [];
