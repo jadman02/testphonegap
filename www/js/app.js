@@ -1174,7 +1174,7 @@ if (obj.new_message_count >0 && obj.to_uid == f_uid && obj.received =='N'){$( ".
 else{$(  ".arrowdivhome_" + id ).empty();}
 
 }
-	
+	alert('mainloaded');
 	$( ".arrowdivhome_" + id ).show();
 });
 
@@ -10700,6 +10700,7 @@ if (notifloaded){    $(  ".arrowdivhome_" + obj.from_uid ).empty();$( ".indivnot
     notificationscount = notificationscount + addnumber;
 if (notifloaded){
 if (obj.new_message_count > 0){
+	alert('notmain');
 //alert('Not received, greater than 0 = ' +obj.new_message_count);
 $( ".arrowdivhome_" + obj.from_uid ).html('<span class="badge" style="background-color:rgb(255, 208, 0);color:black;margin-top:5px;margin-left:-5px;">'+obj.new_message_count+'</span>');
 $( ".indivnotifcount" ).remove();$( ".arrowdivbrowser" ).append('<span class="badge indivnotifcount" style="position:absolute;right:0px;background-color:rgb(255, 208, 0);color:black;">'+obj.new_message_count+'</span>');
