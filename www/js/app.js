@@ -7035,14 +7035,14 @@ myPhotoBrowser = myApp.photoBrowser({
    '      Unmatch'+
    '</a>'+
        '<p style="font-family: \'Pacifico\', cursive;font-size:20px;visibility:hidden;">or</p>'+
-   '<a href="#" onclick="'+datefunction+'" class="button link active lets '+photobrowserclass+'" style="border:1px solid white;margin-right:15px;font-family: \'Pacifico\', cursive;font-size:26px;height:40px;">Let\'s Date <div style="font-family: -apple-system, SF UI Text, Helvetica Neue, Helvetica, Arial, sans-serif;position:absolute;right:0px;top:-8px;" class="arrowdivbrowser"><i class="pe-7s-angle-right pe-2x"></i></div></a></div>'+
+   '<a href="#" onclick="'+datefunction+'" class="button link active lets '+photobrowserclass+'" style="border:1px solid white;margin-right:15px;font-family: \'Pacifico\', cursive;font-size:26px;height:40px;">Let\'s Date <div style="font-family: -apple-system, SF UI Text, Helvetica Neue, Helvetica, Arial, sans-serif;position:absolute;right:0px;top:-8px;" class="arrowdivbrowser"><i class="pe-7s-angle-right pe-2x" style="margin-left:5px;"></i></div></a></div>'+
      
   
   ' <div class="toolbar-inner duck-template" style="display:none;padding:0;background-color:#2196f3;height:74px;border-bottom-right:20px;border-bottom-left:20px;">'+
        '<a href="#" onclick="unmatchDuck()" class="button link" style="color:#ccc;font-size:15px;max-width:80px;border:0;margin-left:15px;">'+
    '      Unmatch'+
    '</a>'+
-	   '<a href="#" onclick="'+duckfunction+'" class="button link active lets '+photobrowserclass+'" style="border:1px solid white;margin-left:15px;margin-right:15px;font-family: \'Pacifico\', cursive;font-size:26px;height:40px;">Let\'s Duck <div style="font-family: -apple-system, SF UI Text, Helvetica Neue, Helvetica, Arial, sans-serif;position:absolute;right:0px;top:-8px;" class="arrowdivbrowser"><i class="pe-7s-angle-right pe-2x"></i></div></a></div>'+
+	   '<a href="#" onclick="'+duckfunction+'" class="button link active lets '+photobrowserclass+'" style="border:1px solid white;margin-left:15px;margin-right:15px;font-family: \'Pacifico\', cursive;font-size:26px;height:40px;">Let\'s Duck <div style="font-family: -apple-system, SF UI Text, Helvetica Neue, Helvetica, Arial, sans-serif;position:absolute;right:0px;top:-8px;" class="arrowdivbrowser"><i class="pe-7s-angle-right pe-2x" style="margin-left:5px;"></i></div></a></div>'+
 
  
    
