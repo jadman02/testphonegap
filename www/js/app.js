@@ -1405,7 +1405,7 @@ $.post( "http://www.dateorduck.com/locations.php", { want:homewant,projectid:f_p
 var result = JSON.parse(data); 
 
 
-alert(JSON.stringify(result));
+//alert(JSON.stringify(result));
 
 
 var slidewidth = $( document ).width() / 2.5;
