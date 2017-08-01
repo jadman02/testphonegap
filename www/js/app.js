@@ -1174,8 +1174,8 @@ if (obj.new_message_count >0 && obj.to_uid == f_uid && obj.received =='N'){$( ".
 else{$(  ".arrowdivhome_" + id ).empty();}
 
 }
-	alert('mainloaded');
-	$( ".arrowdivhome_" + id ).show();
+	
+	$( ".arrowdivhome_" + id ).slideDown();
 });
 
 }
