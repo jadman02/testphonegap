@@ -7031,7 +7031,7 @@ myPhotoBrowser = myApp.photoBrowser({
 
 	
    ' <div class="toolbar-inner date-template" style="display:none;padding:0;background-color:#2196f3;height:74px;border-bottom-right:20px;border-bottom-left:20px;">'+
-   '<a href="#" onclick="unmatchDate();" class="button link" style="color:#ccc;font-size:15px;max-width:80px;border:0;">'+
+   '<a href="#" onclick="unmatchDate();" class="button link" style="color:#ccc;font-size:15px;max-width:80px;border:0;margin-left:15px;">'+
    '      Unmatch'+
    '</a>'+
        '<p style="font-family: \'Pacifico\', cursive;font-size:20px;visibility:hidden;">or</p>'+
