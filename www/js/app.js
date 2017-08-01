@@ -1326,13 +1326,12 @@ firebase.auth().currentUser.getToken().then(function(idToken) {
 
 randomswiper = myApp.swiper('.swiper-random', {
     slidesPerView:2.5,
-    freeMode:true,
+    //freeMode:true,
     slidesOffsetAfter:12,
         preloadImages: false,
     lazyLoading: true,
     watchSlidesVisibility:true,
     watchSlidesProgress: true,
-freeModeSticky:true,
 	lazyLoadingInPrevNextAmount:5,
 lazyLoadingOnTransitionStart:true,
     onClick:function(swiper, event) {
@@ -1345,13 +1344,12 @@ new_all = random_all;
  
 nearbyswiper = myApp.swiper('.swiper-nearby', {
     slidesPerView:2.5,
-    freeMode:true,
+    //freeMode:true,
     slidesOffsetAfter:12,
         preloadImages: false,
     lazyLoading: true,
     watchSlidesVisibility:true,
     watchSlidesProgress: true,
-freeModeSticky:true,
 		lazyLoadingInPrevNextAmount:5,
 lazyLoadingOnTransitionStart:true,
     onClick:function(swiper, event) {
@@ -1368,13 +1366,13 @@ else{}
   
 recentswiper = myApp.swiper('.swiper-recent', {
   slidesPerView:2.5,
-    freeMode:true,
+    //freeMode:true,
     slidesOffsetAfter:12,
         preloadImages: false,
     lazyLoading: true,
     watchSlidesVisibility:true,
     watchSlidesProgress: true,
-freeModeSticky:true,
+
 		lazyLoadingInPrevNextAmount:5,
 lazyLoadingOnTransitionStart:true,
     onClick:function(swiper, event) {
