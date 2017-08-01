@@ -1161,19 +1161,20 @@ function mainLoaded(id,pid){
 $( ".iconpos_" + id ).show();
 $( ".default_" + pid).hide();
 
-//var indivNotif = firebase.database().ref('notifications/' + f_uid + '/' + id);
-//indivNotif.once('value', function(snapshot) {
+	
+	
+var indivNotif = firebase.database().ref('notifications/' + f_uid + '/' + id);
+indivNotif.once('value', function(snapshot) {
 
-//if (snapshot.val()){
-//var obj = snapshot.val();
-
-
-//if (obj.new_message_count >0 && obj.to_uid == f_uid && obj.received =='N'){$( ".arrowdivhome_" + id ).html('<span class="badge" style="background-color:rgb(255, 208, 0);color:black;margin-top:5px;margin-left:-5px;">'+obj.new_message_count+'</span>');}
-//else{$(  ".arrowdivhome_" + id ).empty();}
+if (snapshot.val()){
+var obj = snapshot.val();
 
 
-//}
-//});
+if (obj.new_message_count >0 && obj.to_uid == f_uid && obj.received =='N'){$( ".arrowdivhome_" + id ).html('<span class="badge" style="background-color:rgb(255, 208, 0);color:black;margin-top:5px;margin-left:-5px;">'+obj.new_message_count+'</span>');}
+else{$(  ".arrowdivhome_" + id ).empty();}
+
+}
+});
 
 }
 
@@ -10698,7 +10699,7 @@ if (notifloaded){    $(  ".arrowdivhome_" + obj.from_uid ).empty();$( ".indivnot
 if (notifloaded){
 if (obj.new_message_count > 0){
 //alert('Not received, greater than 0 = ' +obj.new_message_count);
-$(  ".arrowdivhome_" + obj.from_uid ).empty();$( ".arrowdivhome_" + obj.from_uid ).append('<span class="badge" style="background-color:rgb(255, 208, 0);color:black;margin-top:5px;margin-left:-5px;">'+obj.new_message_count+'</span>');
+$( ".arrowdivhome_" + obj.from_uid ).html('<span class="badge" style="background-color:rgb(255, 208, 0);color:black;margin-top:5px;margin-left:-5px;">'+obj.new_message_count+'</span>');
 $( ".indivnotifcount" ).remove();$( ".arrowdivbrowser" ).append('<span class="badge indivnotifcount" style="position:absolute;right:0px;background-color:rgb(255, 208, 0);color:black;">'+obj.new_message_count+'</span>');
 
 
