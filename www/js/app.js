@@ -436,7 +436,7 @@ recent_all = [];
 	
 firebase.database().ref('users/' + f_uid).update({
     homewant:homewant
-  }).then(function() {alert('updated');});
+  }).then(function() {});
 	
    //Will update firebase user homewant
    //Check if updateuser function is in go daddy file
