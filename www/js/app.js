@@ -415,17 +415,18 @@ else{$( ".homedate" ).addClass("active");
 
 function updateWant(){
 
-	if (homewant == 'offline'){
-	if (random_all.length > 0){
-
-randomswiper.removeAllSlides();
+	randomswiper.removeAllSlides();
 nearbyswiper.removeAllSlides();
 recentswiper.removeAllSlides();
-randomswiper.destroy();
-nearbyswiper.destroy();
-recentswiper.destroy();
-		alert('randomswiper exists');
-} 
+randomswiper.update();
+nearbyswiper.update();
+recentswiper.update();
+	
+	if (homewant == 'offline'){
+
+
+
+
 		new_all = [];
 random_all = [];
 nearby_all = [];
@@ -1184,7 +1185,66 @@ var random_all = [];
 var nearby_all = [];
 var recent_all = [];
 var nearbyshare = false, recentshare = false;
-var randomswiper, recentswiper, nearbyswiper;
+var randomswiper = myApp.swiper('.swiper-random', {
+    slidesPerView:2.5,
+    //freeMode:true,
+    slidesOffsetAfter:12,
+        preloadImages: false,
+    lazyLoading: true,
+    watchSlidesVisibility:true,
+    watchSlidesProgress: true,
+	lazyLoadingInPrevNextAmount:5,
+lazyLoadingOnTransitionStart:true,
+    onClick:function(swiper, event) {
+
+
+new_all = random_all;
+
+    photoBrowser(randomswiper.clickedIndex);}
+  });
+ 
+var nearbyswiper = myApp.swiper('.swiper-nearby', {
+    slidesPerView:2.5,
+    //freeMode:true,
+    slidesOffsetAfter:12,
+        preloadImages: false,
+    lazyLoading: true,
+    watchSlidesVisibility:true,
+    watchSlidesProgress: true,
+		lazyLoadingInPrevNextAmount:5,
+lazyLoadingOnTransitionStart:true,
+    onClick:function(swiper, event) {
+
+new_all = nearby_all;
+
+
+if (nearbyshare){
+photoBrowser(nearbyswiper.clickedIndex);
+}
+else{}
+    }
+  });
+  
+var recentswiper = myApp.swiper('.swiper-recent', {
+  slidesPerView:2.5,
+    //freeMode:true,
+    slidesOffsetAfter:12,
+        preloadImages: false,
+    lazyLoading: true,
+    watchSlidesVisibility:true,
+    watchSlidesProgress: true,
+
+		lazyLoadingInPrevNextAmount:5,
+lazyLoadingOnTransitionStart:true,
+    onClick:function(swiper, event) {
+new_all = recent_all;
+
+if (recentshare){
+photoBrowser(recentswiper.clickedIndex);
+}
+else{}
+}
+  });
 
 function getMatches(){
 
@@ -1326,66 +1386,6 @@ recent_all = [];
 firebase.auth().currentUser.getToken().then(function(idToken) {
 
 
-randomswiper = myApp.swiper('.swiper-random', {
-    slidesPerView:2.5,
-    //freeMode:true,
-    slidesOffsetAfter:12,
-        preloadImages: false,
-    lazyLoading: true,
-    watchSlidesVisibility:true,
-    watchSlidesProgress: true,
-	lazyLoadingInPrevNextAmount:5,
-lazyLoadingOnTransitionStart:true,
-    onClick:function(swiper, event) {
-
-
-new_all = random_all;
-
-    photoBrowser(randomswiper.clickedIndex);}
-  });
- 
-nearbyswiper = myApp.swiper('.swiper-nearby', {
-    slidesPerView:2.5,
-    //freeMode:true,
-    slidesOffsetAfter:12,
-        preloadImages: false,
-    lazyLoading: true,
-    watchSlidesVisibility:true,
-    watchSlidesProgress: true,
-		lazyLoadingInPrevNextAmount:5,
-lazyLoadingOnTransitionStart:true,
-    onClick:function(swiper, event) {
-
-new_all = nearby_all;
-
-
-if (nearbyshare){
-photoBrowser(nearbyswiper.clickedIndex);
-}
-else{}
-    }
-  });
-  
-recentswiper = myApp.swiper('.swiper-recent', {
-  slidesPerView:2.5,
-    //freeMode:true,
-    slidesOffsetAfter:12,
-        preloadImages: false,
-    lazyLoading: true,
-    watchSlidesVisibility:true,
-    watchSlidesProgress: true,
-
-		lazyLoadingInPrevNextAmount:5,
-lazyLoadingOnTransitionStart:true,
-    onClick:function(swiper, event) {
-new_all = recent_all;
-
-if (recentshare){
-photoBrowser(recentswiper.clickedIndex);
-}
-else{}
-}
-  });
  
 
 
@@ -2175,9 +2175,9 @@ if (random_all.length > 0){
 randomswiper.removeAllSlides();
 nearbyswiper.removeAllSlides();
 recentswiper.removeAllSlides();
-randomswiper.destroy();
-nearbyswiper.destroy();
-recentswiper.destroy();
+randomswiper.update();
+nearbyswiper.update();
+recentswiper.update();
 } 
 
 
