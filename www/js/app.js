@@ -416,7 +416,7 @@ else{$( ".homedate" ).addClass("active");
 function updateWant(){
 
 	if (homewant == 'offline'){
-	if (randomswiper){
+	if (random_all.length > 0){
 
 randomswiper.removeAllSlides();
 nearbyswiper.removeAllSlides();
