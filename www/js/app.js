@@ -1171,11 +1171,11 @@ var obj = snapshot.val();
 
 
 if (obj.new_message_count >0 && obj.to_uid == f_uid && obj.received =='N'){$( ".arrowdivhome_" + id ).html('<span class="badge" style="background-color:rgb(255, 208, 0);color:black;margin-top:5px;margin-left:-5px;">'+obj.new_message_count+'</span>');}
-//else{$(  ".arrowdivhome_" + id ).empty();}
+else{$(  ".arrowdivhome_" + id ).empty();}
 
 }
 	
-	$( ".arrowdivhome_" + id ).slideDown();
+	//$( ".arrowdivhome_" + id ).slideDown();
 });
 
 }
