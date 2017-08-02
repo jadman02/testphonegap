@@ -10687,7 +10687,7 @@ if (obj.to_uid == f_uid) {
 	
 	
     if (obj.received =='Y') {
-if (notifloaded){   alert('notmain'); $(  ".arrowdivhome_" + obj.from_uid ).empty();$( ".indivnotifcount" ).remove();}
+if (notifloaded){  $(  ".arrowdivhome_" + obj.from_uid ).empty();$( ".indivnotifcount" ).remove();}
     
     }
     
