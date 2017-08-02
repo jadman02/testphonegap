@@ -10684,10 +10684,10 @@ $.each(objs, function(i, obj) {
 
 if (obj.to_uid == f_uid) {
     
-	alert('notmain');
+	
 	
     if (obj.received =='Y') {
-if (notifloaded){    $(  ".arrowdivhome_" + obj.from_uid ).empty();$( ".indivnotifcount" ).remove();}
+if (notifloaded){   alert('notmain'); $(  ".arrowdivhome_" + obj.from_uid ).empty();$( ".indivnotifcount" ).remove();}
     
     }
     
