@@ -11517,7 +11517,17 @@ var sliderheight = $( document ).height();
 
 var popupHTML = 
     
-     '<div class="toolbar tabbar swipetoolbar" style="background-color:#ccc;z-index:3000000000 !important;position:absolute;bottom:0px;">'+
+  
+    
+    '<div class="popup prefpop">'+
+
+       
+    
+'<div class="views tabs toolbar-fixed">'+
+
+  '<div id="tab99" class="view-99 view tab active">'+
+
+   '<div class="toolbar tabbar swipetoolbar" style="background-color:#ccc;z-index:3000000000 !important;position:absolute;bottom:0px;">'+
 ' <div class="toolbar-inner" style="padding:0;">'+
 
        //   '   <a href="#" class="button tab-link tab-swipe pan0 active" onclick="swipePref(0)" style="border-radius:0;font-size:17px;border:0;text-align:center;"><i class="pe-7s-filter pe-lg" style="width:22px;margin:0 auto;"></i></a>'+
@@ -11530,16 +11540,6 @@ var popupHTML =
 
  '</div>'+
  '</div>'+
-    
-    '<div class="popup prefpop" style="z-index:11000">'+
-
-       
-    
-'<div class="views tabs toolbar-fixed">'+
-
-  '<div id="tab99" class="view-99 view tab active">'+
-
-
     
 '<div class="navbar" style="background-color:#2196f3;">'+
 
