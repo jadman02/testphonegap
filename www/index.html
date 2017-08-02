@@ -1048,9 +1048,6 @@ token:response.authResponse.accessToken
 }
 
 function logout(){
-	 $( ".prefpop" ).css("z-index","11000");
-
-	
 	myApp.confirm('Are you sure?', 'Logout', function () {
       
     FCMPlugin.unsubscribeFromTopic(f_uid);
