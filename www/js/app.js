@@ -1174,8 +1174,8 @@ if (obj.new_message_count >0 && obj.to_uid == f_uid && obj.received =='N'){$( ".
 else{$(  ".arrowdivhome_" + id ).empty();}
 
 }
-	
-	//$( ".arrowdivhome_" + id ).slideDown();
+	alert('mainloaded');
+	$( ".arrowdivhome_" + id ).show();
 });
 
 }
@@ -1671,28 +1671,28 @@ var randomid = Math.floor(Math.random() * (1000000000 - 0 + 1));
 
 var slidecontent;
 if (index1 > -1) {
-slidecontent = '<div class="age_'+subtract+' swiper-slide slide_'+graphid+'" style="text-align:center;padding-top:3px;padding-left:3px;"><span class="preloader default_'+randomid+'"></span><div style="width:'+slidewidth+'px;margin:0 auto;"><div style="position:absolute;right:-2px;top:0px;" class="arrowdivhome_'+graphid+'"></div><div class="distance_'+graphid+'" style="display:none;width:50px;background-color:#2196f3;color:white;z-index:999;padding:0.5px;position:absolute;left: 3px;z-index:1000;font-size:12px;">'+distancestring+'</div><img crossOrigin="Anonymous" id="photo_'+graphid+'" class="swiper-lazy pp photo_'+graphid+'" data-src="'+profilepicstringsmall+'" onload="$(this).fadeIn(700);mainLoaded(\''+graphid+'\',\''+randomid+'\');" style="display:none;'+imagestyle+'-webkit-filter:none;overflow:hidden;margin-top:0px;"/><div style="bottom:0px;right:0px;position:absolute;width:50px;overflow-x:hidden;height:50px;overflow-y:hidden;display:none;" class="icondiv iconpos_'+graphid+'"><img src="media/datefaceonly.png" style="width:100px;"></div>'+activecircle+'<p class="name_'+graphid+'" style="clear:both;font-weight:bold;margin-left:23px;margin-top:-30px;color:white;font-size:15px;text-align:left;"></p></div></div>';   
+slidecontent = '<div class="age_'+subtract+' swiper-slide slide_'+graphid+'" style="text-align:center;padding-top:3px;padding-left:3px;"><span class="preloader default_'+randomid+'"></span><div style="width:'+slidewidth+'px;margin:0 auto;"><div style="position:absolute;right:-2px;top:0px;display:none;" class="arrowdivhome_'+graphid+'"></div><div class="distance_'+graphid+'" style="display:none;width:50px;background-color:#2196f3;color:white;z-index:999;padding:0.5px;position:absolute;left: 3px;z-index:1000;font-size:12px;">'+distancestring+'</div><img crossOrigin="Anonymous" id="photo_'+graphid+'" class="swiper-lazy pp photo_'+graphid+'" data-src="'+profilepicstringsmall+'" onload="$(this).fadeIn(700);mainLoaded(\''+graphid+'\',\''+randomid+'\');" style="display:none;'+imagestyle+'-webkit-filter:none;overflow:hidden;margin-top:0px;"/><div style="bottom:0px;right:0px;position:absolute;width:50px;overflow-x:hidden;height:50px;overflow-y:hidden;display:none;" class="icondiv iconpos_'+graphid+'"><img src="media/datefaceonly.png" style="width:100px;"></div>'+activecircle+'<p class="name_'+graphid+'" style="clear:both;font-weight:bold;margin-left:23px;margin-top:-30px;color:white;font-size:15px;text-align:left;"></p></div></div>';   
 }
 
 else if (index2 > -1) {
-slidecontent = '<div class="age_'+subtract+' swiper-slide slide_'+graphid+'" style="text-align:center;padding-top:3px;padding-left:3px;"><span class="preloader default_'+randomid+'"></span><div style="width:'+slidewidth+'px;margin:0 auto;"><div style="position:absolute;right:2px;top:0px;" class="arrowdivhome_'+graphid+'"></div><div class="distance_'+graphid+'" style="display:none;width:50px;background-color:#2196f3;color:white;z-index:999;padding:0.5px;position:absolute;left: 3px;z-index:1000;font-size:12px;">'+distancestring+'</div><img crossOrigin="Anonymous" id="photo_'+graphid+'" onload="$(this).fadeIn(700);mainLoaded(\''+graphid+'\',\''+randomid+'\');" class="swiper-lazy pp photo_'+graphid+'" data-src="'+profilepicstringsmall+'" style="'+imagestyle+'-webkit-filter:none;display:none;overflow:hidden;margin-top:0px;"/><div style="bottom:0px;right:0px;position:absolute;width:50px;overflow-x:hidden;height:50px;overflow-y:hidden;display:none;" class="icondiv iconpos_'+graphid+'"><img src="media/duckfaceonly.png" style="width:100px;"></div>'+activecircle+'<p class="name_'+graphid+'" style="clear:both;font-weight:bold;margin-left:23px;margin-top:-30px;color:white;font-size:15px;text-align:left;"></p></div></div>';    
+slidecontent = '<div class="age_'+subtract+' swiper-slide slide_'+graphid+'" style="text-align:center;padding-top:3px;padding-left:3px;"><span class="preloader default_'+randomid+'"></span><div style="width:'+slidewidth+'px;margin:0 auto;"><div style="position:absolute;right:2px;top:0px;display:none;" class="arrowdivhome_'+graphid+'"></div><div class="distance_'+graphid+'" style="display:none;width:50px;background-color:#2196f3;color:white;z-index:999;padding:0.5px;position:absolute;left: 3px;z-index:1000;font-size:12px;">'+distancestring+'</div><img crossOrigin="Anonymous" id="photo_'+graphid+'" onload="$(this).fadeIn(700);mainLoaded(\''+graphid+'\',\''+randomid+'\');" class="swiper-lazy pp photo_'+graphid+'" data-src="'+profilepicstringsmall+'" style="'+imagestyle+'-webkit-filter:none;display:none;overflow:hidden;margin-top:0px;"/><div style="bottom:0px;right:0px;position:absolute;width:50px;overflow-x:hidden;height:50px;overflow-y:hidden;display:none;" class="icondiv iconpos_'+graphid+'"><img src="media/duckfaceonly.png" style="width:100px;"></div>'+activecircle+'<p class="name_'+graphid+'" style="clear:both;font-weight:bold;margin-left:23px;margin-top:-30px;color:white;font-size:15px;text-align:left;"></p></div></div>';    
 
 } 
 
 
 
 else if (index3 > -1) {
-slidecontent = '<div class="age_'+subtract+' swiper-slide slide_'+graphid+'" style="text-align:center;padding-top:3px;padding-left:3px;"><span class="preloader default_'+randomid+'"></span><div style="width:'+slidewidth+'px;margin:0 auto;"><div style="position:absolute;right:2px;top:0px;" class="arrowdivhome_'+graphid+'"></div><div class="distance_'+graphid+'" style="display:none;width:50px;background-color:#ccc;color:white;z-index:999;padding:0.5px;position:absolute;left: 3px;z-index:1000;font-size:12px;">'+distancestring+'</div><img crossOrigin="Anonymous" id="photo_'+graphid+'" onload="$(this).fadeIn(700);mainLoaded(\''+graphid+'\',\''+randomid+'\');" class="swiper-lazy pp photo_'+graphid+'" data-src="'+profilepicstringsmall+'" style="'+imagestyle+'-webkit-filter:grayscale(80%);overflow:hidden;display:none;margin-top:0px;"/><div style="bottom:0px;right:0px;position:absolute;width:50px;overflow-x:hidden;height:50px;overflow-y:hidden;-webkit-filter:grayscale(1%);display:none;" class="icondiv iconpos_'+graphid+'"><img src="media/duckfaceonly.png" style="width:100px;"></div>'+activecircle+'<p class="name_'+graphid+'" style="-webkit-filter:grayscale(80%);clear:both;font-weight:bold;margin-left:23px;margin-top:-30px;color:white;font-size:15px;text-align:left;"></p></div></div>';           
+slidecontent = '<div class="age_'+subtract+' swiper-slide slide_'+graphid+'" style="text-align:center;padding-top:3px;padding-left:3px;"><span class="preloader default_'+randomid+'"></span><div style="width:'+slidewidth+'px;margin:0 auto;"><div style="position:absolute;right:2px;top:0px;display:none;" class="arrowdivhome_'+graphid+'"></div><div class="distance_'+graphid+'" style="display:none;width:50px;background-color:#ccc;color:white;z-index:999;padding:0.5px;position:absolute;left: 3px;z-index:1000;font-size:12px;">'+distancestring+'</div><img crossOrigin="Anonymous" id="photo_'+graphid+'" onload="$(this).fadeIn(700);mainLoaded(\''+graphid+'\',\''+randomid+'\');" class="swiper-lazy pp photo_'+graphid+'" data-src="'+profilepicstringsmall+'" style="'+imagestyle+'-webkit-filter:grayscale(80%);overflow:hidden;display:none;margin-top:0px;"/><div style="bottom:0px;right:0px;position:absolute;width:50px;overflow-x:hidden;height:50px;overflow-y:hidden;-webkit-filter:grayscale(1%);display:none;" class="icondiv iconpos_'+graphid+'"><img src="media/duckfaceonly.png" style="width:100px;"></div>'+activecircle+'<p class="name_'+graphid+'" style="-webkit-filter:grayscale(80%);clear:both;font-weight:bold;margin-left:23px;margin-top:-30px;color:white;font-size:15px;text-align:left;"></p></div></div>';           
 } 
 
 
 else if (index4 > -1) {
-slidecontent = '<div class="age_'+subtract+' swiper-slide slide_'+graphid+'" style="text-align:center;padding-top:3px;padding-left:3px;"><span class="preloader default_'+randomid+'"></span><div style="width:'+slidewidth+'px;margin:0 auto;"><div style="position:absolute;right:2px;top:0px;" class="arrowdivhome_'+graphid+'"></div><div class="distance_'+graphid+'" style="display:none;width:50px;background-color:#ccc;color:white;z-index:999;padding:0.5px;position:absolute;left: 3px;z-index:1000;font-size:12px;">'+distancestring+'</div><img crossOrigin="Anonymous" id="photo_'+graphid+'" onload="$(this).fadeIn(700);mainLoaded(\''+graphid+'\',\''+randomid+'\');" class="swiper-lazy pp photo_'+graphid+'" data-src="'+profilepicstringsmall+'" style="'+imagestyle+'-webkit-filter:grayscale(80%);overflow:hidden;display:none;margin-top:0px;"/><div style="bottom:0px;right:0px;position:absolute;width:50px;overflow-x:hidden;height:50px;overflow-y:hidden;-webkit-filter:grayscale(1%);display:none;" class="icondiv iconpos_'+graphid+'"><img src="media/datefaceonly.png" style="width:100px;"></div>'+activecircle+'<p class="name_'+graphid+'" style="-webkit-filter:grayscale(80%);clear:both;font-weight:bold;margin-left:23px;margin-top:-30px;color:white;font-size:15px;text-align:left;"></p></div></div>';      
+slidecontent = '<div class="age_'+subtract+' swiper-slide slide_'+graphid+'" style="text-align:center;padding-top:3px;padding-left:3px;"><span class="preloader default_'+randomid+'"></span><div style="width:'+slidewidth+'px;margin:0 auto;"><div style="position:absolute;right:2px;top:0px;display:none;" class="arrowdivhome_'+graphid+'"></div><div class="distance_'+graphid+'" style="display:none;width:50px;background-color:#ccc;color:white;z-index:999;padding:0.5px;position:absolute;left: 3px;z-index:1000;font-size:12px;">'+distancestring+'</div><img crossOrigin="Anonymous" id="photo_'+graphid+'" onload="$(this).fadeIn(700);mainLoaded(\''+graphid+'\',\''+randomid+'\');" class="swiper-lazy pp photo_'+graphid+'" data-src="'+profilepicstringsmall+'" style="'+imagestyle+'-webkit-filter:grayscale(80%);overflow:hidden;display:none;margin-top:0px;"/><div style="bottom:0px;right:0px;position:absolute;width:50px;overflow-x:hidden;height:50px;overflow-y:hidden;-webkit-filter:grayscale(1%);display:none;" class="icondiv iconpos_'+graphid+'"><img src="media/datefaceonly.png" style="width:100px;"></div>'+activecircle+'<p class="name_'+graphid+'" style="-webkit-filter:grayscale(80%);clear:both;font-weight:bold;margin-left:23px;margin-top:-30px;color:white;font-size:15px;text-align:left;"></p></div></div>';      
 } 
 
 
 else {
-slidecontent = '<div class="age_'+subtract+' swiper-slide slide_'+graphid+'" style="text-align:center;padding-top:3px;padding-left:3px;"><span class="preloader default_'+randomid+'"></span><div style="width:'+slidewidth+'px;margin:0 auto;"><div style="position:absolute;right:2px;top:0px;" class="arrowdivhome_'+graphid+'"></div><div class="distance_'+graphid+'" style="display:none;width:50px;background-color:#ccc;color:white;z-index:999;padding:0.5px;position:absolute;left: 3px;z-index:1000;font-size:12px;">'+distancestring+'</div><img crossOrigin="Anonymous" id="photo_'+graphid+'" onload="$(this).fadeIn(700);mainLoaded(\''+graphid+'\',\''+randomid+'\');" class="swiper-lazy pp photo_'+graphid+'" data-src="'+profilepicstringsmall+'" style="'+imagestyle+'-webkit-filter:grayscale(80%);overflow:hidden;display:none;margin-top:0px;"><div style="bottom:0px;right:0px;position:absolute;width:50px;overflow-x:hidden;height:50px;overflow-y:hidden;display:none;" class="icondiv iconpos_'+graphid+'"></div>'+activecircle+'<p class="name_'+graphid+'" style="-webkit-filter:grayscale(80%);clear:both;font-weight:bold;margin-top:-30px;color:white;font-size:15px;text-align:left;float:left;margin-left:23px;"></p></div></div>';    
+slidecontent = '<div class="age_'+subtract+' swiper-slide slide_'+graphid+'" style="text-align:center;padding-top:3px;padding-left:3px;"><span class="preloader default_'+randomid+'"></span><div style="width:'+slidewidth+'px;margin:0 auto;"><div style="position:absolute;right:2px;top:0px;display:none;" class="arrowdivhome_'+graphid+'"></div><div class="distance_'+graphid+'" style="display:none;width:50px;background-color:#ccc;color:white;z-index:999;padding:0.5px;position:absolute;left: 3px;z-index:1000;font-size:12px;">'+distancestring+'</div><img crossOrigin="Anonymous" id="photo_'+graphid+'" onload="$(this).fadeIn(700);mainLoaded(\''+graphid+'\',\''+randomid+'\');" class="swiper-lazy pp photo_'+graphid+'" data-src="'+profilepicstringsmall+'" style="'+imagestyle+'-webkit-filter:grayscale(80%);overflow:hidden;display:none;margin-top:0px;"><div style="bottom:0px;right:0px;position:absolute;width:50px;overflow-x:hidden;height:50px;overflow-y:hidden;display:none;" class="icondiv iconpos_'+graphid+'"></div>'+activecircle+'<p class="name_'+graphid+'" style="-webkit-filter:grayscale(80%);clear:both;font-weight:bold;margin-top:-30px;color:white;font-size:15px;text-align:left;float:left;margin-left:23px;"></p></div></div>';    
 
 }
 
@@ -10687,7 +10687,7 @@ if (obj.to_uid == f_uid) {
 	
 	
     if (obj.received =='Y') {
-if (notifloaded){  $(  ".arrowdivhome_" + obj.from_uid ).empty();$( ".indivnotifcount" ).remove();}
+if (notifloaded){    $(  ".arrowdivhome_" + obj.from_uid ).empty();$( ".indivnotifcount" ).remove();}
     
     }
     
@@ -10700,7 +10700,7 @@ if (notifloaded){  $(  ".arrowdivhome_" + obj.from_uid ).empty();$( ".indivnotif
     notificationscount = notificationscount + addnumber;
 if (notifloaded){
 if (obj.new_message_count > 0){
-	
+	alert('notmain');
 //alert('Not received, greater than 0 = ' +obj.new_message_count);
 $( ".arrowdivhome_" + obj.from_uid ).html('<span class="badge" style="background-color:rgb(255, 208, 0);color:black;margin-top:5px;margin-left:-5px;">'+obj.new_message_count+'</span>');
 $( ".indivnotifcount" ).remove();$( ".arrowdivbrowser" ).append('<span class="badge indivnotifcount" style="position:absolute;right:0px;background-color:rgb(255, 208, 0);color:black;">'+obj.new_message_count+'</span>');
@@ -11515,19 +11515,13 @@ photosloaded = false;
 var sliderwidth = $( document ).width();
 var sliderheight = $( document ).height();
 
-var popupHTML = 
-    
-  
-    
-    '<div class="popup prefpop">'+
+var popupHTML = '<div class="popup prefpop">'+
 
-       
-    
 '<div class="views tabs toolbar-fixed">'+
 
   '<div id="tab99" class="view-99 view tab active">'+
 
-   '<div class="toolbar tabbar swipetoolbar" style="background-color:#ccc;z-index:9999999999;position:absolute;bottom:0px;">'+
+    '<div class="toolbar tabbar swipetoolbar" style="background-color:#ccc;z-index:9999999999;position:absolute;bottom:0px;">'+
 ' <div class="toolbar-inner" style="padding:0;">'+
 
        //   '   <a href="#" class="button tab-link tab-swipe pan0 active" onclick="swipePref(0)" style="border-radius:0;font-size:17px;border:0;text-align:center;"><i class="pe-7s-filter pe-lg" style="width:22px;margin:0 auto;"></i></a>'+
