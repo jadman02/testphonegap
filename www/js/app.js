@@ -11515,7 +11515,7 @@ photosloaded = false;
 var sliderwidth = $( document ).width();
 var sliderheight = $( document ).height();
 
-var popupHTML = '<div class="popup prefpop" style="z-index:5000">'+
+var popupHTML = '<div class="popup prefpop" style="">'+
 
 '<div class="views tabs toolbar-fixed">'+
 
