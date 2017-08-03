@@ -11556,7 +11556,7 @@ var popupHTML = '<div class="popup prefpop" style="z-index:11000">'+
 
      
     
-'<div class="swiper-container swiper-prefer" >'+
+'<div class="swiper-container swiper-prefer" style="padding-top:54px;margin-bottom:-44px;">'+
 
     '<div class="swiper-wrapper">'+
 '<div class="swiper-slide">'+
