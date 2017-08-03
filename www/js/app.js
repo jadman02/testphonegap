@@ -11519,19 +11519,7 @@ var popupHTML = '<div class="popup prefpop">'+
 
     //
     
-    '<div class="toolbar tabbar swipetoolbar" style="background-color:#ccc;z-index:9999999999;position:absolute;bottom:0px;">'+
-' <div class="toolbar-inner" style="padding:0;">'+
 
-       //   '   <a href="#" class="button tab-link tab-swipe pan0 active" onclick="swipePref(0)" style="border-radius:0;font-size:17px;border:0;text-align:center;"><i class="pe-7s-filter pe-lg" style="width:22px;margin:0 auto;"></i></a>'+
-         '   <a href="#" class="button tab-link tab-swipe pan0 " onclick="swipePref(0)" style="border-radius:0;font-size:17px;border:0;text-align:center;"><i class="pe-7s-clock pe-lg" style="width:22px;margin:0 auto;"></i></a>'+
-        
-          '  <a href="#" class="button tab-link tab-swipe pan1" onclick="swipePref(1)" style="border-radius:0;font-size:17px;border:0;text-align:center;"><i class="pe-7s-info pe-lg" style="width:22px;margin:0 auto;"></i></a>'+
-          '  <a href="#" class="button tab-link tab-swipe pan2" onclick="swipePref(2);" style="border-radius:0;font-size:17px;border:0;text-align:center;"><i class="pe-7s-camera pe-lg" style="width:22px;margin:0 auto;"></i></a>'+
-          '  <a href="#" class="button tab-link tab-swipe pan3" onclick="swipePref(3)" style="border-radius:0;font-size:17px;border:0;text-align:center;"><i class="pe-7s-config pe-lg" style="width:22px;margin:0 auto;"></i></a>'+
-      
-
- '</div>'+
- '</div>'+
     
 '<div class="navbar" style="background-color:#2196f3;">'+
 
@@ -11553,6 +11541,20 @@ var popupHTML = '<div class="popup prefpop">'+
  '     <div data-page="home-3" class="page">'+
    '     <div class="page-content" style="height: calc(100% - 44px);padding-top:54px;background-color:white;">'+
 
+        '<div class="toolbar tabbar swipetoolbar" style="background-color:#ccc;z-index:9999999999;position:absolute;bottom:0px;">'+
+' <div class="toolbar-inner" style="padding:0;">'+
+
+       //   '   <a href="#" class="button tab-link tab-swipe pan0 active" onclick="swipePref(0)" style="border-radius:0;font-size:17px;border:0;text-align:center;"><i class="pe-7s-filter pe-lg" style="width:22px;margin:0 auto;"></i></a>'+
+         '   <a href="#" class="button tab-link tab-swipe pan0 " onclick="swipePref(0)" style="border-radius:0;font-size:17px;border:0;text-align:center;"><i class="pe-7s-clock pe-lg" style="width:22px;margin:0 auto;"></i></a>'+
+        
+          '  <a href="#" class="button tab-link tab-swipe pan1" onclick="swipePref(1)" style="border-radius:0;font-size:17px;border:0;text-align:center;"><i class="pe-7s-info pe-lg" style="width:22px;margin:0 auto;"></i></a>'+
+          '  <a href="#" class="button tab-link tab-swipe pan2" onclick="swipePref(2);" style="border-radius:0;font-size:17px;border:0;text-align:center;"><i class="pe-7s-camera pe-lg" style="width:22px;margin:0 auto;"></i></a>'+
+          '  <a href="#" class="button tab-link tab-swipe pan3" onclick="swipePref(3)" style="border-radius:0;font-size:17px;border:0;text-align:center;"><i class="pe-7s-config pe-lg" style="width:22px;margin:0 auto;"></i></a>'+
+      
+
+ '</div>'+
+ '</div>'+
+    
 '<div class="swiper-container swiper-prefer" style="min-height:100%;">'+
 
     '<div class="swiper-wrapper">'+
