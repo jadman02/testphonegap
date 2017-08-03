@@ -1161,6 +1161,8 @@ function mainLoaded(id,pid){
 $( ".iconpos_" + id ).show();
 $( ".default_" + pid).hide();
 
+	alert(pid);
+	
 var indivNotif = firebase.database().ref('notifications/' + f_uid + '/' + id);
 indivNotif.once('value', function(snapshot) {
 
@@ -1168,8 +1170,9 @@ if (snapshot.val()){
 var obj = snapshot.val();
 
 
-if (obj.new_message_count >0 && obj.to_uid == f_uid && obj.received =='N'){$( ".maindivhome_" + pid).append('<span class="badge" style="background-color:rgb(255, 208, 0);color:black;margin-top:5px;margin-left:-5px;">'+obj.new_message_count+'</span>');}
+if (obj.new_message_count >0 && obj.to_uid == f_uid && obj.received =='N'){$( ".maindivhome_" + pid).html('<span class="badge" style="background-color:rgb(255, 208, 0);color:black;margin-top:5px;margin-left:-5px;">'+obj.new_message_count+'</span>');}
 else{$(  ".maindivhome_" + pid ).empty();}
+	
 
 
 }
