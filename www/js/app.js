@@ -1117,7 +1117,7 @@ $( ".showtext" ).show();
 
 function getWifilocation(){
 
-alert('2');
+
 
 navigator.geolocation.getCurrentPosition(onSuccess, onError);
 
@@ -1883,7 +1883,7 @@ $.post( "http://www.dateorduck.com/updatelocation.php", { projectid:f_projectid,
 //$.post( "updatelocation.php", { uid:f_uid,latitude:latitudep,longitude:longitudep} )
   .done(function( data ) {
 	
-	
+	alert(data);
 	
 
   getMatches();
@@ -1916,7 +1916,7 @@ function getPreferences(){
 
 // Test if user exists
 
-alert('1');
+
 
 if(userpref) {firebase.database().ref('users/' + f_uid).off('value', userpref);}
 
