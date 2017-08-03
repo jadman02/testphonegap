@@ -11569,7 +11569,7 @@ var popupHTML = '<div class="popup prefpop" style="z-index:11000">'+
  '   <ul class="availul" style="padding-left:10px;padding-right:10px;padding-bottom:20px;">'+
 
   '  </ul>'+
-    '<div class="list-block-label hiderowpref">Make it easier for your matches to organise a time to meet you.</div>'+
+    '<div class="list-block-label hiderowpref" style="margin-top:10px;">Make it easier for your matches to organise a time to meet you.</div>'+
 
 '</div> '+
         
