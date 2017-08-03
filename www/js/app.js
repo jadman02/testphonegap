@@ -11556,7 +11556,7 @@ var popupHTML = '<div class="popup prefpop" style="z-index:11000">'+
 
      
     
-'<div class="swiper-container swiper-prefer" style="padding-top:54px;">'+
+'<div class="swiper-container swiper-prefer" >'+
 
     '<div class="swiper-wrapper">'+
 '<div class="swiper-slide">'+
@@ -11787,7 +11787,7 @@ var popupHTML = '<div class="popup prefpop" style="z-index:11000">'+
 
   
   '</ul>'+
-  '<div class="list-block-label hiderowpref">All fields are optional and will be hidden on your profile unless completed.</div>'+
+  '<div class="list-block-label hiderowpref" style="margin-bottom:0px;">All fields are optional and will be hidden on your profile unless completed.</div>'+
 '</div>'+
        
        '</div>'+
@@ -11820,7 +11820,7 @@ var popupHTML = '<div class="popup prefpop" style="z-index:11000">'+
         '</div>'+
 '<div class="list-block" style="margin-top:0px;">'+
 ' <ul">'+
-        '<div class="list-block-label hiderowpref">Photos can be uploaded from your Facebook account.</div>'+
+        '<div class="list-block-label hiderowpref" style="margin-bottom:0px;">Photos can be uploaded from your Facebook account.</div>'+
  '</ul></div>'+
     
                         '</div>'+
