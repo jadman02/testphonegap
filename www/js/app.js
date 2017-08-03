@@ -12333,6 +12333,7 @@ if (!sexuality){$( '.swipetext' ).text("Welcome, " + f_first);mySwiper.lockSwipe
 
 
 swipePref(chosen);
+	
 	setTimeout(function(){ $( ".swipetoolbar" ).show(); }, 3000);
 myApp.sizeNavbars();  
 var dateinfo = [];
@@ -12784,7 +12785,7 @@ formatValue: function (p, values, displayValues) {
   }
   
   
-function swipePref(index){$( ".pref-" + index).show();mySwiper.slideTo(index);
+function swipePref(index){$( ".pref-" + index).show();mySwiper.slideTo(index); $( ".swipetoolbar" ).show();
 			 
 			 
 			 }
