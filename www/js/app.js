@@ -12785,7 +12785,7 @@ formatValue: function (p, values, displayValues) {
   }
   
   
-function swipePref(index){$( ".pref-" + index).show();mySwiper.slideTo(index); $( ".swipetoolbar" ).show();
+function swipePref(index){$( ".swipetoolbar" ).show();$( ".pref-" + index).show();mySwiper.slideTo(index); $( ".swipetoolbar" ).show();
 			 
 			 
 			 }
