@@ -1256,7 +1256,7 @@ else{}
 function getMatches(){
 
 	//alert('getmatch trigger' + homewant);
-	
+	alert('get match triggered');
 //can put any ads here
 if ((initialload === false) && (availarray.length === 0)){
 
@@ -2057,7 +2057,7 @@ function matchesListener(){
 
 
 if (loaded === true){
-alert('removing matces');
+
   firebase.database().ref("matches/" + f_uid).off('value', matcheslistener);
  }
 
