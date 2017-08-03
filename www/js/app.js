@@ -436,7 +436,7 @@ recent_all = [];
 	
 firebase.database().ref('users/' + f_uid).update({
     homewant:homewant
-  }).then(function() {alert('updated');});
+  }).then(function() {});
 	
    //Will update firebase user homewant
    //Check if updateuser function is in go daddy file
@@ -2057,7 +2057,7 @@ function matchesListener(){
 
 
 if (loaded === true){
-
+alert('removing matces');
   firebase.database().ref("matches/" + f_uid).off('value', matcheslistener);
  }
 
@@ -10669,7 +10669,8 @@ else {$( ".toolbarq" ).hide();}
 var notifloaded = false;
 function establishNotif(){
 
-
+alert(notifcount);
+if(notifcount) {alert('removing old notifs');firebase.database().ref('notifications/' + f_uid).off('value', notifcount);}
 
 notifcount = firebase.database().ref('notifications/' +f_uid).on('value', function(snapshot) {
 
