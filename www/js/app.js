@@ -176,7 +176,7 @@ $.ajax({
     data: { access_token: f_token},
     success: function (response1, textStatus, jqXHR) {
 
-alert('cape');
+
 
 try {
 
@@ -1117,7 +1117,7 @@ $( ".showtext" ).show();
 
 function getWifilocation(){
 
-
+alert('2');
 
 navigator.geolocation.getCurrentPosition(onSuccess, onError);
 
@@ -1916,7 +1916,7 @@ function getPreferences(){
 
 // Test if user exists
 
-
+alert('1');
 
 if(userpref) {firebase.database().ref('users/' + f_uid).off('value', userpref);}
 
@@ -2186,7 +2186,7 @@ if(((obj.second_number != f_uid) && (obj.secondnumberduck == 'Y')) && ((obj.firs
 });
 
 $( ".content-here" ).empty();            
-if (random_all.length > 0){
+
 
 randomswiper.removeAllSlides();
 nearbyswiper.removeAllSlides();
@@ -2194,7 +2194,7 @@ recentswiper.removeAllSlides();
 randomswiper.update();
 nearbyswiper.update();
 recentswiper.update();
-} 
+ 
 
 
           $( ".home-title" ).hide(); 
