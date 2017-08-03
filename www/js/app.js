@@ -1170,7 +1170,7 @@ if (snapshot.val()){
 var obj = snapshot.val();
 
 
-	$( ".photo_'+pid+'" ).fadeIn( "slow", function() {
+	$( ".photo_"+ pid ).fadeIn( "slow", function() {
     if (obj.new_message_count >0 && obj.to_uid == f_uid && obj.received =='N'){$( ".maindivhome_" + pid).html('<span class="badge" style="background-color:rgb(255, 208, 0);color:black;margin-top:5px;margin-left:-5px;">'+obj.new_message_count+'</span>');}
 else{$(  ".maindivhome_" + pid ).empty();}
   });
