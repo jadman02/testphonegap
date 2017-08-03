@@ -1874,37 +1874,28 @@ console.log('updatedtimestamp');
 
 function updateGeo(){
 
+getMatches();	
+	
+//firebase.auth().currentUser.getToken().then(function(idToken) {  
 	
 	
-firebase.auth().currentUser.getToken().then(function(idToken) {  
+//$.post( "http://www.dateorduck.com/updatelocation.php", { projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,uid:f_uid,latitude:latitudep,longitude:longitudep} )
+
+  //.done(function( data ) {
 	
-	
-$.post( "http://www.dateorduck.com/updatelocation.php", { projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,uid:f_uid,latitude:latitudep,longitude:longitudep} )
-//$.post( "updatelocation.php", { uid:f_uid,latitude:latitudep,longitude:longitudep} )
-  .done(function( data ) {
-	
-	alert(data);
+//	alert(data);
 	
 
-  getMatches();
+  //getMatches();
   
  
   
-  });
-      }).catch(function(error) {
-	alert('error' + error);
+  //});
+  //    }).catch(function(error) {
+//	alert('error' + error);
   // Handle error
-});
-
-//var matchesRef = firebase.database().ref(sexuality + '/'+ f_age);
-//var geoFire = new GeoFire(matchesRef);
-//geoFire.set(f_uid + '*' + f_age + '*' + f_first, [latitudep, longitudep]).then(function() {
-
- 
-  
-//}, function(error) {
-
 //});
+
 
 
     
