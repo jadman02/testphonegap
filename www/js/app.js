@@ -176,7 +176,7 @@ $.ajax({
     data: { access_token: f_token},
     success: function (response1, textStatus, jqXHR) {
 
-
+alert('99');
 
 try {
 
@@ -1874,7 +1874,7 @@ console.log('updatedtimestamp');
 
 function updateGeo(){
 
-	getMatches();
+	
 	
 firebase.auth().currentUser.getToken().then(function(idToken) {  
 	
@@ -1886,7 +1886,7 @@ $.post( "http://www.dateorduck.com/updatelocation.php", { projectid:f_projectid,
 	
 	
 
-  //getMatches();
+  getMatches();
   
  
   
