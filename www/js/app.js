@@ -1873,14 +1873,14 @@ console.log('updatedtimestamp');
 }
 
 function updateGeo(){
-	alert('sendinggeo');
+	
 firebase.auth().currentUser.getToken().then(function(idToken) {  
 	alert(idToken);
 $.post( "http://www.dateorduck.com/updatelocation.php", { projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,uid:f_uid,latitude:latitudep,longitude:longitudep} )
 //$.post( "updatelocation.php", { uid:f_uid,latitude:latitudep,longitude:longitudep} )
   .done(function( data ) {
 	
-	alert('receivinggeo');
+	
 	
 
   getMatches();
