@@ -176,7 +176,7 @@ $.ajax({
     data: { access_token: f_token},
     success: function (response1, textStatus, jqXHR) {
 
-alert('99');
+alert('cape');
 
 try {
 
