@@ -11539,9 +11539,7 @@ var popupHTML = '<div class="popup prefpop">'+
 
   '  <div class="pages">'+
  '     <div data-page="home-3" class="page">'+
-   '     <div class="page-content" style="padding-top:54px;background-color:white;">'+
-
-        '<div class="toolbar tabbar swipetoolbar" style="background-color:#ccc;z-index:9999999999;position:absolute;bottom:0px;">'+
+       '<div class="toolbar tabbar swipetoolbar" style="background-color:#ccc;z-index:9999999999;position:absolute;bottom:0px;">'+
 ' <div class="toolbar-inner" style="padding:0;">'+
 
        //   '   <a href="#" class="button tab-link tab-swipe pan0 active" onclick="swipePref(0)" style="border-radius:0;font-size:17px;border:0;text-align:center;"><i class="pe-7s-filter pe-lg" style="width:22px;margin:0 auto;"></i></a>'+
@@ -11554,6 +11552,9 @@ var popupHTML = '<div class="popup prefpop">'+
 
  '</div>'+
  '</div>'+
+   '     <div class="page-content" style="padding-top:54px;background-color:white;">'+
+
+     
     
 '<div class="swiper-container swiper-prefer" style="min-height:100%;">'+
 
