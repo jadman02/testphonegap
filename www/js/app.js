@@ -11552,14 +11552,14 @@ var popupHTML = '<div class="popup prefpop">'+
 
  '</div>'+
  '</div>'+
-   '     <div class="page-content" style="height: calc(100% - 44px);padding-top:54px;background-color:white;margin-bottom:-54px;">'+
+   '     <div class="page-content" style="height: calc(100% - 44px);padding-top:54px;background-color:white;">'+
 
      
     
 '<div class="swiper-container swiper-prefer" style="min-height:100%;">'+
 
     '<div class="swiper-wrapper">'+
-'<div class="swiper-slide">'+
+'<div class="swiper-slide" style="margin-bottom:-44px;">'+
         
          '<div class="slide-pref pref-0">'+
         
@@ -11580,7 +11580,7 @@ var popupHTML = '<div class="popup prefpop">'+
         '</div>'+
         '</div>'+
        
-        '<div class="swiper-slide" >'+
+        '<div class="swiper-slide" style="margin-bottom:-44px;">'+
         
 
  '<div class="slide-pref pref-1">'+
