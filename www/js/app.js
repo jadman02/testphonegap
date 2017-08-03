@@ -11511,7 +11511,7 @@ photosloaded = false;
 var sliderwidth = $( document ).width();
 var sliderheight = $( document ).height();
 
-var popupHTML = '<div class="popup prefpop">'+
+var popupHTML = '<div class="popup prefpop" style="z-index:11000">'+
 
 '<div class="views tabs toolbar-fixed">'+
 
@@ -11556,10 +11556,10 @@ var popupHTML = '<div class="popup prefpop">'+
 
      
     
-'<div class="swiper-container swiper-prefer" style="min-height:100%;">'+
+'<div class="swiper-container swiper-prefer" style="height: calc(100% - 44px);">'+
 
     '<div class="swiper-wrapper">'+
-'<div class="swiper-slide" style="margin-bottom:-44px;">'+
+'<div class="swiper-slide">'+
         
          '<div class="slide-pref pref-0">'+
         
@@ -11580,7 +11580,7 @@ var popupHTML = '<div class="popup prefpop">'+
         '</div>'+
         '</div>'+
        
-        '<div class="swiper-slide" style="margin-bottom:-44px;">'+
+        '<div class="swiper-slide">'+
         
 
  '<div class="slide-pref pref-1">'+
