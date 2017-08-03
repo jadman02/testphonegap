@@ -11552,11 +11552,11 @@ var popupHTML = '<div class="popup prefpop" style="z-index:11000">'+
 
  '</div>'+
  '</div>'+
-   '     <div class="page-content" style="height: calc(100% - 44px);padding-top:54px;background-color:white;">'+
+   '     <div class="page-content" style="height: calc(100% - 44px);background-color:white;">'+
 
      
     
-'<div class="swiper-container swiper-prefer" style="height: calc(100% - 44px);">'+
+'<div class="swiper-container swiper-prefer" style="padding-top:54px;">'+
 
     '<div class="swiper-wrapper">'+
 '<div class="swiper-slide">'+
