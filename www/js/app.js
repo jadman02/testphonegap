@@ -1161,7 +1161,7 @@ function mainLoaded(id,pid){
 $( ".iconpos_" + id ).show();
 $( ".default_" + pid).hide();
 
-$( ".photo_"+ pid ).fadeIn(700);
+$( ".photo_"+ pid ).fadeIn("slow");
 	
 var indivNotif = firebase.database().ref('notifications/' + f_uid + '/' + id);
 indivNotif.once('value', function(snapshot) {
