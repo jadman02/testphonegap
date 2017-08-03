@@ -11539,7 +11539,7 @@ var popupHTML = '<div class="popup prefpop">'+
 
   '  <div class="pages">'+
  '     <div data-page="home-3" class="page">'+
-   '     <div class="page-content" style="height: calc(100% - 44px);padding-top:54px;background-color:white;">'+
+   '     <div class="page-content" style="padding-top:54px;background-color:white;">'+
 
         '<div class="toolbar tabbar swipetoolbar" style="background-color:#ccc;z-index:9999999999;position:absolute;bottom:0px;">'+
 ' <div class="toolbar-inner" style="padding:0;">'+
