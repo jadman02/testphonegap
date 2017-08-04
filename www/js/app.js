@@ -1273,7 +1273,7 @@ if (!homewant || homewant =='offline'){
 	$( ".buttons-home" ).hide();
 	$( ".toolbar" ).hide();
 	$( ".results-loader" ).hide();
-    
+    $( ".summary-helper" ).show();
 	new_all = [];
 random_all = [];
 nearby_all = [];
@@ -1435,13 +1435,13 @@ nameslist = [];
    
    
    $( ".results-loader" ).hide();
-   
+   $( ".summary-helper" ).show();
    if (result == 77 ||(result.length ===1 && result[0].uid == f_uid ) ){
    
 
    $( ".home-title" ).hide(); 
 
- $( ".results-loader" ).hide();
+ 
     $('.content-here').append(
     '<div class="no-results-div" style="background-color:white;z-index:30000000;text-align:center;margin:0 auto;width:300px;position:absolute;top:50%;left:50%;margin-left:-150px;margin-top:-70px;">'+
     
@@ -1789,7 +1789,7 @@ if ($('.no-results-div').length > 0) {}
 		$( ".home-title" ).hide(); 
 
  $( ".results-loader" ).hide();
-    
+    $( ".summary-helper" ).show();
 
 		$('.content-here').append(
     '<div class="no-results-div" style="background-color:white;z-index:30000000;text-align:center;margin:0 auto;width:300px;position:absolute;top:50%;left:50%;margin-left:-150px;margin-top:-70px;">'+
@@ -1836,7 +1836,7 @@ if ($('.no-results-div').length > 0) {}
     $( ".toolbar" ).show();
     $( ".loginbutton" ).show();
 $( ".login-loader" ).hide();
-    $( ".summary-helper" ).show();
+    
 
  //$('.no-results-div').empty();
 
