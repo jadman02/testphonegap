@@ -1354,7 +1354,7 @@ $( ".homedate" ).removeClass("disabled");
 initialload = true;
 
 if (recentfriends){
-$( ".summary-helper" ).show();
+
 	nearbyshare = true;
 		 recentshare = true;
 		$('.nearby-title').html('Nearby First');
@@ -1836,7 +1836,7 @@ if ($('.no-results-div').length > 0) {}
     $( ".toolbar" ).show();
     $( ".loginbutton" ).show();
 $( ".login-loader" ).hide();
-    
+    $( ".summary-helper" ).show();
 
  //$('.no-results-div').empty();
 
