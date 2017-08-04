@@ -1010,28 +1010,8 @@ var ptrContent = $$('.pull-to-refresh-content-1');
 ptrContent.on('ptr:refresh', function (e) {
     // Emulate 2s loading
     //loaded = false;
-    //getPreferences();
-	
-	$( ".content-here" ).empty();            
+    getPreferences();
 
-
-randomswiper.removeAllSlides();
-nearbyswiper.removeAllSlides();
-recentswiper.removeAllSlides();
-randomswiper.update();
-nearbyswiper.update();
-recentswiper.update();
- 
-
-
-          $( ".home-title" ).hide(); 
-          
-          $( ".nearby-helper" ).hide(); 
-                    $( ".recent-helper" ).hide(); 
-	$( ".summary-helper" ).hide(); 
-          
-$( ".results-loader" ).show();          
-getWifilocation();
 	
     setTimeout(function () {
         // Random image
