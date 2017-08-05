@@ -388,21 +388,21 @@ function setWant(val){
 if (val == 0){
    if ($( ".homedate" ).hasClass( "active" )){$( ".homedate" ).removeClass("active");
   
-if ($( ".homeduck" ).hasClass( "active" )){homewant = 'duck';updateWant(); }else {homewant = 'offline';updateWant(); }                                           
+if ($( ".homeduck" ).hasClass( "active" )){homewant = 'duck';updateWant();$( ".datenavpic" ).show();$( ".ducknavpic" ).show(); }else {homewant = 'offline';updateWant();$( ".datenavpic" ).hide();$( ".ducknavpic" ).hide(); }                                           
                                             
                                              
                                              } 
 else{$( ".homedate" ).addClass("active");
- if ($( ".homeduck" ).hasClass( "active" )){homewant = 'dateduck';updateWant(); }else {homewant = 'date';updateWant(); }  
+ if ($( ".homeduck" ).hasClass( "active" )){homewant = 'dateduck';updateWant(); $( ".datenavpic" ).show();$( ".ducknavpic" ).show();}else {homewant = 'date';updateWant(); $( ".datenavpic" ).show();$( ".ducknavpic" ).show();}  
     }
 }
 
     if (val == 1){
        if ($( ".homeduck" ).hasClass( "active" )){$( ".homeduck" ).removeClass("active");
-                                             if ($( ".homedate" ).hasClass( "active" )){homewant = 'date';updateWant(); }else {homewant = 'offline';updateWant(); }
+                                             if ($( ".homedate" ).hasClass( "active" )){homewant = 'date';updateWant();$( ".datenavpic" ).show();$( ".ducknavpic" ).show(); }else {homewant = 'offline';updateWant(); $( ".datenavpic" ).hide();$( ".ducknavpic" ).hide();}
                                                  } 
         else{$( ".homeduck" ).addClass("active");
-                                                     if ($( ".homedate" ).hasClass( "active" )){homewant = 'dateduck';updateWant(); }else {homewant = 'duck';updateWant(); }
+                                                     if ($( ".homedate" ).hasClass( "active" )){homewant = 'dateduck';updateWant();$( ".datenavpic" ).show();$( ".ducknavpic" ).show(); }else {homewant = 'duck';updateWant(); $( ".datenavpic" ).show();$( ".ducknavpic" ).show();}
 
             }
 
@@ -2018,10 +2018,10 @@ if (f_gender == 'Female' && f_interested == 'Men') {sexuality = 'female';}
        
    if (loadpref=== false){
   if(homewant){
-       if (homewant == 'offline'){$( ".homedate" ).removeClass('active');$( ".homeduck" ).removeClass('active'); }
-     if (homewant == 'dateduck'){$( ".homedate" ).addClass('active');$( ".homeduck" ).addClass('active'); }
-   if (homewant == 'duck'){$( ".homedate" ).removeClass('active');$( ".homeduck" ).addClass('active'); }
-    if (homewant == 'date'){$( ".homedate" ).addClass('active');$( ".homeduck" ).removeClass('active'); }
+       if (homewant == 'offline'){$( ".homedate" ).removeClass('active');$( ".homeduck" ).removeClass('active');$( ".datenavpic" ).hide();$( ".ducknavpic" ).hide(); }
+     if (homewant == 'dateduck'){$( ".homedate" ).addClass('active');$( ".homeduck" ).addClass('active');$( ".datenavpic" ).show();$( ".ducknavpic" ).show(); }
+   if (homewant == 'duck'){$( ".homedate" ).removeClass('active');$( ".homeduck" ).addClass('active');$( ".datenavpic" ).show();$( ".ducknavpic" ).show(); }
+    if (homewant == 'date'){$( ".homedate" ).addClass('active');$( ".homeduck" ).removeClass('active');$( ".datenavpic" ).show();$( ".ducknavpic" ).show(); }
 }
 	   loadpref = true;
  establishNotif();
