@@ -1909,29 +1909,32 @@ console.log('updatedtimestamp');
     
 }
 
+var geoupdate = Math.round(+new Date()/1000);
+
 function updateGeo(){
 
-getMatches();	
-	
-//firebase.auth().currentUser.getToken().then(function(idToken) {  
 	
 	
-//$.post( "http://www.dateorduck.com/updatelocation.php", { projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,uid:f_uid,latitude:latitudep,longitude:longitudep} )
+firebase.auth().currentUser.getToken().then(function(idToken) {  
+	
+	
+$.post( "http://www.dateorduck.com/updatelocation.php", { projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,uid:f_uid,latitude:latitudep,longitude:longitudep} )
 
-  //.done(function( data ) {
-	
-//	alert(data);
+  .done(function( data ) {
 	
 
-  //getMatches();
+	var timesincelastupdate = Math.round(+new Date()/1000) - geoupdate;
+
+	alert(timesincelastupdate);
+	
+  getMatches();
   
  
   
-  //});
-  //    }).catch(function(error) {
+  });
+      }).catch(function(error) {
 //	alert('error' + error);
-  // Handle error
-//});
+});
 
 
 
