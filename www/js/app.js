@@ -1021,12 +1021,56 @@ $$('.panel-right').on('panel:closed', function () {
 var ptrContent = $$('.pull-to-refresh-content-1');
  
 
+var geoupdate = Math.round(+new Date()/1000);
+var firstupdate = false;
+
+
+
+
+	
+
 
 // Add 'refresh' listener on it
 ptrContent.on('ptr:refresh', function (e) {
     // Emulate 2s loading
     //loaded = false;
-    getPreferences();
+
+	var timesincelastupdate = Math.round(+new Date()/1000) - geoupdate;
+
+	if (firstupdate === false){getPreferences();firstupdate = true;}
+	
+	if (timesincelastupdate > 10){geoupdate = Math.round(+new Date()/1000);}
+	else {
+	
+		 $( ".results-loader" ).show(); 
+		$( ".swiper-random" ).hide();
+		$( ".swiper-nearby" ).hide();
+		$( ".swiper-recent" ).hide();
+		
+          $( ".home-title" ).hide(); 
+          
+          $( ".nearby-helper" ).hide(); 
+                    $( ".recent-helper" ).hide(); 
+	$( ".summary-helper" ).hide(); 
+	
+		setTimeout(function(){ 
+		
+					 $( ".results-loader" ).hide(); 
+		$( ".swiper-random" ).show();
+		$( ".swiper-nearby" ).show();
+		$( ".swiper-recent" ).show();
+		
+          $( ".home-title" ).show(); 
+          
+          $( ".nearby-helper" ).show(); 
+                    $( ".recent-helper" ).show(); 
+	$( ".summary-helper" ).show(); 
+		
+		}, 2000);
+		
+		
+	}
+	
 
 	
     setTimeout(function () {
@@ -1927,8 +1971,7 @@ console.log('updatedtimestamp');
     
 }
 
-var geoupdate = Math.round(+new Date()/1000);
-var firstupdate = false;
+
 function updateGeo(){
 
 	
@@ -1940,42 +1983,9 @@ $.post( "http://www.dateorduck.com/updatelocation.php", { projectid:f_projectid,
 
   .done(function( data ) {
 	
+	getMatches();
+	
 
-	var timesincelastupdate = Math.round(+new Date()/1000) - geoupdate;
-
-	if (firstupdate === false){getMatches();firstupdate = true;}
-	
-	if (timesincelastupdate > 10){geoupdate = Math.round(+new Date()/1000);getMatches();}
-	else {
-	
-		 $( ".results-loader" ).show(); 
-		$( ".swiper-random" ).hide();
-		$( ".swiper-nearby" ).hide();
-		$( ".swiper-recent" ).hide();
-		
-          $( ".home-title" ).hide(); 
-          
-          $( ".nearby-helper" ).hide(); 
-                    $( ".recent-helper" ).hide(); 
-	$( ".summary-helper" ).hide(); 
-	
-		setTimeout(function(){ 
-		
-					 $( ".results-loader" ).hide(); 
-		$( ".swiper-random" ).show();
-		$( ".swiper-nearby" ).show();
-		$( ".swiper-recent" ).show();
-		
-          $( ".home-title" ).show(); 
-          
-          $( ".nearby-helper" ).show(); 
-                    $( ".recent-helper" ).show(); 
-	$( ".summary-helper" ).show(); 
-		updatePhotos();
-		}, 2000);
-		
-		
-	}
 	
 	
 	
