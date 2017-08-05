@@ -1054,6 +1054,8 @@ ptrContent.on('ptr:refresh', function (e) {
     // Emulate 2s loading
     //loaded = false;
 
+	if ($('.no-results-div').length > 0) {myApp.pullToRefreshDone();return false;}
+	
 	var timesincelastupdate = Math.round(+new Date()/1000) - geoupdate;
 
 	if (firstupdate === false){getPreferences();firstupdate = true;}
