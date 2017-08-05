@@ -1395,30 +1395,31 @@ recent_all = [];
 firebase.auth().currentUser.getToken().then(function(idToken) {
 
 
- 
+ $.post( "http://www.dateorduck.com/locations.php", { want:homewant,projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,upper:f_upper,lower:f_lower,radius:radiussize,radiusunit:radiusunit,sexuality:sexuality,sortby:fetch,latitudep:latitudep,longitudep:longitudep} )
+  .done(function( data ) {
 
 
 	
 	dbCall('random');
-	//dbCall('distance');
-	//dbCall('activity');
+	dbCall('distance');
+	dbCall('activity');
 	
 function dbCall(fetch){
 
 
-$.post( "http://www.dateorduck.com/locations.php", { want:homewant,projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,upper:f_upper,lower:f_lower,radius:radiussize,radiusunit:radiusunit,sexuality:sexuality,sortby:fetch,latitudep:latitudep,longitudep:longitudep} )
-  .done(function( data ) {
+
 
 
 alert(data);
 
-var result = JSON.parse(data); 
+var resultall = JSON.parse(data); 
+	var result;
+if (fetch == 'random'){result = result[2];}
+	if (fetch == 'distance'){result = result[1];}
+		if (fetch == 'activity'){result = result[0];}
+ 
 
 
-
-alert(JSON.stringify(result[0]));
-alert(JSON.stringify(result[1]));
-	alert(JSON.stringify(result[2]));
 
 var slidewidth = $( document ).width() / 2.5;
     var halfwidth = -Math.abs(slidewidth / 2.23);
