@@ -1400,8 +1400,8 @@ firebase.auth().currentUser.getToken().then(function(idToken) {
 
 	
 	dbCall('random');
-	dbCall('distance');
-	dbCall('activity');
+	//dbCall('distance');
+	//dbCall('activity');
 	
 function dbCall(fetch){
 
@@ -1410,7 +1410,7 @@ $.post( "http://www.dateorduck.com/locations.php", { want:homewant,projectid:f_p
   .done(function( data ) {
 
 
-
+alert(data);
 
 var result = JSON.parse(data); 
 
