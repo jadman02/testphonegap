@@ -1071,9 +1071,16 @@ var index2 = f_duck_match.indexOf(random_all[i].id);
 var index3 = f_duck_me.indexOf(random_all[i].id);
 var index4 = f_date_me.indexOf(random_all[i].id);
 
-alert(index4);
+var slidewidth = $( document ).width() / 2.5;
+var imagestyle;
+imagestyle='width:100%;max-height:' + slidewidth + 'px;overflow:hidden;';
 
-			
+var randomid = Math.floor(Math.random() * (1000000000 - 0 + 1));
+
+var slidecontent = '<div class="age_'+random_all[i].age+' swiper-slide slide_'+random_all[i].id+'" style="text-align:center;padding-top:3px;padding-left:3px;"><span class="preloader default_'+randomid+'"></span><div style="width:'+slidewidth+'px;margin:0 auto;"><div style="position:absolute;right:2px;top:0px;" class="arrowdivhome_'+random_all[i].id+' maindivhome_'+randomid+'"></div><div class="distance_'+random_all[i].id+'" style="display:none;width:50px;background-color:#ccc;color:white;z-index:999;padding:0.5px;position:absolute;left: 3px;z-index:1000;font-size:12px;"></div><img crossOrigin="Anonymous" id="photo_'+random_all[i].id+'" onload="mainLoaded(\''+random_all[i].id+'\',\''+randomid+'\');" class="photo_'+randomid+' swiper-lazy pp photo_'+random_all[i].id+'" data-src="'+random_all[i].profilepicstringsmall+'" style="'+imagestyle+'-webkit-filter:grayscale(80%);overflow:hidden;display:none;margin-top:0px;"><div style="bottom:0px;right:0px;position:absolute;width:50px;overflow-x:hidden;height:50px;overflow-y:hidden;display:none;" class="icondiv iconpos_'+random_all[i].id+'"></div><p class="name_'+random_all[i].id+'" style="-webkit-filter:grayscale(80%);clear:both;font-weight:bold;margin-top:-30px;color:white;font-size:15px;text-align:left;float:left;margin-left:23px;"></p></div></div>'; 
+
+			randomswiper.appendSlide(slidecontent);
+
 }
 		
 		 $( ".results-loader" ).show(); 
