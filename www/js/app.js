@@ -1415,8 +1415,10 @@ alert(data);
 var result = JSON.parse(data); 
 
 
-//alert(JSON.stringify(result));
 
+alert(JSON.stringify(result[0]));
+alert(JSON.stringify(result[1]));
+	alert(JSON.stringify(result[2]));
 
 var slidewidth = $( document ).width() / 2.5;
     var halfwidth = -Math.abs(slidewidth / 2.23);
