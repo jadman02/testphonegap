@@ -1952,6 +1952,12 @@ $.post( "http://www.dateorduck.com/updatelocation.php", { projectid:f_projectid,
 		$( ".swiper-random" ).hide();
 		$( ".swiper-nearby" ).hide();
 		$( ".swiper-recent" ).hide();
+		
+          $( ".home-title" ).hide(); 
+          
+          $( ".nearby-helper" ).hide(); 
+                    $( ".recent-helper" ).hide(); 
+	$( ".summary-helper" ).hide(); 
 	
 		setTimeout(function(){ 
 		
@@ -1960,7 +1966,12 @@ $.post( "http://www.dateorduck.com/updatelocation.php", { projectid:f_projectid,
 		$( ".swiper-nearby" ).show();
 		$( ".swiper-recent" ).show();
 		
-		
+          $( ".home-title" ).show(); 
+          
+          $( ".nearby-helper" ).show(); 
+                    $( ".recent-helper" ).show(); 
+	$( ".summary-helper" ).show(); 
+		updatePhotos();
 		}, 2000);
 		
 		
