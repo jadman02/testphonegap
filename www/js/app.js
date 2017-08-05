@@ -1395,7 +1395,7 @@ recent_all = [];
 firebase.auth().currentUser.getToken().then(function(idToken) {
 
 
- $.post( "http://www.dateorduck.com/locations.php", { want:homewant,projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,upper:f_upper,lower:f_lower,radius:radiussize,radiusunit:radiusunit,sexuality:sexuality,sortby:fetch,latitudep:latitudep,longitudep:longitudep} )
+ $.post( "http://www.dateorduck.com/locations.php", { want:homewant,projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,upper:f_upper,lower:f_lower,radius:radiussize,radiusunit:radiusunit,sexuality:sexuality,sortby:'random',latitudep:latitudep,longitudep:longitudep} )
   .done(function( data ) {
 
 
@@ -1414,9 +1414,9 @@ alert(data);
 
 var resultall = JSON.parse(data); 
 	var result;
-if (fetch == 'random'){result = result[2];}
-	if (fetch == 'distance'){result = result[1];}
-		if (fetch == 'activity'){result = result[0];}
+if (fetch == 'random'){result = resultall[2];}
+	if (fetch == 'distance'){result = resultall[1];}
+		if (fetch == 'activity'){result = resultall[0];}
  
 
 
