@@ -1815,13 +1815,13 @@ if ($('.no-results-div').length > 0) {}
 	
 	
 	
-	
+}   	
 	
     });
 	
 
 	
-}    
+ 
     
    
 
