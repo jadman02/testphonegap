@@ -381,17 +381,7 @@ $( ".summary-helper" ).show();
 }
 
 
-function shownavloader(button){
-if (button === 0){
-$( ".datetext" ).hide();
-	$( ".datenavloader" ).show();
-	
-}
-	else{
-	$( ".ducktext" ).hide();
-	$( ".ducknavloader" ).show();
-	}
-}
+
 
 
 
@@ -1377,10 +1367,7 @@ $( ".login-loader" ).hide();
 		$( ".homedate" ).removeClass("disabled");
 	$( ".homeduck" ).removeClass("disabled");
 		
-		$( ".datetext" ).show();
-	$( ".datenavloader" ).hide();	
-$( ".ducktext" ).show();
-	$( ".ducknavloader" ).hide();
+
 	
 	
 	}, 2000);
@@ -1825,11 +1812,6 @@ if (recent_all[0].id == graphid || recent_all[1].id == graphid || recent_all[2].
 	
 		$( ".homedate" ).removeClass("disabled");
 	$( ".homeduck" ).removeClass("disabled");
-		
-		$( ".datetext" ).show();
-	$( ".datenavloader" ).hide();	
-$( ".ducktext" ).show();
-	$( ".ducknavloader" ).hide();
 	
 	
 	}, 2000);
@@ -2068,10 +2050,10 @@ if (f_gender == 'Female' && f_interested == 'Men') {sexuality = 'female';}
        
    if (loadpref=== false){
   if(homewant){
-       if (homewant == 'offline'){$( ".homedate" ).removeClass('active');$( ".homeduck" ).removeClass('active');$( ".ducknavloader" ).hide();$( ".datenavloader" ).hide();$( ".ducktext" ).show();$( ".datetext" ).show(); }
-     if (homewant == 'dateduck'){$( ".homedate" ).addClass('active');$( ".homeduck" ).addClass('active');$( ".ducknavloader" ).hide();$( ".datenavloader" ).hide();$( ".ducktext" ).show();$( ".datetext" ).show(); }
-   if (homewant == 'duck'){$( ".homedate" ).removeClass('active');$( ".homeduck" ).addClass('active'); $( ".ducknavloader" ).hide();$( ".datenavloader" ).hide();$( ".ducktext" ).show();$( ".datetext" ).show();}
-    if (homewant == 'date'){$( ".homedate" ).addClass('active');$( ".homeduck" ).removeClass('active');$( ".ducknavloader" ).hide();$( ".datenavloader" ).hide();$( ".ducktext" ).show();$( ".datetext" ).show(); }
+       if (homewant == 'offline'){$( ".homedate" ).removeClass('active');$( ".homeduck" ).removeClass('active'); }
+     if (homewant == 'dateduck'){$( ".homedate" ).addClass('active');$( ".homeduck" ).addClass('active'); }
+   if (homewant == 'duck'){$( ".homedate" ).removeClass('active');$( ".homeduck" ).addClass('active'); }
+    if (homewant == 'date'){$( ".homedate" ).addClass('active');$( ".homeduck" ).removeClass('active');}
 }
 	   loadpref = true;
  establishNotif();
