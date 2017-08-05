@@ -384,12 +384,12 @@ $( ".summary-helper" ).show();
 function shownavloader(button){
 if (button === 0){
 $( ".datetext" ).hide();
-	$( ".dateloader" ).hide();
+	$( ".datenavloader" ).show();
 	
 }
 	else{
 	$( ".ducktext" ).hide();
-	$( ".ducknavloader" ).hide();
+	$( ".ducknavloader" ).show();
 	}
 }
 
@@ -1370,15 +1370,17 @@ var homeswiperhelper = myApp.swiper('.swiper-helper-info', {
     $( ".loginbutton" ).show();
 $( ".login-loader" ).hide();
     
-$( ".homedate" ).removeClass("disabled");
-	$( ".homeduck" ).removeClass("disabled");
+
 
 	setTimeout(function(){
 	
+		$( ".homedate" ).removeClass("disabled");
+	$( ".homeduck" ).removeClass("disabled");
+		
 		$( ".datetext" ).show();
-	$( ".dateloader" ).show();	
-$( ".datetext" ).show();
-	$( ".dateloader" ).show();
+	$( ".datenavloader" ).hide();	
+$( ".ducktext" ).show();
+	$( ".ducknavloader" ).hide();
 	
 	
 	}, 2000);
@@ -1817,15 +1819,17 @@ if (recent_all[0].id == graphid || recent_all[1].id == graphid || recent_all[2].
 //}
 //else{   $( ".recent-helper" ).show();}   
     
-	$( ".homedate" ).removeClass("disabled");
-	$( ".homeduck" ).removeClass("disabled");
+
 
 	setTimeout(function(){
 	
+		$( ".homedate" ).removeClass("disabled");
+	$( ".homeduck" ).removeClass("disabled");
+		
 		$( ".datetext" ).show();
-	$( ".dateloader" ).show();	
-$( ".datetext" ).show();
-	$( ".dateloader" ).show();
+	$( ".datenavloader" ).hide();	
+$( ".ducktext" ).show();
+	$( ".ducknavloader" ).hide();
 	
 	
 	}, 2000);
