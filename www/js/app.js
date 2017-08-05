@@ -1273,6 +1273,24 @@ else{}
 
 function getMatches(){
 
+	$( ".content-here" ).empty();            
+
+
+randomswiper.removeAllSlides();
+nearbyswiper.removeAllSlides();
+recentswiper.removeAllSlides();
+randomswiper.update();
+nearbyswiper.update();
+recentswiper.update();
+ $( ".results-loader" ).show(); 
+
+
+          $( ".home-title" ).hide(); 
+          
+          $( ".nearby-helper" ).hide(); 
+                    $( ".recent-helper" ).hide(); 
+	$( ".summary-helper" ).hide(); 
+	
 	//alert('getmatch trigger' + homewant);
 	
 //can put any ads here
@@ -1925,9 +1943,32 @@ $.post( "http://www.dateorduck.com/updatelocation.php", { projectid:f_projectid,
 
 	var timesincelastupdate = Math.round(+new Date()/1000) - geoupdate;
 
-	alert(timesincelastupdate);
 	
-  getMatches();
+	
+	if (timesincelastupdate > 10){geoupdate = Math.round(+new Date()/1000);getMatches();}
+	else {
+	
+		 $( ".results-loader" ).show(); 
+		$( ".swiper-random" ).hide();
+		$( ".swiper-nearby" ).hide();
+		$( ".swiper-recent" ).hide();
+	
+		setTimeout(function(){ 
+		
+					 $( ".results-loader" ).hide(); 
+		$( ".swiper-random" ).show();
+		$( ".swiper-nearby" ).show();
+		$( ".swiper-recent" ).show();
+		
+		
+		}, 2000);
+		
+		
+	}
+	
+	
+	
+  
   
  
   
@@ -2216,25 +2257,9 @@ if(((obj.second_number != f_uid) && (obj.secondnumberduck == 'Y')) && ((obj.firs
    
 });
 
-$( ".content-here" ).empty();            
 
-
-randomswiper.removeAllSlides();
-nearbyswiper.removeAllSlides();
-recentswiper.removeAllSlides();
-randomswiper.update();
-nearbyswiper.update();
-recentswiper.update();
- 
-
-
-          $( ".home-title" ).hide(); 
           
-          $( ".nearby-helper" ).hide(); 
-                    $( ".recent-helper" ).hide(); 
-	$( ".summary-helper" ).hide(); 
-          
-$( ".results-loader" ).show();          
+         
 getWifilocation();
     
 
