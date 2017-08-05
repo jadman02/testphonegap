@@ -1065,6 +1065,61 @@ ptrContent.on('ptr:refresh', function (e) {
 		
 		alert('need to add randomly now');
 		
+		for (i = 0; i < random_all.length; i++) { 
+var index1 = f_date_match.indexOf(random_all[i].id);
+var index2 = f_duck_match.indexOf(random_all[i].id);
+var index3 = f_duck_me.indexOf(random_all[i].id);
+var index4 = f_date_me.indexOf(random_all[i].id);
+
+
+
+var slidewidth = $( document ).width() / 2.5;
+var imagestyle;
+imagestyle='width:100%;max-height:' + slidewidth + 'px;overflow:hidden;';
+
+var randomid = Math.floor(Math.random() * (1000000000 - 0 + 1));
+
+
+var slidecontent;
+if (index1 > -1) {
+slidecontent = '<div class="age_'+random_all[i].age+' swiper-slide slide_'+random_all[i].id+'" style="text-align:center;padding-top:3px;padding-left:3px;"><span class="preloader default_'+randomid+'"></span><div style="width:'+slidewidth+'px;margin:0 auto;"><div style="position:absolute;right:-2px;top:0px;" class="arrowdivhome_'+random_all[i].id+' maindivhome_'+randomid+'"></div><div class="distance_'+random_all[i].id+'" style="display:none;width:50px;background-color:#2196f3;color:white;z-index:999;padding:0.5px;position:absolute;left: 3px;z-index:1000;font-size:12px;"></div><img crossOrigin="Anonymous" id="photo_'+random_all[i].id+'" class="swiper-lazy pp photo_'+random_all[i].id+' photo_'+randomid+'" data-src="'+random_all[i].profilepicstringsmall+'" onload="mainLoaded(\''+random_all[i].id+'\',\''+randomid+'\');" style="display:none;'+imagestyle+'-webkit-filter:none;overflow:hidden;margin-top:0px;"/><div style="bottom:0px;right:0px;position:absolute;width:50px;overflow-x:hidden;height:50px;overflow-y:hidden;display:none;" class="icondiv iconpos_'+random_all[i].id+'"><img src="media/datefaceonly.png" style="width:100px;"></div><p class="name_'+random_all[i].id+'" style="clear:both;font-weight:bold;margin-left:23px;margin-top:-30px;color:white;font-size:15px;text-align:left;"></p></div></div>';   
+}
+
+else if (index2 > -1) {
+slidecontent = '<div class="age_'+random_all[i].age+' swiper-slide slide_'+random_all[i].id+'" style="text-align:center;padding-top:3px;padding-left:3px;"><span class="preloader default_'+randomid+'"></span><div style="width:'+slidewidth+'px;margin:0 auto;"><div style="position:absolute;right:2px;top:0px;" class="arrowdivhome_'+random_all[i].id+' maindivhome_'+randomid+'"></div><div class="distance_'+random_all[i].id+'" style="display:none;width:50px;background-color:#2196f3;color:white;z-index:999;padding:0.5px;position:absolute;left: 3px;z-index:1000;font-size:12px;"></div><img crossOrigin="Anonymous" id="photo_'+random_all[i].id+'" onload="mainLoaded(\''+random_all[i].id+'\',\''+randomid+'\');" class="photo_'+randomid+' swiper-lazy pp photo_'+graphid+'" data-src="'+random_all[i].profilepicstringsmall+'" style="'+imagestyle+'-webkit-filter:none;display:none;overflow:hidden;margin-top:0px;"/><div style="bottom:0px;right:0px;position:absolute;width:50px;overflow-x:hidden;height:50px;overflow-y:hidden;display:none;" class="icondiv iconpos_'+random_all[i].id+'"><img src="media/duckfaceonly.png" style="width:100px;"></div><p class="name_'+random_all[i].id+'" style="clear:both;font-weight:bold;margin-left:23px;margin-top:-30px;color:white;font-size:15px;text-align:left;"></p></div></div>';    
+
+} 
+
+
+
+else if (index3 > -1) {
+slidecontent = '<div class="age_'+random_all[i].age+' swiper-slide slide_'+random_all[i].id+'" style="text-align:center;padding-top:3px;padding-left:3px;"><span class="preloader default_'+randomid+'"></span><div style="width:'+slidewidth+'px;margin:0 auto;"><div style="position:absolute;right:2px;top:0px;" class="arrowdivhome_'+random_all[i].id+' maindivhome_'+randomid+'"></div><div class="distance_'+random_all[i].id+'" style="display:none;width:50px;background-color:#ccc;color:white;z-index:999;padding:0.5px;position:absolute;left: 3px;z-index:1000;font-size:12px;"></div><img crossOrigin="Anonymous" id="photo_'+random_all[i].id+'" onload="mainLoaded(\''+random_all[i].id+'\',\''+randomid+'\');" class="photo_'+randomid+' swiper-lazy pp photo_'+graphid+'" data-src="'+random_all[i].profilepicstringsmall+'" style="'+imagestyle+'-webkit-filter:grayscale(80%);overflow:hidden;display:none;margin-top:0px;"/><div style="bottom:0px;right:0px;position:absolute;width:50px;overflow-x:hidden;height:50px;overflow-y:hidden;-webkit-filter:grayscale(1%);display:none;" class="icondiv iconpos_'+random_all[i].id+'"><img src="media/duckfaceonly.png" style="width:100px;"></div><p class="name_'+random_all[i].id+'" style="-webkit-filter:grayscale(80%);clear:both;font-weight:bold;margin-left:23px;margin-top:-30px;color:white;font-size:15px;text-align:left;"></p></div></div>';           
+} 
+
+
+else if (index4 > -1) {
+slidecontent = '<div class="age_'+random_all[i].age+' swiper-slide slide_'+random_all[i].id+'" style="text-align:center;padding-top:3px;padding-left:3px;"><span class="preloader default_'+randomid+'"></span><div style="width:'+slidewidth+'px;margin:0 auto;"><div style="position:absolute;right:2px;top:0px;" class="arrowdivhome_'+random_all[i].id+' maindivhome_'+randomid+'"></div><div class="distance_'+random_all[i].id'" style="display:none;width:50px;background-color:#ccc;color:white;z-index:999;padding:0.5px;position:absolute;left: 3px;z-index:1000;font-size:12px;"></div><img crossOrigin="Anonymous" id="photo_'+random_all[i].id+'" onload="mainLoaded(\''+random_all[i].id+'\',\''+randomid+'\');" class="photo_'+randomid+' swiper-lazy pp photo_'+graphid+'" data-src="'+random_all[i].profilepicstringsmall+'" style="'+imagestyle+'-webkit-filter:grayscale(80%);overflow:hidden;display:none;margin-top:0px;"/><div style="bottom:0px;right:0px;position:absolute;width:50px;overflow-x:hidden;height:50px;overflow-y:hidden;-webkit-filter:grayscale(1%);display:none;" class="icondiv iconpos_'+random_all[i].id+'"><img src="media/datefaceonly.png" style="width:100px;"></div><p class="name_'+random_all[i].id+'" style="-webkit-filter:grayscale(80%);clear:both;font-weight:bold;margin-left:23px;margin-top:-30px;color:white;font-size:15px;text-align:left;"></p></div></div>';      
+} 
+
+
+else {
+slidecontent = '<div class="age_'+random_all[i].age+' swiper-slide slide_'+random_all[i].id+'" style="text-align:center;padding-top:3px;padding-left:3px;"><span class="preloader default_'+randomid+'"></span><div style="width:'+slidewidth+'px;margin:0 auto;"><div style="position:absolute;right:2px;top:0px;" class="arrowdivhome_'+random_all[i].id+' maindivhome_'+randomid+'"></div><div class="distance_'+random_all[i].id+'" style="display:none;width:50px;background-color:#ccc;color:white;z-index:999;padding:0.5px;position:absolute;left: 3px;z-index:1000;font-size:12px;"></div><img crossOrigin="Anonymous" id="photo_'+random_all[i].id+'" onload="mainLoaded(\''+random_all[i].id+'\',\''+randomid+'\');" class="photo_'+randomid+' swiper-lazy pp photo_'+graphid+'" data-src="'+random_all[i].profilepicstringsmall+'" style="'+imagestyle+'-webkit-filter:grayscale(80%);overflow:hidden;display:none;margin-top:0px;"><div style="bottom:0px;right:0px;position:absolute;width:50px;overflow-x:hidden;height:50px;overflow-y:hidden;display:none;" class="icondiv iconpos_'+random_all[i].id+'"></div><p class="name_'+random_all[i].id+'" style="-webkit-filter:grayscale(80%);clear:both;font-weight:bold;margin-top:-30px;color:white;font-size:15px;text-align:left;float:left;margin-left:23px;"></p></div></div>';    
+
+}
+
+randomswiper.appendSlide(slidecontent);
+
+if (i == 0 || i==1 || i==3){
+   
+
+ $(".photo_"+random_all[i].id).attr("src", random_all[i].profilepicstringsmall); 
+
+}
+			
+			
+			
+}
+		
 		 $( ".results-loader" ).show(); 
 		$( ".swiper-random" ).hide();
 		$( ".swiper-nearby" ).hide();
@@ -1824,7 +1879,7 @@ if (fetch == 'random'){randomswiper.appendSlide(slidecontent);
 
   
 
-random_all.push({hometown:hometown_d,widthslides:result[i].widthslides,heightslides:result[i].heightslides,availarraystring:availarraystring,minutes:diff,distancenumber:distance,distancestring:distancestring,photocount:photocount,photos:photostring,name:matchname,age:subtract,description:matchdescription,id:graphid,url:'https://graph.facebook.com/'+graphid+'/picture?width=828',caption:'...',industry: industry_d, status: status_d, politics:politics_d,eyes:eyes_d,body:body_d,religion:religion_d,zodiac:zodiac_d,ethnicity:ethnicity_d,height:height_d,weight:weight_d});
+random_all.push({profilepicstringsmall:profilepicstringsmall,hometown:hometown_d,widthslides:result[i].widthslides,heightslides:result[i].heightslides,availarraystring:availarraystring,minutes:diff,distancenumber:distance,distancestring:distancestring,photocount:photocount,photos:photostring,name:matchname,age:subtract,description:matchdescription,id:graphid,url:'https://graph.facebook.com/'+graphid+'/picture?width=828',caption:'...',industry: industry_d, status: status_d, politics:politics_d,eyes:eyes_d,body:body_d,religion:religion_d,zodiac:zodiac_d,ethnicity:ethnicity_d,height:height_d,weight:weight_d});
 
 if (random_all[0].id == graphid || random_all[1].id == graphid || random_all[2].id == graphid){
    
