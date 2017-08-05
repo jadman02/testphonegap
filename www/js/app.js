@@ -2018,10 +2018,10 @@ if (f_gender == 'Female' && f_interested == 'Men') {sexuality = 'female';}
        
    if (loadpref=== false){
   if(homewant){
-       if (homewant == 'offline'){$( ".homedate" ).removeClass('active');$( ".homeduck" ).removeClass('active');$( ".datenavpic" ).hide();$( ".ducknavpic" ).hide();$( ".navor" ).show(); }
-     if (homewant == 'dateduck'){$( ".homedate" ).addClass('active');$( ".homeduck" ).addClass('active');$( ".datenavpic" ).show();$( ".ducknavpic" ).show();$( ".navor" ).hide(); }
-   if (homewant == 'duck'){$( ".homedate" ).removeClass('active');$( ".homeduck" ).addClass('active');$( ".datenavpic" ).show();$( ".ducknavpic" ).show(); $( ".navor" ).hide();}
-    if (homewant == 'date'){$( ".homedate" ).addClass('active');$( ".homeduck" ).removeClass('active');$( ".datenavpic" ).show();$( ".ducknavpic" ).show();$( ".navor" ).hide(); }
+       if (homewant == 'offline'){$( ".homedate" ).removeClass('active');$( ".homeduck" ).removeClass('active');$( ".datenavpic" ).hide();$( ".ducknavpic" ).hide();$( ".navor" ).show();$( ".ducknavloader" ).hide();$( ".datenavloader" ).hide();$( ".ducktext" ).show();$( ".datetext" ).show(); }
+     if (homewant == 'dateduck'){$( ".homedate" ).addClass('active');$( ".homeduck" ).addClass('active');$( ".datenavpic" ).show();$( ".ducknavpic" ).show();$( ".navor" ).hide();$( ".ducknavloader" ).hide();$( ".datenavloader" ).hide();$( ".ducktext" ).show();$( ".datetext" ).show(); }
+   if (homewant == 'duck'){$( ".homedate" ).removeClass('active');$( ".homeduck" ).addClass('active');$( ".datenavpic" ).show();$( ".ducknavpic" ).show(); $( ".navor" ).hide();$( ".ducknavloader" ).hide();$( ".datenavloader" ).hide();$( ".ducktext" ).show();$( ".datetext" ).show();}
+    if (homewant == 'date'){$( ".homedate" ).addClass('active');$( ".homeduck" ).removeClass('active');$( ".datenavpic" ).show();$( ".ducknavpic" ).show();$( ".navor" ).hide();$( ".ducknavloader" ).hide();$( ".datenavloader" ).hide();$( ".ducktext" ).show();$( ".datetext" ).show(); }
 }
 	   loadpref = true;
  establishNotif();
