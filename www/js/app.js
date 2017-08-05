@@ -1038,8 +1038,8 @@ ptrContent.on('ptr:refresh', function (e) {
 	var timesincelastupdate = Math.round(+new Date()/1000) - geoupdate;
 
 	if (firstupdate === false){getPreferences();firstupdate = true;}
-	
-	if (timesincelastupdate > 10){geoupdate = Math.round(+new Date()/1000);}
+	else{
+	if (timesincelastupdate > 10){getPreferences();geoupdate = Math.round(+new Date()/1000);}
 	else {
 	
 		 $( ".results-loader" ).show(); 
@@ -1068,6 +1068,7 @@ ptrContent.on('ptr:refresh', function (e) {
 		
 		}, 2000);
 		
+	}
 		
 	}
 	
