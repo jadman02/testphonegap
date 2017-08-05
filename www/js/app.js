@@ -380,29 +380,55 @@ $( ".summary-helper" ).show();
 });
 }
 
+
+function shownavloader(button){
+if (button === 0){
+$( ".datetext" ).hide();
+	$( ".dateloader" ).hide();
+	
+}
+	else{
+	$( ".ducktext" ).hide();
+	$( ".ducknavloader" ).hide();
+	}
+}
+
+
+
+
 function setWant(val){
 
 	$( ".homedate" ).addClass("disabled");
 	$( ".homeduck" ).addClass("disabled");
 	
+	
+	
+	
 if (val == 0){
    if ($( ".homedate" ).hasClass( "active" )){$( ".homedate" ).removeClass("active");
   
-if ($( ".homeduck" ).hasClass( "active" )){homewant = 'duck';updateWant();$( ".datenavpic" ).show();$( ".ducknavpic" ).show(); }else {homewant = 'offline';updateWant();$( ".datenavpic" ).hide();$( ".ducknavpic" ).hide(); }                                           
+if ($( ".homeduck" ).hasClass( "active" )){homewant = 'duck';updateWant(); 
+					 
+	
+					  
+					  }else {homewant = 'offline';updateWant(); 
+						
+						
+						}                                           
                                             
                                              
                                              } 
 else{$( ".homedate" ).addClass("active");
- if ($( ".homeduck" ).hasClass( "active" )){homewant = 'dateduck';updateWant(); $( ".datenavpic" ).show();$( ".ducknavpic" ).show();}else {homewant = 'date';updateWant(); $( ".datenavpic" ).show();$( ".ducknavpic" ).show();}  
+ if ($( ".homeduck" ).hasClass( "active" )){homewant = 'dateduck';updateWant(); }else {homewant = 'date';updateWant(); }  
     }
 }
 
     if (val == 1){
        if ($( ".homeduck" ).hasClass( "active" )){$( ".homeduck" ).removeClass("active");
-                                             if ($( ".homedate" ).hasClass( "active" )){homewant = 'date';updateWant();$( ".datenavpic" ).show();$( ".ducknavpic" ).show(); }else {homewant = 'offline';updateWant(); $( ".datenavpic" ).hide();$( ".ducknavpic" ).hide();}
+                                             if ($( ".homedate" ).hasClass( "active" )){homewant = 'date';updateWant(); }else {homewant = 'offline';updateWant(); }
                                                  } 
         else{$( ".homeduck" ).addClass("active");
-                                                     if ($( ".homedate" ).hasClass( "active" )){homewant = 'dateduck';updateWant();$( ".datenavpic" ).show();$( ".ducknavpic" ).show(); }else {homewant = 'duck';updateWant(); $( ".datenavpic" ).show();$( ".ducknavpic" ).show();}
+                                                     if ($( ".homedate" ).hasClass( "active" )){homewant = 'dateduck';updateWant(); }else {homewant = 'duck';updateWant(); }
 
             }
 
@@ -1347,6 +1373,17 @@ $( ".login-loader" ).hide();
 $( ".homedate" ).removeClass("disabled");
 	$( ".homeduck" ).removeClass("disabled");
 
+	setTimeout(function(){
+	
+		$( ".datetext" ).show();
+	$( ".dateloader" ).show();	
+$( ".datetext" ).show();
+	$( ".dateloader" ).show();
+	
+	
+	}, 2000);
+
+	
    return false;
 
 }   
@@ -1783,6 +1820,15 @@ if (recent_all[0].id == graphid || recent_all[1].id == graphid || recent_all[2].
 	$( ".homedate" ).removeClass("disabled");
 	$( ".homeduck" ).removeClass("disabled");
 
+	setTimeout(function(){
+	
+		$( ".datetext" ).show();
+	$( ".dateloader" ).show();	
+$( ".datetext" ).show();
+	$( ".dateloader" ).show();
+	
+	
+	}, 2000);
 	
 if (random_all.length === 0){
 
@@ -2018,10 +2064,10 @@ if (f_gender == 'Female' && f_interested == 'Men') {sexuality = 'female';}
        
    if (loadpref=== false){
   if(homewant){
-       if (homewant == 'offline'){$( ".homedate" ).removeClass('active');$( ".homeduck" ).removeClass('active');$( ".datenavpic" ).hide();$( ".ducknavpic" ).hide();$( ".ducknavloader" ).hide();$( ".datenavloader" ).hide();$( ".ducktext" ).show();$( ".datetext" ).show(); }
-     if (homewant == 'dateduck'){$( ".homedate" ).addClass('active');$( ".homeduck" ).addClass('active');$( ".datenavpic" ).show();$( ".ducknavpic" ).show();$( ".ducknavloader" ).hide();$( ".datenavloader" ).hide();$( ".ducktext" ).show();$( ".datetext" ).show(); }
-   if (homewant == 'duck'){$( ".homedate" ).removeClass('active');$( ".homeduck" ).addClass('active');$( ".datenavpic" ).show();$( ".ducknavpic" ).show(); $( ".ducknavloader" ).hide();$( ".datenavloader" ).hide();$( ".ducktext" ).show();$( ".datetext" ).show();}
-    if (homewant == 'date'){$( ".homedate" ).addClass('active');$( ".homeduck" ).removeClass('active');$( ".datenavpic" ).show();$( ".ducknavpic" ).show();$( ".ducknavloader" ).hide();$( ".datenavloader" ).hide();$( ".ducktext" ).show();$( ".datetext" ).show(); }
+       if (homewant == 'offline'){$( ".homedate" ).removeClass('active');$( ".homeduck" ).removeClass('active');$( ".ducknavloader" ).hide();$( ".datenavloader" ).hide();$( ".ducktext" ).show();$( ".datetext" ).show(); }
+     if (homewant == 'dateduck'){$( ".homedate" ).addClass('active');$( ".homeduck" ).addClass('active');$( ".ducknavloader" ).hide();$( ".datenavloader" ).hide();$( ".ducktext" ).show();$( ".datetext" ).show(); }
+   if (homewant == 'duck'){$( ".homedate" ).removeClass('active');$( ".homeduck" ).addClass('active'); $( ".ducknavloader" ).hide();$( ".datenavloader" ).hide();$( ".ducktext" ).show();$( ".datetext" ).show();}
+    if (homewant == 'date'){$( ".homedate" ).addClass('active');$( ".homeduck" ).removeClass('active');$( ".ducknavloader" ).hide();$( ".datenavloader" ).hide();$( ".ducktext" ).show();$( ".datetext" ).show(); }
 }
 	   loadpref = true;
  establishNotif();
