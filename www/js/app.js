@@ -1410,7 +1410,7 @@ function dbCall(fetch){
 
 
 
-alert(data);
+
 
 var resultall = JSON.parse(data); 
 	var result;
