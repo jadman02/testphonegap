@@ -1928,7 +1928,7 @@ console.log('updatedtimestamp');
 }
 
 var geoupdate = Math.round(+new Date()/1000);
-
+var firstupdate = false;
 function updateGeo(){
 
 	
@@ -1943,7 +1943,7 @@ $.post( "http://www.dateorduck.com/updatelocation.php", { projectid:f_projectid,
 
 	var timesincelastupdate = Math.round(+new Date()/1000) - geoupdate;
 
-	
+	if (firstupdate === false){getMatches();firstupdate = true;}
 	
 	if (timesincelastupdate > 10){geoupdate = Math.round(+new Date()/1000);getMatches();}
 	else {
