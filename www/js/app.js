@@ -1101,6 +1101,14 @@ else {slidecontent = '<div class="age_'+random_all[i].age+' swiper-slide slide_'
      }
 			randomswiper.appendSlide(slidecontent);
 
+			if (i == 0 || i==1 || i==2){
+   
+
+ $(".photo_"+random_all[i].id).attr("src", random_all[i].profilepicstringsmall); 
+
+}
+			
+			
 }
 		
 		 $( ".results-loader" ).show(); 
