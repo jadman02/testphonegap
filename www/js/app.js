@@ -1064,8 +1064,7 @@ ptrContent.on('ptr:refresh', function (e) {
 	else {
 	random_all = shuffle(random_all);
 		randomswiper.removeAllSlides();
-		
-		alert('need to add randomly now');
+	
 		
 		for (i = 0; i < random_all.length; i++) { 
 var index1 = f_date_match.indexOf(random_all[i].id);
@@ -10829,7 +10828,7 @@ else {$( ".toolbarq" ).hide();}
 var notifloaded = false;
 function establishNotif(){
 
-alert(notifcount);
+
 if(notifcount) {alert('removing old notifs');firebase.database().ref('notifications/' + f_uid).off('value', notifcount);}
 
 notifcount = firebase.database().ref('notifications/' +f_uid).on('value', function(snapshot) {
