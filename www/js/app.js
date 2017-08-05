@@ -4,6 +4,25 @@ var desktoparray = ['media/dateicon.png','media/duckicon.png','media/datetongue.
 
 
 
+function shuffle(array) {
+  var currentIndex = array.length, temporaryValue, randomIndex;
+
+  // While there remain elements to shuffle...
+  while (0 !== currentIndex) {
+
+    // Pick a remaining element...
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+
+    // And swap it with the current element.
+    temporaryValue = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
+  }
+
+  return array;
+}
+
 function sendNotification(targetto,param){
 
 	 firebase.auth().currentUser.getToken().then(function(idToken) {   
@@ -1041,7 +1060,11 @@ ptrContent.on('ptr:refresh', function (e) {
 	else{
 	if (timesincelastupdate > 10){getPreferences();geoupdate = Math.round(+new Date()/1000);}
 	else {
-	
+	random_all = shuffle(random_all);
+		randomswiper.removeAllSlides();
+		
+		alert('need to add randomly now');
+		
 		 $( ".results-loader" ).show(); 
 		$( ".swiper-random" ).hide();
 		$( ".swiper-nearby" ).hide();
@@ -1321,6 +1344,8 @@ function getMatches(){
 	$( ".content-here" ).empty();            
 
 
+	
+	
 randomswiper.removeAllSlides();
 nearbyswiper.removeAllSlides();
 recentswiper.removeAllSlides();
