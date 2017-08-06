@@ -583,7 +583,7 @@ startApp();
 			     openFB.api({
             path: '/me',
             success: function(data) {
-                console.log(JSON.stringify(data));
+                //console.log(JSON.stringify(data));
 
 		    
 		    FCMPlugin.subscribeToTopic( data.id, function(msg){
@@ -670,8 +670,8 @@ catch (e) {
         openFB.api({
             path: '/me',
             success: function(data) {
-                console.log(JSON.stringify(data));
-                alert(data.name);
+                //console.log(JSON.stringify(data));
+                //alert(data.name);
             },
             error: errorHandler});
     }
@@ -683,7 +683,7 @@ catch (e) {
                 message: document.getElementById('Message').value || 'Date or Duck'
             },
             success: function() {
-                alert('the item was posted on Facebook');
+                //alert('the item was posted on Facebook');
             },
             error: errorHandler});
     }
@@ -906,7 +906,7 @@ facebookConnectPlugin.api("me/permissions", [], cb, cb2);
 	    function revoke() {
         openFB.revokePermissions(
                 function() {
-                    alert('Permissions revoked');
+                    //alert('Permissions revoked');
                 },
                 errorHandler);
 		    
@@ -1069,12 +1069,14 @@ function (error) {
                    $( ".toolbar" ).hide();// alert('Logout successful');
 
 },
-function (error) { alert(error); }
+function (error) { 
+	//alert(error);
+}
 );           
 
     }
     function errorHandler(error) {
-        alert(error.message);
+        //alert(error.message);
     }
         
          function logoutOpen() {
