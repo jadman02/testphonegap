@@ -93,7 +93,7 @@ function appLink(){
 function fcm(){
 NativeKeyboard.showMessenger({
   onSubmit: function(text) {
-    console.log("The user typed: " + text);
+    //console.log("The user typed: " + text);
   }
 });
    
@@ -385,14 +385,16 @@ $( ".summary-helper" ).show();
 
         
    },
-    error: function (jqXHR, textStatus, errorThrown) {console.log(errorThrown);
+    error: function (jqXHR, textStatus, errorThrown) {
+	    //console.log(errorThrown);
     },
     complete: function () {
     }
 });
         
    },
-    error: function (jqXHR, textStatus, errorThrown) {console.log(errorThrown);
+    error: function (jqXHR, textStatus, errorThrown) {
+	    //console.log(errorThrown);
     },
     complete: function () {
     }
@@ -1667,10 +1669,10 @@ var availnotexpired = false;
 
 if(result[i].availstring && (result[i].availstring != '[]') && (result[i].uid != f_uid)){
 
-console.log(result[i].availstring);
+//console.log(result[i].availstring);
   var availablearrayindividual = JSON.parse(result[i].availstring);
 
-console.log(availablearrayindividual);
+//console.log(availablearrayindividual);
 
  for (k = 0; k < availablearrayindividual.length; k++) { 
 if (availablearrayindividual[k].id >= tonight_timestamp){availnotexpired = true;}
@@ -1692,8 +1694,8 @@ if(result[i].largeurl){
 var heightarray = result[i].heightslides.split(",");
 var widtharray = result[i].widthslides.split(",");
 
-console.log(heightarray[0]);
-console.log(widtharray[0]);
+//console.log(heightarray[0]);
+//console.log(widtharray[0]);
 
 if (heightarray[0] > widtharray[0]) {imagestyle = 'width:100%;max-height:' + slidewidth + 'px;overflow:hidden;'}
 if (widtharray[0] > heightarray[0]) {imagestyle = 'height:100%;max-width:' + slidewidth + 'px;overflow:hidden;'}
@@ -1761,7 +1763,7 @@ var zz = new Date();
 var mmn = zz.getTimezoneOffset();
 
 
-console.log(result[i].timestamp);
+//console.log(result[i].timestamp);
 
 var timestampyear = result[i].timestamp.substring(0,4);
 var timestampmonth = result[i].timestamp.substring(5,7);
@@ -2031,7 +2033,7 @@ $.post( "http://www.dateorduck.com/updatelocation.php", { projectid:f_projectid,
 
   .done(function( data ) {
   
-console.log('updatedtimestamp');
+//console.log('updatedtimestamp');
   
  
   
@@ -2816,7 +2818,7 @@ var objs = snapshot.val();
 var obg = [];
 $.each(objs, function(i, obk) {obg.push (obk)});
 
-console.log(obg);
+//console.log(obg);
 
 function compare(a,b) {
   if (a.timestamp > b.timestamp)
@@ -3272,7 +3274,7 @@ firebase.auth().currentUser.getToken().then(function(idToken) {
 $.post( "http://www.dateorduck.com/userdata.php", {projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,uid:f_uid} )
   .done(function( data ) {
   var result = JSON.parse(data); 
- console.log(result);
+ //console.log(result);
 
 
 
@@ -3286,8 +3288,8 @@ $.post( "http://www.dateorduck.com/userdata.php", {projectid:f_projectid,token:i
   f_smallurls = result[0].smallurl.split(',');
   f_largeurls = result[0].largeurl.split(',');
   
-  console.log(result[0].widthslides);
-   console.log(result[0].heightslides);
+  //console.log(result[0].widthslides);
+   //console.log(result[0].heightslides);
   
     addedwidth = result[0].widthslides.split(',');
       addedheight = result[0].heightslides.split(',');
@@ -3388,8 +3390,8 @@ if ($( ".photosliderinfo" ).hasClass('pictures')){
 f_smallurls.splice(myswiperphotos.clickedIndex, 1);
 addedwidth.splice(myswiperphotos.clickedIndex, 1);
 addedheight.splice(myswiperphotos.clickedIndex, 1);
-console.log(addedwidth);
-console.log(addedheight);
+//console.log(addedwidth);
+//console.log(addedheight);
 
          if (f_largeurls.length === 1){       $( ".photosliderinfo" ).html('You have added '+f_largeurls.length+' photo to your profile');
 }
@@ -3669,50 +3671,50 @@ else {first_number = f_uid;second_number = targetid;}
 
 var theirnotifs = firebase.database().ref('notifications/' + targetid  + '/' + f_uid);
 theirnotifs.remove().then(function() {
-    console.log("their notifs Remove succeeded.")
+    //console.log("their notifs Remove succeeded.")
   })
   .catch(function(error) {
-    console.log("their notifs failed: " + error.message)
+    //console.log("their notifs failed: " + error.message)
   });
   
   var mynotifs = firebase.database().ref('notifications/' + f_uid  + '/' + targetid);
 mynotifs.remove().then(function() {
-    console.log("my notifs Remove succeeded.")
+    //console.log("my notifs Remove succeeded.")
   })
   .catch(function(error) {
-    console.log("my notifs failed: " + error.message)
+    //console.log("my notifs failed: " + error.message)
   });
 
 var theirdates = firebase.database().ref('dates/' + targetid  + '/' + f_uid);
 theirdates.remove().then(function() {
-    console.log("their dates Remove succeeded.")
+    //console.log("their dates Remove succeeded.")
   })
   .catch(function(error) {
-    console.log("their dates failed: " + error.message)
+    //console.log("their dates failed: " + error.message)
   });
   
   var mydates = firebase.database().ref('dates/' + f_uid  + '/' + targetid);
 mydates.remove().then(function() {
-    console.log("my dates Remove succeeded.")
+    //console.log("my dates Remove succeeded.")
   })
   .catch(function(error) {
-    console.log("my dates failed: " + error.message)
+    //console.log("my dates failed: " + error.message)
   });
 
 var ourchats = firebase.database().ref('chats/' + first_number + '/' + second_number);
 ourchats.remove().then(function() {
-    console.log("Chats Remove succeeded.")
+    //console.log("Chats Remove succeeded.")
   })
   .catch(function(error) {
-    console.log("Chats Remove failed: " + error.message)
+    //console.log("Chats Remove failed: " + error.message)
   });
   
 var ourphotochats = firebase.database().ref('photochats/' + first_number + '/' + second_number);
 ourphotochats.remove().then(function() {
-    console.log("PhotoChats Remove succeeded.")
+    //console.log("PhotoChats Remove succeeded.")
   })
   .catch(function(error) {
-    console.log("PhotoChats Remove failed: " + error.message)
+    //console.log("PhotoChats Remove failed: " + error.message)
   });
 
 if (Number(f_uid) > Number(targetid) ) {second_number = f_uid;first_number = targetid;
@@ -4197,7 +4199,7 @@ var unixleft = d_chat_expire - newtonight_timestamp;
 
 var daysleft = unixleft / 86400;
 
-console.log('daysleft' + daysleft);
+//console.log('daysleft' + daysleft);
 
 var weekdaynamew = weekday[expiredateobject.getDay()];
 
@@ -4205,8 +4207,8 @@ if(daysleft <= 0){chatdaystring = 'Today';}
 else if(daysleft === 1){chatdaystring = 'Tomorrow';}
 else chatdaystring = weekdaynamew;
 
-console.log(unixleft);
-console.log(daysleft);
+//console.log(unixleft);
+//console.log(daysleft);
 var hoursleft = unixleft / 3600;
 var salut;
 if (daysleft <=0){
@@ -5105,7 +5107,7 @@ $.post( "http://www.dateorduck.com/singleuser.php", {projectid:f_projectid,token
   .done(function( data ) {
 
 
-	console.log(data);
+	//console.log(data);
   var result = JSON.parse(data); 
 
 	
@@ -5581,7 +5583,8 @@ messagetimetitle = messagedate.getHours() + ':' + minstag;
 
 
 var messagedaytitle = weekday[messagedate.getDay()] + ', ' + month[messagedate.getMonth()] + ' ' + messagedate.getDate(); 
-if (!prevdatetitle){prevdatetitle = messagedaytitle;console.log('prevdatetitle does not exist');
+if (!prevdatetitle){prevdatetitle = messagedaytitle;
+		    //console.log('prevdatetitle does not exist');
 
 if (messagedaytitle == todaystring){datechatstring = 'Today';}
 else if (messagedaytitle == yesterdaystring){datechatstring = 'Yesterday';}
@@ -5590,8 +5593,8 @@ else{datechatstring = messagedaytitle;}
 }
 else {
 
-if (prevdatetitle == messagedaytitle){console.log('it is the same day');datechatstring='';}
-else{console.log('it is a different day');prevdatetitle = messagedaytitle;
+if (prevdatetitle == messagedaytitle){datechatstring='';}
+else{prevdatetitle = messagedaytitle;
 
 if (messagedaytitle == todaystring){datechatstring = 'Today';}
 else if (messagedaytitle == yesterdaystring){datechatstring = 'Yesterday';}
@@ -6063,9 +6066,9 @@ var left2load = existingmessages - (additions * 20);
 if (left2load > 20) {letsload = 20;} else {letsload = left2load;}
 
 
-console.log('existingmessages' + existingmessages);
-console.log('letsload' + letsload);
-console.log('additions' + additions);
+//console.log('existingmessages' + existingmessages);
+//console.log('letsload' + letsload);
+//console.log('additions' + additions);
 
 
 var first_number,second_number;
@@ -6098,7 +6101,7 @@ messagetimetitle = messagedate.getHours() + ':' + minstag;
 
 
 var messagedaytitle = weekday[messagedate.getDay()] + ', ' + month[messagedate.getMonth()] + ' ' + messagedate.getDate(); 
-if (!prevdatetitle){prevdatetitle = messagedaytitle;console.log('prevdatetitle does not exist');
+if (!prevdatetitle){prevdatetitle = messagedaytitle;
 
 if (messagedaytitle == todaystring){datechatstring = 'Today'}
 else if (messagedaytitle == yesterdaystring){datechatstring = 'Yesterday'}
@@ -6107,7 +6110,8 @@ else{datechatstring = messagedaytitle;}
 }
 else {
 
-if (prevdatetitle == messagedaytitle){console.log('it is the same day');
+if (prevdatetitle == messagedaytitle){
+	
 //console.log($(".message").length);
 
 if ((letsload < 20) && (message_count == 1) ){
@@ -6119,7 +6123,7 @@ else{datechatstring = messagedaytitle;}
 }
 else {datechatstring='';}
 }
-else{console.log('it is a different day');prevdatetitle = messagedaytitle;
+else{prevdatetitle = messagedaytitle;
 
 if (messagedaytitle == todaystring){datechatstring = 'Today'}
 else if (messagedaytitle == yesterdaystring){datechatstring = 'Yesterday'}
@@ -7432,13 +7436,13 @@ else if (trueh == trueh){
   
   
   
-  console.log(new_all[myPhotoBrowser.activeIndex]);},
+  },
   onImagesReady:function(swiper){
 
 
  
   
-  console.log(swiper);},
+  },
 onInit:function(swiper){
 //console.log(new_all[myPhotoBrowser.activeIndex]);
 // 
@@ -7950,7 +7954,7 @@ messagetimetitle = messagedate.getHours() + ':' + minstag;
 
 
 var messagedaytitle = weekday[messagedate.getDay()] + ', ' + month[messagedate.getMonth()] + ' ' + messagedate.getDate(); 
-if (!prevdatetitle){prevdatetitle = messagedaytitle;console.log('prevdatetitle does not exist');
+if (!prevdatetitle){prevdatetitle = messagedaytitle;
 
 if (messagedaytitle == todaystring){datechatstring = 'Today';}
 else if (messagedaytitle == yesterdaystring){datechatstring = 'Yesterday';}
@@ -7959,8 +7963,8 @@ else{datechatstring = messagedaytitle;}
 }
 else {
 
-if (prevdatetitle == messagedaytitle){console.log('it is the same day');datechatstring='';}
-else{console.log('it is a different day');prevdatetitle = messagedaytitle;
+if (prevdatetitle == messagedaytitle){datechatstring='';}
+else{prevdatetitle = messagedaytitle;
 
 if (messagedaytitle == todaystring){datechatstring = 'Today';}
 else if (messagedaytitle == yesterdaystring){datechatstring = 'Yesterday';}
@@ -8849,7 +8853,7 @@ var messageq;
 
 //If existing notifications, get number of unseen messages, delete old notifications
 
-console.log(snapshot.val());
+//console.log(snapshot.val());
 if (snapshot.val()){
 
 $.each(objs, function(i, obj) {
@@ -8862,7 +8866,7 @@ $.each(objs, function(i, obj) {
     if ((obj.from_uid == f_uid)&&(obj.received == 'N') ){
     
        messageq = obj.new_message_count;
-       console.log(messageq);
+       //console.log(messageq);
        messageq ++;
        
     
@@ -8969,7 +8973,7 @@ firebase.database().ref("dates/" + f_uid +'/' + targetid).remove().then(function
  noMessages();
  setDate();
   
-  console.log('deleted');
+  //console.log('deleted');
   
 }).catch(function(error) {
   // Uh-oh, an error occurred!
@@ -8979,7 +8983,7 @@ firebase.database().ref("dates/" + f_uid +'/' + targetid).remove().then(function
 firebase.database().ref("dates/" + targetid +'/' + f_uid).remove().then(function() {
   // File deleted successfully
 
-  console.log('deleted');
+  //console.log('deleted');
   
 }).catch(function(error) {
   // Uh-oh, an error occurred!
@@ -9071,7 +9075,7 @@ var t_unix = Math.round(+new Date()/1000);
   updates['notifications/' + targetid + '/' + f_uid] = targetData;
 
   return firebase.database().ref().update(updates).then(function() {
-console.log('delete notification sent');
+//console.log('delete notification sent');
       
   });
 }
@@ -9119,7 +9123,7 @@ messagetimetitle = messagedate.getHours() + ':' + minstag;
 
 
 var messagedaytitle = weekday[messagedate.getDay()] + ', ' + month[messagedate.getMonth()] + ' ' + messagedate.getDate(); 
-if (!prevdatetitle){prevdatetitle = messagedaytitle;console.log('prevdatetitle does not exist');
+if (!prevdatetitle){prevdatetitle = messagedaytitle;
 
 if (messagedaytitle == todaystring){datechatstring = 'Today';}
 else if (messagedaytitle == yesterdaystring){datechatstring = 'Yesterday';}
@@ -9128,8 +9132,8 @@ else{datechatstring = messagedaytitle;}
 }
 else {
 
-if (prevdatetitle == messagedaytitle){console.log('it is the same day');datechatstring='';}
-else{console.log('it is a different day');prevdatetitle = messagedaytitle;
+if (prevdatetitle == messagedaytitle){datechatstring='';}
+else{prevdatetitle = messagedaytitle;
 
 if (messagedaytitle == todaystring){datechatstring = 'Today';}
 else if (messagedaytitle == yesterdaystring){datechatstring = 'Yesterday';}
@@ -9155,7 +9159,7 @@ else {first_number = f_uid;second_number = targetid;}
   var eventy = document.getElementById('takePictureField_').files[0];
 
 //  var number_of_pictures = $(".imageli").length + 1;
-  if (eventy == 'undefined') {console.log('undefined');}
+  if (eventy == 'undefined') {}
   if (eventy !== 'undefined') {
 
 for (i = 0; i < document.getElementById('takePictureField_').files.length; i++) { 
@@ -9321,8 +9325,8 @@ $.each(objs, function(i, obj) {
        firebase.database().ref("notifications/" + targetid + '/' + f_uid).remove();
     
     
-    console.log(obj.received);
-    console.log(obj.from_uid);
+    //console.log(obj.received);
+    //console.log(obj.from_uid);
     if ((obj.from_uid == f_uid)&&(obj.received == 'N') ){
     
        messageq = obj.new_message_count;
@@ -10325,7 +10329,7 @@ var t_unix = Math.round(+new Date()/1000);
   updates['notifications/' + targetid + '/' + f_uid] = targetData;
 
   return firebase.database().ref().update(updates).then(function() {
-console.log('delete notification sent');
+//console.log('delete notification sent');
       
   });
 }
@@ -10340,7 +10344,7 @@ var messageq = 0;
 
 //If existing notifications, get number of unseen messages, delete old notifications
 
-console.log(snapshot.val());
+//console.log(snapshot.val());
 if (snapshot.val()){
 
 $.each(objs, function(i, obj) {
@@ -10621,58 +10625,58 @@ for (i = 0; i < matchesarray.length; i++) {
 
 var mymatches = firebase.database().ref('matches/' + f_uid + '/' + matchesarray[i]);
 mymatches.remove().then(function() {
-    console.log("My matches Remove succeeded.")
+    //console.log("My matches Remove succeeded.")
   })
   .catch(function(error) {
-    console.log("My matches  Remove failed: " + error.message)
+    //console.log("My matches  Remove failed: " + error.message)
   });
 
 var theirmatches = firebase.database().ref('matches/' + matchesarray[i]  + '/' + f_uid);
 theirmatches.remove().then(function() {
-    console.log("Their matches Remove succeeded.")
+    //console.log("Their matches Remove succeeded.")
   })
   .catch(function(error) {
-    console.log("Their matches Remove failed: " + error.message)
+    //console.log("Their matches Remove failed: " + error.message)
   });
 
 var mydates = firebase.database().ref('dates/' + f_uid + '/' + matchesarray[i]);
 mydates.remove().then(function() {
-    console.log("My dates Remove succeeded.")
+    //console.log("My dates Remove succeeded.")
   })
   .catch(function(error) {
-    console.log("My dates  Remove failed: " + error.message)
+    //console.log("My dates  Remove failed: " + error.message)
   });
 
 var theirdates = firebase.database().ref('dates/' + matchesarray[i]  + '/' + f_uid);
 theirdates.remove().then(function() {
-    console.log("Their dates Remove succeeded.")
+    //console.log("Their dates Remove succeeded.")
   })
   .catch(function(error) {
-    console.log("Their dates Remove failed: " + error.message)
+    //console.log("Their dates Remove failed: " + error.message)
   });
 
 var theirnotifs = firebase.database().ref('notifications/' + matchesarray[i]  + '/' + f_uid);
 theirnotifs.remove().then(function() {
-    console.log("their notifs Remove succeeded.")
+    //console.log("their notifs Remove succeeded.")
   })
   .catch(function(error) {
-    console.log("their notifs failed: " + error.message)
+    //console.log("their notifs failed: " + error.message)
   });
 
 var ourchats = firebase.database().ref('chats/' + firstnumberarray[i] + '/' + secondnumberarray[i]);
 ourchats.remove().then(function() {
-    console.log("Chats Remove succeeded.")
+    //console.log("Chats Remove succeeded.")
   })
   .catch(function(error) {
-    console.log("Chats Remove failed: " + error.message)
+    //console.log("Chats Remove failed: " + error.message)
   });
   
 var ourphotochats = firebase.database().ref('photochats/' + firstnumberarray[i] + '/' + secondnumberarray[i]);
 ourphotochats.remove().then(function() {
-    console.log("PhotoChats Remove succeeded.")
+    //console.log("PhotoChats Remove succeeded.")
   })
   .catch(function(error) {
-    console.log("PhotoChats Remove failed: " + error.message)
+    //console.log("PhotoChats Remove failed: " + error.message)
   });  
 
 }
@@ -10681,7 +10685,7 @@ ourphotochats.remove().then(function() {
 
 firebase.database().ref("notifications/" + f_uid).once("value", function(snapshot) {
 var objs = snapshot.val();
-console.log(objs);
+//console.log(objs);
 
 
 
@@ -10693,10 +10697,10 @@ if (obj.from_uid == f_uid){targetdeleteid = obj.to_uid} else{targetdeleteid = ob
 
 var mynotifs = firebase.database().ref('notifications/' + f_uid  + '/' + targetdeleteid);
 mynotifs.remove().then(function() {
-    console.log("my notifs Remove succeeded.")
+    //console.log("my notifs Remove succeeded.")
   })
   .catch(function(error) {
-    console.log("my notifs failed: " + error.message)
+    //console.log("my notifs failed: " + error.message)
   });
 
 });
@@ -10719,7 +10723,7 @@ firebase.database().ref('users/' + f_uid).set({
 firebase.auth().currentUser.getToken().then(function(idToken) { 
 $.post( "http://www.dateorduck.com/deleteuser.php", { projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,uid:f_uid} )
   .done(function( data ) {
-  console.log(data);
+  //console.log(data);
 
 firebase.database().ref('/photostodelete/' + f_uid).once('value').then(function(snapshot) {
 
@@ -10751,7 +10755,7 @@ desertRef.delete().then(function() {
   
 }).catch(function(error) {
   
-  console.log(error);
+  //console.log(error);
 });
 
 });
@@ -10829,7 +10833,7 @@ var notifloaded = false;
 function establishNotif(){
 
 
-if(notifcount) {alert('removing old notifs');firebase.database().ref('notifications/' + f_uid).off('value', notifcount);}
+if(notifcount) {firebase.database().ref('notifications/' + f_uid).off('value', notifcount);}
 
 notifcount = firebase.database().ref('notifications/' +f_uid).on('value', function(snapshot) {
 
@@ -11079,7 +11083,7 @@ $( ".photoloader").hide();
 
 if (response.data.length === 0){$( ".loadmorebuttonphotos").hide();$( "#nophotosfound").show();return false;}
 
-console.log(response);
+//console.log(response);
 
 
 
@@ -11091,7 +11095,7 @@ for (i = 0; i < response.data.length; i++) {
 
 
 var alreadyselected = addedsmallarray.indexOf(response.data[i].source);
-console.log(response.data[i]);
+//console.log(response.data[i]);
 
 if (alreadyselected == -1) {
     swiperPhotos.appendSlide('<div class="swiper-slide slidee slidee_'+photonumber+' largeurl_'+response.data[i].source+' smallurl_'+response.data[i].source+' id_'+response.data[i].id+'" style="background-image:url(\''+response.data[i].source+'\');height:180px;width:180px;background-size:cover;background-position:50% 50%;"><div style="width:40px;height:40px;border-radius:50%;position:absolute;top:50%;left:50%;margin-left:-28px;margin-top:-28px;"><i class="pe-7s-check check_'+photonumber+' pe-4x" style="display:none;color:#4cd964;"></i></div><input type="hidden" class="width_'+response.data[i].id+'" value="'+response.data[i].width+'"><input type="hidden" class="height_'+response.data[i].id+'" value="'+response.data[i].height+'"><br></div>');
@@ -11327,7 +11331,7 @@ addedlargearray.splice(indexdeletedsl, 1);
 addedheight.splice(indexdeletedsl, 1);
 addedwidth.splice(indexdeletedsl, 1);
 
-console.log(addedheight);
+//console.log(addedheight);
 
 }
 else{$( ".slidee_" + swiper.clickedIndex).addClass('slidee-selected');$( ".close_" + swiper.clickedIndex).hide();$( ".check_" + swiper.clickedIndex).show();
@@ -11646,7 +11650,7 @@ var newheight = "";
 firebase.auth().currentUser.getToken().then(function(idToken) { 
 $.post( "http://www.dateorduck.com/updatephotos.php", { projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,uid:f_uid,largeurls:newlarge,smallurls:newsmall,height:newheight,width:newwidth} )
   .done(function( data ) {
-console.log('deleted all');
+//console.log('deleted all');
 
 });
   }).catch(function(error) {
@@ -12529,7 +12533,7 @@ var todayday = weekday[d.getDay()];
 
 
 
-console.log(todayday);
+//console.log(todayday);
 s_namesonly.push(todayday);
 
         
@@ -12583,7 +12587,7 @@ else {dending = 'th'}
 
 dateinfo.push(daynumber + dending + ' ' + monthNames[tomorrowdate.getMonth()] + ', ' + tomorrowdate.getFullYear());
 
-console.log('tomorrow is' + tomorrowday);
+//console.log('tomorrow is' + tomorrowday);
 s_namesonly.push(tomorrowday);
 
 s_alldays_values.push(tomorrow_timestamp);
@@ -12604,7 +12608,7 @@ else {dending = 'th'}
 
 n = weekday[datz.getDay()];
 qqq = weekday[datz.getDay() - 1];
-console.log(n);
+//console.log(n);
 s_alldays_names.push(n + ' ' + daynumber + dending);
 
 dateinfo.push(daynumber + dending + ' ' + monthNames[datz.getMonth()] + ', ' + datz.getFullYear());
@@ -12612,9 +12616,9 @@ dateinfo.push(daynumber + dending + ' ' + monthNames[datz.getMonth()] + ', ' + d
 s_namesonly.push(n);
 }
 s_namesonly.push(n);
-console.log(s_namesonly);
+//console.log(s_namesonly);
 
-console.log(s_alldays_values);
+//console.log(s_alldays_values);
 
 for (i = 0; i < s_alldays_names.length; i++) { 
 
