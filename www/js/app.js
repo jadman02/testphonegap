@@ -11577,9 +11577,7 @@ $( ".numbersul" ).append(
 );
 $( ".sortableul" ).append(
 ' <li style="margin-top:10px;">'+
-      '  <div class="item-content sortdivb" style="background-image:url(\''+f_largeurls[i]+'\');background-size:cover;background-position:50% 50%;height:80px;">'+
-      ' <input type="text" value="'+addedwidth[i]+'">'+
-	' <input type="text" value="'+addedheight[i]+'">'+
+      '  <div class="item-content sortdivb" data-width="'+addedwidth[i]+'" data-height="'+addedheight[i]+'" style="background-image:url(\''+f_largeurls[i]+'\');background-size:cover;background-position:50% 50%;height:80px;">'+
 	' </div>'+
        ' <div class="sortable-handler" style="width:100%;height:80px;"></div>'+
      ' </li>'
@@ -11604,9 +11602,15 @@ var newurl = [];
 $( ".sortdivb" ).each(function() {
 
 var bg = $(this).css("background-image");
+	var valuewidth = $(this).attr("data-width");
+	var valueheight = $(this).attr("data-height");
 bg = bg.replace(/.*\s?url\([\'\"]?/, '').replace(/[\'\"]?\).*/, '');
 
 newurl.push(bg);
+
+	
+newwidthchange.push(valuewidth);	
+newheightchange.push(valueheight);	
 });
 
 
