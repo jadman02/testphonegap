@@ -3414,7 +3414,7 @@ image_url:f_largeurls[0]
 	    if (myswiperphotos.slides.length === 0){
 	       
 	       firebase.database().ref('users/' + f_uid).update({
-image_url:'https://graph.facebook.com/'+f_uid+'/picture?width=828'
+image_url:'https://graph.facebook.com/'+f_uid+'/picture?width=100'
   }).then(function() {});
 	       
        $( ".reorderbutton" ).addClass('disabled');
@@ -11685,7 +11685,7 @@ var newwidth = "";
 var newheight = "";
 
 	  firebase.database().ref('users/' + f_uid).update({
-image_url:'https://graph.facebook.com/'+f_uid+'/picture?width=828'
+image_url:'https://graph.facebook.com/'+f_uid+'/picture?width=100'
   }).then(function() {});
 	  
 firebase.auth().currentUser.getToken().then(function(idToken) { 
