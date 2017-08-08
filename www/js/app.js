@@ -11606,9 +11606,7 @@ newurl.push(bg);
 });
 
 
-firebase.database().ref('users/' + f_uid).update({
-image_url:newurl[0]
-  }).then(function() {});
+
 
 myswiperphotos.removeAllSlides();
 for (i = 0; i < newurl.length; i++) { 
@@ -11636,7 +11634,7 @@ var newlarge = newurl.toString();
 firebase.auth().currentUser.getToken().then(function(idToken) { 
 $.post( "http://www.dateorduck.com/updatephotos.php", { projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,uid:f_uid,largeurls:newlarge,smallurls:newsmall} )
   .done(function( data ) {
-
+alert(data);
 
 });
     }).catch(function(error) {
@@ -11644,6 +11642,10 @@ $.post( "http://www.dateorduck.com/updatephotos.php", { projectid:f_projectid,to
 });
 f_largeurls = newurl;
 
+	firebase.database().ref('users/' + f_uid).update({
+image_url:f_largeurls[0]
+  }).then(function() {});
+	
 }
 
 function deleteAllPhotos(){
