@@ -11630,9 +11630,12 @@ else{       $( ".photosliderinfo" ).html('You have added '+f_largeurls.length+' 
        
 var newsmall = newurl.toString();
 var newlarge = newurl.toString();
+var newwidth = addedwidth.toString();
+var newheight = addedheight.toString();
 
+	
 firebase.auth().currentUser.getToken().then(function(idToken) { 
-$.post( "http://www.dateorduck.com/updatephotos.php", { projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,uid:f_uid,largeurls:newlarge,smallurls:newsmall} )
+$.post( "http://www.dateorduck.com/updatephotos.php", { projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,uid:f_uid,largeurls:newlarge,smallurls:newsmall,height:newheight,width:newwidth} )
   .done(function( data ) {
 alert(data);
 
