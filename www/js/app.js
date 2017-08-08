@@ -11578,7 +11578,9 @@ $( ".numbersul" ).append(
 $( ".sortableul" ).append(
 ' <li style="margin-top:10px;">'+
       '  <div class="item-content sortdivb" style="background-image:url(\''+f_largeurls[i]+'\');background-size:cover;background-position:50% 50%;height:80px;">'+
-       ' </div>'+
+      ' <input type="text" value="'+addedwidth[i]+'">'+
+	' <input type="text" value="'+addedheight[i]+'">'+
+	' </div>'+
        ' <div class="sortable-handler" style="width:100%;height:80px;"></div>'+
      ' </li>'
 
@@ -11596,6 +11598,8 @@ function closeReorder(){
 
 function changeOrder(){
 var newurl = [];
+	var newwidthchange = [];
+	var newheightchange = [];
 
 $( ".sortdivb" ).each(function() {
 
@@ -11630,8 +11634,8 @@ else{       $( ".photosliderinfo" ).html('You have added '+f_largeurls.length+' 
        
 var newsmall = newurl.toString();
 var newlarge = newurl.toString();
-var newwidth = addedwidth.toString();
-var newheight = addedheight.toString();
+var newwidth = newheightchange.toString();
+var newheight = newheightchange.toString();
 
 	
 firebase.auth().currentUser.getToken().then(function(idToken) { 
