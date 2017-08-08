@@ -791,7 +791,7 @@ f_projectid = firebase.auth().currentUser.toJSON().authDomain.substr(0, firebase
         
          f_first = f_name.substr(0,f_name.indexOf(' '));
          f_email = user.providerData[0].email;
-          f_image = user.providerData[0].photoURL;
+
        
 //	  if (subscribeset){}
 //	  else{
@@ -2140,6 +2140,8 @@ weight_u = snapshot.child("weight").val();
 homewant = snapshot.child("homewant").val();
 recentfriends = snapshot.child("recentfriends").val();
 
+	              f_image = snapshot.child("image_url").val();
+	    
 if (snapshot.child("photoresponse").val()){
 	    
 	    if (snapshot.child("photoresponse").val() == 'Y'){photoresponse = 'Y';f_image = snapshot.child("uploadurl").val();}
@@ -3400,7 +3402,21 @@ else{       $( ".photosliderinfo" ).html('You have added '+f_largeurls.length+' 
   
        deletedphoto = true;
        myswiperphotos.update();
-       if (myswiperphotos.slides.length === 0){
+      
+	    if (myswiperphotos.slides.length > 0){
+	    
+		    firebase.database().ref('users/' + f_uid).update({
+image_url:f_largeurls[0]
+  }).then(function() {});
+	    
+	    }
+	    
+	    if (myswiperphotos.slides.length === 0){
+	       
+	       firebase.database().ref('users/' + f_uid).update({
+image_url:'https://graph.facebook.com/'+f_uid+'/picture?width=828'
+  }).then(function() {});
+	       
        $( ".reorderbutton" ).addClass('disabled');
            $( ".deleteallbutton" ).addClass('disabled');
 
@@ -11395,7 +11411,11 @@ var newlarge = addedlargearray.toString();
 var newwidth = addedwidth.toString();
 var newheight = addedheight.toString();
 
-	alert(addedlargearray[0]);
+	alert();
+	
+	firebase.database().ref('users/' + f_uid).update({
+image_url:addedlargearray[0]
+  }).then(function() {});
 	
 firebase.auth().currentUser.getToken().then(function(idToken) { 
 $.post( "http://www.dateorduck.com/updatephotos.php", { projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,uid:f_uid,largeurls:newlarge,smallurls:newsmall,height:newheight,width:newwidth} )
@@ -11586,7 +11606,9 @@ newurl.push(bg);
 });
 
 
-
+firebase.database().ref('users/' + f_uid).update({
+image_url:newurl[0]
+  }).then(function() {});
 
 myswiperphotos.removeAllSlides();
 for (i = 0; i < newurl.length; i++) { 
@@ -11649,6 +11671,10 @@ var newlarge = "";
 var newwidth = "";
 var newheight = "";
 
+	  firebase.database().ref('users/' + f_uid).update({
+image_url:'https://graph.facebook.com/'+f_uid+'/picture?width=828'
+  }).then(function() {});
+	  
 firebase.auth().currentUser.getToken().then(function(idToken) { 
 $.post( "http://www.dateorduck.com/updatephotos.php", { projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,uid:f_uid,largeurls:newlarge,smallurls:newsmall,height:newheight,width:newwidth} )
   .done(function( data ) {
@@ -11987,7 +12013,7 @@ var popupHTML = '<div class="popup prefpop" style="z-index:11000">'+
 
 
  ' <div class="buttons-row">'+
-          '<a href="#" class="button active" onclick="photosPopup();" style="font-size:17px;border:0;border-radius:0px;background-color:#4cd964;margin-left:5px;margin-right:5px;">Add</a>'+
+          '<a href="#" class="button active" onclick="photosPopup();" style="font-size:17px;border:0;border-radius:0px;background-color:#4cd964;margin-left:5px;margin-right:5px;">Edit</a>'+
           '<a href="#" class="button reorderbutton active disabled" onclick="reorderPhotos();" style="font-size:17px;border:0;border-radius:0px;margin-right:5px;">Re-order</a>'+
             '<a href="#" class="button deleteallbutton active disabled" onclick="deleteAllPhotos();" style="font-size:17px;border:0;border-radius:0px;margin-right:5px;background-color:#ff3b30;color:white">Clear</a>'+
         '</div>'+
