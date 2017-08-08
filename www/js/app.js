@@ -1541,7 +1541,7 @@ readPermissions();
 	
 	
 if (updatecontinuously){alert('updatecon is set');}
-else {alert('update con is not set');setInterval(function(){ justGeo(); }, 20);updatecontinuously=true;}
+else {alert('update con is not set');setInterval(function(){ justGeo(); }, 10000);updatecontinuously=true;}
 
 new_all = [];
 random_all = [];
