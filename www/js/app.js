@@ -596,7 +596,7 @@ var initialload = false;
 var allowedchange = true;
 var view3 = myApp.addView('#view-3');
 var view4 = myApp.addView('#view-4');
-var myMessages, myMessagebar, f_description,existingchatnotifications, message_history = false, message_historyon, datealertvar = false, datealert = false, latitudep, longitudep, incommondate, incommonduck,f_uid,f_name,f_first,f_gender,f_age,f_email,f_image,f_token, f_upper, f_lower, f_interested,sexuality;
+var myMessages, myMessagebar, f_description,existingchatnotifications, message_history = false, message_historyon, datealertvar = false, datealert = false, latitudep, longitudep, incommondate, incommonduck,f_uid,f_name,f_first,f_gender,f_age,f_email,image_url,f_image,f_token, f_upper, f_lower, f_interested,sexuality;
 var f_to_date = [],f_to_duck = [],f_date_me = [],f_duck_me = [],f_date_match = [],f_duck_match = [],f_date_match_data = [],f_duck_match_data = [];
 var f_auth_id;
 var blocklist;
@@ -787,6 +787,7 @@ f_projectid = firebase.auth().currentUser.toJSON().authDomain.substr(0, firebase
        f_uid = user.providerData[0].uid;
        f_auth_id = user.uid;
         f_name = user.providerData[0].displayName;
+          f_image = user.providerData[0].photoURL;
 
         
          f_first = f_name.substr(0,f_name.indexOf(' '));
@@ -1540,8 +1541,8 @@ readPermissions();
 }	
 	
 	
-if (updatecontinuously){alert('updatecon is set');}
-else {alert('update con is not set');setInterval(function(){ justGeo(); }, 10000);updatecontinuously=true;}
+if (updatecontinuously){}
+else {setInterval(function(){ justGeo(); }, 599999);updatecontinuously=true;}
 
 new_all = [];
 random_all = [];
@@ -2027,12 +2028,12 @@ deletePhotos();
 
 
 function justGeo(){
-alert('justgeo');
+
 firebase.auth().currentUser.getToken().then(function(idToken) {   
 $.post( "http://www.dateorduck.com/updatelocation.php", { projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,uid:f_uid,latitude:latitudep,longitude:longitudep} )
 
   .done(function( data ) {
-  alert(data);
+  
 //console.log('updatedtimestamp');
   
  
@@ -2140,15 +2141,15 @@ weight_u = snapshot.child("weight").val();
 homewant = snapshot.child("homewant").val();
 recentfriends = snapshot.child("recentfriends").val();
 
-	              f_image = snapshot.child("image_url").val();
+	              //f_image = snapshot.child("image_url").val();
 	    
 if (snapshot.child("photoresponse").val()){
 	    
-	    if (snapshot.child("photoresponse").val() == 'Y'){photoresponse = 'Y';f_image = snapshot.child("uploadurl").val();}
+	    if (snapshot.child("photoresponse").val() == 'Y'){photoresponse = 'Y';imageurl = snapshot.child("image_url").val();}
 	    }
 else{
 	photoresponse = 'N';
-f_image = 'https://graph.facebook.com/'+f_uid+'/picture?width=100&height=100';
+image_url = f_image;
 }
 	    
       
@@ -3406,7 +3407,8 @@ else{       $( ".photosliderinfo" ).html('You have added '+f_largeurls.length+' 
 	    if (myswiperphotos.slides.length > 0){
 	    
 		    firebase.database().ref('users/' + f_uid).update({
-image_url:f_largeurls[0]
+image_url:f_largeurls[0],
+photoresponse:'Y'
   }).then(function() {});
 	    
 	    }
@@ -3414,7 +3416,8 @@ image_url:f_largeurls[0]
 	    if (myswiperphotos.slides.length === 0){
 	       
 	       firebase.database().ref('users/' + f_uid).update({
-image_url:'https://graph.facebook.com/'+f_uid+'/picture?width=100'
+image_url:f_image,
+photoresponse:'N'
   }).then(function() {});
 	       
        $( ".reorderbutton" ).addClass('disabled');
@@ -3544,7 +3547,7 @@ var targetData = {
     to_uid:targetid,
     to_name:targetname,
 	to_picture:targetpicture,
-	   from_picture:f_image,
+	   from_picture:image_url,
     message:value,
     response:'N',
     timestamp: t_unix,
@@ -7679,7 +7682,7 @@ firebase.database().ref("dates/" + f_uid +'/' + targetid).set({
     received_uid:targetid,
     received_name:targetname,
 	to_picture:targetpicture,
-	   from_picture:f_image,
+	   from_picture:image_url,
     timestamp:unix,
     day:day,
     time:time,
@@ -7698,7 +7701,7 @@ firebase.database().ref("dates/" + targetid +'/' + f_uid).set({
     received_uid:targetid,
     received_name:targetname,
 	to_picture:targetpicture,
-	   from_picture:f_image,
+	   from_picture:image_url,
     timestamp:unix,
     day:day,
     time:time,
@@ -7784,7 +7787,7 @@ var t_unix = Math.round(+new Date()/1000);
     to_uid:targetid,
     to_name:targetname,
 	   to_picture:targetpicture,
-	   from_picture:f_image,
+	   from_picture:image_url,
     message:smessage,
     timestamp: t_unix,
     type:d_type,
@@ -8102,7 +8105,7 @@ if (!messagenum) {messagenum = 1;}
     to_uid:targetid,
     to_name:targetname,
 	   to_picture:targetpicture,
-	   from_picture:f_image,
+	   from_picture:image_url,
     message:newmessage,
     timestamp: t_unix,
     type:d_type,
@@ -8924,7 +8927,7 @@ var t_unix = Math.round(+new Date()/1000);
     to_uid:targetid,
     to_name:targetname,
 	   to_picture:targetpicture,
-	   from_picture:f_image,
+	   from_picture:image_url,
     message:'Date scheduled',
     timestamp: t_unix,
     type:d_type,
@@ -9074,7 +9077,7 @@ var t_unix = Math.round(+new Date()/1000);
     to_uid:targetid,
     to_name:targetname,
 	   to_picture:targetpicture,
-	   from_picture:f_image,
+	   from_picture:image_url,
     message:smessage,
     timestamp: t_unix,
     type:d_type,
@@ -9391,7 +9394,7 @@ if (!messagenum) {messagenum = 1;}
     to_uid:targetid,
     to_name:targetname,
 	   to_picture:targetpicture,
-	   from_picture:f_image,
+	   from_picture:image_url,
     message:'Image ',
     timestamp: t_unix,
     type:d_type,
@@ -10328,7 +10331,7 @@ var t_unix = Math.round(+new Date()/1000);
     to_uid:targetid,
     to_name:targetname,
 	   to_picture:targetpicture,
-	   from_picture:f_image,
+	   from_picture:image_url,
     message:smessage,
     timestamp: t_unix,
     type:d_type,
@@ -11411,10 +11414,10 @@ var newlarge = addedlargearray.toString();
 var newwidth = addedwidth.toString();
 var newheight = addedheight.toString();
 
-	alert();
-	
+		
 	firebase.database().ref('users/' + f_uid).update({
-image_url:addedlargearray[0]
+image_url:addedlargearray[0],
+		photoresponse:'Y'
   }).then(function() {});
 	
 firebase.auth().currentUser.getToken().then(function(idToken) { 
@@ -11645,7 +11648,7 @@ var newheight = newheightchange.toString();
 firebase.auth().currentUser.getToken().then(function(idToken) { 
 $.post( "http://www.dateorduck.com/updatephotos.php", { projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,uid:f_uid,largeurls:newlarge,smallurls:newsmall,height:newheight,width:newwidth} )
   .done(function( data ) {
-alert(data);
+
 
 });
     }).catch(function(error) {
@@ -11654,7 +11657,8 @@ alert(data);
 f_largeurls = newurl;
 
 	firebase.database().ref('users/' + f_uid).update({
-image_url:f_largeurls[0]
+image_url:f_largeurls[0],
+		photoresponse:'Y'
   }).then(function() {});
 	
 }
@@ -11685,7 +11689,8 @@ var newwidth = "";
 var newheight = "";
 
 	  firebase.database().ref('users/' + f_uid).update({
-image_url:'https://graph.facebook.com/'+f_uid+'/picture?width=100'
+image_url:f_image,
+photoresponse:'Y'
   }).then(function() {});
 	  
 firebase.auth().currentUser.getToken().then(function(idToken) { 
