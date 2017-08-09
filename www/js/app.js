@@ -2142,7 +2142,7 @@ homewant = snapshot.child("homewant").val();
 recentfriends = snapshot.child("recentfriends").val();
 
 	              //f_image = snapshot.child("image_url").val();
-	    
+image_url = f_image;	    
 if (snapshot.child("photoresponse").val()){
 	    
 	    if (snapshot.child("photoresponse").val() == 'Y'){photoresponse = 'Y';imageurl = snapshot.child("image_url").val();}
