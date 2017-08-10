@@ -4103,16 +4103,16 @@ var popupHTML = '<div class="popup chatpop">'+
 
 
 
- ' <div class="toolbar-inner date-inner" style="padding-left:0px;padding-right:0px;display:none;text-align:center;background-color:#2196f3;">'+
-'<input id="datemessageq" placeholder="Message (optional)" style="width: calc(100% - 70px);margin-left:5px;background-color:white;max-height:44px;" type="text">'+ 
-'<a href="#" style="z-index:99999999;height:44px;color:white;background-color:#2196f3;float:left;line-height:44px;width:70px;" onclick="processDupdate();"><span style="margin: 0 auto;padding-right:10px;padding-left:10px;">Send</span></a>'+
+ ' <div class="toolbar-inner date-inner" style="padding-left:0px;padding-right:0px;display:none;text-align:center;background-color:white;border-top:1px solid #2196f3;">'+
+'<input id="datemessageq" placeholder="Type your message..(optional)" style="width: calc(100% - 70px);margin-left:5px;background-color:white;max-height:44px;" type="text">'+ 
+    '<a href="#" style="z-index:99999999;height:44px;color:#2196f3;background-color:#2196f3;float:left;line-height:44px;width:100px;" onclick="processDupdate();"><span style="margin: 0 auto;padding-right:10px;padding-left:10px;">Send Request</span></a>'+
 
   
     
     '</div>'+
 
  ' <div class="toolbar-inner message-inner" style="display:none;background-color:white;padding-left:0px;padding-right:0px;border-top:1px solid #2196f3;">'+
-  '<a href="#" class="link icon-only" style="margin-left:5px;"><i class="pe-7s-camera pe-lg" style="color:#2196f3;font-size:28px;"></i><i class="twa twa-bomb" style="z-index:999;margin-left:-10px;margin-top:-15px;"></i></a> <input type="file" size="70" accept="image/*" class="dealPictureField imagenotchosen" id="takePictureField_" onchange="getPicture();" style="background-color:transparent;color:transparent;float:left;cursor: pointer;height:54px;width:50px;z-index:1;opacity:0;margin-top:-12px;margin-left:-50px;"><input id="messagearea" type="text" placeholder="Type your message.." style="border-color:transparent;"><a href="#" class="link sendbutton" onclick="sendMessage();">Send</a>'+
+  '<a href="#" class="link icon-only" style="margin-left:5px;"><i class="pe-7s-camera pe-lg" style="color:#2196f3;font-size:28px;"></i><i class="twa twa-bomb" style="z-index:999;margin-left:-10px;margin-top:-15px;"></i></a> <input type="file" size="70" accept="image/*" class="dealPictureField imagenotchosen" id="takePictureField_" onchange="getPicture();" style="background-color:transparent;color:transparent;float:left;cursor: pointer;height:54px;width:50px;z-index:1;opacity:0;margin-top:-12px;margin-left:-50px;"><input id="messagearea" type="text" placeholder="Type your message.." style="border-color:transparent;"><a href="#" class="link sendbutton" onclick="sendMessage();" style="margin-right:10px;margin-left:10px;">Send</a>'+
   '</div>'+
 '</div>'+  
         '<div class="datedetailsdiv date-button" onclick="noMessages();setDate();dateConfirmationPage(1);" style="display:none;position:absolute;top:44px;text-align:center;height:44px;width:100%;z-index:999999;">'+
