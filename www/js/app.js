@@ -13541,5 +13541,6 @@ $(".color-green").html('View Photo Bombs ('+snapshot.numChildren()+')');
 }
 
 function triggerCam(){
-$('#takePictureField_').trigger('click');   
+	cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
+//$('#takePictureField_').trigger('click');   
 }
