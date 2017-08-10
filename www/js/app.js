@@ -4112,7 +4112,7 @@ var popupHTML = '<div class="popup chatpop">'+
     '</div>'+
 
  ' <div class="toolbar-inner message-inner" style="display:none;background-color:white;padding-left:0px;padding-right:0px;border-top:1px solid #2196f3;">'+
-  '<a href="#" class="link icon-only" style="margin-left:5px;"><i class="pe-7s-camera pe-lg" style="color:#2196f3;font-size:28px;"></i><i class="twa twa-bomb" style="z-index:999;margin-left:-10px;margin-top:-15px;"></i></a> <input type="file" size="70" accept="image/*" class="dealPictureField imagenotchosen" id="takePictureField_" onchange="getPicture();" style="background-color:transparent;color:transparent;float:left;cursor: pointer;height:54px;width:50px;z-index:1;opacity:0;margin-top:-12px;margin-left:-50px;"><input id="messagearea" type="text" placeholder="Type your message.." style="border-color:transparent;"><a href="#" class="link sendbutton" style="margin-right:10px;margin-left:10px;" onclick="sendMessage();">Send</a>'+
+  '<a href="#" class="link icon-only" style="margin-left:5px;"><i class="pe-7s-camera pe-lg" style="color:#2196f3;font-size:28px;"></i><i class="twa twa-bomb" style="z-index:999;margin-left:-10px;margin-top:-15px;"></i></a> <input type="file" size="70" accept="image/*" class="dealPictureField imagenotchosen" id="takePictureField_" onchange="getPicture();" style="background-color:transparent;color:transparent;float:left;cursor: pointer;height:54px;width:50px;z-index:1;opacity:0;margin-top:-12px;margin-left:-50px;"><input id="messagearea" type="text" placeholder="Type your message.." style="border-color:transparent;"><a href="#" class="link sendbutton" onclick="sendMessage();">Send</a>'+
   '</div>'+
 '</div>'+  
         '<div class="datedetailsdiv date-button" onclick="noMessages();setDate();dateConfirmationPage(1);" style="display:none;position:absolute;top:44px;text-align:center;height:44px;width:100%;z-index:999999;">'+
@@ -8129,7 +8129,7 @@ if (!messagenum) {messagenum = 1;}
 $( "#messagearea" ).val('');
     $( ".sendbutton" ).removeClass('disabled');
 
-        $( ".sendbutton" ).css('color','white');
+        
 	sendNotification(targetid,4);
 
 }
