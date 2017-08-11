@@ -686,6 +686,8 @@ var app = {
 
 //soNow();
 
+	    alert('66.7');
+	    
       FCMPlugin.onNotification(function(data){
    
 	      $( ".notifspan" ).show();
@@ -725,7 +727,7 @@ setTimeout(function(){ $( ".notifspan" ).removeClass('notifbounce'); }, 5000);
 
     }
 });
-
+alert('66.8');
         // Add views
 view1 = myApp.addView('#view-1');
 view2 = myApp.addView('#view-2', {
@@ -759,7 +761,10 @@ view4 = myApp.addView('#view-4');
 
   
   if (user) {
-     var checkbadge = false;
+
+	  alert('8888');
+	  
+	  var checkbadge = false;
 	  if (f_projectid){checkbadge = false;}
 	  else{checkbadge = true;}
 	  
@@ -919,7 +924,7 @@ $.post( "http://www.dateorduck.com/clearnotifications.php", { projectid:f_projec
 
 function startApp(){
 
- 
+ aler
     
     firebaseinit = localStorage.getItem('tokenStore');
     alert('44');
@@ -932,7 +937,7 @@ function startApp(){
             
             
       var credential = firebase.auth.FacebookAuthProvider.credential(firebaseinit);
-
+alert(credential);
         
             firebase.auth().signInWithCredential(credential).catch(function(error) {
 		    alert('66');
