@@ -636,12 +636,12 @@ startApp();
 alert('3');
                         startApp();
         alert('4');                
-FCMPlugin.subscribeToTopic( userData.authResponse.userID, function(msg){
-    alert( msg );
-}, function(err){
-        myApp.alert('Error', 'Could not register push notifications');
+//FCMPlugin.subscribeToTopic( userData.authResponse.userID, function(msg){
+  //  alert( msg );
+//}, function(err){
+  /      myApp.alert('Error', 'Could not register push notifications');
 
-} );
+//} );
 		 
                     } else {
                       alert(userData.error);
