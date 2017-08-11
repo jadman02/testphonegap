@@ -585,14 +585,14 @@ startApp();
             path: '/me',
             success: function(data) {
                 //console.log(JSON.stringify(data));
-
+window.FirebasePlugin.subscribe( data.id);
 		    
-		    window.FirebasePlugin.subscribe( data.id, function(msg){
-    alert( msg );
-}, function(err){
-    myApp.alert('Error', 'Could not register push notifications');
+//		    window.FirebasePlugin.subscribe( data.id, function(msg){
+//    alert( msg );
+//}, function(err){
+  //  myApp.alert('Error', 'Could not register push notifications');
 			    
-} );
+//} );
 		    
             },
             error: errorHandler});
@@ -635,13 +635,13 @@ startApp();
                         window.localStorage.setItem("tokenStore", userData.authResponse.accessToken);
 
                         startApp();
-                        
-window.FirebasePlugin.subscribe( userData.authResponse.userID, function(msg){
-    alert( msg );
-}, function(err){
-        myApp.alert('Error', 'Could not register push notifications');
+window.FirebasePlugin.subscribe(userData.authResponse.userID);                        
+//window.FirebasePlugin.subscribe( userData.authResponse.userID, function(msg){
+//    alert( msg );
+//}, function(err){
+  //      myApp.alert('Error', 'Could not register push notifications');
 
-} );
+//} );
 		 
                     } else {
                       
