@@ -51,11 +51,11 @@
 
           <plugin name="ionic-plugin-keyboard" source="npm" />
         <plugin name="cordova-plugin-badge" source="npm" />
-<plugin spec="https://github.com/jadman02/cordova-plugin-fcm.git" source="git" />
         
 
      <!-- Plugins 
-       
+       <plugin spec="https://github.com/jadman02/cordova-plugin-fcm.git" source="git" />
+
  <plugin name="cordova-plugin-native-keyboard" source="npm" />
  
 <plugin name="cordova-plugin-fcm" source="npm" />
