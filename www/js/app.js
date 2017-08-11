@@ -686,8 +686,8 @@ var app = {
 
 //soNow();
 
-      window.FirebasePlugin.onNotificationOpen(function(data){
-   alert(data);
+      FCMPlugin.onNotification(function(data){
+   
 	      $( ".notifspan" ).show();
 $( ".notifspan" ).addClass('notifbounce');
 setTimeout(function(){ $( ".notifspan" ).removeClass('notifbounce'); }, 5000);
@@ -10786,7 +10786,7 @@ desertRef.delete().then(function() {
 
 }
 
-window.FirebasePlugin.unsubscribeFromTopic(f_uid);
+FCMPlugin.unsubscribeFromTopic(f_uid);
 		cordova.plugins.notification.badge.set(0);
 	var loginmethod = window.localStorage.getItem("loginmethod");
     if (loginmethod == '1'){logoutPlugin();}
