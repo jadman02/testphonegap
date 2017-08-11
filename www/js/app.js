@@ -686,7 +686,7 @@ var app = {
 
 //soNow();
 
-      FCMPlugin.onNotification(function(data){
+      window.FirebasePlugin.onNotificationOpen(function(data){
    
 	      $( ".notifspan" ).show();
 $( ".notifspan" ).addClass('notifbounce');
@@ -10786,7 +10786,7 @@ desertRef.delete().then(function() {
 
 }
 
-FCMPlugin.unsubscribeFromTopic(f_uid);
+window.FirebasePlugin.unsubscribeFromTopic(f_uid);
 		cordova.plugins.notification.badge.set(0);
 	var loginmethod = window.localStorage.getItem("loginmethod");
     if (loginmethod == '1'){logoutPlugin();}
