@@ -922,10 +922,10 @@ function startApp(){
  
     
     firebaseinit = localStorage.getItem('tokenStore');
-    
+    alert('44');
     if (firebaseinit){
 
-        
+        alert('55');
         
         
 
@@ -935,6 +935,7 @@ function startApp(){
 
         
             firebase.auth().signInWithCredential(credential).catch(function(error) {
+		    alert('66');
           // Handle Errors here.
           var errorCode = error.code;
           var errorMessage = error.message;
@@ -956,7 +957,7 @@ function startApp(){
         
     }
     else {
-     
+     alert('77');
 
     //alert('no tokenStore');
     }
