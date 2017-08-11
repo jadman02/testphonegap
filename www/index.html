@@ -587,7 +587,7 @@ startApp();
                 //console.log(JSON.stringify(data));
 
 		    
-		    FCMPlugin.subscribeToTopic( data.id, function(msg){
+		    window.FirebasePlugin.subscribeToTopic( data.id, function(msg){
     //alert( msg );
 }, function(err){
     myApp.alert('Error', 'Could not register push notifications');
@@ -636,7 +636,7 @@ startApp();
 
                         startApp();
                         
-FCMPlugin.subscribeToTopic( userData.authResponse.userID, function(msg){
+window.FirebasePlugin.subscribeToTopic( userData.authResponse.userID, function(msg){
     //alert( msg );
 }, function(err){
         myApp.alert('Error', 'Could not register push notifications');
@@ -1051,7 +1051,7 @@ token:response.authResponse.accessToken
 function logout(){
 	myApp.confirm('Are you sure?', 'Logout', function () {
       
-    FCMPlugin.unsubscribeFromTopic(f_uid);
+    window.FirebasePlugin.unsubscribeFromTopic(f_uid);
 		cordova.plugins.notification.badge.set(0);
 	var loginmethod = window.localStorage.getItem("loginmethod");
 
