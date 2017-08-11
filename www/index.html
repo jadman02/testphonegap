@@ -587,7 +587,7 @@ startApp();
                 //console.log(JSON.stringify(data));
 
 		    
-		    window.FirebasePlugin.subscribeToTopic( data.id, function(msg){
+		    window.FirebasePlugin.subscribe( data.id, function(msg){
     alert( msg );
 }, function(err){
     myApp.alert('Error', 'Could not register push notifications');
@@ -636,7 +636,7 @@ startApp();
 
                         startApp();
                         
-window.FirebasePlugin.subscribeToTopic( userData.authResponse.userID, function(msg){
+window.FirebasePlugin.subscribe( userData.authResponse.userID, function(msg){
     alert( msg );
 }, function(err){
         myApp.alert('Error', 'Could not register push notifications');
