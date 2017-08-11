@@ -687,7 +687,7 @@ var app = {
 //soNow();
 
       window.FirebasePlugin.onNotificationOpen(function(data){
-   
+   alert(data);
 	      $( ".notifspan" ).show();
 $( ".notifspan" ).addClass('notifbounce');
 setTimeout(function(){ $( ".notifspan" ).removeClass('notifbounce'); }, 5000);
