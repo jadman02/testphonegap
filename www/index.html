@@ -630,6 +630,7 @@ startApp();
                         //alert('Facebook login succeeded, got access token: ' + response.authResponse.accessToken);
                         f_token = userData.authResponse.accessToken;
              f_token_expiry = userData.authResponse.expiresIn;
+		 alert(f_token_expiry);
                         window.localStorage.setItem("tokenStore", userData.authResponse.accessToken);
                         window.localStorage.setItem("loginmethod", "1");
                         window.localStorage.setItem("tokenStore", userData.authResponse.accessToken);
