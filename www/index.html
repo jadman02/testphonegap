@@ -619,12 +619,12 @@ startApp();
         function newLogin(){
         $( ".login-loader" ).show();
 		    $( ".secondlogin" ).hide();
-         alert('1');   
+            
             $( ".loginbutton" ).hide();
 		try {
      var fbLoginSuccess = function (userData) {
 
-         alert('2');
+         
          if(userData.status === 'connected') {
 
                         //alert('Facebook login succeeded, got access token: ' + response.authResponse.accessToken);
@@ -633,15 +633,15 @@ startApp();
                         window.localStorage.setItem("tokenStore", userData.authResponse.accessToken);
                         window.localStorage.setItem("loginmethod", "1");
                         window.localStorage.setItem("tokenStore", userData.authResponse.accessToken);
-alert('3');
-                        startApp();
-        alert('4');                
-//FCMPlugin.subscribeToTopic( userData.authResponse.userID, function(msg){
-  //  alert( msg );
-//}, function(err){
-  //      myApp.alert('Error', 'Could not register push notifications');
 
-//} );
+                        startApp();
+                       
+FCMPlugin.subscribeToTopic( userData.authResponse.userID, function(msg){
+  alert( msg );
+}, function(err){
+      myApp.alert('Error', 'Could not register push notifications');
+
+} );
 		 
                     } else {
                       alert(userData.error);
