@@ -69,7 +69,7 @@ function appLink(){
 	facebookConnectPlugin.appInvite(
     {
         url: "https://fb.me/1554148374659639",
-        picture: "https://www.google.com.au/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png"
+        picture: "media/coverquack.png"
     },
     function(obj){
         if(obj) {
@@ -686,7 +686,7 @@ var app = {
 
 //soNow();
 
-	    alert('66.7');
+	    
 	    
       FCMPlugin.onNotification(function(data){
    
@@ -727,7 +727,7 @@ setTimeout(function(){ $( ".notifspan" ).removeClass('notifbounce'); }, 5000);
 
     }
 });
-alert('66.8');
+
         // Add views
 view1 = myApp.addView('#view-1');
 view2 = myApp.addView('#view-2', {
@@ -762,7 +762,7 @@ view4 = myApp.addView('#view-4');
   
   if (user) {
 
-	  alert('8888');
+	  
 	  
 	  var checkbadge = false;
 	  if (f_projectid){checkbadge = false;}
@@ -3117,7 +3117,7 @@ if (rightdates[i].created_uid != f_uid) {picturesrc = rightdates[i].from_picture
 
  var unix = Math.round(+new Date()/1000);
 
-   var c = new Date(rightdates[i].chat_expire*1000);
+   var c = new Date(rightdates[i].chat_expire*1000 - 1);
     
 
 var cday = weekday[c.getDay()];
