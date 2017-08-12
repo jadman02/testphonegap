@@ -11253,17 +11253,19 @@ photoPermissions();
 }
 
 function loadAlbums(){
-alert('got here');
+
 $( ".photoloader").show();
 $( ".loadmorebuttonalbums").hide();
 var retrievealbumurl;
 if (!pagingalbumurl) {retrievealbumurl = 'https://graph.facebook.com/v2.4/'+f_uid+'/albums?limit=20&fields=id,count,name&access_token=' + f_token}
 else {retrievealbumurl = pagingalbumurl}
 
+	alert(retrievealbumurl);
+	
 $.getJSON(retrievealbumurl,
       function(response) {
 	
-
+ alert(JSON.stringify(response));
 
    if(response.data.length == 0){
    
