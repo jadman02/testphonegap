@@ -11253,7 +11253,7 @@ photoPermissions();
 }
 
 function loadAlbums(){
-
+alert('got here');
 $( ".photoloader").show();
 $( ".loadmorebuttonalbums").hide();
 var retrievealbumurl;
