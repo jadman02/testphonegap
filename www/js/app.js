@@ -600,7 +600,7 @@ var myMessages, myMessagebar, f_description,existingchatnotifications, message_h
 var f_to_date = [],f_to_duck = [],f_date_me = [],f_duck_me = [],f_date_match = [],f_duck_match = [],f_date_match_data = [],f_duck_match_data = [];
 var f_auth_id;
 var blocklist;
-var lastkey;
+var lastkey,ftokenset;
 	var distancepicker;
 var pickerDescribe,pickerDescribe2, pickerCustomToolbar;
 var existingmessages;
@@ -2187,7 +2187,12 @@ f_description = snapshot.child("description").val();
 	      
 	    if(snapshot.child("radiusunit").val()){radiusunit = snapshot.child("radiusunit").val();}
 	    else{radiusunit = "Kilometres";}
-f_token = snapshot.child("token").val();
+	    
+	    
+	if (ftokenset){}
+	    else{f_token = snapshot.child("token").val();}
+	
+	    
         f_upper = snapshot.child("upper").val(); 
         f_interested = snapshot.child("interested").val(); 
         f_gender = snapshot.child("gender").val();
