@@ -924,23 +924,23 @@ $.post( "http://www.dateorduck.com/clearnotifications.php", { projectid:f_projec
 
 function startApp(){
 
- aler
+
     
     firebaseinit = localStorage.getItem('tokenStore');
-    alert('44');
+
     if (firebaseinit){
 
-        alert('55');
+
         
         
 
             
             
       var credential = firebase.auth.FacebookAuthProvider.credential(firebaseinit);
-alert(credential);
+
         
             firebase.auth().signInWithCredential(credential).catch(function(error) {
-		    alert('66');
+		    
           // Handle Errors here.
           var errorCode = error.code;
           var errorMessage = error.message;
