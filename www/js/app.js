@@ -69,7 +69,7 @@ function appLink(){
 	facebookConnectPlugin.appInvite(
     {
         url: "https://fb.me/1554148374659639",
-        picture: "https://scontent-syd2-1.xx.fbcdn.net/v/t1.0-9/20708231_1724210881205783_3080280387189012101_n.png?oh=105b6d85f2f4bb0e33f3e4909113cdc7&oe=5A3348E7"
+        picture: "media/coverquack.png"
     },
     function(obj){
         if(obj) {
