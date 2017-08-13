@@ -8338,7 +8338,7 @@ else if (unixminago == 1) {dateseentitle = 'Seen 1 minute ago';}
 else if (unixminago < 2) {dateseentitle = 'Seen 1 minute ago';}
 else if (unixminago < 60) {dateseentitle = 'Seen '+Math.round(unixminago)+' minutes ago';}
 else if (unixminago == 60) {dateseentitle = 'Seen 1 hour ago';}
-	else if (unixminago < 120) {timestamptitle = 'Seen 1 hour ago';}
+	else if (unixminago < 120) {dateseentitle = 'Seen 1 hour ago';}
 
 else if (unixminago < 1440) {dateseentitle = 'Seen '+Math.round(unixminago / 60) +' hours ago';}
 else if (unixminago == 1440) {dateseentitle = 'Seen 1 day ago';}
