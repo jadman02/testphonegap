@@ -74,6 +74,15 @@ facebookConnectPlugin.showDialog({
 
 function appLink(){
 
+	facebookConnectPlugin.logout(
+function (error) { 
+
+},
+function (error) { 
+	//alert(error);
+}
+);  
+	
 	facebookConnectPlugin.appInvite(
     {
         url: "https://fb.me/1554148374659639",
