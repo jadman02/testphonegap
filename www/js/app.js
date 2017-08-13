@@ -431,9 +431,9 @@ if ($( ".homeduck" ).hasClass( "active" )){homewant = 'duck';updateWant();
 	
 					  
 					  }else {
-						  $( ".content-here-1" ).show();
+						  
 						  homewant = 'offline';
-						  //updateWant(); 
+						  updateWant(); 
 						
 						
 						}                                           
@@ -449,8 +449,8 @@ else{$( ".homedate" ).addClass("active");
        if ($( ".homeduck" ).hasClass( "active" )){$( ".homeduck" ).removeClass("active");
                                              if ($( ".homedate" ).hasClass( "active" )){homewant = 'date';updateWant(); }else {
 						     homewant = 'offline';
-						     //updateWant();
-						     $( ".content-here-1" ).show();
+						     updateWant();
+						     
 					     }
                                                  } 
         else{$( ".homeduck" ).addClass("active");
@@ -476,7 +476,7 @@ recentswiper.update();
 	
 	if (homewant == 'offline'){
 
-
+$( ".content-here-1" ).show();
 
 
 		new_all = [];
@@ -1489,7 +1489,7 @@ var loginmethod = window.localStorage.getItem("loginmethod");
 		'</div>'+
 	 '</div>'+   
 
-		  '<div class="list-block-label" style="background-color:white;margin-bottom:10px;padding:5px;font-weight:bold;">Choose one, or both. When you see this screen your profile is offline and not hidden until you decide.</div>'+
+		  '<div class="list-block-label" style="background-color:white;margin-bottom:10px;padding:5px;font-weight:bold;">Choose one, or both, to find what you want.</div>'+
 	
 		  '<div class="list-block-label" style="background-color:#2196f3;color:white;margin-bottom:10px;padding:5px;">When you see this screen your profile is offline and not hidden until you decide.</div>'+
 
