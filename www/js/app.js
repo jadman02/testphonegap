@@ -1605,7 +1605,15 @@ var loginmethod = window.localStorage.getItem("loginmethod");
    
     '</div>');
 	
-   
+      setTimeout(function(){
+	
+		$( ".homedate" ).removeClass("disabled");
+	$( ".homeduck" ).removeClass("disabled");
+	
+	
+	}, 2000);
+	   
+	   return false;
    
    }
 else{
@@ -1676,15 +1684,7 @@ nameslist = [];
 
    
     '</div>');
-   setTimeout(function(){
-	
-		$( ".homedate" ).removeClass("disabled");
-	$( ".homeduck" ).removeClass("disabled");
-	
-	
-	}, 2000);
-	   
-	   return false;
+
    
    }
    else {
