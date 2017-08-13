@@ -5562,7 +5562,7 @@ else {first_number = f_uid;second_number = targetid;}
 firebase.database().ref("chats/" + first_number+ '/' + second_number).once('value').then(function(snapshot) {
   
   existingmessages = snapshot.numChildren();
-//  alert('existingmessages' + existingmessages);
+  alert('existingmessages' + existingmessages);
  // $( ".messages").append( '<a href="#" class="button scrollbutton" onclick="scrollBottom();" style="border:0;margin-top:10px;"><i class="pe-7s-angle-down-circle pe-2x" style="margin-right:5px;"></i> New Messages</a>');
   
  // $( ".messages").append('<a href="#" class="button scrollbutton" onclick="scrollBottom()"  style="display:none;top:103px;position:absolute;right:0;float:left;width:50%;border:0;height:auto;"><div style="height:29px;width:130px;margin:0 auto;"><i class="pe-7s-angle-down-circle pe-2x" style="float:left;" ></i> <div style="float:left;margin-left:5px;">New messages</div></div></a>');
