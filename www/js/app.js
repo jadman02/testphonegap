@@ -8224,7 +8224,9 @@ myList.clearCache();
 }
 
    function dateConfirmationPage(details){
-          $( ".datetoolbar" ).show();
+          $( ".messagebar" ).css("height","44px");
+	   
+	   $( ".datetoolbar" ).show();
 
 	   canloadchat = false;
           var g = new Date(d_chat_expire*1000 - 3600);
