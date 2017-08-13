@@ -600,7 +600,7 @@ var myMessages, myMessagebar, f_description,existingchatnotifications, message_h
 var f_to_date = [],f_to_duck = [],f_date_me = [],f_duck_me = [],f_date_match = [],f_duck_match = [],f_date_match_data = [],f_duck_match_data = [];
 var f_auth_id;
 var blocklist;
-var lastkey,ftokenset;
+var lastkey,ftokenset = false;
 	var distancepicker;
 var pickerDescribe,pickerDescribe2, pickerCustomToolbar;
 var existingmessages;
