@@ -2821,6 +2821,8 @@ mynotifs = [];
 notifadditions=0;
 if(!myList){
 
+	alert('here1');
+	
 myList = myApp.virtualList('.virtual-notifications', {
     // Array with plain HTML items
     items: [],
@@ -2886,7 +2888,7 @@ var notificationlist = firebase.database().ref('notifications/' + f_uid).once('v
 
 
 
-
+alert(JSON.stringify(snapshot.val())); 
 if (snapshot.val() === null){
     
     
@@ -2941,7 +2943,7 @@ if (typetype == 'date') {mediaicon = fdateicon;}
 
 
 //need to see if a match still and then create function based on tha
-    
+    alert('here3');
 var timestamptitle;
 var unixnow = Math.round(+new Date()/1000);
 var tunixago = unixnow - obj.timestamp;
@@ -2968,7 +2970,7 @@ else if (tunixminago == 525600) {timestamptitle = '1 week ago';}
 else if (tunixminago < (525600*2)) {timestamptitle = '1 week ago';}
 else if (tunixminago >= (525600*2)) {timestamptitle = Math.round(tunixminago / 525600) +' years ago';}
 
-
+alert('here4');
     
    // onclick="singleBrowser('+targetid+')"
     
@@ -3075,7 +3077,7 @@ if ((datemeinarray==1 && datetoinarray==1) || (duckmeinarray==1 && ducktoinarray
     }
 else{func = 'singleUser'}
 
-
+alert('here5');
 
    
     mynotifs.push({
@@ -3126,7 +3128,7 @@ for (i = 0; i < notifletsload; i++) {
 
 }
 
- 
+ alert('here6');
 }
 
 });
