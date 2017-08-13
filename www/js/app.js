@@ -8227,7 +8227,7 @@ myList.clearCache();
           $( ".messagebararea" ).css("height","44px");
 	   $( ".messagebar" ).css("height","44px");
 	     $( ".messages-content" ).css("padding-bottom","0px");
-	   
+	   $( ".messagebararea" ).focus();
 	   $( ".datetoolbar" ).show();
 
 	   canloadchat = false;
