@@ -54,8 +54,6 @@ if (param == 3){titlestring = 'New date confirmed';bodystring='By ' + f_first;}
 
 function sharePop(){
 
-
-	
 facebookConnectPlugin.showDialog({
 	method: "share",
 	href: "http://www.dateorduck.com/",
@@ -67,7 +65,6 @@ facebookConnectPlugin.showDialog({
 }
 
 function appLink(){
-
 
 	facebookConnectPlugin.appInvite(
     {
@@ -180,10 +177,8 @@ function newHometown(){
 
 function fQuery(){
 
-var invitebutton;
-var loginmethod = window.localStorage.getItem("loginmethod");
-	if (loginmethod == '1'){invitebutton = '<a href="#" class="button active" onclick="appLink()">Invite friends</a></div>';}
-	else{invitebutton = '<a class="button active external" href="sms:&body=Check out a new app in the App Store: https://fb.me/1554148374659639. It is called Date or Duck. Thoughts? ">Invite friends</a>';}
+
+
 	
 	
 $.ajax({
@@ -261,8 +256,7 @@ recentshare = false;
                       '  <div class="item-title">'+friendstring+'</div>'+
                        // '<div class="item-after"></div>'+
                    ' </div>'+
-                    '<div class="item-subtitle" style="margin-top:5px;margin-bottom:5px;">'+ 
-	 invitebutton +
+                    '<div class="item-subtitle" style="margin-top:5px;margin-bottom:5px;"><a href="#" class="button active" onclick="appLink()">Invite friends</a></div>'+
                    ' <div class="item-text">Sign up <span class="badge" style="background-color:#ff3b30;color:white;">10</span> friends on Facebook to unlock this feature.</div>'+
                 '</div>'+
             '</div>'+
@@ -298,7 +292,7 @@ $('.recent-helper').html(
                       '  <div class="item-title">'+friendstring+'</div>'+
                        // '<div class="item-after"></div>'+
                    ' </div>'+
-                    '<div class="item-subtitle" style="margin-top:5px;margin-bottom:5px;">'+invitebutton+'</div>'+
+                    '<div class="item-subtitle" style="margin-top:5px;margin-bottom:5px;"><a href="#" class="button active" onclick="appLink()">Invite friends</a></div>'+
                    ' <div class="item-text">Sign up <span class="badge" style="background-color:#ff3b30;color:white;">10</span> friends on Facebook to unlock this feature.</div>'+
                 '</div>'+
             '</div>'+
@@ -317,7 +311,7 @@ $('.recent-helper').html(
                       '  <div class="item-title">'+friendstring+'</div>'+
                        // '<div class="item-after"></div>'+
                    ' </div>'+
-                    '<div class="item-subtitle" style="margin-top:5px;margin-bottom:5px;">'+invitebutton+'</div>'+
+                    '<div class="item-subtitle" style="margin-top:5px;margin-bottom:5px;"><a href="#" class="button active" onclick="appLink()">Invite friends</a></div>'+
                    ' <div class="item-text">Sign up <span class="badge" style="background-color:#ff3b30;color:white;">5</span> friends on Facebook to unlock this feature.</div>'+
                 '</div>'+
             '</div>'+
@@ -388,9 +382,7 @@ $('.nearby-helper').html(
 
 
 $( ".summary-helper" ).show(); 
-var loginmethod = window.localStorage.getItem("loginmethod");
-	if (loginmethod == '1'){$( ".login2" ).show();}
-	else{$( ".login2" ).hide();}
+
         
    },
     error: function (jqXHR, textStatus, errorThrown) {
@@ -1152,9 +1144,7 @@ else {slidecontent = '<div class="age_'+random_all[i].age+' swiper-slide slide_'
           $( ".nearby-helper" ).show(); 
                     $( ".recent-helper" ).show(); 
 	$( ".summary-helper" ).show(); 
-		var loginmethod = window.localStorage.getItem("loginmethod");
-	if (loginmethod == '1'){$( ".login2" ).show();}
-	else{$( ".login2" ).hide();}
+		
 		}, 2000);
 		
 	}
@@ -1446,21 +1436,13 @@ if (!homewant || homewant =='offline'){
 	$( ".toolbar" ).hide();
 	$( ".results-loader" ).hide();
     $( ".summary-helper" ).show();
-	var loginmethod = window.localStorage.getItem("loginmethod");
-	if (loginmethod == '1'){$( ".login2" ).show();}
-	else{$( ".login2" ).hide();}
 	new_all = [];
 random_all = [];
 nearby_all = [];
 recent_all = [];
 
-	var sharebuttons;
+	
 	var swiperheight = $( window ).height() - 378;
-var loginmethod = window.localStorage.getItem("loginmethod");
-	if (loginmethod == '1'){sharebuttons = '<a href="#" class="button-big button active" style="margin-bottom:10px;" onclick="appLink()">Invite Friends</a><a href="#" class="button-big button" style="margin-bottom:10px;" onclick="sharePop()">Share</a><a class="button-big button external" href="sms:&body=Check out this new a new app in the App Store: https://fb.me/1554148374659639. It is called Date or Duck. Thoughts? " style="margin-bottom:10px;">Send SMS</a>';}
-	else{sharebuttons = '<a class="button-big button external" href="sms:&body=Check out this new a new app in the App Store: https://fb.me/1554148374659639. It is called Date or Duck. Thoughts? " style="margin-bottom:10px;">Send SMS</a>';}
-	
-	
 	
 	$('.content-here').append(
     '<div class="no-results-div" style="background-color:white;z-index:30000000;text-align:center;margin:0 auto;width:300px;position:absolute;top:44px;left:50%;margin-left:-150px;margin-top:54px;">'+
@@ -1507,7 +1489,9 @@ var loginmethod = window.localStorage.getItem("loginmethod");
 '</div>'+
    
 		'    <div class="content-block-title" style="width:100%;text-align:center;margin-top:20px;margin-bottom:10px;margin-left:0px;">Support this app</div>'+
-sharebuttons+
+'<a href="#" class="button-big button active" style="margin-bottom:10px;" onclick="appLink()">Invite Friends</a>'+
+		'<a href="#" class="button-big button" style="margin-bottom:10px;" onclick="sharePop()">Share</a>'+
+		'<a class="button-big button external" href="sms:&body=Check out this new a new app in the App Store: https://fb.me/1554148374659639. It is called Date or Duck. Thoughts? " style="margin-bottom:10px;">Send SMS</a>'+
     '</div>');
 
 
@@ -1585,7 +1569,7 @@ firebase.auth().currentUser.getToken().then(function(idToken) {
   .done(function( data ) {
 
 
-	alert(data);
+	
 	dbCall('random');
 	dbCall('distance');
 	dbCall('activity');
@@ -1627,11 +1611,6 @@ nameslist = [];
    
    $( ".results-loader" ).hide();
    $( ".summary-helper" ).show();
-	
-	var loginmethod = window.localStorage.getItem("loginmethod");
-	if (loginmethod == '1'){$( ".login2" ).show();}
-	else{$( ".login2" ).hide();}
-	
    if (result == 77 ||(result.length ===1 && result[0].uid == f_uid ) ){
    
 
@@ -1992,9 +1971,7 @@ if ($('.no-results-div').length > 0) {}
 
  $( ".results-loader" ).hide();
     $( ".summary-helper" ).show();
-var loginmethod = window.localStorage.getItem("loginmethod");
-	if (loginmethod == '1'){$( ".login2" ).show();}
-	else{$( ".login2" ).hide();}
+
 		$('.content-here').append(
     '<div class="no-results-div" style="background-color:white;z-index:30000000;text-align:center;margin:0 auto;width:300px;position:absolute;top:50%;left:50%;margin-left:-150px;margin-top:-70px;">'+
     
