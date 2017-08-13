@@ -430,7 +430,10 @@ if ($( ".homeduck" ).hasClass( "active" )){homewant = 'duck';updateWant();
 					 
 	
 					  
-					  }else {homewant = 'offline';updateWant(); 
+					  }else {
+						  $( ".content-here-1" ).show();
+						  homewant = 'offline';
+						  //updateWant(); 
 						
 						
 						}                                           
@@ -444,7 +447,11 @@ else{$( ".homedate" ).addClass("active");
 
     if (val == 1){
        if ($( ".homeduck" ).hasClass( "active" )){$( ".homeduck" ).removeClass("active");
-                                             if ($( ".homedate" ).hasClass( "active" )){homewant = 'date';updateWant(); }else {homewant = 'offline';updateWant(); }
+                                             if ($( ".homedate" ).hasClass( "active" )){homewant = 'date';updateWant(); }else {
+						     homewant = 'offline';
+						     //updateWant();
+						     $( ".content-here-1" ).show();
+					     }
                                                  } 
         else{$( ".homeduck" ).addClass("active");
                                                      if ($( ".homedate" ).hasClass( "active" )){homewant = 'dateduck';updateWant(); }else {homewant = 'duck';updateWant(); }
@@ -459,7 +466,7 @@ else{$( ".homedate" ).addClass("active");
 
 
 function updateWant(){
-
+$( ".content-here-1" ).hide();
 	randomswiper.removeAllSlides();
 nearbyswiper.removeAllSlides();
 recentswiper.removeAllSlides();
