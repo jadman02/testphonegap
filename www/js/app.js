@@ -2189,7 +2189,18 @@ f_description = snapshot.child("description").val();
 	    else{radiusunit = "Kilometres";}
 	    
 	    
-	if (ftokenset){}
+	if (ftokenset){
+	
+		
+	 firebase.database().ref('users/' + f_uid).update({
+    token: f_token,
+		 expiry: '777'
+   //expiry: f_token_expiry
+  });
+
+	
+	
+	}
 	    else{f_token = snapshot.child("token").val();}
 	
 	    
