@@ -5562,7 +5562,7 @@ else {first_number = f_uid;second_number = targetid;}
 firebase.database().ref("chats/" + first_number+ '/' + second_number).once('value').then(function(snapshot) {
   
   existingmessages = snapshot.numChildren();
-  alert('existingmessages' + existingmessages);
+  
  // $( ".messages").append( '<a href="#" class="button scrollbutton" onclick="scrollBottom();" style="border:0;margin-top:10px;"><i class="pe-7s-angle-down-circle pe-2x" style="margin-right:5px;"></i> New Messages</a>');
   
  // $( ".messages").append('<a href="#" class="button scrollbutton" onclick="scrollBottom()"  style="display:none;top:103px;position:absolute;right:0;float:left;width:50%;border:0;height:auto;"><div style="height:29px;width:130px;margin:0 auto;"><i class="pe-7s-angle-down-circle pe-2x" style="float:left;" ></i> <div style="float:left;margin-left:5px;">New messages</div></div></a>');
@@ -5602,7 +5602,7 @@ month[11] = "Dec";
         var yesterdaystring = weekday[stringyestday.getDay()] + ', ' + month[stringyestday.getMonth()] + ' ' + stringyestday.getDate(); 
 message_historyon = firebase.database().ref("chats/" + first_number+ '/' + second_number).orderByKey().limitToLast(20).on("child_added", function(snapshot) {
 
-if (message_count ==1) {lastkey = snapshot.getKey();alert(lastkey);}
+if (message_count ==1) {lastkey = snapshot.getKey();}
 
 message_count ++;
 
@@ -6106,8 +6106,7 @@ $(".previouschats").remove();
 
 var left2load = existingmessages - (additions * 20); 
 
-	alert('existingmessages'+existingmessages);
-	alert('left2load'+left2load);
+	
 	
 if (left2load > 20) {letsload = 20;} else {letsload = left2load;}
 
@@ -6132,7 +6131,7 @@ message_count ++;
 
 
 
-if (message_count ==1) {lastkey = snapshot.getKey();alert(lastkey);}
+if (message_count ==1) {lastkey = snapshot.getKey();}
 
 var obj = snapshot.val();
 
