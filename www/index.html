@@ -577,7 +577,10 @@ myApp.swiper('.swiper-helper-info', {
                         window.localStorage.setItem("tokenStore", response.authResponse.accessToken);
                                                 window.localStorage.setItem("loginmethod", "2");
 
-
+ ftokenset = true;
+		
+		    
+		    startApp();
 
                         
 			    
@@ -594,12 +597,7 @@ myApp.swiper('.swiper-helper-info', {
 			    
 } );
 		    
-		    ftokenset = true;
-		 firebase.database().ref('users/' + f_uid).update({
-    token: f_token
-  });
-		    
-		    startApp();
+		   
 		    
             },
             error: errorHandler});
@@ -640,10 +638,7 @@ myApp.swiper('.swiper-helper-info', {
              f_token_expiry = userData.authResponse.expiresIn;
             
 		 ftokenset = true;
-		 firebase.database().ref('users/' + userData.authResponse.userID).update({
-    token: f_token,
-   expiry: f_token_expiry
-  });
+	
 		 
 		 
 		 window.localStorage.setItem("tokenStore", userData.authResponse.accessToken);
