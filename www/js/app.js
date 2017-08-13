@@ -6124,7 +6124,7 @@ if (Number(f_uid) > Number(targetid) ) {second_number = f_uid;first_number = tar
 else {first_number = f_uid;second_number = targetid;}
 
 
-var newmessage_history = firebase.database().ref("chats/" + first_number+ '/' + second_number).orderByKey().limitToLast(letsload).endAt(lastkey).on("child_added", function(snapshot) {
+var newmessage_history = firebase.database().ref("chats/" + first_number+ '/' + second_number).orderByKey().limitToLast(letsload + 1).endAt(lastkey).on("child_added", function(snapshot) {
 
 
 
