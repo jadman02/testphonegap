@@ -2750,6 +2750,7 @@ else {dateRequest();}
 
 var mynotifs = [];
 function leftPanel(){
+	alert('here1');
 canscrollnotif = true;
 mynotifs = [];
 notifadditions=0;
@@ -2817,7 +2818,7 @@ myList = myApp.virtualList('.virtual-notifications', {
 
 var notificationlist = firebase.database().ref('notifications/' + f_uid).once('value', function(snapshot) {
 
-
+alert(JSON.stringify(snapshot.val())); 
 
 
 
