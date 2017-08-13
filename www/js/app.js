@@ -54,13 +54,21 @@ if (param == 3){titlestring = 'New date confirmed';bodystring='By ' + f_first;}
 
 function sharePop(){
 
+if (loginmethod == '1'){
+	
 facebookConnectPlugin.showDialog({
 	method: "share",
 	href: "http://www.dateorduck.com/",
 	hashtag: "#dateorduck"
 	//share_feedWeb: true, // iOS only
 }, function (response) {}, function (response) {})
-
+}
+	
+	else {
+	
+		share();
+	
+	}
 	
 }
 
