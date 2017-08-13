@@ -1489,7 +1489,6 @@ var loginmethod = window.localStorage.getItem("loginmethod");
 		'</div>'+
 	 '</div>'+   
 
-		  '<div class="list-block-label" style="background-color:white;margin-bottom:10px;padding:5px;font-weight:bold;">Choose one, or both, to find what you want.</div>'+
 	
 		  '<div class="list-block-label" style="background-color:#2196f3;color:white;margin-bottom:10px;padding:5px;">When you see this screen your profile is offline and hidden to other people.</div>'+
 
