@@ -6127,12 +6127,12 @@ else {first_number = f_uid;second_number = targetid;}
 var newmessage_history = firebase.database().ref("chats/" + first_number+ '/' + second_number).orderByKey().limitToLast(letsload).endAt(lastkey).on("child_added", function(snapshot) {
 
 
-if (message_count ==0) {lastkey = snapshot.getKey();alert(lastkey);}
 
 message_count ++;
 
 
 
+if (message_count ==1) {lastkey = snapshot.getKey();alert(lastkey);}
 
 var obj = snapshot.val();
 
