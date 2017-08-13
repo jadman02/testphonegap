@@ -387,7 +387,7 @@ $('.nearby-helper').html(
 }
 
 
-$( ".summary-helper" ).show(); 
+
 var loginmethod = window.localStorage.getItem("loginmethod");
 	if (loginmethod == '1'){$( ".login2" ).show();}
 	else{$( ".login2" ).hide();}
@@ -1145,7 +1145,7 @@ else {slidecontent = '<div class="age_'+random_all[i].age+' swiper-slide slide_'
           
           $( ".nearby-helper" ).hide(); 
                     $( ".recent-helper" ).hide(); 
-	$( ".summary-helper" ).hide(); 
+
 	
 		setTimeout(function(){ 
 		
@@ -1158,7 +1158,7 @@ else {slidecontent = '<div class="age_'+random_all[i].age+' swiper-slide slide_'
           
           $( ".nearby-helper" ).show(); 
                     $( ".recent-helper" ).show(); 
-	$( ".summary-helper" ).show(); 
+
 		var loginmethod = window.localStorage.getItem("loginmethod");
 	if (loginmethod == '1'){$( ".login2" ).show();}
 	else{$( ".login2" ).hide();}
@@ -1431,7 +1431,7 @@ recentswiper.update();
           
           $( ".nearby-helper" ).hide(); 
                     $( ".recent-helper" ).hide(); 
-	$( ".summary-helper" ).hide(); 
+
 	
 	//alert('getmatch trigger' + homewant);
 	
@@ -1452,7 +1452,7 @@ if (!homewant || homewant =='offline'){
 	$( ".buttons-home" ).hide();
 	$( ".toolbar" ).hide();
 	$( ".results-loader" ).hide();
-    $( ".summary-helper" ).show();
+
 	var loginmethod = window.localStorage.getItem("loginmethod");
 	if (loginmethod == '1'){$( ".login2" ).show();}
 	else{$( ".login2" ).hide();}
@@ -1597,7 +1597,7 @@ if (data == '77'){
    		$( ".home-title" ).hide(); 
 
  $( ".results-loader" ).hide();
-    $( ".summary-helper" ).show();
+
 var loginmethod = window.localStorage.getItem("loginmethod");
 	if (loginmethod == '1'){$( ".login2" ).show();}
 	else{$( ".login2" ).hide();}
@@ -1660,7 +1660,7 @@ nameslist = [];
    
    
    $( ".results-loader" ).hide();
-   $( ".summary-helper" ).show();
+
 	
 	var loginmethod = window.localStorage.getItem("loginmethod");
 	if (loginmethod == '1'){$( ".login2" ).show();}
@@ -2016,7 +2016,7 @@ if ($('.no-results-div').length > 0) {}
 		$( ".home-title" ).hide(); 
 
  $( ".results-loader" ).hide();
-    $( ".summary-helper" ).show();
+
 var loginmethod = window.localStorage.getItem("loginmethod");
 	if (loginmethod == '1'){$( ".login2" ).show();}
 	else{$( ".login2" ).hide();}
