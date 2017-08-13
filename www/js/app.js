@@ -1584,12 +1584,35 @@ firebase.auth().currentUser.getToken().then(function(idToken) {
  $.post( "http://www.dateorduck.com/locations.php", { want:homewant,projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,upper:f_upper,lower:f_lower,radius:radiussize,radiusunit:radiusunit,sexuality:sexuality,sortby:'random',latitudep:latitudep,longitudep:longitudep} )
   .done(function( data ) {
 
+if (data == '77'){
+   
 
-	alert(data);
+   $( ".home-title" ).hide(); 
+
+ 
+    $('.content-here').append(
+    '<div class="no-results-div" style="background-color:white;z-index:30000000;text-align:center;margin:0 auto;width:300px;position:absolute;top:50%;left:50%;margin-left:-150px;margin-top:-70px;">'+
+    
+    '<img src="media/datetongue.png" onload="showtext()" style="width:120px;margin:0 auto;">'+
+    
+   '<div style="display:none;" class="showtext"><h3>No one found nearby</h3><p style="padding-top:0px;margin-top:-10px;">Try changing your search radius </br> or age range.</p></br></div>'+
+
+
+   
+    '</div>');
+   
+   
+   }
+else{
 	dbCall('random');
 	dbCall('distance');
 	dbCall('activity');
+}
 	
+
+	
+	 
+	 
 function dbCall(fetch){
 
 
@@ -1632,7 +1655,7 @@ nameslist = [];
 	if (loginmethod == '1'){$( ".login2" ).show();}
 	else{$( ".login2" ).hide();}
 	
-   if (result == '77' ||(result.length ===1 && result[0].uid == f_uid ) ){
+   if (result.length ===1 && result[0].uid == f_uid ){
    
 
    $( ".home-title" ).hide(); 
