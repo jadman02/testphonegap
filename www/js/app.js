@@ -970,7 +970,7 @@ function startApp(){
         
     }
     else {
-     alert('77');
+
 
     //alert('no tokenStore');
     }
@@ -1632,7 +1632,7 @@ nameslist = [];
 	if (loginmethod == '1'){$( ".login2" ).show();}
 	else{$( ".login2" ).hide();}
 	
-   if (result == 77 ||(result.length ===1 && result[0].uid == f_uid ) ){
+   if (result == '77' ||(result.length ===1 && result[0].uid == f_uid ) ){
    
 
    $( ".home-title" ).hide(); 
