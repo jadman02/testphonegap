@@ -5602,7 +5602,7 @@ month[11] = "Dec";
         var yesterdaystring = weekday[stringyestday.getDay()] + ', ' + month[stringyestday.getMonth()] + ' ' + stringyestday.getDate(); 
 message_historyon = firebase.database().ref("chats/" + first_number+ '/' + second_number).orderByKey().limitToLast(20).on("child_added", function(snapshot) {
 
-if (message_count ==1) {lastkey = snapshot.getKey();}
+if (message_count ==0) {lastkey = snapshot.getKey();alert(lastkey);}
 
 message_count ++;
 
@@ -6124,15 +6124,15 @@ if (Number(f_uid) > Number(targetid) ) {second_number = f_uid;first_number = tar
 else {first_number = f_uid;second_number = targetid;}
 
 
-var newmessage_history = firebase.database().ref("chats/" + first_number+ '/' + second_number).orderByKey().limitToLast(letsload).endAt(lastkey + 1).on("child_added", function(snapshot) {
+var newmessage_history = firebase.database().ref("chats/" + first_number+ '/' + second_number).orderByKey().limitToLast(letsload).endAt(lastkey).on("child_added", function(snapshot) {
 
 
+if (message_count ==0) {lastkey = snapshot.getKey();alert(lastkey);}
 
 message_count ++;
 
 
 
-if (message_count ==1) {lastkey = snapshot.getKey();}
 
 var obj = snapshot.val();
 
