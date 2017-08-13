@@ -2193,9 +2193,7 @@ f_description = snapshot.child("description").val();
 	
 		
 	 firebase.database().ref('users/' + f_uid).update({
-    token: f_token,
-		 expiry: f_token_expiry
-   //expiry: f_token_expiry
+    token: f_token
   });
 
 	
@@ -2889,7 +2887,10 @@ else if (tunixminago < 2) {timestamptitle = '1 minute ago';}
 else if (tunixminago < 60) {timestamptitle = Math.round(tunixminago)+' minutes ago';}
 
 else if (tunixminago == 60) {timestamptitle = '1 hour ago';}
-else if (tunixminago < 62) {timestamptitle = '1 hour ago';}
+else if (tunixminago < 120) {timestamptitle = '1 hour ago';}
+	
+	
+	
 else if (tunixminago < 1440) {timestamptitle = Math.round(tunixminago / 60) +' hours ago';}
 else if (tunixminago == 1440) {timestamptitle = '1 day ago';}
 else if (tunixminago < 2880) {timestamptitle = '1 day ago';}
@@ -3187,7 +3188,8 @@ else if (tunixminago < 2) {timestamptitle = 'Sent 1 min ago';}
 else if (tunixminago < 60) {timestamptitle = 'Sent '+Math.round(tunixminago)+' mins ago';}
 
 else if (tunixminago == 60) {timestamptitle = 'Sent 1 hour ago';}
-else if (tunixminago < 62) {timestamptitle = 'Sent 1 hour ago';}
+	else if (tunixminago < 120) {timestamptitle = 'Sent 1 hour ago';}
+
 else if (tunixminago < 1440) {timestamptitle = 'Sent '+Math.round(tunixminago / 60) +' hours ago';}
 else if (tunixminago == 1440) {timestamptitle = 'Sent 1 day ago';}
 else if (tunixminago < 2880) {timestamptitle = 'Sent 1 day ago';}
@@ -8310,7 +8312,8 @@ else if (tunixminago < 2) {timestamptitle = 'Sent 1 minute ago';}
 else if (tunixminago < 60) {timestamptitle = 'Sent '+Math.round(tunixminago)+' minutes ago';}
 
 else if (tunixminago == 60) {timestamptitle = 'Sent 1 hour ago';}
-else if (tunixminago < 62) {timestamptitle = 'Sent 1 hour ago';}
+	   else if (tunixminago < 120) {timestamptitle = 'Sent 1 hour ago';}
+
 else if (tunixminago < 1440) {timestamptitle = 'Sent '+Math.round(tunixminago / 60) +' hours ago';}
 else if (tunixminago == 1440) {timestamptitle = 'Sent 1 day ago';}
 else if (tunixminago < 2880) {timestamptitle = 'Sent 1 day ago';}
@@ -8328,7 +8331,8 @@ else if (unixminago == 1) {dateseentitle = 'Seen 1 minute ago';}
 else if (unixminago < 2) {dateseentitle = 'Seen 1 minute ago';}
 else if (unixminago < 60) {dateseentitle = 'Seen '+Math.round(unixminago)+' minutes ago';}
 else if (unixminago == 60) {dateseentitle = 'Seen 1 hour ago';}
-else if (unixminago < 62) {dateseentitle = 'Seen 1 hour ago';}
+	else if (unixminago < 120) {timestamptitle = 'Seen 1 hour ago';}
+
 else if (unixminago < 1440) {dateseentitle = 'Seen '+Math.round(unixminago / 60) +' hours ago';}
 else if (unixminago == 1440) {dateseentitle = 'Seen 1 day ago';}
 else if (unixminago < 2880) {dateseentitle = 'Seen 1 day ago';}
@@ -8362,7 +8366,8 @@ else if (junixminago < 2) {acceptedtitle = 'Confirmed 1 minute ago';}
 else if (junixminago < 60) {acceptedtitle = 'Confirmed '+Math.round(junixminago)+' minutes ago';}
 
 else if (junixminago == 60) {acceptedtitle = 'Confirmed 1 hour ago';}
-else if (junixminago < 62) {acceptedtitle = 'Confirmed 1 hour ago';}
+		  else if (junixminago < 120) {acceptedtitle = 'Confirmed 1 hour ago';}
+
 else if (junixminago < 1440) {acceptedtitle = 'Confirmed '+Math.round(junixminago / 60) +' hours ago';}
 else if (junixminago == 1440) {acceptedtitle = 'Confirmed 1 day ago';}
 else if (junixminago < 2880) {acceptedtitle = 'Confirmed 1 day ago';}
@@ -11276,12 +11281,12 @@ var retrievealbumurl;
 if (!pagingalbumurl) {retrievealbumurl = 'https://graph.facebook.com/v2.8/'+f_uid+'/albums?limit=20&fields=id,count,name&access_token=' + f_token}
 else {retrievealbumurl = pagingalbumurl}
 
-	alert(retrievealbumurl);
+	
 	
 $.getJSON(retrievealbumurl,
       function(response) {
 	
- alert(JSON.stringify(response));
+ 
 
    if(response.data.length == 0){
    
