@@ -1414,9 +1414,8 @@ else{}
 
 function getMatches(){
 
-	$( ".content-here" ).empty();            
-
-
+//$( ".content-here" ).empty();            
+$( ".content-here" ).hide();
 	
 	
 randomswiper.removeAllSlides();
@@ -1447,7 +1446,8 @@ if ((initialload === false) && (availarray.length === 0)){
 	
 if (!homewant || homewant =='offline'){
 
-	$('.content-here').empty();
+	
+	$( ".content-here" ).hide();
    $( ".statusbar-overlay" ).css("background-color","#ccc");
 	$( ".buttons-home" ).hide();
 	$( ".toolbar" ).hide();
@@ -1601,16 +1601,7 @@ if (data == '77'){
 var loginmethod = window.localStorage.getItem("loginmethod");
 	if (loginmethod == '1'){$( ".login2" ).show();}
 	else{$( ".login2" ).hide();}
-		$('.content-here').append(
-    '<div class="no-results-div" style="background-color:white;z-index:30000000;text-align:center;margin:0 auto;width:300px;position:absolute;top:50%;left:50%;margin-left:-150px;margin-top:-70px;">'+
-    
-    '<img src="media/datetongue.png" onload="showtext()" style="width:120px;margin:0 auto;">'+
-    
-   '<div style="display:none;" class="showtext"><h3>No one found nearby</h3><p style="padding-top:0px;margin-top:-10px;">Try changing your search radius </br> or age range.</p></br></div>'+
-
-
-   
-    '</div>');
+		$('.content-here').show();
 	
       setTimeout(function(){
 	
@@ -1681,16 +1672,7 @@ nameslist = [];
    $( ".home-title" ).hide(); 
 
  
-    $('.content-here').append(
-    '<div class="no-results-div" style="background-color:white;z-index:30000000;text-align:center;margin:0 auto;width:300px;position:absolute;top:50%;left:50%;margin-left:-150px;margin-top:-70px;">'+
-    
-    '<img src="media/datetongue.png" onload="showtext()" style="width:120px;margin:0 auto;">'+
-    
-   '<div style="display:none;" class="showtext"><h3>No one found nearby</h3><p style="padding-top:0px;margin-top:-10px;">Try changing your search radius </br> or age range.</p></br></div>'+
-
-
-   
-    '</div>');
+  $('.content-here').show();
 
    
    }
@@ -2038,21 +2020,14 @@ if ($('.no-results-div').length > 0) {}
 var loginmethod = window.localStorage.getItem("loginmethod");
 	if (loginmethod == '1'){$( ".login2" ).show();}
 	else{$( ".login2" ).hide();}
-		$('.content-here').append(
-    '<div class="no-results-div" style="background-color:white;z-index:30000000;text-align:center;margin:0 auto;width:300px;position:absolute;top:50%;left:50%;margin-left:-150px;margin-top:-70px;">'+
-    
-    '<img src="media/datetongue.png" onload="showtext()" style="width:120px;margin:0 auto;">'+
-    
-   '<div style="display:none;" class="showtext"><h3>No one found nearby</h3><p style="padding-top:0px;margin-top:-10px;">Try changing your search radius </br> or age range.</p></br></div>'+
-
-
-   
-    '</div>');
+		$('.content-here').show();
 	  
 		  
 	}
 }
-	else {$( ".home-title" ).show(); $('.content-here').empty();}	
+	else {$( ".home-title" ).show(); 
+	      //$('.content-here').empty();
+	      $('.content-here').hide();}	
 	
 	
 	
@@ -3932,17 +3907,7 @@ if (new_all.length === 0){
  $( ".results-loader" ).hide();
     
 
-	$('.content-here').append(
-    '<div class="no-results-div" style="background-color:white;z-index:30000000;text-align:center;margin:0 auto;width:300px;position:absolute;top:50%;left:50%;margin-left:-150px;margin-top:-70px;">'+
-    
-    '<img src="media/datetongue.png" onload="showtext()" style="width:120px;margin:0 auto;">'+
-    
-   '<div style="display:none;" class="showtext"><h3>No one found nearby</h3><p style="padding-top:0px;margin-top:-10px;">Try changing your search radius </br> or age range.</p></br></div>'+
-
-
-
-   
-    '</div>');
+	$('.content-here').show();
 	  
 		  
 
