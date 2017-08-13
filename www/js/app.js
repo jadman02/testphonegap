@@ -2889,7 +2889,6 @@ var notificationlist = firebase.database().ref('notifications/' + f_uid).once('v
 
 
 
-alert(JSON.stringify(snapshot.val())); 
 if (snapshot.val() === null){
     
     
@@ -3079,7 +3078,7 @@ if ((datemeinarray==1 && datetoinarray==1) || (duckmeinarray==1 && ducktoinarray
 else{func = 'singleUser'}
 
 
-alert('here1');
+
    
     mynotifs.push({
     title: message_text,
@@ -3096,8 +3095,7 @@ alert('here1');
     type:typetype,
     timestamptitle:timestamptitle
 });
-  alert(JSON.stringify(mynotifs));
-  alert('here2');
+
     
   
     
@@ -3107,12 +3105,12 @@ alert('here1');
 	
 var notif2load = mynotifs.length; 
 
-alert('here3');
 
-if (notif2load > 12) {alert('here66');notifletsload = 12;} else {notifletsload = notif2load;}
+
+if (notif2load > 12) {notifletsload = 12;} else {notifletsload = notif2load;}
 
 for (i = 0; i < notifletsload; i++) { 
-alert('here3');
+
  myList.appendItem({
     title: mynotifs[i].title,
     targetid:mynotifs[i].targetid,
@@ -3131,7 +3129,6 @@ alert('here3');
 
 }
 
- alert('here6');
 }
 
 });
