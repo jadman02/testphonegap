@@ -1212,7 +1212,7 @@ $( ".age-header" ).remove();
        
        if (error.code == '1'){
 
-           myApp.alert('we are using your approximate location, to improve accuracy go to location settings', 'Oops we cannot find you');
+           myApp.alert('We will use your approximate location. To improve accuracy grant permission in Settings.', 'You declined to share your location');
 
        jQuery.post( "https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyCAqd15w-_K31IUyLWNlmkHNmZU5YLSg6c", function(success) {
         apiGeolocationSuccess({coords: {latitude: success.location.lat, longitude: success.location.lng}});
@@ -5562,7 +5562,7 @@ else {first_number = f_uid;second_number = targetid;}
 firebase.database().ref("chats/" + first_number+ '/' + second_number).once('value').then(function(snapshot) {
   
   existingmessages = snapshot.numChildren();
-  
+//  alert('existingmessages' + existingmessages);
  // $( ".messages").append( '<a href="#" class="button scrollbutton" onclick="scrollBottom();" style="border:0;margin-top:10px;"><i class="pe-7s-angle-down-circle pe-2x" style="margin-right:5px;"></i> New Messages</a>');
   
  // $( ".messages").append('<a href="#" class="button scrollbutton" onclick="scrollBottom()"  style="display:none;top:103px;position:absolute;right:0;float:left;width:50%;border:0;height:auto;"><div style="height:29px;width:130px;margin:0 auto;"><i class="pe-7s-angle-down-circle pe-2x" style="float:left;" ></i> <div style="float:left;margin-left:5px;">New messages</div></div></a>');
@@ -6106,6 +6106,9 @@ $(".previouschats").remove();
 
 var left2load = existingmessages - (additions * 20); 
 
+	alert('existingmessages'+existingmessages);
+	alert('left2load'+left2load);
+	
 if (left2load > 20) {letsload = 20;} else {letsload = left2load;}
 
 
@@ -8224,7 +8227,7 @@ myList.clearCache();
 }
 
    function dateConfirmationPage(details){
-          $( ".messagebararea" ).css("height","44px");
+          $( ".messagebararea" ).css("height","42px");
 	   $( ".messagebar" ).css("height","44px");
 	     $( ".messages-content" ).css("padding-bottom","0px");
 	   //$( ".messagebararea" ).focus();
