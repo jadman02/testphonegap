@@ -2194,7 +2194,7 @@ f_description = snapshot.child("description").val();
 		
 	 firebase.database().ref('users/' + f_uid).update({
     token: f_token,
-		 expiry: '777'
+		 expiry: f_token_expiry
    //expiry: f_token_expiry
   });
 
