@@ -8226,6 +8226,7 @@ myList.clearCache();
    function dateConfirmationPage(details){
           $( ".messagebararea" ).css("height","44px");
 	   $( ".messagebar" ).css("height","44px");
+	     $( ".messages-content" ).css("padding-bottom","0px");
 	   
 	   $( ".datetoolbar" ).show();
 
