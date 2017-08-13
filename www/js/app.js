@@ -2816,13 +2816,13 @@ else {dateRequest();}
 
 var mynotifs = [];
 function leftPanel(){
-	alert('here0');
+
 canscrollnotif = true;
 mynotifs = [];
 notifadditions=0;
 if(!myList){
 
-	alert('here1');
+
 	
 myList = myApp.virtualList('.virtual-notifications', {
     // Array with plain HTML items
@@ -2944,7 +2944,7 @@ if (typetype == 'date') {mediaicon = fdateicon;}
 
 
 //need to see if a match still and then create function based on tha
-    alert('here3');
+
 var timestamptitle;
 var unixnow = Math.round(+new Date()/1000);
 var tunixago = unixnow - obj.timestamp;
@@ -2971,7 +2971,7 @@ else if (tunixminago == 525600) {timestamptitle = '1 week ago';}
 else if (tunixminago < (525600*2)) {timestamptitle = '1 week ago';}
 else if (tunixminago >= (525600*2)) {timestamptitle = Math.round(tunixminago / 525600) +' years ago';}
 
-alert('here4');
+
     
    // onclick="singleBrowser('+targetid+')"
     
@@ -3078,8 +3078,8 @@ if ((datemeinarray==1 && datetoinarray==1) || (duckmeinarray==1 && ducktoinarray
     }
 else{func = 'singleUser'}
 
-alert('here5');
 
+alert('here1');
    
     mynotifs.push({
     title: message_text,
@@ -3097,20 +3097,22 @@ alert('here5');
     timestamptitle:timestamptitle
 });
   
-  
+  alert('here2');
     
-   
+  
     
 });
 
+	 alert(JSON.stringify(mynotifs)); 
+	
 var notif2load = mynotifs.length; 
 
+alert('here3');
 
-
-if (notif2load > 12) {notifletsload = 12;} else {notifletsload = notif2load;}
+if (notif2load > 12) {alert('here66');notifletsload = 12;} else {notifletsload = notif2load;}
 
 for (i = 0; i < notifletsload; i++) { 
-
+alert('here3');
  myList.appendItem({
     title: mynotifs[i].title,
     targetid:mynotifs[i].targetid,
