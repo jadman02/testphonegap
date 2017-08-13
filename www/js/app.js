@@ -1585,12 +1585,16 @@ firebase.auth().currentUser.getToken().then(function(idToken) {
   .done(function( data ) {
 
 if (data == '77'){
-   
+   alert('got here');
 
-   $( ".home-title" ).hide(); 
+   		$( ".home-title" ).hide(); 
 
- 
-    $('.content-here').append(
+ $( ".results-loader" ).hide();
+    $( ".summary-helper" ).show();
+var loginmethod = window.localStorage.getItem("loginmethod");
+	if (loginmethod == '1'){$( ".login2" ).show();}
+	else{$( ".login2" ).hide();}
+		$('.content-here').append(
     '<div class="no-results-div" style="background-color:white;z-index:30000000;text-align:center;margin:0 auto;width:300px;position:absolute;top:50%;left:50%;margin-left:-150px;margin-top:-70px;">'+
     
     '<img src="media/datetongue.png" onload="showtext()" style="width:120px;margin:0 auto;">'+
@@ -1600,6 +1604,7 @@ if (data == '77'){
 
    
     '</div>');
+	
    
    
    }
@@ -1671,7 +1676,15 @@ nameslist = [];
 
    
     '</div>');
-   
+   setTimeout(function(){
+	
+		$( ".homedate" ).removeClass("disabled");
+	$( ".homeduck" ).removeClass("disabled");
+	
+	
+	}, 2000);
+	   
+	   return false;
    
    }
    else {
