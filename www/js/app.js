@@ -180,8 +180,10 @@ function newHometown(){
 
 function fQuery(){
 
-
-
+var invitebutton;
+var loginmethod = window.localStorage.getItem("loginmethod");
+	if (loginmethod == '1'){invitebutton = '<a href="#" class="button active" onclick="appLink()">Invite friends</a></div>';}
+	else{invitebutton = '<a class="button active external" href="sms:&body=Check out a new app in the App Store: https://fb.me/1554148374659639. It is called Date or Duck. Thoughts? ">Invite friends</a>';}
 	
 	
 $.ajax({
@@ -259,7 +261,8 @@ recentshare = false;
                       '  <div class="item-title">'+friendstring+'</div>'+
                        // '<div class="item-after"></div>'+
                    ' </div>'+
-                    '<div class="item-subtitle" style="margin-top:5px;margin-bottom:5px;"><a href="#" class="button active" onclick="appLink()">Invite friends</a></div>'+
+                    '<div class="item-subtitle" style="margin-top:5px;margin-bottom:5px;">'+ 
+	 invitebutton +
                    ' <div class="item-text">Sign up <span class="badge" style="background-color:#ff3b30;color:white;">10</span> friends on Facebook to unlock this feature.</div>'+
                 '</div>'+
             '</div>'+
@@ -295,7 +298,7 @@ $('.recent-helper').html(
                       '  <div class="item-title">'+friendstring+'</div>'+
                        // '<div class="item-after"></div>'+
                    ' </div>'+
-                    '<div class="item-subtitle" style="margin-top:5px;margin-bottom:5px;"><a href="#" class="button active" onclick="appLink()">Invite friends</a></div>'+
+                    '<div class="item-subtitle" style="margin-top:5px;margin-bottom:5px;">'+invitebutton+'</div>'+
                    ' <div class="item-text">Sign up <span class="badge" style="background-color:#ff3b30;color:white;">10</span> friends on Facebook to unlock this feature.</div>'+
                 '</div>'+
             '</div>'+
@@ -314,7 +317,7 @@ $('.recent-helper').html(
                       '  <div class="item-title">'+friendstring+'</div>'+
                        // '<div class="item-after"></div>'+
                    ' </div>'+
-                    '<div class="item-subtitle" style="margin-top:5px;margin-bottom:5px;"><a href="#" class="button active" onclick="appLink()">Invite friends</a></div>'+
+                    '<div class="item-subtitle" style="margin-top:5px;margin-bottom:5px;">+invitebutton+</div>'+
                    ' <div class="item-text">Sign up <span class="badge" style="background-color:#ff3b30;color:white;">5</span> friends on Facebook to unlock this feature.</div>'+
                 '</div>'+
             '</div>'+
@@ -385,7 +388,9 @@ $('.nearby-helper').html(
 
 
 $( ".summary-helper" ).show(); 
-
+var loginmethod = window.localStorage.getItem("loginmethod");
+	if (loginmethod == '1'){$( ".login2" ).show();}
+	else{$( ".login2" ).hide();}
         
    },
     error: function (jqXHR, textStatus, errorThrown) {
@@ -1147,7 +1152,9 @@ else {slidecontent = '<div class="age_'+random_all[i].age+' swiper-slide slide_'
           $( ".nearby-helper" ).show(); 
                     $( ".recent-helper" ).show(); 
 	$( ".summary-helper" ).show(); 
-		
+		var loginmethod = window.localStorage.getItem("loginmethod");
+	if (loginmethod == '1'){$( ".login2" ).show();}
+	else{$( ".login2" ).hide();}
 		}, 2000);
 		
 	}
@@ -1439,6 +1446,9 @@ if (!homewant || homewant =='offline'){
 	$( ".toolbar" ).hide();
 	$( ".results-loader" ).hide();
     $( ".summary-helper" ).show();
+	var loginmethod = window.localStorage.getItem("loginmethod");
+	if (loginmethod == '1'){$( ".login2" ).show();}
+	else{$( ".login2" ).hide();}
 	new_all = [];
 random_all = [];
 nearby_all = [];
@@ -1617,6 +1627,11 @@ nameslist = [];
    
    $( ".results-loader" ).hide();
    $( ".summary-helper" ).show();
+	
+	var loginmethod = window.localStorage.getItem("loginmethod");
+	if (loginmethod == '1'){$( ".login2" ).show();}
+	else{$( ".login2" ).hide();}
+	
    if (result == 77 ||(result.length ===1 && result[0].uid == f_uid ) ){
    
 
@@ -1977,7 +1992,9 @@ if ($('.no-results-div').length > 0) {}
 
  $( ".results-loader" ).hide();
     $( ".summary-helper" ).show();
-
+var loginmethod = window.localStorage.getItem("loginmethod");
+	if (loginmethod == '1'){$( ".login2" ).show();}
+	else{$( ".login2" ).hide();}
 		$('.content-here').append(
     '<div class="no-results-div" style="background-color:white;z-index:30000000;text-align:center;margin:0 auto;width:300px;position:absolute;top:50%;left:50%;margin-left:-150px;margin-top:-70px;">'+
     
