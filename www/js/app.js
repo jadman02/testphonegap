@@ -54,7 +54,7 @@ if (param == 3){titlestring = 'New date confirmed';bodystring='By ' + f_first;}
 
 function sharePop(){
 
-if (loginmethod == '1'){
+
 	
 facebookConnectPlugin.showDialog({
 	method: "share",
@@ -62,27 +62,13 @@ facebookConnectPlugin.showDialog({
 	hashtag: "#dateorduck"
 	//share_feedWeb: true, // iOS only
 }, function (response) {}, function (response) {})
-}
-	
-	else {
-	
-		share();
-	
-	}
+
 	
 }
 
 function appLink(){
 
-	facebookConnectPlugin.logout(
-function (error) { 
 
-},
-function (error) { 
-	//alert(error);
-}
-);  
-	
 	facebookConnectPlugin.appInvite(
     {
         url: "https://fb.me/1554148374659639",
@@ -1460,6 +1446,11 @@ recent_all = [];
 
 	
 	var swiperheight = $( window ).height() - 378;
+
+	if (loginmethod == '1'){var sharebuttons = '<a href="#" class="button-big button active" style="margin-bottom:10px;" onclick="appLink()">Invite Friends</a><a href="#" class="button-big button" style="margin-bottom:10px;" onclick="sharePop()">Share</a><a class="button-big button external" href="sms:&body=Check out this new a new app in the App Store: https://fb.me/1554148374659639. It is called Date or Duck. Thoughts? " style="margin-bottom:10px;">Send SMS</a>';}
+	else{var sharebuttons = '<a class="button-big button external" href="sms:&body=Check out this new a new app in the App Store: https://fb.me/1554148374659639. It is called Date or Duck. Thoughts? " style="margin-bottom:10px;">Send SMS</a>;}
+	
+	
 	
 	$('.content-here').append(
     '<div class="no-results-div" style="background-color:white;z-index:30000000;text-align:center;margin:0 auto;width:300px;position:absolute;top:44px;left:50%;margin-left:-150px;margin-top:54px;">'+
@@ -1506,9 +1497,7 @@ recent_all = [];
 '</div>'+
    
 		'    <div class="content-block-title" style="width:100%;text-align:center;margin-top:20px;margin-bottom:10px;margin-left:0px;">Support this app</div>'+
-'<a href="#" class="button-big button active" style="margin-bottom:10px;" onclick="appLink()">Invite Friends</a>'+
-		'<a href="#" class="button-big button" style="margin-bottom:10px;" onclick="sharePop()">Share</a>'+
-		'<a class="button-big button external" href="sms:&body=Check out this new a new app in the App Store: https://fb.me/1554148374659639. It is called Date or Duck. Thoughts? " style="margin-bottom:10px;">Send SMS</a>'+
+sharebuttons+
     '</div>');
 
 
