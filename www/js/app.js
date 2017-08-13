@@ -317,7 +317,7 @@ $('.recent-helper').html(
                       '  <div class="item-title">'+friendstring+'</div>'+
                        // '<div class="item-after"></div>'+
                    ' </div>'+
-                    '<div class="item-subtitle" style="margin-top:5px;margin-bottom:5px;">+invitebutton+</div>'+
+                    '<div class="item-subtitle" style="margin-top:5px;margin-bottom:5px;">'+invitebutton+'</div>'+
                    ' <div class="item-text">Sign up <span class="badge" style="background-color:#ff3b30;color:white;">5</span> friends on Facebook to unlock this feature.</div>'+
                 '</div>'+
             '</div>'+
