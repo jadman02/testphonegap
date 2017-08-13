@@ -3096,14 +3096,14 @@ alert('here1');
     type:typetype,
     timestamptitle:timestamptitle
 });
-  
+  alert(JSON.stringify(mynotifs));
   alert('here2');
     
   
     
 });
 
-	 alert(JSON.stringify(mynotifs)); 
+	  
 	
 var notif2load = mynotifs.length; 
 
