@@ -5602,7 +5602,7 @@ month[11] = "Dec";
         var yesterdaystring = weekday[stringyestday.getDay()] + ', ' + month[stringyestday.getMonth()] + ' ' + stringyestday.getDate(); 
 message_historyon = firebase.database().ref("chats/" + first_number+ '/' + second_number).orderByKey().limitToLast(20).on("child_added", function(snapshot) {
 
-if (message_count ==0) {lastkey = snapshot.getKey();alert(lastkey);}
+if (message_count ==1) {lastkey = snapshot.getKey();alert(lastkey);}
 
 message_count ++;
 
