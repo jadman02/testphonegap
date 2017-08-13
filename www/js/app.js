@@ -1585,7 +1585,7 @@ firebase.auth().currentUser.getToken().then(function(idToken) {
   .done(function( data ) {
 
 
-	
+	alert(data);
 	dbCall('random');
 	dbCall('distance');
 	dbCall('activity');
