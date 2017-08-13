@@ -2816,6 +2816,7 @@ else {dateRequest();}
 
 var mynotifs = [];
 function leftPanel(){
+	alert('here0');
 canscrollnotif = true;
 mynotifs = [];
 notifadditions=0;
