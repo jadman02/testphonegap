@@ -9719,6 +9719,7 @@ $( ".gallerytitle").html('<div style="width:29px;height:29px;border-radius:50%;b
   
   galleryswiper.slideTo(goz,0);
   myApp.sizeNavbars();
+	galleryswiper.lockSwipes();
   });
 
 function deletePhotochat(){
