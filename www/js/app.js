@@ -5535,9 +5535,9 @@ $( ".date2-close" ).hide();
       // $( ".center-date" ).append(targetname);
           myApp.sizeNavbars();
 
-//myMessagebar = myApp.messagebar('.messagebar', {
-//  maxHeight: 200
-//}); 
+myMessagebar = myApp.messagebar('.messagebar', {
+  maxHeight: 200
+}); 
 myMessages = myApp.messages('.messages', {
     autoLayout: true,
     scrollMessages:true
