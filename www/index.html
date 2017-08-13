@@ -285,6 +285,7 @@
  
 <div data-page="index-1" class="page">
 
+<div class="content-here-1" style="display:none;z-index:909999999999999;overflow-y:scroll;background-color:white;position:absolute;width:100%;height:100%;top:0px;"></div>
 
 
 <div class="page-content pull-to-refresh-content pull-to-refresh-content-1" data-ptr-distance="55" style="background-color:white;">
@@ -297,9 +298,9 @@
 
 
 
+<div class="content-here" style="background-color:white;"></div>
 
     
-<div class="content-here" style="background-color:white;"></div>
 
 	
 
@@ -360,8 +361,8 @@
 <div style="background-color:white;width:100%;text-align:center;z-index:9999;margin-top:5px;display:none;" class="summary-helper">
 
 		 <div class="content-block-title" style="width:100%;text-align:center;margin-top:20px;margin-left:0px;margin-bottom:20px;">Support this app</div>
-<a href="#" class="button-big button active" style="margin-bottom:10px;margin-left:10px;margin-right:10px;" onclick="appLink()">Invite Friends</a>
-		<a href="#" class="button-big button" style="margin-bottom:10px;margin-left:10px;margin-right:10px;" onclick="sharePop()">Share</a>
+<a href="#" class="button-big button active login2" style="margin-bottom:10px;margin-left:10px;margin-right:10px;" onclick="appLink()">Invite Friends</a>
+		<a href="#" class="button-big button login2" style="margin-bottom:10px;margin-left:10px;margin-right:10px;" onclick="sharePop()">Share</a>
 		<a class="button-big button external" href="sms:&body=Check out a new app in the App Store: https://fb.me/1554148374659639. It is called Date or Duck. Thoughts? " style="margin-left:10px;margin-right:10px;margin-bottom:10px;">Send SMS</a>
 
 
@@ -692,7 +693,7 @@ catch (e) {
             method: 'POST',
             path: '/me/feed',
             params: {
-                message: document.getElementById('Message').value || 'Date or Duck'
+                message: 'Date or Duck'
             },
             success: function() {
                 //alert('the item was posted on Facebook');
