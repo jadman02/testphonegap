@@ -430,10 +430,7 @@ if ($( ".homeduck" ).hasClass( "active" )){homewant = 'duck';updateWant();
 					 
 	
 					  
-					  }else {
-						  
-						  homewant = 'offline';
-						  updateWant(); 
+					  }else {homewant = 'offline';updateWant(); 
 						
 						
 						}                                           
@@ -447,11 +444,7 @@ else{$( ".homedate" ).addClass("active");
 
     if (val == 1){
        if ($( ".homeduck" ).hasClass( "active" )){$( ".homeduck" ).removeClass("active");
-                                             if ($( ".homedate" ).hasClass( "active" )){homewant = 'date';updateWant(); }else {
-						     homewant = 'offline';
-						     updateWant();
-						     
-					     }
+                                             if ($( ".homedate" ).hasClass( "active" )){homewant = 'date';updateWant(); }else {homewant = 'offline';updateWant(); }
                                                  } 
         else{$( ".homeduck" ).addClass("active");
                                                      if ($( ".homedate" ).hasClass( "active" )){homewant = 'dateduck';updateWant(); }else {homewant = 'duck';updateWant(); }
@@ -466,7 +459,7 @@ else{$( ".homedate" ).addClass("active");
 
 
 function updateWant(){
-$( ".content-here-1" ).hide();
+
 	randomswiper.removeAllSlides();
 nearbyswiper.removeAllSlides();
 recentswiper.removeAllSlides();
@@ -476,7 +469,7 @@ recentswiper.update();
 	
 	if (homewant == 'offline'){
 
-$( ".content-here-1" ).show();
+
 
 
 		new_all = [];
@@ -977,7 +970,7 @@ function startApp(){
         
     }
     else {
-
+     alert('77');
 
     //alert('no tokenStore');
     }
@@ -1078,7 +1071,7 @@ ptrContent.on('ptr:refresh', function (e) {
     // Emulate 2s loading
     //loaded = false;
 
-	//if ($('.no-results-div').length > 0) {myApp.pullToRefreshDone();return false;}
+	if ($('.no-results-div').length > 0) {myApp.pullToRefreshDone();return false;}
 	
 	var timesincelastupdate = Math.round(+new Date()/1000) - geoupdate;
 
@@ -1469,8 +1462,8 @@ var loginmethod = window.localStorage.getItem("loginmethod");
 	
 	
 	
-	$('.content-here-1').append(
-    '<div class="no-results-div" style="background-color:white;z-index:30000000;text-align:center;margin:0 auto;width:300px;position:absolute;top:0px;left:50%;margin-left:-150px;margin-top:54px;">'+
+	$('.content-here').append(
+    '<div class="no-results-div" style="background-color:white;z-index:30000000;text-align:center;margin:0 auto;width:300px;position:absolute;top:44px;left:50%;margin-left:-150px;margin-top:54px;">'+
 '<div class="topdiv">'+
      // '<h3>Get Quacking!</h3>'+
 				'    <div class="content-block-title" style="width:100%;text-align:center;margin-top:15px;margin-left:0px;">Get Quacking, It\'s Easy</div>'+
@@ -1490,7 +1483,7 @@ var loginmethod = window.localStorage.getItem("loginmethod");
 	 '</div>'+   
 
 	
-		  '<div class="list-block-label" style="background-color:#2196f3;color:white;margin-bottom:10px;padding:5px;">When you see this screen your profile is offline and hidden to other people.</div>'+
+		  '<div class="list-block-label" style="color:#666;margin-bottom:10px;">Choose one, or both. Your profile is hidden until you decide.</div>'+
 
 		
 '<div class="swiper-container swiper-helper-info" style="z-index:99999999999999;background-color:#ccc;color:#6d6d72;margin-left:-10px;margin-right:-10px;padding-top:10px;">'+
@@ -1591,48 +1584,12 @@ firebase.auth().currentUser.getToken().then(function(idToken) {
  $.post( "http://www.dateorduck.com/locations.php", { want:homewant,projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,upper:f_upper,lower:f_lower,radius:radiussize,radiusunit:radiusunit,sexuality:sexuality,sortby:'random',latitudep:latitudep,longitudep:longitudep} )
   .done(function( data ) {
 
-if (data == '77'){
-   alert('got here');
 
-   		$( ".home-title" ).hide(); 
-
- $( ".results-loader" ).hide();
-    $( ".summary-helper" ).show();
-var loginmethod = window.localStorage.getItem("loginmethod");
-	if (loginmethod == '1'){$( ".login2" ).show();}
-	else{$( ".login2" ).hide();}
-		$('.content-here').append(
-    '<div class="no-results-div" style="background-color:white;z-index:30000000;text-align:center;margin:0 auto;width:300px;position:absolute;top:50%;left:50%;margin-left:-150px;margin-top:-70px;">'+
-    
-    '<img src="media/datetongue.png" onload="showtext()" style="width:120px;margin:0 auto;">'+
-    
-   '<div style="display:none;" class="showtext"><h3>No one found nearby</h3><p style="padding-top:0px;margin-top:-10px;">Try changing your search radius </br> or age range.</p></br></div>'+
-
-
-   
-    '</div>');
-	
-      setTimeout(function(){
-	
-		$( ".homedate" ).removeClass("disabled");
-	$( ".homeduck" ).removeClass("disabled");
-	
-	
-	}, 2000);
-	   
-	   return false;
-   
-   }
-else{
+	alert(data);
 	dbCall('random');
 	dbCall('distance');
 	dbCall('activity');
-}
 	
-
-	
-	 
-	 
 function dbCall(fetch){
 
 
@@ -1675,7 +1632,7 @@ nameslist = [];
 	if (loginmethod == '1'){$( ".login2" ).show();}
 	else{$( ".login2" ).hide();}
 	
-   if (result.length ===1 && result[0].uid == f_uid ){
+   if (result == 77 ||(result.length ===1 && result[0].uid == f_uid ) ){
    
 
    $( ".home-title" ).hide(); 
@@ -1691,7 +1648,7 @@ nameslist = [];
 
    
     '</div>');
-
+   
    
    }
    else {
@@ -2279,10 +2236,10 @@ if (f_gender == 'Female' && f_interested == 'Men') {sexuality = 'female';}
        
    if (loadpref=== false){
   if(homewant){
-       if (homewant == 'offline'){$( ".homedate" ).removeClass('active');$( ".homeduck" ).removeClass('active');$( ".content-here-1" ).show(); }
-     if (homewant == 'dateduck'){$( ".homedate" ).addClass('active');$( ".homeduck" ).addClass('active');$( ".content-here-1" ).hide(); }
-   if (homewant == 'duck'){$( ".homedate" ).removeClass('active');$( ".homeduck" ).addClass('active'); $( ".content-here-1" ).hide();}
-    if (homewant == 'date'){$( ".homedate" ).addClass('active');$( ".homeduck" ).removeClass('active');$( ".content-here-1" ).hide();}
+       if (homewant == 'offline'){$( ".homedate" ).removeClass('active');$( ".homeduck" ).removeClass('active'); }
+     if (homewant == 'dateduck'){$( ".homedate" ).addClass('active');$( ".homeduck" ).addClass('active'); }
+   if (homewant == 'duck'){$( ".homedate" ).removeClass('active');$( ".homeduck" ).addClass('active'); }
+    if (homewant == 'date'){$( ".homedate" ).addClass('active');$( ".homeduck" ).removeClass('active');}
 }
 	   loadpref = true;
  establishNotif();
