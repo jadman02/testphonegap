@@ -474,6 +474,8 @@ randomswiper.update();
 nearbyswiper.update();
 recentswiper.update();
 	$( ".home-title" ).hide(); 
+			 $( ".results-loader" ).show(); 
+
 	
 	if (homewant == 'offline'){
 
