@@ -5569,8 +5569,8 @@ var conversation_started = false;
 function chatShow(){
 	//fcm();
 prevdatetitle = false;
-deletephotochats = setInterval(function(){ checkdeleteP; }, 10000);
-	  
+deletephotochats = setInterval(function(){ checkdeleteP }, 3000);
+
     letsload = 20;
     canloadchat = true;
     additions = 0;
