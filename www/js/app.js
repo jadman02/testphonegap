@@ -4196,7 +4196,7 @@ var popupHTML = '<div class="popup chatpop">'+
     '</div>'+
 
  ' <div class="toolbar-inner message-inner" style="display:none;background-color:white;padding-left:0px;padding-right:0px;border-top:1px solid #2196f3;">'+
-  '<a href="#" class="link icon-only" style="margin-left:5px;"><i class="pe-7s-camera pe-lg" style="color:#2196f3;font-size:28px;"></i><i class="twa twa-bomb" style="z-index:999;margin-left:-10px;margin-top:-15px;"></i></a> <input type="file" size="70" accept="image/*" class="dealPictureField imagenotchosen" id="takePictureField_" onchange="getPicture();" style="background-color:transparent;color:transparent;float:left;cursor: pointer;height:54px;width:50px;z-index:1;opacity:0;margin-top:-12px;margin-left:-50px;"><textarea id="messagearea" class="messagebararea" type="text" placeholder="Type your message.." style="border-color:transparent;" onkeyup="toggleSend();"></textarea><a href="#" class="link sendbutton" onclick="sendMessage();" style="margin-right:10px;margin-left:10px;width:0px;">Send</a>'+
+  '<a href="#" class="link icon-only" style="margin-left:5px;background-color:#2196f3;"><i class="pe-7s-camera pe-lg" style="color:white;font-size:28px;"></i><i class="twa twa-bomb" style="z-index:999;margin-left:-10px;margin-top:-15px;"></i></a> <input type="file" size="70" accept="image/*" class="dealPictureField imagenotchosen" id="takePictureField_" onchange="getPicture();" style="background-color:transparent;color:transparent;float:left;cursor: pointer;height:54px;width:50px;z-index:1;opacity:0;margin-top:-12px;margin-left:-50px;"><textarea id="messagearea" class="messagebararea" type="text" placeholder="Type your message.." style="border-color:transparent;" onkeyup="toggleSend();"></textarea><a href="#" class="link sendbutton" onclick="sendMessage();" style="margin-right:10px;margin-left:10px;width:0px;">Send</a>'+
   '</div>'+
 '</div>'+  
         '<div class="datedetailsdiv date-button" onclick="noMessages();setDate();dateConfirmationPage(1);" style="display:none;position:absolute;top:44px;text-align:center;height:44px;width:100%;z-index:999999;">'+
@@ -8107,6 +8107,8 @@ firebase.database().ref("chats/" + first_number+ '/' + second_number).push({
   
   
   
+	$('.sendbutton').css("width","0px");
+	
     myMessages.addMessage({
     // Message text
     text: newmessage,
