@@ -9822,7 +9822,8 @@ else {first_number = f_uid;second_number = targetid;}
 var pchatunix = Math.round(+new Date()/1000);
 
 		$.each(objs, function(i, obj) {
-var expiryval = obj.photo_expiry;
+if(obj.photo_expiry){
+			var expiryval = obj.photo_expiry;
 
 			if (expiryval < pchatunix){
 			$( ".image_" + obj.id).css("height","0px");
@@ -9835,7 +9836,7 @@ var expiryval = obj.photo_expiry;
 firebase.database().ref("chats/" + first_number+ '/' + second_number + '/' + obj.id).remove();
 				
 			}
-			
+}
 		});	
 		
 
