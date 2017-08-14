@@ -9720,18 +9720,36 @@ var pchatunix = Math.round(+new Date()/1000);
 $.each(objs, function(i, obj) {
    if (obj.id == go){goz = galleryimagecount;} 
    var expiryval;
-    if (obj.photo_expiry == null){expiryval = i;}
-    else {expiryval = obj.photo_expiry;}
-    alert(expiryval);
-	
-	alert(pchatunix);
-          $( ".gallery-wrapper" ).append(' <div class="swiper-slide photochat_'+obj.photo_expiry+'" style="height:100%;">'+
+    if (obj.photo_expiry == null){expiryval = i;
+				 
+				  $( ".gallery-wrapper" ).append(' <div class="swiper-slide photochat_'+obj.photo_expiry+'" style="height:100%;">'+
           '<div class="swiper-zoom-container">'+
             
           '<img data-src="'+obj.downloadurl+'" class="swiper-lazy" style="width:100%;" onload="$(this).fadeIn(700);hideImagespopuploader();">'+
            ' <div class="swiper-lazy-preloader"></div></div><input type="hidden" class="photoexpiryhidden_'+galleryimagecount+'" value="'+expiryval +'"><input type="text" class="fromhidden_'+galleryimagecount+'" value="'+obj.from_uid+'"><input type="text" class="tohidden_'+galleryimagecount+'" value="'+obj.user_name+'"><input type="text" class="idhidden_'+galleryimagecount+'" value="'+i+'"><input type="text" class="toidhidden_'+galleryimagecount+'" value="'+obj.to_uid+'"></div>');
 
     galleryimagecount ++;
+				 
+				 }
+    else {expiryval = obj.photo_expiry;
+	 
+	  alert(expiryval);
+	  alert(pchatunix);
+	  
+	 $( ".gallery-wrapper" ).append(' <div class="swiper-slide photochat_'+obj.photo_expiry+'" style="height:100%;">'+
+          '<div class="swiper-zoom-container">'+
+            
+          '<img data-src="'+obj.downloadurl+'" class="swiper-lazy" style="width:100%;" onload="$(this).fadeIn(700);hideImagespopuploader();">'+
+           ' <div class="swiper-lazy-preloader"></div></div><input type="hidden" class="photoexpiryhidden_'+galleryimagecount+'" value="'+expiryval +'"><input type="text" class="fromhidden_'+galleryimagecount+'" value="'+obj.from_uid+'"><input type="text" class="tohidden_'+galleryimagecount+'" value="'+obj.user_name+'"><input type="text" class="idhidden_'+galleryimagecount+'" value="'+i+'"><input type="text" class="toidhidden_'+galleryimagecount+'" value="'+obj.to_uid+'"></div>');
+
+    galleryimagecount ++;
+	 
+	 
+	 }
+    
+	
+
+          
     
 });
      
