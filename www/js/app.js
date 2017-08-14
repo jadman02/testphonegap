@@ -467,6 +467,8 @@ else{$( ".homedate" ).addClass("active");
 
 function updateWant(){
 $( ".content-here-1" ).hide();
+	$( ".content-here" ).hide();
+
 	randomswiper.removeAllSlides();
 nearbyswiper.removeAllSlides();
 recentswiper.removeAllSlides();
