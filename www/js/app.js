@@ -434,7 +434,8 @@ if ($( ".homeduck" ).hasClass( "active" )){homewant = 'duck';updateWant();
 						  
 						  homewant = 'offline';
 						  updateWant(); 
-						
+						  
+
 						
 						}                                           
                                             
@@ -480,7 +481,7 @@ recentswiper.update();
 
 	
 	if (homewant == 'offline'){
-
+  $( ".toolbar" ).hide();
 $( ".content-here-1" ).show();
 
 
@@ -1495,7 +1496,7 @@ var loginmethod = window.localStorage.getItem("loginmethod");
 	 '</div>'+   
 
 	
-		  '<div class="list-block-label" style="background-color:#2196f3;color:white;margin-bottom:10px;padding:5px;">When you see this screen your profile is offline and hidden to other people.</div>'+
+		  '<div class="list-block-label" style="background-color:#f7f7f8;border-radius:5px;margin-bottom:10px;padding:5px;color:#444444">When you see this screen your profile is offline and hidden to other people.</div>'+
 
 		
 '<div class="swiper-container swiper-helper-info" style="z-index:99999999999999;background-color:#ccc;color:#6d6d72;margin-left:-10px;margin-right:-10px;padding-top:10px;">'+
