@@ -9812,7 +9812,7 @@ firebase.database().ref("chats/" + first_number+ '/' + second_number + '/' + pho
 }
 
 function checkdeleteP(){
-
+alert('checking');
 	if (Number(f_uid) > Number(targetid) ) {second_number = f_uid;first_number = targetid;}
 else {first_number = f_uid;second_number = targetid;}
 	
@@ -9823,7 +9823,8 @@ var pchatunix = Math.round(+new Date()/1000);
 
 		$.each(objs, function(i, obj) {
 if(obj.photo_expiry){
-			var expiryval = obj.photo_expiry;
+alert(obj.photo_expiry);
+	var expiryval = obj.photo_expiry;
 
 			if (expiryval < pchatunix){
 				alert('about to remove');
