@@ -1480,7 +1480,7 @@ var loginmethod = window.localStorage.getItem("loginmethod");
 	else{sharebuttons = '<a class="button-big button external" href="sms:&body=Check out this new a new app in the App Store: https://fb.me/1554148374659639. It is called Date or Duck. Thoughts? " style="margin-bottom:10px;">Send SMS</a>';}
 	
 	
-	if if ($('.topdiv').length > 0) {}
+	if ($('.topdiv').length > 0) {}
 	else{
 	$('.content-here-1').html(
     '<div class="no-results-div" style="background-color:white;z-index:30000000;text-align:center;margin:0 auto;width:300px;position:absolute;top:0px;left:50%;margin-left:-150px;margin-top:54px;">'+
