@@ -7,15 +7,14 @@ function toggleSend(){
 
 if ($("#messagearea").val().length > 0){ 	
 	
-$('.sendbutton').animate({
-    width:'40px'
-});
+	$('.sendbutton').css("width","40px");
+	
+
 }
 	
 	else {
-	$('.sendbutton').animate({
-    width:'0px'
-});
+		$('.sendbutton').css("width","0px");
+
 	}
 }
 
