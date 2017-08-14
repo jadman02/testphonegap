@@ -5,7 +5,7 @@ var desktoparray = ['media/dateicon.png','media/duckicon.png','media/datetongue.
 
 function toggleSend(){
 var newmessage = $( "#messagearea" ).val();
-if (newmessage > 0){ 	
+if ($("#messagearea").val().length > 0){ 	
 	
 $('.sendbutton').animate({
     width:'auto'
