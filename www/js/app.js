@@ -1641,6 +1641,9 @@ var loginmethod = window.localStorage.getItem("loginmethod");
 	   return false;
    
    }
+	 
+	 else if (random_all.length > 0){return false;}
+	 
 else{
 	dbCall('random');
 	dbCall('distance');
