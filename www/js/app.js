@@ -5569,7 +5569,8 @@ var conversation_started = false;
 function chatShow(){
 	//fcm();
 prevdatetitle = false;
-timeOuts = new Array(); 
+clearTimeouts(); 
+	timeOuts = new Array(); 
     letsload = 20;
     canloadchat = true;
     additions = 0;
