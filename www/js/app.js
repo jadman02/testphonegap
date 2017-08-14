@@ -5683,7 +5683,7 @@ var obj = snapshot.val();
 alert('image detected');	
 		var pchatunix = Math.round(+new Date()/1000);
 		
-		var timeuntilcheck = ((pchatunix - photo_expiry) * 1000) + 30000;
+		var timeuntilcheck = ((pchatunix - obj.photo_expiry) * 1000) + 30000;
 		
 		alert(timeuntilcheck);
 		
@@ -6215,7 +6215,7 @@ var obj = snapshot.val();
 	
 		var pchatunix = Math.round(+new Date()/1000);
 		
-		var timeuntilcheck = ((pchatunix - photo_expiry) * 1000) + 30000;
+		var timeuntilcheck = ((pchatunix - obj.photo_expiry) * 1000) + 30000;
 		
 		timeOuts["obj.id"] = setTimeout('checkdeleteP()', timeuntilcheck); 
 		
