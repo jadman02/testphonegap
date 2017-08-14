@@ -1480,15 +1480,62 @@ var loginmethod = window.localStorage.getItem("loginmethod");
 	else{sharebuttons = '<a class="button-big button external" href="sms:&body=Check out this new a new app in the App Store: https://fb.me/1554148374659639. It is called Date or Duck. Thoughts? " style="margin-bottom:10px;">Send SMS</a>';}
 	
 	
+	if if ($('.topdiv').length > 0) {}
+	else{
+	$('.content-here-1').html(
+    '<div class="no-results-div" style="background-color:white;z-index:30000000;text-align:center;margin:0 auto;width:300px;position:absolute;top:0px;left:50%;margin-left:-150px;margin-top:54px;">'+
+'<div class="topdiv">'+
+     // '<h3>Get Quacking!</h3>'+
+				'    <div class="content-block-title" style="width:100%;text-align:center;margin-top:15px;margin-left:0px;">Get Quacking, It\'s Easy</div>'+
+
+       '<div class="row" style="padding-top:10px;padding-bottom:10px;">'+
+    '<div class="col-30" style="padding-top:5px;"><img src="media/datefaceonly.png" style="width:80px;margin:0 auto;"></div>'+
+   // '<div class="col-70" style="padding-top:5px;">Press <span style="font-family: \'Pacifico\', cursive;font-size:20px;">date</span> if you want to find something more serious like a relationship.</div>'+
+		    '<div class="col-70" style="padding-top:5px;">Press <span style="font-family: \'Pacifico\', cursive;font-size:26px;">date</span> to find love <br/>(or at least try)</div>'+
+
+'</div>'+
+              '<div class="row" style="padding-top:10px;padding-bottom:10px;margin-bottom:10px;">'+
+    '<div class="col-30" style="padding-top:5px;"><img src="media/duckfaceonly.png" style="width:80px;margin:0 auto;"></div>'+
+//    '<div class="col-70" style="padding-top:5px;">Press <span style="font-family: \'Pacifico\', cursive;font-size:20px;">duck</span> if you want to get down to...ahem...business (replace the D with another letter). </div>'+
+		    '<div class="col-70" style="padding-top:5px;">Press <span style="font-family: \'Pacifico\', cursive;font-size:26px;">duck</span> to find fun <br/>(replace the D with another letter)</div>'+
+
+		'</div>'+
+	 '</div>'+   
+
 	
-	$('.content-here-1').show();
+		  '<div class="list-block-label" style="background-color:#f7f7f8;border-radius:5px;margin-bottom:10px;padding:5px;color:#444444">When you see this screen your profile is offline and hidden to other people.</div>'+
+
+		
+'<div class="swiper-container swiper-helper-info" style="z-index:99999999999999;background-color:#ccc;color:#6d6d72;margin-left:-10px;margin-right:-10px;padding-top:10px;">'+
+'    <div class="content-block-title" style="width:100%;text-align:center;margin-top:15px;margin-left:0px;">How this App Works</div>'+
+		' <div class="swiper-wrapper">'+
+     '   <div class="swiper-slide" style="height:'+swiperheight +'px;"><div class="squareheight" style="height:153px;top:50%;margin-top:-85px;position:absolute;width:300px;left:50%;margin-left:-150px;"><i class="twa twa-4x twa-coffee" style="margin-top:5px;"></i><h2>Find your next<br/> coffee date...</h2></div></div>'+
+     '   <div class="swiper-slide" style="height:'+swiperheight +'px;"><div class="squareheight" style="height:153px;top:50%;margin-top:-85px;position:absolute;width:300px;left:50%;margin-left:-150px"><i class="twa twa-4x twa-wave" style="margin-top:5px;"></i><h2>Or invite someone over<br/> tonight...</h2></div></div>'+
+		               '   <div class="swiper-slide" style="height:'+swiperheight +'px;"><div class="squareheight" style="height:153px;top:50%;margin-top:-85px;position:absolute;width:300px;left:50%;margin-left:-150px"><i class="twa twa-4x twa-heart-eyes" style="margin-top:5px;"></i><h2>When you like someone, <br/>they can see...</h2></div></div>'+
+
+		'   <div class="swiper-slide" style="height:'+swiperheight +'px;"><div class="squareheight" style="height:153px;top:50%;margin-top:-85px;position:absolute;width:300px;left:50%;margin-left:-150px"><i class="twa twa-4x twa-calendar" style="margin-top:5px;"></i><h2>Once you both agree on</br> a time to meet...</h2></div></div>'+
+
+		'   <div class="swiper-slide" style="height:'+swiperheight +'px;"><div class="squareheight" style="height:153px;top:50%;margin-top:-85px;position:absolute;width:300px;left:50%;margin-left:-150px"><i class="twa twa-4x twa-clock12" style="margin-top:5px;"></i><h2>Chat is enabled until <br/>midnight of your date...</h2></div></div>'+
+
+		'   <div class="swiper-slide" style="height:'+swiperheight +'px;"><div class="squareheight" style="height:153px;top:50%;margin-top:-85px;position:absolute;width:300px;left:50%;margin-left:-150px"><i class="twa twa-4x twa-bomb" style="margin-top:5px;"></i><h2>You can send photos that delete after 24 hours...</h2></div></div>'+
+
+		               '   <div class="swiper-slide" style="height:'+swiperheight +'px;"><div class="squareheight" style="height:153px;top:50%;margin-top:-85px;position:absolute;width:300px;left:50%;margin-left:-150px"><i class="twa twa-4x twa-watch" style="margin-top:5px;"></i><h2>You can share availability<br/> to easily schedule dates</h2></div></div>'+
+
+   ' </div>'+
+
+    '<div class="swiper-pagination-p" style="margin-top:-20px;margin-bottom:20px;"></div>'+
+'</div>'+
+   
+		'    <div class="content-block-title" style="width:100%;text-align:center;margin-top:20px;margin-bottom:10px;margin-left:0px;">Support this app</div>'+
+sharebuttons+
+    '</div>');
 
 
     $( ".ploader" ).hide();
 var homeswiperhelper = myApp.swiper('.swiper-helper-info', {
     pagination:'.swiper-pagination-p'
   });
-   
+	}
   
     $( ".loginbutton" ).show();
 $( ".login-loader" ).hide();
