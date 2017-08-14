@@ -469,6 +469,7 @@ else{$( ".homedate" ).addClass("active");
 function updateWant(){
 $( ".content-here-1" ).hide();
 	$( ".content-here" ).hide();
+   $( ".statusbar-overlay" ).css("background-color","#ccc");
 
 	randomswiper.removeAllSlides();
 nearbyswiper.removeAllSlides();
