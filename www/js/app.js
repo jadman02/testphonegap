@@ -9859,7 +9859,7 @@ firebase.database().ref("chats/" + first_number+ '/' + second_number + '/' + pho
 		
 
 		
-}
+});
 }	
 	
 function photodeletecount(){
