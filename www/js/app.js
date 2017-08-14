@@ -610,7 +610,7 @@ try {
 
 
 function directUser(id,type,firstname){
-	if ($('.chatpop').length > 0) {clearInterval(deletephotochats);myApp.closeModal('.chatpop');}
+	if ($('.chatpop').length > 0) {myApp.closeModal('.chatpop');}
 
 	if (type =='date'){createDate1(id,firstname,0);}
 	else {createDuck(id,firstname,0);}
@@ -630,7 +630,7 @@ var datatap, tapid, taptype, tapname;
 
 
 
- var deletephotochats; 
+
 var view1, view2, view3, view4;
 var updatecontinuously = false;
 var initialload = false;
@@ -5569,7 +5569,6 @@ var conversation_started = false;
 function chatShow(){
 	//fcm();
 prevdatetitle = false;
-deletephotochats = setInterval(function(){ checkdeleteP }, 3000);
 
     letsload = 20;
     canloadchat = true;
@@ -5679,10 +5678,6 @@ if (message_count == checkloaded){messages_loaded = true;}
 
 var obj = snapshot.val();
 
-
-	
-	
-	
 var datechatstring;
 
 var messagedate = new Date((obj.timestamp * 1000));
@@ -5790,7 +5785,7 @@ else{
     
      myMessages.addMessage({
     // Message text
-    text: '<img class="image_'+obj.id+'" src="'+obj.downloadurl+'" onload="$(this).fadeIn(700);" style="display:none" onclick="imagesPopup(\''+obj.id+'\');">',
+    text: '<img src="'+obj.downloadurl+'" onload="$(this).fadeIn(700);" style="display:none" onclick="imagesPopup(\''+obj.id+'\');">',
     // Random message type
     type: 'sent',
     // Avatar and name:
@@ -5815,7 +5810,7 @@ else {
      
      myMessages.addMessage({
     // Message text
-    text: '<img class="image_'+obj.id+'" src="'+obj.downloadurl+'" onload="$(this).fadeIn(700);" style="display:none" onclick="imagesPopup(\''+obj.id+'\');">',
+    text: '<img src="'+obj.downloadurl+'" onload="$(this).fadeIn(700);" style="display:none" onclick="imagesPopup(\''+obj.id+'\');">',
     // Random message type
     type: 'sent',
     // ' and name:
@@ -5941,7 +5936,7 @@ if (!obj.photo_expiry){
 
  myMessages.addMessage({
     // Message text
-    text: '<img class="image_'+obj.id+'" src="'+obj.downloadurl+'" onload="$(this).fadeIn(700);" style="display:none"  onclick="imagesPopup(\''+obj.id+'\');">',
+    text: '<img src="'+obj.downloadurl+'" onload="$(this).fadeIn(700);" style="display:none"  onclick="imagesPopup(\''+obj.id+'\');">',
     // Random message type
     type: 'received',
     // Avatar and name:
@@ -6004,7 +5999,7 @@ else{
     
     myMessages.addMessage({
     // Message text
-    text: '<img class="image_'+obj.id+'" src="'+obj.downloadurl+'" onload="$(this).fadeIn(700);" style="display:none"  onclick="imagesPopup(\''+obj.id+'\');">',
+    text: '<img src="'+obj.downloadurl+'" onload="$(this).fadeIn(700);" style="display:none"  onclick="imagesPopup(\''+obj.id+'\');">',
     // Random message type
     type: 'received',
     // Avatar and name:
@@ -6201,8 +6196,8 @@ message_count ++;
 
 if (message_count ==1) {lastkey = snapshot.getKey();}
 
+var obj = snapshot.val();
 
-	
 var datechatstring;
 
 var messagedate = new Date((obj.timestamp * 1000));
@@ -6271,7 +6266,7 @@ if (obj.param == 'message'){
 if (obj.param == 'image'){
       prevarray.push({
     // Message text
-    text: '<img class="image_'+obj.id+'" src="'+obj.downloadurl+'" onload="$(this).fadeIn(700);" style="display:none"  onclick="imagesPopup(\''+obj.id+'\');">',
+    text: '<img src="'+obj.downloadurl+'" onload="$(this).fadeIn(700);" style="display:none"  onclick="imagesPopup(\''+obj.id+'\');">',
     // Random message type
     type: 'sent',
     // Avatar and name:
@@ -6308,7 +6303,7 @@ if (obj.param == 'message'){
 if (obj.param == 'image'){
       prevarray.push({
     // Message text
-    text: '<img class="image_'+obj.id+'" src="'+obj.downloadurl+'" onload="$(this).fadeIn(700);" style="display:none" onclick="imagesPopup(\''+obj.id+'\');">',
+    text: '<img src="'+obj.downloadurl+'" onload="$(this).fadeIn(700);" style="display:none" onclick="imagesPopup(\''+obj.id+'\');">',
     // Random message type
     type: 'received',
     // Avatar and name:
@@ -8230,12 +8225,10 @@ $( "#messagearea" ).val('');
 
 }
 
-
-
 function clearchatHistory(){
 singlefxallowed = true;
 messages_loaded = false;
- 
+
 if (main_all[0] != null){
 new_all = main_all;
 
@@ -8247,13 +8240,10 @@ var first_number,second_number;
 
 if (Number(f_uid) > Number(targetid) ) {second_number = f_uid;first_number = targetid;}
 else {first_number = f_uid;second_number = targetid;}
-
-
-	
-	if (message_history){
+if (message_history){
 
 //firebase.database().ref("notifications/" + f_uid).off('value', existingchatnotifications);
-clearInterval(deletephotochats);
+
 
 firebase.database().ref("chats/" + first_number+ '/' + second_number).off('child_added', message_historyon);
 if(additions>0){
@@ -9530,42 +9520,6 @@ function toTimestamp(year,month,day,hour,minute,second){
 
 
 
-function checkdeleteP(){
-alert('checking');
-	if (Number(f_uid) > Number(targetid) ) {second_number = f_uid;first_number = targetid;}
-else {first_number = f_uid;second_number = targetid;}
-	
-	firebase.database().ref("photochats/" + first_number+ '/' + second_number).once("value")
-  .then(function(snapshot) {
-	
-var pchatunix = Math.round(+new Date()/1000);
-
-		$.each(objs, function(i, obj) {
-if(obj.photo_expiry){
-alert(obj.photo_expiry);
-	var expiryval = obj.photo_expiry;
-
-			if (expiryval < pchatunix){
-				alert('about to remove');
-			$( ".image_" + obj.id).css("height","0px");
-				$( ".image_" + obj.id).addClass("disabled");
-				$( ".image_" + obj.id).css("width","0px");
-				$( ".image_" + obj.id).hide();
-				
-				
-				firebase.database().ref("photochats/" + first_number+ '/' + second_number + '/' + obj.id).remove();
-firebase.database().ref("chats/" + first_number+ '/' + second_number + '/' + obj.id).remove();
-				
-			}
-}
-		});	
-		
-
-		
-});
-}	
-
-
 var photoarray; 
 
 function showPhotos(){
@@ -9724,7 +9678,7 @@ function imagesPopup(go){
                    '<div class="pages">'+
 '<div data-page="gallerypopup" class="page">'+
 '<div class="page-content" style="background-color:white;">'+
-  '<div style="position:absolute;bottom:12px;right:8px;z-index:99999;background-color:white;border-radius:5px;padding:5px;"><div id="photodeletechattime" style="color:white;background-color:#2196f3;float:left;"></div></div>'+
+  '<div style="position:absolute;bottom:12px;right:8px;z-index:99999;background-color:white;border-radius:5px;padding:5px;"><div id="photodeletechattime" style="color:black;float:left;"></div></div>'+
 
                                     '<span style="width:42px; height:42px;position:absolute;top:50%;margin-top:-21px;left:50%;margin-left:-21px;z-index:999999;" class="imagespopuploader preloader"></span> '+
 '<div class="swiper-container swiper-gallery" style="height: calc(100% - 44px);margin-top:44px;">'+
@@ -9762,22 +9716,19 @@ firebase.database().ref("photochats/" + first_number+ '/' + second_number).once(
       
       var objs = snapshot.val();
 
-
 $.each(objs, function(i, obj) {
    if (obj.id == go){goz = galleryimagecount;} 
    var expiryval;
     if (obj.photo_expiry == null){expiryval = i;}
     else {expiryval = obj.photo_expiry;}
     
-	  $( ".gallery-wrapper" ).append(' <div class="swiper-slide photochat_'+obj.photo_expiry+'" style="height:100%;">'+
+          $( ".gallery-wrapper" ).append(' <div class="swiper-slide photochat_'+obj.photo_expiry+'" style="height:100%;">'+
           '<div class="swiper-zoom-container">'+
             
-          '<img data-src="'+obj.downloadurl+'" class="swiper-lazy image_'+obj.id+'" style="width:100%;" onload="$(this).fadeIn(700);hideImagespopuploader();">'+
+          '<img data-src="'+obj.downloadurl+'" class="swiper-lazy" style="width:100%;" onload="$(this).fadeIn(700);hideImagespopuploader();">'+
            ' <div class="swiper-lazy-preloader"></div></div><input type="hidden" class="photoexpiryhidden_'+galleryimagecount+'" value="'+expiryval +'"><input type="text" class="fromhidden_'+galleryimagecount+'" value="'+obj.from_uid+'"><input type="text" class="tohidden_'+galleryimagecount+'" value="'+obj.user_name+'"><input type="text" class="idhidden_'+galleryimagecount+'" value="'+i+'"><input type="text" class="toidhidden_'+galleryimagecount+'" value="'+obj.to_uid+'"></div>');
 
     galleryimagecount ++;
-
-          
     
 });
      
@@ -9798,10 +9749,10 @@ touid = $( ".toidhidden_" + swiper.activeIndex).val();
 
 
 
-if (photodeletetime == photochatid){document.getElementById("photodeletechattime").innerHTML = ' <span style="float:left;margin-top:5px;">Photo unseen</span>';}
+if (photodeletetime == photochatid){document.getElementById("photodeletechattime").innerHTML = '<div style="width:29px;height:29px;border-radius:50%;background-image:url(\'https://graph.facebook.com/'+touid+'/picture?type=normal\');background-size:cover;background-position:50% 50%;margin-right:5px;float:left;margin-right:5px;"></div> <span style="float:left;margin-top:5px;">Photo unseen</span>';}
 else{photodeletecount();}
 
-$( ".gallerytitle").html('From ' + phototo);
+$( ".gallerytitle").html('Sent from ' + phototo);
     },
     onSlideChangeStart:function(swiper){clearInterval(xcountdown);
          
@@ -9813,7 +9764,7 @@ photofrom = $( ".fromhidden_" + swiper.activeIndex).val();
 photochatid = $( ".idhidden_" + swiper.activeIndex).val();
 touid = $( ".toidhidden_" + swiper.activeIndex).val();
 
-if (photodeletetime == photochatid){document.getElementById("photodeletechattime").innerHTML = '<span style="float:left;margin-top:5px;">Photo unseen</span>';}
+if (photodeletetime == photochatid){document.getElementById("photodeletechattime").innerHTML = '<div style="width:29px;height:29px;border-radius:50%;background-image:url(\'https://graph.facebook.com/'+touid+'/picture?type=normal\');background-size:cover;background-position:50% 50%;margin-right:5px;float:left;margin-right:5px;"></div> <span style="float:left;margin-top:5px;">Photo unseen</span>';}
 else{photodeletecount();deletePhotochat();}
 
 
@@ -9821,7 +9772,7 @@ else{photodeletecount();deletePhotochat();}
   
 
 
-$( ".gallerytitle").html('From '+ phototo);
+$( ".gallerytitle").html('Sent from '+ phototo);
         myApp.sizeNavbars();
     },
     pagination:'.swiper-pagination-gallery',
@@ -9847,7 +9798,6 @@ firebase.database().ref("chats/" + first_number+ '/' + second_number + '/' + pho
 }
 }
 
-	
 function photodeletecount(){
 
 
