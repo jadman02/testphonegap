@@ -9678,7 +9678,7 @@ function imagesPopup(go){
                    '<div class="pages">'+
 '<div data-page="gallerypopup" class="page">'+
 '<div class="page-content" style="background-color:white;">'+
-  '<div style="position:absolute;bottom:12px;right:8px;z-index:99999;background-color:white;border-radius:5px;padding:5px;"><div id="photodeletechattime" style="color:black;float:left;"></div></div>'+
+  '<div style="position:absolute;bottom:12px;right:8px;z-index:99999;background-color:white;border-radius:5px;padding:5px;"><div id="photodeletechattime" style="color:white;background-color:#2196f3float:left;"></div></div>'+
 
                                     '<span style="width:42px; height:42px;position:absolute;top:50%;margin-top:-21px;left:50%;margin-left:-21px;z-index:999999;" class="imagespopuploader preloader"></span> '+
 '<div class="swiper-container swiper-gallery" style="height: calc(100% - 44px);margin-top:44px;">'+
@@ -9770,7 +9770,7 @@ touid = $( ".toidhidden_" + swiper.activeIndex).val();
 
 
 
-if (photodeletetime == photochatid){document.getElementById("photodeletechattime").innerHTML = '<div style="width:29px;height:29px;border-radius:50%;background-image:url(\'https://graph.facebook.com/'+touid+'/picture?type=normal\');background-size:cover;background-position:50% 50%;margin-right:5px;float:left;margin-right:5px;"></div> <span style="float:left;margin-top:5px;">Photo unseen</span>';}
+if (photodeletetime == photochatid){document.getElementById("photodeletechattime").innerHTML = ' <span style="float:left;margin-top:5px;">Photo unseen</span>';}
 else{photodeletecount();}
 
 $( ".gallerytitle").html('From ' + phototo);
