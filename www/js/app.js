@@ -469,7 +469,6 @@ else{$( ".homedate" ).addClass("active");
 function updateWant(){
 $( ".content-here-1" ).hide();
 	$( ".content-here" ).hide();
-   $( ".statusbar-overlay" ).css("background-color","#ccc");
 
 	randomswiper.removeAllSlides();
 nearbyswiper.removeAllSlides();
@@ -490,8 +489,14 @@ $( ".content-here-1" ).show();
 random_all = [];
 nearby_all = [];
 recent_all = [];
+		   $( ".statusbar-overlay" ).css("background-color","#ccc");
+
 	
 	}
+else{
+ $( ".statusbar-overlay" ).css("background-color","#2196f3"); 
+
+}
 	
 firebase.database().ref('users/' + f_uid).update({
     homewant:homewant
@@ -1476,7 +1481,7 @@ var loginmethod = window.localStorage.getItem("loginmethod");
 	
 	
 	
-	$('.content-here-1').append(
+	$('.content-here-1').html(
     '<div class="no-results-div" style="background-color:white;z-index:30000000;text-align:center;margin:0 auto;width:300px;position:absolute;top:0px;left:50%;margin-left:-150px;margin-top:54px;">'+
 '<div class="topdiv">'+
      // '<h3>Get Quacking!</h3>'+
@@ -1550,7 +1555,7 @@ $( ".login-loader" ).hide();
    return false;
 
 }   
- $( ".statusbar-overlay" ).css("background-color","#2196f3"); 
+ //$( ".statusbar-overlay" ).css("background-color","#2196f3"); 
 	
 
 initialload = true;
