@@ -629,7 +629,7 @@ var $$ = Dom7;
 var datatap, tapid, taptype, tapname;
 
 
-
+var dpc; 
 
 var view1, view2, view3, view4;
 var updatecontinuously = false;
@@ -5570,6 +5570,8 @@ function chatShow(){
 	//fcm();
 prevdatetitle = false;
 
+	dpc = setInterval(function(){ deletePC() }, 3000);
+	
     letsload = 20;
     canloadchat = true;
     additions = 0;
@@ -8241,7 +8243,7 @@ var first_number,second_number;
 if (Number(f_uid) > Number(targetid) ) {second_number = f_uid;first_number = targetid;}
 else {first_number = f_uid;second_number = targetid;}
 if (message_history){
-
+clearInterval(dpc);
 //firebase.database().ref("notifications/" + f_uid).off('value', existingchatnotifications);
 
 
@@ -9752,7 +9754,7 @@ touid = $( ".toidhidden_" + swiper.activeIndex).val();
 if (photodeletetime == photochatid){document.getElementById("photodeletechattime").innerHTML = '<div style="width:29px;height:29px;border-radius:50%;background-image:url(\'https://graph.facebook.com/'+touid+'/picture?type=normal\');background-size:cover;background-position:50% 50%;margin-right:5px;float:left;margin-right:5px;"></div> <span style="float:left;margin-top:5px;">Photo unseen</span>';}
 else{photodeletecount();}
 
-$( ".gallerytitle").html('Sent from ' + phototo);
+$( ".gallerytitle").html(phototo);
     },
     onSlideChangeStart:function(swiper){clearInterval(xcountdown);
          
@@ -9772,7 +9774,7 @@ else{photodeletecount();deletePhotochat();}
   
 
 
-$( ".gallerytitle").html('Sent from '+ phototo);
+$( ".gallerytitle").html(phototo);
         myApp.sizeNavbars();
     },
     pagination:'.swiper-pagination-gallery',
@@ -13645,3 +13647,9 @@ function triggerCam(){
 	cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
 //$('#takePictureField_').trigger('click');   
 }
+
+ function deletePC(){
+ 
+	 alert('99');
+ 
+ }
