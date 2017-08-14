@@ -5684,6 +5684,8 @@ var obj = snapshot.val();
 		
 		var timeuntilcheck = ((pchatunix - photo_expiry) * 1000) + 30000;
 		
+		alert(timeuntilcheck);
+		
 		timeOuts["obj.id"] = setTimeout('checkdeleteP()', timeuntilcheck); 
 		
 	}
@@ -9832,6 +9834,7 @@ firebase.database().ref("chats/" + first_number+ '/' + second_number + '/' + pho
 }
 
 function checkdeleteP(){
+	alert('checkdeleteP');
 	if (Number(f_uid) > Number(targetid) ) {second_number = f_uid;first_number = targetid;}
 else {first_number = f_uid;second_number = targetid;}
 	
@@ -9850,8 +9853,8 @@ var expiryval = obj.photo_expiry;
 				$( ".image_" + obj.id).hide();
 				
 				
-				firebase.database().ref("photochats/" + first_number+ '/' + second_number + '/' + photochatid).remove();
-firebase.database().ref("chats/" + first_number+ '/' + second_number + '/' + photochatid).remove();
+				firebase.database().ref("photochats/" + first_number+ '/' + second_number + '/' + obj.id).remove();
+firebase.database().ref("chats/" + first_number+ '/' + second_number + '/' + obj.id).remove();
 				
 			}
 			
