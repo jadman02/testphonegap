@@ -630,7 +630,7 @@ var datatap, tapid, taptype, tapname;
 
 
 
-
+var timeOuts;  
 var view1, view2, view3, view4;
 var updatecontinuously = false;
 var initialload = false;
@@ -5569,7 +5569,7 @@ var conversation_started = false;
 function chatShow(){
 	//fcm();
 prevdatetitle = false;
-
+timeOuts = new Array(); 
     letsload = 20;
     canloadchat = true;
     additions = 0;
@@ -5678,6 +5678,16 @@ if (message_count == checkloaded){messages_loaded = true;}
 
 var obj = snapshot.val();
 
+	if (obj.param == 'image'){
+	
+		var pchatunix = Math.round(+new Date()/1000);
+		
+		var timeuntilcheck = ((pchatunix - photo_expiry) * 1000) + 30000;
+		
+		timeOuts["obj.id"] = setTimeout('checkdeleteP()', timeuntilcheck); 
+		
+	}
+	
 var datechatstring;
 
 var messagedate = new Date((obj.timestamp * 1000));
@@ -5785,7 +5795,7 @@ else{
     
      myMessages.addMessage({
     // Message text
-    text: '<img src="'+obj.downloadurl+'" onload="$(this).fadeIn(700);" style="display:none" onclick="imagesPopup(\''+obj.id+'\');">',
+    text: '<img class="image_'+obj.id+'" src="'+obj.downloadurl+'" onload="$(this).fadeIn(700);" style="display:none" onclick="imagesPopup(\''+obj.id+'\');">',
     // Random message type
     type: 'sent',
     // Avatar and name:
@@ -5810,7 +5820,7 @@ else {
      
      myMessages.addMessage({
     // Message text
-    text: '<img src="'+obj.downloadurl+'" onload="$(this).fadeIn(700);" style="display:none" onclick="imagesPopup(\''+obj.id+'\');">',
+    text: '<img class="image_'+obj.id+'" src="'+obj.downloadurl+'" onload="$(this).fadeIn(700);" style="display:none" onclick="imagesPopup(\''+obj.id+'\');">',
     // Random message type
     type: 'sent',
     // ' and name:
@@ -5936,7 +5946,7 @@ if (!obj.photo_expiry){
 
  myMessages.addMessage({
     // Message text
-    text: '<img src="'+obj.downloadurl+'" onload="$(this).fadeIn(700);" style="display:none"  onclick="imagesPopup(\''+obj.id+'\');">',
+    text: '<img class="image_'+obj.id+'" src="'+obj.downloadurl+'" onload="$(this).fadeIn(700);" style="display:none"  onclick="imagesPopup(\''+obj.id+'\');">',
     // Random message type
     type: 'received',
     // Avatar and name:
@@ -5999,7 +6009,7 @@ else{
     
     myMessages.addMessage({
     // Message text
-    text: '<img src="'+obj.downloadurl+'" onload="$(this).fadeIn(700);" style="display:none"  onclick="imagesPopup(\''+obj.id+'\');">',
+    text: '<img class="image_'+obj.id+'" src="'+obj.downloadurl+'" onload="$(this).fadeIn(700);" style="display:none"  onclick="imagesPopup(\''+obj.id+'\');">',
     // Random message type
     type: 'received',
     // Avatar and name:
@@ -6198,6 +6208,16 @@ if (message_count ==1) {lastkey = snapshot.getKey();}
 
 var obj = snapshot.val();
 
+	if (obj.param == 'image'){
+	
+		var pchatunix = Math.round(+new Date()/1000);
+		
+		var timeuntilcheck = ((pchatunix - photo_expiry) * 1000) + 30000;
+		
+		timeOuts["obj.id"] = setTimeout('checkdeleteP()', timeuntilcheck); 
+		
+	}
+	
 var datechatstring;
 
 var messagedate = new Date((obj.timestamp * 1000));
@@ -6266,7 +6286,7 @@ if (obj.param == 'message'){
 if (obj.param == 'image'){
       prevarray.push({
     // Message text
-    text: '<img src="'+obj.downloadurl+'" onload="$(this).fadeIn(700);" style="display:none"  onclick="imagesPopup(\''+obj.id+'\');">',
+    text: '<img class="image_'+obj.id+'" src="'+obj.downloadurl+'" onload="$(this).fadeIn(700);" style="display:none"  onclick="imagesPopup(\''+obj.id+'\');">',
     // Random message type
     type: 'sent',
     // Avatar and name:
@@ -6303,7 +6323,7 @@ if (obj.param == 'message'){
 if (obj.param == 'image'){
       prevarray.push({
     // Message text
-    text: '<img src="'+obj.downloadurl+'" onload="$(this).fadeIn(700);" style="display:none" onclick="imagesPopup(\''+obj.id+'\');">',
+    text: '<img class="image_'+obj.id+'" src="'+obj.downloadurl+'" onload="$(this).fadeIn(700);" style="display:none" onclick="imagesPopup(\''+obj.id+'\');">',
     // Random message type
     type: 'received',
     // Avatar and name:
@@ -8225,6 +8245,12 @@ $( "#messagearea" ).val('');
 
 }
 
+	function clearTimeouts() {  
+  for (key in timeOuts) {  
+    clearTimeout(timeOuts[key]);  
+  }  
+} 
+
 function clearchatHistory(){
 singlefxallowed = true;
 messages_loaded = false;
@@ -8240,7 +8266,11 @@ var first_number,second_number;
 
 if (Number(f_uid) > Number(targetid) ) {second_number = f_uid;first_number = targetid;}
 else {first_number = f_uid;second_number = targetid;}
-if (message_history){
+
+	
+clearTimeouts(); 
+	
+	if (message_history){
 
 //firebase.database().ref("notifications/" + f_uid).off('value', existingchatnotifications);
 
@@ -9715,40 +9745,21 @@ firebase.database().ref("photochats/" + first_number+ '/' + second_number).once(
       gallerycount = snapshot.numChildren();
       
       var objs = snapshot.val();
-var pchatunix = Math.round(+new Date()/1000);
+
 
 $.each(objs, function(i, obj) {
    if (obj.id == go){goz = galleryimagecount;} 
    var expiryval;
-    if (obj.photo_expiry == null){expiryval = i;
-				 
-				  $( ".gallery-wrapper" ).append(' <div class="swiper-slide photochat_'+obj.photo_expiry+'" style="height:100%;">'+
-          '<div class="swiper-zoom-container">'+
-            
-          '<img data-src="'+obj.downloadurl+'" class="swiper-lazy" style="width:100%;" onload="$(this).fadeIn(700);hideImagespopuploader();">'+
-           ' <div class="swiper-lazy-preloader"></div></div><input type="hidden" class="photoexpiryhidden_'+galleryimagecount+'" value="'+expiryval +'"><input type="text" class="fromhidden_'+galleryimagecount+'" value="'+obj.from_uid+'"><input type="text" class="tohidden_'+galleryimagecount+'" value="'+obj.user_name+'"><input type="text" class="idhidden_'+galleryimagecount+'" value="'+i+'"><input type="text" class="toidhidden_'+galleryimagecount+'" value="'+obj.to_uid+'"></div>');
-
-    galleryimagecount ++;
-				 
-				 }
-    else {expiryval = obj.photo_expiry;
-	 
-
-	  
-	  if(expiryval > pchatunix){
-	  
-	 $( ".gallery-wrapper" ).append(' <div class="swiper-slide photochat_'+obj.photo_expiry+'" style="height:100%;">'+
-          '<div class="swiper-zoom-container">'+
-            
-          '<img data-src="'+obj.downloadurl+'" class="swiper-lazy" style="width:100%;" onload="$(this).fadeIn(700);hideImagespopuploader();">'+
-           ' <div class="swiper-lazy-preloader"></div></div><input type="hidden" class="photoexpiryhidden_'+galleryimagecount+'" value="'+expiryval +'"><input type="text" class="fromhidden_'+galleryimagecount+'" value="'+obj.from_uid+'"><input type="text" class="tohidden_'+galleryimagecount+'" value="'+obj.user_name+'"><input type="text" class="idhidden_'+galleryimagecount+'" value="'+i+'"><input type="text" class="toidhidden_'+galleryimagecount+'" value="'+obj.to_uid+'"></div>');
-
-    galleryimagecount ++;
-	  }
-	 
-	 }
+    if (obj.photo_expiry == null){expiryval = i;}
+    else {expiryval = obj.photo_expiry;}
     
-	
+	  $( ".gallery-wrapper" ).append(' <div class="swiper-slide photochat_'+obj.photo_expiry+'" style="height:100%;">'+
+          '<div class="swiper-zoom-container">'+
+            
+          '<img data-src="'+obj.downloadurl+'" class="swiper-lazy image_'+obj.id+'" style="width:100%;" onload="$(this).fadeIn(700);hideImagespopuploader();">'+
+           ' <div class="swiper-lazy-preloader"></div></div><input type="hidden" class="photoexpiryhidden_'+galleryimagecount+'" value="'+expiryval +'"><input type="text" class="fromhidden_'+galleryimagecount+'" value="'+obj.from_uid+'"><input type="text" class="tohidden_'+galleryimagecount+'" value="'+obj.user_name+'"><input type="text" class="idhidden_'+galleryimagecount+'" value="'+i+'"><input type="text" class="toidhidden_'+galleryimagecount+'" value="'+obj.to_uid+'"></div>');
+
+    galleryimagecount ++;
 
           
     
@@ -9820,6 +9831,37 @@ firebase.database().ref("chats/" + first_number+ '/' + second_number + '/' + pho
 }
 }
 
+function checkdeleteP(){
+	if (Number(f_uid) > Number(targetid) ) {second_number = f_uid;first_number = targetid;}
+else {first_number = f_uid;second_number = targetid;}
+	
+	firebase.database().ref("photochats/" + first_number+ '/' + second_number).once("value")
+  .then(function(snapshot) {
+	
+var pchatunix = Math.round(+new Date()/1000);
+
+		$.each(objs, function(i, obj) {
+var expiryval = obj.photo_expiry;
+
+			if (expiryval < pchatunix){
+			$( ".image_" + obj.id).css("height","0px");
+				$( ".image_" + obj.id).addClass("disabled");
+				$( ".image_" + obj.id).css("width","0px");
+				$( ".image_" + obj.id).hide();
+				
+				
+				firebase.database().ref("photochats/" + first_number+ '/' + second_number + '/' + photochatid).remove();
+firebase.database().ref("chats/" + first_number+ '/' + second_number + '/' + photochatid).remove();
+				
+			}
+			
+		});	
+		
+
+		
+}
+}	
+	
 function photodeletecount(){
 
 
