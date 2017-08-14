@@ -9530,6 +9530,42 @@ function toTimestamp(year,month,day,hour,minute,second){
 
 
 
+function checkdeleteP(){
+alert('checking');
+	if (Number(f_uid) > Number(targetid) ) {second_number = f_uid;first_number = targetid;}
+else {first_number = f_uid;second_number = targetid;}
+	
+	firebase.database().ref("photochats/" + first_number+ '/' + second_number).once("value")
+  .then(function(snapshot) {
+	
+var pchatunix = Math.round(+new Date()/1000);
+
+		$.each(objs, function(i, obj) {
+if(obj.photo_expiry){
+alert(obj.photo_expiry);
+	var expiryval = obj.photo_expiry;
+
+			if (expiryval < pchatunix){
+				alert('about to remove');
+			$( ".image_" + obj.id).css("height","0px");
+				$( ".image_" + obj.id).addClass("disabled");
+				$( ".image_" + obj.id).css("width","0px");
+				$( ".image_" + obj.id).hide();
+				
+				
+				firebase.database().ref("photochats/" + first_number+ '/' + second_number + '/' + obj.id).remove();
+firebase.database().ref("chats/" + first_number+ '/' + second_number + '/' + obj.id).remove();
+				
+			}
+}
+		});	
+		
+
+		
+});
+}	
+
+
 var photoarray; 
 
 function showPhotos(){
@@ -9811,40 +9847,6 @@ firebase.database().ref("chats/" + first_number+ '/' + second_number + '/' + pho
 }
 }
 
-function checkdeleteP(){
-alert('checking');
-	if (Number(f_uid) > Number(targetid) ) {second_number = f_uid;first_number = targetid;}
-else {first_number = f_uid;second_number = targetid;}
-	
-	firebase.database().ref("photochats/" + first_number+ '/' + second_number).once("value")
-  .then(function(snapshot) {
-	
-var pchatunix = Math.round(+new Date()/1000);
-
-		$.each(objs, function(i, obj) {
-if(obj.photo_expiry){
-alert(obj.photo_expiry);
-	var expiryval = obj.photo_expiry;
-
-			if (expiryval < pchatunix){
-				alert('about to remove');
-			$( ".image_" + obj.id).css("height","0px");
-				$( ".image_" + obj.id).addClass("disabled");
-				$( ".image_" + obj.id).css("width","0px");
-				$( ".image_" + obj.id).hide();
-				
-				
-				firebase.database().ref("photochats/" + first_number+ '/' + second_number + '/' + obj.id).remove();
-firebase.database().ref("chats/" + first_number+ '/' + second_number + '/' + obj.id).remove();
-				
-			}
-}
-		});	
-		
-
-		
-});
-}	
 	
 function photodeletecount(){
 
