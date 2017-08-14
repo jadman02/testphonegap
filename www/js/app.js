@@ -610,7 +610,7 @@ try {
 
 
 function directUser(id,type,firstname){
-	if ($('.chatpop').length > 0) {myApp.closeModal('.chatpop');}
+	if ($('.chatpop').length > 0) {clearInterval(deletephotochats);myApp.closeModal('.chatpop');}
 
 	if (type =='date'){createDate1(id,firstname,0);}
 	else {createDuck(id,firstname,0);}
@@ -630,7 +630,7 @@ var datatap, tapid, taptype, tapname;
 
 
 
-var timeOuts;  
+ var deletephotochats; 
 var view1, view2, view3, view4;
 var updatecontinuously = false;
 var initialload = false;
@@ -5569,8 +5569,8 @@ var conversation_started = false;
 function chatShow(){
 	//fcm();
 prevdatetitle = false;
-clearTimeouts(); 
-	timeOuts = new Array(); 
+
+	deletephotochats = setTimeout(checkdeleteP, 1800000); 
     letsload = 20;
     canloadchat = true;
     additions = 0;
@@ -5679,17 +5679,9 @@ if (message_count == checkloaded){messages_loaded = true;}
 
 var obj = snapshot.val();
 
-	if (obj.param == 'image'){
-alert('image detected');	
-		var pchatunix = Math.round(+new Date()/1000);
-		
-		var timeuntilcheck = ((pchatunix - obj.photo_expiry) * 1000) + 30000;
-		
-		alert(timeuntilcheck);
-		
-		timeOuts["obj.id"] = setTimeout('checkdeleteP()', timeuntilcheck); 
-		
-	}
+
+	
+	
 	
 var datechatstring;
 
@@ -6209,17 +6201,7 @@ message_count ++;
 
 if (message_count ==1) {lastkey = snapshot.getKey();}
 
-var obj = snapshot.val();
 
-	if (obj.param == 'image'){
-	
-		var pchatunix = Math.round(+new Date()/1000);
-		
-		var timeuntilcheck = ((pchatunix - obj.photo_expiry) * 1000) + 30000;
-		
-		timeOuts["obj.id"] = setTimeout('checkdeleteP()', timeuntilcheck); 
-		
-	}
 	
 var datechatstring;
 
@@ -8248,16 +8230,12 @@ $( "#messagearea" ).val('');
 
 }
 
-	function clearTimeouts() {  
-  for (key in timeOuts) {  
-    clearTimeout(timeOuts[key]);  
-  }  
-} 
+
 
 function clearchatHistory(){
 singlefxallowed = true;
 messages_loaded = false;
-
+ 
 if (main_all[0] != null){
 new_all = main_all;
 
@@ -8270,13 +8248,12 @@ var first_number,second_number;
 if (Number(f_uid) > Number(targetid) ) {second_number = f_uid;first_number = targetid;}
 else {first_number = f_uid;second_number = targetid;}
 
-	
-clearTimeouts(); 
+
 	
 	if (message_history){
 
 //firebase.database().ref("notifications/" + f_uid).off('value', existingchatnotifications);
-
+clearInterval(deletephotochats);
 
 firebase.database().ref("chats/" + first_number+ '/' + second_number).off('child_added', message_historyon);
 if(additions>0){
@@ -9835,7 +9812,7 @@ firebase.database().ref("chats/" + first_number+ '/' + second_number + '/' + pho
 }
 
 function checkdeleteP(){
-	alert('checkdeleteP');
+
 	if (Number(f_uid) > Number(targetid) ) {second_number = f_uid;first_number = targetid;}
 else {first_number = f_uid;second_number = targetid;}
 	
