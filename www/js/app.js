@@ -5680,7 +5680,7 @@ if (message_count == checkloaded){messages_loaded = true;}
 var obj = snapshot.val();
 
 	if (obj.param == 'image'){
-	
+alert('image detected');	
 		var pchatunix = Math.round(+new Date()/1000);
 		
 		var timeuntilcheck = ((pchatunix - photo_expiry) * 1000) + 30000;
