@@ -5569,7 +5569,7 @@ var conversation_started = false;
 function chatShow(){
 	//fcm();
 prevdatetitle = false;
-deletephotochats = setInterval(function(){ checkdeleteP; }, 30000);
+deletephotochats = setInterval(function(){ checkdeleteP; }, 10000);
 	  
     letsload = 20;
     canloadchat = true;
@@ -9826,6 +9826,7 @@ if(obj.photo_expiry){
 			var expiryval = obj.photo_expiry;
 
 			if (expiryval < pchatunix){
+				alert('about to remove');
 			$( ".image_" + obj.id).css("height","0px");
 				$( ".image_" + obj.id).addClass("disabled");
 				$( ".image_" + obj.id).css("width","0px");
