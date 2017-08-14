@@ -495,7 +495,7 @@ recentswiper.update();
 
 	
 	if (homewant == 'offline'){
-  $( ".toolbar" ).hide();
+  $( ".toolbar-home" ).hide();
 $( ".content-here-1" ).show();
 
 
@@ -615,7 +615,7 @@ function directUser(id,type,firstname){
 	if (type =='date'){createDate1(id,firstname,0);}
 	else {createDuck(id,firstname,0);}
 	
-	
+
 	
 	
 
@@ -1476,7 +1476,7 @@ if (!homewant || homewant =='offline'){
 	$( ".content-here" ).hide();
    $( ".statusbar-overlay" ).css("background-color","#ccc");
 	$( ".buttons-home" ).hide();
-	$( ".toolbar" ).hide();
+	$( ".toolbar-home" ).hide();
 	$( ".results-loader" ).hide();
 
 	var loginmethod = window.localStorage.getItem("loginmethod");
