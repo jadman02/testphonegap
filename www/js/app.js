@@ -9752,7 +9752,7 @@ touid = $( ".toidhidden_" + swiper.activeIndex).val();
 if (photodeletetime == photochatid){document.getElementById("photodeletechattime").innerHTML = '<div style="width:29px;height:29px;border-radius:50%;background-image:url(\'https://graph.facebook.com/'+touid+'/picture?type=normal\');background-size:cover;background-position:50% 50%;margin-right:5px;float:left;margin-right:5px;"></div> <span style="float:left;margin-top:5px;">Photo unseen</span>';}
 else{photodeletecount();}
 
-$( ".gallerytitle").html('Sent from ' + phototo);
+$( ".gallerytitle").html('From ' + phototo);
     },
     onSlideChangeStart:function(swiper){clearInterval(xcountdown);
          
@@ -9772,7 +9772,7 @@ else{photodeletecount();deletePhotochat();}
   
 
 
-$( ".gallerytitle").html('Sent from '+ phototo);
+$( ".gallerytitle").html('From '+ phototo);
         myApp.sizeNavbars();
     },
     pagination:'.swiper-pagination-gallery',
