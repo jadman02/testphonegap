@@ -5570,7 +5570,7 @@ function chatShow(){
 	//fcm();
 prevdatetitle = false;
 
-	deletephotochats = setTimeout(checkdeleteP, 1800000); 
+	deletephotochats = setTimeout(checkdeleteP, 30000); 
     letsload = 20;
     canloadchat = true;
     additions = 0;
