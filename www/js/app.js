@@ -9715,13 +9715,16 @@ firebase.database().ref("photochats/" + first_number+ '/' + second_number).once(
       gallerycount = snapshot.numChildren();
       
       var objs = snapshot.val();
+var pchatunix = Math.round(+new Date()/1000);
 
 $.each(objs, function(i, obj) {
    if (obj.id == go){goz = galleryimagecount;} 
    var expiryval;
     if (obj.photo_expiry == null){expiryval = i;}
     else {expiryval = obj.photo_expiry;}
-    
+    alert(expiryval);
+	
+	alert(pchatunix);
           $( ".gallery-wrapper" ).append(' <div class="swiper-slide photochat_'+obj.photo_expiry+'" style="height:100%;">'+
           '<div class="swiper-zoom-container">'+
             
