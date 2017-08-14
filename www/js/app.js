@@ -9772,7 +9772,7 @@ else{photodeletecount();deletePhotochat();}
   
 
 
-$( ".gallerytitle").html('<div style="width:29px;height:29px;border-radius:50%;background-image:url(\'https://graph.facebook.com/'+photofrom+'/picture?type=normal\');background-size:cover;background-position:50% 50%;margin-right:5px;"></div>' + phototo);
+$( ".gallerytitle").html('Sent by'+ phototo);
         myApp.sizeNavbars();
     },
     pagination:'.swiper-pagination-gallery',
@@ -9784,7 +9784,7 @@ $( ".gallerytitle").html('<div style="width:29px;height:29px;border-radius:50%;b
   
   galleryswiper.slideTo(goz,0);
   myApp.sizeNavbars();
-	galleryswiper.lockSwipes();
+	//galleryswiper.lockSwipes();
   });
 
 function deletePhotochat(){
