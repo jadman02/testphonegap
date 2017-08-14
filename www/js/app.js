@@ -473,6 +473,7 @@ recentswiper.removeAllSlides();
 randomswiper.update();
 nearbyswiper.update();
 recentswiper.update();
+	$( ".home-title" ).hide(); 
 	
 	if (homewant == 'offline'){
 
