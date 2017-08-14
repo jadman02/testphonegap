@@ -9678,7 +9678,7 @@ function imagesPopup(go){
                    '<div class="pages">'+
 '<div data-page="gallerypopup" class="page">'+
 '<div class="page-content" style="background-color:white;">'+
-  '<div style="position:absolute;bottom:12px;right:8px;z-index:99999;background-color:white;border-radius:5px;padding:5px;"><div id="photodeletechattime" style="color:white;background-color:#2196f3float:left;"></div></div>'+
+  '<div style="position:absolute;bottom:12px;right:8px;z-index:99999;background-color:white;border-radius:5px;padding:5px;"><div id="photodeletechattime" style="color:white;background-color:#2196f3;float:left;"></div></div>'+
 
                                     '<span style="width:42px; height:42px;position:absolute;top:50%;margin-top:-21px;left:50%;margin-left:-21px;z-index:999999;" class="imagespopuploader preloader"></span> '+
 '<div class="swiper-container swiper-gallery" style="height: calc(100% - 44px);margin-top:44px;">'+
@@ -9733,8 +9733,9 @@ $.each(objs, function(i, obj) {
 				 }
     else {expiryval = obj.photo_expiry;
 	 
-	  alert(expiryval);
-	  alert(pchatunix);
+
+	  
+	  if(expiryval < pchatunix){
 	  
 	 $( ".gallery-wrapper" ).append(' <div class="swiper-slide photochat_'+obj.photo_expiry+'" style="height:100%;">'+
           '<div class="swiper-zoom-container">'+
@@ -9743,7 +9744,7 @@ $.each(objs, function(i, obj) {
            ' <div class="swiper-lazy-preloader"></div></div><input type="hidden" class="photoexpiryhidden_'+galleryimagecount+'" value="'+expiryval +'"><input type="text" class="fromhidden_'+galleryimagecount+'" value="'+obj.from_uid+'"><input type="text" class="tohidden_'+galleryimagecount+'" value="'+obj.user_name+'"><input type="text" class="idhidden_'+galleryimagecount+'" value="'+i+'"><input type="text" class="toidhidden_'+galleryimagecount+'" value="'+obj.to_uid+'"></div>');
 
     galleryimagecount ++;
-	 
+	  }
 	 
 	 }
     
