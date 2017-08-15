@@ -421,7 +421,12 @@ var loginmethod = window.localStorage.getItem("loginmethod");
 	 if (jqXHR.responseJSON.error.code == '190'){
 	   
 		 myApp.alert('Please login again to continue.', 'Session expired', function () {
-       logout();
+       FCMPlugin.unsubscribeFromTopic(f_uid);
+		cordova.plugins.notification.badge.set(0);
+	var loginmethod = window.localStorage.getItem("loginmethod");
+
+    if (loginmethod == '1'){logoutPlugin();}
+    else{logoutOpen();}
     });
 		 
 	 }
@@ -11330,10 +11335,11 @@ var retrievealbumurl;
 if (!pagingalbumurl) {retrievealbumurl = 'https://graph.facebook.com/v2.8/'+f_uid+'/albums?limit=20&fields=id,count,name&access_token=' + f_token}
 else {retrievealbumurl = pagingalbumurl}
 
-	
-	
-$.getJSON(retrievealbumurl,
-      function(response) {
+$.ajax({
+   url: retrievealbumurl,
+    type: "get",
+    data: { access_token: f_token},
+    success: function (response, textStatus, jqXHR) {
 	alert(JSON.stringify(response)); 
 
    if(response.data.length == 0){
@@ -11385,7 +11391,30 @@ pagingalbumurl = response.paging.next;
 else{$( ".loadmorebuttonalbums").show();}
       
 
-      });
+
+   },
+    error: function (jqXHR, textStatus, errorThrown) {
+	    alert(JSON.stringify(jqXHR.responseJSON.error)); 
+
+	    alert(jqXHR.responseJSON.error.code); 
+
+	 if (jqXHR.responseJSON.error.code == '190'){
+	   
+		 myApp.alert('Please login again to continue.', 'Session expired', function () {
+       FCMPlugin.unsubscribeFromTopic(f_uid);
+		cordova.plugins.notification.badge.set(0);
+	var loginmethod = window.localStorage.getItem("loginmethod");
+
+    if (loginmethod == '1'){logoutPlugin();}
+    else{logoutOpen();}
+    });
+		 
+	 }
+
+    },
+    complete: function () {
+    }
+});
 
 
 }
