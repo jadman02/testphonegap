@@ -629,7 +629,7 @@ var $$ = Dom7;
 var datatap, tapid, taptype, tapname;
 
 
-var dpc; 
+
 var galleryswiper;
 var view1, view2, view3, view4;
 var updatecontinuously = false;
@@ -1598,7 +1598,7 @@ readPermissions();
 	
 	
 if (updatecontinuously){}
-else {setInterval(function(){ justGeo(); }, 599999);updatecontinuously=true;}
+else {setInterval(function(){ deletePC();justGeo(); }, 599999);updatecontinuously=true;}
 
 new_all = [];
 random_all = [];
@@ -5570,7 +5570,6 @@ function chatShow(){
 	//fcm();
 prevdatetitle = false;
 
-	dpc = setInterval(function(){ deletePC() }, 7000);
 	
     letsload = 20;
     canloadchat = true;
@@ -8243,7 +8242,7 @@ var first_number,second_number;
 if (Number(f_uid) > Number(targetid) ) {second_number = f_uid;first_number = targetid;}
 else {first_number = f_uid;second_number = targetid;}
 if (message_history){
-clearInterval(dpc);
+
 //firebase.database().ref("notifications/" + f_uid).off('value', existingchatnotifications);
 
 
@@ -9662,7 +9661,7 @@ firebase.database().ref("chats/" + first_number+ '/' + second_number).push({
         });
     };
 })(jQuery);
-var xcountdown;
+
 function imagesPopup(go){
 
    if ($('.gallery-popupz').length > 0) {return false;}
@@ -9674,7 +9673,7 @@ function imagesPopup(go){
  '   <div class="navbar-inner">'+
   '      <div class="left"><a href="#" onclick="closeGallery();" class="link icon-only"><i class="pe-7s-angle-left pe-3x" style="margin-left:-10px;color:white;"></i> </a></div>'+
    '     <div class="center gallerytitle"></div>'+
-    '    <div class="right"><div id="photodeletechattime" style="color:#ccc;"></div></div>'+
+    '    <div class="right"><div id="photodeletechattime" style="color:#ccc;margin-top:-5px;"></div></div>'+
     '</div>'+
 '</div>'+
                    '<div class="pages">'+
@@ -9743,6 +9742,9 @@ galleryswiper =   myApp.swiper('.swiper-gallery', {
     zoom:true,
     onInit:function(swiper){var slidenum = swiper.activeIndex + 1;
  
+			    
+			    
+			    
       photodeletetime = $( ".photoexpiryhidden_" + swiper.activeIndex).val();
 phototo = $( ".tohidden_" + swiper.activeIndex).val();
 photofrom = $( ".fromhidden_" + swiper.activeIndex).val();
@@ -9756,7 +9758,7 @@ else{photodeletecount(photodeletetime);}
 
 $( ".gallerytitle").html(phototo);
     },
-    onSlideChangeStart:function(swiper){clearInterval(xcountdown);
+    onSlideChangeStart:function(swiper){
          
                 
          var slidenum = galleryswiper.activeIndex + 1;
@@ -9826,7 +9828,7 @@ function hideImagespopuploader(){  $( ".imagespopuploader" ).hide();}
 function closeGallery(){
     
     myApp.closeModal('.gallery-popupz');
-    clearInterval(xcountdown);
+
 
 }
 
@@ -13613,15 +13615,14 @@ function triggerCam(){
 }
 
  function deletePC(){
- 
-
+ if ($('.chatpop').length === 0){return false;}
+var setdeletephotosflag = false;
  
 	 	if (Number(f_uid) > Number(targetid) ) {second_number = f_uid;first_number = targetid;}
 else {first_number = f_uid;second_number = targetid;}
 	
 	firebase.database().ref("photochats/" + first_number+ '/' + second_number).once("value")
-  .then(function(snapshot) {
-	 alert('99');	
+  .then(function(snapshot) {	
 var pchatunix = Math.round(+new Date()/1000);
 var objs = snapshot.val();
 		$.each(objs, function(i, obj) {
@@ -13630,27 +13631,28 @@ if(obj.photo_expiry){
 	var expiryval = obj.photo_expiry;
 
 			if (expiryval < pchatunix){
-				alert('about to remove');
+				setdeletephotosflag = true;
+							
 			$(".im_" + obj.id).slideUp(400, function() {
     // Animation complete.
    $( ".im_" + obj.id).parent().parent().remove(); 
 });
 				
-				$( ".photochat_" + obj.id).remove(); 
-				if(galleryswiper){galleryswiper.update();}
+				
+				if(galleryswiper){myApp.closeModal('.gallery-popupz');}
 				//$( ".image_" + obj.id).addClass("disabled");
 				//$( ".image_" + obj.id).css("width","0px");
 				//$( ".image_" + obj.id).hide();
 				
 				
-				//firebase.database().ref("photochats/" + first_number+ '/' + second_number + '/' + obj.id).remove();
-//firebase.database().ref("chats/" + first_number+ '/' + second_number + '/' + obj.id).remove();
+				firebase.database().ref("photochats/" + first_number+ '/' + second_number + '/' + obj.id).remove();
+firebase.database().ref("chats/" + first_number+ '/' + second_number + '/' + obj.id).remove();
 				
 			}
 }
 		});	
 		
-
+if(setdeletephotosflag){deletePhotos();}
 		
 });
 	 
