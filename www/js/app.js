@@ -9751,7 +9751,7 @@ touid = $( ".toidhidden_" + swiper.activeIndex).val();
 
 
 
-if (photodeletetime == photochatid){document.getElementById("photodeletechattime").innerHTML = '<div style="width:29px;height:29px;border-radius:50%;background-image:url(\'https://graph.facebook.com/'+touid+'/picture?type=normal\');background-size:cover;background-position:50% 50%;margin-right:5px;float:left;margin-right:5px;"></div> <span style="float:left;margin-top:5px;">Photo unseen</span>';}
+if (photodeletetime == photochatid){document.getElementById("photodeletechattime").innerHTML = '<span style="float:left;margin-top:5px;">Photo unseen</span>';}
 else{photodeletecount();}
 
 $( ".gallerytitle").html(phototo);
@@ -9766,7 +9766,7 @@ photofrom = $( ".fromhidden_" + swiper.activeIndex).val();
 photochatid = $( ".idhidden_" + swiper.activeIndex).val();
 touid = $( ".toidhidden_" + swiper.activeIndex).val();
 
-if (photodeletetime == photochatid){document.getElementById("photodeletechattime").innerHTML = '<div style="width:29px;height:29px;border-radius:50%;background-image:url(\'https://graph.facebook.com/'+touid+'/picture?type=normal\');background-size:cover;background-position:50% 50%;margin-right:5px;float:left;margin-right:5px;"></div> <span style="float:left;margin-top:5px;">Photo unseen</span>';}
+if (photodeletetime == photochatid){document.getElementById("photodeletechattime").innerHTML = '<span style="float:left;margin-top:5px;">Photo unseen</span>';}
 else{photodeletecount();deletePhotochat();}
 
 
@@ -9789,16 +9789,6 @@ $( ".gallerytitle").html(phototo);
 	//galleryswiper.lockSwipes();
   });
 
-function deletePhotochat(){
-if (photodeletetime < (new Date().getTime() / 1000)){
-
-$( ".photochat_"+ photodeletetime).remove();
-galleryswiper.update();
-firebase.database().ref("photochats/" + first_number+ '/' + second_number + '/' + photochatid).remove();
-firebase.database().ref("chats/" + first_number+ '/' + second_number + '/' + photochatid).remove();
-
-}
-}
 
 function photodeletecount(){
 
@@ -9817,39 +9807,13 @@ var countDownDate = new Date(photodeletetime * 1000);
   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-document.getElementById("photodeletechattime").innerHTML = '<i class="twa twa-bomb twa-lg" style="float:left;"></i>' + hours + "h "
-  + minutes + "m " ;
-
-// Update the count down every 1 second
-xcountdown = setInterval(function() {
-
-  // Get todays date and time
-  var now = new Date().getTime();
-
-  // Find the distance between now an the count down date
-  var distance = countDownDate - now;
-
-  // Time calculations for days, hours, minutes and seconds
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+	var deletephotostring;
+	
+	if (hours > 0) {deletephotostring = '<i class="twa twa-bomb twa-lg" style="float:left;"></i>' + hours + "h " + minutes + "m "}
+	if (hours === 0){deletephotostring = '<i class="twa twa-bomb twa-lg" style="float:left;"></i> Photo will delete soon'}
+document.getElementById("photodeletechattime").innerHTML =  deletephotostring;
 
 
-
-
-  // If the count down is finished, write some text 
-  if (distance < 0) {
-    clearInterval(xcountdown);
-
-deletePhotochat();
-
-  }
-  
-   else{ document.getElementById("photodeletechattime").innerHTML = '<i class="twa twa-bomb twa-lg" style="float:left;"></i>' +hours + "h "
-  + minutes + "m " ;myApp.sizeNavbars();}
-  
-}, 60000);
 
 }
 
