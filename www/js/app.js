@@ -9810,7 +9810,7 @@ var countDownDate = new Date(photodeletetime * 1000);
 	var deletephotostring;
 	
 	if (hours > 0) {deletephotostring = '<i class="twa twa-bomb" style="float:left;"></i>' + hours + 'h ' + minutes + 'm ';}
-	if (hours === 0){deletephotostring = '<i class="twa twa-bomb" style="float:left;"></i> Photo will delete soon';}
+	if (hours === 0){deletephotostring = '<i class="twa twa-bomb" style="float:left;"></i> Soon';}
 
 	$( "#photodeletechattime" ).html(deletephotostring);
   myApp.sizeNavbars();
