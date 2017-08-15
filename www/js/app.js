@@ -13667,7 +13667,7 @@ if(obj.photo_expiry){
 
 			if (expiryval < pchatunix){
 				alert('about to remove');
-			$( "#im_" + obj.id).hide(); 
+			$( ".im_" + obj.id).hide(); 
 				//$( ".image_" + obj.id).addClass("disabled");
 				//$( ".image_" + obj.id).css("width","0px");
 				//$( ".image_" + obj.id).hide();
