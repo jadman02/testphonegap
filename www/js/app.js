@@ -13654,7 +13654,9 @@ function triggerCam(){
 
  function deletePC(){
  if ($('.chatpop').length === 0){return false;}
-var setdeletephotosflag = false;
+
+	 alert('checking');
+	 var setdeletephotosflag = false;
  
 	 	if (Number(f_uid) > Number(targetid) ) {second_number = f_uid;first_number = targetid;}
 else {first_number = f_uid;second_number = targetid;}
