@@ -630,7 +630,7 @@ var datatap, tapid, taptype, tapname;
 
 
 var dpc; 
-
+var galleryswiper;
 var view1, view2, view3, view4;
 var updatecontinuously = false;
 var initialload = false;
@@ -9727,14 +9727,14 @@ $.each(objs, function(i, obj) {
           $( ".gallery-wrapper" ).append(' <div class="swiper-slide photochat_'+obj.photo_expiry+'" style="height:100%;">'+
           '<div class="swiper-zoom-container">'+
             
-          '<img data-src="'+obj.downloadurl+'" class="swiper-lazy im_'+i+'" style="width:100%;" onload="$(this).fadeIn(700);hideImagespopuploader();">'+
+          '<img data-src="'+obj.downloadurl+'" class="swiper-lazy" style="width:100%;" onload="$(this).fadeIn(700);hideImagespopuploader();">'+
            ' <div class="swiper-lazy-preloader"></div></div><input type="hidden" class="photoexpiryhidden_'+galleryimagecount+'" value="'+expiryval +'"><input type="text" class="fromhidden_'+galleryimagecount+'" value="'+obj.from_uid+'"><input type="text" class="tohidden_'+galleryimagecount+'" value="'+obj.user_name+'"><input type="text" class="idhidden_'+galleryimagecount+'" value="'+i+'"><input type="text" class="toidhidden_'+galleryimagecount+'" value="'+obj.to_uid+'"></div>');
 
     galleryimagecount ++;
     
 });
      
-var galleryswiper =   myApp.swiper('.swiper-gallery', {
+galleryswiper =   myApp.swiper('.swiper-gallery', {
     preloadImages: false,
     lazyLoadingInPrevNext:true,
     // Enable lazy loading
@@ -13667,7 +13667,9 @@ if(obj.photo_expiry){
 
 			if (expiryval < pchatunix){
 				alert('about to remove');
-			$( ".im_" + obj.id).hide(); 
+			$( ".im_" + obj.id).parent().parent().remove(); 
+				$( ".photochat_" + obj.photo_expiry).remove(); 
+				if(galleryswiper){galleryswiper.update();}
 				//$( ".image_" + obj.id).addClass("disabled");
 				//$( ".image_" + obj.id).css("width","0px");
 				//$( ".image_" + obj.id).hide();
