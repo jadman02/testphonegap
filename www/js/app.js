@@ -196,7 +196,7 @@ function fQuery(){
 
 var invitebutton;
 var loginmethod = window.localStorage.getItem("loginmethod");
-	if (loginmethod == '1'){invitebutton = '<a href="#" class="button active" onclick="appLink()">Invite friends</a></div>';}
+	if (loginmethod == '1'){invitebutton = '<a href="#" class="button active" onclick="appLink()">Invite friends</a>';}
 	else{invitebutton = '<a class="button active external" href="sms:&body=Check out a new app in the App Store: https://fb.me/1554148374659639. It is called Date or Duck. Thoughts? ">Invite friends</a>';}
 	
 	
