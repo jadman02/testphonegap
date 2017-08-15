@@ -247,7 +247,7 @@ recentfriends:'Y'
 	
 	if ((response1.summary.total_count > 4) && (response1.summary.total_count <10)){
 
-if ($('.no-results-div').length > 0) {$('.nearby-helper').hide();
+if ($('.madeupdiv').length > 0) {$('.nearby-helper').hide();
 		$('.recent-helper').hide();}
 		else{
 		
@@ -286,7 +286,7 @@ recentshare = false;
 	}
 	}
 	if (response1.summary.total_count < 5){
-if ($('.no-results-div').length > 0) {$('.nearby-helper').hide();
+if ($('.madeupdiv').length > 0) {$('.nearby-helper').hide();
 		$('.recent-helper').hide();}
 else{		
 	
