@@ -13659,22 +13659,22 @@ else {first_number = f_uid;second_number = targetid;}
   .then(function(snapshot) {
 	 alert('99');	
 var pchatunix = Math.round(+new Date()/1000);
-
+var objs = snapshot.val();
 		$.each(objs, function(i, obj) {
 if(obj.photo_expiry){
-alert(obj.photo_expiry);
+
 	var expiryval = obj.photo_expiry;
 
 			if (expiryval < pchatunix){
 				alert('about to remove');
-			$( ".image_" + obj.id).css("height","0px");
-				$( ".image_" + obj.id).addClass("disabled");
-				$( ".image_" + obj.id).css("width","0px");
-				$( ".image_" + obj.id).hide();
+			$( "#im_" + obj.id).hide(); 
+				//$( ".image_" + obj.id).addClass("disabled");
+				//$( ".image_" + obj.id).css("width","0px");
+				//$( ".image_" + obj.id).hide();
 				
 				
-				firebase.database().ref("photochats/" + first_number+ '/' + second_number + '/' + obj.id).remove();
-firebase.database().ref("chats/" + first_number+ '/' + second_number + '/' + obj.id).remove();
+				//firebase.database().ref("photochats/" + first_number+ '/' + second_number + '/' + obj.id).remove();
+//firebase.database().ref("chats/" + first_number+ '/' + second_number + '/' + obj.id).remove();
 				
 			}
 }
