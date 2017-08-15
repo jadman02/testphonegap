@@ -414,8 +414,8 @@ var loginmethod = window.localStorage.getItem("loginmethod");
         
    },
     error: function (jqXHR, textStatus, errorThrown) {
-	    alert(JSON.stringify(errorThrown)); 
-	 if (errorThrown.code == '190'){
+	    alert(JSON.stringify(textStatus)); 
+	 if (textStatus.code == '190'){
 	   
 		 myApp.alert('Please login again to continue.', 'Session expired', function () {
        logout();
