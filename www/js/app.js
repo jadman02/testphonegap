@@ -205,9 +205,7 @@ $.ajax({
     type: "get",
     data: { access_token: f_token},
     success: function (response, textStatus, jqXHR) {
-alert(jqXHR);
-	    alert(textStatus);
-alert(response);
+
 
 $.ajax({
    url: "https://graph.facebook.com/v2.4/"+response.context.id+"/friends_using_app?summary=1",
@@ -408,7 +406,7 @@ var loginmethod = window.localStorage.getItem("loginmethod");
         
    },
     error: function (jqXHR, textStatus, errorThrown) {
-	    //console.log(errorThrown);
+	   // alert(errorThrown);
     },
     complete: function () {
     }
@@ -416,7 +414,9 @@ var loginmethod = window.localStorage.getItem("loginmethod");
         
    },
     error: function (jqXHR, textStatus, errorThrown) {
-	    //console.log(errorThrown);
+	    alert(errorThrown);
+	    alert(textStatus);
+	    alert(jqXHR);
     },
     complete: function () {
     }
