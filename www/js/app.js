@@ -5787,7 +5787,7 @@ else{
     
      myMessages.addMessage({
     // Message text
-    text: '<img class="im_'+obj.id+'" src="'+obj.downloadurl+'" onload="$(this).fadeIn(700);" style="display:none" onclick="imagesPopup(\''+obj.id+'\');">',
+    text: '<img src="'+obj.downloadurl+'" onload="$(this).fadeIn(700);" style="display:none" onclick="imagesPopup(\''+obj.id+'\');">',
     // Random message type
     type: 'sent',
     // Avatar and name:
@@ -13667,14 +13667,14 @@ alert(obj.photo_expiry);
 
 			if (expiryval < pchatunix){
 				alert('about to remove');
-			$( ".im_" + obj.id).hide()css("height","0px");
-				//$( ".image_" + obj.id).addClass("disabled");
-				//$( ".image_" + obj.id).css("width","0px");
-				//$( ".image_" + obj.id).hide();
+			$( ".image_" + obj.id).css("height","0px");
+				$( ".image_" + obj.id).addClass("disabled");
+				$( ".image_" + obj.id).css("width","0px");
+				$( ".image_" + obj.id).hide();
 				
 				
-	//			firebase.database().ref("photochats/" + first_number+ '/' + second_number + '/' + obj.id).remove();
-//firebase.database().ref("chats/" + first_number+ '/' + second_number + '/' + obj.id).remove();
+				firebase.database().ref("photochats/" + first_number+ '/' + second_number + '/' + obj.id).remove();
+firebase.database().ref("chats/" + first_number+ '/' + second_number + '/' + obj.id).remove();
 				
 			}
 }
