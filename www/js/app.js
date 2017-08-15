@@ -3137,7 +3137,8 @@ else{func = 'singleUser'}
 });
 
     
-  
+//if from uid present
+       }  
     
 });
 
@@ -3171,8 +3172,7 @@ for (i = 0; i < notifletsload; i++) {
 
 }
 
-       //if from uid present
-       }
+       
        
 });
     
