@@ -643,7 +643,7 @@ var $$ = Dom7;
 var datatap, tapid, taptype, tapname;
 
 
-
+var f_token_expiry;
 var galleryswiper;
 var view1, view2, view3, view4;
 var updatecontinuously = false;
@@ -2278,7 +2278,8 @@ f_description = snapshot.child("description").val();
 	
 		
 	 firebase.database().ref('users/' + f_uid).update({
-    token: f_token
+    token: f_token,
+		 expiry:f_token_expiry
   });
 
 	
