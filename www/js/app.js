@@ -2188,9 +2188,26 @@ userpref = firebase.database().ref('users/' + f_uid).on("value",function(snapsho
     if (userexists) { 
     
 
-    
+   var expirydb = snapshot.child("expiry").val();
         
-    
+    var expireunix = Math.round(+new Date()/1000);
+
+if (expirydb < expireunix){
+
+ myApp.alert('Please login again to continue.', 'Session expired', function () {
+       FCMPlugin.unsubscribeFromTopic(f_uid);
+		cordova.plugins.notification.badge.set(0);
+	var loginmethod = window.localStorage.getItem("loginmethod");
+
+    if (loginmethod == '1'){logoutPlugin();}
+    else{logoutOpen();}
+    });
+		 
+	 }
+
+
+}
+	    
   //  var matchessetting = firebase.database().ref("users/" + f_uid).on("value",function(snapshot) {
         
    //    if (!snapshot.child("to_date").val()) {f_to_date = [];}
