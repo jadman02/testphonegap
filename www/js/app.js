@@ -9674,7 +9674,7 @@ function imagesPopup(go){
  '   <div class="navbar-inner">'+
   '      <div class="left"><a href="#" onclick="closeGallery();" class="link icon-only"><i class="pe-7s-angle-left pe-3x" style="margin-left:-10px;color:white;"></i> </a></div>'+
    '     <div class="center gallerytitle"></div>'+
-    '    <div class="right"><div id="photodeletechattime" style="color:#ccc;"></div></div>'+
+    '    <div class="right"><div id="photodeletechattime" style="color:#ccc;font-size:15px;"></div></div>'+
     '</div>'+
 '</div>'+
                    '<div class="pages">'+
@@ -9791,7 +9791,7 @@ $( ".gallerytitle").html(phototo);
 
 
 function photodeletecount(photodeletetime){
-alert(photodeletetime);
+
 
 var countDownDate = new Date(photodeletetime * 1000);
 
@@ -9809,11 +9809,11 @@ var countDownDate = new Date(photodeletetime * 1000);
 
 	var deletephotostring;
 	
-	if (hours > 0) {deletephotostring = '<i class="twa twa-bomb twa-lg" style="float:left;"></i>' + hours + 'h ' + minutes + 'm ';}
-	if (hours === 0){deletephotostring = '<i class="twa twa-bomb twa-lg" style="float:left;"></i> Photo will delete soon';}
-alert(deletephotostring);
-	$( "#photodeletechattime" ).html(deletephotostring);
+	if (hours > 0) {deletephotostring = '<i class="twa twa-bomb" style="float:left;"></i>' + hours + 'h ' + minutes + 'm ';}
+	if (hours === 0){deletephotostring = '<i class="twa twa-bomb" style="float:left;"></i> Photo will delete soon';}
 
+	$( "#photodeletechattime" ).html(deletephotostring);
+  myApp.sizeNavbars();
 
 }
 
