@@ -582,6 +582,10 @@ myApp.swiper('.swiper-helper-info', {
                         window.localStorage.setItem("tokenStore", response.authResponse.accessToken);
                                                 window.localStorage.setItem("loginmethod", "2");
 
+			    
+
+var f_token_expiry = new Date((+new Date) + 2678400000);
+			    
  ftokenset = true;
 		
 		    
@@ -641,7 +645,7 @@ myApp.swiper('.swiper-helper-info', {
                         f_token = userData.authResponse.accessToken;
 		 
              f_token_expiry = userData.authResponse.expiresIn;
-            
+            alert(f_token_expiry);
 		 ftokenset = true;
 	
 		 
