@@ -9809,10 +9809,10 @@ var countDownDate = new Date(photodeletetime * 1000);
 
 	var deletephotostring;
 	
-	if (hours > 0) {deletephotostring = '<i class="twa twa-bomb twa-lg" style="float:left;"></i>' + hours + "h " + minutes + "m "}
-	if (hours === 0){deletephotostring = '<i class="twa twa-bomb twa-lg" style="float:left;"></i> Photo will delete soon'}
+	if (hours > 0) {deletephotostring = '<i class="twa twa-bomb twa-lg" style="float:left;"></i>' + hours + 'h ' + minutes + 'm ';}
+	if (hours === 0){deletephotostring = '<i class="twa twa-bomb twa-lg" style="float:left;"></i> Photo will delete soon';}
 document.getElementById("photodeletechattime").innerHTML =  deletephotostring;
-
+$( "#photodeletechattime" ).html(deletephotostring);
 
 
 }
