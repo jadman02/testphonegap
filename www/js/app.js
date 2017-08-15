@@ -1612,8 +1612,7 @@ readPermissions();
 	
 	
 if (updatecontinuously){}
-else {setInterval(function(){ deletePC();justGeo(); }, 7000);updatecontinuously=true;}
-//else {setInterval(function(){ deletePC();justGeo(); }, 599999);updatecontinuously=true;}
+else {setInterval(function(){ deletePC();justGeo(); }, 599999);updatecontinuously=true;}
 
 new_all = [];
 random_all = [];
@@ -13685,14 +13684,14 @@ if(obj.photo_expiry){
 				//$( ".image_" + obj.id).hide();
 				
 				
-		//		firebase.database().ref("photochats/" + first_number+ '/' + second_number + '/' + obj.id).remove();
-//firebase.database().ref("chats/" + first_number+ '/' + second_number + '/' + obj.id).remove();
+		firebase.database().ref("photochats/" + first_number+ '/' + second_number + '/' + obj.id).remove();
+firebase.database().ref("chats/" + first_number+ '/' + second_number + '/' + obj.id).remove();
 				
 			}
 }
 		});	
 		
-//if(setdeletephotosflag){deletePhotos();}
+if(setdeletephotosflag){deletePhotos();}
 		
 });
 	 
