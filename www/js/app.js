@@ -228,7 +228,7 @@ if (response1.summary.total_count ==0) {friendstring = 'No friends use this app'
 
 	if (response1.summary.total_count > 9){
 
-
+alert('more than 9');
 		
 		 nearbyshare = true;
 		 recentshare = true;
@@ -285,11 +285,11 @@ recentshare = false;
 	//$('.summary-helper').html('<p style="font-weight:bold;">'+friendstring+'</p><div class="row"><div class="col-50"><a class="button active external" href="sms:&body=Check out a new app in the App Store: https://fb.me/1554148374659639. It is called Date or Duck. Thoughts? ">Send SMS</a></div><div class="col-50"><a class="button active external" href="#" onclick="appLink()">Invite Friends</a></div></div><p style="color:#666;font-size:12px;margin-top:-10px;">We appreciate your help to grow this app!</p>');
 	}
 	}
-	if (response1.summary.total_count < 5){
-if ($('.madeupdiv').length > 0) {$('.nearby-helper').hide();
+	if (response1.summary.total_count < 5){alert('less than 5');
+if ($('.madeupdiv').length > 0) {$('.nearby-helper').hide();alert('madeup333e');
 		$('.recent-helper').hide();}
 else{		
-	
+	alert('nomadeup333xxx');
 	nearbyshare = false;
 		 recentshare = false;
 		$('.nearby-helper').show();
