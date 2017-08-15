@@ -9842,7 +9842,7 @@ function hideImagespopuploader(){  $( ".imagespopuploader" ).hide();}
 function closeGallery(){
     
     myApp.closeModal('.gallery-popupz');
-
+galleryswiper.destroy();
 
 }
 
@@ -13676,7 +13676,7 @@ if(obj.photo_expiry){
 });
 				
 				
-				if(galleryswiper){myApp.closeModal('.gallery-popupz');}
+				if(galleryswiper){closeGallery();}
 				//$( ".image_" + obj.id).addClass("disabled");
 				//$( ".image_" + obj.id).css("width","0px");
 				//$( ".image_" + obj.id).hide();
