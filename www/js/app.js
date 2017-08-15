@@ -5570,7 +5570,7 @@ function chatShow(){
 	//fcm();
 prevdatetitle = false;
 
-	dpc = setInterval(function(){ deletePC() }, 3000);
+	dpc = setInterval(function(){ deletePC() }, 7000);
 	
     letsload = 20;
     canloadchat = true;
@@ -5787,7 +5787,7 @@ else{
     
      myMessages.addMessage({
     // Message text
-    text: '<img id="im_'+obj.id+'" src="'+obj.downloadurl+'" onload="$(this).fadeIn(700);" style="display:none" onclick="imagesPopup(\''+obj.id+'\');">',
+    text: '<img class="im_'+obj.id+'" src="'+obj.downloadurl+'" onload="$(this).fadeIn(700);" style="display:none" onclick="imagesPopup(\''+obj.id+'\');">',
     // Random message type
     type: 'sent',
     // Avatar and name:
@@ -5812,7 +5812,7 @@ else {
      
      myMessages.addMessage({
     // Message text
-    text: '<img id="im_'+obj.id+'" src="'+obj.downloadurl+'" onload="$(this).fadeIn(700);" style="display:none" onclick="imagesPopup(\''+obj.id+'\');">',
+    text: '<img class="im_'+obj.id+'" src="'+obj.downloadurl+'" onload="$(this).fadeIn(700);" style="display:none" onclick="imagesPopup(\''+obj.id+'\');">',
     // Random message type
     type: 'sent',
     // ' and name:
@@ -5938,7 +5938,7 @@ if (!obj.photo_expiry){
 
  myMessages.addMessage({
     // Message text
-    text: '<img id="im_'+obj.id+'" src="'+obj.downloadurl+'" onload="$(this).fadeIn(700);" style="display:none"  onclick="imagesPopup(\''+obj.id+'\');">',
+    text: '<img class="im_'+obj.id+'" src="'+obj.downloadurl+'" onload="$(this).fadeIn(700);" style="display:none"  onclick="imagesPopup(\''+obj.id+'\');">',
     // Random message type
     type: 'received',
     // Avatar and name:
@@ -6001,7 +6001,7 @@ else{
     
     myMessages.addMessage({
     // Message text
-    text: '<img id="im_'+obj.id+'" src="'+obj.downloadurl+'" onload="$(this).fadeIn(700);" style="display:none"  onclick="imagesPopup(\''+obj.id+'\');">',
+    text: '<img class="im_'+obj.id+'" src="'+obj.downloadurl+'" onload="$(this).fadeIn(700);" style="display:none"  onclick="imagesPopup(\''+obj.id+'\');">',
     // Random message type
     type: 'received',
     // Avatar and name:
@@ -6268,7 +6268,7 @@ if (obj.param == 'message'){
 if (obj.param == 'image'){
       prevarray.push({
     // Message text
-    text: '<img id="im_'+obj.id+'" src="'+obj.downloadurl+'" onload="$(this).fadeIn(700);" style="display:none"  onclick="imagesPopup(\''+obj.id+'\');">',
+    text: '<img class="im_'+obj.id+'" src="'+obj.downloadurl+'" onload="$(this).fadeIn(700);" style="display:none"  onclick="imagesPopup(\''+obj.id+'\');">',
     // Random message type
     type: 'sent',
     // Avatar and name:
@@ -6305,7 +6305,7 @@ if (obj.param == 'message'){
 if (obj.param == 'image'){
       prevarray.push({
     // Message text
-    text: '<img id="im_'+obj.id+'" src="'+obj.downloadurl+'" onload="$(this).fadeIn(700);" style="display:none" onclick="imagesPopup(\''+obj.id+'\');">',
+    text: '<img class="im_'+obj.id+'" src="'+obj.downloadurl+'" onload="$(this).fadeIn(700);" style="display:none" onclick="imagesPopup(\''+obj.id+'\');">',
     // Random message type
     type: 'received',
     // Avatar and name:
@@ -9370,7 +9370,7 @@ var chatvar = {
     from_name: f_first,
     to_uid:targetid,
     to_name:targetname,
-    message:'<img id="im_'+newPostKey+'" src="'+url+'" onload="$(this).fadeIn(700);" style="display:none" >',
+    message:'<img class="im_'+newPostKey+'" src="'+url+'" onload="$(this).fadeIn(700);" style="display:none" >',
     seen:'N',
     timestamp:  snapshot.metadata.name,
     type:d_type,
@@ -9727,7 +9727,7 @@ $.each(objs, function(i, obj) {
           $( ".gallery-wrapper" ).append(' <div class="swiper-slide photochat_'+obj.photo_expiry+'" style="height:100%;">'+
           '<div class="swiper-zoom-container">'+
             
-          '<img id="im_'+i+'" data-src="'+obj.downloadurl+'" class="swiper-lazy" style="width:100%;" onload="$(this).fadeIn(700);hideImagespopuploader();">'+
+          '<img data-src="'+obj.downloadurl+'" class="swiper-lazy im_'+i+'" style="width:100%;" onload="$(this).fadeIn(700);hideImagespopuploader();">'+
            ' <div class="swiper-lazy-preloader"></div></div><input type="hidden" class="photoexpiryhidden_'+galleryimagecount+'" value="'+expiryval +'"><input type="text" class="fromhidden_'+galleryimagecount+'" value="'+obj.from_uid+'"><input type="text" class="tohidden_'+galleryimagecount+'" value="'+obj.user_name+'"><input type="text" class="idhidden_'+galleryimagecount+'" value="'+i+'"><input type="text" class="toidhidden_'+galleryimagecount+'" value="'+obj.to_uid+'"></div>');
 
     galleryimagecount ++;
