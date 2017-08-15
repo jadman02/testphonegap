@@ -217,7 +217,7 @@ $.ajax({
 
 
 try {
-
+alert(response1.summary.total_count);
 	response1.summary.total_count;
 	
 	var friendstring;
