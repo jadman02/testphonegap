@@ -13667,7 +13667,11 @@ if(obj.photo_expiry){
 
 			if (expiryval < pchatunix){
 				alert('about to remove');
-			$( ".im_" + obj.id).parent().parent().remove(); 
+			$(".im_" + obj.id).slideUp(400, function() {
+    // Animation complete.
+   $( ".im_" + obj.id).parent().parent().remove(); 
+});
+				
 				$( ".photochat_" + obj.photo_expiry).remove(); 
 				if(galleryswiper){galleryswiper.update();}
 				//$( ".image_" + obj.id).addClass("disabled");
