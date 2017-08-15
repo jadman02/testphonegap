@@ -9751,7 +9751,7 @@ touid = $( ".toidhidden_" + swiper.activeIndex).val();
 
 
 
-if (photodeletetime == photochatid){document.getElementById("photodeletechattime").innerHTML = '<span style="float:left;margin-top:5px;">Photo unseen</span>';}
+if (photodeletetime == photochatid){document.getElementById("photodeletechattime").innerHTML = '<span style="float:left;margin-top:5px;">Unseen</span>';}
 else{photodeletecount(photodeletetime);}
 
 $( ".gallerytitle").html(phototo);
@@ -9766,7 +9766,7 @@ photofrom = $( ".fromhidden_" + swiper.activeIndex).val();
 photochatid = $( ".idhidden_" + swiper.activeIndex).val();
 touid = $( ".toidhidden_" + swiper.activeIndex).val();
 
-if (photodeletetime == photochatid){document.getElementById("photodeletechattime").innerHTML = '<span style="float:left;margin-top:5px;">Photo unseen</span>';}
+if (photodeletetime == photochatid){document.getElementById("photodeletechattime").innerHTML = '<span style="float:left;margin-top:5px;">Unseen</span>';}
 else{photodeletecount(photodeletetime);}
 
 
