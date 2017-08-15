@@ -1454,7 +1454,6 @@ else{}
 
 function getMatches(){
 
-	myApp.pullToRefreshDone();
 	
 //$( ".content-here" ).empty();            
 $( ".content-here" ).hide();
