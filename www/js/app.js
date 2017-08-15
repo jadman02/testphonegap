@@ -1213,7 +1213,7 @@ else {slidecontent = '<div class="age_'+random_all[i].age+' swiper-slide slide_'
     setTimeout(function () {
         // Random image
      
-        myApp.pullToRefreshDone();
+        myApp.pullToRefreshDone('.pull-to-refresh-content-1');
     }, 1000);
 });
 
@@ -1454,7 +1454,7 @@ else{}
 
 function getMatches(){
 
-	
+	myApp.pullToRefreshDone('.pull-to-refresh-content-1');
 //$( ".content-here" ).empty();            
 $( ".content-here" ).hide();
 	
