@@ -2947,6 +2947,8 @@ var objs = snapshot.val();
 var obg = [];
 $.each(objs, function(i, obk) {obg.push (obk)});
 
+
+	
 //console.log(obg);
 
 function compare(a,b) {
@@ -2964,7 +2966,7 @@ obg.sort(compare);
 
 $.each(obg, function(i, obj) {
     
-
+if (obj.from_uid){
     
 var typetype = obj.type.substring(0, 4);
     var correctimage;
@@ -3169,6 +3171,9 @@ for (i = 0; i < notifletsload; i++) {
 
 }
 
+       //if from uid present
+       }
+       
 });
     
 }
