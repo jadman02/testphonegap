@@ -9760,14 +9760,14 @@ $( ".gallerytitle").html(phototo);
          
                 
          var slidenum = galleryswiper.activeIndex + 1;
-  photodeletetime = $( ".photoexpiryhidden_" + swiper.activeIndex).val();photodeletecount(photodeletetime);
+  photodeletetime = $( ".photoexpiryhidden_" + swiper.activeIndex).val();
 phototo = $( ".tohidden_" + swiper.activeIndex).val();
 photofrom = $( ".fromhidden_" + swiper.activeIndex).val();
 photochatid = $( ".idhidden_" + swiper.activeIndex).val();
 touid = $( ".toidhidden_" + swiper.activeIndex).val();
 
 if (photodeletetime == photochatid){document.getElementById("photodeletechattime").innerHTML = '<span style="float:left;margin-top:5px;">Photo unseen</span>';}
-else{photodeletecount();deletePhotochat();}
+else{photodeletecount(photodeletetime);}
 
 
 
