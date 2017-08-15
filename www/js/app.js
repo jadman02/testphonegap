@@ -205,7 +205,7 @@ $.ajax({
     type: "get",
     data: { access_token: f_token},
     success: function (response, textStatus, jqXHR) {
-
+alert(JSON.stringify(response)); 
 
 
 $.ajax({
