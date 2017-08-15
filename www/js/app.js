@@ -9674,7 +9674,7 @@ function imagesPopup(go){
  '   <div class="navbar-inner">'+
   '      <div class="left"><a href="#" onclick="closeGallery();" class="link icon-only"><i class="pe-7s-angle-left pe-3x" style="margin-left:-10px;color:white;"></i> </a></div>'+
    '     <div class="center gallerytitle"></div>'+
-    '    <div class="right"><div id="photodeletechattime" style="color:#ccc;font-size:15px;"></div></div>'+
+    '    <div class="right"><div id="photodeletechattime" style="color:#ccc;"></div></div>'+
     '</div>'+
 '</div>'+
                    '<div class="pages">'+
@@ -9724,7 +9724,7 @@ $.each(objs, function(i, obj) {
     if (obj.photo_expiry == null){expiryval = i;}
     else {expiryval = obj.photo_expiry;}
     
-          $( ".gallery-wrapper" ).append(' <div class="swiper-slide photochat_'+obj.photo_expiry+'" style="height:100%;">'+
+          $( ".gallery-wrapper" ).append(' <div class="swiper-slide photochat_'+obj.photo_expiry+' photochat_'+i+'" style="height:100%;">'+
           '<div class="swiper-zoom-container">'+
             
           '<img data-src="'+obj.downloadurl+'" class="swiper-lazy" style="width:100%;" onload="$(this).fadeIn(700);hideImagespopuploader();">'+
@@ -9809,8 +9809,8 @@ var countDownDate = new Date(photodeletetime * 1000);
 
 	var deletephotostring;
 	
-	if (hours > 0) {deletephotostring = '<i class="twa twa-bomb" style="float:left;"></i>' + hours + 'h ' + minutes + 'm ';}
-	if (hours === 0){deletephotostring = '<i class="twa twa-bomb" style="float:left;"></i> Soon';}
+	if (hours > 0) {deletephotostring = '<i class="twa twa-bomb twa-lg" style="float:left;"></i>' + hours + 'h ' + minutes + 'm ';}
+	if (hours === 0){deletephotostring = '<i class="twa twa-bomb twa-lg" style="float:left;"></i> Soon';}
 
 	$( "#photodeletechattime" ).html(deletephotostring);
   myApp.sizeNavbars();
@@ -13636,7 +13636,7 @@ if(obj.photo_expiry){
    $( ".im_" + obj.id).parent().parent().remove(); 
 });
 				
-				$( ".photochat_" + obj.photo_expiry).remove(); 
+				$( ".photochat_" + obj.id).remove(); 
 				if(galleryswiper){galleryswiper.update();}
 				//$( ".image_" + obj.id).addClass("disabled");
 				//$( ".image_" + obj.id).css("width","0px");
