@@ -247,7 +247,9 @@ recentfriends:'Y'
 	
 	if ((response1.summary.total_count > 4) && (response1.summary.total_count <10)){
 
-
+if ($('.no-results-div').length > 0) {$('.nearby-helper').hide();
+		$('.recent-helper').hide();}
+		else{
 		
 	nearbyshare = true;
 		$('.nearby-helper').hide();
@@ -279,12 +281,14 @@ recentshare = false;
             '</div>'+
         '</li>'+
     '</ul></div>  ');
-			$('.recent-helper').show();
 		//$('.recent-helper').html('<p style="margin-top:-10px;padding:5px;">'+friendstring+'. Invite <span class="badge" style="background-color:#ff3b30;color:white;">10</span> or more friends on Facebook to <br/>unlock this feature.</p>');
 	//$('.summary-helper').html('<p style="font-weight:bold;">'+friendstring+'</p><div class="row"><div class="col-50"><a class="button active external" href="sms:&body=Check out a new app in the App Store: https://fb.me/1554148374659639. It is called Date or Duck. Thoughts? ">Send SMS</a></div><div class="col-50"><a class="button active external" href="#" onclick="appLink()">Invite Friends</a></div></div><p style="color:#666;font-size:12px;margin-top:-10px;">We appreciate your help to grow this app!</p>');
-	
 	}
-		
+	}
+	if (response1.summary.total_count < 5){
+if ($('.no-results-div').length > 0) {$('.nearby-helper').hide();
+		$('.recent-helper').hide();}
+else{		
 	
 	nearbyshare = false;
 		 recentshare = false;
@@ -333,14 +337,13 @@ $('.recent-helper').html(
         '</li>'+
     '</ul></div>  ');
 
-$('.nearby-helper').show();
-	$('.recent-helper').show();
+
 		
 		//$('.recent-helper').html('<p style="margin-top:-10px;padding:5px;">'+friendstring+'. Invite <span class="badge" style="background-color:#ff3b30;color:white;">10</span> or more friends on Facebook to <br/>unlock this feature.</p>');
 // $('.nearby-helper').html('<p style=margin-top:-10px;"padding:5px;">'+friendstring+'. Invite <span class="badge" style="background-color:#ff3b30;color:white;">5</span> or more friends on Facebook to <br/>unlock this feature.</p>');
 //	$('.summary-helper').html('<p style="font-weight:bold;"></p><div class="row"><div class="col-50"><a class="button active external" href="sms:&body=Check out a new app in the App Store: https://fb.me/1554148374659639. It is called Date or Duck. Thoughts? ">Send SMS</a></div><div class="col-50"><a class="button active external" href="#" onclick="appLink()">Invite Friends</a></div></div><p style="color:#666;font-size:12px;margin-top:-10px;">We appreciate your help to grow this app!</p>');
 	
-	
+	}
 
 
 	}	
@@ -1165,8 +1168,8 @@ else {slidecontent = '<div class="age_'+random_all[i].age+' swiper-slide slide_'
 		
           $( ".home-title" ).hide(); 
           
-          //$( ".nearby-helper" ).hide(); 
-            //        $( ".recent-helper" ).hide(); 
+          $( ".nearby-helper" ).hide(); 
+                    $( ".recent-helper" ).hide(); 
 
 	
 		setTimeout(function(){ 
@@ -1451,8 +1454,8 @@ recentswiper.update();
 
           $( ".home-title" ).hide(); 
           
-          //$( ".nearby-helper" ).hide(); 
-                    //$( ".recent-helper" ).hide(); 
+          $( ".nearby-helper" ).hide(); 
+                    $( ".recent-helper" ).hide(); 
 
 	
 	//alert('getmatch trigger' + homewant);
