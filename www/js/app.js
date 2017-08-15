@@ -9674,13 +9674,13 @@ function imagesPopup(go){
  '   <div class="navbar-inner">'+
   '      <div class="left"><a href="#" onclick="closeGallery();" class="link icon-only"><i class="pe-7s-angle-left pe-3x" style="margin-left:-10px;color:white;"></i> </a></div>'+
    '     <div class="center gallerytitle"></div>'+
-    '    <div class="right photo-count"></div>'+
+    '    <div class="right"><div id="photodeletechattime" style="color:#ccc;"></div></div>'+
     '</div>'+
 '</div>'+
                    '<div class="pages">'+
 '<div data-page="gallerypopup" class="page">'+
 '<div class="page-content" style="background-color:white;">'+
-  '<div style="position:absolute;bottom:12px;right:8px;z-index:99999;background-color:white;border-radius:5px;padding:5px;"><div id="photodeletechattime" style="color:black;float:left;"></div></div>'+
+  '<div style="position:absolute;bottom:12px;right:8px;z-index:99999;background-color:white;border-radius:5px;padding:5px;"></div>'+
 
                                     '<span style="width:42px; height:42px;position:absolute;top:50%;margin-top:-21px;left:50%;margin-left:-21px;z-index:999999;" class="imagespopuploader preloader"></span> '+
 '<div class="swiper-container swiper-gallery" style="height: calc(100% - 44px);margin-top:44px;">'+
