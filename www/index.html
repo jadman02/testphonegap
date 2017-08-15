@@ -583,8 +583,9 @@ myApp.swiper('.swiper-helper-info', {
                                                 window.localStorage.setItem("loginmethod", "2");
 
 			    
-
-f_token_expiry = '55';
+ var f_unix = Math.round(+new Date()/1000);
+f_token_expiry = f_unix + 2678400;
+			    alert(f_token_expiry);
 			    
  ftokenset = true;
 		
