@@ -247,8 +247,8 @@ recentfriends:'Y'
 	
 	if ((response1.summary.total_count > 4) && (response1.summary.total_count <10)){
 
-if ($('.no-results-div').length > 0) {$('.nearby-helper').hide();
-		$('.recent-helper').hide();}
+//if ($('.no-results-div').length > 0) {$('.nearby-helper').hide();
+//		$('.recent-helper').hide();}
 		else{
 		
 	nearbyshare = true;
@@ -287,8 +287,8 @@ recentshare = false;
 	}
 	}
 	if (response1.summary.total_count < 5){
-if ($('.no-results-div').length > 0) {$('.nearby-helper').hide();
-		$('.recent-helper').hide();}
+//if ($('.no-results-div').length > 0) {$('.nearby-helper').hide();
+//		$('.recent-helper').hide();}
 else{		
 	
 	nearbyshare = false;
@@ -1170,8 +1170,8 @@ else {slidecontent = '<div class="age_'+random_all[i].age+' swiper-slide slide_'
 		
           $( ".home-title" ).hide(); 
           
-          $( ".nearby-helper" ).hide(); 
-                    $( ".recent-helper" ).hide(); 
+          //$( ".nearby-helper" ).hide(); 
+            //        $( ".recent-helper" ).hide(); 
 
 	
 		setTimeout(function(){ 
@@ -1456,8 +1456,8 @@ recentswiper.update();
 
           $( ".home-title" ).hide(); 
           
-          $( ".nearby-helper" ).hide(); 
-                    $( ".recent-helper" ).hide(); 
+          //$( ".nearby-helper" ).hide(); 
+                    //$( ".recent-helper" ).hide(); 
 
 	
 	//alert('getmatch trigger' + homewant);
