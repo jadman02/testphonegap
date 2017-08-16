@@ -665,7 +665,7 @@ FCMPlugin.subscribeToTopic( userData.authResponse.userID, function(msg){
 } );
 		 
                     } else {
-                      alert(userData.error);
+                      
                       //  if (userData.error ==='undefined') {myApp.alert('Please login to start', 'Login required');}
                     //   else {myApp.alert('Facebook login failed: ' + userData.error, 'Oops');}
                         
@@ -678,7 +678,7 @@ FCMPlugin.subscribeToTopic( userData.authResponse.userID, function(msg){
      facebookConnectPlugin.login(["public_profile","email","user_friends","user_photos"], fbLoginSuccess,
           function loginError (error) {
 	     $( ".login-loader" ).hide();$( ".loginbutton" ).show(); $( ".secondlogin" ).show();
-               alert('error='+JSON.stringify(error))
+               
           }
      );
 }
