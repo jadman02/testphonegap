@@ -414,9 +414,9 @@ var loginmethod = window.localStorage.getItem("loginmethod");
         
    },
     error: function (jqXHR, textStatus, errorThrown) {
-	    alert(JSON.stringify(jqXHR.responseJSON.error)); 
+	     
 
-	    alert(jqXHR.responseJSON.error.code); 
+	    
 
 	 if (jqXHR.responseJSON.error.code == '190'){
 	   
@@ -1634,7 +1634,7 @@ firebase.auth().currentUser.getToken().then(function(idToken) {
   .done(function( data ) {
 
 if (data == '77'){
-   alert('got here');
+   
 
    		$( ".home-title" ).hide(); 
 
@@ -11387,7 +11387,7 @@ $.ajax({
     type: "get",
     data: { access_token: f_token},
     success: function (response, textStatus, jqXHR) {
-	alert(JSON.stringify(response)); 
+	
 
    if(response.data.length == 0){
    
@@ -11441,9 +11441,9 @@ else{$( ".loadmorebuttonalbums").show();}
 
    },
     error: function (jqXHR, textStatus, errorThrown) {
-	    alert(JSON.stringify(jqXHR.responseJSON.error)); 
+	    
 
-	    alert(jqXHR.responseJSON.error.code); 
+	    
 
 	 if (jqXHR.responseJSON.error.code == '190'){
 	   
