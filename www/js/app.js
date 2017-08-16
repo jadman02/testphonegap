@@ -2188,11 +2188,14 @@ userpref = firebase.database().ref('users/' + f_uid).on("value",function(snapsho
     
     if (userexists) { 
     
-var expirydb = snapshot.child("expiry").val();
+
         
     var expireunix = Math.round(+new Date()/1000);
+alert(expireunix);
 
-if (expirydb < expireunix){
+if (f_token_expiry){
+	    
+if (f_token_expiry  < expireunix){
 
  myApp.alert('Please login again to continue.', 'Session expired', function () {
        FCMPlugin.unsubscribeFromTopic(f_uid);
@@ -2204,6 +2207,26 @@ if (expirydb < expireunix){
     });
 		 
 	 }
+}
+	    
+	    else{
+	   f_token_expiry = snapshot.child("expiry").val(); 
+	    
+		    if (f_token_expiry  < expireunix){
+
+ myApp.alert('Please login again to continue.', 'Session expired', function () {
+       FCMPlugin.unsubscribeFromTopic(f_uid);
+		cordova.plugins.notification.badge.set(0);
+	var loginmethod = window.localStorage.getItem("loginmethod");
+
+    if (loginmethod == '1'){logoutPlugin();}
+    else{logoutOpen();}
+    });
+		 
+	 }
+	    
+	    
+	    }
 
 
 
