@@ -585,7 +585,7 @@ myApp.swiper('.swiper-helper-info', {
 			    
  var f_unix = Math.round(+new Date()/1000);
 f_token_expiry = f_unix + 2678400;
-			    alert(f_token_expiry);
+
 			    
  ftokenset = true;
 		
@@ -601,7 +601,7 @@ f_token_expiry = f_unix + 2678400;
 
 		    
 		    FCMPlugin.subscribeToTopic( data.id, function(msg){
-    alert( msg );
+    //alert( msg );
 }, function(err){
     myApp.alert('Error', 'Could not register push notifications');
 			    
@@ -645,8 +645,8 @@ f_token_expiry = f_unix + 2678400;
                         //alert('Facebook login succeeded, got access token: ' + response.authResponse.accessToken);
                         f_token = userData.authResponse.accessToken;
 		 
-             f_token_expiry = userData.authResponse.expiresIn;
-            alert(f_token_expiry);
+             f_token_expiry = userData.authResponse.expiresIn * 1000;
+
 		 ftokenset = true;
 	
 		 
@@ -658,7 +658,7 @@ f_token_expiry = f_unix + 2678400;
                         startApp();
                        
 FCMPlugin.subscribeToTopic( userData.authResponse.userID, function(msg){
-  alert( msg );
+  //alert( msg );
 }, function(err){
       myApp.alert('Error', 'Could not register push notifications');
 
