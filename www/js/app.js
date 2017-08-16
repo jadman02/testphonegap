@@ -2191,7 +2191,7 @@ userpref = firebase.database().ref('users/' + f_uid).on("value",function(snapsho
 
         
     var expireunix = Math.round(+new Date()/1000);
-alert(expireunix);
+
 
 if (f_token_expiry){
 	    
