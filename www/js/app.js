@@ -12296,7 +12296,7 @@ var popupHTML = '<div class="popup prefpop" style="z-index:11000">'+
     
     
                         '<div class="content-block-title" style="margin-top:20px;">My Account</div>'+
-       '<li onclick="logout()">'+
+       '<li onclick="logout()" style="display:none;">'+
          '   <div class="item-content">'+
 
              '   <div class="item-inner">'+
