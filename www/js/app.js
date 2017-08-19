@@ -444,7 +444,7 @@ var loginmethod = window.localStorage.getItem("loginmethod");
 
 
 function setWant(val){
-
+myApp.hideNavbar('.navbar-home');
 	$( ".homedate" ).addClass("disabled");
 	$( ".homeduck" ).addClass("disabled");
 	
@@ -767,7 +767,7 @@ setTimeout(function(){ $( ".notifspan" ).removeClass('notifbounce'); }, 5000);
 	    
     }else{
       //Notification was received in foreground. Maybe the user needs to be notified.
-
+ if ($('.chatpop').length === 0) {
 	    myApp.addNotification({
         title: 'Date or Duck',
 		    subtitle:data.aps.alert.title,
@@ -777,6 +777,26 @@ setTimeout(function(){ $( ".notifspan" ).removeClass('notifbounce'); }, 5000);
 		    onClick:function(){directUser(data.ev1,data.ev2,data.ev3);},
         media: '<img width="44" height="44" style="border-radius:100%" src="media/icon-76.png">'
     });
+ }
+	    
+	    else{
+	    
+		      if (targetid != data.ev1){
+		      
+	    myApp.addNotification({
+        title: 'Date or Duck',
+		    subtitle:data.aps.alert.title,
+        message: data.aps.alert.body,
+		    hold:2000,
+		    closeOnClick:true,
+		    onClick:function(){directUser(data.ev1,data.ev2,data.ev3);},
+        media: '<img width="44" height="44" style="border-radius:100%" src="media/icon-76.png">'
+    });
+		      
+		      }
+	    
+	    
+	    }
 	    
 	   // alert( JSON.stringify(data) );
 
@@ -1099,7 +1119,7 @@ $$('.panel-right').on('panel:closed', function () {
 
 
 
-
+/*
 // Pull to refresh content
 var ptrContent = $$('.pull-to-refresh-content-1');
  
@@ -1216,6 +1236,7 @@ else {slidecontent = '<div class="age_'+random_all[i].age+' swiper-slide slide_'
         myApp.pullToRefreshDone('.pull-to-refresh-content-1');
     }, 1000);
 });
+*/
 
 // Pull to refresh content
 var ptrContent = $$('.pull-to-refresh-content-2');
@@ -1572,7 +1593,7 @@ $( ".login-loader" ).hide();
 
 
 	setTimeout(function(){
-	
+myApp.showNavbar('.navbar-home');	
 		$( ".homedate" ).removeClass("disabled");
 	$( ".homeduck" ).removeClass("disabled");
 		
@@ -1646,7 +1667,7 @@ var loginmethod = window.localStorage.getItem("loginmethod");
 		$('.content-here').show();
 	
       setTimeout(function(){
-	
+	myApp.showNavbar('.navbar-home');
 		$( ".homedate" ).removeClass("disabled");
 	$( ".homeduck" ).removeClass("disabled");
 	
@@ -2044,7 +2065,7 @@ if (recent_all[0].id == graphid || recent_all[1].id == graphid || recent_all[2].
 
 
 	setTimeout(function(){
-	
+	myApp.showNavbar('.navbar-home');
 		$( ".homedate" ).removeClass("disabled");
 	$( ".homeduck" ).removeClass("disabled");
 	
