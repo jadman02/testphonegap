@@ -495,9 +495,11 @@ else{$( ".homedate" ).addClass("active");
 
 
 function updateWant(){
+if(updatefunction){clearTimeout(updatefunction);}
 $( ".content-here-1" ).hide();
 	$( ".content-here" ).hide();
-
+$( ".recent-helper" ).hide(); 
+			 $( ".nearby-helper" ).hide(); 
 	randomswiper.removeAllSlides();
 nearbyswiper.removeAllSlides();
 recentswiper.removeAllSlides();
@@ -642,7 +644,7 @@ var myApp = new Framework7({dynamicNavbar: true,modalActionsCloseByOutside:true,
 var $$ = Dom7;
 var datatap, tapid, taptype, tapname;
 
-
+var updatefunction;
 var f_token_expiry;
 var galleryswiper;
 var view1, view2, view3, view4;
@@ -1593,7 +1595,7 @@ $( ".login-loader" ).hide();
     
 
 
-	setTimeout(function(){
+	updatefunction =  setTimeout(function(){
 myApp.showNavbar('.navbar-home');	
 		$( ".homedate" ).removeClass("disabled");
 	$( ".homeduck" ).removeClass("disabled");
@@ -1667,7 +1669,7 @@ var loginmethod = window.localStorage.getItem("loginmethod");
 	else{$( ".login2" ).hide();}
 		$('.content-here').show();
 	
-      setTimeout(function(){
+      updatefunction = setTimeout(function(){
 	myApp.showNavbar('.navbar-home');
 		$( ".homedate" ).removeClass("disabled");
 	$( ".homeduck" ).removeClass("disabled");
@@ -2065,7 +2067,7 @@ if (recent_all[0].id == graphid || recent_all[1].id == graphid || recent_all[2].
     
 
 
-	setTimeout(function(){
+	updatefunction = setTimeout(function(){
 	myApp.showNavbar('.navbar-home');
 		$( ".homedate" ).removeClass("disabled");
 	$( ".homeduck" ).removeClass("disabled");
