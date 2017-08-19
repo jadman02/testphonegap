@@ -3,14 +3,7 @@ var refreshIntervalId;
 var desktoparray = ['media/dateicon.png','media/duckicon.png','media/datetongue.png','media/dateorducklogo.png']
 
 
-function showBar(){
-cordova.plugins.Keyboard.hideKeyboardAccessoryBar(false);
-}
 
-
-function hideBar(){
-cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
-}
 
 function toggleSend(){
 
@@ -12042,7 +12035,7 @@ var popupHTML = '<div class="popup prefpop" style="z-index:11000">'+
   '      <div class="item-inner">'+
       '<div class="item-title label">About Me</div>'+
           '  <div class="item-input">'+
- '   <textarea class="resizable" onkeyup="keyUp()" onfocus="showBar()" onblur="hideBar()" maxlength="100" id="userdescription" style="width: calc(100% - 40px);min-height:88px;max-height:176px;" placeholder="Hide"></textarea>'+
+ '   <textarea class="resizable" onkeyup="keyUp()" maxlength="100" id="userdescription" style="width: calc(100% - 40px);min-height:88px;max-height:176px;" placeholder="Hide"></textarea>'+
   '</div>'+
     '    </div>'+
      ' </div>'+
