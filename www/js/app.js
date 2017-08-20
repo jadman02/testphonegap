@@ -4442,7 +4442,7 @@ if (d_time){
 
 var lowertime = d_time.toLowerCase()
 
-if (chatdaystring == 'today'){$( ".chatdaystringdiv").empty();$( ".chatafternavbar").append('this ' + lowertime);}
+if (chatdaystring == 'Today'){$( ".chatdaystringdiv").empty();$( ".chatafternavbar").append('this ' + lowertime);}
 else {
 $( ".chatafternavbar").append(' ' + d_time);}
 }
