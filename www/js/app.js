@@ -4385,9 +4385,8 @@ weekday[6] = "Saturday";
 
 var chatdaystring;
 
-var expiredateobject = new Date((d_chat_expire * 1000) - 3600000);
-alert(d_chat_expire);
-alert(expiredateobject);
+var expiredateobject = new Date((d_chat_expire * 1000) - 14400000);
+
 var unixleft = d_chat_expire - newtonight_timestamp;
 
 var daysleft = unixleft / 86400;
@@ -8386,7 +8385,7 @@ myList.clearCache();
 	   $( ".datetoolbar" ).show();
 
 	   canloadchat = false;
-          var g = new Date((d_chat_expire*1000) - 3600000);
+          var g = new Date((d_chat_expire*1000) - 14400000);
 
 	   
 	    $( ".profileyomain" ).hide();
