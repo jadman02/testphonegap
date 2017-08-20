@@ -8356,13 +8356,12 @@ conversation_started = false;
  myMessages.clean();
  myMessages.destroy();
 }
-alert(datealertvar);
-	
-	if (datealertvar === true){
+	alert(datealertvar);
+if (datealertvar === true){
 
   firebase.database().ref("dates/" + f_uid +'/' + targetid).off('value', datealert);
  
-alert(cleared date alert);
+
 
 }
 
