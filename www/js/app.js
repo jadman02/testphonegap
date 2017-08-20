@@ -4389,7 +4389,7 @@ var expiredateobject = new Date((d_chat_expire * 1000) - 14400000);
 
 var unixleft = d_chat_expire - newtonight_timestamp;
 
-var daysleft = unixleft / 86400;
+var daysleft = Math.round(unixleft / 86400);
 
 //console.log('daysleft' + daysleft);
 
@@ -4407,7 +4407,7 @@ if (daysleft <=0){
 
 salut='tonight';
 }
-else if (daysleft ==1) {salut = 'in ' + Math.round(daysleft)+' day';}
+else if (daysleft ==1) {salut = 'in ' + daysleft+' day';}
 else{salut = 'in ' + daysleft+' days';}
 
 var aftertag;
