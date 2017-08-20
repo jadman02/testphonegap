@@ -4367,7 +4367,7 @@ var dateexists = snapshot.child('chat_expire').exists(); // true
       d_message = snapshot.child('message').val();
       
       var newtonight = new Date();
-newtonight.setHours(22,59,59,999);
+newtonight.setHours(23,59,59,999);
 var newtonight_timestamp = Math.round(newtonight/1000);
      
 
@@ -4386,8 +4386,8 @@ weekday[6] = "Saturday";
 var chatdaystring;
 
 var expiredateobject = new Date((d_chat_expire * 1000) - 3600000);
-
-
+alert(d_chat_expire);
+alert(expiredateobject);
 var unixleft = d_chat_expire - newtonight_timestamp;
 
 var daysleft = unixleft / 86400;
