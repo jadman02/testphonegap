@@ -3080,7 +3080,13 @@ else if (tunixminago >= (525600*2)) {timestamptitle = Math.round(tunixminago / 5
                 iconhtml = '<i class="pe-7s-date pe-lg" style="margin-right:5px;z-index:9999;"></i>';
             }
             
-
+             if (obj.param=='datedeleted'){
+                
+                if (obj.from_uid == f_uid){message_text = obj.message;}
+            else {message_text = obj.message;} 
+                
+                iconhtml = '<i class="pe-7s-date pe-lg" style="margin-right:5px;z-index:9999;"></i>';
+            }
             
               if (obj.param=='newmatch'){
                 
@@ -4253,7 +4259,7 @@ var popupHTML = '<div class="popup chatpop">'+
 
 
 ' <div class="toolbar-inner yes-inner" style="background-color:rgba(247, 247, 248,0.9);margin-top:-10px;height:54px;padding-bottom:10px;display:none;text-align:center;">'+
-                                              '<a href="#" onclick="cancelDate()" class="link" style="height:44px;color:white;background-color:#ff3b30;width: 33%;"><span style="margin: 0 auto;">Cancel</span></a>'+
+                                              '<a href="#" onclick="cancelDate(0)" class="link" style="height:44px;color:white;background-color:#ff3b30;width: 33%;"><span style="margin: 0 auto;">Cancel</span></a>'+
                                               '<a href="#" onclick="request()" class="link" style="height:44px;color:white;background-color:#2196f3;width:33%;"><span style="margin: 0 auto;">Change</span></a>'+
 
                        '<a href="#" onclick="acceptDate()" class="link" style="height:44px;color:white;background-color:#4cd964;width:33%;"><span style="margin: 0 auto;">Confirm</span></a>'+
@@ -4263,7 +4269,7 @@ var popupHTML = '<div class="popup chatpop">'+
 
   
  ' <div class="toolbar-inner sender-inner" style="background-color:rgba(247, 247, 248,0.9);margin-top:-10px;height:54px;padding-bottom:10px; display:none;text-align:center;">'+
-                       '<a href="#" onclick="cancelDate()" class="link" style="height:44px;color:white;background-color:#ff3b30;width: 50%;"><span style="margin: 0 auto;">Cancel</span></a>'+
+                       '<a href="#" onclick="cancelDate(0)" class="link" style="height:44px;color:white;background-color:#ff3b30;width: 50%;"><span style="margin: 0 auto;">Cancel</span></a>'+
                        '<a href="#" onclick="request()" class="link" style="height:44px;color:white;background-color:#2196f3;width: 50%;"><span style="margin: 0 auto;">Change</span></a>'+
 
   '</div>'+
@@ -4396,7 +4402,7 @@ var daysleft = Math.round(unixleft / 86400);
 //console.log('daysleft' + daysleft);
 
 var weekdaynamew = weekday[expiredateobject.getDay()];
-alert(weekdaynamew);
+
 if(daysleft <= 0){chatdaystring = 'Today';}
 else if(daysleft === 1){chatdaystring = 'Tomorrow';}
 else chatdaystring = weekdaynamew;
@@ -9149,7 +9155,7 @@ var t_unix = Math.round(+new Date()/1000);
     
 }
 
-function cancelDate(){
+function cancelDate(cancelnotif){
 // Create a reference to the file to delete
 $( ".dateheader" ).hide();
 $( ".sender-inner" ).hide();
@@ -9202,6 +9208,7 @@ firebase.database().ref("dates/" + targetid +'/' + f_uid).remove().then(function
   // Uh-oh, an error occurred!
 });
 
+	if (cancelnotif){
 	sendNotification(targetid,6);
 
 	
@@ -9246,11 +9253,53 @@ $.each(objs, function(i, obj) {
 
 
 
-
+newNotification();
 
 });
+	}
+		
+function newNotification(messagenum){
 
 
+
+if (!messagenum) {messagenum = 1;}
+
+var smessage;
+if (d_type=='duck'){smessage = 'Duck cancelled'}
+if (d_type=='date'){smessage = 'Date cancelled'}
+
+  // Get a key for a new Post.
+  var newPostKey = firebase.database().ref().push().key;
+var t_unix = Math.round(+new Date()/1000);
+   
+   var targetData = {
+       id:newPostKey,
+       from_uid: f_uid,
+    from_name: f_first,
+    to_uid:targetid,
+    to_name:targetname,
+	   to_picture:targetpicture,
+	   from_picture:image_url,
+    message:smessage,
+    timestamp: t_unix,
+    type:d_type,
+    param:'datedeleted',
+    new_message_count:messagenum,
+    received:'N',
+    expire:d_chat_expire,
+    authcheck:f_uid
+   };
+
+  // Write the new post's data simultaneously in the posts list and the user's post list.
+  var updates = {};
+  updates['notifications/' + f_uid + '/' + targetid] = targetData;
+  updates['notifications/' + targetid + '/' + f_uid] = targetData;
+
+  return firebase.database().ref().update(updates).then(function() {
+//console.log('delete notification sent');
+      
+  });
+}
        
 }
 
@@ -11003,7 +11052,7 @@ if (notifloaded){    $(  ".arrowdivhome_" + obj.from_uid ).empty();$( ".indivnot
     
     var addnumber;
     
-    if(obj.param =='newmatch'){addnumber = 1;}
+    if(obj.param == 'datedeleted' || obj.param =='newmatch'){addnumber = 1;}
     else {addnumber = obj.new_message_count}
     notificationscount = notificationscount + addnumber;
 if (notifloaded){
