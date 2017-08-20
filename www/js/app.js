@@ -3080,13 +3080,7 @@ else if (tunixminago >= (525600*2)) {timestamptitle = Math.round(tunixminago / 5
                 iconhtml = '<i class="pe-7s-date pe-lg" style="margin-right:5px;z-index:9999;"></i>';
             }
             
-             if (obj.param=='datedeleted'){
-                
-                if (obj.from_uid == f_uid){message_text = obj.message;}
-            else {message_text = obj.message;} 
-                
-                iconhtml = '<i class="pe-7s-date pe-lg" style="margin-right:5px;z-index:9999;"></i>';
-            }
+
             
               if (obj.param=='newmatch'){
                 
@@ -9252,52 +9246,11 @@ $.each(objs, function(i, obj) {
 
 
 
-newNotification();
+
 
 });
 
-function newNotification(messagenum){
 
-
-
-if (!messagenum) {messagenum = 1;}
-
-var smessage;
-if (d_type=='duck'){smessage = 'Duck cancelled'}
-if (d_type=='date'){smessage = 'Date cancelled'}
-
-  // Get a key for a new Post.
-  var newPostKey = firebase.database().ref().push().key;
-var t_unix = Math.round(+new Date()/1000);
-   
-   var targetData = {
-       id:newPostKey,
-       from_uid: f_uid,
-    from_name: f_first,
-    to_uid:targetid,
-    to_name:targetname,
-	   to_picture:targetpicture,
-	   from_picture:image_url,
-    message:smessage,
-    timestamp: t_unix,
-    type:d_type,
-    param:'datedeleted',
-    new_message_count:messagenum,
-    received:'N',
-    expire:d_chat_expire,
-    authcheck:f_uid
-   };
-
-  // Write the new post's data simultaneously in the posts list and the user's post list.
-  var updates = {};
-  updates['notifications/' + f_uid + '/' + targetid] = targetData;
-  updates['notifications/' + targetid + '/' + f_uid] = targetData;
-
-  return firebase.database().ref().update(updates).then(function() {
-//console.log('delete notification sent');
-      
-  });
-}
        
 }
 
@@ -11050,7 +11003,7 @@ if (notifloaded){    $(  ".arrowdivhome_" + obj.from_uid ).empty();$( ".indivnot
     
     var addnumber;
     
-    if(obj.param == 'datedeleted' || obj.param =='newmatch'){addnumber = 1;}
+    if(obj.param =='newmatch'){addnumber = 1;}
     else {addnumber = obj.new_message_count}
     notificationscount = notificationscount + addnumber;
 if (notifloaded){
