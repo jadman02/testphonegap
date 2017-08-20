@@ -4140,7 +4140,7 @@ else {   if ($('.chatpop').length > 0){return false;}}
 
 	var centerdiv;
 
-	
+
 	
 	
 	if (messageid) {targetid = messageid;}
@@ -4329,6 +4329,14 @@ myApp.sizeNavbars();
 //$( "#centerholder" ).remove();
 
 
+		if (datealertvar === true){
+
+  firebase.database().ref("dates/" + f_uid +'/' + targetid).off('value', datealert);
+ 
+
+
+}
+	
 if (datealertvar === false) {
 datealertvar = true;
 var first_number,second_number;
@@ -8356,7 +8364,7 @@ conversation_started = false;
  myMessages.clean();
  myMessages.destroy();
 }
-	alert(datealertvar);
+	
 if (datealertvar === true){
 
   firebase.database().ref("dates/" + f_uid +'/' + targetid).off('value', datealert);
