@@ -8321,7 +8321,6 @@ $( "#messagearea" ).val('');
 function clearchatHistory(){
 singlefxallowed = true;
 messages_loaded = false;
-  firebase.database().ref("dates/" + f_uid +'/' + targetid).off('value', datealert);
 
 if (main_all[0] != null){
 new_all = main_all;
@@ -8357,15 +8356,17 @@ conversation_started = false;
  myMessages.clean();
  myMessages.destroy();
 }
-//if (datealertvar === true){
+alert(datealertvar);
+	
+	if (datealertvar === true){
 
-  //firebase.database().ref("dates/" + f_uid +'/' + targetid).off('value', datealert);
+  firebase.database().ref("dates/" + f_uid +'/' + targetid).off('value', datealert);
  
+alert(cleared date alert);
 
+}
 
-//}
-
-//datealertvar = false;
+datealertvar = false;
 
 if ($$('body').hasClass('with-panel-left-reveal')) {
 
