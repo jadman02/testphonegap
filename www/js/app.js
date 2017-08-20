@@ -4450,7 +4450,7 @@ if (d_time == 'Midday'){$( ".chatafternavbar").append('at midday!');}
 if (d_time == 'Evening'){$( ".chatafternavbar").append('this evening!');}
 			     }
 else {
-$( ".chatafternavbar").append(' ' + d_time);}
+$( ".chatafternavbar").append(', ' + d_time);}
 }
 
 //if (d_interest && d_type =='duck'){
