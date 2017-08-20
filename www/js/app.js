@@ -4367,7 +4367,7 @@ var dateexists = snapshot.child('chat_expire').exists(); // true
       d_message = snapshot.child('message').val();
       
       var newtonight = new Date();
-newtonight.setHours(23,59,59,999);
+newtonight.setHours(22,59,59,999);
 var newtonight_timestamp = Math.round(newtonight/1000);
      
 
