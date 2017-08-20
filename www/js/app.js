@@ -4409,7 +4409,7 @@ if (daysleft <=0){
 salut='tonight';
 }
 else if (daysleft ==1) {salut = 'in ' + Math.round(daysleft)+' day';}
-else{salut = 'in ' + Math.round(daysleft)+' days';}
+else{salut = 'in ' + daysleft+' days';}
 
 var aftertag;
 
