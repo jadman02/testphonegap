@@ -1585,7 +1585,7 @@ var loginmethod = window.localStorage.getItem("loginmethod");
 			if (fromarray[homemessageno] == 'duck'){sendavatar = 'media/duckfaceonly.png';sendtype = 'sent';}
 			
 			
-		if (homemessageno == 10){clearInterval(refreshIntervalYo);}
+		if (homemessageno == 7){clearInterval(refreshIntervalYo);}
 			
 			else{
 			
