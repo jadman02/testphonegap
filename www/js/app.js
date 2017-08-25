@@ -1593,7 +1593,7 @@ var loginmethod = window.localStorage.getItem("loginmethod");
 
     text: 'test',
     type: 'sent'
-        ..avatar: 'https://randomuser.me/api/portraits/thumb/'+gender[gendertype]+'/'+gendernum +'.jpg'
+        //avatar: 'https://randomuser.me/api/portraits/thumb/'+gender[gendertype]+'/'+gendernum +'.jpg'
 
   })
 			homemessageno ++;
