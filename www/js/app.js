@@ -517,7 +517,9 @@ recentswiper.update();
 				 $( ".results-loader" ).show(); 
 
 	if (homewant == 'offline'){
-  $( ".toolbar-home" ).hide();
+		
+  $( ".pagepullmarker" ).removeClass('pull-to-refresh-content-1');
+		$( ".toolbar-home" ).hide();
 $( ".content-here-1" ).show();
 	$( ".content-here-2" ).hide();
 			 $( ".results-loader" ).hide(); 
@@ -534,7 +536,7 @@ recent_all = [];
 else{
  $( ".statusbar-overlay" ).css("background-color","#2196f3"); 
 $( ".content-here-2" ).show();
-	
+	$( ".pagepullmarker" ).addClass('pull-to-refresh-content-1');
 }
 	
 firebase.database().ref('users/' + f_uid).update({
