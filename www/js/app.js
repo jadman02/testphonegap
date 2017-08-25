@@ -1500,19 +1500,19 @@ function appFeatures(clicked){
 
   });
 				myyMessages.addMessage({
-				 text: 'Can you invite some friends?',
+				 text: 'Can you invite some friends?<br/><br/><a href="#" class="button-big button active" style="margin-bottom:10px;width:40%;" onclick="appLink()">Invite Friends</a>',
     type: 'sent',
         avatar: 'media/ducksquare.png'
 
   });
 		myyMessages.addMessage({
-  	 text: 'Or Share on Facebook?',
+  	 text: 'Or Share on Facebook?<br/><br/><a href="#" class="button-big button" style="margin-bottom:10px;width:40%;" onclick="sharePop()">Share</a>',
     type: 'sent',
         avatar: 'media/ducksquare.png'
 
   });
   myyMessages.addMessage({
-  	 text: 'Or send an SMS?',
+  	 text: 'Or send an SMS?<br/><br/><a class="button-big button external" href="sms:&body=Check out a new dating app in the App Store: https://fb.me/1554148374659639. Thoughts? " style="margin-bottom:10px;width:40%;">Send SMS</a>',
     type: 'received',
         avatar: 'media/datesquare.png'
 
