@@ -1574,7 +1574,8 @@ var loginmethod = window.localStorage.getItem("loginmethod");
     $( ".ploader" ).hide();
 
 		var myyMessages = myApp.messages('.messages1', {
-    //autoLayout: true
+    autoLayout: true,
+    scrollMessages:true
 });
 		
 	var homemessageno = 0;
@@ -4333,7 +4334,7 @@ var popupHTML = '<div class="popup chatpop">'+
     '<div class="datearea" style="text-align:center;"></div>'+
 
 
-    '<div class="messages scrolldetect"  style="margin-top:100px;">'+
+    '<div class="messages messages2 scrolldetect"  style="margin-top:100px;">'+
 
 
 
@@ -4599,7 +4600,7 @@ objDiv.scrollTop = objDiv.scrollHeight;
 
 
 function noMessages(){
-$( ".messages" ).hide();
+$( ".messages2" ).hide();
 $( ".datearea" ).empty();
 $( ".datearea" ).append(
 '<div class="nomessages" style="margin:0 auto;margin-top:44px;text-align:center;background-color:white;">'+
@@ -5594,7 +5595,7 @@ if(!d_response){
     $( ".date1-close" ).hide();
 }
 
-$( ".messages" ).hide();
+$( ".messages2" ).hide();
      $( ".date-button" ).hide();
  
     $( "#createdatepicker" ).show();
@@ -5646,7 +5647,7 @@ function noChange(){
 	myApp.closeModal('.actions-modal');
 canloadchat = true;
 $( ".sender-inner" ).hide();
- $( ".messages" ).show();
+ $( ".messages2" ).show();
  $( ".date-close" ).hide();
   $( ".date2-close" ).hide();
   $( ".date1-close" ).hide();
@@ -5714,7 +5715,7 @@ prevdatetitle = false;
         image_count = 0;
 
     
-$( ".messages" ).show();
+$( ".messages2" ).show();
 $( ".datearea" ).empty();
        $( ".date-back" ).show();
        $( ".date-button" ).show();
@@ -5731,7 +5732,7 @@ $( ".date2-close" ).hide();
 myMessagebar = myApp.messagebar('.messagebar', {
   maxHeight: 88
 }); 
-myMessages = myApp.messages('.messages', {
+myMessages = myApp.messages('.messages2', {
     autoLayout: true,
     scrollMessages:true
 }); 
@@ -5852,7 +5853,7 @@ if (obj.from_uid == f_uid) {
 
 
 if (obj.param == 'dateset'){
-  $( ".messages" ).append(
+  $( ".messages2" ).append(
     
     '<div class="list-block media-list" style="margin-top:0px;">'+
     '<ul>'+
@@ -6016,7 +6017,7 @@ $('#buzzer')[0].play();
 
 if (obj.param == 'dateset'){
     
-    $( ".messages" ).append(
+    $( ".messages2" ).append(
     
     '<div class="list-block media-list">'+
     '<ul>'+
