@@ -1494,7 +1494,7 @@ function appFeatures(clicked){
 		
 				  myyMessages.addMessage({
 
-    text: 'Great! We\'re a new app so we appreciate your support!',
+    text: 'We\'re a new app so we appreciate your support!',
     type: 'sent',
         avatar: 'media/ducksquare.png'
 
@@ -1568,6 +1568,7 @@ function appFeatures(clicked){
         avatar: 'media/ducksquare.png'
 
   });		
+		appFeatures(0);
 	}, 3000);	
 		
 	}
