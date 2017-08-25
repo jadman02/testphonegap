@@ -1539,7 +1539,7 @@ var loginmethod = window.localStorage.getItem("loginmethod");
 	if ($('.topdiv').length > 0) {}
 	else{
 		
-	var messagesarray=['Quack!','Welcome to Date or Duck!','Press one or both of the buttons above','Choose duck to find fun <i class="twa twa lg twa-sweat-drops" style="margin-left:5px;"></i><i class="twa twa-lg twa-eggplant" style="margin-left:5px;"></i>','PS: Duck means you\'re interested (Replace the D with another letter)','Choose date to find others looking for love','<i class="twa twa-2x twa-heart-eyes"></i>'];
+	var messagesarray=['Quack!','Hey!','Press one or both of the buttons above','Choose duck to find fun <i class="twa twa lg twa-sweat-drops" style="margin-left:5px;"></i><i class="twa twa-lg twa-eggplant" style="margin-left:5px;"></i>','PS: Duck means you\'re interested (Replace the D with another letter)','Choose date to find others looking for love','<i class="twa twa-2x twa-heart-eyes"></i>'];
 	var fromarray = ['date','duck','date','duck','duck','date','date'];
 		
 		
