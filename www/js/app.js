@@ -1546,13 +1546,7 @@ var loginmethod = window.localStorage.getItem("loginmethod");
    
     '<div class="messages messages1">'+
  
-     ' <div class="message message-sent">'+
-      '  <div class="message-text">Hey</div>'+
-      '</div>'+
-      
-      '<div class="message message-received">'+
-       ' <div class="message-text">Coffee?</div>'+
-      '</div> '+
+
        
        
     '</div>'+
@@ -1572,6 +1566,53 @@ var loginmethod = window.localStorage.getItem("loginmethod");
 		var myyMessages = myApp.messages('.messages1', {
     autoLayout: true
 });
+setTimeout(function(){ alert("Hello"); 
+		  myyMessages.addMessage({
+
+    text: 'Choose date to find others looking for love',
+    type: 'received',
+        avatar: 'media/datefaceonly.png'
+
+  });
+		      
+		      setTimeout(function(){ alert("Hello"); 
+		  myyMessages.addMessage({
+
+    text: '<i class="twa twa-2x twa-heart-eyes"></i>',
+    type: 'received',
+        avatar: 'media/datefaceonly.png'
+
+  });
+		      }, 1000);
+		      
+		      }, 500);
+			  
+		
+		
+		
+			  myyMessages.addMessage({
+
+    text: 'Choose duck to find fun',
+    type: 'sent',
+        avatar: 'media/duckfaceonly.png'
+
+  });
+		
+			  myyMessages.addMessage({
+
+    text: 'PS: Duck means you\'re interested!',
+    type: 'sent',
+        avatar: 'media/duckfaceonly.png'
+
+  });
+		
+			  myyMessages.addMessage({
+
+    text: '(Replace the D with another letter) ',
+    type: 'sent',
+        avatar: 'media/duckfaceonly.png'
+
+  });
 		
 	}
   
