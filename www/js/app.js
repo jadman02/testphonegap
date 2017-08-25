@@ -1539,7 +1539,7 @@ var loginmethod = window.localStorage.getItem("loginmethod");
 	if ($('.topdiv').length > 0) {}
 	else{
 		
-	var messagesarray=['Quack! Welcome to Date or Duck!','Yeah hey!','Well help you find a coffee date','Or just get you laid','Press one or both of the buttons above','Choose duck to find fun','PS: Duck means youre interested','(Replace the D with another letter)','Choose date to find others looking for love','<i class="twa twa-2x twa-heart-eyes"></i>'];
+	var messagesarray=['Quack!',' Welcome to Date or Duck!','Find your next coffee date','Or just get laid','Press one or both of the buttons above','Choose duck to find fun','PS: Duck means youre interested <i class="twa twa-lg twa-sweat-drops"></i> <i class="twa twa-2x twa-eggplant"></i>','(Replace the D with another letter)','Choose date to find others looking for love','<i class="twa twa-2x twa-heart-eyes"></i>'];
 	var fromarray = ['date','duck','date','duck','date','duck','duck','duck','date','date'];
 		
 		
@@ -1595,7 +1595,8 @@ var loginmethod = window.localStorage.getItem("loginmethod");
     type: sendtype,
         avatar: sendavatar
 
-  })
+  });
+				scrollBottom();
 			homemessageno ++;
 			
 			}
