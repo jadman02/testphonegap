@@ -1477,6 +1477,8 @@ else{}
 }
   });
 
+var refreshIntervalYo;
+
 function getMatches(){
 
 	myApp.pullToRefreshDone('.pull-to-refresh-content-1');
@@ -1537,8 +1539,8 @@ var loginmethod = window.localStorage.getItem("loginmethod");
 	if ($('.topdiv').length > 0) {}
 	else{
 		
-	var messagesarray=['Quack! Welcome to Date or Duck!','Yeah hey!','We'\ll help you find a coffee date','Or just get you laid','Press one or both of the buttons above','Choose duck to find fun','PS: Duck means you\'re interested','(Replace the D with another letter)','Choose date to find others looking for love','<i class="twa twa-2x twa-heart-eyes"></i>']
-	var fromarray = ['date','duck','date','duck','date','duck','duck','duck','date','date']
+	var messagesarray=['Quack! Welcome to Date or Duck!','Yeah hey!','Well help you find a coffee date','Or just get you laid','Press one or both of the buttons above','Choose duck to find fun','PS: Duck means youre interested','(Replace the D with another letter)','Choose date to find others looking for love','<i class="twa twa-2x twa-heart-eyes"></i>'];
+	var fromarray = ['date','duck','date','duck','date','duck','duck','duck','date','date'];
 		
 		
 	
@@ -1582,8 +1584,22 @@ var loginmethod = window.localStorage.getItem("loginmethod");
 		if (fromarray[homemessageno] == 'date'){sendavatar = 'media/datefaceonly.png';sendtype = 'received';}
 			if (fromarray[homemessageno] == 'duck'){sendavatar = 'media/duckfaceonly.png';sendtype = 'sent';}
 			
-			homemessageno ++;
+			
 		if (homemessageno == 9){clearInterval(refreshIntervalYo);}
+			
+			else{
+			
+				  myyMessages.addMessage({
+
+    text: 'test',
+    type: 'sent'
+        ..avatar: 'https://randomuser.me/api/portraits/thumb/'+gender[gendertype]+'/'+gendernum +'.jpg'
+
+  })
+			homemessageno ++;
+			
+			}
+			
 		}
 		
 		
