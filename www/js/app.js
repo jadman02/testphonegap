@@ -1500,19 +1500,19 @@ function appFeatures(clicked){
 
   });
 				myyMessages.addMessage({
-				 text: 'Can you invite some friends?<br/><br/><a href="#" class="button-big button active" style="margin-bottom:10px;width:40%;" onclick="appLink()">Invite Friends</a>',
+				 text: 'Can you invite some friends?<br/><br/><a href="#" class="button-big button active" style="margin-bottom:10px;" onclick="appLink()">Invite</a>',
     type: 'sent',
         avatar: 'media/ducksquare.png'
 
   });
 		myyMessages.addMessage({
-  	 text: 'Or Share on Facebook?<br/><br/><a href="#" class="button-big button" style="margin-bottom:10px;width:40%;" onclick="sharePop()">Share</a>',
+  	 text: 'Or Share on Facebook?<br/><br/><a href="#" class="button-big button active" style="margin-bottom:10px;" onclick="sharePop()">Share</a>',
     type: 'sent',
         avatar: 'media/ducksquare.png'
 
   });
   myyMessages.addMessage({
-  	 text: 'Or send an SMS?<br/><br/><a class="button-big button external" href="sms:&body=Check out a new dating app in the App Store: https://fb.me/1554148374659639. Thoughts? " style="margin-bottom:10px;width:40%;">Send SMS</a>',
+  	 text: 'Or send an SMS?<br/><br/><a class="button-big button external active" href="sms:&body=Check out a new dating app in the App Store: https://fb.me/1554148374659639. Thoughts? " style="margin-bottom:10px;">SMS</a>',
     type: 'received',
         avatar: 'media/datesquare.png'
 
