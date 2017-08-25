@@ -1130,7 +1130,7 @@ $$('.panel-right').on('panel:closed', function () {
 
 
 
-/*
+
 // Pull to refresh content
 var ptrContent = $$('.pull-to-refresh-content-1');
  
@@ -1247,7 +1247,7 @@ else {slidecontent = '<div class="age_'+random_all[i].age+' swiper-slide slide_'
         myApp.pullToRefreshDone('.pull-to-refresh-content-1');
     }, 1000);
 });
-*/
+
 
 // Pull to refresh content
 var ptrContent = $$('.pull-to-refresh-content-2');
