@@ -1539,7 +1539,7 @@ function appFeatures(clicked){
         avatar: 'media/ducksquare.png'
 
   });	
-			}, 3300);
+			}, 4300);
 		
 		setTimeout(function(){
 				  myyMessages.addMessage({
@@ -1549,7 +1549,7 @@ function appFeatures(clicked){
         avatar: 'media/datesquare.png'
 
   });		
-}, 5000);
+}, 7500);
 			setTimeout(function(){
 						  myyMessages.addMessage({
 
@@ -1558,7 +1558,7 @@ function appFeatures(clicked){
         avatar: 'media/datesquare.png'
 
   });		
-	}, 7300);			
+	}, 9800);			
 	setTimeout(function(){
 		
 						  myyMessages.addMessage({
@@ -1569,7 +1569,7 @@ function appFeatures(clicked){
 
   });		
 		appFeatures(0);
-	}, 9000);	
+	}, 14000);	
 		
 	}
 
