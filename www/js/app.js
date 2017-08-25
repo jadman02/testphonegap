@@ -1550,7 +1550,7 @@ var loginmethod = window.localStorage.getItem("loginmethod");
 
    
 
-    '</div>');
+    '</div></div>');
 
 
     $( ".ploader" ).hide();
