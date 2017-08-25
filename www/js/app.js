@@ -1481,7 +1481,7 @@ var refreshIntervalYo;
 
 function getMatches(){
 
-	myApp.pullToRefreshDone('.pull-to-refresh-content-1');
+	//myApp.pullToRefreshDone('.pull-to-refresh-content-1');
 //$( ".content-here" ).empty();            
 $( ".content-here" ).hide();
 	
