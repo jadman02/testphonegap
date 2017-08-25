@@ -1540,17 +1540,17 @@ var loginmethod = window.localStorage.getItem("loginmethod");
 
 		'<div class="no-results-div" style="background-color:white;z-index:30000000;text-align:center;margin:0 auto;width:300px;position:absolute;top:44px;left:50%;margin-left:-150px;">'+
 '<div class="topdiv">'+
- 
-   '<a href="#" onclick="setWant(0)" class="homedate button link" style="width:50%;height:100%;overflow:visible;border-radius:50%;border:1px solid white;border-right:0;font-family: 'Pacifico', cursive;font-size:24px;border-radius:20px;top:0%;height:44px;border-top-right-radius:0px;border-bottom-right-radius:0px;border-radius:0px;border:0;"><span class="datetext" style="border-radius:5px;left:50%;position:absolute;margin-right: 20px;margin-left:-32px;margin-top:0px;">Date</span> <span class="preloader preloader-white datenavloader" style="display:none;width:27px;margin:0 auto;"></span> <div style="width:30px;overflow-x:hidden;position:absolute;top:4px;right:0px;"><img src="media/datefaceonly.png" style="width:40px;margin-left:9px;" class="datenavpic"></div> </a>'+
-'	 <a href="#" onclick="setWant(1)" class="homeduck button link" style="width:50%;height:100%;overflow:visible;border-radius:50%;top:0%;border-radius:20px;font-family: 'Pacifico', cursive;font-size:24px;height:44px;top:0%;border:1px solid white;border-left:0;border-top-left-radius:0px;border-bottom-left-radius:0px;border-radius:0px;border:0;"><span class="ducktext" style="border-radius:5px;left:50%;position:absolute;margin-left:-15px;margin-top:0px;">Duck</span>  <span class="preloader preloader-white ducknavloader" style="display:none;width:27px;margin:0 auto;"></span> <div style="width:30px;overflow-x:hidden;position:absolute;top:4px;left:0;"> <img src="media/duckfaceonly.png" style="width:40px;margin-left:-27px;" class="ducknavpic"></div></a>'+
+     // '<h3>Get Quacking!</h3>'+
+
+  
+
+	
 
 		
-				
-		
 
-   
-
-    '</div></div>');
+   '</div>'+
+	
+    '</div>');
 
 
     $( ".ploader" ).hide();
