@@ -1582,8 +1582,8 @@ var loginmethod = window.localStorage.getItem("loginmethod");
 		var sendavatar; 
 		var sendtype;
 		function doAdd(){
-		if (fromarray[homemessageno] == 'date'){sendavatar = 'media/datefaceonly.png';sendtype = 'received';}
-			if (fromarray[homemessageno] == 'duck'){sendavatar = 'media/duckfaceonly.png';sendtype = 'sent';}
+		if (fromarray[homemessageno] == 'date'){sendavatar = 'media/datesquare.png';sendtype = 'received';}
+			if (fromarray[homemessageno] == 'duck'){sendavatar = 'media/ducksquare.png';sendtype = 'sent';}
 			
 			
 		if (homemessageno == 7){clearInterval(refreshIntervalYo);}
