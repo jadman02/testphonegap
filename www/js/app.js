@@ -1530,7 +1530,7 @@ function appFeatures(clicked){
         avatar: 'media/ducksquare.png'
 
   });	
-		}, 1000);
+		}, 1500);
 		setTimeout(function(){ 
 				  myyMessages.addMessage({
 
@@ -1539,7 +1539,7 @@ function appFeatures(clicked){
         avatar: 'media/ducksquare.png'
 
   });	
-			}, 1500);
+			}, 3300);
 		
 		setTimeout(function(){
 				  myyMessages.addMessage({
@@ -1549,7 +1549,7 @@ function appFeatures(clicked){
         avatar: 'media/datesquare.png'
 
   });		
-}, 2000);
+}, 5000);
 			setTimeout(function(){
 						  myyMessages.addMessage({
 
@@ -1558,7 +1558,7 @@ function appFeatures(clicked){
         avatar: 'media/datesquare.png'
 
   });		
-	}, 2300);			
+	}, 7300);			
 	setTimeout(function(){
 		
 						  myyMessages.addMessage({
@@ -1569,7 +1569,7 @@ function appFeatures(clicked){
 
   });		
 		appFeatures(0);
-	}, 3000);	
+	}, 9000);	
 		
 	}
 
