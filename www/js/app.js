@@ -1486,12 +1486,14 @@ else{}
 
 
 var myyMessages;
-function appFeatures(clicked){
+function appFeatures(clicked,first){
 
 	if (clicked == '0'){
-	$( ".yesfea").addClass('disabled');
+	
+		if(first){
+		$( ".yesfea").addClass('disabled');
 		$( ".nofea").remove();
-		
+		}
 				  myyMessages.addMessage({
 
     text: 'We\'re a new app so we appreciate your support!',
@@ -1638,7 +1640,7 @@ var loginmethod = window.localStorage.getItem("loginmethod");
 	if ($('.topdiv').length > 0) {}
 	else{
 		
-	var messagesarray=['Quack!','Press one or both of the buttons above','Choose <span style="font-family: \'Pacifico\';font-weight:100;">duck</span> to find fun <i class="twa twa lg twa-sweat-drops" style="margin-left:5px;"></i><i class="twa twa-lg twa-eggplant" style="margin-left:5px;"></i>','PS: Duck means you\'re interested (Replace the D with another letter)','Choose <span style="font-family: \'Pacifico\';font-weight:100;">date</span> to find others looking for love','<i class="twa twa-2x twa-heart-eyes"></i>','Do you know how this app works?<br/><br/><a href="#" onclick="appFeatures(0)" class="button button-big active yesfea" style="float:left;background-color:#4cd964;width:40%;border-color:transparent;">Yes</a><a href="#" onclick="appFeatures(1)" class="button button-big active nofea" style="float:left;margin-left:5px;background-color:#ff3b30;width:40%;border-color:transparent;">No</a>'];
+	var messagesarray=['Quack!','Press one or both of the buttons above','Choose <span style="font-family: \'Pacifico\';font-weight:100;">duck</span> to find fun <i class="twa twa lg twa-sweat-drops" style="margin-left:5px;"></i><i class="twa twa-lg twa-eggplant" style="margin-left:5px;"></i>','PS: Duck means you\'re interested (Replace the D with another letter)','Choose <span style="font-family: \'Pacifico\';font-weight:100;">date</span> to find others looking for love','<i class="twa twa-2x twa-heart-eyes"></i>','Do you know how this app works?<br/><br/><a href="#" onclick="appFeatures(0,1)" class="button button-big active yesfea" style="float:left;background-color:#4cd964;width:40%;border-color:transparent;">Yes</a><a href="#" onclick="appFeatures(1)" class="button button-big active nofea" style="float:left;margin-left:5px;background-color:#ff3b30;width:40%;border-color:transparent;">No</a>'];
 	var fromarray = ['date','date','duck','duck','date','date','date'];
 		
 		
