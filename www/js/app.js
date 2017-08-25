@@ -1548,11 +1548,11 @@ var loginmethod = window.localStorage.getItem("loginmethod");
 		
 	$('.content-here-1').html(
 
-		'<div class="no-results-div" style="background-color:white;z-index:30000000;text-align:center;margin:0 auto;width:300px;position:absolute;top:44px;left:50%;margin-left:-150px;">'+
+		'<div class="no-results-div" style="height:calc(100% - 44px);background-color:white;z-index:30000000;text-align:center;margin:0 auto;width:300px;position:absolute;top:44px;left:50%;margin-left:-150px;">'+
 '<div class="topdiv">'+
      // '<h3>Get Quacking!</h3>'+
 
-  '<div class="page-content" id="contentmessagediv" style="height:calc(100% - 88px);width:100%;">'+
+  '<div class="page-content" id="contentmessagediv" style="height:calc(100% - 44px);width:100%;background-color:red;">'+
    
     '<div class="messages messages1">'+
  
