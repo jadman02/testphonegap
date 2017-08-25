@@ -1499,18 +1499,19 @@ function appFeatures(clicked){
         avatar: 'media/ducksquare.png'
 
   })
-				
+				myyMessages.addMessage({
 				 text: 'Can you invite some friends?',
     type: 'sent',
         avatar: 'media/ducksquare.png'
 
   })
+		myyMessages.addMessage({
   	 text: 'Or Share on Facebook?',
     type: 'sent',
         avatar: 'media/ducksquare.png'
 
   })
-  
+  myyMessages.addMessage({
   	 text: 'Or send an SMS?',
     type: 'received',
         avatar: 'media/datesquare.png'
