@@ -1522,6 +1522,54 @@ function appFeatures(clicked){
 	else{
 	$( ".nofea").addClass('disabled');
 		$( ".yesfea").remove();
+		setTimeout(function(){ 
+				  myyMessages.addMessage({
+
+    text: 'This app is designed to minimise chat and encourage real life meetups',
+    type: 'sent',
+        avatar: 'media/ducksquare.png'
+
+  });	
+		}, 1000);
+		setTimeout(function(){ 
+				  myyMessages.addMessage({
+
+    text: 'When you agree to meet, chat is enabled, until midnight of your date',
+    type: 'sent',
+        avatar: 'media/ducksquare.png'
+
+  });	
+			}, 1500);
+		
+		setTimeout(function(){
+				  myyMessages.addMessage({
+
+    text: 'Chat is disabled until you make another time to meet',
+    type: 'received',
+        avatar: 'media/datesquare.png'
+
+  });		
+}, 2000);
+			setTimeout(function(){
+						  myyMessages.addMessage({
+
+    text: 'Share your availability with your matches to schedule dates during the week.',
+    type: 'received',
+        avatar: 'media/datesquare.png'
+
+  });		
+	}, 2300);			
+	setTimeout(function(){
+		
+						  myyMessages.addMessage({
+
+    text: 'Send photos that delete after 24 hours (photobombs).',
+    type: 'sent',
+        avatar: 'media/ducksquare.png'
+
+  });		
+	}, 3000);	
+		
 	}
 
 }
