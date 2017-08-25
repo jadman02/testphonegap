@@ -1585,15 +1585,15 @@ var loginmethod = window.localStorage.getItem("loginmethod");
 			if (fromarray[homemessageno] == 'duck'){sendavatar = 'media/duckfaceonly.png';sendtype = 'sent';}
 			
 			
-		if (homemessageno == 9){clearInterval(refreshIntervalYo);}
+		if (homemessageno == 10){clearInterval(refreshIntervalYo);}
 			
 			else{
 			
 				  myyMessages.addMessage({
 
-    text: 'test',
-    type: 'sent'
-        //avatar: 'https://randomuser.me/api/portraits/thumb/'+gender[gendertype]+'/'+gendernum +'.jpg'
+    text: messagesarray[homemessageno],
+    type: sendtype,
+        avatar: sendavatar
 
   })
 			homemessageno ++;
@@ -1605,7 +1605,7 @@ var loginmethod = window.localStorage.getItem("loginmethod");
 		
 			var myFFunction = function() {
         doAdd();
-        var rand = Math.round(Math.random() * (3000 - 700)) + 1000; 
+        var rand = Math.round(Math.random() * (2000 - 700)) + 1000; 
         refreshIntervalYo = setTimeout(myFFunction, rand);
         
         
