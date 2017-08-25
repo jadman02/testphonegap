@@ -1542,7 +1542,21 @@ var loginmethod = window.localStorage.getItem("loginmethod");
 '<div class="topdiv">'+
      // '<h3>Get Quacking!</h3>'+
 
-  
+  '<div class="page-content messages-content" id="contentmessagediv" style="">'+
+   
+    '<div class="messages messages1">'+
+ 
+     ' <div class="message message-sent">'+
+      '  <div class="message-text">Hey</div>'+
+      '</div>'+
+      
+      '<div class="message message-received">'+
+       ' <div class="message-text">Coffee?</div>'+
+      '</div> '+
+       
+       
+    '</div>'+
+  '</div>'+
 
 	
 
@@ -1555,6 +1569,10 @@ var loginmethod = window.localStorage.getItem("loginmethod");
 
     $( ".ploader" ).hide();
 
+		var myyMessages = myApp.messages('.messages1', {
+    autoLayout: true
+});
+		
 	}
   
     $( ".loginbutton" ).show();
