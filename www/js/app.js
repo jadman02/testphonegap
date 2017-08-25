@@ -1485,8 +1485,46 @@ else{}
   });
 
 
+var myyMessages;
+function appFeatures(clicked){
 
+	if (clicked == '0'){
+	$( ".yesfea").addClass('disabled');
+		$( ".nofea").remove();
+		
+				  myyMessages.addMessage({
 
+    text: 'Great! We\'re a new app so we appreciate your support!',
+    type: 'sent',
+        avatar: 'media/ducksquare.png'
+
+  });
+				myyMessages.addMessage({
+				 text: 'Can you invite some friends?',
+    type: 'sent',
+        avatar: 'media/ducksquare.png'
+
+  });
+		myyMessages.addMessage({
+  	 text: 'Or Share on Facebook?',
+    type: 'sent',
+        avatar: 'media/ducksquare.png'
+
+  });
+  myyMessages.addMessage({
+  	 text: 'Or send an SMS?',
+    type: 'received',
+        avatar: 'media/datesquare.png'
+
+  });
+	
+	}
+	else{
+	$( ".nofea").addClass('disabled');
+		$( ".yesfea").remove();
+	}
+
+}
 
 
 var refreshIntervalYo;
@@ -1587,50 +1625,12 @@ var loginmethod = window.localStorage.getItem("loginmethod");
 
     $( ".ploader" ).hide();
 
-		var myyMessages = myApp.messages('.messages1', {
+		myyMessages = myApp.messages('.messages1', {
     autoLayout: true,
     scrollMessages:true
 });
 	
-		function appFeatures(clicked){
-
-	if (clicked == '0'){
-	$( ".yesfea").addClass('disabled');
-		$( ".nofea").remove();
 		
-				  myyMessages.addMessage({
-
-    text: 'Great! We\'re a new app so we appreciate your support!',
-    type: 'sent',
-        avatar: 'media/ducksquare.png'
-
-  })
-				myyMessages.addMessage({
-				 text: 'Can you invite some friends?',
-    type: 'sent',
-        avatar: 'media/ducksquare.png'
-
-  })
-		myyMessages.addMessage({
-  	 text: 'Or Share on Facebook?',
-    type: 'sent',
-        avatar: 'media/ducksquare.png'
-
-  })
-  myyMessages.addMessage({
-  	 text: 'Or send an SMS?',
-    type: 'received',
-        avatar: 'media/datesquare.png'
-
-  })
-	
-	}
-	else{
-	$( ".nofea").addClass('disabled');
-		$( ".yesfea").remove();
-	}
-
-}
 		
 	var homemessageno = 0;
 		var sendavatar; 
