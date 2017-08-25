@@ -1536,6 +1536,14 @@ var loginmethod = window.localStorage.getItem("loginmethod");
 	
 	if ($('.topdiv').length > 0) {}
 	else{
+		
+	var messagesarray=['Quack! Welcome to Date or Duck!','Yeah hey!','We'\ll help you find a coffee date','Or just get you laid','Press one or both of the buttons above','Choose duck to find fun','PS: Duck means you\'re interested','(Replace the D with another letter)','Choose date to find others looking for love','<i class="twa twa-2x twa-heart-eyes"></i>']
+	var fromarray = ['date','duck','date','duck','date','duck','duck','duck','date','date']
+		
+		
+	
+		
+		
 	$('.content-here-1').html(
 
 		'<div class="no-results-div" style="background-color:white;z-index:30000000;text-align:center;margin:0 auto;width:300px;position:absolute;top:44px;left:50%;margin-left:-150px;">'+
@@ -1566,53 +1574,33 @@ var loginmethod = window.localStorage.getItem("loginmethod");
 		var myyMessages = myApp.messages('.messages1', {
     autoLayout: true
 });
-setTimeout(function(){ alert("Hello"); 
-		  myyMessages.addMessage({
+		
+	var homemessageno = 0;
+		var sendavatar; 
+		var sendtype;
+		function doAdd(){
+		if (fromarray[homemessageno] == 'date'){sendavatar = 'media/datefaceonly.png';sendtype = 'received';}
+			if (fromarray[homemessageno] == 'duck'){sendavatar = 'media/duckfaceonly.png';sendtype = 'sent';}
+			
+			homemessageno ++;
+		if (homemessageno == 9){clearInterval(refreshIntervalYo);}
+		}
+		
+		
+			var myFFunction = function() {
+        doAdd();
+        var rand = Math.round(Math.random() * (3000 - 700)) + 1000; 
+        refreshIntervalYo = setTimeout(myFFunction, rand);
+        
+        
+        
+    }
 
-    text: 'Choose date to find others looking for love',
-    type: 'received',
-        avatar: 'media/datefaceonly.png'
-
-  });
-		      
-		      setTimeout(function(){ alert("Hello"); 
-		  myyMessages.addMessage({
-
-    text: '<i class="twa twa-2x twa-heart-eyes"></i>',
-    type: 'received',
-        avatar: 'media/datefaceonly.png'
-
-  });
-		      }, 1000);
-		      
-		      }, 500);
-			  
+			myFFunction();
 		
 		
 		
-			  myyMessages.addMessage({
 
-    text: 'Choose duck to find fun',
-    type: 'sent',
-        avatar: 'media/duckfaceonly.png'
-
-  });
-		
-			  myyMessages.addMessage({
-
-    text: 'PS: Duck means you\'re interested!',
-    type: 'sent',
-        avatar: 'media/duckfaceonly.png'
-
-  });
-		
-			  myyMessages.addMessage({
-
-    text: '(Replace the D with another letter) ',
-    type: 'sent',
-        avatar: 'media/duckfaceonly.png'
-
-  });
 		
 	}
   
