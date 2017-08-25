@@ -1552,7 +1552,7 @@ var loginmethod = window.localStorage.getItem("loginmethod");
 '<div class="topdiv">'+
      // '<h3>Get Quacking!</h3>'+
 
-  '<div class="page-content messages-content" id="contentmessagediv" style="height:100%;width:100%;">'+
+  '<div class="page-content messages-content" id="contentmessagediv" style="height:calc(100% - 44px);width:100%;">'+
    
     '<div class="messages messages1">'+
  
