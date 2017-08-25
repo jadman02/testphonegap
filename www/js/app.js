@@ -499,6 +499,10 @@ else{$( ".homedate" ).addClass("active");
 function updateWant(){
 if(updatefunction){clearTimeout(updatefunction);}
 $( ".content-here-1" ).hide();
+	$( ".content-here-2" ).hide();
+
+
+	
 	$( ".content-here" ).hide();
 $( ".recent-helper" ).hide(); 
 			 $( ".nearby-helper" ).hide(); 
@@ -515,6 +519,7 @@ recentswiper.update();
 	if (homewant == 'offline'){
   $( ".toolbar-home" ).hide();
 $( ".content-here-1" ).show();
+	$( ".content-here-2" ).hide();
 
 
 		new_all = [];
@@ -2398,10 +2403,10 @@ if (f_gender == 'Female' && f_interested == 'Men') {sexuality = 'female';}
        
    if (loadpref=== false){
   if(homewant){
-       if (homewant == 'offline'){$( ".homedate" ).removeClass('active');$( ".homeduck" ).removeClass('active');$( ".content-here-1" ).show(); }
-     if (homewant == 'dateduck'){$( ".homedate" ).addClass('active');$( ".homeduck" ).addClass('active');$( ".content-here-1" ).hide(); }
-   if (homewant == 'duck'){$( ".homedate" ).removeClass('active');$( ".homeduck" ).addClass('active'); $( ".content-here-1" ).hide();}
-    if (homewant == 'date'){$( ".homedate" ).addClass('active');$( ".homeduck" ).removeClass('active');$( ".content-here-1" ).hide();}
+       if (homewant == 'offline'){$( ".homedate" ).removeClass('active');$( ".homeduck" ).removeClass('active');$( ".content-here-1" ).show();	$( ".content-here-2" ).hide(); }
+     if (homewant == 'dateduck'){$( ".homedate" ).addClass('active');$( ".homeduck" ).addClass('active');$( ".content-here-1" ).hide(); $( ".content-here-2" ).show();}
+   if (homewant == 'duck'){$( ".homedate" ).removeClass('active');$( ".homeduck" ).addClass('active'); $( ".content-here-1" ).hide(); $( ".content-here-2" ).show();}
+    if (homewant == 'date'){$( ".homedate" ).addClass('active');$( ".homeduck" ).removeClass('active');$( ".content-here-1" ).hide();$( ".content-here-2" ).show();}
 }
 	   loadpref = true;
  establishNotif();
