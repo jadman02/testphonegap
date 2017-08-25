@@ -499,7 +499,7 @@ else{$( ".homedate" ).addClass("active");
 function updateWant(){
 if(updatefunction){clearTimeout(updatefunction);}
 $( ".content-here-1" ).hide();
-	$( ".content-here-2" ).hide();
+	
 
 
 	
@@ -532,7 +532,7 @@ recent_all = [];
 	}
 else{
  $( ".statusbar-overlay" ).css("background-color","#2196f3"); 
-
+$( ".content-here-2" ).show();
 }
 	
 firebase.database().ref('users/' + f_uid).update({
