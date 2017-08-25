@@ -1596,7 +1596,8 @@ var loginmethod = window.localStorage.getItem("loginmethod");
         avatar: sendavatar
 
   })
-				scrollBottom();
+				var objDiv = document.getElementById("contentmessagediv");
+objDiv.scrollTop = objDiv.scrollHeight;
 			homemessageno ++;
 			
 			}
