@@ -1501,9 +1501,6 @@ function appFeatures(clicked,first){
 		$( ".yesfea").addClass('disabled');
 		$( ".nofea").remove();
 		}
-		
-		
-		
 				  myyMessages.addMessage({
 
     text: 'We\'re a new app so we appreciate your support!',
@@ -1537,12 +1534,6 @@ function appFeatures(clicked,first){
 		setTimeout(function(){ 
 				  myyMessages.addMessage({
 
-					  $( ".homedate" ).addClass("disabled");
-	$( ".homeduck" ).addClass("disabled");
-					
-		$( ".datetext" ).html("");
-		$( ".ducktext" ).html("");
-					  
     text: 'This app is designed to minimise chat and encourage real life meetups',
     type: 'sent',
         avatar: 'media/ducksquare.png'
@@ -1587,11 +1578,6 @@ function appFeatures(clicked,first){
 
   });		
 		appFeatures(0);
-		$( ".homedate" ).removeClass("disabled");
-	$( ".homeduck" ).removeClass("disabled");
-					
-		$( ".datetext" ).html("Date");
-		$( ".ducktext" ).html("Duck");
 	}, 14000);	
 		
 	}
@@ -1712,14 +1698,7 @@ var loginmethod = window.localStorage.getItem("loginmethod");
 			if (fromarray[homemessageno] == 'duck'){sendavatar = 'media/ducksquare.png';sendtype = 'sent';}
 			
 			
-		if (homemessageno == 7){clearInterval(refreshIntervalYo);
-				       
-	$( ".homedate" ).removeClass("disabled");
-	$( ".homeduck" ).removeClass("disabled");
-					
-		$( ".datetext" ).html("Date");
-		$( ".ducktext" ).html("Duck");
-				       }
+		if (homemessageno == 7){clearInterval(refreshIntervalYo);}
 			
 			else{
 			
@@ -1750,10 +1729,7 @@ var loginmethod = window.localStorage.getItem("loginmethod");
 			myFFunction();
 		
 		
-	$( ".homedate" ).addClass("disabled");
-	$( ".homeduck" ).addClass("disabled");
-		$( ".datetext" ).html("");
-		$( ".ducktext" ).html("");
+		
 
 		
 	}
