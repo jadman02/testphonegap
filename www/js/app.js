@@ -1165,7 +1165,7 @@ ptrContent.on('ptr:refresh', function (e) {
 	//if ($('.no-results-div').length > 0) {myApp.pullToRefreshDone();return false;}
 	
 	alert('refresh trigger');
-	
+if ($('.content-here-2').css('display') === 'block'){ 	
 	var timesincelastupdate = Math.round(+new Date()/1000) - geoupdate;
 
 	if (firstupdate === false){getPreferences();firstupdate = true;}
@@ -1269,7 +1269,7 @@ else {slidecontent = '<div class="age_'+random_all[i].age+' swiper-slide slide_'
 	myApp.hideNavbar('.navbar-home');	
 		$( ".homedate" ).addClass("disabled");
 	$( ".homeduck" ).addClass("disabled");
-	
+}
 });
 
 
