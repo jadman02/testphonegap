@@ -2093,8 +2093,9 @@ if ($('.slide_' + graphid).length){
 
   
   //Do not show the users profile to themselves, and do not show profiles older than 1 month
-  if ((graphid != f_uid) && (blockedid < 0) && (diff < 43800)){
+ // if ((graphid != f_uid) && (blockedid < 0) && (diff < 43800)){
       
+  if ((graphid != f_uid) && (blockedid < 0)){
 
      
 var index1 = f_date_match.indexOf(graphid);
