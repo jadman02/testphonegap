@@ -1164,8 +1164,9 @@ ptrContent.on('ptr:refresh', function (e) {
 
 	//if ($('.no-results-div').length > 0) {myApp.pullToRefreshDone();return false;}
 	
-	alert('refresh trigger');
+
 if ($('.content-here-2').css('display') === 'block'){ 	
+	alert('refresh trigger');
 	var timesincelastupdate = Math.round(+new Date()/1000) - geoupdate;
 
 	if (firstupdate === false){getPreferences();firstupdate = true;}
