@@ -1248,6 +1248,11 @@ else {slidecontent = '<div class="age_'+random_all[i].age+' swiper-slide slide_'
 	
 
 	
+    setTimeout(function () {
+        // Random image
+     
+        myApp.pullToRefreshDone('.pull-to-refresh-content-1');
+    }, 1000);
 });
 
 
@@ -1489,13 +1494,16 @@ else{}
 
 var myyMessages;
 function appFeatures(clicked,first){
-myApp.hideNavbar('.navbar-home');
+
 	if (clicked == '0'){
 	
 		if(first){
 		$( ".yesfea").addClass('disabled');
 		$( ".nofea").remove();
 		}
+		
+		
+		
 				  myyMessages.addMessage({
 
     text: 'We\'re a new app so we appreciate your support!',
@@ -1521,7 +1529,7 @@ myApp.hideNavbar('.navbar-home');
         avatar: 'media/datesquare.png'
 
   });
-	myApp.showNavbar('.navbar-home');
+	
 	}
 	else{
 	$( ".nofea").addClass('disabled');
@@ -1529,6 +1537,12 @@ myApp.hideNavbar('.navbar-home');
 		setTimeout(function(){ 
 				  myyMessages.addMessage({
 
+					  $( ".homedate" ).addClass("disabled");
+	$( ".homeduck" ).addClass("disabled");
+					
+		$( ".datetext" ).html("");
+		$( ".ducktext" ).html("");
+					  
     text: 'This app is designed to minimise chat and encourage real life meetups',
     type: 'sent',
         avatar: 'media/ducksquare.png'
@@ -1573,7 +1587,11 @@ myApp.hideNavbar('.navbar-home');
 
   });		
 		appFeatures(0);
-		
+		$( ".homedate" ).removeClass("disabled");
+	$( ".homeduck" ).removeClass("disabled");
+					
+		$( ".datetext" ).html("Date");
+		$( ".ducktext" ).html("Duck");
 	}, 14000);	
 		
 	}
@@ -1680,8 +1698,8 @@ var loginmethod = window.localStorage.getItem("loginmethod");
     $( ".ploader" ).hide();
 
 		myyMessages = myApp.messages('.messages1', {
-    autoLayout: true,
-    scrollMessages:true
+  //  autoLayout: true,
+    //scrollMessages:true
 });
 	
 		
@@ -1694,7 +1712,14 @@ var loginmethod = window.localStorage.getItem("loginmethod");
 			if (fromarray[homemessageno] == 'duck'){sendavatar = 'media/ducksquare.png';sendtype = 'sent';}
 			
 			
-		if (homemessageno == 7){clearInterval(refreshIntervalYo);myApp.showNavbar('.navbar-home');}
+		if (homemessageno == 7){clearInterval(refreshIntervalYo);
+				       
+	$( ".homedate" ).removeClass("disabled");
+	$( ".homeduck" ).removeClass("disabled");
+					
+		$( ".datetext" ).html("Date");
+		$( ".ducktext" ).html("Duck");
+				       }
 			
 			else{
 			
@@ -1723,10 +1748,12 @@ var loginmethod = window.localStorage.getItem("loginmethod");
     }
 
 			myFFunction();
-		myApp.hideNavbar('.navbar-home');
 		
 		
-		
+	$( ".homedate" ).addClass("disabled");
+	$( ".homeduck" ).addClass("disabled");
+		$( ".datetext" ).html("");
+		$( ".ducktext" ).html("");
 
 		
 	}
@@ -1737,13 +1764,11 @@ $( ".login-loader" ).hide();
 
 
 	updatefunction =  setTimeout(function(){
-
-		if(homewant !=offine){
-		myApp.showNavbar('.navbar-home');	
-		
-		}
-$( ".homedate" ).removeClass("disabled");
+myApp.showNavbar('.navbar-home');	
+		$( ".homedate" ).removeClass("disabled");
 	$( ".homeduck" ).removeClass("disabled");
+		
+
 	
 	
 	}, 2000);
@@ -1813,11 +1838,8 @@ var loginmethod = window.localStorage.getItem("loginmethod");
 		$('.content-here').show();
 	
       updatefunction = setTimeout(function(){
-	if(homewant !=offine){
-		myApp.showNavbar('.navbar-home');	
-		
-		}
-$( ".homedate" ).removeClass("disabled");
+	myApp.showNavbar('.navbar-home');
+		$( ".homedate" ).removeClass("disabled");
 	$( ".homeduck" ).removeClass("disabled");
 	
 	
@@ -2214,11 +2236,8 @@ if (recent_all[0].id == graphid || recent_all[1].id == graphid || recent_all[2].
 
 
 	updatefunction = setTimeout(function(){
-	if(homewant !=offine){
-		myApp.showNavbar('.navbar-home');	
-		
-		}
-$( ".homedate" ).removeClass("disabled");
+	myApp.showNavbar('.navbar-home');
+		$( ".homedate" ).removeClass("disabled");
 	$( ".homeduck" ).removeClass("disabled");
 	
 	
