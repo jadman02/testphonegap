@@ -1146,9 +1146,7 @@ $$('.panel-right').on('panel:closed', function () {
 // Pull to refresh content
 var ptrContent = $$('.pull-to-refresh-content-1');
  
-myApp.hideNavbar('.navbar-home');	
-		$( ".homedate" ).addClass("disabled");
-	$( ".homeduck" ).addClass("disabled");
+
 
 var geoupdate = Math.round(+new Date()/1000);
 var firstupdate = false;
@@ -1165,6 +1163,8 @@ ptrContent.on('ptr:refresh', function (e) {
     //loaded = false;
 
 	//if ($('.no-results-div').length > 0) {myApp.pullToRefreshDone();return false;}
+	
+	
 	
 	var timesincelastupdate = Math.round(+new Date()/1000) - geoupdate;
 
@@ -1261,6 +1261,11 @@ else {slidecontent = '<div class="age_'+random_all[i].age+' swiper-slide slide_'
      
         myApp.pullToRefreshDone('.pull-to-refresh-content-1');
     }, 1000);
+	
+	myApp.hideNavbar('.navbar-home');	
+		$( ".homedate" ).addClass("disabled");
+	$( ".homeduck" ).addClass("disabled");
+	
 });
 
 
