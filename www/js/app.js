@@ -1235,6 +1235,10 @@ else {slidecontent = '<div class="age_'+random_all[i].age+' swiper-slide slide_'
 	
 		setTimeout(function(){ 
 		
+			myApp.showNavbar('.navbar-home');	
+		$( ".homedate" ).removeClass("disabled");
+	$( ".homeduck" ).removeClass("disabled");
+			
 					 $( ".results-loader" ).hide(); 
 		$( ".swiper-random" ).show();
 		$( ".swiper-nearby" ).show();
