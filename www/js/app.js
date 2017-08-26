@@ -550,7 +550,8 @@ firebase.database().ref('users/' + f_uid).update({
 	
    //Will update firebase user homewant
    //Check if updateuser function is in go daddy file
-   
+
+	if (homewant != 'offline'){
    firebase.auth().currentUser.getToken().then(function(idToken) {   
 $.post( "http://www.dateorduck.com/updatewant.php", { projectid:f_projectid,token:idToken,currentid:firebase.auth().currentUser.uid,uid:f_uid,want:homewant} )
 
@@ -564,7 +565,7 @@ $.post( "http://www.dateorduck.com/updatewant.php", { projectid:f_projectid,toke
     }).catch(function(error) {
   // Handle error
 });
-   
+	}
 
    
    
