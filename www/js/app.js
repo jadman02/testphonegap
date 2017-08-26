@@ -1271,6 +1271,7 @@ else {slidecontent = '<div class="age_'+random_all[i].age+' swiper-slide slide_'
 		$( ".homedate" ).addClass("disabled");
 	$( ".homeduck" ).addClass("disabled");
 }
+	else {myApp.pullToRefreshDone('.pull-to-refresh-content-1');}
 });
 
 
