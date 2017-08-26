@@ -1248,11 +1248,6 @@ else {slidecontent = '<div class="age_'+random_all[i].age+' swiper-slide slide_'
 	
 
 	
-    setTimeout(function () {
-        // Random image
-     
-        myApp.pullToRefreshDone('.pull-to-refresh-content-1');
-    }, 1000);
 });
 
 
@@ -1494,7 +1489,7 @@ else{}
 
 var myyMessages;
 function appFeatures(clicked,first){
-
+myApp.hideNavbar('.navbar-home');
 	if (clicked == '0'){
 	
 		if(first){
@@ -1526,7 +1521,7 @@ function appFeatures(clicked,first){
         avatar: 'media/datesquare.png'
 
   });
-	
+	myApp.showNavbar('.navbar-home');
 	}
 	else{
 	$( ".nofea").addClass('disabled');
@@ -1578,6 +1573,7 @@ function appFeatures(clicked,first){
 
   });		
 		appFeatures(0);
+		
 	}, 14000);	
 		
 	}
@@ -1684,8 +1680,8 @@ var loginmethod = window.localStorage.getItem("loginmethod");
     $( ".ploader" ).hide();
 
 		myyMessages = myApp.messages('.messages1', {
-  //  autoLayout: true,
-    //scrollMessages:true
+    autoLayout: true,
+    scrollMessages:true
 });
 	
 		
@@ -1698,7 +1694,7 @@ var loginmethod = window.localStorage.getItem("loginmethod");
 			if (fromarray[homemessageno] == 'duck'){sendavatar = 'media/ducksquare.png';sendtype = 'sent';}
 			
 			
-		if (homemessageno == 7){clearInterval(refreshIntervalYo);}
+		if (homemessageno == 7){clearInterval(refreshIntervalYo);myApp.showNavbar('.navbar-home');}
 			
 			else{
 			
@@ -1727,6 +1723,7 @@ var loginmethod = window.localStorage.getItem("loginmethod");
     }
 
 			myFFunction();
+		myApp.hideNavbar('.navbar-home');
 		
 		
 		
@@ -1740,11 +1737,13 @@ $( ".login-loader" ).hide();
 
 
 	updatefunction =  setTimeout(function(){
-myApp.showNavbar('.navbar-home');	
-		$( ".homedate" ).removeClass("disabled");
-	$( ".homeduck" ).removeClass("disabled");
-		
 
+		if(homewant !=offine){
+		myApp.showNavbar('.navbar-home');	
+		
+		}
+$( ".homedate" ).removeClass("disabled");
+	$( ".homeduck" ).removeClass("disabled");
 	
 	
 	}, 2000);
@@ -1814,8 +1813,11 @@ var loginmethod = window.localStorage.getItem("loginmethod");
 		$('.content-here').show();
 	
       updatefunction = setTimeout(function(){
-	myApp.showNavbar('.navbar-home');
-		$( ".homedate" ).removeClass("disabled");
+	if(homewant !=offine){
+		myApp.showNavbar('.navbar-home');	
+		
+		}
+$( ".homedate" ).removeClass("disabled");
 	$( ".homeduck" ).removeClass("disabled");
 	
 	
@@ -2212,8 +2214,11 @@ if (recent_all[0].id == graphid || recent_all[1].id == graphid || recent_all[2].
 
 
 	updatefunction = setTimeout(function(){
-	myApp.showNavbar('.navbar-home');
-		$( ".homedate" ).removeClass("disabled");
+	if(homewant !=offine){
+		myApp.showNavbar('.navbar-home');	
+		
+		}
+$( ".homedate" ).removeClass("disabled");
 	$( ".homeduck" ).removeClass("disabled");
 	
 	
