@@ -2359,7 +2359,9 @@ $.post( "http://www.dateorduck.com/updatelocation.php", { system:'ios',projectid
     
 }
 
-
+function hideqToolbar(){
+$( ".toolbar" ).hide();
+}
 
 function getPreferences(){
 
