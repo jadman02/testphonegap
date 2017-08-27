@@ -1704,7 +1704,8 @@ var loginmethod = window.localStorage.getItem("loginmethod");
 
 		myyMessages = myApp.messages('.messages1', {
     //autoLayout: true,
-    newMessagesFirst:true
+    newMessagesFirst:true,
+			scrollMessages:false
 });
 	
 		
