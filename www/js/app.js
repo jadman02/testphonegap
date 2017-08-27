@@ -5750,12 +5750,12 @@ $( ".messages2" ).hide();
 	
 if (dayw){
 	
-
+alert(dayw);
 var daycol = pickerCustomToolbar.cols[0];
 daycol.setValue(dayw);
 	
 if (timeq != 'Anytime'){
-
+alert(timeq);
 	
 var timecol = pickerCustomToolbar.cols[1];
 timecol.setValue(timeq);
