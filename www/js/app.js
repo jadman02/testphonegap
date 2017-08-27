@@ -5381,12 +5381,12 @@ var singleuserarray = [];
 function singleUser(idw,idname,origin){
 
    
-
+$(".avail-loader").hide();
   
 
 if (singleuserarray[0] != null){
 
-$(".avail-loader").hide();
+
  if (singleuserarray[0].availarraystring !== ''){
 	 
 	 
