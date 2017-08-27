@@ -4867,7 +4867,7 @@ var fivestamp_timestamp = Math.round(fivestamp/1000);
  
     cols: [
         {
-            displayValues: alldays_names,
+            displayValues: alldays_names + alldays_values,
               values: alldays_values,
         },
         {
