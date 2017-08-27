@@ -2517,10 +2517,6 @@ if (f_gender == 'Female' && f_interested == 'Men') {sexuality = 'female';}
    if (loadpref=== false){
   if(homewant){
 
-	//         if (homewant == 'offline'){$( ".homedate" ).removeClass('active');$( ".homeduck" ).removeClass('active');$( ".content-here-1" ).show();	$( ".content-here-2" ).hide();$( ".pagepullmarker" ).removeClass('pull-to-refresh-content-1');$( ".pagepullmarker" ).removeClass('pull-to-refresh-content');$( ".pull-to-refresh-layer" ).hide();$( ".toolbar-home" ).hide();$( ".results-loader" ).hide(); }
-    // if (homewant == 'dateduck'){$( ".homedate" ).addClass('active');$( ".homeduck" ).addClass('active');$( ".content-here-1" ).hide(); $( ".content-here-2" ).show();$( ".pagepullmarker" ).addClass('pull-to-refresh-content-1');$( ".pagepullmarker" ).addClass('pull-to-refresh-content');$( ".pull-to-refresh-layer" ).show();}
-  // if (homewant == 'duck'){$( ".homedate" ).removeClass('active');$( ".homeduck" ).addClass('active'); $( ".content-here-1" ).hide(); $( ".content-here-2" ).show();$( ".pagepullmarker" ).addClass('pull-to-refresh-content-1');$( ".pagepullmarker" ).addClass('pull-to-refresh-content');$( ".pull-to-refresh-layer" ).show();}
-//    if (homewant == 'date'){$( ".homedate" ).addClass('active');$( ".homeduck" ).removeClass('active');$( ".content-here-1" ).hide();$( ".content-here-2" ).show();$( ".pagepullmarker" ).addClass('pull-to-refresh-content-1');$( ".pagepullmarker" ).addClass('pull-to-refresh-content');$( ".pull-to-refresh-layer" ).show();}
 	  
 	  if (homewant == 'offline'){$( ".homedate" ).removeClass('active');$( ".homeduck" ).removeClass('active');$( ".content-here-1" ).show();	$( ".content-here-2" ).hide();$( ".toolbar-home" ).hide();$( ".results-loader" ).hide(); }
      if (homewant == 'dateduck'){$( ".homedate" ).addClass('active');$( ".homeduck" ).addClass('active');$( ".content-here-1" ).hide(); $( ".content-here-2" ).show();}
