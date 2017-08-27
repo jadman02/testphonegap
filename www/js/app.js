@@ -1166,7 +1166,7 @@ ptrContent.on('ptr:refresh', function (e) {
 	
 
 if ($('.content-here-2').css('display') === 'block'){ 	
-	alert('refresh trigger');
+	
 	var timesincelastupdate = Math.round(+new Date()/1000) - geoupdate;
 
 	if (firstupdate === false){getPreferences();firstupdate = true;}
@@ -1298,8 +1298,6 @@ var onSuccess = function(position) {
     latitudep = position.coords.latitude;
 longitudep = position.coords.longitude;
 
-//alert(latitudep);
-//alert(longitudep);
 
 
 	if (datatap === true){
@@ -1387,8 +1385,6 @@ var apiGeolocationSuccess = function(position) {
 latitudep = position.coords.latitude;
 longitudep = position.coords.longitude;
 
-//alert(latitudep);
-//alert(longitudep);
 
 	
 
@@ -5752,13 +5748,13 @@ $( ".messages2" ).hide();
 	
 if (dayw){
 	
-alert(dayw);
+
 	dayw = dayw - 7200;
 var daycol = pickerCustomToolbar.cols[0];
 daycol.setValue(dayw);
 	
 if (timeq != 'Anytime'){
-alert(timeq);
+
 	
 var timecol = pickerCustomToolbar.cols[1];
 timecol.setValue(timeq);
