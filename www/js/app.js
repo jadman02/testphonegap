@@ -503,7 +503,10 @@ if(updatefunction){clearTimeout(updatefunction);
 		  
 		  }
 $( ".content-here-1" ).hide();
-	
+$( ".page-content-1" ).removeClass('page-content');
+$( ".page-content-2" ).addClass('page-content');
+
+		
 
 
 	
@@ -529,6 +532,10 @@ recentswiper.update();
 		$( ".toolbar-home" ).hide();
 $( ".content-here-1" ).show();
 	$( ".content-here-2" ).hide();
+		
+		$( ".page-content-1" ).addClass('page-content');
+$( ".page-content-2" ).removeClass('page-content');
+		
 			 $( ".results-loader" ).hide(); 
 
 
@@ -2541,10 +2548,14 @@ if (f_gender == 'Female' && f_interested == 'Men') {sexuality = 'female';}
   // if (homewant == 'duck'){$( ".homedate" ).removeClass('active');$( ".homeduck" ).addClass('active'); $( ".content-here-1" ).hide(); $( ".content-here-2" ).show();$( ".pagepullmarker" ).addClass('pull-to-refresh-content-1');$( ".pagepullmarker" ).addClass('pull-to-refresh-content');$( ".pull-to-refresh-layer" ).show();}
 //    if (homewant == 'date'){$( ".homedate" ).addClass('active');$( ".homeduck" ).removeClass('active');$( ".content-here-1" ).hide();$( ".content-here-2" ).show();$( ".pagepullmarker" ).addClass('pull-to-refresh-content-1');$( ".pagepullmarker" ).addClass('pull-to-refresh-content');$( ".pull-to-refresh-layer" ).show();}
 	  
-	  if (homewant == 'offline'){$( ".homedate" ).removeClass('active');$( ".homeduck" ).removeClass('active');$( ".content-here-1" ).show();	$( ".content-here-2" ).hide();$( ".toolbar-home" ).hide();$( ".results-loader" ).hide(); }
-     if (homewant == 'dateduck'){$( ".homedate" ).addClass('active');$( ".homeduck" ).addClass('active');$( ".content-here-1" ).hide(); $( ".content-here-2" ).show();}
-   if (homewant == 'duck'){$( ".homedate" ).removeClass('active');$( ".homeduck" ).addClass('active'); $( ".content-here-1" ).hide(); $( ".content-here-2" ).show();}
-    if (homewant == 'date'){$( ".homedate" ).addClass('active');$( ".homeduck" ).removeClass('active');$( ".content-here-1" ).hide();$( ".content-here-2" ).show();}
+	  
+	 
+	  
+	  
+	  if (homewant == 'offline'){$( ".homedate" ).removeClass('active');$( ".homeduck" ).removeClass('active');$( ".content-here-1" ).show();	  $( ".page-content-1" ).addClass('page-content');$( ".page-content-2" ).removeClass('page-content');	$( ".content-here-2" ).hide();$( ".toolbar-home" ).hide();$( ".results-loader" ).hide(); }
+     if (homewant == 'dateduck'){$( ".homedate" ).addClass('active');$( ".homeduck" ).addClass('active');$( ".page-content-2" ).addClass('page-content');$( ".page-content-1" ).removeClass('page-content');$( ".content-here-1" ).hide(); $( ".content-here-2" ).show();}
+   if (homewant == 'duck'){$( ".homedate" ).removeClass('active');$( ".homeduck" ).addClass('active'); $( ".page-content-2" ).addClass('page-content');$( ".page-content-1" ).removeClass('page-content');$( ".content-here-1" ).hide(); $( ".content-here-2" ).show();}
+    if (homewant == 'date'){$( ".homedate" ).addClass('active');$( ".homeduck" ).removeClass('active');$( ".page-content-2" ).addClass('page-content');$( ".page-content-1" ).removeClass('page-content');$( ".content-here-1" ).hide();$( ".content-here-2" ).show();}
 }
 	   loadpref = true;
  establishNotif();
