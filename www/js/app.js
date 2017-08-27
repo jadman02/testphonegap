@@ -1717,8 +1717,12 @@ var loginmethod = window.localStorage.getItem("loginmethod");
 		if (fromarray[homemessageno] == 'date'){sendavatar = 'media/datesquare.png';sendtype = 'received';}
 			if (fromarray[homemessageno] == 'duck'){sendavatar = 'media/ducksquare.png';sendtype = 'sent';}
 			
+			homemessageno = $('.message').length;
 			
-		if (homemessageno == 7){clearInterval(refreshIntervalYo);}
+			 	
+
+			
+		if (homemessageno == 7 || ($('.content-here-2').css('display') === 'block')){clearInterval(refreshIntervalYo);}
 			
 			else{
 			
@@ -1730,7 +1734,7 @@ var loginmethod = window.localStorage.getItem("loginmethod");
 
   })
 				
-			homemessageno ++;
+			
 			
 			}
 			
