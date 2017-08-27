@@ -1528,32 +1528,27 @@ function appFeatures(clicked,first){
 
   });
 				myyMessages.addMessage({
-				 text: 'Can you invite some friends?<br/><br/><a href="#" class="button-big button active" style="margin-bottom:10px;" onclick="appLink()">Invite</a>',
+				 text: 'Can you invite some friends?<br/><br/><a href="#" class="button-big button active" style="margin-bottom:10px;" onclick="appLink()">Invite</a></br><a href="#" class="button-big button active" style="margin-bottom:10px;" onclick="sharePop()">Share</a><br/><a class="button-big button external active" href="sms:&body=Check out a new dating app in the App Store: https://fb.me/1554148374659639. Thoughts? " style="margin-bottom:10px;">SMS</a>',
     type: 'sent',
         avatar: 'media/ducksquare.png'
 
   });
-		myyMessages.addMessage({
-  	 text: 'Or Share on Facebook?<br/><br/><a href="#" class="button-big button active" style="margin-bottom:10px;" onclick="sharePop()">Share</a>',
-    type: 'sent',
-        avatar: 'media/ducksquare.png'
 
-  });
-  myyMessages.addMessage({
-  	 text: 'Or send an SMS?<br/><br/><a class="button-big button external active" href="sms:&body=Check out a new dating app in the App Store: https://fb.me/1554148374659639. Thoughts? " style="margin-bottom:10px;">SMS</a>',
-    type: 'received',
-        avatar: 'media/datesquare.png'
-
-  });
 	
 	}
 	else{
 	$( ".nofea").addClass('disabled');
 		$( ".yesfea").remove();
+		
+		
+		
+		
+		
+		
 		setTimeout(function(){ 
 				  myyMessages.addMessage({
 
-    text: 'This app is designed to minimise chat and encourage real life meetups',
+    text: 'This app is designed to minimise chat and encourage real life meetups.',
     type: 'sent',
         avatar: 'media/ducksquare.png'
 
@@ -1562,7 +1557,7 @@ function appFeatures(clicked,first){
 		setTimeout(function(){ 
 				  myyMessages.addMessage({
 
-    text: 'When you agree to meet, chat is enabled, until midnight of your date',
+    text: 'When you agree to meet, chat is enabled, until midnight of your date. Chat is disabled until you make another time to meet.',
     type: 'sent',
         avatar: 'media/ducksquare.png'
 
@@ -1572,32 +1567,15 @@ function appFeatures(clicked,first){
 		setTimeout(function(){
 				  myyMessages.addMessage({
 
-    text: 'Chat is disabled until you make another time to meet',
+    text: 'You can share your availability and send photos that delete after 24 hours.',
     type: 'received',
         avatar: 'media/datesquare.png'
 
-  });		
+  });	
+			appFeatures(0);
 }, 7500);
-			setTimeout(function(){
-						  myyMessages.addMessage({
-
-    text: 'Share your availability with your matches to schedule dates during the week.',
-    type: 'received',
-        avatar: 'media/datesquare.png'
-
-  });		
-	}, 9800);			
-	setTimeout(function(){
+						
 		
-						  myyMessages.addMessage({
-
-    text: 'Send photos that delete after 24 hours (photobombs).',
-    type: 'sent',
-        avatar: 'media/ducksquare.png'
-
-  });		
-		appFeatures(0);
-	}, 14000);	
 		
 	}
 
@@ -1703,7 +1681,7 @@ var loginmethod = window.localStorage.getItem("loginmethod");
     $( ".ploader" ).hide();
 
 		myyMessages = myApp.messages('.messages1', {
-  
+  scrollMessages:false
 });
 	
 		
