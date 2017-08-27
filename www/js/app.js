@@ -1703,7 +1703,7 @@ var loginmethod = window.localStorage.getItem("loginmethod");
     $( ".ploader" ).hide();
 
 		myyMessages = myApp.messages('.messages1', {
-    autoLayout: true,
+    //autoLayout: true,
     newMessagesFirst:true
 });
 	
