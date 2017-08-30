@@ -716,7 +716,7 @@ var f_projectid;
 var canloadchat;
 var viewphotos = false;     
 var viewscroll = false;
-var homewant;
+var homewant = 'offline';
 var singlefxallowed = true;
 var photoresponse;
 var targetpicture;
@@ -2453,25 +2453,7 @@ image_url = f_image;
 }
 	    
       
-sortby = snapshot.child("sort").val();
-	    
-	    
-if (sortby){
 
-if (sortby == 'random'){sortBy(1);}
-if (sortby == 'distance'){sortBy(2);}
-if (sortby == 'activity'){sortBy(3);}
-
-
-
-$( ".sortbutton" ).removeClass( "active" );
-$( "#sort" + sortby ).addClass( "active" );
-
-
-
-
-
-}
 	    
 if (snapshot.child("offsounds").val()){offsounds = snapshot.child("offsounds").val();}
 if (snapshot.child("availstring").val()){ availarray = JSON.parse(snapshot.child("availstring").val());}
