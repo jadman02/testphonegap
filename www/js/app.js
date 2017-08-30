@@ -2493,7 +2493,7 @@ if (f_gender == 'Female' && f_interested == 'Men') {sexuality = 'female';}
 		      
 	    
    if (loadpref=== false){
-  if(homewant){
+  if(homewant !=''){
 
 	  
 	  if (homewant == 'offline'){$( ".homedate" ).removeClass('active');$( ".homeduck" ).removeClass('active');$( ".content-here-1" ).show();	$( ".content-here-2" ).hide();$( ".toolbar-home" ).hide();$( ".results-loader" ).hide(); }
