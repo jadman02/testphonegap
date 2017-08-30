@@ -1615,7 +1615,7 @@ if ((initialload === false) && (availarray.length === 0)){
 	
 if (!homewant || homewant =='offline'){
 
-	
+	alert('got here');
 	$( ".content-here" ).hide();
    $( ".statusbar-overlay" ).css("background-color","#ccc");
 	$( ".buttons-home" ).hide();
