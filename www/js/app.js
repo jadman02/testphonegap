@@ -1685,14 +1685,15 @@ var loginmethod = window.localStorage.getItem("loginmethod");
 	
 		
 		
-	var homemessageno = 0;
+	var homemessageno;
+		homemessageno = $('.message').length;
 		var sendavatar; 
 		var sendtype;
 		function doAdd(){
 		if (fromarray[homemessageno] == 'date'){sendavatar = 'media/datesquare.png';sendtype = 'received';}
 			if (fromarray[homemessageno] == 'duck'){sendavatar = 'media/ducksquare.png';sendtype = 'sent';}
 			
-			homemessageno = $('.message').length;
+			
 			
 			 	
 
