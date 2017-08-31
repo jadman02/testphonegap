@@ -2494,10 +2494,11 @@ if (f_gender == 'Female' && f_interested == 'Men') {sexuality = 'female';}
 		      
 	    
    if (loadpref=== false){
-  if(homewant !=''){
+  if((homewant == null) || (homewant == 'offline')){$( ".homedate" ).removeClass('active');$( ".homeduck" ).removeClass('active');$( ".content-here-1" ).show();	$( ".content-here-2" ).hide();$( ".toolbar-home" ).hide();$( ".results-loader" ).hide();}
+	  else{
 
 	  
-	  if (homewant == 'offline'){$( ".homedate" ).removeClass('active');$( ".homeduck" ).removeClass('active');$( ".content-here-1" ).show();	$( ".content-here-2" ).hide();$( ".toolbar-home" ).hide();$( ".results-loader" ).hide(); }
+
      if (homewant == 'dateduck'){$( ".homedate" ).addClass('active');$( ".homeduck" ).addClass('active');$( ".content-here-1" ).hide(); $( ".content-here-2" ).show();}
    if (homewant == 'duck'){$( ".homedate" ).removeClass('active');$( ".homeduck" ).addClass('active'); $( ".content-here-1" ).hide(); $( ".content-here-2" ).show();}
     if (homewant == 'date'){$( ".homedate" ).addClass('active');$( ".homeduck" ).removeClass('active');$( ".content-here-1" ).hide();$( ".content-here-2" ).show();}
