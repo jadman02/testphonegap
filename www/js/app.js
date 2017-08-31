@@ -716,7 +716,7 @@ var f_projectid;
 var canloadchat;
 var viewphotos = false;     
 var viewscroll = false;
-var homewant = 'offline';
+var homewant;
 var singlefxallowed = true;
 var photoresponse;
 var targetpicture;
@@ -1614,7 +1614,7 @@ if ((initialload === false) && (availarray.length === 0)){
 
 	
 	
-if (!homewant || homewant =='offline'){
+if ((homewant== null) || (homewant =='offline')){
 
 	alert('got here');
 	$( ".content-here" ).hide();
