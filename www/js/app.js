@@ -1622,6 +1622,7 @@ if ((homewant== null) || (homewant =='offline')){
 	$( ".buttons-home" ).hide();
 	$( ".toolbar-home" ).hide();
 	$( ".results-loader" ).hide();
+	$( ".content-here-1" ).show();	$( ".content-here-2" ).hide();
 
 	var loginmethod = window.localStorage.getItem("loginmethod");
 	if (loginmethod == '1'){$( ".login2" ).show();}
